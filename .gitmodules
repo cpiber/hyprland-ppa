@@ -4,3 +4,6 @@
 [submodule "hyprcursor/source"]
 	path = hyprcursor/source
 	url = https://github.com/hyprwm/hyprcursor.git
+[submodule "hyprwayland-scanner/source"]
+	path = hyprwayland-scanner/source
+	url = https://github.com/hyprwm/hyprwayland-scanner.git
