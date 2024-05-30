@@ -1,0 +1,3 @@
+[submodule "hyprlang/source"]
+	path = hyprlang/source
+	url = https://github.com/hyprwm/hyprlang.git

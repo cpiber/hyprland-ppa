@@ -1,0 +1,16 @@
+hyprlang
+------------------
+
+The hypr configuration language is an extremely efficient, yet easy to work with, configuration language
+for linux applications.
+
+It's user-friendly, easy to grasp, and easy to implement.
+
+## Docs
+
+Visit [hyprland.org/hyprlang](https://hyprland.org/hyprlang) to see the documentation.
+
+### Example implementation
+
+For an example implmentation, take a look at the `tests/` directory.
+
