@@ -7,3 +7,6 @@
 [submodule "hyprwayland-scanner/source"]
 	path = hyprwayland-scanner/source
 	url = https://github.com/hyprwm/hyprwayland-scanner.git
+[submodule "wayland-protocols/source"]
+	path = wayland-protocols/source
+	url = https://gitlab.freedesktop.org/wayland/wayland-protocols.git
