@@ -1,0 +1,46 @@
+Source: hyprcursor
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ libzip-dev,
+ libcairo2-dev,
+ librsvg2-dev,
+ libtomlplusplus-dev,
+ hyprlang-dev (>=0.4.2),
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprcursor
+Vcs-Git: https://github.com/hyprwm/hyprcursor.git
+
+Package: hyprcursor-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ hyprcursor1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: The hyprland cursor format, library and utilities.
+ XCursor sucks, and we still use it today.
+ - Scaling of XCursors is horrible
+ - XCursor does not support vector cursors
+ - XCursor is ridiculously space-inefficient
+ Hyprcursor fixes all three. It's an efficient cursor theme format that doesn't suck as much.
+ This package includes the build-headers for using hyprlang in your own project.
+
+Package: hyprcursor1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: The hyprland cursor format, library and utilities.
+ XCursor sucks, and we still use it today.
+ - Scaling of XCursors is horrible
+ - XCursor does not support vector cursors
+ - XCursor is ridiculously space-inefficient
+ Hyprcursor fixes all three. It's an efficient cursor theme format that doesn't suck as much.
