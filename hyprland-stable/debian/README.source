@@ -1,0 +1,52 @@
+Hyprland
+------------------
+
+Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
+
+It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins,
+easy IPC, much more QoL stuff than other wlr-based compositors and more...
+<br>
+<br>
+
+---
+
+# Features
+
+- All of the eyecandy: gradient borders, blur, animations, shadows and much more
+- A lot of customization
+- Much more QoL stuff than other wlr-based compositors
+- Custom bezier curves for the best animations
+- Powerful plugin support
+- Built-in plugin manager
+- Tearing support for better gaming performance
+- Easily expandable and readable codebase
+- Fast and active development
+- Not afraid to provide bleeding-edge features
+- Config reloaded instantly upon saving
+- Fully dynamic workspaces
+- Two built-in layouts and more available as plugins
+- Uses forked wlroots with QoL patches
+- Global keybinds passed to your apps of choice
+- Tiling/pseudotiling/floating/fullscreen windows
+- Special workspaces (scratchpads)
+- Window groups (tabbed mode)
+- Powerful window/monitor/layer rules
+- Socket-based IPC
+- Native IME and Input Panels Support
+- and much more...
+
+
+# Special Thanks
+
+**[wlroots]** - *For their amazing library*
+
+**[tinywl]** - *For showing how 2 do stuff*
+
+**[Sway]** - *For showing how 2 do stuff the overkill way*
+
+**[Vivarium]** - *For showing how 2 do stuff the simple way*
+
+**[dwl]** - *For showing how 2 do stuff the hacky way*
+
+**[Wayfire]** - *For showing how 2 do some graphics stuff*
+

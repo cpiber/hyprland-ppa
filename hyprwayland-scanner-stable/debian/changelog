@@ -1,0 +1,5 @@
+hyprwayland-scanner-stable (0.3.4-1ppa1) noble; urgency=medium
+
+  * Initial release. Follows release 0.3.4.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 31 May 2024 17:01:57 +0200

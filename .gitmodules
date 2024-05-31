@@ -25,3 +25,9 @@
 [submodule "hyprlock/source"]
 	path = hyprlock/source
 	url = https://github.com/hyprwm/hyprlock.git
+[submodule "hyprland-stable/source"]
+	path = hyprland-stable/source
+	url = https://github.com/hyprwm/Hyprland.git
+[submodule "hyprwayland-scanner-stable/source"]
+	path = hyprwayland-scanner-stable/source
+	url = https://github.com/hyprwm/hyprwayland-scanner.git
