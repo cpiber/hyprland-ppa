@@ -1,0 +1,37 @@
+Source: hyprlock
+Section: universe/x11
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ libwayland-dev,
+ wayland-protocols,
+ hyprlang-dev (>= 0.4.0),
+ libegl-dev,
+ libxkbcommon-dev,
+ libjpeg-dev,
+ libwebp-dev,
+ libmagic-dev,
+ libcairo2-dev,
+ libpango1.0-dev,
+ libdrm-dev,
+ libgbm-dev,
+ libgl1-mesa-dev,
+ libpam0g-dev,
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprlock
+Vcs-Git: https://github.com/hyprwm/hyprlock.git
+
+Package: hyprlock
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ wayland-protocols,
+Description: <insert up to 60 chars description>
+ <Insert long description, indented with spaces.>

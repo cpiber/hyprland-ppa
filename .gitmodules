@@ -22,3 +22,6 @@
 [submodule "hypridle/source"]
 	path = hypridle/source
 	url = https://github.com/hyprwm/hypridle.git
+[submodule "hyprlock/source"]
+	path = hyprlock/source
+	url = https://github.com/hyprwm/hyprlock.git

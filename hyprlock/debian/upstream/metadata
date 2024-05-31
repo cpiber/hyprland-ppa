@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://github.com/hyprwm/hyprlock/issues
+Bug-Submit: https://github.com/hyprwm/hyprlock/issues/new
+Changelog: https://github.com/hyprwm/hyprlock/releases
+Documentation: https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/
+Repository-Browse: https://github.com/hyprwm/hyprlock
+Repository: https://github.com/hyprwm/hyprlock.git
