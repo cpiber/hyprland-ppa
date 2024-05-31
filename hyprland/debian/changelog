@@ -1,0 +1,5 @@
+hyprland (0.40.0-1ppa1-git+a60c728) noble; urgency=medium
+
+  * Initial release. Follows commit a60c7283e677ed81a466d1c0c864c8a05e192cac.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 May 2024 21:02:49 +0200

@@ -13,3 +13,6 @@
 [submodule "libxcb-errors/source"]
 	path = libxcb-errors/source
 	url = https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git
+[submodule "hyprland/source"]
+	path = hyprland/source
+	url = https://github.com/hyprwm/Hyprland.git
