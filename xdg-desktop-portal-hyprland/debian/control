@@ -1,0 +1,32 @@
+Source: xdg-desktop-portal-hyprland
+Section: admin
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ meson,
+ pkgconf,
+ qt6-base-dev,
+ wayland-protocols,
+ libwayland-bin,
+ libwayland-dev,
+ libpipewire-0.3-dev,
+ libspa-0.2-dev,
+ libdrm-dev,
+ libgbm-dev,
+ libsdbus-c++-dev,
+ hyprlang-dev,
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/xdg-desktop-portal-hyprland
+Vcs-Git: https://github.com/hyprwm/xdg-desktop-portal-hyprland.git
+
+Package: xdg-desktop-portal-hyprland
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: An XDG Desktop Portal backend for Hyprland

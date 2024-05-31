@@ -16,3 +16,6 @@
 [submodule "hyprland/source"]
 	path = hyprland/source
 	url = https://github.com/hyprwm/Hyprland.git
+[submodule "xdg-desktop-portal-hyprland/source"]
+	path = xdg-desktop-portal-hyprland/source
+	url = https://github.com/hyprwm/xdg-desktop-portal-hyprland
