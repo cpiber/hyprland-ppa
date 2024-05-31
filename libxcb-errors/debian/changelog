@@ -1,0 +1,5 @@
+libxcb-errors (1.0.1-1ppa1) noble; urgency=medium
+
+  * Initial release. Follows release 1.0.1
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 31 May 2024 01:58:38 +0200

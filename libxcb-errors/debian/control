@@ -1,0 +1,45 @@
+Source: libxcb-errors
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ autoconf,
+ xutils-dev,
+ pkgconf,
+ libxcb1-dev (>= 1.4),
+ python3,
+ xcb-proto,
+Standards-Version: 4.6.2
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/libxcb-errors
+#Vcs-Git: https://salsa.debian.org/debian/libxcb-errors.git
+
+Package: libxcb-errors-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libxcb-errors1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: xcb-util-errors is a utility library
+ xcb-util-errors is a utility library that gives human readable names to error
+ codes and event codes and also to major and minor numbers.
+ The necessary information is drawn from xcb-proto's protocol descriptions.
+ This library is especially useful when working with extensions and is mostly
+ useful for debugging.
+ This package includes the build-headers for using in your own project.
+
+Package: libxcb-errors1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: xcb-util-errors is a utility library
+ xcb-util-errors is a utility library that gives human readable names to error
+ codes and event codes and also to major and minor numbers.
+ The necessary information is drawn from xcb-proto's protocol descriptions.
+ This library is especially useful when working with extensions and is mostly
+ useful for debugging.

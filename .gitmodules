@@ -10,3 +10,6 @@
 [submodule "wayland-protocols/source"]
 	path = wayland-protocols/source
 	url = https://gitlab.freedesktop.org/wayland/wayland-protocols.git
+[submodule "libxcb-errors/source"]
+	path = libxcb-errors/source
+	url = https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git
