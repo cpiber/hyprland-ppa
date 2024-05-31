@@ -11,13 +11,13 @@ version=4
 
 # HTTP site (basic).
 #http://example.com/downloads.html \
-#    files/xdg-desktop-portal-hyprland-([\d\.]+)\.tar\.gz
+#    files/hyprwayland-scanner-([\d\.]+)\.tar\.gz
 
 # Uncomment to examine an FTP server.
-#ftp://ftp.example.com/pub/xdg-desktop-portal-hyprland-(.*)\.tar\.gz
+#ftp://ftp.example.com/pub/hyprwayland-scanner-(.*)\.tar\.gz
 
 # SourceForge hosted projects.
-#http://sf.net/xdg-desktop-portal-hyprland/ xdg-desktop-portal-hyprland-(.*)\.tar\.gz
+#http://sf.net/hyprwayland-scanner/ hyprwayland-scanner-(.*)\.tar\.gz
 
 # GitHub hosted projects.
 #opts="filenamemangle=s%(?:.*?)?v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%" \
@@ -30,8 +30,8 @@ version=4
 #    archive/v?@ANY_VERSION@/<project>-v?\d\S*@ARCHIVE_EXT@
 
 # PyPI.
-#https://pypi.debian.net/xdg-desktop-portal-hyprland/xdg-desktop-portal-hyprland-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+#https://pypi.debian.net/hyprwayland-scanner/hyprwayland-scanner-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
 
 # Direct Git.
-#opts="mode=git" http://git.example.com/xdg-desktop-portal-hyprland.git \
-#    refs/tags/v([\d\.]+)
+opts="mode=git" https://github.com/hyperwm/hyprwayland-scanner.git \
+    refs/tags/v([\d\.]+)

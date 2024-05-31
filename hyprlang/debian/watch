@@ -11,13 +11,13 @@ version=4
 
 # HTTP site (basic).
 #http://example.com/downloads.html \
-#    files/hyprcursor-([\d\.]+)\.tar\.gz
+#    files/hyprlang-([\d\.]+)\.tar\.gz
 
 # Uncomment to examine an FTP server.
-#ftp://ftp.example.com/pub/hyprcursor-(.*)\.tar\.gz
+#ftp://ftp.example.com/pub/hyprlang-(.*)\.tar\.gz
 
 # SourceForge hosted projects.
-#http://sf.net/hyprcursor/ hyprcursor-(.*)\.tar\.gz
+#http://sf.net/hyprlang/ hyprlang-(.*)\.tar\.gz
 
 # GitHub hosted projects.
 #opts="filenamemangle=s%(?:.*?)?v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%" \
@@ -30,8 +30,8 @@ version=4
 #    archive/v?@ANY_VERSION@/<project>-v?\d\S*@ARCHIVE_EXT@
 
 # PyPI.
-#https://pypi.debian.net/hyprcursor/hyprcursor-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+#https://pypi.debian.net/hyprlang/hyprlang-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
 
 # Direct Git.
-#opts="mode=git" http://git.example.com/hyprcursor.git \
-#    refs/tags/v([\d\.]+)
+opts="mode=git" https://github.com/hyperwm/hyprlang.git \
+    refs/tags/v([\d\.]+)
