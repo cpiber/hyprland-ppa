@@ -1,4 +1,4 @@
-Source: hyprland
+Source: hyprland-unstable
 Section: universe/x11
 Priority: optional
 Maintainer: Constantin Piber <cp.piber@gmail.com>
@@ -45,13 +45,17 @@ Vcs-Browser: https://github.com/hyprwm/Hyprland
 Vcs-Git: https://github.com/hyprwm/Hyprland.git
 # TODO: fix generateVersion.sh
 
-Package: hyprland
+Package: hyprland-unstable
 Architecture: any
 Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  wayland-protocols,
+Provides:
+ hyprland,
+Conflicts:
+ hyprland,
 Recommends:
  xdg-desktop-portal-hyprland | xdg-desktop-portal-wlr,
  xdg-desktop-portal-gtk,

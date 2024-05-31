@@ -1,3 +1,9 @@
+hyprland-unstable (0.40.0~1ppa3+git202405311337-a60c728) noble; urgency=medium
+
+  * Fix versioning
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 31 May 2024 13:37:06 +0200
+
 hyprland (0.40.0-1ppa2-git+a60c728) noble; urgency=medium
 
   * Add recommends
