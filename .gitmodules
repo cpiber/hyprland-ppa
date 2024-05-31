@@ -31,3 +31,6 @@
 [submodule "hyprwayland-scanner-stable/source"]
 	path = hyprwayland-scanner-stable/source
 	url = https://github.com/hyprwm/hyprwayland-scanner.git
+[submodule "waybar/source"]
+	path = waybar/source
+	url = https://github.com/Alexays/Waybar.git

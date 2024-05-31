@@ -1,0 +1,241 @@
+waybar (0.10.3-1ppa1) noble; urgency=medium
+
+  * Repackage for noble.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 31 May 2024 20:47:29 +0200
+
+waybar (0.10.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Thu, 09 May 2024 08:50:25 +0200
+
+waybar (0.10.2-2) experimental; urgency=medium
+
+  * d/control: Replace libwireplumber-0.4-dev build-dependency with
+    libwireplumber-0.5-dev
+    (Closes: #1070041)
+
+ -- Birger Schacht <birger@debian.org>  Sun, 05 May 2024 10:55:06 +0200
+
+waybar (0.10.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Tue, 23 Apr 2024 19:24:55 +0200
+
+waybar (0.10.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/copyright: Bump years, add licenses for new protocol files, remove
+    license entry for removed protocol file
+
+ -- Birger Schacht <birger@debian.org>  Fri, 15 Mar 2024 15:02:33 +0100
+
+waybar (0.9.24-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Fri, 03 Nov 2023 16:01:21 +0100
+
+waybar (0.9.22-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Wed, 16 Aug 2023 16:37:03 +0200
+
+waybar (0.9.21-1) unstable; urgency=medium
+
+  [ Birger Schacht ]
+  * New upstream release
+  * Set field Upstream-Name in debian/copyright
+  * Remove obsolete field Name from debian/upstream/metadata
+  * d/gbp.conf: set gbp to use overlay in salsa CI
+
+  [ Diederik de Haas ]
+  * d/control: Update B-D for JACK to JACK2
+  * d/gbp.conf:
+   + Switch to 'debian' recipe and target Unstable again
+   + Disable 'reprotest' job for now
+
+ -- Birger Schacht <birger@debian.org>  Mon, 14 Aug 2023 19:53:34 +0200
+
+waybar (0.9.20-2) unstable; urgency=medium
+
+  * Drop libdbusmenu-gtk-dev from build dependencies (Closes: #1041828)
+
+ -- Birger Schacht <birger@debian.org>  Mon, 24 Jul 2023 08:24:17 +0200
+
+waybar (0.9.20-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Tue, 18 Jul 2023 14:55:57 +0200
+
+waybar (0.9.18-1) unstable; urgency=medium
+
+  * New upstream version
+  * d/control:
+   + Add libplayerctl-dev to build-depends (Closes: #1036148)
+   + Bump standards-version to 4.6.2 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 24 Jun 2023 10:16:06 +0200
+
+waybar (0.9.17-2) unstable; urgency=medium
+
+  * Add libhowardhinnant-date-dev to build-depends (Closes: #1003115)
+
+ -- Birger Schacht <birger@debian.org>  Tue, 28 Feb 2023 19:59:55 +0100
+
+waybar (0.9.17-1) unstable; urgency=medium
+
+  * New upstream version
+  * Add libwireplumber to build-depends
+  * Bump copyright years in d/copyright
+
+ -- Birger Schacht <birger@debian.org>  Sat, 14 Jan 2023 13:14:57 +0100
+
+waybar (0.9.16-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop fix-typos.patch
+
+ -- Birger Schacht <birger@debian.org>  Fri, 25 Nov 2022 11:08:32 +0100
+
+waybar (0.9.15-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop backported patch for fmt 9.0
+  * Add new build-dependencies: libupower-glib-dev, libjack-dev, libsndio-dev
+  * Backport fix-typos.patch
+
+ -- Birger Schacht <birger@debian.org>  Sat, 05 Nov 2022 18:08:39 +0100
+
+waybar (0.9.13-3) unstable; urgency=medium
+
+  * Fix d/watch file by switching to gitmode
+  * Bump standards-version to 4.6.1.0 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Fri, 14 Oct 2022 21:37:40 +0200
+
+waybar (0.9.13-2) unstable; urgency=medium
+
+  * Backport patch for fmt 9.0 (Closes: #1014686)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 20 Aug 2022 10:36:13 +0200
+
+waybar (0.9.13-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Tue, 31 May 2022 18:59:46 +0200
+
+waybar (0.9.12-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Thu, 10 Mar 2022 19:40:44 +0100
+
+waybar (0.9.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop filenamemangle option from d/watch
+
+ -- Birger Schacht <birger@debian.org>  Wed, 09 Mar 2022 09:44:54 +0100
+
+waybar (0.9.9-1) unstable; urgency=medium
+
+  [ Birger Schacht ]
+  * New upstream release
+  * Update d/copyright
+
+  [ Pino Toscano ]
+  * Drop the clang-tidy build dependency, only needed for a developer-only
+    meson target.
+  * Stop including /usr/share/dpkg/pkg-info.mk in rules, as it is not needed.
+  * Drop the custom dh_auto_build override: as the default one works fine;
+    the custom one reruns meson without all the Debian parameters, and
+    (even worse) allows the downloading of stuff from the network, which is
+    forbidden by Debian Policy §4.9.
+
+ -- Birger Schacht <birger@debian.org>  Mon, 10 Jan 2022 18:30:22 +0100
+
+waybar (0.9.8-2) unstable; urgency=medium
+
+  * Fix watchfile
+  * Bump standards version to 4.6.0.1 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 06 Nov 2021 09:49:27 +0100
+
+waybar (0.9.8-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #993067)
+  * Drop patch which removes the clock module, now that upstream contains a
+    workaround (Closes: #973594, see
+    https://github.com/Alexays/Waybar/pull/903)
+  * add new dependency libxkbregistry-dev to build-depends
+
+ -- Birger Schacht <birger@debian.org>  Fri, 27 Aug 2021 21:22:57 +0200
+
+waybar (0.9.5-2) unstable; urgency=medium
+
+  * Set versioned build-depends on spdlog (Closes: #981086)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 30 Jan 2021 11:12:52 +0100
+
+waybar (0.9.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update patch to drop the clock module
+  * Bump standards version to 4.5.1 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Mon, 04 Jan 2021 19:24:06 +0100
+
+waybar (0.9.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Upload to unstable, now that dependency wlroots is in unstable
+  * d/control
+   + bump standards version to 4.5.0 (no changes required)
+   + bump debhelper version to 13
+   + remove commented build dependency
+   + add libgtk-layer-shell-dev and libgtk-layer-shell0 to the build
+     dependencies, now that gtk-layer-shell is in the archive
+   + add fonts-font-awesome to Suggests, because it is the font used
+     in the default waybar theme
+   + Update uploader address
+   + Suggest installation of libappindicator3-1 to ensure functionality
+     of the tray plugin
+  * d/patches
+   + drop 0001-Force-the-inclusion-of-sway-even-if-its-not-installe.patch
+   + drop 0002-Remove-gtk-layer-shell-from-dependencies.patch
+   + add patch to disable the clock module, which depends on a library
+     that is not packaged and will be dropped at some point
+     (See https://github.com/Alexays/Waybar/issues/668)
+  * Add a debian/waybar.README.Debian file explaining the missing
+    clock module
+  * d/rules: Enable rfkill support
+  * d/upstream/metadata: add bug tracking information
+
+ -- Birger Schacht <birger@debian.org>  Mon, 26 Oct 2020 18:44:14 +0100
+
+waybar (0.9.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * d/gbp.conf: add file
+   + Set pristine-tar to true
+   + Set debian branch to debian/sid
+  * d/patches/0002-Remove-gtk-layer-shell-from-dependencies:
+    Remove dependency on gtk-layer-shell
+  * d/control
+   + Bump standards version (no changes required)
+   + Move package to swaywm-team (update maintainer address and
+     Vcs-* URLs)
+
+ -- Birger Schacht <birger@rantanplan.org>  Tue, 31 Dec 2019 19:38:19 +0100
+
+waybar (0.8.0-1) experimental; urgency=medium
+
+  * Initial packaging (Closes: #920040)
+
+ -- Birger Schacht <birger@rantanplan.org>  Mon, 02 Sep 2019 16:52:20 +0200
