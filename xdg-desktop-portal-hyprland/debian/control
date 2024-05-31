@@ -29,4 +29,5 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
+ wayland-protocols,
 Description: An XDG Desktop Portal backend for Hyprland

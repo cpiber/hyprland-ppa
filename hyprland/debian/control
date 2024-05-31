@@ -52,6 +52,12 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  wayland-protocols,
+Recommends:
+ xdg-desktop-portal-hyprland | xdg-desktop-portal-wlr,
+ xdg-desktop-portal-gtk,
+ sway-notification-center | dunst,
+ pipewire,
+ wireplumber,
 Description: Hyprland is a dynamic tiling Wayland compositor
  Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
  It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins, easy IPC, much more QoL stuff than other wlr-based compositors and more...
