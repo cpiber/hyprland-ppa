@@ -21,7 +21,7 @@
 override_dh_auto_install:
 	ln -s "`dh_assistant which-build-system | jq -r '.["build-directory"]'`" build
 	ls -al build
-	make install PREFIX=debian/hyprland
+	make install PREFIX=debian/hyprland/usr
 
 
 # dh_make generated override targets.

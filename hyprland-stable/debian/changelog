@@ -1,3 +1,9 @@
+hyprland (0.40.0-1ppa4) noble; urgency=medium
+
+  * Fix install prefix
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 02 Jun 2024 21:54:19 +0200
+
 hyprland (0.40.0-1ppa1) noble; urgency=medium
 
   * Initial release. Follows release 0.40.0.
