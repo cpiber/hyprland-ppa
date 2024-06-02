@@ -1,3 +1,15 @@
+hyprland-unstable (0.40.0~1ppa3+git202406022217-6868a39f) noble; urgency=medium
+
+  * Update to main 6868a39f
+  * xdg-decoration: Fix initial toplevel decoration mode negotiation (#6308)
+  * core: fix a few asan reported issues and a coredump on exit (#6285)
+  * seat: don't send keymap on empty device
+  * renderer: fix xwayland solitary rechecks (#6295)
+  * cmake: make xcb-errors required
+  * pointer: Include monitor scaling in HW hotspot calculation (#6283)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 02 Jun 2024 22:17:30 +0200
+
 hyprland-unstable (0.40.0~1ppa3+git202405311337-a60c728) noble; urgency=medium
 
   * Fix versioning
