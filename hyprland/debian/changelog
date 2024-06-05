@@ -1,3 +1,21 @@
+hyprland-unstable (0.40.0~1ppa3+git202406050915-098ac916) noble; urgency=medium
+
+  * Update to main 098ac916
+  * 098ac916 deps: update wlroots
+  * d0a224a4 seat: discrete round away from zero + high res scrolling
+    (#6317)
+  * 5517cc50 xwayland: don't destroy server client
+  * 0ac0f326 toplevelexport: avoid locking software cursors during
+    render
+  * b30c7125 window: avoid nullptr deref on monitor in box helpers
+  * 3fd6c1b3 layout: fix centering of new floating windows
+  * eaecf7db core: fix a few asan reported issues and a coredump on exit
+    (#6285)
+  * e08195d2 Fix initial xdg-decoration toplevel decoration mode
+    negotiation
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 05 Jun 2024 09:15:37 +0200
+
 hyprland-unstable (0.40.0~1ppa3+git202406022217-6868a39f) noble; urgency=medium
 
   * Update to main 6868a39f
