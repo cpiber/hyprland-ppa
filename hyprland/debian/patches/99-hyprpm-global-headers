@@ -1,0 +1,47 @@
+Description: Find global headers
+ Have hyprpm find global headers installed with the package instead of requiring
+ a separate clone.
+ .
+ hyprland-unstable (0.40.0~1ppa3+git202406050915-098ac916) noble; urgency=medium
+ .
+   * Update to main 098ac916
+   * 098ac916 deps: update wlroots
+   * d0a224a4 seat: discrete round away from zero + high res scrolling
+     (#6317)
+   * 5517cc50 xwayland: don't destroy server client
+   * 0ac0f326 toplevelexport: avoid locking software cursors during
+     render
+   * b30c7125 window: avoid nullptr deref on monitor in box helpers
+   * 3fd6c1b3 layout: fix centering of new floating windows
+   * eaecf7db core: fix a few asan reported issues and a coredump on exit
+     (#6285)
+   * e08195d2 Fix initial xdg-decoration toplevel decoration mode
+     negotiation
+Author: Constantin Piber <cp.piber@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout https://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: (upstream|backport|vendor|other), (<patch-url>|commit:<commit-id>)
+Bug: <upstream-bugtracker-url>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: (no|not-needed|<patch-forwarded-url>)
+Applied-Upstream: <version>, (<commit-url>|commit:<commid-id>)
+Reviewed-By: <name and email of someone who approved/reviewed the patch>
+Last-Update: 2024-06-05
+
+--- hyprland-unstable-0.40.0~1ppa3+git202406050915.orig/hyprpm/src/core/PluginManager.cpp
++++ hyprland-unstable-0.40.0~1ppa3+git202406050915/hyprpm/src/core/PluginManager.cpp
+@@ -349,6 +349,9 @@ bool CPluginManager::removePluginRepo(co
+ eHeadersErrors CPluginManager::headersValid() {
+     const auto HLVER = getHyprlandVersion();
+ 
++    if (std::filesystem::exists("/usr/share/pkgconfig/hyprland.pc"))
++        return HEADERS_OK;
++
+     if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
+         return HEADERS_MISSING;
+ 
