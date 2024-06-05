@@ -1,0 +1,44 @@
+Source: hyprland-plugin-deps
+Section: universe/x11
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+
+Package: hyprland-plugin-deps
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ cmake (>= 3.27),
+ ninja-build,
+ meson,
+ gcc (>= 11),
+ pkgconf,
+ git,
+ libxkbcommon-dev,
+ libwayland-dev,
+ libcairo2-dev,
+ libpango1.0-dev,
+ libdrm-dev,
+ libinput-dev,
+ libdisplay-info-dev,
+ libliftoff-dev,
+ libudev-dev,
+ libxcb-util-dev,
+ libxcb-xfixes0-dev,
+ libxcb-icccm4-dev,
+ libxcb-composite0-dev,
+ libxcb-res0-dev,
+ libxcb-ewmh-dev,
+ libxcb-errors-dev,
+ libtomlplusplus-dev,
+ hyprlang-dev (>= 0.3.2),
+ hyprcursor-dev (>= 0.1.7),
+ hyprwayland-scanner,
+Description: Meta package for build dependencies
+ Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
+ This package depends on (most) build dependencies to enable plugin building using hyprpm.
+

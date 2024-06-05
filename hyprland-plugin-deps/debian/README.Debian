@@ -1,0 +1,7 @@
+hyprland-plugin-deps
+------------------------------
+
+Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
+This package depends on (most) build dependencies to enable plugin building using hyprpm.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 05 Jun 2024 21:46:09 +0200
