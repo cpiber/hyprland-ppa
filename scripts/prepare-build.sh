@@ -14,6 +14,6 @@ debianfolder="$reporoot/$project/debian"
 buildfolder="/tmp/hyprland-ppa/$project"
 mkdir -p /tmp/hyprland-ppa/
 rm -rf "$buildfolder"
-cp -ra "$sourcefolder" "$buildfolder"
+[ -d "$sourcefolder" ] && cp -ra "$sourcefolder" "$buildfolder" || mkdir "$buildfolder"
 cp -ra "$debianfolder" "$buildfolder"
 [ -f "$reporoot/$project/prepare.sh" ] && . "$reporoot/$project/prepare.sh" || :
