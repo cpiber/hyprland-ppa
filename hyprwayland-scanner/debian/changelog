@@ -1,3 +1,17 @@
+hyprwayland-scanner (0.3.10-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.10
+  * 0f30f9e cmake: bump ver to 0.3.10
+  * 46faf3e source: ignore send... requests when resource is null
+  * f84ca21 core: set resource to nullptr in onDestroyCalled
+  * b06c0b8 cmake: bump ver to 0.3.9
+  * 89b3374 source: set user data after checks
+  * 6fdc0ce core: fix external type usage
+  * 24cf55c core: forward declare all used ifaces
+  * 3afed43 core: avoid uaf in resource_set_user_data
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 11 Jun 2024 12:39:16 +0200
+
 hyprwayland-scanner (0.3.8-1ppa1) noble; urgency=medium
 
   * Initial release. Follows release 0.3.8.
