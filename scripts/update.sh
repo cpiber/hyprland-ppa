@@ -26,7 +26,7 @@ if [ "$type" = "main" ]; then
   git pull --quiet --rebase
 elif [ "$type" = "tag" ]; then
   git fetch --tags
-  tag="`git describe --tags origin/main`"
+  tag="`git describe --tags origin/main | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//'`"
   git checkout "$tag"
   tag="`echo "$tag" | sed 's/^v//'`"
 else
