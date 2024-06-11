@@ -1,3 +1,52 @@
+hyprland-unstable (0.40.0~1ppa3+git202406111227-811429bf) noble; urgency=medium
+
+  * Update to main 811429bf
+  * 811429bf wayland: consistently check mmap error after 6967a3145044
+    (#6402)
+  * ea2501d4 props: bump version to 0.41.0
+  * 7ba2c318 github: improve the chances of the user specifying bug or
+    regression (#6399)
+  * cef6aad2 groupbar: Fix window title rendering (#6392)
+  * 89a3c906 wlr-foreign-toplevel: fix fullscreen failing and add output
+    support (#6360)
+  * b16af45c build: ProtocolManager missing header LIstener.hpp (#6391)
+  * 1423707d output: remove wl_output globals for mirrored displays
+  * 121c6ac3 hyprctl: add --quiet flag (#6380)
+  * 722b846a egl: assume implicit modifiers are available for old
+    drivers
+  * 4168b8c1 seat: fix pointer frame events not being sent correctly
+  * 1f71d5f5 ci: add auto labels on PR (#6369)
+  * bf75723f helpers: fix misuse of syscalls in sd namespace (#6379)
+  * c62f0015 hyprpm: print and fail on missing packages during configure
+  * 9994b73a buffer: track asynchronous buffers and don't release them
+    until unref
+  * d724556b input: fix virtual devices not updating capabilities
+    (#6366)
+  * 7789caad build: include missing header: "debug/Log.hpp" in
+    Format.cpp (#6365)
+  * 3fb079a2 renderer: allow custom uv for surface no-blur passes
+  * 211353dc core: verify surface roles on creation of objects
+  * 10e02076 wayland: fix invalid wl_output_mode dimensions sent
+  * 5b6d54ca xdg_shell: ignore outdated ack_configure events
+  * 6967a314 wayland/core: move to new impl (#6268)
+  * c31d9ef4 xdg_shell: fix nested xdg_positioner calculations
+  * 6b6b02c2 seat: send events to all bound seats for a client
+  * 40ce17bb gestures: Add gestures:workspace_swipe_min_fingers option
+    (#6342)
+  * 41e1147d input: add cursor:persistent_warps to maintain relative
+    position within a window (#6338)
+  * 9bc00897 xdg_shell: improve xdg_positioner slide behavior
+  * d6337146 xdg_shell: improve xdg_positioner resize calculations
+  * 429cff34 hookSystem: Make needsDeadCleanup volatile (#6356)
+  * af5f2492 core: free more memory on destruction (#6348)
+  * c95845b1 log: log with local timezone (#6331)
+  * 82099fd1 hyprctl: Allow setting name for custom/headless outputs
+    (#6319)
+  * 155fe6f1 popup: minor safety improvements
+  * fefa55d4 build: fix non-pch build (#6337)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 11 Jun 2024 12:27:05 +0200
+
 hyprland-unstable (0.40.0~1ppa3+git202406050915-098ac916.1) noble; urgency=medium
 
   * Non-maintainer upload.
