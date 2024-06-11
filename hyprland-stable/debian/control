@@ -37,10 +37,8 @@ Build-Depends:
  hwdata,
  hyprlang-dev (>= 0.3.2),
  hyprcursor-dev (>= 0.1.7),
- hyprwayland-scanner (<< 0.3.5) | hyprwayland-scanner-stable,
+ hyprwayland-scanner (>= 0.3.10),
  xwayland,
- jq,
- cpio,
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/
 Vcs-Browser: https://github.com/hyprwm/Hyprland

@@ -1,3 +1,238 @@
+hyprland (0.41.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.41.0
+  * 811429bf wayland: consistently check mmap error after 6967a3145044
+    (#6402)
+  * ea2501d4 props: bump version to 0.41.0
+  * 7ba2c318 github: improve the chances of the user specifying bug or
+    regression (#6399)
+  * cef6aad2 groupbar: Fix window title rendering (#6392)
+  * 89a3c906 wlr-foreign-toplevel: fix fullscreen failing and add output
+    support (#6360)
+  * b16af45c build: ProtocolManager missing header LIstener.hpp (#6391)
+  * 1423707d output: remove wl_output globals for mirrored displays
+  * 121c6ac3 hyprctl: add --quiet flag (#6380)
+  * 722b846a egl: assume implicit modifiers are available for old
+    drivers
+  * 4168b8c1 seat: fix pointer frame events not being sent correctly
+  * 1f71d5f5 ci: add auto labels on PR (#6369)
+  * bf75723f helpers: fix misuse of syscalls in sd namespace (#6379)
+  * c62f0015 hyprpm: print and fail on missing packages during configure
+  * 9994b73a buffer: track asynchronous buffers and don't release them
+    until unref
+  * d724556b input: fix virtual devices not updating capabilities
+    (#6366)
+  * 7789caad build: include missing header: "debug/Log.hpp" in
+    Format.cpp (#6365)
+  * 3fb079a2 renderer: allow custom uv for surface no-blur passes
+  * 211353dc core: verify surface roles on creation of objects
+  * 10e02076 wayland: fix invalid wl_output_mode dimensions sent
+  * 5b6d54ca xdg_shell: ignore outdated ack_configure events
+  * 6967a314 wayland/core: move to new impl (#6268)
+  * c31d9ef4 xdg_shell: fix nested xdg_positioner calculations
+  * 6b6b02c2 seat: send events to all bound seats for a client
+  * 40ce17bb gestures: Add gestures:workspace_swipe_min_fingers option
+    (#6342)
+  * 41e1147d input: add cursor:persistent_warps to maintain relative
+    position within a window (#6338)
+  * 9bc00897 xdg_shell: improve xdg_positioner slide behavior
+  * d6337146 xdg_shell: improve xdg_positioner resize calculations
+  * 429cff34 hookSystem: Make needsDeadCleanup volatile (#6356)
+  * af5f2492 core: free more memory on destruction (#6348)
+  * c95845b1 log: log with local timezone (#6331)
+  * 82099fd1 hyprctl: Allow setting name for custom/headless outputs
+    (#6319)
+  * 155fe6f1 popup: minor safety improvements
+  * fefa55d4 build: fix non-pch build (#6337)
+  * 098ac916 deps: update wlroots
+  * d0a224a4 seat: discrete round away from zero + high res scrolling
+    (#6317)
+  * 5517cc50 xwayland: don't destroy server client
+  * 0ac0f326 toplevelexport: avoid locking software cursors during
+    render
+  * b30c7125 window: avoid nullptr deref on monitor in box helpers
+  * 3fd6c1b3 layout: fix centering of new floating windows
+  * eaecf7db core: fix a few asan reported issues and a coredump on exit
+    (#6285)
+  * e08195d2 Fix initial xdg-decoration toplevel decoration mode
+    negotiation
+  * 66acdfe2 seat: don't send keymap on empty device
+  * 0ebb43c1 renderer: fix xwayland solitary rechecks (#6295)
+  * a54ab301 cmake: make xcb-errors required
+  * df6ebe35 pointer: Include monitor scaling in HW hotspot calculation
+    (#6283)
+  * a60c7283 xwayland: verify new xsurf is valid in prop reads
+  * ebf25878 config: add tag dispacther and window rule (#6211)
+  * 73b133d0 hyprctl: Make setcursor better (support XCursor themes,
+    give fail message) (#6097)
+  * 722d537a windows: make new_window_takes_over_fullscreen use the new
+    window's workspace (#6263)
+  * 506d0c06 compositor: change monitor focus when no_warps is enabled
+    (#6260)
+  * 546a486b hyprctl: add delimiter to hyprctl batch command (#6261)
+  * db5d39a6 meson: add more xcb-* dependencies after addd3e7f1aeb
+  * 553232a3 hyprctl: Add Config Flag to `hyprctl systeminfo` (#6160)
+  * addd3e7f xwayland: move to hyprland impl (#6086)
+  * a7120743 Add custom cmake target for installheaders
+  * 71c2ff31 Reapply "CMake: use add_custom_command for generating
+    protocols (#6104)"
+  * 90f262aa pointer: remove dividing hotspot by scale
+  * 2ff95bba flake.lock: update
+  * ce17961a keybinds: Added new dispatcher (sendshortcut) (#6174)
+  * 6d67b844 monitor: avoid UB on undefined auto dir
+  * 0d6eae05 pointer: add back nvidia hardware cursor quirks (#6220)
+  * 52684b7d window: fix invalid env buffer size in getEnv
+  * 4e42107d pointermgr: ensure compositor exist on destroy (#6216)
+  * eea0a6a7 internal: Replace monitor rule when disabling head. (#6136)
+  * 255272ea debug: Add ARM GPU info (#6212)
+  * df80fbf7 tablet: fix mapping when mapped region is specified (#6206)
+  * 25b94469 internal: save previous workspace before change (#6202)
+  * 7ad9116d [gha] Nix: update inputs
+  * 62401d5b screencopy: use a simple renderer for frame passing
+  * 3775776a window: guard monitor in bounding box calculations
+  * 155ae372 keybinds: Add option to disable window direction monitor
+    fallback (#6182)
+  * 93fea890 renderer: render fonts with pango, add global `font_family`
+    config option (#6138)
+  * e419ef18 Revert "CMake: use add_custom_command for generating
+    protocols (#6104)"
+  * 3c907f78 build: update meson, cmake setup
+  * 4daa5c06 flake.lock: update
+  * baef55da xdg-shell: fixup positioner behavior with slide and resize
+  * f8857e60 input: find surface pos correctly when mouse drag is active
+  * c21a5a93 layout: Fix shrinking pseudotile windows. (#6143)
+  * 2ead1fd2 virtual-keyboard: emit event before finishing keyboard
+  * 49485ba3 pointer: damage in software mode on cursor image changes
+  * fe23d2b6 window: verify suppress flags in onUpdateState
+  * 9518cec8 popup: clip input region to surface size
+  * 23cd4c79 seat: update keymap/repeat info on keymap events from keebs
+  * 0cb8fbe1 error: Add option to change position of HyprError bar
+    (#3241) (#6111)
+  * f21b6fe5 tablet: avoid null deref on an empty cursor set
+  * f9143146 cmake: make gprof optional for debug builds (#6120)
+  * a66cfe0f CMake: use add_custom_command for generating protocols
+    (#6104)
+  * 7173f0c9 flake.lock: update
+  * abbe71d2 pointer: don't update hw cursors on disabled displays
+  * a2643e11 build: bump hw-s dep to 0.3.8
+  * 3ac0e7ea seat: Send discrete event when axis source is scroll wheel
+    (#6103)
+  * d693c448 keybinds: add keybind combos and add Left and Right mod
+    distinction. (#5966)
+  * ca0833c9 decoration: Stacked group tabs (#5886)
+  * de9798fc configmgr: shadow exec rules when window is unmapped
+  * 7e8c0b7f seat: send axis_stop events after axis events
+  * 9eec4cb6 sysd: add missing header
+  * a8522db6 keybinds: fix empty on monitor for new workspaces (#6089)
+  * b9c58b6e seat: send enter/leave events to all bound wl_seats for a
+    client
+  * 3fe5280c hyprctl: return exitStatus in requestHyprpaper() and
+    request() (#6083)
+  * 3381e2b5 datadevice: guard surface in dnd for null
+  * 7fbe05a2 inputmgr: send pointer motion on ffm != 1
+  * 31890026 wl_seat: send frame event after pointer leave (#6074)
+  * 94c20a18 primary-selection: move to hyprland impl
+  * 3eeaea5b Meson: add wayland.xml proto
+  * eed1361f wlr-data-device: move to hyprland impl
+  * 7eeee2c9 wl-data-device: move to hyprland impl
+  * fc72df8e seatmgr: Add a grab class
+  * 0cfdde3d xdg-shell: move to new impl
+  * 121d3a72 wl_seat: move to hyprland impl
+  * 4cdddcfe cursor: minor fixes for unhiding surfaces
+  * d0a4a0e0 input: fix modifier and leds (#6062)
+  * 15846790 xwayland: Remove delta for real position with xwayland zero
+    scaling (#6057)
+  * ba696521 window: set sane default pseudo size
+  * 47874f09 cmake: remove forceful ffi and wayland deps for asan
+  * 60be4298 makefile: fix wlroots headers dir
+  * 4c625ce6 [gha] Nix: update inputs
+  * 064bdb06 hyprctl: Add locked cmd to requests (#6042)
+  * fd35b350 keybinds: fix pass
+  * 2ccd45a8 hyprpm: don't shallow clone on non-main branches
+  * ff93820b Makefile: fix wlr dir
+  * 071f6977 wlroots: bump
+  * c8ae9a2e Meson: fix Cflags
+  * cee639d9 pkg-config: fix wlroots dir
+  * 6be765b7 Nix: fix pkgconfig prefix
+  * 33a7b7bb core: fix on-empty workspace being called too often (#6026)
+  * 15072831 keybinds: fix release binds in submaps (#6025)
+  * 8562d384 screencopy: don't spam sw cursor locks
+  * 494b9415 layersurface: avoid restack on identical layers
+  * b6a7fb9e layersurface: fix invalid use of std::move
+  * 3529fbc6 compositor: fix getMonitorFromVector getting wrong monitor
+    (#6010)
+  * ed3a888f hyprpm: fix style
+  * a8ab1b16 nix: build improvements (#5952)
+  * 6e594e44 hyprpm: force en_US locale for date calcs
+  * 19186de1 renderer: avoid locking during rendering
+  * 38911d6d box: fix noNegativeSize
+  * 37a84c52 socket2: fix events being reordered (#5955)
+  * c19903ea windowrules add focusonactivate (#5976)
+  * cc4ac523 github: update issue template with new path
+  * 2549f0cc layersurface: reset popuphead after unmap
+  * 33742291 core: remove unused includes and fix warn
+  * 2ba6bb69 popups: fix breadthfirst and at
+  * db30ff63 popups: avoid infinite recursion in bf
+  * a7e23d2f presentation-time: move to new impl
+  * 1753059b pointermgr: reset entered outputs when resetting surface
+  * b0861b67 config: move various cursor-related vars to cursor:
+  * 7cf810b1 keybinds: Fix classic global keybinds(pass dispatcher)
+    (#5967)
+  * 51b0da2c flake.lock: update
+  * 4f26ae70 core: drop unused protocol impls
+  * eeebbc0e groupbar: fix title scaling (#5969)
+  * 635a02d8 layer-shell: move to new impl
+  * 85f7f690 decorations: fix groupbar input (#5963)
+  * fe4737fb pointer: don't calculate hw hotspot for missing hw cursors
+  * d7aed240 text-input-v3: atomically enable/disable on commit
+  * c98acaed virtual-keyboard: release keys before destroy
+  * 67a5377b core: remove wayland sockets on exit (#5959)
+  * 84e8d181 Tablet: move to new impl
+  * ed411f53 cursor: move to a hyprland impl
+  * e4e84064 xdg-activation: keep tokens after the resource is dead
+  * 6a988d92 core: cleanup environment on exit (#5941)
+  * d1ad490c cmake: fix .pc file inputs (#5946)
+  * 36d32973 keybinds: add empty on monitor and next empty flags (#5936)
+  * 70b5e6df meson: require hyprwayland-scanner >= 0.3.5
+  * 5e7925ea foreign-toplevel: bypass no activate focus checks
+  * 57a12476 internal: Add missing errno.h include to SdDaemon.cpp
+    (#5938)
+  * 60121087 cmake: bump hw-s required ver to 0.3.5
+  * 22a86fd7 session-lock: don't allow events from rejected locks
+  * 598bbd18 window: avoid uaf on updateWindow decos
+  * 6ccc2219 xkb: check value correctly with
+    xkb_state_layout_index_is_active() (#5925)
+  * ec092bd6 core: chase hyprwayland-scanner
+  * 2bcc8d30 eventloop: don't call lost timers
+  * 375e77e3 ipc: add togglegroup, moveintogroup and moveoutofgroup
+    events (#5866)
+  * 96365309 deco-positioner: avoid infinite recalcs
+  * 0acad88c foreign-toplevel-wlr: send current class and title on map
+  * 57e76f91 keybinds: fix xkb keybind name to keysym comparison (#5917)
+  * 0c446ec5 memory: fix SP/WP hierarchy templates
+  * fa69de8a pointer-constraints: Remove unnecessary cursor warps
+    (#5895)
+  * 05e4a3f1 windows: Revert "window: set config only when both props
+    end anims" (#5904)
+  * a8a04c74 renderer: deny solitary during a session lock
+  * cddeec47 keybinds: make the keybind manager check for session lock
+    (#5894)
+  * c7fbc30b Nix: add missing deps
+  * 1ed1ce95 internal: new shared_ptr and weak_ptr implementation
+    (#5883)
+  * 589f758d CI/Nix: build with submodules
+  * f1551330 Nix: use CMake for builds instead of Meson
+  * 99aa34db CMake: install files (instead of Makefile)
+  * 03ebad3c idle-inhibit: enable idle inhibitor if no hl surface is
+    associated (#5882)
+  * aaf35b9f protocols: add hyprland_focus_grab_v1 implementation
+    (#5850)
+  * 62eadad2 kde-server-decoration: move to new impl
+  * 0b215c5f idle-inhibit: fix and cleanup visibility logic
+  * a3309b51 shadow: fix small pixel gaps between border
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 11 Jun 2024 15:47:58 +0200
+
 hyprland (0.40.0-1ppa4) noble; urgency=medium
 
   * Fix install prefix

@@ -18,12 +18,6 @@
 %:
 	dh $@ -S cmake
 
-override_dh_auto_install:
-	ln -s "`dh_assistant which-build-system | jq -r '.["build-directory"]'`" build
-	ls -al build
-	make install PREFIX=debian/hyprland/usr
-
-
 # dh_make generated override targets.
 # This is an example for Cmake (see <https://bugs.debian.org/641051>).
 #override_dh_auto_configure:
