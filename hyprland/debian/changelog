@@ -1,3 +1,27 @@
+hyprland-unstable (0.41.0~1ppa1+git202406121907-a99f3141) noble; urgency=medium
+
+  * Update to main a99f3141
+  * a99f3141 input: fallback to main surface if not found on window
+  * 9d7d5ec3 seatmgr: fix missing nullcheck in updateActiveKeyboardData
+  * c7e85e26 seat: fixup touch event handling
+  * 1bae19ce datadevice: only send actions for ver >= 3
+  * f687105e compositor: update suspended states on
+    moveworkspacetomonitor
+  * 32283ed7 groupbar: fix groupbar position rounding (#6433)
+  * 8412ffcc keybinds: fix bindm (#6429)
+  * b6bf4afb layer: don't close special ws when restoring focus (#6424)
+  * e1b05f8e binds: Add description to key binds (#6358)
+  * 21b9e31b layershell: Fix keyboard focus grabs (#4968) (#6394)
+  * 1c388e52 session-lock: fix refocus after unlocking (#6423)
+  * 8c64a4ba core: move to hyprutils for utils (#6385)
+  * 1f46296e deps: update wlroots
+  * 80982092 sessionLock: fix focus not being tied to mouse (#6414)
+  * 90d00977 input: fix input regions being ignored on ls-es (#6413)
+  * b17381eb groupbar: Don't apply monitor scale twice to groupbar text
+    (#6411)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Jun 2024 19:07:24 +0200
+
 hyprland-unstable (0.40.0~1ppa3+git202406111227-811429bf.1) noble; urgency=medium
 
   * Specify hyprwayland-scanner version in build deps
