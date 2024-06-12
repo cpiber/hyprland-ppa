@@ -34,3 +34,6 @@
 [submodule "waybar/source"]
 	path = waybar/source
 	url = https://github.com/Alexays/Waybar.git
+[submodule "hyprutils/source"]
+	path = hyprutils/source
+	url = https://github.com/hyprwm/hyprutils.git

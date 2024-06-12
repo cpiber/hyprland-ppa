@@ -1,0 +1,32 @@
+Source: hyprutils
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprutils
+Vcs-Git: https://github.com/hyprwm/hyprutils.git
+
+Package: hyprutils-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ hyprutils1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Hyprutils is a small C++ library for utilities
+ used across the Hypr* ecosystem.
+ This package includes the build-headers for using hyprlang in your own project.
+
+Package: hyprutils1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Hyprutils is a small C++ library for utilities
+ used across the Hypr* ecosystem.
