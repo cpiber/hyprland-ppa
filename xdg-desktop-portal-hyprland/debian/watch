@@ -33,5 +33,5 @@ version=4
 #https://pypi.debian.net/xdg-desktop-portal-hyprland/xdg-desktop-portal-hyprland-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
 
 # Direct Git.
-opts="mode=git" https://github.com/hyperwm/xdg-desktop-portal-hyprland.git \
+opts="mode=git" https://github.com/hyprwm/xdg-desktop-portal-hyprland.git \
     refs/tags/v([\d\.]+)

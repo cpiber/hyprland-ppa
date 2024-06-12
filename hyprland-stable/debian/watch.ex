@@ -33,5 +33,5 @@ version=4
 #https://pypi.debian.net/hyprland/hyprland-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
 
 # Direct Git.
-opts="mode=git" https://github.com/hyperwm/hyprland.git \
+opts="mode=git" https://github.com/hyprwm/hyprland.git \
     refs/tags/v([\d\.]+)

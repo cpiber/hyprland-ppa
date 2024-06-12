@@ -33,5 +33,5 @@ version=4
 #https://pypi.debian.net/hypridle/hypridle-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
 
 # Direct Git.
-opts="mode=git" https://github.com/hyperwm/hypridle.git \
+opts="mode=git" https://github.com/hyprwm/hypridle.git \
     refs/tags/v([\d\.]+)

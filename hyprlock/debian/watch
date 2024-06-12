@@ -33,5 +33,5 @@ version=4
 #https://pypi.debian.net/hyprlock/hyprlock-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
 
 # Direct Git.
-opts="mode=git" https://github.com/hyperwm/hyprlock.git \
+opts="mode=git" https://github.com/hyprwm/hyprlock.git \
     refs/tags/v([\d\.]+)
