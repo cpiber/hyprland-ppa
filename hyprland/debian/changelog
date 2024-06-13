@@ -1,3 +1,19 @@
+hyprland-unstable (0.41.1~1ppa1+git202406131230-e6d10539) noble; urgency=medium
+
+  * Update to main e6d10539
+  * e6d10539 core: fix a few small memory leaks on exit (#6470)
+  * 9e781040 props: bump version to 0.41.1
+  * a54f98c2 virtualkeyboard: check if VirtualKeyboard is valid before
+    accessing client. (#6460)
+  * d677ac6f hyprpm: print all types of cmake errors during configure
+  * a9d7befc formats: fixup for legacy_renderer builds
+  * 0e18da84 foreign-toplevel: fixup output resource finding
+  * 18ee9ece layershell: minor fixes to re-mapping of layers
+  * 38132ffa renderer: properly software lock cursors with zoom_factor
+    (#6434)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 13 Jun 2024 12:30:10 +0200
+
 hyprland-unstable (0.41.0~1ppa1+git202406121907-a99f3141) noble; urgency=medium
 
   * Update to main a99f3141
