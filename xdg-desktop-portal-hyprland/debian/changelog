@@ -1,3 +1,38 @@
+xdg-desktop-portal-hyprland (1.3.2-1ppa1) noble; urgency=medium
+
+  * Update to release 1.3.2
+  * 24be4a2 props: bump version to 1.3.2
+  * 8f1ee9f screencopy: clamp the timer to a miminum of 6 milliseconds
+    (#226)
+  * 7290782 Update README.md
+  * 91e48d6 core: Small fixes (#215)
+  * af7c87a core: fix inShellPath, Permission denied (#213)
+  * 1f228ba screencopy: add a small time buffer for next queue frame
+  * ccabd97 config: add screencopy:max_fps
+  * 12af841 screencopy: fixup timing issues with frame re-scheduling
+  * 0fe8404 core: reset screenshot pointer aswell (#209)
+  * 9ace6f9 core: use a lock_guard for loopRequestMutex
+  * bb44921 flake.lock: update
+  * 2d2fb54 picker: use only qt6
+  * 15fd76c screencopy: add missing header for sdbus-cpp 1.5.0
+  * 1b71391 flake.lock: update
+  * 65fb44a config: add explicit ctors for config variables
+  * f62fcea picker: Save the output name to a proper variable instead of
+    parsing it from the button text (#183)
+  * c06fd88 picker: Adds elided buttons for better readability (#176)
+  * f29e046 picker: Allow dialog resizing (#173)
+  * 5a59264 screencast: remove frame callbacks on every stream state
+    change
+  * 4fc83e6 core: avoid using uninitialized ptrs
+  * 6a5de92 cmake: Don't install sdbus-cpp files
+  * 24fa87b Cmake: Do not use CMAKE_INSTALL_LIBDIR for the systemd
+    service
+  * 899a70e core: don't critically exit if env doesnt have home
+  * f2a8536 README: update build instructions
+  * bad305c nix: use same nixpkgs input for hyprlang
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 13 Jun 2024 11:57:12 +0200
+
 xdg-desktop-portal-hyprland (1.3.1-1ppa2) noble; urgency=medium
 
   * Fix systemd unit location
