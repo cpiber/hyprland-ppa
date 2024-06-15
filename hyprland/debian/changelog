@@ -1,3 +1,30 @@
+hyprland-unstable (0.41.1~1ppa1+git202406152101-91fe58f8) noble; urgency=medium
+
+  * Update to main 91fe58f8
+  * 91fe58f8 window: improve swallowing functionality
+  * 77f44bfc output: avoid crashes when binding a defunct wl_output
+    global
+  * 6c24dc0b xdg-shell: fixup xdg-positioner's pointForAnchor with non-
+    corner points
+  * 46ef6653 data-device: abort drag on unaccepted offers
+  * fb82f6bc animations: fix overriding direction for slide
+  * 32aca887 keybinds: add custom event dispatcher
+  * df0c014b xwayland: use safeRemove for removing files
+  * cb63398f [gha] Nix: update inputs
+  * 2f278dc8 egl: fixup format modifier lookups with implicit modifiers
+  * 12ce06f3 format: fix flipped r/b channels on legacy_renderer
+  * a357fa3e window: use effective damage for tearing re-schedules
+  * a9d53a22 vrr: add option to fix mouse breaking vrr (#6483)
+  * b2590b58 hyprctl: added --follow option to rolliglog (#6325)
+  * 9cd5b358 layerSurface: fix layer being refocused every commit with
+    on_demand (#6487)
+  * 8055b1c0 misc: Fix build warnings (#6486)
+  * 5de273a1 xwayland: drop some spammy logs to trace
+  * 4842eb83 helpers: make shm_open() portable after 8bcccf9f0f0f
+    (#6471)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 15 Jun 2024 21:01:43 +0200
+
 hyprland-unstable (0.41.1~1ppa1+git202406131230-e6d10539) noble; urgency=medium
 
   * Update to main e6d10539
