@@ -1,3 +1,57 @@
+hyprland-unstable (0.41.1~1ppa1+git202406222255-0b924f54) noble; urgency=medium
+
+  * Update to main 0b924f54
+  * 0b924f54 constraints: Lock surface region when region is empty
+    (#6627)
+  * 4778afe2 hyprctl: make recv timeout bigger and give error message if
+    it does timeout (#6621)
+  * fa022901 surface: add virtual destructor to surfacerole to avoid
+    undefined behaviour (#6620)
+  * 4a8b13ea renderer: shrink occlusion rect if blur is used
+  * 8cf2ca19 math: include cstring for memset
+  * fabc30df format: include macros for unreachable
+  * d6de248b window: expose pseudotiled state and add param to
+    dispatcher (#6583)
+  * c1e21719 core: avoid bumping hard rlimits, restore on fork
+  * def5fcb2 damageRing: move to hyprland impl
+  * 65f04f26 flake.lock: update
+  * 6d21014a core: fix no-pch build
+  * 20a465f6 pointer: use software rendering when monitor is mirrored
+    (#6587)
+  * fb15b7aa core: Move to hyprutils for Math
+  * 6e5804b5 hyprctl: fix zsh completion (#6467)
+  * e0e3c4c6 compositor: bump nofile rlimits on launch
+  * b98e0876 hyprctl: avoid using select()
+  * 236150b3 github: reword bug or regression (#6520)
+  * d1340bd1 keybinds: ignore missing keysyms if no other methods match
+  * 28ce0e0f misc: a few compiler level performance optimisations
+    (#6559)
+  * a9c7a083 data-device: minor fixes
+  * 785d0628 seat: track pressed pointer buttons
+  * 13606774 subcompositor/renderer: fixup handling of subsurfaces below
+    the main one
+  * 14ab0ecc Nix: don't strip in debug builds
+  * 9cb3bf1c Nix: tidy up derivation
+  * b15be9c7 xwayland: do not set a new data source if it has no MIMEs
+  * d5ef10ab data-device: properly abort drag on missing device
+  * 172ee1ca data-device: minor fixups
+  * 738530e6 xdg-shell: Continue transform of popup until size fits
+    (#6521)
+  * 069a21a3 xwayland: force default plain mime atoms on known types
+  * 2031af82 wl_data_device: send drop_performed in completeDrag
+  * d0a6fa7a wl_seat: accomodate for apps late-binding seat resources
+  * 648ac8a0 xdg-shell: properly check for resource version for TILED
+    and SUSPENDED states
+  * 43c75f17 input: add cursor:warp_on_changeworkspace (#6480)
+  * 1b544449 seat/dnd: unfocus pointer from surfaces on dnd start
+  * 3eaf35f1 hyprland.conf: update master section (#6537)
+  * 2566d818 xwayland: fixup unfocus atom conditions
+  * 1f5fd7e6 hyprpm: add --no-shallow
+  * 908bec15 wl_seat: send repeat data from current keyboard on bind
+  * 89f795da master: refine master layout new window handling (#6479)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 22 Jun 2024 22:55:24 +0200
+
 hyprland-unstable (0.41.1~1ppa1+git202406152101-91fe58f8) noble; urgency=medium
 
   * Update to main 91fe58f8
