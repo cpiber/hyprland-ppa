@@ -1,3 +1,93 @@
+hyprland (0.41.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.41.2
+  * 918d8340 flake.lock: update
+  * 4f711397 props: bump version to 0.41.2
+  * 8121e66f cmake: bump hyprutils dep to 0.1.5
+  * 784c0b5c keybinds: fix mouse pass (#6652)
+  * eef207ce output: fix cursors disappearing after dpms (#6659)
+  * 4dd2b590 hyprctl: add a newline after log()
+  * cff0123c wl-compositor: don't send enter to defunct output globals
+  * 8a68199a foreign-toplevel-wlr: fix out-of-range for missing monitor
+    resources
+  * e09addf8 Workspace.hpp: fix include
+  * 315f16d5 dbus: import PATH XDG_DATA_DIRS variables into systemd and
+    dbus session
+  * 7f09646a core: add ability to select previous workspace per monitor
+    (#6598)
+  * 0b924f54 constraints: Lock surface region when region is empty
+    (#6627)
+  * 4778afe2 hyprctl: make recv timeout bigger and give error message if
+    it does timeout (#6621)
+  * fa022901 surface: add virtual destructor to surfacerole to avoid
+    undefined behaviour (#6620)
+  * 4a8b13ea renderer: shrink occlusion rect if blur is used
+  * 8cf2ca19 math: include cstring for memset
+  * fabc30df format: include macros for unreachable
+  * d6de248b window: expose pseudotiled state and add param to
+    dispatcher (#6583)
+  * c1e21719 core: avoid bumping hard rlimits, restore on fork
+  * def5fcb2 damageRing: move to hyprland impl
+  * 65f04f26 flake.lock: update
+  * 6d21014a core: fix no-pch build
+  * 20a465f6 pointer: use software rendering when monitor is mirrored
+    (#6587)
+  * fb15b7aa core: Move to hyprutils for Math
+  * 6e5804b5 hyprctl: fix zsh completion (#6467)
+  * e0e3c4c6 compositor: bump nofile rlimits on launch
+  * b98e0876 hyprctl: avoid using select()
+  * 236150b3 github: reword bug or regression (#6520)
+  * d1340bd1 keybinds: ignore missing keysyms if no other methods match
+  * 28ce0e0f misc: a few compiler level performance optimisations
+    (#6559)
+  * a9c7a083 data-device: minor fixes
+  * 785d0628 seat: track pressed pointer buttons
+  * 13606774 subcompositor/renderer: fixup handling of subsurfaces below
+    the main one
+  * 14ab0ecc Nix: don't strip in debug builds
+  * 9cb3bf1c Nix: tidy up derivation
+  * b15be9c7 xwayland: do not set a new data source if it has no MIMEs
+  * d5ef10ab data-device: properly abort drag on missing device
+  * 172ee1ca data-device: minor fixups
+  * 738530e6 xdg-shell: Continue transform of popup until size fits
+    (#6521)
+  * 069a21a3 xwayland: force default plain mime atoms on known types
+  * 2031af82 wl_data_device: send drop_performed in completeDrag
+  * d0a6fa7a wl_seat: accomodate for apps late-binding seat resources
+  * 648ac8a0 xdg-shell: properly check for resource version for TILED
+    and SUSPENDED states
+  * 43c75f17 input: add cursor:warp_on_changeworkspace (#6480)
+  * 1b544449 seat/dnd: unfocus pointer from surfaces on dnd start
+  * 3eaf35f1 hyprland.conf: update master section (#6537)
+  * 2566d818 xwayland: fixup unfocus atom conditions
+  * 1f5fd7e6 hyprpm: add --no-shallow
+  * 908bec15 wl_seat: send repeat data from current keyboard on bind
+  * 89f795da master: refine master layout new window handling (#6479)
+  * 91fe58f8 window: improve swallowing functionality
+  * 77f44bfc output: avoid crashes when binding a defunct wl_output
+    global
+  * 6c24dc0b xdg-shell: fixup xdg-positioner's pointForAnchor with non-
+    corner points
+  * 46ef6653 data-device: abort drag on unaccepted offers
+  * fb82f6bc animations: fix overriding direction for slide
+  * 32aca887 keybinds: add custom event dispatcher
+  * df0c014b xwayland: use safeRemove for removing files
+  * cb63398f [gha] Nix: update inputs
+  * 2f278dc8 egl: fixup format modifier lookups with implicit modifiers
+  * 12ce06f3 format: fix flipped r/b channels on legacy_renderer
+  * a357fa3e window: use effective damage for tearing re-schedules
+  * a9d53a22 vrr: add option to fix mouse breaking vrr (#6483)
+  * b2590b58 hyprctl: added --follow option to rolliglog (#6325)
+  * 9cd5b358 layerSurface: fix layer being refocused every commit with
+    on_demand (#6487)
+  * 8055b1c0 misc: Fix build warnings (#6486)
+  * 5de273a1 xwayland: drop some spammy logs to trace
+  * 4842eb83 helpers: make shm_open() portable after 8bcccf9f0f0f
+    (#6471)
+  * e6d10539 core: fix a few small memory leaks on exit (#6470)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Jun 2024 15:16:29 +0200
+
 hyprland (0.41.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.41.1

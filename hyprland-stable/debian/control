@@ -37,7 +37,7 @@ Build-Depends:
  hwdata,
  hyprlang-dev (>= 0.3.2),
  hyprcursor-dev (>= 0.1.7),
- hyprutils-dev (>= 0.1.2),
+ hyprutils-dev (>= 0.1.5),
  hyprwayland-scanner (>= 0.3.10),
  xwayland,
 Standards-Version: 4.6.2
