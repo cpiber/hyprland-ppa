@@ -1,3 +1,23 @@
+hyprland-unstable (0.41.2~1ppa1+git202406251525-918d8340) noble; urgency=medium
+
+  * Update to main 918d8340
+  * 918d8340 flake.lock: update
+  * 4f711397 props: bump version to 0.41.2
+  * 8121e66f cmake: bump hyprutils dep to 0.1.5
+  * 784c0b5c keybinds: fix mouse pass (#6652)
+  * eef207ce output: fix cursors disappearing after dpms (#6659)
+  * 4dd2b590 hyprctl: add a newline after log()
+  * cff0123c wl-compositor: don't send enter to defunct output globals
+  * 8a68199a foreign-toplevel-wlr: fix out-of-range for missing monitor
+    resources
+  * e09addf8 Workspace.hpp: fix include
+  * 315f16d5 dbus: import PATH XDG_DATA_DIRS variables into systemd and
+    dbus session
+  * 7f09646a core: add ability to select previous workspace per monitor
+    (#6598)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Jun 2024 15:25:10 +0200
+
 hyprland-unstable (0.41.1~1ppa1+git202406222255-0b924f54) noble; urgency=medium
 
   * Update to main 0b924f54
