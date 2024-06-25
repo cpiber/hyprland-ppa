@@ -1,3 +1,15 @@
+hyprutils (0.1.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.5
+  * 1f6bbec cmake: bump ver to 0.1.5
+  * 5606bf9 README: Update build instructions (#4)
+  * 7a2c2c9 Math: Some more box improvements and test cases  (#3)
+  * ff343e0 Math: Added some constants to handle floating point
+    presicion comparisons (#2)
+  * 725f63a vector: prefix macros with AQ_
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Jun 2024 15:12:50 +0200
+
 hyprutils (0.1.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.4
