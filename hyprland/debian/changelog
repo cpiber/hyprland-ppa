@@ -1,3 +1,21 @@
+hyprland-unstable (0.41.2~1ppa1+git202406291451-9c5dd59d) noble; urgency=medium
+
+  * Update to main 9c5dd59d
+  * 9c5dd59d input: fix capabilities enum types passed
+  * d16c6aa1 pointer-constraint: set lifetime correctly
+  * ac117713 core: fix a few ubsan issues reported at exit of hyprland
+    (#6699)
+  * f2dc48d9 keybinds: never switch to another monitor with per_monitor
+    (#6665)
+  * e4d09aa3 sessionLock: focus lock on creation based on mouse position
+    (#6658)
+  * c338acbb ime-relay: fix crash on nullptr surface focus
+  * 95782de9 renderer: don't use the surface counter in popup iterations
+  * 3ba3d20a pointer: round position when rendering software cursors
+  * 1d709628 core: move to steady_clock where applicable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 29 Jun 2024 14:51:20 +0200
+
 hyprland-unstable (0.41.2~1ppa1+git202406251525-918d8340) noble; urgency=medium
 
   * Update to main 918d8340
