@@ -1,3 +1,16 @@
+hyprland-unstable (0.41.2~1ppa1+git202407020957-d7ea1b77) noble; urgency=medium
+
+  * Update to main d7ea1b77
+  * d7ea1b77 xwayland: break cyclic loop of parents (#6722)
+  * 4d6f96f7 debug: add Nvidia driver info (#6715)
+  * 8ff9410d inputmgr: ensure we dont divide by zero (#6713)
+  * 718afe27 seat: don't send keyboard data without a keyboard cap
+    (#6697)
+  * 1f43a5c8 session: fix activate events being always treated as on
+    (#6696)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 02 Jul 2024 09:57:20 +0200
+
 hyprland-unstable (0.41.2~1ppa1+git202406291451-9c5dd59d) noble; urgency=medium
 
   * Update to main 9c5dd59d
