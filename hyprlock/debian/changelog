@@ -1,3 +1,58 @@
+hyprlock (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * 6e09211 helpers: fix jpeg and webp OOM error (#401)
+  * 29420dd cmake: bump ver to 0.4.0
+  * b862bbc auth: pam fallback log message and always call pam_end after
+    pam_authenticate (#399)
+  * 01bf48e config: don't crash when getenv HOME returns null (#398)
+  * 9737bf6 label: do not error when using cmd[] for a static label cmd
+    (#396)
+  * 5b19c63 config: Remove dupe input-field rounding from
+    listKeysForSpecialCategory (#395)
+  * 9873ec5 asyncResourceGatherer: add dma frames before starting the
+    asyncLoopThread (#394)
+  * 88b9ce4 core: improve dynamic output handling (#386)
+  * 0f66aea core: fix sourcing config files (#387)
+  * 318c00d core: stabilize label updates and revision locking in the
+    asyncResourceGatherer (#384)
+  * d31e600 core: Inproved error handling and arg parsing (#380)
+  * 210b456  core: fix second instance of hyprlock unlocking session
+    (#376)
+  * c5b8ad0 core: move to hyprutils for utils (#362)
+  * e07d411 readme: Add Arch instructions
+  * 768cd3e core: handle null timers in destructors (#350)
+  * 58c93d8 core: fix a few reported leaks by asan (#349)
+  * 972c1c2 restore: move to runtime dir and check his
+  * ba4b08e nix/hm-module: remove
+  * 18d2d2b cmake: macro-prefix-map, compile_commands.json (#338)
+  * 997f222 core: add zindex option to widgets (#334)
+  * 316c377 core: add key repeat for backspace and make del clear the
+    input (#277)
+  * 386a1e6 readme: Fixed getconf command in build instructions (#326)
+  * 0477df2 gatherer: use absolute path in magic guess
+  * c87af3a renderer: add text trim with option to disable (#310)
+  * 21226c1 README: add libmagic dependency (#307)
+  * 3cd4614 readme: add new line for clarity
+  * 992fb49 session-lock: use logicalSize in late configure
+  * 9cca0db core: avoid sending duplicate acks for ls
+  * 1651b02 core: update renderer on late scale changes
+  * 4152620 core: Add support for JPEG and WEBP background images (#286)
+  * 8658386 image: fix build with libc++
+  * 307e473 core: fix initialization issues in LockSurface (#285)
+  * 2bce52f flake.lock: update
+  * 04267a5 label: add `text_align` option for multi-line text (#278)
+  * 6fa65e1 input-field: increase default fade_timeout (#276)
+  * 715a54f Nix: remove patch
+  * d9a6229 pam: always install pam file
+  * 883fbdf auth: implement a full pam conversation (#205)
+  * eb1123f widgets: add Shape + minor image improve (#266)
+  * d9f6441 core: use --immediate for attemptRestoreOnDeath (#270)
+  * 1bfe32e input-field: also fade in when checkWaiting is true (#265)
+  * a50db6d core: avoid double unlocks with no_fade_out (#257)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Jul 2024 23:04:57 +0200
+
 hyprlock (0.3.0-1ppa1) noble; urgency=medium
 
   * Initial release. Follows release 0.3.0.
