@@ -1,3 +1,18 @@
+hyprland-unstable (0.41.2~1ppa1+git202407052352-cc98594c) noble; urgency=medium
+
+  * Update to main cc98594c
+  * cc98594c pointer: update geometry after unplug events
+  * 0502c3f6 keybinds: fix movewindow float to 0 (#6777)
+  * 0a6e8300 Completions: use only awk (#6763)
+  * e894d5e9 tablet: Send .frame() on .proximity_out() (#6761)
+  * 8bb75a22 hyprctl completions: Use only awk rather than grep + awk
+  * 6247a6b5 renderer: don't skip back background on preBlurQueued
+  * 2fa57f2d pointer: change min cursor padding to 0 (#6027)
+  * e58fd3bf meson: fix wlroots-hyprland dep checks (for libliftoff
+    patch to work) (#6736)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Jul 2024 23:52:45 +0200
+
 hyprland-unstable (0.41.2~1ppa1+git202407020957-d7ea1b77) noble; urgency=medium
 
   * Update to main d7ea1b77
