@@ -1,3 +1,37 @@
+hyprland-unstable (0.41.2~1ppa1+git202407162226-293e6873) noble; urgency=medium
+
+  * Update to main 293e6873
+  * 293e6873 renderer: Make shader time always count from zero (#6903)
+  * da956c8a config: use hyprutils helper (#6891)
+  * bd526822 config: add option to exit window while retaining
+    fullscreen (#516) (#6880)
+  * f442f435 layout: update workspace rules on layout change (#6878)
+  * bc6b0880 window: override noMaximize if new window takes over
+    fullscreen (#6812) (#6870)
+  * ed6c7011 renderer: partially revert previous xray fix (#6868)
+  * 45c48984 socket2: Add windowtitlev2 event which includes the window
+    address (#6856)
+  * a770a88e toplevelexport: fix flipped r/b channels when sharing
+    windows (#6861)
+  * 1f646689 ext-foreign-toplevel: Send done after title and class
+    (#6857)
+  * 13bc7e1e style: fix clang-format
+  * 7486576f session-lock: send `locked` after the lock screen is
+    properly rendered (#6850)
+  * f85c6416 renderer: fix a few xray regressions (#6855)
+  * e728e56c meson: install wayland.hpp header
+  * 9ff83f4a sessionLock: fix the check for locking a locked session
+    (#6843)
+  * 3247d18a [gha] Nix: update inputs
+  * a443902a core: Improve handling of window properties (#6776)
+  * b03f41ef xwayland: fix setting title prop (#6809)
+  * 648f824b flake.lock: update
+  * 22138ac2 workspaces: don't try to reopen special workspaces (#6802)
+  * 19fb13e6 internal: Add functions to hyprctl header (#6745)
+  * ede1e63f config: don't crash when getenv HOME returns null
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 16 Jul 2024 22:26:58 +0200
+
 hyprland-unstable (0.41.2~1ppa1+git202407052352-cc98594c) noble; urgency=medium
 
   * Update to main cc98594c
