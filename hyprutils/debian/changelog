@@ -1,3 +1,18 @@
+hyprutils (0.2.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.0
+  * eb1ceff cmake: bump ver to 0.2.0
+  * 6174a2a path: add findConfig and dir utils (#8)
+  * c342d5c memory: do not release pointers after emitting a signal
+  * a8c3a13 math/region: add expand
+  * 259ecfa string: respect removeEmpty when VarList input is empty (#7)
+  * 1d20063 math: avoid assert fail in std::clamp in closestPoint
+  * bbc76ba math: adjust right and bottom box edges (#6)
+  * 7e1b661 memory: avoid undefined behaviour from downcasting ptr
+    implentation (#5)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 16 Jul 2024 22:22:54 +0200
+
 hyprutils (0.1.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.5
