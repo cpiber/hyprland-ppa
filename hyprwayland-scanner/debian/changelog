@@ -1,3 +1,18 @@
+hyprwayland-scanner (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * d5fa094 cmake: bump ver to 0.4.0
+  * bd7b1f8 client: destroy proxy when no dtor is available
+  * 55c78a5 client: do not define destroy listener in client mode
+  * c1e34fb core: avoid undefined behaviour in C macro (#8)
+  * 914f083 client: properly release objects on destroy
+  * 1413398 client: use CC for client classes
+  * f2d1d94 README: Remove last todos
+  * 3814018 core: Add client code generation (#6)
+  * 1419520 Nix: add cross-build package
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 16 Jul 2024 22:19:27 +0200
+
 hyprwayland-scanner (0.3.10-1ppa1) noble; urgency=medium
 
   * Update to release 0.3.10
