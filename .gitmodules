@@ -37,3 +37,6 @@
 [submodule "hyprutils/source"]
 	path = hyprutils/source
 	url = https://github.com/hyprwm/hyprutils.git
+[submodule "hyprutils-stable/source"]
+	path = hyprutils-stable/source
+	url = https://github.com/hyprwm/hyprutils.git
