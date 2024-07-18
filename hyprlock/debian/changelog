@@ -1,3 +1,9 @@
+hyprlock (0.4.0-1ppa2) noble; urgency=medium
+
+  * Use stable hyprutils
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 18 Jul 2024 22:51:48 +0200
+
 hyprlock (0.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.0
