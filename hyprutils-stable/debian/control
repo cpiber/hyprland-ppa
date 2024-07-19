@@ -18,7 +18,7 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- hyprutils1-stable (= ${binary:Version}),
+ hyprutils0 (= ${binary:Version}),
  ${misc:Depends},
 Provides:
  hyprutils-dev
@@ -28,15 +28,11 @@ Description: Hyprutils is a small C++ library for utilities
  used across the Hypr* ecosystem.
  This package includes the build-headers for using hyprlang in your own project.
 
-Package: hyprutils1-stable
+Package: hyprutils0
 Architecture: any
 Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Provides:
- hyprutils1
-Conflicts:
- hyprutils1
 Description: Hyprutils is a small C++ library for utilities
  used across the Hypr* ecosystem.

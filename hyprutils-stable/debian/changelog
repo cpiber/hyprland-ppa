@@ -1,3 +1,9 @@
+hyprutils-stable (0.1.5-1ppa2) noble; urgency=medium
+
+  * Make hyprutils non-conflicting
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 19 Jul 2024 08:33:59 +0200
+
 hyprutils-stable (0.1.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.5
