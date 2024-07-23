@@ -1,3 +1,201 @@
+waybar (0.10.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.4
+  * 15e15476 chore: 0.10.4
+  * dcbcf90a Update freebsd.yml
+  * ed0ed398 Update freebsd.yml
+  * 152053e0 Merge pull request #3398 from khaneliman/cursor
+  * 496dd05e Merge pull request #3443 from yangyingchao/master
+  * 3ff8fc8a Merge pull request #3447 from khaneliman/hyprland-disable
+  * d061d225 Merge pull request #3448 from khaneliman/sway
+  * 90ac7d5d sway/workspaces: support ignore window-rewrite
+  * 4295faa7 hyprland/backend: throw runtime_error instead of log
+  * 9c40137d sway/workspaces: clang-tidy
+  * 17132b25 sway/workspaces: remove deprecated field
+  * 3f61df4e Merge pull request #3416 from
+    Ape/pr/ignored_sink_never_running
+  * 2d9cc623 Merge pull request #3422 from
+    RobertMueller2/issue_feat_3256
+  * f6ff6492 Merge pull request #3441 from tchaikov/fmt-format-const
+  * b65ca334 fix #3442
+  * b71dfce1 Fix build with fmt11
+  * 5f3a9d94 Merge pull request #3440 from khaneliman/hyprland-fix
+  * 895c870d network: use fmt for format
+  * 47d7324a client: clang-format
+  * b19890c0 network: clang-format
+  * b41fcded hyprland/window: fix crash when no return from socket
+  * 0a78da03 flake.lock: update
+  * 3d0fd14f Merge pull request #3435 from grimsteel/network-bssid
+  * e117bd7c network: add bssid format replacement
+  * 26556605 Merge pull request #3432 from BSFishy/readme_update
+  * 0dd6af5a chore: update meson build command
+  * e2e5d4d4 feat/issue 3256: Toggle drawer state
+  * 44f39ca0 Merge pull request #3429 from ziyao233/outgoing/fix-fmt11
+  * 7725f6ed Fix build with fmt11
+  * b26ab1f9 Merge pull request #3417 from yangyingchao/master
+  * 21d42baa (temperature) fix clang-tidy lint .
+  * 23274a9d pulseaudio: Consider ignored sinks never running
+  * f78f29ee AModule: retain existing default behavior when unconfigured
+  * 7e2d8ab2 fix(#3239): hide cursor type change behind config flag
+  * 6f994c84 Merge pull request #3407 from khaneliman/rewrite-ignore
+  * 702e1064 modules/hyprland/workspace: ignore empty window-rewrite
+  * ca3877d0 Merge pull request #3325 from
+    williamwith4ms/escape_&_in_mediaplayer.py
+  * 18e67afe Merge pull request #3404 from khaneliman/clang-tidy
+  * d66685a3 util: clang-tidy
+  * 14c3235c src: clang-tidy
+  * 034760e8 Merge pull request #3399 from
+    RobertMueller2/discussion_3373
+  * 8f64cace fix example in manpage for pulseaudio/slider
+  * 99971556 Merge pull request #3267 from luttermann/upower_model
+  * ff0f408a Merge pull request #3380 from alerque/debug-keyboard-layout
+  * 3262b375 Merge pull request #3377 from fglinka/master
+  * 494cedb3 Merge pull request #3393 from RobertMueller2/issue_3366
+  * 93000e3f Merge pull request #3395 from RobertMueller2/issue_33341
+  * abfb654f Merge pull request #3396 from
+    Alexays/update_flake_lock_action
+  * 9c7a275c Merge pull request #3247 from benjamin-voisin/menu
+  * f609042e flake.lock: Update
+  * 8eee5687 manpage for PR #3395
+  * fb24e8cb add hide-empty-text option to hide module whenever output
+    is empty but format is not
+  * 64a31330 workaround for icons not rendered for apps existing before
+    waybar launch
+  * 64f54e1f Merge pull request #3389 from khaneliman/cleanup
+  * c08660d8 modules/hyprland/backend: handle empty json responses
+  * f6482c36 hyprland: clangd cleanup
+  * ccc3c132 Update archlinux
+  * 1003c220 Merge pull request #3381 from OpenSauce04/deprioritize-
+    battery-capacity
+  * d68bcbd2 modules/battery: Deprioritize `capacity` /sys value
+  * 4126502f Add debug information for keyboard layout selection
+  * 136b207a Add suggestion by clang-format
+  * c4d769a5 Add explicit constructor to struct Profile
+  * 1c1089ba Merge pull request #3364 from khaneliman/persistent-rename
+  * b114b115 treewide: clang-format
+  * f9e693b2 modules/hyprland/backend: remove testing log warn
+  * bac4d038 modules/hyprland/workspaces: remove deprecated property
+  * 9ba58250 Merge pull request #3362 from lukasfink1/bt-dyn-controller-
+    pr
+  * 0df3c84c Fix device list not being updated on selecting new
+    bluetooth controller
+  * 3f497258 Merge pull request #3360 from lukasfink1/bt-dyn-controller-
+    pr
+  * ab91d0ba Add hotplug detection of bluetooth controllers
+  * 79a62295 Merge pull request #3353 from locked-out/muted_icons
+  * 01438f71 Added muted icons usage to waybar-pulseaudio man page
+  * 0bc43c1a fix: lint
+  * e8a28827 Merge pull request #3320 from rtgiskard/dev
+  * b955e922 Merge pull request #3244 from rtgiskard/fix.privacy
+  * 562e1e59 Merge pull request #3331 from Eisfunke/eisfunke/regex-
+    collection-replace
+  * 892042eb Support muted icons for pulseaudio devices/ports
+  * 0251e25f Merge pull request #3345 from khaneliman/testing
+  * 9bd09aa1 Merge pull request #3318 from
+    Alexays/update_flake_lock_action
+  * 1cd013a0 clock: respect tooltip option
+  * 7721dcda mpris: some clang-tidy fix
+  * e8d91eb1 mpris: hide on current player vanished
+  * 07737867 privacy: consider only configured modules
+  * 71bb2b64 subprojects/spdlog: bump spdlog
+  * 06fa931d Dockerfiles/opensuse: add python3-packaging dependency
+  * 16ff5ee9 .github/workflows/linux: fail-fast
+  * 08c5df36 modules/sway/workspaces: clang-format fix
+  * b3658318 test/hyprland/backend: fix
+  * 959422f1 modules/hyprland/backend: protect against crash when
+    XDG_RUNTIME_DIR not set
+  * fa2e21df modules/hyprland/backend: move getSocketFolder to class
+  * 58e7abba tests: split into separate binaries
+  * 87eaa75b test/hyprland/backend: init
+  * 749f46f8 test/fixtures: Add GlibTestsFixture
+  * 0055ee69 modules/hyprland/workspaces: remove unneccesary
+    visibleWorkspaces variable
+  * 1b3b4577 modules/hyprland/backend: add getSocketFolder to header
+  * e1a6d513 test/config: add hyprland-workspaces config
+  * f4da2039 Merge pull request #3336 from pjones/pjones/current-only
+  * 637b220f sway/workspaces: Correct behavior when "current-only" is
+    set
+  * 365e77af Merge pull request #3332 from zspher/patch-wlr-taskbar
+  * 1b1442e3 fix: taskbar not applying empty class on empty
+  * d0a8c1d9 document capturing in window-rewrite
+  * 76c2f316 format RegexCollection output using match results
+  * 02eaa8b4 escape & in mediaplayer
+  * 4fbd4f21 privacy: consider only configured modules
+  * 1474cc62 flake.lock: Update
+  * 7163752a Merge pull request #3317 from jackwilsdon/patch-1
+  * e9350cf2 Fix format replacement names
+  * 1a1a61e9 Merge pull request #3313 from
+    zjeffer/fix/zjeffer/dockerfiles
+  * 532a9025 Dont fail docker image builds when another build fails
+  * cf66604f fix fedora image
+  * 9332697e Merge pull request #3064 from alttabber/master
+  * ab735f72 Merge pull request #3309 from khaneliman/workflows
+  * c5b5b64d modules/temperature: remove unused import
+  * 381fe830 Makefile: fix meson deprecations
+  * 8adb0a56 .github/workflows: fix meson deprecations
+  * 885290d9 📝 improve waybar-menu file
+  * 8220dbb5 📝 add a wayba-menu entry for documenting popup menus.
+  * d9f2e0f7 📝 add menu config informations in manpages
+  * 161c8c4c 🥅 do not crash when unable to make the menu
+  * f3ed5ca5 🌱 update default config with a menu example
+  * 0d518cb5 Merge pull request #3308 from khaneliman/bugfix/3280
+  * 24e8766a hyprland/backend: use /tmp
+  * 29e3d8c3 Hide non-visible special workspaces
+  * c3581fb6 🥅 only check menu if speciifed in the conf
+  * 57f2a57d Merge pull request #3306 from JohnRTitor/workflows-patch
+  * b6ca3ea4 worflows: add update-flake-lock action
+  * 1a9952d0 workflows: add nix-test workflow
+  * a4a4be33 fix: lint
+  * b7ce0b05 Merge pull request #3281 from VlctM/master
+  * af87388e Update docker.yml
+  * 2aa8008a Merge pull request #3259 from zjeffer/docker-images-action
+  * d4413f5f Merge pull request #3255 from LukashonakV/ISSUE#2240
+  * af794519 Merge pull request #3260 from zjeffer/clang-tidy
+  * ac2fa987 Merge pull request #3241 from rtgiskard/master
+  * a3ac6cb0 Merge pull request #3258 from zjeffer/master
+  * dc203b84 Merge pull request #3299 from khaneliman/cleanup
+  * f5bb0864 hyprland/workspaces: sort methods
+  * 9ba9d57c hyprland/windowcreationpayload: sort methods
+  * 82ae4740 hyprland/workspace: sort methods
+  * 56319a47 hyprland/workspaces: break up implementations
+  * 07c91c20 hyprland/workspaces: break up headers
+  * d73051e9 hyprland/workspaces: break up doUpdate
+  * 9fe51af6 hyprland/workspaces: break up parseConfig
+  * e4353e54 .gitignore: add .ccls-cache
+  * 63bb3383 Merge pull request #3296 from unrealhoang/nix_cava_bump
+  * d012124c cava bump: 0.10.2 for nix
+  * 10664922 Merge pull request #3294 from LukashonakV/cava_bump
+  * 60a613ae cava bump: 0.10.2
+  * 35a9ca47 Merge pull request #3289 from yangyingchao/yc-hacking
+  * b8e68b0e (hyprland) fix crash when failed to parse IPC message
+  * b61ea627 change layer for mode invisible to nullopt
+  * 8ad7c75d Merge pull request #3278 from LukashonakV/ISSUE#3276_cava
+  * 5a1454ab Cava. $XDG_CONFIG_HOME validation
+  * b288fdf8 ISSUE#2240. Clock Gtk::Label as a calendar tooltip
+  * d2a719d6 Redo to minimize code duplication.
+  * 28ef5b7d Fix formatting
+  * 6413f25b Add config option to select UPower device based on device
+    model.
+  * 912d0e83 Merge pull request #3266 from luttermann/master
+  * 3c075bcc Fixed formatting
+  * ba8a88ac Do not try to compare a string that may be a null-pointer
+  * e27488b4 clang-tidy improvements in privacy module
+  * 1828a94b clang-tidy: comment case styling options
+  * 49afcdf7 Add GitHub action for nightly Dockerfiles building
+  * ff84c6db fix debian dockerfile
+  * cb2d54a2 Merge pull request #3248 from LukashonakV/ISSUE3223_upower
+  * 5fe99ea0 Upower. Fix segmentation fault
+  * 21751b2f 🎨 clang-tidy
+  * 3b87b830 ♻️ move GMenu to ALabel class
+  * 884b909e ✨ add GtkMenu to the AModule class
+  * b980dab6 doc: update waybar-temperature manual page
+  * e298bf92 temperature: allow hwmon-path-abs as array
+  * 2ead1bbf Upower refactoring (#3220)
+  * 29917fb0 Fix hyprland/language events not working with keyboard
+    names with commas in them (#3224)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 23 Jul 2024 17:22:47 +0200
+
 waybar (0.10.3-1ppa1) noble; urgency=medium
 
   * Repackage for noble.
