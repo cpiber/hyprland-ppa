@@ -1,3 +1,35 @@
+hyprlock (0.4.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.1
+  * dba9d8b version: bump to 0.4.1
+  * 3d3b52e asyncResourceGatherer: deduplicate image rendering code
+    (#433)
+  * 20c01d9 core: make sure m_sLockState.lock is present in
+    onLockFinished and releaseSessionLock (#432)
+  * 372a4cd flake.lock: update
+  * a29012c CMake: fmt
+  * cac93f6 CMake, Nix: add VERSION file
+  * 9514925 core: grace unlock improvements and auth fixes for
+    grace/SIGUSR1 unlocks (#424)
+  * a3d8a2c Config: use hyprutils helper (#422)
+  * 69d37d2 core: immediately create session lock surfaces (#421)
+  * b407128 core: handle ext_session_lock_v1::finished as defined in the
+    protocol (#418)
+  * e5f0b56 asyncResourceGatherer: trace logs and exit behaviour (#414)
+  * 944caff config: add input-field fail_timeout option (#406)
+  * d8ccc6f core: Label exception handling + Frambuffer checks + headers
+    (#413)
+  * 3bedae4 auth: don't start pam conversation before the initial input
+    happens (#409)
+  * e72f601 readme: add official repo package to arch install
+  * 43f2b74 core: handle missing wayland protocol support (#408)
+  * 0552a1e core: add option to render solid background immediatly when
+    bg assets are not ready (#407)
+  * a50296c core: minor bugfixes (#405)
+  * 7fb3c03 hyprlock: ensure members are accessed direct (#404)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 23 Jul 2024 13:05:19 +0200
+
 hyprlock (0.4.0-1ppa2) noble; urgency=medium
 
   * Use stable hyprutils

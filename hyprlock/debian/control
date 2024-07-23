@@ -10,7 +10,7 @@ Build-Depends:
  libwayland-dev,
  wayland-protocols,
  hyprlang-dev (>= 0.4.0),
- hyprutils-stable-dev (>= 0.1.1),
+ hyprutils-dev (>= 0.2.0),
  libegl-dev,
  libxkbcommon-dev,
  libjpeg-dev,
