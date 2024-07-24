@@ -1,0 +1,5 @@
+usr/share/pipewire/pipewire-pulse.conf
+usr/bin/pipewire-pulse
+usr/lib/systemd/user/pipewire-pulse.service
+usr/lib/systemd/user/pipewire-pulse.socket
+usr/share/glib-2.0/schemas/org.freedesktop.pulseaudio.gschema.xml

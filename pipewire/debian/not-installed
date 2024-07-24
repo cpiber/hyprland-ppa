@@ -1,0 +1,5 @@
+usr/share/pipewire/client-rt.conf.avail/20-upmix.conf
+usr/share/pipewire/client.conf.avail/20-upmix.conf
+usr/share/pipewire/pipewire-pulse.conf.avail/20-upmix.conf
+usr/share/pipewire/pipewire.conf.avail/10-rates.conf
+usr/share/pipewire/pipewire.conf.avail/20-upmix.conf

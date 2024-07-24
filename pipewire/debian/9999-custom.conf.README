@@ -1,0 +1,20 @@
+How to override 9999-custom.conf
+================================
+
+This file 9999-custom.conf is installed by pipewire-bin. In order to modify
+this file, a user has to divert it, otherwise user's changes will be overwritten
+during the next update of pipewire-bin.
+
+# To add the diversion
+sudo dpkg-divert \
+       --divert /usr/share/alsa-card-profile/mixer/profile-sets/9999-custom.conf.BAK \
+       --rename /usr/share/alsa-card-profile/mixer/profile-sets/9999-custom.conf
+
+This tells to dpkg not to install 9999-custom.conf but 9999-custom.conf.BAK,
+allowing the user to customize its own 9999-custom.conf.
+
+# To remove the diversion
+sudo dpkg-divert \
+       --rename --remove /usr/share/alsa-card-profile/mixer/profile-sets/9999-custom.conf
+
+Please refer to the dpkg-divert documentation for more information.

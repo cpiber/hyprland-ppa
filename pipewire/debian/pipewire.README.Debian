@@ -1,0 +1,148 @@
+Using pipewire for audio
+========================
+
+pipewire in Debian was initially used for video (screen sharing and remote
+desktop, particularly in GNOME and KDE Wayland sessions). However, it has
+matured enough to also be used for audio.
+
+
+Using pipewire as a substitute for PulseAudio
+---------------------------------------------
+
+Install the pipewire-pulse package and log back in.
+And potentially install the new recommended session manager
+wireplumber instead of the deprecated pipewire-media-session.
+
+PipeWire project recommends [1] to remove the pulseaudio package to prevent
+conflicts in some cases [2] even if both pulseaudio and pipewire-pulse
+services are not running at the same time.
+pipewire-pulse doesn't conflict with pulseaudio at the package level to allow
+users to switch from one to the other just by disabling/enabling services.
+
+[1] https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/FAQ#should-i-uninstall-everything-pulseaudio
+[2] https://bugs.debian.org/1013276
+
+
+Using pipewire with Bluetooth
+---------------------------------------------
+
+Install the libspa-0.2-bluetooth package to add Bluetooth support to pipewire.
+
+Please note that AAC codec support is currently disabled due to license issue.
+See https://bugs.debian.org/981285
+
+Pipewire (nor any other package) does not depend or recommend libspa-0.2-bluetooth
+as not all users are interested in Bluetooth support.
+The same apply to pulseaudio and pulseaudio-module-bluetooth:
+pulseaudio does not depend or recommend pulseaudio-module-bluetooth.
+
+However, pulseaudio-module-bluetooth and libspa-0.2-bluetooth are installed on
+a system through the dependency of a Desktop Environment. For example,
+with GNOME, the bluetooth plugin is pulled by the meta package gnome-core.
+
+Moreover, both pipewire-pulse and wireplumber packages already suggest
+to install the libspa-0.2-bluetooth package.
+
+
+Using pipewire as the default ALSA output device
+------------------------------------------------
+
+Install the pipewire-alsa package.
+
+ALSA clients will output via pipewire instead of PulseAudio or directly to
+ALSA.
+
+pipewire-alsa conflicts with pulseaudio because both try to take control of
+all ALSA devices and redirect all audio streams to them. But, because of their
+respective configs files name:
+- PipeWire:     /etc/alsa/conf.d/99-pipewire-default.conf
+- PulseAudio:   /etc/alsa/conf.d/99-pulse.conf
+which make PulseAudio ordered after PipeWire. PulseAudio will take the
+final control of ALSA clients even when pipewire-alsa is installed. Thus,
+to allow ALSA clients redirecting output to pipewire, pulseaudio package
+needs to be removed.
+
+To check where streams are redirected, run the following command:
+$ aplay -L | grep -A 1 default
+
+
+Using pipewire as a substitute for JACK
+---------------------------------------
+
+Install the pipewire-jack package.
+
+JACK clients can be configured to output via pipewire instead of JACK.
+
+To enable this:
+
+* either run JACK clients using the pw-jack(1) wrapper, or copy
+  /usr/share/doc/pipewire/examples/ld.so.conf.d/pipewire-jack-*.conf
+  into /etc/ld.so.conf.d/ and run ldconfig as root.
+
+
+Setting pipewire real-time priority limits
+---------------------------------------
+
+!!!  WARNING  !!!
+Your system has real-time priority limits for a good reason. This allows it
+to remain stable in case a process goes crazy. RTKit allows limited use of
+real-time priority without the risk of locking up the system if a real-time
+task starts spinning.
+Some upstream recommendations for real-time [3] are to increase these limits to
+bypass RTKit or to disable most of its safeguards. By following them, your
+system could be blocked if a process goes wrong.
+These performance tweaks are not needed for a normal use of pipewire, instead
+modifying pipewire configuration is enough.
+
+[3] https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Performance-tuning#rlimits
+
+The "pipewire" package creates a system group called "pipewire".
+The upstream recommended priority limits for this group are defined in:
+
+* /etc/security/limits.d/25-pw-rlimits.conf
+
+To enable these limits for your user, add it to the "pipewire" group.
+
+* sudo adduser yourusername pipewire
+
+
+After upgrading pipewire
+------------------------
+
+A system-level upgrade of pipewire will *not* automatically restart
+all pipewire-related user-level services (such as "pipewire-pulse").
+After an upgrade of pipewire, there are three main ways to restart
+services.
+
+1. The least disruptive way to restart services is a command such as
+
+$ systemctl --user restart wireplumber pipewire pipewire-pulse
+
+You may check the output of "pw-dump" to see if you forgot to restart
+some services, e.g.
+
+$ pw-dump |grep -nE "core\.(version|name)|process\.binary"
+
+or you may use "checkrestart" [4] or "needrestart" [5] with
+sudo or as root user.
+
+2. Another way to restart services is by restarting your user session.
+On a desktop computer this typically means exiting your X or Wayland
+session and restarting it. On a mobile phone this typically means
+restarting "phosh" if phosh is your phone shell:
+
+$ sudo systemctl restart phosh
+
+3. The most sure (and most disruptive) way to restart the pipewire
+related services is to reboot your computer.
+
+[4] https://tracker.debian.org/pkg/debian-goodies
+[5] https://tracker.debian.org/pkg/needrestart
+
+
+Other troubleshooting
+---------------------
+
+See the Debian wiki page [6] and the upstream wiki [3].
+
+[6] https://wiki.debian.org/PipeWire

@@ -40,3 +40,6 @@
 [submodule "hyprutils-stable/source"]
 	path = hyprutils-stable/source
 	url = https://github.com/hyprwm/hyprutils.git
+[submodule "pipewire/source"]
+	path = pipewire/source
+	url = https://gitlab.freedesktop.org/pipewire/pipewire.git

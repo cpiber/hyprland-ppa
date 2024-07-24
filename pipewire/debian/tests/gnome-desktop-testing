@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -eu
+exec 2>&1
+
+exec gnome-desktop-testing-runner $(
+	gnome-desktop-testing-runner -l pipewire-0.3 | while read -r t d; do
+		case "$t" in
+			(pipewire-0.3/pw-test-pipewire-alsa-stress*)
+				;;
+			(*)
+				echo "$t"
+				;;
+		esac
+	done
+)

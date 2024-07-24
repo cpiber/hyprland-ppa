@@ -1,0 +1,1 @@
+pipewire-tests: custom-library-search-path RUNPATH /usr/lib/*/spa-0.2/* [usr/libexec/*]

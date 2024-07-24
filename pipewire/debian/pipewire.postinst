@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "configure" ] ; then
+    # Create the pipewire system group for setting real-time priority limits
+    if ! getent group pipewire > /dev/null; then
+        addgroup --quiet --system pipewire
+    fi
+fi
+
+#DEBHELPER#

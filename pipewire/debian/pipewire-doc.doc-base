@@ -1,0 +1,11 @@
+Document: pipewire
+Title: PipeWire documentation
+Abstract: PipeWire is a low-level multimedia framework for both audio and video
+ This document provides everything you might want to know about PipeWire:
+ A general overview, the design principles, descriptions for all components
+ (daemon, library, modules, tools, etc), API reference, tutorials and more.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/pipewire/html/index.html
+Files: /usr/share/doc/pipewire/html/*.html

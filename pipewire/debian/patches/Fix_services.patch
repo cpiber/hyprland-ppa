@@ -1,0 +1,23 @@
+Description: Update Wants and After fields with real services (NOT alias)
+ Due to a systemd bug in the way it manages alias, they have been removed in
+ wireplumber and pipewire-media-session services. Reflecting this change in
+ the pipewire-pulse service to be sure it is started AFTER a session manager.
+Bug: https://github.com/systemd/systemd/issues/23694
+Bug-Debian: https://bugs.debian.org/997818
+            https://bugs.debian.org/1019944
+Author: Dylan Aïssi <daissi@debian.org>
+Forwarded: not-needed
+
+--- a/src/daemon/systemd/user/pipewire-pulse.service.in
++++ b/src/daemon/systemd/user/pipewire-pulse.service.in
+@@ -15,8 +15,8 @@
+ # socket-service relationship, see systemd.socket(5).
+ Requires=pipewire-pulse.socket
+ ConditionUser=!root
+-Wants=pipewire.service pipewire-session-manager.service
+-After=pipewire.service pipewire-session-manager.service
++Wants=pipewire.service wireplumber.service pipewire-media-session.service
++After=pipewire.service wireplumber.service pipewire-media-session.service
+ Conflicts=pulseaudio.service
+ 
+ [Service]
