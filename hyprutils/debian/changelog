@@ -1,3 +1,14 @@
+hyprutils (0.2.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.1
+  * 5dcbbc1 version: bump to 0.2.1
+  * a950624 math: add Edges (#10)
+  * 962582a flake.lock: update
+  * 04697c6 CMake: fmt
+  * 928d9b4 CMake, Nix: add VERSION file
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 28 Jul 2024 15:46:13 +0200
+
 hyprutils (0.2.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.0
