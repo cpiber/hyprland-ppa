@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://gitlab.com/mishakmak/pam-fprint-grosshack/issues
+Bug-Submit: https://gitlab.com/mishakmak/pam-fprint-grosshack/issues/new
+# Changelog: https://gitlab.com/mishakmak/pam-fprint-grosshack/blob/master/CHANGES
+Documentation: https://gitlab.com/mishakmak/pam-fprint-grosshack/wiki
+Repository-Browse: https://gitlab.com/mishakmak/pam-fprint-grosshack
+Repository: https://gitlab.com/mishakmak/pam-fprint-grosshack.git

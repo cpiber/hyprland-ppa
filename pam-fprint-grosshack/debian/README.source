@@ -1,0 +1,86 @@
+pam-fprint-grosshack for Debian
+------------------------------
+
+This is a fork of the pam module which implements the simultaneous
+password and fingerprint behaviour present in pam_thinkfinger. It
+was called a 'gross hack' by the fprintd developers in their README
+for the PAM module, but it works, and I am not beneath using it.
+
+Compilation uses meson/ninja. Configure with "meson-build . build"
+and run "meson compile -C build" to compile. To install, move the
+generated pam_fprintd_grosshack.so to the correct directory on the
+system. Alternatively, Arch users can install pam-fprint-grosshack
+from the AUR.
+
+To use this module, add the following lines to the appropriate files
+in /etc/pam.d/ (i.e. /etc/pam.d/system-auth for any use):
+
+auth    sufficient    pam_fprintd_grosshack.so
+auth    sufficient    pam_unix.so try_first_pass nullok
+
+Warning! The original developers called this implementation a gross
+hack for a reason. This code may have major security flaws or other
+unforeseen bugs, so use with caution. And, of course, the standard
+legalese applies: No warranty, provided as-is, whatever you do or
+whatever happens to you is not my fault, etc.
+
+-- Misha
+
+-----------------------------------------------------------
+Original README
+-----------------------------------------------------------
+
+fprintd
+=======
+
+https://fprint.freedesktop.org/
+
+Daemon to offer libfprint functionality over D-Bus
+Might eat your kangaroo.
+
+Written in C.
+
+Licensed under the GPL version 2 or any later version (see COPYING).
+
+A PAM login module is included in the 'pam' directory.
+
+Translating
+===========
+
+fprintd and pam_fprintd are translated using weblate. Please visit
+https://translate.fedoraproject.org/projects/fprintd/ to contribute
+translations.
+
+API use cases
+=============
+
+- User wants to use the fingerprint reader, and enroll
+  his fingerprints, or remove some fingerprints from the database
+
+- Administrator wants to enroll fingerprints for a particular user,
+  or remove fingerprints for a particular user
+
+- Laptop/desktop authentication:
+  * Check for fingerprint devices
+  * Check whether a particular user has any fingerprints enrolled
+  * Verify a fingerprint for a particular user, or, if the device
+  supports it, verify that the fingerprint matches against
+  any of the fingerprints enrolled
+
+- Point Of Sale authentication (in a bar, the fingerprint reader is
+  used to see who accesses a particular point of sale/till, in place
+  of PIN code authentication and/or tokens)
+  * Given a list of users, verify which one has scanned their finger
+
+Debugging
+=========
+
+To enable debug output run `systemctl edit fprintd.service` then enter:
+```
+[Service]
+Environment=G_MESSAGES_DEBUG=all
+```
+Save the result and restart fprintd using `systemctl restart fprintd.service`.
+
+After that, you can grab the logs using `journalctl -u fprintd.service`.
+

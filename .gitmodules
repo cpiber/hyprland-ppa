@@ -43,3 +43,6 @@
 [submodule "pipewire/source"]
 	path = pipewire/source
 	url = https://gitlab.freedesktop.org/pipewire/pipewire.git
+[submodule "pam-fprint-grosshack/source"]
+	path = pam-fprint-grosshack/source
+	url = https://gitlab.com/mishakmak/pam-fprint-grosshack.git

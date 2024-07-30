@@ -1,0 +1,44 @@
+Source: pam-fprint-grosshack
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ libglib2.0-dev (>= 2.56),
+ libfprint-2-dev (>= 1.94.0),
+ libpolkit-gobject-1-dev (>= 0.91),
+ libdbus-1-dev,
+ libsystemd-dev,
+ libpam0g-dev,
+ libpam-wrapper,
+Standards-Version: 4.6.2
+Homepage: https://gitlab.com/mishakmak/pam-fprint-grosshack
+Vcs-Browser: https://gitlab.com/mishakmak/pam-fprint-grosshack
+Vcs-Git: https://gitlab.com/mishakmak/pam-fprint-grosshack.git
+
+Package: pam-fprint-grosshack-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ pam-fprint-grosshack1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: A PAM module for simulatneous behavior
+ This is a fork of the pam module which implements the simultaneous
+ password and fingerprint behaviour present in pam_thinkfinger. It
+ was called a 'gross hack' by the fprintd developers in their README
+ for the PAM module, but it works, and I am not beneath using it.
+
+Package: pam-fprint-grosshack1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: A PAM module for simulatneous behavior
+ This is a fork of the pam module which implements the simultaneous
+ password and fingerprint behaviour present in pam_thinkfinger. It
+ was called a 'gross hack' by the fprintd developers in their README
+ for the PAM module, but it works, and I am not beneath using it.

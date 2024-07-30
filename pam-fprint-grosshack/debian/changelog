@@ -1,0 +1,5 @@
+pam-fprint-grosshack (1.94.2-1ppa1) noble; urgency=medium
+
+  * Initial release.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 30 Jul 2024 10:50:09 +0200
