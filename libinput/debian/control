@@ -1,0 +1,114 @@
+Source: libinput
+Section: libs
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>,
+           Héctor Orón Martínez <zumbi@debian.org>,
+           Marius Gripsgard <marius@ubports.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ pkgconf,
+ check,
+ libgtk-3-dev,
+ libmtdev-dev (>= 1.1.0),
+ libudev-dev,
+ libevdev-dev (>= 1.10.0),
+ libwacom-dev (>= 0.20),
+Standards-Version: 4.6.2
+Vcs-Git: https://salsa.debian.org/xorg-team/lib/libinput.git
+Vcs-Browser: https://salsa.debian.org/xorg-team/lib/libinput
+Homepage: https://www.freedesktop.org/wiki/Software/libinput/
+
+Package: libinput10
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libinput-bin (>= ${binary:Version}),
+Description: input device management and event handling library - shared library
+ libinput is a library that handles input devices for display servers and
+ other applications that need to directly deal with input devices.
+ .
+ It provides device detection, device handling, input device event
+ processing and abstraction to minimize the amount of custom input
+ code the user of libinput needs to provide the common set of
+ functionality that users expect.
+ .
+ This package includes the shared library.
+
+Package: libinput-bin
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: input device management and event handling library - udev quirks
+ libinput is a library that handles input devices for display servers and
+ other applications that need to directly deal with input devices.
+ .
+ It provides device detection, device handling, input device event
+ processing and abstraction to minimize the amount of custom input
+ code the user of libinput needs to provide the common set of
+ functionality that users expect.
+ .
+ This package includes the udev quirks database and helpers.
+
+Package: libinput10-udeb
+Package-Type: udeb
+Build-Profiles: <!noudeb>
+Section: debian-installer
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: input device management and event handling library - shared library
+ This is a udeb, or a microdeb, for the debian-installer.
+
+Package: libinput-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libinput10 (= ${binary:Version}),
+ libmtdev-dev (>= 1.1.0),
+ libudev-dev,
+ libevdev-dev (>= 1.10.0),
+ libwacom-dev (>= 0.20),
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: input device management and event handling library - development files
+ libinput is a library that handles input devices for display servers and
+ other applications that need to directly deal with input devices.
+ .
+ It provides device detection, device handling, input device event
+ processing and abstraction to minimize the amount of custom input
+ code the user of libinput needs to provide the common set of
+ functionality that users expect.
+ .
+ This package includes the development headers.
+
+Package: libinput-tools
+Section: libdevel
+Architecture: any
+Multi-Arch: allowed
+Depends:
+ libinput10 (= ${binary:Version}),
+ ${shlibs:Depends},
+ ${misc:Depends},
+ python3,
+ python3-libevdev,
+ python3-pyudev,
+Description: input device management and event handling library - command line tools
+ libinput is a library that handles input devices for display servers and
+ other applications that need to directly deal with input devices.
+ .
+ It provides device detection, device handling, input device event
+ processing and abstraction to minimize the amount of custom input
+ code the user of libinput needs to provide the common set of
+ functionality that users expect.
+ .
+ This package includes the command line tools.

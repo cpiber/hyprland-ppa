@@ -1,0 +1,4 @@
+#git=https://gitlab.freedesktop.org/libinput/libinput.git
+version=4
+opts="searchmode=plain" \
+ https://gitlab.freedesktop.org/libinput/@PACKAGE@/tags?sort=updated_desc -/archive/v?\d[\d.]+/@PACKAGE@-@ANY_VERSION@\.tar\.gz

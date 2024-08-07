@@ -1,0 +1,4 @@
+usr/bin/*
+usr/libexec/libinput/*
+usr/share/man/man1/*
+usr/share/zsh/site-functions/_libinput

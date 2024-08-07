@@ -1,0 +1,3 @@
+usr/lib/udev
+usr/lib/*/libinput.so.10*
+usr/share/libinput

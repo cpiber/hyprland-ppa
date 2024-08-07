@@ -1,0 +1,66 @@
+#!/bin/sh
+
+exec 2>&1
+set -eux
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
+cd "${AUTOPKGTEST_TMP:-"${AUTOPKGTEST_TMP}"}"
+
+echo "1..2"
+
+cat > simple.c <<'EOF'
+#include <libinput.h>
+
+#include <fcntl.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+static int
+my_open (const char *path, int flags, void *user_data)
+{
+  return open (path, flags);
+}
+
+static void
+my_close (int fd, void *user_data)
+{
+  close (fd);
+}
+
+static struct libinput_interface iface = { my_open, my_close };
+
+int
+main (void)
+{
+  struct libinput *ctx;
+
+  ctx = libinput_path_create_context (&iface, NULL);
+
+  if (ctx)
+    libinput_unref (ctx);
+
+  return 0;
+}
+EOF
+
+${CROSS_COMPILE}gcc -o dynamic simple.c $(${CROSS_COMPILE}pkg-config --cflags --libs libinput)
+echo "ok 1 - compile dynamic executable"
+test -x dynamic
+./dynamic
+echo "ok 2 - run dynamic executable"
+
+# This should also be tested if linking statically to libinput is supported
+#gcc -static -o static simple.c $(pkg-config --static --cflags --libs libinput)
+#echo "ok 3 - compile static executable"
+#test -x static
+#./static
+#echo "ok 4 - run static executable"
+
+echo "# everything seems OK"

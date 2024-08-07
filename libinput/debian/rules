@@ -1,0 +1,47 @@
+#!/usr/bin/make -f
+
+ifeq (,$(filter noudeb, $(DEB_BUILD_PROFILES)))
+  with_udeb = yes
+endif
+
+override_dh_auto_configure:
+	dh_auto_configure -B build-deb -- \
+		-Ddocumentation=false \
+		-Dudev-dir=/usr/lib/udev
+
+ifeq ($(with_udeb),yes)
+	dh_auto_configure -B build-udeb -- \
+		-Ddocumentation=false \
+		-Dudev-dir=/usr/lib/udev \
+		-Dlibwacom=false
+endif
+
+override_dh_auto_build:
+	dh_auto_build -B build-deb
+ifeq ($(with_udeb),yes)
+	dh_auto_build -B build-udeb
+endif
+
+override_dh_auto_install:
+	dh_auto_install -B build-deb --destdir=debian/tmp/main
+ifeq ($(with_udeb),yes)
+	dh_auto_install -B build-udeb --destdir=debian/tmp/udeb
+endif
+
+override_dh_install:
+	find debian/tmp -name '*.la' -delete
+ifeq ($(with_udeb),yes)
+	dh_install -plibinput10-udeb --sourcedir=debian/tmp/udeb
+endif
+	dh_install --remaining-packages --sourcedir=debian/tmp/main
+
+override_dh_makeshlibs:
+	dh_makeshlibs -plibinput10 -V --add-udeb="libinput10-udeb" -- -c4
+
+override_dh_clean:
+	rm -f doc/doxygen_sqlite3.db
+	rm -rf build-deb build-udeb
+	dh_clean
+
+%:
+	dh $@

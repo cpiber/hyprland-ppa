@@ -1,0 +1,2 @@
+Tests: build
+Depends: build-essential, libinput-dev
