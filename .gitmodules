@@ -46,6 +46,9 @@
 [submodule "pam-fprint-grosshack/source"]
 	path = pam-fprint-grosshack/source
 	url = https://gitlab.com/mishakmak/pam-fprint-grosshack.git
+[submodule "aquamarine/source"]
+	path = aquamarine/source
+	url = https://github.com/hyprwm/aquamarine.git
 [submodule "libinput/source"]
 	path = libinput/source
 	url = https://gitlab.freedesktop.org/libinput/libinput.git
