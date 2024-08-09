@@ -1,3 +1,9 @@
+hyprland (0.42.0-1ppa2) noble; urgency=medium
+
+  * Bump due to broken build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 09 Aug 2024 11:16:49 +0200
+
 hyprland (0.42.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.42.0

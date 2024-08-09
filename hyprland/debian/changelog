@@ -1,3 +1,9 @@
+hyprland-unstable (0.42.0~1ppa1+git202408072208-9a09eac7.1) noble; urgency=medium
+
+  * Bump due to broken build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 09 Aug 2024 11:16:16 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408072208-9a09eac7) noble; urgency=medium
 
   * Update to main 9a09eac7
