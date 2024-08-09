@@ -1,3 +1,13 @@
+hyprland-unstable (0.42.0~1ppa1+git202408091304-4b4971c0) noble; urgency=medium
+
+  * Update to main 4b4971c0
+  * 4b4971c0 internal: introduce new types to avoid unsigned int
+    rollover and signed int overflow (#7216)
+  * 83a334f9 core: Move to C++26 and use native_handle to CLOEXEC the
+    debug fd (#7219)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 09 Aug 2024 13:04:51 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408072208-9a09eac7.1) noble; urgency=medium
 
   * Bump due to broken build
