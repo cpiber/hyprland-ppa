@@ -1,3 +1,9 @@
+hyprland-plugin-deps (0-1ppa4) noble; urgency=medium
+
+  * Add new aquamarine dependency
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 09 Aug 2024 11:06:49 +0200
+
 hyprland-plugin-deps (0-1ppa3) noble; urgency=medium
 
   * Add new dependency
