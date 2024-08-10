@@ -1,3 +1,13 @@
+aquamarine (0.3.1-1ppa1) bionic; urgency=medium
+
+  * Update to release 0.3.1
+  * 295d37d props: bump version to 0.3.1
+  * daf96f0 drm: fixup modeline calculations
+  * c94060b drm: log calculated modeline for custom modes
+  * 1a7ca38 drm: fix custom mode check
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 10 Aug 2024 10:50:34 +0200
+
 aquamarine (0.3.0-1ppa1) bionic; urgency=medium
 
   * Initial release 0.3.0
