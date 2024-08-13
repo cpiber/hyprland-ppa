@@ -1,3 +1,22 @@
+hyprland-unstable (0.42.0~1ppa1+git202408131204-77cf6518) noble; urgency=medium
+
+  * Update to main 77cf6518
+  * 77cf6518 protocols: avoid crashing in drmlease (#7290)
+  * c7b72790 keybinds: Fix fullscreenState toggling behaviour (#7288)
+  * 3fa6db1e core: fix data race and a unsigned int rollover (#7278)
+  * d361fcbd config: fix explicit sync option warning (#7293)
+  * df9d8301 flake.lock: update
+  * 118d4e10 install: Prepend ${DESTDIR} when creating hyprland symbolic
+    link (fixes #7280). (#7281)
+  * 511eea71 pointermgr: fix initial cursorwarp (#7286)
+  * 01ff5fdf cursor: make inactive_timeout setting a float (#7268)
+  * 0bf9ceb5 core: Include cstring whenever strncpy is used (#7267)
+  * 4fdc0d55 eventloop: don't dispatch in enterLoop
+  * 8b37e813 cursormgr: add a new setting to sync gsettings (#7253)
+  * fd1d4e28 headers: set correct paths to header files (#7245)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 13 Aug 2024 12:04:47 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408091304-4b4971c0) noble; urgency=medium
 
   * Update to main 4b4971c0
