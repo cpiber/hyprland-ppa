@@ -1,3 +1,29 @@
+hyprland-unstable (0.42.0~1ppa1+git202408162306-c5feee1e) noble; urgency=medium
+
+  * Update to main c5feee1e
+  * c5feee1e xcursormgr: dont apply scale on gsettings (#7316)
+  * 1840a907 renderbuffer: ensure framebuffer gets deleted (#7363)
+  * 682b30fb env: Add HYPRLAND_NO_SD_VARS env condition (#7358)
+  * 12d99014 protocols: refactor protocol logging to a macro (#7324)
+  * 15f94200 core: Preserve existing XDG_CURRENT_DESKTOP (#7347)
+  * 520e9123 gamma-control: fix crash on monitor disconnect (#7353)
+  * 0c56be74 keybinds: Fix syncFullscreen inconsistent with state when
+    set by fullscreenState (#7343)
+  * 069faa40 helpers: fix: revert to signed arithmetic for cycling
+    through workspaces (#7339)
+  * c30dfe92 [gha] Nix: update inputs
+  * d85ae306 xcursor: handle file errors when loading xcursor themes
+    (#7326)
+  * 197f8807 logs: Add file path to asset ERR log (#7336)
+  * 3b4aabe0 decorations: fix manual resize not recalculating decos
+    (#7323)
+  * c5ec079c hyprpm, hyprctl: remove Makefiles
+  * 4aec237e README: Change image sources from vaxerski/Hyprland to
+    hyprwm/Hyprland (#7315)
+  * 39df1f4d cursormgr: fix cursor gsettings on session change (#7295)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 16 Aug 2024 23:06:32 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408131204-77cf6518) noble; urgency=medium
 
   * Update to main 77cf6518
