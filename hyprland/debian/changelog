@@ -1,3 +1,28 @@
+hyprland-unstable (0.42.0~1ppa1+git202408192153-c86db7bb) noble; urgency=medium
+
+  * Update to main c86db7bb
+  * c86db7bb monitor: avoid dangling references to old monitors being
+    undestroyed
+  * 272d9048 monitors: avoid crash on wayland output removal
+  * 01e3da4d examples: more systemd examples (#7409)
+  * 33015546 config: add missing header for libc++ after 92744b5b9aa3
+    (#7403)
+  * 83d88fa5 hyprpm, hyprctl:  update shell completions
+  * 11dfb839 flake: update aquamarine
+  * f4045ab8 screencopy: fix 10b format r/b flip
+  * fa12efdd protocol: fix logm template checks
+  * bf611fbb screencopy: nuke unused stuff
+  * 5afc4dc4 compositor: update suspendstate on window move (#7396)
+  * 50348a3d renderer: pass custom modelines to aq
+  * 279ec1c2 linux-dmabuf: allow on split-node systems
+  * 1006663b shm: align size to stride (#7383)
+  * b2a18aa8 input: Fix disabling tap-to-click (#7304)
+  * d21a6b12 Update aquamarine input in flake
+  * 912e7ba8 render: fixup format mismatch after leaving DS
+  * 92744b5b IPC: Add config descriptions (#7377)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 19 Aug 2024 21:53:14 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408162306-c5feee1e) noble; urgency=medium
 
   * Update to main c5feee1e
