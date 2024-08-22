@@ -1,3 +1,22 @@
+hyprland-unstable (0.42.0~1ppa1+git202408221431-f634b9e6) noble; urgency=medium
+
+  * Update to main f634b9e6
+  * f634b9e6 Fix crash reports having execute permission
+  * bdb296a8 flake.lock: update
+  * 4fa63104 Nix: exclude wayland-scanner until next staging merge
+  * a437e44a CMakeLists: wayland.xml is in wayland-scanner pkgdatadir
+  * cae937c5 layersurface: dont rollover on size_t (#7451)
+  * 8162fae3 Fix Makefile too
+  * c5786be6 Fix static asan patch
+  * 1b1ecf77 Nix: include xcursor regardless of xwayland
+  * 883463f9 animations: add workspace in/out configs
+  * 3e7325af output: dont cast enum out of range (#7448)
+  * 946ed1f3 core: add option to control which window to focus on close
+    (#7368)
+  * 4eff224a example/config: fix typo in default config (#7446)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 22 Aug 2024 14:31:51 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408192153-c86db7bb) noble; urgency=medium
 
   * Update to main c86db7bb
