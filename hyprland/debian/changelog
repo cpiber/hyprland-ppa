@@ -1,3 +1,17 @@
+hyprland-unstable (0.42.0~1ppa1+git202408242147-66586c38) noble; urgency=medium
+
+  * Update to main 66586c38
+  * 66586c38 keybinds: refactor dispatchers to be better (#7331)
+  * 82c67e61 config: fix uninitialized values with mode parsing
+  * e45e606f layersurface: don't unref from monitor until dtor
+  * 688fe5c1 windowrules: add fullscreenstate field (#7466)
+  * a3b75559 input: Fix modifier keys getting stuck if depressed during
+    config reload (#7486)
+  * df4f2224 layersurface: remove layer on destroy from monitor (#7457)
+  * 3b663f4a screencopy: fixup 10-bit sharing via shm on nvidia
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 24 Aug 2024 21:47:31 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408221431-f634b9e6) noble; urgency=medium
 
   * Update to main f634b9e6
