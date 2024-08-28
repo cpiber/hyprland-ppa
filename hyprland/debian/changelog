@@ -1,3 +1,29 @@
+hyprland-unstable (0.42.0~1ppa1+git202408281857-98e99cd0) noble; urgency=medium
+
+  * Update to main 98e99cd0
+  * 98e99cd0 renderer: ensure buffer format on commit (#7556)
+  * 8210a1d7 nix(flake): update aquamarine
+  * d105c740 hyprctl: add next and all to switchxkblayout
+  * 00ee1cf9 data-device: send dndFinished when dnd offer is destroyed
+    while unfinished
+  * 7dd0f76e logs: don't get timezone every time logging (#7550)
+  * 17ed4fc0 hyprctl: avoid parsing string::npos on invalid cmd (#7544)
+  * 6a882425 build: Fix NO_XWAYLAND compilation (#7538)
+  * eb42adc4 Fix missing include needed by clang
+  * 09dbcabc CI: disable stale workflow on forks (#7535)
+  * 72c7818a misc: constify the remaining for loops (#7534)
+  * 1ea47950 misc: fix some minor typos (#7530)
+  * 8d6c1807 core: make most for loops use const references (#7527)
+  * 9c5a37a7 build: fix 32bit builds (#7510)
+  * ca85455a misc: Rename all instances of "emtpy" to "empty" (#7522)
+  * 28f6c2df sessionLock: fix misc:allow_session_lock_restore (#7511)
+  * 83ab3ae0 xwaylandmgr: minor refactor to activateSurface
+  * b672118f xwayland: deactivate xwayland focus if wayland is focused
+    (#7458)
+  * aac90d92 hyprpm: Fix checking dependencies (#7504)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 28 Aug 2024 18:57:51 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408242147-66586c38) noble; urgency=medium
 
   * Update to main 66586c38
