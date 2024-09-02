@@ -1,3 +1,35 @@
+aquamarine (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * aac97a1 version: bump to 0.4.0
+  * dd9890d drm: allow disabling commit, even if pageFlipPending (#72)
+  * f8a687d flake.lock: update
+  * e12b0a9 gbm: override gbm_bo_get_modifier results for modifier-based
+    allocation (#71)
+  * 16bbbcb wayland: send 1280x720 if w/h is 0 in configure
+  * 865cd94 gbm/drm: conform to different scanout requirements for
+    different planes
+  * b9ab839 output: always emit a destroy event in ~dtor
+  * cff0019 flake.nix: remove libinput overlay
+  * 561f50b drm: don't connect before crtcs are guaranteed (#68)
+  * 23c7925 gbm: improve automatic format selection
+  * 7cc3d31 misc: make for loops const reference (#66)
+  * abb3c81 drm: recheck crtcs before connecting on udev event (#65)
+  * 3989aa9 wayland: fix possible out-of-range crash in setCursor
+  * ddf6987 backend: dont overflow on 32bit builds (#64)
+  * 31e692b Nix: add note about wayland-scanner
+  * 9a3161a drm: fix typo in schedule (#62)
+  * a17f921 drm: add missing destructor (#63)
+  * 41d8426 drm: request page flip events after commit (#60)
+  * 1c32562 drm: verify output format in commit
+  * 2cd1f78 GBM: fixup good() return value
+  * b02d4f4 output: avoid crashing on no crtc (#58)
+  * b474796 drm: reconfigure swapchain props after creating
+  * 1e43d9a gbm: improve trace logging around allocs
+  * 8079098 drm: fix crash on null crtc setCursor
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 02 Sep 2024 23:42:23 +0200
+
 aquamarine (0.3.3-1ppa1) bionic; urgency=medium
 
   * Update to release 0.3.3
