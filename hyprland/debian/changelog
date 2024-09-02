@@ -1,3 +1,43 @@
+hyprland-unstable (0.42.0~1ppa1+git202409022345-8f9887b0) noble; urgency=medium
+
+  * Update to main 8f9887b0
+  * 8f9887b0 Nix: remove unused dependencies
+  * fa39df47 CMake: drop unused deps after 016da234d0e8
+  * f7249bd3 CMake: drop duplicate -luuid after 5262292abc56
+  * 6934e7aa textinput: don't deactivate ime if another ti is focused
+    (#7617)
+  * 8bbeee20 textinput: send deactivate to ime on destory ti (#7614)
+  * 7a24e564 flake.lock: update xdph again
+  * 4b5b8a76 flake.lock: update xdph
+  * 5b137514 flake.lock: update
+  * 4af9410d xwm: read atom name from xcb (#7546)
+  * a6315b0a core: fix crash on monitor removed with gammaControl
+    (#7601)
+  * cac59fef data-device: Fix selection mismatch when wlr resets primary
+    selection (#7598)
+  * 1ac2fc3f protocols: destroy new xdgDialog protocol at right time
+    (#7600)
+  * cf6a1716 syncobj: wait for deadline instead of available
+  * 10d72198 CI: clarify Nix CI jobs; disable on forked repositories
+  * 838ed87d renderer: minor direct scanout fixes (#7594)
+  * 76b82fdd meson: explicitly specify path for find(1) (#7590)
+  * c5fd5771 config: Add a window rule to render while unfocused (#7582)
+  * fbd63543 presentation-feedback: minor fixups
+  * fd8d8e12 keybinds: fixup misused kb state
+  * 1c9d5699 xdg-dialog: implement new protocol
+  * 242e06b2 keybinds: release mods after sendshortcut (#7581)
+  * 25e72949 window/xwayland: minor property cleanup
+  * 259dcd83 xwayland: update overrideRedirect on map and configure
+    (#7575)
+  * ef33198e flake.lock: update aquamarine and hyprutils
+  * 604eb21a renderer: better lockscreen dead behavior (#7574)
+  * 92a0dd16 flake.lock: update
+  * b9b8e622 renderer: fade out windows on silent moves
+  * a95df6b5 xwm: don't mark selection events as succeeded
+  * 9642311a window: don't focus on activate if window isn't mapped yet
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 02 Sep 2024 23:45:08 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202408281857-98e99cd0) noble; urgency=medium
 
   * Update to main 98e99cd0
