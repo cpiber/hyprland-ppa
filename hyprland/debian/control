@@ -33,7 +33,7 @@ Build-Depends:
  hyprlang-dev (>= 0.3.2),
  hyprcursor-dev (>= 0.1.7),
  hyprutils-dev (>= 0.2.0),
- aquamarine-dev,
+ aquamarine-stable-dev,
  hyprwayland-scanner (>= 0.3.10),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/

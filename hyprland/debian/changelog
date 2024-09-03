@@ -1,3 +1,9 @@
+hyprland-unstable (0.42.0~1ppa1+git202409022345-8f9887b0.1) noble; urgency=medium
+
+  * Rebuild with stable aquamarine version
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 03 Sep 2024 09:34:43 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202409022345-8f9887b0) noble; urgency=medium
 
   * Update to main 8f9887b0
