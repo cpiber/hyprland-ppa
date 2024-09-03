@@ -52,3 +52,6 @@
 [submodule "libinput/source"]
 	path = libinput/source
 	url = https://gitlab.freedesktop.org/libinput/libinput.git
+[submodule "aquamarine-stable/source"]
+	path = aquamarine-stable/source
+	url = https://github.com/hyprwm/aquamarine.git

@@ -1,0 +1,44 @@
+aquamarine-stable (0.3.3-1ppa2) noble; urgency=medium
+
+  * Fix dependency on self
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 03 Sep 2024 09:38:13 +0200
+
+aquamarine-stable (0.3.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.3
+  * 00d51a0 props: bump version to 0.3.3
+  * 696a5ad gbm: guard for drm renderer being present before clearing
+  * 71da3e0 CMakeLists: wayland.xml is in wayland-scanner pkgdatadir
+    (#55)
+  * 7f8df01 props: bump version to 0.3.2
+  * 2bff4a4 drm: don't schedule new frame events on disabled outputs
+    (#52)
+  * 2d29c86 drm: use modelines in vt restore
+  * 71d4967 drm: clear buffer on creation for scanout DRM buffers (#51)
+  * cd15214 drm: don't report pointer capability when no HW cursor plane
+    is present
+  * 05f4efc buffer: align size to stride (#50)
+  * 4f66428 drm: avoid crashes on connecting a null crtc
+  * e947af7 drm/atomic: clip damage to pixel size
+  * 5893461 DRM: Allow checking no-crtc connectors (#49)
+  * 9312aa2 docs: document AQ_DRM_DEVICES
+  * 9b33a38 cmake: link libOpenGL instead of legacy libGL (#44)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 19 Aug 2024 22:02:54 +0200
+
+aquamarine-stable (0.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.1
+  * 295d37d props: bump version to 0.3.1
+  * daf96f0 drm: fixup modeline calculations
+  * c94060b drm: log calculated modeline for custom modes
+  * 1a7ca38 drm: fix custom mode check
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 10 Aug 2024 10:50:34 +0200
+
+aquamarine-stable (0.3.0-1ppa1) noble; urgency=medium
+
+  * Initial release 0.3.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 07 Aug 2024 22:11:28 +0200
