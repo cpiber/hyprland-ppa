@@ -1,3 +1,10 @@
+hyprland-unstable (0.42.0~1ppa1+git202409032328-9b54342b) noble; urgency=medium
+
+  * Update to main 9b54342b
+  * 9b54342b Revert "syncobj: wait for deadline instead of available"
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 03 Sep 2024 23:28:33 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202409022345-8f9887b0.1) noble; urgency=medium
 
   * Rebuild with stable aquamarine version
