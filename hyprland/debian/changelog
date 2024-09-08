@@ -1,3 +1,27 @@
+hyprland-unstable (0.43.0~1ppa1+git202409081914-0f594732) noble; urgency=medium
+
+  * Update to main 0f594732
+  * 0f594732 props: bump version to 0.43.0
+  * 312411fc windows: support size with pseudo tiled
+  * 70add904 config: add exec-shutdown for running commands on shutdown
+    (#7683)
+  * 5ca48231 config: Added default button mapping for xf86 keys (#7672)
+  * 05002130 input: try to refocus a focusable window when seat grabs
+    are reset (#7669)
+  * b0fca6ea input: kb focus mouse focused window if unset (#7666)
+  * 4988e00b input: move idle notify to input handlers (#7659)
+  * 0fad7a0b workspacerules: fix on-created-empty window focus (#7657)
+  * 727f1b54 textinput: fix ime activation in some edge cases (#7660)
+  * c80457be nix: add COMMITS var
+  * 4a42c5ed config: Add a variable to prevent groups from merging after
+    being dragged (#7650)
+  * bd6d6e7f xwayland: add option to enable/disable xwayland (#7633)
+  * 027140b7 sessionLock: ensure sls focus in some edge cases (#7647)
+  * ea10592a input: don't emit idle activity when calling
+    simulateMouseMovement (#7649)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 08 Sep 2024 19:14:46 +0200
+
 hyprland-unstable (0.42.0~1ppa1+git202409032328-9b54342b) noble; urgency=medium
 
   * Update to main 9b54342b
