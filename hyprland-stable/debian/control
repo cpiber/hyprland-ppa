@@ -8,7 +8,8 @@ Build-Depends:
  cmake (>= 3.27),
  ninja-build,
  meson,
- gcc (>= 11),
+ gcc-14,
+ g++-14,
  python3,
  pkgconf,
  git,
@@ -22,31 +23,22 @@ Build-Depends:
  libpango1.0-dev,
  libdrm-dev,
  libinput-dev,
- libseat-dev,
- libdisplay-info-dev,
- libliftoff-dev,
- libudev-dev,
- libxcb-util-dev,
  libxcb-xfixes0-dev,
  libxcb-icccm4-dev,
  libxcb-composite0-dev,
  libxcb-res0-dev,
- libxcb-ewmh-dev,
  libxcb-errors-dev,
  libxcursor-dev,
  libtomlplusplus-dev,
- hwdata,
  hyprlang-dev (>= 0.3.2),
  hyprcursor-dev (>= 0.1.7),
  hyprutils-dev (>= 0.2.0),
- aquamarine-stable-dev,
+ aquamarine-dev,
  hyprwayland-scanner (>= 0.3.10),
- xwayland,
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
 Vcs-Git: https://github.com/hyprwm/Hyprland.git
-# TODO: fix generateVersion.sh
 
 Package: hyprland
 Architecture: any

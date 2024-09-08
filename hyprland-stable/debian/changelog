@@ -1,3 +1,159 @@
+hyprland (0.43.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.43.0
+  * 0f594732 props: bump version to 0.43.0
+  * 312411fc windows: support size with pseudo tiled
+  * 70add904 config: add exec-shutdown for running commands on shutdown
+    (#7683)
+  * 5ca48231 config: Added default button mapping for xf86 keys (#7672)
+  * 05002130 input: try to refocus a focusable window when seat grabs
+    are reset (#7669)
+  * b0fca6ea input: kb focus mouse focused window if unset (#7666)
+  * 4988e00b input: move idle notify to input handlers (#7659)
+  * 0fad7a0b workspacerules: fix on-created-empty window focus (#7657)
+  * 727f1b54 textinput: fix ime activation in some edge cases (#7660)
+  * c80457be nix: add COMMITS var
+  * 4a42c5ed config: Add a variable to prevent groups from merging after
+    being dragged (#7650)
+  * bd6d6e7f xwayland: add option to enable/disable xwayland (#7633)
+  * 027140b7 sessionLock: ensure sls focus in some edge cases (#7647)
+  * ea10592a input: don't emit idle activity when calling
+    simulateMouseMovement (#7649)
+  * 9b54342b Revert "syncobj: wait for deadline instead of available"
+  * 8f9887b0 Nix: remove unused dependencies
+  * fa39df47 CMake: drop unused deps after 016da234d0e8
+  * f7249bd3 CMake: drop duplicate -luuid after 5262292abc56
+  * 6934e7aa textinput: don't deactivate ime if another ti is focused
+    (#7617)
+  * 8bbeee20 textinput: send deactivate to ime on destory ti (#7614)
+  * 7a24e564 flake.lock: update xdph again
+  * 4b5b8a76 flake.lock: update xdph
+  * 5b137514 flake.lock: update
+  * 4af9410d xwm: read atom name from xcb (#7546)
+  * a6315b0a core: fix crash on monitor removed with gammaControl
+    (#7601)
+  * cac59fef data-device: Fix selection mismatch when wlr resets primary
+    selection (#7598)
+  * 1ac2fc3f protocols: destroy new xdgDialog protocol at right time
+    (#7600)
+  * cf6a1716 syncobj: wait for deadline instead of available
+  * 10d72198 CI: clarify Nix CI jobs; disable on forked repositories
+  * 838ed87d renderer: minor direct scanout fixes (#7594)
+  * 76b82fdd meson: explicitly specify path for find(1) (#7590)
+  * c5fd5771 config: Add a window rule to render while unfocused (#7582)
+  * fbd63543 presentation-feedback: minor fixups
+  * fd8d8e12 keybinds: fixup misused kb state
+  * 1c9d5699 xdg-dialog: implement new protocol
+  * 242e06b2 keybinds: release mods after sendshortcut (#7581)
+  * 25e72949 window/xwayland: minor property cleanup
+  * 259dcd83 xwayland: update overrideRedirect on map and configure
+    (#7575)
+  * ef33198e flake.lock: update aquamarine and hyprutils
+  * 604eb21a renderer: better lockscreen dead behavior (#7574)
+  * 92a0dd16 flake.lock: update
+  * b9b8e622 renderer: fade out windows on silent moves
+  * a95df6b5 xwm: don't mark selection events as succeeded
+  * 9642311a window: don't focus on activate if window isn't mapped yet
+  * 98e99cd0 renderer: ensure buffer format on commit (#7556)
+  * 8210a1d7 nix(flake): update aquamarine
+  * d105c740 hyprctl: add next and all to switchxkblayout
+  * 00ee1cf9 data-device: send dndFinished when dnd offer is destroyed
+    while unfinished
+  * 7dd0f76e logs: don't get timezone every time logging (#7550)
+  * 17ed4fc0 hyprctl: avoid parsing string::npos on invalid cmd (#7544)
+  * 6a882425 build: Fix NO_XWAYLAND compilation (#7538)
+  * eb42adc4 Fix missing include needed by clang
+  * 09dbcabc CI: disable stale workflow on forks (#7535)
+  * 72c7818a misc: constify the remaining for loops (#7534)
+  * 1ea47950 misc: fix some minor typos (#7530)
+  * 8d6c1807 core: make most for loops use const references (#7527)
+  * 9c5a37a7 build: fix 32bit builds (#7510)
+  * ca85455a misc: Rename all instances of "emtpy" to "empty" (#7522)
+  * 28f6c2df sessionLock: fix misc:allow_session_lock_restore (#7511)
+  * 83ab3ae0 xwaylandmgr: minor refactor to activateSurface
+  * b672118f xwayland: deactivate xwayland focus if wayland is focused
+    (#7458)
+  * aac90d92 hyprpm: Fix checking dependencies (#7504)
+  * 66586c38 keybinds: refactor dispatchers to be better (#7331)
+  * 82c67e61 config: fix uninitialized values with mode parsing
+  * e45e606f layersurface: don't unref from monitor until dtor
+  * 688fe5c1 windowrules: add fullscreenstate field (#7466)
+  * a3b75559 input: Fix modifier keys getting stuck if depressed during
+    config reload (#7486)
+  * df4f2224 layersurface: remove layer on destroy from monitor (#7457)
+  * 3b663f4a screencopy: fixup 10-bit sharing via shm on nvidia
+  * f634b9e6 Fix crash reports having execute permission
+  * bdb296a8 flake.lock: update
+  * 4fa63104 Nix: exclude wayland-scanner until next staging merge
+  * a437e44a CMakeLists: wayland.xml is in wayland-scanner pkgdatadir
+  * cae937c5 layersurface: dont rollover on size_t (#7451)
+  * 8162fae3 Fix Makefile too
+  * c5786be6 Fix static asan patch
+  * 1b1ecf77 Nix: include xcursor regardless of xwayland
+  * 883463f9 animations: add workspace in/out configs
+  * 3e7325af output: dont cast enum out of range (#7448)
+  * 946ed1f3 core: add option to control which window to focus on close
+    (#7368)
+  * 4eff224a example/config: fix typo in default config (#7446)
+  * c86db7bb monitor: avoid dangling references to old monitors being
+    undestroyed
+  * 272d9048 monitors: avoid crash on wayland output removal
+  * 01e3da4d examples: more systemd examples (#7409)
+  * 33015546 config: add missing header for libc++ after 92744b5b9aa3
+    (#7403)
+  * 83d88fa5 hyprpm, hyprctl:  update shell completions
+  * 11dfb839 flake: update aquamarine
+  * f4045ab8 screencopy: fix 10b format r/b flip
+  * fa12efdd protocol: fix logm template checks
+  * bf611fbb screencopy: nuke unused stuff
+  * 5afc4dc4 compositor: update suspendstate on window move (#7396)
+  * 50348a3d renderer: pass custom modelines to aq
+  * 279ec1c2 linux-dmabuf: allow on split-node systems
+  * 1006663b shm: align size to stride (#7383)
+  * b2a18aa8 input: Fix disabling tap-to-click (#7304)
+  * d21a6b12 Update aquamarine input in flake
+  * 912e7ba8 render: fixup format mismatch after leaving DS
+  * 92744b5b IPC: Add config descriptions (#7377)
+  * c5feee1e xcursormgr: dont apply scale on gsettings (#7316)
+  * 1840a907 renderbuffer: ensure framebuffer gets deleted (#7363)
+  * 682b30fb env: Add HYPRLAND_NO_SD_VARS env condition (#7358)
+  * 12d99014 protocols: refactor protocol logging to a macro (#7324)
+  * 15f94200 core: Preserve existing XDG_CURRENT_DESKTOP (#7347)
+  * 520e9123 gamma-control: fix crash on monitor disconnect (#7353)
+  * 0c56be74 keybinds: Fix syncFullscreen inconsistent with state when
+    set by fullscreenState (#7343)
+  * 069faa40 helpers: fix: revert to signed arithmetic for cycling
+    through workspaces (#7339)
+  * c30dfe92 [gha] Nix: update inputs
+  * d85ae306 xcursor: handle file errors when loading xcursor themes
+    (#7326)
+  * 197f8807 logs: Add file path to asset ERR log (#7336)
+  * 3b4aabe0 decorations: fix manual resize not recalculating decos
+    (#7323)
+  * c5ec079c hyprpm, hyprctl: remove Makefiles
+  * 4aec237e README: Change image sources from vaxerski/Hyprland to
+    hyprwm/Hyprland (#7315)
+  * 39df1f4d cursormgr: fix cursor gsettings on session change (#7295)
+  * 77cf6518 protocols: avoid crashing in drmlease (#7290)
+  * c7b72790 keybinds: Fix fullscreenState toggling behaviour (#7288)
+  * 3fa6db1e core: fix data race and a unsigned int rollover (#7278)
+  * d361fcbd config: fix explicit sync option warning (#7293)
+  * df9d8301 flake.lock: update
+  * 118d4e10 install: Prepend ${DESTDIR} when creating hyprland symbolic
+    link (fixes #7280). (#7281)
+  * 511eea71 pointermgr: fix initial cursorwarp (#7286)
+  * 01ff5fdf cursor: make inactive_timeout setting a float (#7268)
+  * 0bf9ceb5 core: Include cstring whenever strncpy is used (#7267)
+  * 4fdc0d55 eventloop: don't dispatch in enterLoop
+  * 8b37e813 cursormgr: add a new setting to sync gsettings (#7253)
+  * fd1d4e28 headers: set correct paths to header files (#7245)
+  * 4b4971c0 internal: introduce new types to avoid unsigned int
+    rollover and signed int overflow (#7216)
+  * 83a334f9 core: Move to C++26 and use native_handle to CLOEXEC the
+    debug fd (#7219)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 08 Sep 2024 19:27:32 +0200
+
 hyprland (0.42.0-1ppa3) noble; urgency=medium
 
   * Rebuild with stable aquamarine version
