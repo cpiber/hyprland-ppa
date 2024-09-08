@@ -24,6 +24,7 @@ curhead="`git rev-parse HEAD`"
 if [ "$type" = "main" ]; then
   git checkout main
   git pull --quiet --rebase
+  tag="`git describe --tags | sed 's/^v\|-[0-9]\+-g[0-9a-fA-F]\+//g'`"
 elif [ "$type" = "tag" ]; then
   git fetch --tags
   tag="`git describe --tags origin | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//'`"
@@ -45,6 +46,8 @@ cd ..
 dist="`dpkg-parsechangelog --show-field Distribution`"
 if [ "$type" = "main" ]; then
   curver="`dpkg-parsechangelog --show-field Version | sed 's/+git.*//'`"
+  curtag="`dpkg-parsechangelog --show-field Version | sed 's/~.*//'`"
+  [ "$curtag" = "$tag" ] || curver="$tag~1ppa1"
   newver="$curver+git`date "+%Y%m%d%H%M"`-$shorthead"
   dch -v "$newver" -D "$dist" "Update to main $shorthead"
 else
