@@ -1,3 +1,13 @@
+aquamarine (0.4.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.1
+  * e4a1320 props: bump version to 0.4.1
+  * 9996d36 gbm: don't select opaque pixel formats for cursor
+  * a8eb8ae drm: add AQ_NO_MODIFIERS to try to mitigate hardware
+    limitations (#77)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 12 Sep 2024 23:15:18 +0200
+
 aquamarine (0.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.0
