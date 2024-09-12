@@ -1,3 +1,30 @@
+hyprland-unstable (0.43.0~1ppa1+git202409122319-118be4de) noble; urgency=medium
+
+  * Update to main 118be4de
+  * 118be4de textinput: fix tiv3 leave (#7761)
+  * 73b9756b xwayland: remove extra x11 deactivation (#7755)
+  * 8b9e3859 [gha] Nix: update inputs
+  * e01da1fd Meson: format
+  * 7a8c013e Meson: fix protocols, clean up
+  * 518399a9 pointermgr: avoid derefing null outputs
+  * 155d4401 textinput: handle IME resetting (#7731)
+  * 13f90bb8 update xdph commit in flake.lock
+  * c67b257e build: Set cmake_minimum_required to version 3.30 (#7709)
+  * 8237d7e1 input: move dmps activation to input listeners (#7721)
+  * 85da1a17 [gha] build man pages
+  * 9609b04f man: Fixed the man page to show the new information (#7713)
+  * 04421063 config: add order rule for layers (#7697)
+  * 43e1415e assets: Remove execute permission from lockdead.png (#7715)
+  * e1448732 tiv1: fix deleting first character (#7716)
+  * 7c4c402b config: include XF86Audio* key bindings to default cfg
+    (#7695)
+  * 6179b179 github: improve issue template (#7699)
+  * 05b48d48 config: Limit max volume to 100%
+  * 07a21fdf github(nix-build): switch to better nix installer, attempt
+    at fixing hash mismatch (#7701)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 12 Sep 2024 23:19:37 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409081914-0f594732) noble; urgency=medium
 
   * Update to main 0f594732
