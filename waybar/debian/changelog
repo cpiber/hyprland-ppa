@@ -1,3 +1,64 @@
+waybar (0.11.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.0
+  * d56dd6ee chore: v0.11.0
+  * 11429795 chore: lint
+  * 8a89706d Merge pull request #3551 from YaLTeR/niri
+  * a4d31ab1 fix: sni item fmt
+  * 34bfefcd niri: Gate behind a meson option
+  * fef0bb99 niri: Replace gnu extension with GDataInputStream
+  * 46e7ed35 Add niri/workspaces, niri/window, niri/language
+  * d623a89c fix: sni item fmt
+  * 1210bcd2 Merge pull request #3565 from saveman71/hidpi_image_module
+  * 30f6ed05 Merge pull request #3554 from 3u13r/fix/upower/dont-
+    override-existing-upDevice
+  * 3ade275d fix: version
+  * 4354da28 chore: disable fmt tests
+  * 6417782a chore: lint
+  * 64d99a58 chore(fmt): std format
+  * 627e4a4a Merge pull request #3555 from
+    Alexays/update_flake_lock_action
+  * c2f1a789 chore: update deps
+  * 6560e32b Merge pull request #3585 from eltociear/patch-1
+  * 70f3c1d9 chore: update power_profiles_daemon.cpp
+  * 7a696084 flake.lock: Update
+  * 9b5c2dc7 fix: upower module selection with multiple devices
+  * 0ee51975 feat: hidpi support for image module
+  * 5d184f74 Merge pull request #3506 from soreau/taskbar-minimize-hints
+  * 4d89c64b taskbar: Fixup whitespace
+  * f665d1da Merge pull request #3527 from alebastr/hypr-getaddrinfo
+  * 26329b66 Merge pull request #3534 from ilpianista/bugfix/check-
+    format-source
+  * 0fb1957d fix: check format-source before use
+  * c5a42663 Merge pull request #3531 from yangyingchao/master
+  * fd478bf2 fix crash caused by use bar instance after it is freed
+    (use-after-free)
+  * 1f23b30b hyprland/backend: drop unnecessary getaddrinfo call
+  * 21906f07 Merge pull request #3511 from hacrvlq/wireplumber-fix
+  * c468119f fix(wireplumber): Handle changes to the default node ID
+  * 79d3a1a2 Merge pull request #3494 from yangyingchao/master
+  * 4ae144a7 Merge pull request #3499 from gergo-salyi/cpuhotplug
+  * fdc84317 taskbar: Send minimize geometry hints
+  * 9d15c666 Merge pull request #3493 from
+    Alexays/update_flake_lock_action
+  * 2131678f Merge pull request #3500 from khaneliman/group
+  * 17f07b24 group: proper fix of enter/leave
+  * 05d69ae8 src/util/css_reload_helper: clang-format
+  * 3ae81d62 group: fix hover regression
+  * 4efa1231 group: clang-tidy
+  * 24a98869 Handle offline CPUs and CPU hotplug
+  * 7ec1343a fix #3490: expand menu file before opening it
+  * 7e1fffc4 flake.lock: Update
+  * 003dd3a9 Merge pull request #3457 from RobertMueller2/issue_3414
+  * cece04e0 Merge pull request #3462 from DomCristaldi/walk-symlink-
+    chain
+  * 58e21e87 walk up symlink tree
+  * cb8fc1c1 Merge pull request #3459 from khaneliman/bar-visible
+  * a544f4b2 bar: fix setVisible
+  * ee0912a2 Issue #3414/clock: Shift ONLY calendar
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 16 Sep 2024 20:47:40 +0200
+
 waybar (0.10.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.10.4
