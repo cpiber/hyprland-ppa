@@ -1,3 +1,19 @@
+hyprland-unstable (0.43.0~1ppa1+git202409162035-9e356562) noble; urgency=medium
+
+  * Update to main 9e356562
+  * 9e356562 internal: Delay monitor events/hooks (#7797)
+  * e8775852 internal: Fix change group current fullscreen state query
+    (#7802)
+  * eb97d949 textinput: don't reset if ti isn't enabled (#7798)
+  * e74efd87 internal: fix initial cursor warping (#7793)
+  * 4dbdb556 data-device: don't send default action of move
+  * 5ee4b196 data-device: send clock time in motion events
+  * d35e70a8 cmake: drop ninja dep
+  * c35ed836 nix: adapt cmake options
+  * d505b336 nix: use meson
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 16 Sep 2024 20:35:15 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409122319-118be4de) noble; urgency=medium
 
   * Update to main 118be4de
