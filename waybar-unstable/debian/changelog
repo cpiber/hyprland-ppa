@@ -1,0 +1,512 @@
+waybar-unstable (0.11.0+3-1ppa1) noble; urgency=medium
+
+  * Unstable fix for tray
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Sep 2024 22:01:30 +0200
+
+waybar (0.11.0-1ppa2) noble; urgency=medium
+
+  * Rebuild with tests disabled
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 16 Sep 2024 21:41:08 +0200
+
+waybar (0.11.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.0
+  * d56dd6ee chore: v0.11.0
+  * 11429795 chore: lint
+  * 8a89706d Merge pull request #3551 from YaLTeR/niri
+  * a4d31ab1 fix: sni item fmt
+  * 34bfefcd niri: Gate behind a meson option
+  * fef0bb99 niri: Replace gnu extension with GDataInputStream
+  * 46e7ed35 Add niri/workspaces, niri/window, niri/language
+  * d623a89c fix: sni item fmt
+  * 1210bcd2 Merge pull request #3565 from saveman71/hidpi_image_module
+  * 30f6ed05 Merge pull request #3554 from 3u13r/fix/upower/dont-
+    override-existing-upDevice
+  * 3ade275d fix: version
+  * 4354da28 chore: disable fmt tests
+  * 6417782a chore: lint
+  * 64d99a58 chore(fmt): std format
+  * 627e4a4a Merge pull request #3555 from
+    Alexays/update_flake_lock_action
+  * c2f1a789 chore: update deps
+  * 6560e32b Merge pull request #3585 from eltociear/patch-1
+  * 70f3c1d9 chore: update power_profiles_daemon.cpp
+  * 7a696084 flake.lock: Update
+  * 9b5c2dc7 fix: upower module selection with multiple devices
+  * 0ee51975 feat: hidpi support for image module
+  * 5d184f74 Merge pull request #3506 from soreau/taskbar-minimize-hints
+  * 4d89c64b taskbar: Fixup whitespace
+  * f665d1da Merge pull request #3527 from alebastr/hypr-getaddrinfo
+  * 26329b66 Merge pull request #3534 from ilpianista/bugfix/check-
+    format-source
+  * 0fb1957d fix: check format-source before use
+  * c5a42663 Merge pull request #3531 from yangyingchao/master
+  * fd478bf2 fix crash caused by use bar instance after it is freed
+    (use-after-free)
+  * 1f23b30b hyprland/backend: drop unnecessary getaddrinfo call
+  * 21906f07 Merge pull request #3511 from hacrvlq/wireplumber-fix
+  * c468119f fix(wireplumber): Handle changes to the default node ID
+  * 79d3a1a2 Merge pull request #3494 from yangyingchao/master
+  * 4ae144a7 Merge pull request #3499 from gergo-salyi/cpuhotplug
+  * fdc84317 taskbar: Send minimize geometry hints
+  * 9d15c666 Merge pull request #3493 from
+    Alexays/update_flake_lock_action
+  * 2131678f Merge pull request #3500 from khaneliman/group
+  * 17f07b24 group: proper fix of enter/leave
+  * 05d69ae8 src/util/css_reload_helper: clang-format
+  * 3ae81d62 group: fix hover regression
+  * 4efa1231 group: clang-tidy
+  * 24a98869 Handle offline CPUs and CPU hotplug
+  * 7ec1343a fix #3490: expand menu file before opening it
+  * 7e1fffc4 flake.lock: Update
+  * 003dd3a9 Merge pull request #3457 from RobertMueller2/issue_3414
+  * cece04e0 Merge pull request #3462 from DomCristaldi/walk-symlink-
+    chain
+  * 58e21e87 walk up symlink tree
+  * cb8fc1c1 Merge pull request #3459 from khaneliman/bar-visible
+  * a544f4b2 bar: fix setVisible
+  * ee0912a2 Issue #3414/clock: Shift ONLY calendar
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 16 Sep 2024 20:47:40 +0200
+
+waybar (0.10.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.4
+  * 15e15476 chore: 0.10.4
+  * dcbcf90a Update freebsd.yml
+  * ed0ed398 Update freebsd.yml
+  * 152053e0 Merge pull request #3398 from khaneliman/cursor
+  * 496dd05e Merge pull request #3443 from yangyingchao/master
+  * 3ff8fc8a Merge pull request #3447 from khaneliman/hyprland-disable
+  * d061d225 Merge pull request #3448 from khaneliman/sway
+  * 90ac7d5d sway/workspaces: support ignore window-rewrite
+  * 4295faa7 hyprland/backend: throw runtime_error instead of log
+  * 9c40137d sway/workspaces: clang-tidy
+  * 17132b25 sway/workspaces: remove deprecated field
+  * 3f61df4e Merge pull request #3416 from
+    Ape/pr/ignored_sink_never_running
+  * 2d9cc623 Merge pull request #3422 from
+    RobertMueller2/issue_feat_3256
+  * f6ff6492 Merge pull request #3441 from tchaikov/fmt-format-const
+  * b65ca334 fix #3442
+  * b71dfce1 Fix build with fmt11
+  * 5f3a9d94 Merge pull request #3440 from khaneliman/hyprland-fix
+  * 895c870d network: use fmt for format
+  * 47d7324a client: clang-format
+  * b19890c0 network: clang-format
+  * b41fcded hyprland/window: fix crash when no return from socket
+  * 0a78da03 flake.lock: update
+  * 3d0fd14f Merge pull request #3435 from grimsteel/network-bssid
+  * e117bd7c network: add bssid format replacement
+  * 26556605 Merge pull request #3432 from BSFishy/readme_update
+  * 0dd6af5a chore: update meson build command
+  * e2e5d4d4 feat/issue 3256: Toggle drawer state
+  * 44f39ca0 Merge pull request #3429 from ziyao233/outgoing/fix-fmt11
+  * 7725f6ed Fix build with fmt11
+  * b26ab1f9 Merge pull request #3417 from yangyingchao/master
+  * 21d42baa (temperature) fix clang-tidy lint .
+  * 23274a9d pulseaudio: Consider ignored sinks never running
+  * f78f29ee AModule: retain existing default behavior when unconfigured
+  * 7e2d8ab2 fix(#3239): hide cursor type change behind config flag
+  * 6f994c84 Merge pull request #3407 from khaneliman/rewrite-ignore
+  * 702e1064 modules/hyprland/workspace: ignore empty window-rewrite
+  * ca3877d0 Merge pull request #3325 from
+    williamwith4ms/escape_&_in_mediaplayer.py
+  * 18e67afe Merge pull request #3404 from khaneliman/clang-tidy
+  * d66685a3 util: clang-tidy
+  * 14c3235c src: clang-tidy
+  * 034760e8 Merge pull request #3399 from
+    RobertMueller2/discussion_3373
+  * 8f64cace fix example in manpage for pulseaudio/slider
+  * 99971556 Merge pull request #3267 from luttermann/upower_model
+  * ff0f408a Merge pull request #3380 from alerque/debug-keyboard-layout
+  * 3262b375 Merge pull request #3377 from fglinka/master
+  * 494cedb3 Merge pull request #3393 from RobertMueller2/issue_3366
+  * 93000e3f Merge pull request #3395 from RobertMueller2/issue_33341
+  * abfb654f Merge pull request #3396 from
+    Alexays/update_flake_lock_action
+  * 9c7a275c Merge pull request #3247 from benjamin-voisin/menu
+  * f609042e flake.lock: Update
+  * 8eee5687 manpage for PR #3395
+  * fb24e8cb add hide-empty-text option to hide module whenever output
+    is empty but format is not
+  * 64a31330 workaround for icons not rendered for apps existing before
+    waybar launch
+  * 64f54e1f Merge pull request #3389 from khaneliman/cleanup
+  * c08660d8 modules/hyprland/backend: handle empty json responses
+  * f6482c36 hyprland: clangd cleanup
+  * ccc3c132 Update archlinux
+  * 1003c220 Merge pull request #3381 from OpenSauce04/deprioritize-
+    battery-capacity
+  * d68bcbd2 modules/battery: Deprioritize `capacity` /sys value
+  * 4126502f Add debug information for keyboard layout selection
+  * 136b207a Add suggestion by clang-format
+  * c4d769a5 Add explicit constructor to struct Profile
+  * 1c1089ba Merge pull request #3364 from khaneliman/persistent-rename
+  * b114b115 treewide: clang-format
+  * f9e693b2 modules/hyprland/backend: remove testing log warn
+  * bac4d038 modules/hyprland/workspaces: remove deprecated property
+  * 9ba58250 Merge pull request #3362 from lukasfink1/bt-dyn-controller-
+    pr
+  * 0df3c84c Fix device list not being updated on selecting new
+    bluetooth controller
+  * 3f497258 Merge pull request #3360 from lukasfink1/bt-dyn-controller-
+    pr
+  * ab91d0ba Add hotplug detection of bluetooth controllers
+  * 79a62295 Merge pull request #3353 from locked-out/muted_icons
+  * 01438f71 Added muted icons usage to waybar-pulseaudio man page
+  * 0bc43c1a fix: lint
+  * e8a28827 Merge pull request #3320 from rtgiskard/dev
+  * b955e922 Merge pull request #3244 from rtgiskard/fix.privacy
+  * 562e1e59 Merge pull request #3331 from Eisfunke/eisfunke/regex-
+    collection-replace
+  * 892042eb Support muted icons for pulseaudio devices/ports
+  * 0251e25f Merge pull request #3345 from khaneliman/testing
+  * 9bd09aa1 Merge pull request #3318 from
+    Alexays/update_flake_lock_action
+  * 1cd013a0 clock: respect tooltip option
+  * 7721dcda mpris: some clang-tidy fix
+  * e8d91eb1 mpris: hide on current player vanished
+  * 07737867 privacy: consider only configured modules
+  * 71bb2b64 subprojects/spdlog: bump spdlog
+  * 06fa931d Dockerfiles/opensuse: add python3-packaging dependency
+  * 16ff5ee9 .github/workflows/linux: fail-fast
+  * 08c5df36 modules/sway/workspaces: clang-format fix
+  * b3658318 test/hyprland/backend: fix
+  * 959422f1 modules/hyprland/backend: protect against crash when
+    XDG_RUNTIME_DIR not set
+  * fa2e21df modules/hyprland/backend: move getSocketFolder to class
+  * 58e7abba tests: split into separate binaries
+  * 87eaa75b test/hyprland/backend: init
+  * 749f46f8 test/fixtures: Add GlibTestsFixture
+  * 0055ee69 modules/hyprland/workspaces: remove unneccesary
+    visibleWorkspaces variable
+  * 1b3b4577 modules/hyprland/backend: add getSocketFolder to header
+  * e1a6d513 test/config: add hyprland-workspaces config
+  * f4da2039 Merge pull request #3336 from pjones/pjones/current-only
+  * 637b220f sway/workspaces: Correct behavior when "current-only" is
+    set
+  * 365e77af Merge pull request #3332 from zspher/patch-wlr-taskbar
+  * 1b1442e3 fix: taskbar not applying empty class on empty
+  * d0a8c1d9 document capturing in window-rewrite
+  * 76c2f316 format RegexCollection output using match results
+  * 02eaa8b4 escape & in mediaplayer
+  * 4fbd4f21 privacy: consider only configured modules
+  * 1474cc62 flake.lock: Update
+  * 7163752a Merge pull request #3317 from jackwilsdon/patch-1
+  * e9350cf2 Fix format replacement names
+  * 1a1a61e9 Merge pull request #3313 from
+    zjeffer/fix/zjeffer/dockerfiles
+  * 532a9025 Dont fail docker image builds when another build fails
+  * cf66604f fix fedora image
+  * 9332697e Merge pull request #3064 from alttabber/master
+  * ab735f72 Merge pull request #3309 from khaneliman/workflows
+  * c5b5b64d modules/temperature: remove unused import
+  * 381fe830 Makefile: fix meson deprecations
+  * 8adb0a56 .github/workflows: fix meson deprecations
+  * 885290d9 📝 improve waybar-menu file
+  * 8220dbb5 📝 add a wayba-menu entry for documenting popup menus.
+  * d9f2e0f7 📝 add menu config informations in manpages
+  * 161c8c4c 🥅 do not crash when unable to make the menu
+  * f3ed5ca5 🌱 update default config with a menu example
+  * 0d518cb5 Merge pull request #3308 from khaneliman/bugfix/3280
+  * 24e8766a hyprland/backend: use /tmp
+  * 29e3d8c3 Hide non-visible special workspaces
+  * c3581fb6 🥅 only check menu if speciifed in the conf
+  * 57f2a57d Merge pull request #3306 from JohnRTitor/workflows-patch
+  * b6ca3ea4 worflows: add update-flake-lock action
+  * 1a9952d0 workflows: add nix-test workflow
+  * a4a4be33 fix: lint
+  * b7ce0b05 Merge pull request #3281 from VlctM/master
+  * af87388e Update docker.yml
+  * 2aa8008a Merge pull request #3259 from zjeffer/docker-images-action
+  * d4413f5f Merge pull request #3255 from LukashonakV/ISSUE#2240
+  * af794519 Merge pull request #3260 from zjeffer/clang-tidy
+  * ac2fa987 Merge pull request #3241 from rtgiskard/master
+  * a3ac6cb0 Merge pull request #3258 from zjeffer/master
+  * dc203b84 Merge pull request #3299 from khaneliman/cleanup
+  * f5bb0864 hyprland/workspaces: sort methods
+  * 9ba9d57c hyprland/windowcreationpayload: sort methods
+  * 82ae4740 hyprland/workspace: sort methods
+  * 56319a47 hyprland/workspaces: break up implementations
+  * 07c91c20 hyprland/workspaces: break up headers
+  * d73051e9 hyprland/workspaces: break up doUpdate
+  * 9fe51af6 hyprland/workspaces: break up parseConfig
+  * e4353e54 .gitignore: add .ccls-cache
+  * 63bb3383 Merge pull request #3296 from unrealhoang/nix_cava_bump
+  * d012124c cava bump: 0.10.2 for nix
+  * 10664922 Merge pull request #3294 from LukashonakV/cava_bump
+  * 60a613ae cava bump: 0.10.2
+  * 35a9ca47 Merge pull request #3289 from yangyingchao/yc-hacking
+  * b8e68b0e (hyprland) fix crash when failed to parse IPC message
+  * b61ea627 change layer for mode invisible to nullopt
+  * 8ad7c75d Merge pull request #3278 from LukashonakV/ISSUE#3276_cava
+  * 5a1454ab Cava. $XDG_CONFIG_HOME validation
+  * b288fdf8 ISSUE#2240. Clock Gtk::Label as a calendar tooltip
+  * d2a719d6 Redo to minimize code duplication.
+  * 28ef5b7d Fix formatting
+  * 6413f25b Add config option to select UPower device based on device
+    model.
+  * 912d0e83 Merge pull request #3266 from luttermann/master
+  * 3c075bcc Fixed formatting
+  * ba8a88ac Do not try to compare a string that may be a null-pointer
+  * e27488b4 clang-tidy improvements in privacy module
+  * 1828a94b clang-tidy: comment case styling options
+  * 49afcdf7 Add GitHub action for nightly Dockerfiles building
+  * ff84c6db fix debian dockerfile
+  * cb2d54a2 Merge pull request #3248 from LukashonakV/ISSUE3223_upower
+  * 5fe99ea0 Upower. Fix segmentation fault
+  * 21751b2f 🎨 clang-tidy
+  * 3b87b830 ♻️ move GMenu to ALabel class
+  * 884b909e ✨ add GtkMenu to the AModule class
+  * b980dab6 doc: update waybar-temperature manual page
+  * e298bf92 temperature: allow hwmon-path-abs as array
+  * 2ead1bbf Upower refactoring (#3220)
+  * 29917fb0 Fix hyprland/language events not working with keyboard
+    names with commas in them (#3224)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 23 Jul 2024 17:22:47 +0200
+
+waybar (0.10.3-1ppa1) noble; urgency=medium
+
+  * Repackage for noble.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 31 May 2024 20:47:29 +0200
+
+waybar (0.10.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Thu, 09 May 2024 08:50:25 +0200
+
+waybar (0.10.2-2) experimental; urgency=medium
+
+  * d/control: Replace libwireplumber-0.4-dev build-dependency with
+    libwireplumber-0.5-dev
+    (Closes: #1070041)
+
+ -- Birger Schacht <birger@debian.org>  Sun, 05 May 2024 10:55:06 +0200
+
+waybar (0.10.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Tue, 23 Apr 2024 19:24:55 +0200
+
+waybar (0.10.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/copyright: Bump years, add licenses for new protocol files, remove
+    license entry for removed protocol file
+
+ -- Birger Schacht <birger@debian.org>  Fri, 15 Mar 2024 15:02:33 +0100
+
+waybar (0.9.24-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Fri, 03 Nov 2023 16:01:21 +0100
+
+waybar (0.9.22-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Wed, 16 Aug 2023 16:37:03 +0200
+
+waybar (0.9.21-1) unstable; urgency=medium
+
+  [ Birger Schacht ]
+  * New upstream release
+  * Set field Upstream-Name in debian/copyright
+  * Remove obsolete field Name from debian/upstream/metadata
+  * d/gbp.conf: set gbp to use overlay in salsa CI
+
+  [ Diederik de Haas ]
+  * d/control: Update B-D for JACK to JACK2
+  * d/gbp.conf:
+   + Switch to 'debian' recipe and target Unstable again
+   + Disable 'reprotest' job for now
+
+ -- Birger Schacht <birger@debian.org>  Mon, 14 Aug 2023 19:53:34 +0200
+
+waybar (0.9.20-2) unstable; urgency=medium
+
+  * Drop libdbusmenu-gtk-dev from build dependencies (Closes: #1041828)
+
+ -- Birger Schacht <birger@debian.org>  Mon, 24 Jul 2023 08:24:17 +0200
+
+waybar (0.9.20-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Tue, 18 Jul 2023 14:55:57 +0200
+
+waybar (0.9.18-1) unstable; urgency=medium
+
+  * New upstream version
+  * d/control:
+   + Add libplayerctl-dev to build-depends (Closes: #1036148)
+   + Bump standards-version to 4.6.2 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 24 Jun 2023 10:16:06 +0200
+
+waybar (0.9.17-2) unstable; urgency=medium
+
+  * Add libhowardhinnant-date-dev to build-depends (Closes: #1003115)
+
+ -- Birger Schacht <birger@debian.org>  Tue, 28 Feb 2023 19:59:55 +0100
+
+waybar (0.9.17-1) unstable; urgency=medium
+
+  * New upstream version
+  * Add libwireplumber to build-depends
+  * Bump copyright years in d/copyright
+
+ -- Birger Schacht <birger@debian.org>  Sat, 14 Jan 2023 13:14:57 +0100
+
+waybar (0.9.16-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop fix-typos.patch
+
+ -- Birger Schacht <birger@debian.org>  Fri, 25 Nov 2022 11:08:32 +0100
+
+waybar (0.9.15-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop backported patch for fmt 9.0
+  * Add new build-dependencies: libupower-glib-dev, libjack-dev, libsndio-dev
+  * Backport fix-typos.patch
+
+ -- Birger Schacht <birger@debian.org>  Sat, 05 Nov 2022 18:08:39 +0100
+
+waybar (0.9.13-3) unstable; urgency=medium
+
+  * Fix d/watch file by switching to gitmode
+  * Bump standards-version to 4.6.1.0 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Fri, 14 Oct 2022 21:37:40 +0200
+
+waybar (0.9.13-2) unstable; urgency=medium
+
+  * Backport patch for fmt 9.0 (Closes: #1014686)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 20 Aug 2022 10:36:13 +0200
+
+waybar (0.9.13-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Tue, 31 May 2022 18:59:46 +0200
+
+waybar (0.9.12-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Birger Schacht <birger@debian.org>  Thu, 10 Mar 2022 19:40:44 +0100
+
+waybar (0.9.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop filenamemangle option from d/watch
+
+ -- Birger Schacht <birger@debian.org>  Wed, 09 Mar 2022 09:44:54 +0100
+
+waybar (0.9.9-1) unstable; urgency=medium
+
+  [ Birger Schacht ]
+  * New upstream release
+  * Update d/copyright
+
+  [ Pino Toscano ]
+  * Drop the clang-tidy build dependency, only needed for a developer-only
+    meson target.
+  * Stop including /usr/share/dpkg/pkg-info.mk in rules, as it is not needed.
+  * Drop the custom dh_auto_build override: as the default one works fine;
+    the custom one reruns meson without all the Debian parameters, and
+    (even worse) allows the downloading of stuff from the network, which is
+    forbidden by Debian Policy §4.9.
+
+ -- Birger Schacht <birger@debian.org>  Mon, 10 Jan 2022 18:30:22 +0100
+
+waybar (0.9.8-2) unstable; urgency=medium
+
+  * Fix watchfile
+  * Bump standards version to 4.6.0.1 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 06 Nov 2021 09:49:27 +0100
+
+waybar (0.9.8-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #993067)
+  * Drop patch which removes the clock module, now that upstream contains a
+    workaround (Closes: #973594, see
+    https://github.com/Alexays/Waybar/pull/903)
+  * add new dependency libxkbregistry-dev to build-depends
+
+ -- Birger Schacht <birger@debian.org>  Fri, 27 Aug 2021 21:22:57 +0200
+
+waybar (0.9.5-2) unstable; urgency=medium
+
+  * Set versioned build-depends on spdlog (Closes: #981086)
+
+ -- Birger Schacht <birger@debian.org>  Sat, 30 Jan 2021 11:12:52 +0100
+
+waybar (0.9.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update patch to drop the clock module
+  * Bump standards version to 4.5.1 (no changes required)
+
+ -- Birger Schacht <birger@debian.org>  Mon, 04 Jan 2021 19:24:06 +0100
+
+waybar (0.9.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Upload to unstable, now that dependency wlroots is in unstable
+  * d/control
+   + bump standards version to 4.5.0 (no changes required)
+   + bump debhelper version to 13
+   + remove commented build dependency
+   + add libgtk-layer-shell-dev and libgtk-layer-shell0 to the build
+     dependencies, now that gtk-layer-shell is in the archive
+   + add fonts-font-awesome to Suggests, because it is the font used
+     in the default waybar theme
+   + Update uploader address
+   + Suggest installation of libappindicator3-1 to ensure functionality
+     of the tray plugin
+  * d/patches
+   + drop 0001-Force-the-inclusion-of-sway-even-if-its-not-installe.patch
+   + drop 0002-Remove-gtk-layer-shell-from-dependencies.patch
+   + add patch to disable the clock module, which depends on a library
+     that is not packaged and will be dropped at some point
+     (See https://github.com/Alexays/Waybar/issues/668)
+  * Add a debian/waybar.README.Debian file explaining the missing
+    clock module
+  * d/rules: Enable rfkill support
+  * d/upstream/metadata: add bug tracking information
+
+ -- Birger Schacht <birger@debian.org>  Mon, 26 Oct 2020 18:44:14 +0100
+
+waybar (0.9.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * d/gbp.conf: add file
+   + Set pristine-tar to true
+   + Set debian branch to debian/sid
+  * d/patches/0002-Remove-gtk-layer-shell-from-dependencies:
+    Remove dependency on gtk-layer-shell
+  * d/control
+   + Bump standards version (no changes required)
+   + Move package to swaywm-team (update maintainer address and
+     Vcs-* URLs)
+
+ -- Birger Schacht <birger@rantanplan.org>  Tue, 31 Dec 2019 19:38:19 +0100
+
+waybar (0.8.0-1) experimental; urgency=medium
+
+  * Initial packaging (Closes: #920040)
+
+ -- Birger Schacht <birger@rantanplan.org>  Mon, 02 Sep 2019 16:52:20 +0200

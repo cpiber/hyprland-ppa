@@ -1,0 +1,53 @@
+Source: waybar-unstable
+Section: x11
+Priority: optional
+Maintainer: Sway and related packages team <team+swaywm@tracker.debian.org>
+Uploaders: Birger Schacht <birger@debian.org>,
+           Constantin Piber <cp.piber@gmail.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ libwlroots-dev,
+ libwayland-dev,
+ libinput-dev,
+ meson,
+ pkgconf,
+ libgtkmm-3.0-dev,
+ libjsoncpp-dev,
+ libsigc++-2.0-dev,
+ libpulse-dev,
+ libnl-3-dev,
+ libspdlog-dev (>=1.8.0),
+ cmake,
+ libfmt-dev (>=5.3.0),
+ libnl-genl-3-dev,
+ libdbusmenu-gtk3-dev,
+ libmpdclient-dev,
+ scdoc (>= 1.9.2),
+ libgtk-layer-shell-dev,
+ libgtk-layer-shell0 (>= 0.9.0),
+ libxkbregistry-dev,
+ libupower-glib-dev,
+ libjack-jackd2-dev,
+ libsndio-dev,
+ libwireplumber-0.4-dev,
+ libhowardhinnant-date-dev,
+ libplayerctl-dev
+Standards-Version: 4.6.2
+Homepage: https://github.com/Alexays/Waybar/
+Vcs-Browser: https://salsa.debian.org/swaywm-team/waybar
+Vcs-Git: https://salsa.debian.org/swaywm-team/waybar.git
+Rules-Requires-Root: no
+
+Package: waybar-unstable
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Replaces: waybar
+Provides: waybar
+Suggests: sway, fonts-font-awesome, libappindicator3-1
+Description: Highly customizable Wayland bar for Sway and Wlroots based compositors
+ Waybar is a highly customizable wayland bar for Sway and Wlroots based
+ compositors. It features applets displaying information about Sway
+ (Workspaces, Binding mode, Focused window name), Local time, Battery,
+ Network, Pulseaudio, Memory, Cpu load average and custom scripts

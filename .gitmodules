@@ -55,3 +55,6 @@
 [submodule "gtk-layer-shell/source"]
 	path = gtk-layer-shell/source
 	url = https://github.com/wmww/gtk-layer-shell.git
+[submodule "waybar-unstable/source"]
+	path = waybar-unstable/source
+	url = https://github.com/Alexays/Waybar.git

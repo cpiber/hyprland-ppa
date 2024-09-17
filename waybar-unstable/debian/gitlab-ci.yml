@@ -1,0 +1,10 @@
+---
+include: 
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/recipes/debian.yml
+
+variables: 
+  # Waybar currently does not build reproducible, see
+  # https://tests.reproducible-builds.org/debian/rb-pkg/unstable/amd64/waybar.html
+  # So disable it for now
+  SALSA_CI_DISABLE_REPROTEST: "true"
+  SALSA_CI_GBP_BUILDPACKAGE_ARGS: "--git-overlay"
