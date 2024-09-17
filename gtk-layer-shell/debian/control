@@ -1,0 +1,99 @@
+Source: gtk-layer-shell
+Section: libdevel
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders:
+ Birger Schacht <birger@rantanplan.org>,
+ Mike Gabriel <sunweaver@debian.org>,
+ Constantin Piber <cp.piber@gmail.com>,
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ pkgconf,
+ libwayland-dev,
+ libgtk-3-dev,
+ gobject-introspection,
+ gobject-introspection-bin,
+ libgirepository1.0-dev,
+ gtk-doc-tools,
+ valac,
+Standards-Version: 4.6.2
+Homepage: https://github.com/wmww/gtk-layer-shell
+Vcs-Browser: https://salsa.debian.org/debian/gtk-layer-shell
+Vcs-Git: https://salsa.debian.org/debian/gtk-layer-shell.git
+Rules-Requires-Root: no
+
+Package: libgtk-layer-shell-dev
+Architecture: any
+Depends:
+ gir1.2-gtklayershell-0.1 (= ${binary:Version}),
+ libgtk-layer-shell0 (= ${binary:Version}),
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: Wayland Layer Shell protocol desktop component library -- development files
+ A library to write GTK applications that use Layer Shell. This library only
+ makes sense on Wayland compositors that support Layer Shell, and will not work
+ on X11. It supports all Layer Shell features including popups and popovers (GTK
+ popups Just Work™). Please open issues for any bugs you come across.
+ .
+ This package contains the header and development files.
+
+Package: libgtk-layer-shell0
+Section: libs
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: Wayland Layer Shell protocol desktop component library
+ A library to write GTK applications that use Layer Shell. This library only
+ makes sense on Wayland compositors that support Layer Shell, and will not work
+ on X11. It supports all Layer Shell features including popups and popovers (GTK
+ popups Just Work™). Please open issues for any bugs you come across.
+ .
+ This package contains the shared libraries
+
+Package: gir1.2-gtklayershell-0.1
+Section: introspection
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${gir:Depends}
+Description: Wayland Layer Shell protocol desktop component library -- gir bindings
+ A library to write GTK applications that use Layer Shell. This library only
+ makes sense on Wayland compositors that support Layer Shell, and will not work
+ on X11. It supports all Layer Shell features including popups and popovers (GTK
+ popups Just Work™). Please open issues for any bugs you come across.
+ .
+ This package can be used by other packages using the GIRepository format to
+ generate dynamic bindings.
+
+Package: gtk-layer-shell-doc
+Section: doc
+Architecture: all
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: documentation for the Wayland Layer Shell protocol desktop component library
+ A library to write GTK applications that use Layer Shell. This library only
+ makes sense on Wayland compositors that support Layer Shell, and will not work
+ on X11. It supports all Layer Shell features including popups and popovers (GTK
+ popups Just Work™). Please open issues for any bugs you come across.
+ .
+ This package contains the HTML documentation for the GTK library
+ in /usr/share/gtk-doc/gtk-layer-shell/ .
+
+Package: gtk-layer-shell-examples
+Section: x11
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: example files for the Wayland Layer Shell protocol desktop component library
+ A library to write GTK applications that use Layer Shell. This library only
+ makes sense on Wayland compositors that support Layer Shell, and will not work
+ on X11. It supports all Layer Shell features including popups and popovers (GTK
+ popups Just Work™). Please open issues for any bugs you come across.
+ .
+ This package contains the example files and a demonstration program.

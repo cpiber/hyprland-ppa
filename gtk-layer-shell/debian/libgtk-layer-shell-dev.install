@@ -1,0 +1,5 @@
+usr/include/gtk*
+usr/lib/*/libg?k*.so
+usr/lib/*/pkgconfig/g?k*
+usr/share/gir-1.0
+usr/share/vala/vapi

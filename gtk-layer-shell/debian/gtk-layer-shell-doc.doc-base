@@ -1,0 +1,10 @@
+Document: gtk-layer-shell-doc
+Title: GKT Layer Shell API documentation
+Author: Dennis Blommesteijn</holder>, William Wold
+Abstract: This document describes the API of the GTK Layer Shell library.
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/gtk-layer-shell/html/index.html
+Files: /usr/share/doc/gtk-layer-shell/html/*
+

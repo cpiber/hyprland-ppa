@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_VERBOSE=1
+export DH_OPTIONS=-v
+
+include /usr/share/dpkg/pkg-info.mk
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --with gir --buildsystem=meson
+
+
+override_dh_auto_configure:
+	dh_auto_configure -- -Ddocs=true -Dexamples=true -Dtests=true
+
+# show files that are not installed in any package
+override_dh_install:
+	mkdir -p debian/tmp/usr/share/doc/gtk-layer-shell/
+	mv debian/tmp/usr/share/gtk-doc/html/gtk-layer-shell debian/tmp/usr/share/doc/gtk-layer-shell/html
+	ln -s ../../doc/gtk-layer-shell/html debian/tmp/usr/share/gtk-doc/html/gtk-layer-shell
+	if ! dh_install; then \
+		tree debian/tmp; \
+		exit 1; \
+	fi
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+get-orig-source:
+	uscan --noconf --force-download --rename --download-current-version --destdir=..

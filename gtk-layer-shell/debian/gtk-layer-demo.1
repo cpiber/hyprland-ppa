@@ -1,0 +1,60 @@
+'\" -*- coding: utf-8 -*-
+'\" vim:fenc=utf-8
+.if \n(.g .ds T< \\FC
+.if \n(.g .ds T> \\F[\n[.fam]]
+.de URL
+\\$2 \(la\\$1\(ra\\$3
+..
+.if \n(.g .mso www.tmac
+.TH gtk-layer-demo 1 "" "Version 0.1.0" "GTK Layer Shell Demo Application"
+.SH NAME
+gtk-layer-demo \- Demonstrate the functionality of the Layer Shell Wayland protocol
+.SH SYNOPSIS
+'nh
+.fi
+.ad l
+\fBgtk-layer-demo\fR \kx
+.if (\nx>(\n(.l/2)) .nr x (\n(.l/5)
+'in \n(.iu+\nxu
+[
+\fIoptions\fR
+]
+'in \n(.iu-\nxu
+.ad b
+'hy
+.SH DESCRIPTION
+GTK Layer Shell is a library to write GTK applications that use Layer
+Shell. Layer Shell is a Wayland protocol for desktop shell components,
+such as panels, notifications and wallpapers. You can use it to anchor
+your windows to a corner or edge of the output, or stretch them across
+the entire output. This library only makes sense on Wayland compositors
+that support Layer Shell, and will not work on X11. It supports all Layer
+Shell features including popups and popovers (GTK popups Just Work™).
+.PP
+\fBgtk-layer-demo\fR is a GTK application for demonstrating the
+functionality of the Layer Shell Wayland protocol as addressed by the GTK
+Layer Shell library.
+.PP
+.SH OPTIONS
+.TP
+\*(T<\fB\-l, \-\-layer\fR\*(T>
+Layer type, any of 'overlay', 'top', 'bottom' or 'background' (or 'o', 't', 'b' or 'g').
+.TP
+\*(T<\fB\-a, \-\-anchor\fR\*(T>
+A sequence of 'l', 'r', 't' and 'b' to anchor to those edges, or '0' for no anchor.
+.TP
+\*(T<\fB\-m, \-\-margin\fR\*(T>
+Comma separated list of margin values, in the order <LEFT>,<RIGHT>,<TOP>,<BOTTOM>.
+.TP
+\*(T<\fB\-e, \-\-exclusive\fR\*(T>
+Enable auto-exclusive zone.
+.TP
+\*(T<\fB\-k, \-\-keyboard\fR\*(T>
+Enable keyboard interactivity.
+.TP
+\*(T<\fB\-f, \-\-fixed\-size\fR\*(T>
+Enable a fixed window size.
+
+.SH AUTHOR
+This manual has been written for the Debian project by
+Mike Gabriel <mike.gabriel@das-netzwerkteam.de>.

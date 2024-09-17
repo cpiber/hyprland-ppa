@@ -1,0 +1,169 @@
+gtk-layer-shell (0.9.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Sep 2024 22:16:31 +0200
+
+gtk-layer-shell (0.8.2-1build2) noble; urgency=medium
+
+  * No-change rebuild for CVE-2024-3094
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 31 Mar 2024 07:38:05 +0000
+
+gtk-layer-shell (0.8.2-1build1) noble; urgency=medium
+
+  * No-change rebuild against libglib2.0-0t64
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 08 Mar 2024 04:53:53 +0000
+
+gtk-layer-shell (0.8.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/copyright:
+    + Update copyright attribution for debian/.
+  * debian/libgtk-layer-shell0.symbols:
+    + Update .symbols file.
+  * debian/control:
+    + Add gobject-introspection-bin. Thanks, lintian.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 18 Feb 2024 21:18:37 +0100
+
+gtk-layer-shell (0.8.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    + Bump Standards-Version: to 4.6.2. No changes needed.
+  * debian/libgtk-layer-shell0.symbols:
+    + Update symbols.
+  * debian/copyright:
+    + Update copyright attribution for debian/ folder.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 20 Jun 2023 14:33:41 +0200
+
+gtk-layer-shell (0.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    + Bump Standards-Version: to 4.6.1. No changes needed.
+  * debian/copyright:
+    + Update copyright attributions.
+  * debian/control:
+    + Add B-D: valac.
+  * debian/libgtk-layer-shell-dev.install:
+    + Add Vala development files to dev:pkg.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 26 Oct 2022 20:46:46 +0200
+
+gtk-layer-shell (0.7.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 14 Feb 2022 07:45:22 +0100
+
+gtk-layer-shell (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    + Bump Standards-Version: to 4.6.0. No changes needed.
+  * debian/rules:
+    + Drop dh_auto_build override. Caused FTBFS. (Closes: #997337).
+  * debian/libgtk-layer-shell0.symbols:
+    + Update symbols for this upstream release.
+  * debian/patches:
+    + Put Forwarded: field into 2001_disable-license-check-unit-test.patch
+      saying, forwarding is not required as the patch is Debian-specific.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 13 Sep 2021 22:01:33 +0200
+
+gtk-layer-shell (0.5.2-2) unstable; urgency=medium
+
+  * debian/rules:
+    + Add '--with gir' to dh command. (Closes: #991086).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 13 Jul 2021 22:12:02 +0200
+
+gtk-layer-shell (0.5.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches:
+    + Update 2001_disable-license-check-unit-test.patch.
+  * debian/gtk-layer-shell-examples.examples:
+    + Adapt to folder name change.
+  * debian/libgtk-layer-shell0.symbols:
+    + Update symbols for latest upstream release.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 22 Dec 2020 21:46:51 +0100
+
+gtk-layer-shell (0.5.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/libgtk-layer-shell0.symbols:
+    + Update symbols for 0.5.1.
+  * debian/copyright:
+    + Update copyright attributions.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 06 Nov 2020 10:16:46 +0100
+
+gtk-layer-shell (0.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/changelog:
+    + Add missing entry in previous upload's changelog.
+  * debian/patches:
+    + Add 2001_disable-license-check-unit-test.patch. Disable check-licenses
+      unit test.
+  * debian/rules:
+    + Enable tests.
+    + Move API documentation to /usr/share/doc/<pkg>/.
+  * debian/libgtk-layer-shell0.symbols:
+    + Update symbols.
+  * debian/gtk-layer-shell-doc.install:
+    + Adapt file/symlink locations of the doc:pkg.
+  * debian/gtk-layer-shell-doc.doc-base:
+    + Add file.
+  * debian/upstream/metadata:
+    + Add upstream bug tracker information.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 29 Oct 2020 10:52:20 +0100
+
+gtk-layer-shell (0.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches:
+    + Drop 1001_typo-fix-in-demo-program.patch. Applied upstream.
+  * debian/libgtk-layer-shell0.symbols:
+    + Update symbols.
+  * debian/control:
+    + Bump DH compat level to version 13.
+  * debian/rules:
+    + Add get-orig-source target for our personal convenience.
+  * debian/copyright:
+    + Update copyright attributions
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 25 Aug 2020 10:04:21 +0200
+
+gtk-layer-shell (0.1.0-3) unstable; urgency=medium
+
+  [ Birger Schacht ]
+  * debian/control:
+    + Update Vcs-* URLs to point to the correct namespace.
+
+  [ Mike Gabriel ]
+  * debian/control:
+    + Add D (libgtk-layer-shell-dev): libgtk-layer-shell0 (same bin:version).
+    + Bump Standards-Version: to 4.5.0. No changes needed.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 13 Feb 2020 13:02:31 +0100
+
+gtk-layer-shell (0.1.0-2) unstable; urgency=medium
+
+  * Source-only upload as-is.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 02 Feb 2020 00:12:07 +0100
+
+gtk-layer-shell (0.1.0-1) unstable; urgency=medium
+
+  [ Birger Schacht ]
+  * Initial packaging. (Closes: #940570).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 16 Jan 2020 08:13:17 +0100
