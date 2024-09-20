@@ -9,10 +9,14 @@ set -xe
 reporoot="`cd "$(dirname "$0")/.." && pwd`"
 
 project="$1"
+shift
 sourcefolder="$reporoot/$project/source"
 case "$project" in
   hyprland)
     type="main"
+    ;;
+  waybar-unstable)
+    type="master"
     ;;
   *)
     type="tag"
@@ -21,18 +25,15 @@ esac
 
 cd "$sourcefolder"
 curhead="`git rev-parse HEAD`"
-if [ "$type" = "main" ]; then
-  git checkout main
+if [ "$type" != "tag" ]; then
+  git checkout "$type"
   git pull --quiet --rebase
   tag="`git describe --tags | sed 's/^v\|-[0-9]\+-g[0-9a-fA-F]\+//g'`"
-elif [ "$type" = "tag" ]; then
+else
   git fetch --tags
   tag="`git describe --tags origin | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//'`"
   git checkout "$tag"
   tag="`echo "$tag" | sed 's/^v//'`"
-else
-  echo "Invalid type $type"
-  exit 1
 fi
 git submodule update --init --recursive
 newhead="`git rev-parse HEAD`"
@@ -44,15 +45,15 @@ fi
 changes="`git log --pretty="%h %s" $curhead..$newhead`"
 cd ..
 dist="`dpkg-parsechangelog --show-field Distribution`"
-if [ "$type" = "main" ]; then
+if [ "$type" != "tag" ]; then
   curver="`dpkg-parsechangelog --show-field Version | sed 's/+git.*//'`"
   curtag="`dpkg-parsechangelog --show-field Version | sed 's/~.*//'`"
   [ "$curtag" = "$tag" ] || curver="$tag~1ppa1"
   newver="$curver+git`date "+%Y%m%d%H%M"`-$shorthead"
-  dch -v "$newver" -D "$dist" "Update to main $shorthead"
+  dch -v "$newver" -D "$dist" "$@" "Update to $type $shorthead"
 else
   newver="$tag-1ppa1"
-  dch -v "$newver" -D "$dist" "Update to release $tag"
+  dch -v "$newver" -D "$dist" "$@" "Update to release $tag"
 fi
 echo "$changes" |
   while IFS= read -r line; do
