@@ -43,7 +43,7 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends}
-Replaces: waybar
+Conflicts: waybar
 Provides: waybar
 Suggests: sway, fonts-font-awesome, libappindicator3-1
 Description: Highly customizable Wayland bar for Sway and Wlroots based compositors

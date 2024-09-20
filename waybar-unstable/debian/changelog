@@ -1,3 +1,29 @@
+waybar-unstable (0.11.0+22~1ppa1) noble; urgency=medium
+
+  * Update to master 21af48fd
+  * 21af48fd chore: lint
+  * b5395f4e Merge pull request #3523 from S0nter/master
+  * 3462769f Merge branch 'Alexays:master' into master
+  * ac1a4229 Merge pull request #3617 from lukasfink1/fix-custom-format-
+    bug
+  * a3e7031f Fix formatting
+  * 254111ff Improve error message for mixed arg indexing in format
+    string
+  * de170fa5 Update documentation
+  * 83992d29 Fix formatting
+  * 3bb3c2d2 fix(custom): stop mixing manual and automatic arg indexing
+  * ff66b5dd Update waybar-cava man page
+  * 9e8ebe66 Merge branch 'Alexays:master' into master
+  * 8e2a7420 Merge branch 'Alexays:master' into master
+  * bf36f2ab Merge branch 'Alexays:master' into master
+  * 29459371 Merge branch 'Alexays:master' into master
+  * 36497cd4 Rename cava css values
+  * 367f156e Add cava.update to css
+  * ed40168d Add cava.silence to css
+  * 62cb61c6 Add format_silent to cava module
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 20 Sep 2024 19:18:21 +0200
+
 waybar-unstable (0.11.0+3-1ppa1) noble; urgency=medium
 
   * Unstable fix for tray
