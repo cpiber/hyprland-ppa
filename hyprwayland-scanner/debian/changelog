@@ -1,3 +1,19 @@
+hyprwayland-scanner (0.4.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.2
+  * b68dab2 version: bump to 0.4.2
+  * 96d3336 core: fix overzealous proxy replacement for new_id
+  * eebf1cb core: fixup client pointer types
+  * 9df6311 version: bump to 0.4.1
+  * 4d3d80f core: fixup client new_id handling
+  * f68f159 README: add flags
+  * a048a6c flake.lock: update
+  * 8907e8a CMake: fix version path
+  * 4a1f262 CMake: fmt
+  * 117b6d9 CMake, Nix: add VERSION file
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 20 Sep 2024 19:37:54 +0200
+
 hyprwayland-scanner (0.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.0
