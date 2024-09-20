@@ -17,7 +17,9 @@ Build-Depends:
  libdrm-dev,
  libgbm-dev,
  libsdbus-c++-dev,
- hyprlang-dev,
+ hyprlang-dev (>= 0.2.0),
+ hyprutils-dev,
+ hyprwayland-scanner (>= 0.4.2),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/xdg-desktop-portal-hyprland
