@@ -1,3 +1,28 @@
+hyprland-unstable (0.43.0~1ppa1+git202409201925-278583b8) noble; urgency=medium
+
+  * Update to main 278583b8
+  * 278583b8 flake.lock: update
+  * 4414cd07 xwm: Minor cleanup, add wrappers for basic types (#7856)
+  * 9e98fb01 dmabuffer: attempt importing failed dmabufs as implicit
+  * 98563783 Nix: use mold linker
+  * dfa1bd0c Meson: pass AQUAMARINE_VERSION argument
+  * 92df6b0d version: log build aquamarine version
+  * 71963972 args: add --version to binary args
+  * 1bc05b1f xwayland: use proper path for the XWayland sockets (#7852)
+  * e6cf643f pointermgr: Hide hardware cursor on leave (#7806)
+  * 94140e88 xwayland: Some readability improvements (#7807)
+  * b248d597 Nix: fix meson PCH flag
+  * cbc0ff6e Nix: disable PCH
+  * 6b6554ad flake.nix: inherit stdenv from package
+  * d936eb43 flake.lock: update aquamarine
+  * 883d0108 userchecks: add an xdg_current_desktop check
+  * 0564b46a dispatchers: allow moveintogroup when floating (#7818)
+  * 3c9716ac gammactrl: fix potential crash on monitor removed (#7828)
+  * 581f6659 data-device: conform to reported source actions
+  * e72ae6b2 hyprctl: allow parsing empty value
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 20 Sep 2024 19:25:01 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409162035-9e356562) noble; urgency=medium
 
   * Update to main 9e356562
