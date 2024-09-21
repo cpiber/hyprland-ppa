@@ -1,3 +1,13 @@
+hyprutils (0.2.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.2
+  * d97af4f version: bump to 0.2.2
+  * 8976e3f gitignore: add CMake residual files
+  * aadf9a2 string: fixup isNumber not accepting -1.0
+  * 0252fd1 utils: add ScopeGuard
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 21 Sep 2024 09:43:17 +0200
+
 hyprutils (0.2.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.1
