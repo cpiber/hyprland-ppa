@@ -1,3 +1,19 @@
+xdg-desktop-portal-hyprland (1.3.5-1ppa1) noble; urgency=medium
+
+  * Update to release 1.3.5
+  * 4880c50 props: bump version to 1.3.5
+  * 15932f0 core: add --version and improve --help
+  * a8ebdcb screencopy: fix missing restore tokens after a double
+    restart
+  * 2e5327c README: fixup needed deps
+  * bab430b screencopy/picker: add an option to allow restore token by
+    default
+  * 5e40936 screencopy: improve restore data handling
+  * 5d64be5 screencopy: fixup handle passing to the picker
+  * ac1b8c3 core: add explicit casts to wl_proxy* for clang
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 21 Sep 2024 20:05:44 +0200
+
 xdg-desktop-portal-hyprland (1.3.4-1ppa1) noble; urgency=medium
 
   * Update to release 1.3.4
