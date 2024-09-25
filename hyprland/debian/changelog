@@ -1,3 +1,25 @@
+hyprland-unstable (0.43.0~1ppa1+git202409251508-8b86ee8b) noble; urgency=medium
+
+  * Update to main 8b86ee8b
+  * 8b86ee8b github: encourage usage of --systeminfo if Hyprland won't
+    launch
+  * 2a052c69 core: add a --systeminfo parameter to gather systeminfo
+    without running
+  * 2320b224 Internal: move to Mat3x3 from hyprutils (#7902)
+  * 8f518826 hyprctl: add solitary field to hyprctl monitors
+  * 00c86268 hyprctl: add submap request
+  * 0a211f29 hyprctl: add defaultName to workspacerules
+  * d279d7c4 eventloop: dispatch pending in session on start
+  * 6c78b03b flake: update xdph
+  * f7949708 internal: nuke wlsignal and related
+  * 508bde1f core: add HYPRLAND_CONFIG environment variable (#7851)
+  * e5ff19ac flake: update xdph
+  * 8579066c Nix: clean up derivation
+  * 9232bc2c internal: move to hyprutils' scopeguard
+  * db0b764a shm: send a static list of shm formats
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 25 Sep 2024 15:08:48 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409201925-278583b8) noble; urgency=medium
 
   * Update to main 278583b8
