@@ -1,3 +1,11 @@
+hyprutils (0.2.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.3
+  * 7373e87 version: bump to 0.2.3
+  * a9f85a4 Math: add Mat3x3 (#14)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 25 Sep 2024 15:03:13 +0200
+
 hyprutils (0.2.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.2
