@@ -2,6 +2,11 @@
 
 set -xe
 cd "$sourcefolder"
+
+: Remove subprojects, we use direct dependencies
+rm -rf "$buildfolder/subprojects"
+
+: Hardcode version from git in orig blob
 eval "`sed -n '/^[^ ]\+=/p' scripts/generateVersion.sh`"
 vars="`sed -n 's/^\([^ ]\+\)=.*$/\1/p' scripts/generateVersion.sh`"
 echo "$vars" |

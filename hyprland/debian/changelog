@@ -1,3 +1,28 @@
+hyprland-unstable (0.43.0~1ppa1+git202409281437-2cf6e786) noble; urgency=medium
+
+  * Update to main 2cf6e786
+  * 2cf6e786 dwindle: add config option `split_bias` (#7920)
+  * 58669fef flake.lock: update
+  * e20aef7d opengl: remove debug log
+  * b2143a98 CI/Nix: no longer build with submodules
+  * f75f8efb Meson: add tracy dependency
+  * be96787e CMake: use udis86 from pkg-config, fallback to subproject
+  * 89d945aa CMake: use hyprland-protocols from pkg-config, fallback to
+    subproject
+  * 27211c71 Meson: try to find udis86 through pkgconfig, fallback to
+    subproject
+  * 14942bca Nix: re-add hyprland-protocols
+  * 77f2a013 flake.lock: update nixpkgs
+  * 7b56ce65 CI/Nix: add cross build
+  * 32a8caf7 Nix: also test cross build
+  * caaa9b11 wlr-output-configuration: Improve output configuration
+    (#7571)
+  * b1ad2d80 dispatchers: fixup dpms toggle (#7875)
+  * 22746b30 hyprctl: use the getMonitorData helper everywhere
+  * 49713fab pointermgr: avoid hogging CMonitor refs
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Sep 2024 14:37:53 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409251508-8b86ee8b) noble; urgency=medium
 
   * Update to main 8b86ee8b
