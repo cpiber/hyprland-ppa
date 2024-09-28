@@ -1,0 +1,28 @@
+Source: hyprland-protocols
+Section: x11
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Uploaders: Constantin Piber <cp.piber@gmail.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ meson (>= 0.55.0),
+ libwayland-dev,
+ pkgconf
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/hyprwm/hyprland-protocols.git
+Vcs-Browser: https://github.com/hyprwm/hyprland-protocols
+
+Package: hyprland-protocols
+Section: libdevel
+Architecture: all
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Multi-Arch: foreign
+Description: Wayland protocol extensions for Hyprland.
+ This repository exists in an effort to bridge the gap between
+ Hyprland and KDE/Gnome's functionality.
+ Since wlr-protocols is closed for new submissions, and
+ wayland-protocols is very slow with changes, this repo will hold
+ protocols used by Hyprland to bridge the aforementioned gap.
