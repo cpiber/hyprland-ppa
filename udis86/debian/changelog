@@ -1,0 +1,5 @@
+udis86 (1.7.2+186-1ppa1) noble; urgency=medium
+
+  * Initial release. Latest commit 55336633 Oct 13, 2022
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Sep 2024 14:48:11 +0200

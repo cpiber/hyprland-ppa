@@ -1,0 +1,59 @@
+Source: udis86
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ python3,
+ python3-sphinx,
+ python-is-python3,
+Standards-Version: 4.6.2
+Homepage: https://github.com/canihavesomecoffee/udis86
+Vcs-Browser: https://github.com/canihavesomecoffee/udis86
+Vcs-Git: https://github.com/canihavesomecoffee/udis86.git
+
+Package: libudis86-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libudis86.1 (= ${binary:Version}),
+ ${misc:Depends},
+Suggests:
+ libudis86-docs
+Description: Udis86 is a disassembler
+ Udis86 is a disassembler for the x86 and x86-64 class of instruction set
+ architectures. It consists of a C library called `libudis86` which
+ provides a clean and simple interface to decode and inspect a stream of 
+ raw binary data as disassembled instructions in a structured manner, and
+ a command line tool called `udcli` that incorporates the library.
+ This package includes the build-headers.
+
+Package: libudis86-docs
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libudis86.1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Udis86 is a disassembler
+ Udis86 is a disassembler for the x86 and x86-64 class of instruction set
+ architectures. It consists of a C library called `libudis86` which
+ provides a clean and simple interface to decode and inspect a stream of 
+ raw binary data as disassembled instructions in a structured manner, and
+ a command line tool called `udcli` that incorporates the library.
+ This package includes development documentation.
+
+Package: libudis86.1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Udis86 is a disassembler
+ Udis86 is a disassembler for the x86 and x86-64 class of instruction set
+ architectures. It consists of a C library called `libudis86` which
+ provides a clean and simple interface to decode and inspect a stream of 
+ raw binary data as disassembled instructions in a structured manner, and
+ a command line tool called `udcli` that incorporates the library.

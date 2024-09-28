@@ -58,3 +58,6 @@
 [submodule "waybar-unstable/source"]
 	path = waybar-unstable/source
 	url = https://github.com/Alexays/Waybar.git
+[submodule "udis86/source"]
+	path = udis86/source
+	url = https://github.com/canihavesomecoffee/udis86.git
