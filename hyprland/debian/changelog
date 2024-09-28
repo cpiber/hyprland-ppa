@@ -1,3 +1,9 @@
+hyprland-unstable (0.43.0~1ppa1+git202409281437-2cf6e786.1) noble; urgency=medium
+
+  * Split data package
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Sep 2024 16:18:58 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409281437-2cf6e786) noble; urgency=medium
 
   * Update to main 2cf6e786

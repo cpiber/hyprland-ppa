@@ -1,0 +1,9 @@
+usr/include/*
+usr/bin/*
+usr/share/hypr/*.conf
+usr/share/pkgconfig/*
+usr/share/xdg-desktop-portal/*
+usr/share/wayland-sessions/*
+usr/share/bash-completion/*
+usr/share/fish/*
+usr/share/zsh/*
