@@ -1,3 +1,18 @@
+hyprland-unstable (0.43.0~1ppa1+git202409301034-f6387536) noble; urgency=medium
+
+  * Update to main f6387536
+  * f6387536 protocol: fix missing include
+  * 968f6a60 meson: fix arch build with new protocol
+  * 488efab6 single-pixel-buffer: new protocol impl
+  * 6649255d flake.lock: update
+  * 4b00cba3 dwindle: add movetoroot method to layout messages (#7903)
+  * 9e418671 config: add descriptions for dwindle and master layout
+    options (#7933)
+  * d73c1475 CI/Nix: git+https -> github
+  * 6f313de9 core: Fix Musl builds (#7934)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 30 Sep 2024 10:34:59 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409281437-2cf6e786.1) noble; urgency=medium
 
   * Split data package
