@@ -1,3 +1,15 @@
+hyprland-unstable (0.43.0~1ppa1+git202410021347-e2426942) noble; urgency=medium
+
+  * Update to main e2426942
+  * e2426942 layout: add auto_group to control default grouping (#7883)
+  * 5c6c300a wayland/output: send geometry in updateState
+  * 6bd33971 wlr-output-management: accept 0 refresh rates
+  * 68fd32c8 byteoperations: add missing header
+  * 3ddb16bd compositor/wayland: up the max buffer size to avoid
+    disconnects when app hangs
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 02 Oct 2024 13:47:59 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202409301034-f6387536) noble; urgency=medium
 
   * Update to main f6387536

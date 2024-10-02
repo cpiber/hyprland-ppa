@@ -1,0 +1,27 @@
+Description: Revert 3ddb16bd5bb7146d125a7d68e4e9f3b54c381a20
+ This reverts the mentioned commit, since it depends on a newer
+ version of libwayland, that is not yet available on noble
+Author: Constantin Piber <cp.piber@gmail.com>
+
+--- hyprland-unstable-0.43.0~1ppa1+git202410021347.orig/CMakeLists.txt
++++ hyprland-unstable-0.43.0~1ppa1+git202410021347/CMakeLists.txt
+@@ -110,7 +110,7 @@ pkg_check_modules(
+   IMPORTED_TARGET
+   xkbcommon
+   uuid
+-  wayland-server>=1.22.90
++  wayland-server
+   wayland-protocols
+   cairo
+   pango
+--- hyprland-unstable-0.43.0~1ppa1+git202410021347.orig/src/Compositor.cpp
++++ hyprland-unstable-0.43.0~1ppa1+git202410021347/src/Compositor.cpp
+@@ -231,7 +231,7 @@ void CCompositor::initServer(std::string
+         Debug::trace = true;
+ 
+     // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
+-    wl_display_set_default_max_buffer_size(m_sWLDisplay, 1_MB);
++    // wl_display_set_default_max_buffer_size(m_sWLDisplay, 1_MB);
+ 
+     Aquamarine::SBackendOptions options;
+     options.logFunction = aqLog;
