@@ -1,3 +1,22 @@
+hyprlang (0.5.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.3
+  * f054f2e version: bump to 0.5.3
+  * dfeb581 CMake: Use library aliases instead of library names (#55)
+  * 5b175c9 config: Return an error on invalid hex values. (#54)
+  * c12ab78 config: fix parsing invalid hex (#53)
+  * 16e5c94 core: don't populate linesContainingVar on dynamic requests
+  * adbefbf flake.lock: update
+  * 651c8d0 CMake: fmt
+  * c070445 CMake, Nix: add VERSION file
+  * 5df0174 core: properly handle unscoped keywords
+  * 095f54b core: handle scoped keywords if flags are not allowed (#49)
+  * db8c528 CI: fix arch
+  * ec6938c core: Move to hyprutils for util functions (#48)
+  * 87d5d98 cmake: remove -lc++abi
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Oct 2024 14:08:47 +0200
+
 hyprlang (0.5.2-1ppa1) noble; urgency=medium
 
   * Initial release. Follows upstream v0.5.2.
