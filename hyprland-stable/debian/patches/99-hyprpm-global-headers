@@ -1,0 +1,17 @@
+Description: Find global headers
+ Have hyprpm find global headers installed with the package instead of requiring
+ a separate clone.
+Author: Constantin Piber <cp.piber@gmail.com>
+
+--- hyprland-unstable-0.40.0~1ppa3+git202406050915.orig/hyprpm/src/core/PluginManager.cpp
++++ hyprland-unstable-0.40.0~1ppa3+git202406050915/hyprpm/src/core/PluginManager.cpp
+@@ -349,6 +349,9 @@ bool CPluginManager::removePluginRepo(co
+ eHeadersErrors CPluginManager::headersValid() {
+     const auto HLVER = getHyprlandVersion();
+ 
++    if (std::filesystem::exists("/usr/share/pkgconfig/hyprland.pc"))
++        return HEADERS_OK;
++
+     if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
+         return HEADERS_MISSING;
+ 

@@ -35,10 +35,23 @@ Build-Depends:
  hyprutils-dev (>= 0.2.0),
  aquamarine-dev,
  hyprwayland-scanner (>= 0.3.10),
+ libudis86-dev (>= 1.7.2),
+ hyprland-protocols,
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
 Vcs-Git: https://github.com/hyprwm/Hyprland.git
+
+Package: hyprland-docs
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Description: Hyprland is a dynamic tiling Wayland compositor
+ Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
+ It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins, easy IPC, much more QoL stuff than other wlr-based compositors and more...
+ .
+ This package contains the architecture-independent documentation.
 
 Package: hyprland
 Architecture: any
@@ -47,6 +60,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  wayland-protocols,
+ hyprland-data,
 Conflicts:
  hyprland-unstable,
 Recommends:
@@ -55,6 +69,9 @@ Recommends:
  sway-notification-center | dunst,
  pipewire,
  wireplumber,
+Suggests:
+ hyprland-plugin-deps,
+ hyprland-docs,
 Description: Hyprland is a dynamic tiling Wayland compositor
  Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
  It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins, easy IPC, much more QoL stuff than other wlr-based compositors and more...

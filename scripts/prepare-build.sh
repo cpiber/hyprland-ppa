@@ -9,6 +9,7 @@ set -xe
 reporoot="`cd "$(dirname "$0")/.." && pwd`"
 
 project="$1"
+shift
 sourcefolder="$reporoot/$project/source"
 debianfolder="$reporoot/$project/debian"
 buildfolder="/tmp/hyprland-ppa/$project"

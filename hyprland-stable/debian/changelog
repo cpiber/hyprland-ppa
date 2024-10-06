@@ -1,3 +1,123 @@
+hyprland (0.44.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.44.0
+  * 0c7a7e2d version: bump to 0.44.0
+  * 0ec6072a single-pixel: set buffer size to 1,1
+  * 3ca699de opengl: use GL_CLAMP_TO_EDGE instead of GL_CLAMP
+  * 52c09196 monitor: arrange monitors on connect and disconnect
+  * 6fbfeefc protocolmgr: don't expose the fallback output
+  * 46bf87c8 monitor: use a scope guard for disconnect events
+  * 595eb89f renderer: Fix resize artifacts (stretching, bumps) (#7499)
+  * a815b14b monitor: cleanup and modernize scheduleDone
+  * 3a5052a7 compositor: update all xdg outputs on arrange
+  * 8e237b00 xdg-output: minor cleanups
+  * 1ed925b6 internal: fix missing include directive (#7984)
+  * aed529f6 renderer: fix uvBR calculation (#7975)
+  * de68e065 layout: fix dragging a window into a group after e242694
+    (#7976)
+  * e2426942 layout: add auto_group to control default grouping (#7883)
+  * 5c6c300a wayland/output: send geometry in updateState
+  * 6bd33971 wlr-output-management: accept 0 refresh rates
+  * 68fd32c8 byteoperations: add missing header
+  * 3ddb16bd compositor/wayland: up the max buffer size to avoid
+    disconnects when app hangs
+  * f6387536 protocol: fix missing include
+  * 968f6a60 meson: fix arch build with new protocol
+  * 488efab6 single-pixel-buffer: new protocol impl
+  * 6649255d flake.lock: update
+  * 4b00cba3 dwindle: add movetoroot method to layout messages (#7903)
+  * 9e418671 config: add descriptions for dwindle and master layout
+    options (#7933)
+  * d73c1475 CI/Nix: git+https -> github
+  * 6f313de9 core: Fix Musl builds (#7934)
+  * 2cf6e786 dwindle: add config option `split_bias` (#7920)
+  * 58669fef flake.lock: update
+  * e20aef7d opengl: remove debug log
+  * b2143a98 CI/Nix: no longer build with submodules
+  * f75f8efb Meson: add tracy dependency
+  * be96787e CMake: use udis86 from pkg-config, fallback to subproject
+  * 89d945aa CMake: use hyprland-protocols from pkg-config, fallback to
+    subproject
+  * 27211c71 Meson: try to find udis86 through pkgconfig, fallback to
+    subproject
+  * 14942bca Nix: re-add hyprland-protocols
+  * 77f2a013 flake.lock: update nixpkgs
+  * 7b56ce65 CI/Nix: add cross build
+  * 32a8caf7 Nix: also test cross build
+  * caaa9b11 wlr-output-configuration: Improve output configuration
+    (#7571)
+  * b1ad2d80 dispatchers: fixup dpms toggle (#7875)
+  * 22746b30 hyprctl: use the getMonitorData helper everywhere
+  * 49713fab pointermgr: avoid hogging CMonitor refs
+  * 8b86ee8b github: encourage usage of --systeminfo if Hyprland won't
+    launch
+  * 2a052c69 core: add a --systeminfo parameter to gather systeminfo
+    without running
+  * 2320b224 Internal: move to Mat3x3 from hyprutils (#7902)
+  * 8f518826 hyprctl: add solitary field to hyprctl monitors
+  * 00c86268 hyprctl: add submap request
+  * 0a211f29 hyprctl: add defaultName to workspacerules
+  * d279d7c4 eventloop: dispatch pending in session on start
+  * 6c78b03b flake: update xdph
+  * f7949708 internal: nuke wlsignal and related
+  * 508bde1f core: add HYPRLAND_CONFIG environment variable (#7851)
+  * e5ff19ac flake: update xdph
+  * 8579066c Nix: clean up derivation
+  * 9232bc2c internal: move to hyprutils' scopeguard
+  * db0b764a shm: send a static list of shm formats
+  * 278583b8 flake.lock: update
+  * 4414cd07 xwm: Minor cleanup, add wrappers for basic types (#7856)
+  * 9e98fb01 dmabuffer: attempt importing failed dmabufs as implicit
+  * 98563783 Nix: use mold linker
+  * dfa1bd0c Meson: pass AQUAMARINE_VERSION argument
+  * 92df6b0d version: log build aquamarine version
+  * 71963972 args: add --version to binary args
+  * 1bc05b1f xwayland: use proper path for the XWayland sockets (#7852)
+  * e6cf643f pointermgr: Hide hardware cursor on leave (#7806)
+  * 94140e88 xwayland: Some readability improvements (#7807)
+  * b248d597 Nix: fix meson PCH flag
+  * cbc0ff6e Nix: disable PCH
+  * 6b6554ad flake.nix: inherit stdenv from package
+  * d936eb43 flake.lock: update aquamarine
+  * 883d0108 userchecks: add an xdg_current_desktop check
+  * 0564b46a dispatchers: allow moveintogroup when floating (#7818)
+  * 3c9716ac gammactrl: fix potential crash on monitor removed (#7828)
+  * 581f6659 data-device: conform to reported source actions
+  * e72ae6b2 hyprctl: allow parsing empty value
+  * 9e356562 internal: Delay monitor events/hooks (#7797)
+  * e8775852 internal: Fix change group current fullscreen state query
+    (#7802)
+  * eb97d949 textinput: don't reset if ti isn't enabled (#7798)
+  * e74efd87 internal: fix initial cursor warping (#7793)
+  * 4dbdb556 data-device: don't send default action of move
+  * 5ee4b196 data-device: send clock time in motion events
+  * d35e70a8 cmake: drop ninja dep
+  * c35ed836 nix: adapt cmake options
+  * d505b336 nix: use meson
+  * 118be4de textinput: fix tiv3 leave (#7761)
+  * 73b9756b xwayland: remove extra x11 deactivation (#7755)
+  * 8b9e3859 [gha] Nix: update inputs
+  * e01da1fd Meson: format
+  * 7a8c013e Meson: fix protocols, clean up
+  * 518399a9 pointermgr: avoid derefing null outputs
+  * 155d4401 textinput: handle IME resetting (#7731)
+  * 13f90bb8 update xdph commit in flake.lock
+  * c67b257e build: Set cmake_minimum_required to version 3.30 (#7709)
+  * 8237d7e1 input: move dmps activation to input listeners (#7721)
+  * 85da1a17 [gha] build man pages
+  * 9609b04f man: Fixed the man page to show the new information (#7713)
+  * 04421063 config: add order rule for layers (#7697)
+  * 43e1415e assets: Remove execute permission from lockdead.png (#7715)
+  * e1448732 tiv1: fix deleting first character (#7716)
+  * 7c4c402b config: include XF86Audio* key bindings to default cfg
+    (#7695)
+  * 6179b179 github: improve issue template (#7699)
+  * 05b48d48 config: Limit max volume to 100%
+  * 07a21fdf github(nix-build): switch to better nix installer, attempt
+    at fixing hash mismatch (#7701)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Oct 2024 13:39:33 +0200
+
 hyprland (0.43.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.43.0
