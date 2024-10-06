@@ -1,0 +1,7 @@
+hyprland-data
+------------------------------
+
+Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
+This package contains the static assets to reduce download sizes.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Oct 2024 14:18:05 +0200

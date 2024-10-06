@@ -6,11 +6,8 @@ cd "$sourcefolder"
 : Remove subprojects, we use direct dependencies
 rm -rf "$buildfolder/subprojects"
 
-: Remove assets conditionally
-if [ "$project" = "hyprland-stable" ] || [ "${1:-}" != "--with-data" ]; then
-  rm --interactive=never "$buildfolder/assets/install/"*.png
-  sed -i '/^Package: hyprland-data$/,/^$/d' "$buildfolder/debian/control"
-fi
+: Remove assets, we package them separately
+rm --interactive=never "$buildfolder/assets/install/"*.png
 
 : Hardcode version from git in orig blob
 eval "`sed -n '/^[^ ]\+=/p' scripts/generateVersion.sh`"

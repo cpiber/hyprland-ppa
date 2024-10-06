@@ -42,23 +42,6 @@ Homepage: https://hyprland.org/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
 Vcs-Git: https://github.com/hyprwm/Hyprland.git
 
-Package: hyprland-data
-Architecture: all
-Multi-Arch: foreign
-Depends:
- ${misc:Depends},
-Breaks:
- hyprland (<= 0.43.0),
- hyprland-unstable (<= 0.43.0~1ppa1+git202409281437-2cf6e786),
-Replaces:
- hyprland (<= 0.43.0),
- hyprland-unstable (<= 0.43.0~1ppa1+git202409281437-2cf6e786),
-Description: Hyprland is a dynamic tiling Wayland compositor
- Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
- It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins, easy IPC, much more QoL stuff than other wlr-based compositors and more...
- .
- This package contains the architecture-independent data files.
-
 Package: hyprland-unstable-docs
 Architecture: all
 Multi-Arch: foreign
