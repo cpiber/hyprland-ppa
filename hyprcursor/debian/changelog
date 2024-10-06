@@ -1,3 +1,26 @@
+hyprcursor (0.1.10-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.10
+  * 704cd7f version: bump to 0.1.10
+  * e8acfdb gitignore: add .cache
+  * 6b4131e core: initialize C shape data fully
+  * 6664842 core: avoid uninitialized overriddenBy of raw shape data
+  * b98726e docs: Correction in hotspot coordinates documentation (#63)
+  * 912d560 nix: pkg: add missing dep xcur2png
+  * 5a95d85 lib: Use XDG_DATA_DIRS to query themes (#58)
+  * 4493a97 flake.lock: update
+  * 04cb4df CMake: fmt
+  * 4efcbd3 CMake, Nix: add VERSION file
+  * a5c0d57 core: only alloc as much as needed when reading in cursor
+    images (#51)
+  * 66d5b46 README: add standards link
+  * dd3a853 README: add toml++ to dep list
+  * c50b2f0 ci: fix missing dep
+  * d5f4a6c docs: mention timeouts to be > 0
+  * 9e27a2c README: add wiki (#45)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Oct 2024 14:12:59 +0200
+
 hyprcursor (0.1.9-1ppa1) noble; urgency=medium
 
   * Initial release. Follows release v0.1.9.
