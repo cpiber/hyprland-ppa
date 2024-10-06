@@ -1,3 +1,23 @@
+hyprland-unstable (0.44.0~1ppa1+git202410061358-0c7a7e2d) noble; urgency=medium
+
+  * Update to main 0c7a7e2d
+  * 0c7a7e2d version: bump to 0.44.0
+  * 0ec6072a single-pixel: set buffer size to 1,1
+  * 3ca699de opengl: use GL_CLAMP_TO_EDGE instead of GL_CLAMP
+  * 52c09196 monitor: arrange monitors on connect and disconnect
+  * 6fbfeefc protocolmgr: don't expose the fallback output
+  * 46bf87c8 monitor: use a scope guard for disconnect events
+  * 595eb89f renderer: Fix resize artifacts (stretching, bumps) (#7499)
+  * a815b14b monitor: cleanup and modernize scheduleDone
+  * 3a5052a7 compositor: update all xdg outputs on arrange
+  * 8e237b00 xdg-output: minor cleanups
+  * 1ed925b6 internal: fix missing include directive (#7984)
+  * aed529f6 renderer: fix uvBR calculation (#7975)
+  * de68e065 layout: fix dragging a window into a group after e242694
+    (#7976)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Oct 2024 13:58:46 +0200
+
 hyprland-unstable (0.43.0~1ppa1+git202410021347-e2426942) noble; urgency=medium
 
   * Update to main e2426942

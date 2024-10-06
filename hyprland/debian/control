@@ -51,6 +51,7 @@ Breaks:
  hyprland (<= 0.43.0),
  hyprland-unstable (<= 0.43.0~1ppa1+git202409281437-2cf6e786),
 Replaces:
+ hyprland (<= 0.43.0),
  hyprland-unstable (<= 0.43.0~1ppa1+git202409281437-2cf6e786),
 Description: Hyprland is a dynamic tiling Wayland compositor
  Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
