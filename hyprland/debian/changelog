@@ -1,3 +1,13 @@
+hyprland-unstable (0.44.1~1ppa1+git202410091806-6ae89940) noble; urgency=medium
+
+  * Update to main 6ae89940
+  * 6ae89940 layout: add merge_floated_into_tiled_on_groupbar (#8042)
+  * 3d28879c hyprerror: fix height calc with bottom bar (#8043)
+  * 223dcc8b output: update state even if no owner exists (#8044)
+  * 6ce07ee8 CI/release: remove script backup line
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Oct 2024 18:06:36 +0200
+
 hyprland-unstable (0.44.0~1ppa1+git202410090907-bc299928) noble; urgency=medium
 
   * Update to main bc299928
