@@ -1,3 +1,15 @@
+hyprland-protocols (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * c7c3f4c version: bump to 0.4.0
+  * f173cc7 protocols: add a CTM control protocol (#10)
+  * 5619b1e README: update wording
+  * 6b3261e flake.nix: fix major lapse in judgement
+  * 5a11232 flake.lock: update
+  * 01fc779 Meson, Nix: add VERSION file
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Oct 2024 09:03:47 +0200
+
 hyprland-protocols (0.3.0-1ppa1) noble; urgency=medium
 
   * Upload 0.3.0
