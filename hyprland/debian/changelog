@@ -1,3 +1,36 @@
+hyprland-unstable (0.44.0~1ppa1+git202410090907-bc299928) noble; urgency=medium
+
+  * Update to main bc299928
+  * bc299928 output/xdg-output: avoid sending events to released globals
+  * ac658500 keyboard: update group state on change for the sym resolve
+    state
+  * 8cced091 renderer: reserve space for error at the bottom if that's
+    set
+  * 91299f70 hyprerror: make hyprerror reserve space (#8040)
+  * 60308a2b defaultConfig: add a nofocus rule for weird X windows
+  * 613eac46 layout: remove unnecessary check after 45e8219 (#8037)
+  * e4a26f4f dispatchers: allow leading whitespace in window parameter
+    (#8016)
+  * 57b632ea pointer: expand sw cursor damage box
+  * 1bf63dfd protocols: Add support for hyprland-ctm-control-v1 (#8023)
+  * e0cfbec6 keybinds: fixup xkb_states for resolve_by_sym
+  * b3a7e310 misc: refactor version command (#8027)
+  * 45e82199 layout: add drag_into_group to control merging dragging
+    windows (#8004)
+  * 4711796d config: give simple help for super+q not working
+  * 0d70c442 screencopy: fix screencopy frames not being cleaned up
+    (#8017)
+  * a364df4c internal: use clampWindowSize to unify min/maxsize handling
+    (#8014)
+  * 46d990f1 feat: add a custom made treewide formatter (#7992)
+  * 5bf7b1e1 flake.nix: add xdph follows
+  * 97444ed7 layout: fix auto group when opening a new window in a non-
+    focused workspace using window rules (#8006)
+  * 4e41cda2 security-context: close client fds after disconnect
+  * da86aac0 security-context: implement protocol
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Oct 2024 09:07:41 +0200
+
 hyprland-unstable (0.44.0~1ppa1+git202410061358-0c7a7e2d) noble; urgency=medium
 
   * Update to main 0c7a7e2d
