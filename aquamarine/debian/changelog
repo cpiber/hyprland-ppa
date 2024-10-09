@@ -1,3 +1,18 @@
+aquamarine (0.4.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.2
+  * 65dd97b version: bump to 0.4.2
+  * d352c0d DRM/Output: Implement CTM support (#92)
+  * b82fdaf wayland: log compositor name in startup
+  * 203fc0f headless: add a default mode for headless outputs (#87)
+  * 8b72861 Session: only dispatch udev in dispatchPendingEventsAsync if
+    on linux (#86)
+  * 752d0fb Nix: fix cross-compilation
+  * dc399a3 gbm: fix modifier list not updating when renderable list is
+    empty (#84)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Oct 2024 09:10:24 +0200
+
 aquamarine (0.4.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.1
