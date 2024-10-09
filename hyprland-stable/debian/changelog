@@ -1,3 +1,22 @@
+hyprland (0.44.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.44.1
+  * 4520b30d version: bump to 0.44.1
+  * 8405aa11 output: update state even if no owner exists (#8044)
+  * ad46257c output/xdg-output: avoid sending events to released globals
+  * 0cfbe618 keyboard: update group state on change for the sym resolve
+    state
+  * 7d0944ac defaultConfig: add a nofocus rule for weird X windows
+  * b9990468 pointer: expand sw cursor damage box
+  * 736a8735 keybinds: fixup xkb_states for resolve_by_sym
+  * b54eecbd config: give simple help for super+q not working
+  * 657aeb39 screencopy: fix screencopy frames not being cleaned up
+    (#8017)
+  * 6807430b layout: fix auto group when opening a new window in a non-
+    focused workspace using window rules (#8006)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Oct 2024 18:17:51 +0200
+
 hyprland (0.44.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.44.0
