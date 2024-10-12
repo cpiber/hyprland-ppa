@@ -15,3 +15,20 @@ Author: Constantin Piber <cp.piber@gmail.com>
      if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
          return HEADERS_MISSING;
  
+--- a/hyprpm/src/core/PluginManager.cpp
++++ b/hyprpm/src/core/PluginManager.cpp
+@@ -415,6 +415,12 @@ bool CPluginManager::updateHeaders(bool force) {
+         std::filesystem::permissions("/tmp/hyprpm", std::filesystem::perms::all, std::filesystem::perm_options::replace);
+     }
+ 
++    if (headersValid() != HEADERS_OK) {
++        std::cerr << "\n" << Colors::RED << "✖" << Colors::RESET << " Headers not okay. File a bug with https://github.com/cpiber/hyprland-ppa/ (not Hyprland)!\n";
++        return false;
++    }
++    std::cout << "\n" << std::string{Colors::GREEN} + "✔" + Colors::RESET + " Headers up to date.\n";
++    return true;
++
+     if (!force && headersValid() == HEADERS_OK) {
+         std::cout << "\n" << std::string{Colors::GREEN} + "✔" + Colors::RESET + " Headers up to date.\n";
+         return true;
+
