@@ -1,3 +1,18 @@
+hyprland-unstable (0.44.1~1ppa1+git202410121229-ee8116ac) noble; urgency=medium
+
+  * Update to main ee8116ac
+  * ee8116ac input: Fix VRR for constrained cursors (#6877)
+  * f5db4839 drm-timeline: Add check for conflicting acquire and release
+    points (#8083)
+  * 7564b26b internal: improve version query and define HYPRLAND_VERSION
+    (#8034)
+  * 178a300e xwayland: minor cleanups and fixes (#8076)
+  * d655a103 config/layout: nuke no_gaps_when_only (#8072)
+  * b65773be hyprpm: disallow shallow on unknown branch
+  * c4eb1940 gammactrl: guard pMonitor in setGamma
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 12 Oct 2024 12:29:59 +0200
+
 hyprland-unstable (0.44.1~1ppa1+git202410091806-6ae89940) noble; urgency=medium
 
   * Update to main 6ae89940
