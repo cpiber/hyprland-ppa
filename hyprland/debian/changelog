@@ -1,3 +1,9 @@
+hyprland-unstable (0.44.1~1ppa1+git202410121229-ee8116ac.1) noble; urgency=medium
+
+  * Add hyprpm global plugin patch
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 12 Oct 2024 15:28:34 +0200
+
 hyprland-unstable (0.44.1~1ppa1+git202410121229-ee8116ac) noble; urgency=medium
 
   * Update to main ee8116ac

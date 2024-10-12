@@ -1,3 +1,4 @@
 01-cmake-version-patch
-99-hyprpm-global-headers
 02-revert-set-buffer-size
+99-hyprpm-global-headers
+99-hyprpm-support-global-plugins

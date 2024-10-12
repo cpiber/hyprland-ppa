@@ -1,0 +1,112 @@
+Description: Hyprpm: Support global plugins.
+ Adds support for adding and enabling plugins provided by PPA.
+Author: Constantin Piber <cp.piber@gmail.com>
+
+--- source.orig/hyprpm/src/core/PluginManager.cpp
++++ source/hyprpm/src/core/PluginManager.cpp
+@@ -101,7 +101,9 @@ bool CPluginManager::createSafeDirectory
+ bool CPluginManager::addNewPluginRepo(const std::string& url, const std::string& rev) {
+     const auto HLVER = getHyprlandVersion();
+ 
+-    if (!hasDeps()) {
++    const bool bIsGlobal = url.find('/') == std::string::npos && std::filesystem::exists(std::string{DATAROOTDIR "/hyprpm/"} + url);
++
++    if (!bIsGlobal && !hasDeps()) {
+         std::cerr << "\n" << Colors::RED << "✖" << Colors::RESET << " Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, meson, cpio\n";
+         return false;
+     }
+@@ -120,6 +122,13 @@ bool CPluginManager::addNewPluginRepo(co
+         DataState::updateGlobalState(GLOBALSTATE);
+     }
+ 
++    if (bIsGlobal)
++        std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from global files " << DATAROOTDIR "/hyprpm/" << url << "\n  " << Colors::RED
++                  << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
++                  << " install random plugins without verifying the code and author.\n  "
++                  << "These files are provided by PPAs in your system.\n  "
++                  << "Are you sure? [Y/n] ";
++    else
+     std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
+               << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
+               << " install random plugins without verifying the code and author.\n  "
+@@ -133,6 +142,20 @@ bool CPluginManager::addNewPluginRepo(co
+         return false;
+     }
+ 
++    if (bIsGlobal) {
++        const auto PATH = DataState::getDataStatePath() + "/" + url;
++
++        std::filesystem::create_directories(PATH);
++        for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + url)) {
++            if (entry.path().filename() == "state.toml")
++                std::filesystem::copy_file(entry, PATH + "/state.toml");
++            else
++                std::filesystem::create_symlink(entry, PATH + "/" + entry.path().filename().string());
++        }
++        std::cout << Colors::GREEN << "✔" << Colors::RESET << " global repository added";
++        return true;
++    }
++
+     CProgressBar progress;
+     progress.m_iMaxSteps        = 5;
+     progress.m_iSteps           = 0;
+@@ -595,6 +618,48 @@ bool CPluginManager::updatePlugins(bool
+         progress.m_szCurrentMessage = "Updating " + repo.name;
+         progress.print();
+ 
++        // global repo
++        if (repo.url.empty()) {
++            auto              STATE = toml::parse_file(std::string{DATAROOTDIR "/hyprpm/"} + repo.name + "/state.toml");
++
++            const auto        NAME = STATE["repository"]["name"].value_or("");
++            const auto        URL  = STATE["repository"]["url"].value_or("");
++            const auto        REV  = STATE["repository"]["rev"].value_or("");
++            const auto        HASH = STATE["repository"]["hash"].value_or("");
++
++            SPluginRepository newrepo;
++            newrepo.hash = HASH;
++            newrepo.name = NAME;
++            newrepo.url  = URL;
++            newrepo.rev  = REV;
++
++            for (const auto& [key, val] : STATE) {
++                if (key == "repository")
++                    continue;
++
++                const auto ENABLED  = STATE[key]["enabled"].value_or(false);
++                const auto FAILED   = STATE[key]["failed"].value_or(false);
++                const auto FILENAME = STATE[key]["filename"].value_or("");
++
++                newrepo.plugins.push_back(SPlugin{std::string{key.str()}, FILENAME, ENABLED, FAILED});
++            }
++
++            DataState::removePluginRepo(repo.name);
++            const auto PATH = DataState::getDataStatePath() + "/" + newrepo.name;
++            std::filesystem::create_directories(PATH);
++            for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + newrepo.name)) {
++                if (entry.path().filename() == "state.toml")
++                    continue;
++                std::filesystem::create_symlink(entry, PATH + "/" + entry.path().filename().string());
++            }
++            for (auto& p : newrepo.plugins) {
++                const auto OLDPLUGINIT = std::find_if(repo.plugins.begin(), repo.plugins.end(), [&](const auto& other) { return other.name == p.name; });
++                p.enabled = OLDPLUGINIT != repo.plugins.end() ? OLDPLUGINIT->enabled : false;
++            }
++            DataState::addNewPluginRepo(newrepo);
++            continue;
++        }
++
+         progress.printMessageAbove(std::string{Colors::RESET} + " → checking for updates for " + repo.name);
+ 
+         createSafeDirectory(m_szWorkingPluginDirectory);
+--- source.orig/hyprpm/CMakeLists.txt
++++ source/hyprpm/CMakeLists.txt
+@@ -15,6 +15,8 @@ add_executable(hyprpm ${SRCFILES})
+ 
+ target_link_libraries(hyprpm PUBLIC PkgConfig::deps)
+ 
++add_compile_definitions(DATAROOTDIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}")
++
+ # binary
+ install(TARGETS hyprpm)
+ 
