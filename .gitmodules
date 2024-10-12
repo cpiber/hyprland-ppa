@@ -64,3 +64,6 @@
 [submodule "hyprland-protocols/source"]
 	path = hyprland-protocols/source
 	url = https://github.com/hyprwm/hyprland-protocols.git
+[submodule "hyprland-plugins/source"]
+	path = hyprland-plugins/source
+	url = https://github.com/hyprwm/hyprland-plugins.git

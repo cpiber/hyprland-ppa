@@ -1,0 +1,55 @@
+#!/usr/bin/make -f
+
+# See debhelper(7) (uncomment to enable).
+# Output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+
+# See FEATURE AREAS in dpkg-buildflags(1).
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# See ENVIRONMENT in dpkg-buildflags(1).
+# Package maintainers to append CFLAGS.
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# Package maintainers to append LDFLAGS.
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+NAME ?= hyprland-plugins
+DEST ?= debian/hyprland-plugins/usr/share/hyprpm/$(NAME)
+
+
+%:
+	dh $@
+
+
+override_dh_auto_build:
+	tomlq -r '.[].build | select(. != null) | join(" && ")' hyprpm.toml | while read -r line; do \
+			echo "Running \"$$line\""; \
+			$$line; \
+		done
+
+override_dh_auto_install:
+	install -d $(DEST)
+	tomlq -r 'keys_unsorted.[] | select(. != "repository")' hyprpm.toml | while read -r plugin; do \
+			echo "Installing $$plugin"; \
+			output="`tomlq -r '.["'$$plugin'"].output' hyprpm.toml`"; \
+			echo "install $$output $(DEST)/$$plugin.so"; \
+			install $$output $(DEST)/$$plugin.so; \
+		done
+	@echo "Installing state.toml"
+	tomlq -r 'keys_unsorted.[] | select(. != "repository")' hyprpm.toml | while read -r plugin; do \
+			echo "[$$plugin]" >> $(DEST)/state.toml; \
+			echo "enabled = false" >> $(DEST)/state.toml; \
+			echo "failed = false" >> $(DEST)/state.toml; \
+			echo "filename = '$$plugin.so'" >> $(DEST)/state.toml; \
+			echo "" >> $(DEST)/state.toml; \
+		done
+	echo "[repository]" >> $(DEST)/state.toml
+	echo "name = '$(NAME)'" >> $(DEST)/state.toml
+
+
+# dh_make generated override targets.
+# This is an example for Cmake (see <https://bugs.debian.org/641051>).
+#override_dh_auto_configure:
+#	dh_auto_configure -- \
+#	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
