@@ -1,0 +1,28 @@
+Source: hyprscroller
+Section: universe/x11
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ yq,
+ hyprland-unstable (= 0.44.1~1ppa1+git202410121229-ee8116ac.1),
+ hyprland-plugin-deps,
+Standards-Version: 4.6.2
+Vcs-Browser: https://github.com/dawsers/hyprscroller
+Vcs-Git: https://github.com/dawsers/hyprscroller.git
+
+Package: hyprscroller
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ hyprland-unstable (= 0.44.1~1ppa1+git202410121229-ee8116ac.1),
+Description: Hyprscroller creates a window layout similar to PaperWM.
+ Hyprscroller is a Hyprland layout plugin that creates a window layout similar to PaperWM.
+ .
+ The plugin is quite feature complete and supports gaps, borders, decorations,
+ special workspace, full screen modes, overview, marks and installation through hyprpm.
+ .
+ Packaged for hyprland-unstable.

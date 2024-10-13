@@ -67,3 +67,6 @@
 [submodule "hyprland-plugins/source"]
 	path = hyprland-plugins/source
 	url = https://github.com/hyprwm/hyprland-plugins.git
+[submodule "hyprscroller/source"]
+	path = hyprscroller/source
+	url = https://github.com/dawsers/hyprscroller.git
