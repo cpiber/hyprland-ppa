@@ -1,8 +1,14 @@
-libinput (1.26.0-1ppa1) noble; urgency=medium
+libinput (1.26.2-1ppa1) noble; urgency=medium
 
   * Backport new libinput from ocular to noble
 
- -- Constantin Piber <cp.piber@gmail.com>  Wed, 07 Aug 2024 22:43:14 +0200
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 13 Oct 2024 23:35:33 +0200
+
+libinput (1.26.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sat, 28 Sep 2024 10:13:18 +0300
 
 libinput (1.26.0-1) unstable; urgency=medium
 
