@@ -1,8 +1,20 @@
-pipewire (1.2.3-1ppa1) noble; urgency=medium
+pipewire (1.2.4-1ppa1) noble; urgency=medium
 
   * Backport new pipewire from ocular to noble
 
- -- Constantin Piber <cp.piber@gmail.com>  Wed, 28 Aug 2024 18:42:22 +0200
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 13 Oct 2024 23:38:21 +0200
+
+pipewire (1.2.4-1ubuntu1) oracular; urgency=medium
+
+  * Backport patch to fix muted sound on login (LP: #2080604)
+
+ -- Alessandro Astone <alessandro.astone@canonical.com>  Thu, 26 Sep 2024 09:12:45 +0200
+
+pipewire (1.2.4-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #1081904)
+
+ -- Dylan Aïssi <daissi@debian.org>  Thu, 19 Sep 2024 17:54:25 +0200
 
 pipewire (1.2.3-1) unstable; urgency=medium
 

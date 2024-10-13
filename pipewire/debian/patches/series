@@ -1,2 +1,3 @@
 Don-t-automatically-start-pipewire-for-root-logins.patch
 Fix_services.patch
+acp-sync-the-mixer-after-selecting-the-port.patch

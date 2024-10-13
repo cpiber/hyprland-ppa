@@ -1,7 +1,8 @@
 Source: pipewire
 Section: libs
 Priority: optional
-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@alioth-lists.debian.net>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@alioth-lists.debian.net>
 Uploaders: Jeremy Bicha <jbicha@debian.org>,
            Dylan Aïssi <daissi@debian.org>
 Build-Depends: dpkg-dev (>= 1.22.5), debhelper-compat (= 13),
