@@ -1,3 +1,49 @@
+hyprland-unstable (0.44.1~1ppa1+git202410212017-9df0f0b6) noble; urgency=medium
+
+  * Update to main 9df0f0b6
+  * 9df0f0b6 renderer: fix floating window damage (#8182)
+  * 4093b993 input: add snapping to floating windows (#8088)
+  * 08cc063e monitor: avoid crash on released buffer in surf
+  * a17850e4 layersurface: fixup brace style
+  * 6a5c3420 layersurface: round geom in arrangeLayerArray
+  * f044e4c9 internal: Move CMonitor to SP (#8178)
+  * ce3ba798 defaultConfig: improve smart gaps
+  * 0eaf3581 window: guard PMONITOR in commit listener
+  * 62ee5cc2 monitor: modernize/refactor last legacy-handled events
+  * 48bf32c5 foreign-toplevel-wlr: don't send updates to X11 OR windows
+  * 904f9b6a foreign-toplevel: don't send updates to X11 OR windows
+  * e5d3a712 config: fix generateConfig loop (#8164)
+  * 0e630e9e session-lock: reset seat grab on a new session lock (#8147)
+  * 5f30cb77 windowrules: allow specifying max size in size window rule
+    (#8021)
+  * 495b92fb makefile: fix typo (#8127)
+  * b57086aa window: properly break cycles in X11TransientFor
+  * 09581d32 hyprpm: Fix crashes due to misplaced fmt argument(s)
+    (#8140)
+  * 86e9f69a layout: move applyGroupRules() to onWindowCreated() (#8139)
+  * 781828a5 output: send enter events on late wl_output binds
+  * 0baf166d [gha] Nix: update inputs
+  * ace80394 layout: enable group rules for new floating windows (#8122)
+  * 01c2ff34 layout: simplify the conditions to autogroup (#8120)
+  * 22b1370a IME: Fixup IME popup candidate windows position when scale
+    is not 1.0 (#8117)
+  * f309681d example: update desktop file to include DesktopNames
+  * ce625218 drm-lease: fix crashes and implementation (#8116)
+  * e7fd0f5a layout: deny auto-grouping a new floating window into a
+    tiled group (#8108)
+  * abfd550e xwm: avoid infinite parent lookup loop in
+    lookupParentExists
+  * 8e51a36c config/example: add optional smart gaps to the default
+    config
+  * 5c3bd8e9 notif-overlay: add a bit of padding for icons
+  * 05a5e0b4 hyprland: convert std::cout and std::cerr to std::println()
+  * b61d4c36 hyprctl: convert std::cout and std::cerr to std::println()
+  * e79d3cd2 hyprpm: convert std::cout and std::cerr to std::println()
+  * 1822707c drm-syncobj: fix crash on missing timelines
+  * c3f7c9bb xcursor: don't crash on broken permissions in X themes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 21 Oct 2024 20:17:44 +0200
+
 hyprland-unstable (0.44.1~1ppa1+git202410121229-ee8116ac.1) noble; urgency=medium
 
   * Add hyprpm global plugin patch

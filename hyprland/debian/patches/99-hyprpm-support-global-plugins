@@ -2,9 +2,11 @@ Description: Hyprpm: Support global plugins.
  Adds support for adding and enabling plugins provided by PPA.
 Author: Constantin Piber <cp.piber@gmail.com>
 
+Index: source/hyprpm/src/core/PluginManager.cpp
+===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -101,7 +101,9 @@ bool CPluginManager::createSafeDirectory
+@@ -105,7 +105,9 @@ bool CPluginManager::createSafeDirectory
  bool CPluginManager::addNewPluginRepo(const std::string& url, const std::string& rev) {
      const auto HLVER = getHyprlandVersion();
  
@@ -12,10 +14,10 @@ Author: Constantin Piber <cp.piber@gmail.com>
 +    const bool bIsGlobal = url.find('/') == std::string::npos && std::filesystem::exists(std::string{DATAROOTDIR "/hyprpm/"} + url);
 +
 +    if (!bIsGlobal && !hasDeps()) {
-         std::cerr << "\n" << Colors::RED << "✖" << Colors::RESET << " Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, meson, cpio\n";
+         std::println(stderr, "\n{}", failureString("Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, meson, cpio"));
          return false;
      }
-@@ -120,6 +122,13 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -125,6 +127,13 @@ bool CPluginManager::addNewPluginRepo(co
          DataState::updateGlobalState(GLOBALSTATE);
      }
  
@@ -29,7 +31,7 @@ Author: Constantin Piber <cp.piber@gmail.com>
      std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
                << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
                << " install random plugins without verifying the code and author.\n  "
-@@ -133,6 +142,20 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -138,6 +147,20 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
@@ -50,7 +52,7 @@ Author: Constantin Piber <cp.piber@gmail.com>
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -595,6 +618,48 @@ bool CPluginManager::updatePlugins(bool
+@@ -599,6 +622,49 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  
@@ -93,12 +95,15 @@ Author: Constantin Piber <cp.piber@gmail.com>
 +                p.enabled = OLDPLUGINIT != repo.plugins.end() ? OLDPLUGINIT->enabled : false;
 +            }
 +            DataState::addNewPluginRepo(newrepo);
++            progress.printMessageAbove(successString("updated {}", repo.name));
 +            continue;
 +        }
 +
-         progress.printMessageAbove(std::string{Colors::RESET} + " → checking for updates for " + repo.name);
+         progress.printMessageAbove(infoString("checking for updates for {}", repo.name));
  
          createSafeDirectory(m_szWorkingPluginDirectory);
+Index: source/hyprpm/CMakeLists.txt
+===================================================================
 --- source.orig/hyprpm/CMakeLists.txt
 +++ source/hyprpm/CMakeLists.txt
 @@ -15,6 +15,8 @@ add_executable(hyprpm ${SRCFILES})

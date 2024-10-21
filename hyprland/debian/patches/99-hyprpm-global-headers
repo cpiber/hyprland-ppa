@@ -3,9 +3,11 @@ Description: Find global headers
  a separate clone.
 Author: Constantin Piber <cp.piber@gmail.com>
 
---- hyprland-unstable-0.40.0~1ppa3+git202406050915.orig/hyprpm/src/core/PluginManager.cpp
-+++ hyprland-unstable-0.40.0~1ppa3+git202406050915/hyprpm/src/core/PluginManager.cpp
-@@ -349,6 +349,9 @@ bool CPluginManager::removePluginRepo(co
+Index: source/hyprpm/src/core/PluginManager.cpp
+===================================================================
+--- source.orig/hyprpm/src/core/PluginManager.cpp
++++ source/hyprpm/src/core/PluginManager.cpp
+@@ -349,6 +351,9 @@ bool CPluginManager::removePluginRepo(co
  eHeadersErrors CPluginManager::headersValid() {
      const auto HLVER = getHyprlandVersion();
  
@@ -15,18 +17,17 @@ Author: Constantin Piber <cp.piber@gmail.com>
      if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
          return HEADERS_MISSING;
  
-@@ -415,6 +415,13 @@ bool CPluginManager::updateHeaders(bool force) {
+@@ -421,6 +426,13 @@ bool CPluginManager::updateHeaders(bool
          std::filesystem::permissions("/tmp/hyprpm", std::filesystem::perms::all, std::filesystem::perm_options::replace);
      }
  
 +    if (headersValid() != HEADERS_OK) {
-+        std::cerr << "\n" << Colors::RED << "✖" << Colors::RESET << " Headers not okay. File a bug with https://github.com/cpiber/hyprland-ppa/ (not Hyprland)!\n";
++        std::println("\n{}", failureString("Headers not okay. File a bug with https://github.com/cpiber/hyprland-ppa/ (not Hyprland)!"));
 +        return false;
 +    }
-+    std::cout << "\n" << std::string{Colors::GREEN} + "✔" + Colors::RESET + " Headers up to date.\n";
++    std::println("\n{}", successString("Headers up to date."));
 +    return true;
 +
      if (!force && headersValid() == HEADERS_OK) {
-         std::cout << "\n" << std::string{Colors::GREEN} + "✔" + Colors::RESET + " Headers up to date.\n";
+         std::println("\n{}", successString("Headers up to date."));
          return true;
-
