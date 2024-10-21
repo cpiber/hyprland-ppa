@@ -15,7 +15,7 @@ case "$project" in
   hyprland|hyprland-plugins)
     type="main"
     ;;
-  waybar-unstable)
+  waybar-unstable|hyprscroller)
     type="master"
     ;;
   *)
@@ -48,7 +48,7 @@ dist="`dpkg-parsechangelog --show-field Distribution`"
 if [ "$type" != "tag" ]; then
   curver="`dpkg-parsechangelog --show-field Version | sed 's/+git.*//'`"
   curtag="`dpkg-parsechangelog --show-field Version | sed 's/~.*//'`"
-  [ "$curtag" = "$tag" ] || curver="$tag~1ppa1"
+  [ "$curtag" = "$tag" ] || [ "$tag" = "" ] || curver="$tag~1ppa1"
   newver="$curver+git`date "+%Y%m%d%H%M"`-$shorthead"
   dch -v "$newver" -D "$dist" "$@" "Update to $type $shorthead"
 else

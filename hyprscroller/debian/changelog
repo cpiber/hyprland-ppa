@@ -1,3 +1,22 @@
+hyprscroller (0.44.0~1ppa1+git202410212050-bbc8fc9) noble; urgency=medium
+
+  * Update to master bbc8fc9
+  * bbc8fc9 Update README with IPC integration in waybar
+  * 9df38ef commit pin
+  * 53b7149 Add hook to emit messages when changing focused monitor
+  * 0d15e0e commit pin
+  * 17fac7f Add hook to post messages when changing workspaces
+  * a08f814 commit pin
+  * ed2ca26 Typo in README.md table
+  * 5184d96 commit pin
+  * af6bd79 Add IPC messages: mode and overview
+  * 555d333 commit pin
+  * 7043b2a Forgot to remove pin when destroying column
+  * 1a69b28 commit pin
+  * c0c1906 Add scroller:pin/unpin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 21 Oct 2024 20:50:36 +0200
+
 hyprscroller (0.44.0~1ppa1+git202410132316-8422b77) noble; urgency=medium
 
   * Initial release.
