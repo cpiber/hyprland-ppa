@@ -12,7 +12,7 @@ project="$1"
 shift
 sourcefolder="$reporoot/$project/source"
 case "$project" in
-  hyprland)
+  hyprland|hyprland-plugins)
     type="main"
     ;;
   waybar-unstable)
