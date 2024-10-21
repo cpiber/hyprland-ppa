@@ -1,3 +1,31 @@
+hypridle (0.1.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.3
+  * 918fd78 version: bump to 0.1.3
+  * 0ed59e8 core: release inhibit cookies on app disconnect from dbus
+    (#93)
+  * cc23f97 core: Do not crash if the last CLI parameter was -c (#92)
+  * 22b058b nix: add wayland-scanner native build input
+  * a46cd0b logs: Flush buffer automatically (#88)
+  * 01a63fc misc: Include Log.hpp in main (#87)
+  * 96d51ec CMake: typo fix hyprlock->hypridle (#82)
+  * f84c2d7 assets: add example.conf
+  * e5366d3 core: Fix running without logind (#76)
+  * 9163a9f flake.lock: update
+  * ee6ca4d CMake: fmt
+  * 2d774e6 CMake, Nix: add VERSION file
+  * fc4e3bd Config: use hyprutils helper (#77)
+  * 7c5747b core: re-register all notifications when idled and inhibit
+    was released (#72)
+  * cb169c4 nix/hm-module: remove
+  * afa6e21 README: Fixed getconf command in build instructions (#60)
+  * a7a6b8f dbus: Separate `ignore_systemd_inhibit` config param,
+    register ScreenSaver objects separately (#59)
+  * 50da2e7 core: Add support for systemd-logind idle block inhibits
+    (#57)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 21 Oct 2024 20:15:00 +0200
+
 hypridle (0.1.2-1ppa1) noble; urgency=medium
 
   * Initial release. Follows release 0.1.2.

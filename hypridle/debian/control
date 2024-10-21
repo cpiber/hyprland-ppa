@@ -11,6 +11,7 @@ Build-Depends:
  wayland-protocols,
  libsdbus-c++-dev,
  hyprlang-dev,
+ hyprutils-dev (>= 0.2.0),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/hypridle
