@@ -1,3 +1,43 @@
+hyprlock (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * a093a9e version: bump to 0.5.0
+  * f48540f auth: Support parallel fingerprint auth (#514)
+  * b808086 renderer: log framebuffer creation as trace (#518)
+  * 1169452 README: update deps
+  * 5065788 misc: use Vector2D, Box and Mat3x3 from hyprutils (#515)
+  * 71021cc input-field: add dots_text_format to support setting
+    arbitrary chars as the input indicator (#510)
+  * 7362ce3 misc: use hyprutils for string replaceAll (#512)
+  * 264fb8b config: add input-field dots_fade_time option (#508)
+  * eb63207 core: make attemptRestoreOnDeath faster and hyprland
+    exclusive (#506)
+  * d9c2a5e widgets: add 12h time format (#500)
+  * 9ea8047 core: set capslock and numlock states on startup (#496)
+  * 153977a asyncResourceGatherer: stop worker threads when application
+    is going to exit (#481)
+  * 0b030d3 asyncResourceGatherer: do not detach worker threads (#477)
+  * 73b0fc2 nix: add wayland-scanner native build input
+  * cc71c0b core: fix symlinked images not picking up extension (#473)
+  * 9c1e9e7 core: support desc: prefix for widget monitor options (#470)
+  * a0af542 input-field: refactor updateColors and other improvements
+    (#469)
+  * 7bb4113 core: fix crash caused by exiting without joining running
+    thread (#464)
+  * f673759 lockSurface: fix dynamic output mode and scale updates
+    (#462)
+  * 9393a3e core: add fractional_scaling option (#456)
+  * 8cffe06 fix alignment in help message
+  * 5d85ea0 renderer: add --no-fade-in (#453)
+  * c7fa502 assets: add example.conf
+  * 8a89181 auth: use pam_faillock log as $FAIL (#447)
+  * 5e8f12c core: minor refactor of command line options parsing (#441)
+  * cf0e975 widgets: move asset updates out of the draw function (#442)
+  * 3e71799 misc: add issue templates (#440)
+  * 58e1a4a core: add --version
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Oct 2024 09:51:08 +0200
+
 hyprlock (0.4.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.1
