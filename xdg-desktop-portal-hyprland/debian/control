@@ -16,7 +16,7 @@ Build-Depends:
  libspa-0.2-dev,
  libdrm-dev,
  libgbm-dev,
- libsdbus-c++-dev,
+ libsdbus-c++-dev (>= 2.0.0),
  hyprlang-dev (>= 0.2.0),
  hyprutils-dev,
  hyprwayland-scanner (>= 0.4.2),
