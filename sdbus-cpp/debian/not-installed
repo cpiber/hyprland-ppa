@@ -1,0 +1,3 @@
+etc/dbus-1
+opt/test/bin
+usr/tests/sdbus-c++

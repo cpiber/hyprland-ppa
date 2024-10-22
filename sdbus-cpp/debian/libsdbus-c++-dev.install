@@ -1,0 +1,4 @@
+usr/include
+usr/lib/*/cmake
+usr/lib/*/libsdbus-c++.so
+usr/lib/*/pkgconfig

@@ -1,0 +1,79 @@
+Source: sdbus-cpp
+Section: libdevel
+Priority: optional
+Maintainer: Shengjing Zhu <zhsj@debian.org>
+Rules-Requires-Root: no
+Build-Depends:
+ cmake,
+ dbus-daemon <!nocheck>,
+ debhelper-compat (= 13),
+ libexpat1-dev,
+ libgmock-dev (>= 1.10.0~) <!nocheck>,
+ libsystemd-dev,
+ pkg-config,
+Build-Depends-Indep:
+ doxygen <!nodoc>,
+ graphviz <!nodoc>,
+Standards-Version: 4.6.2
+Homepage: https://github.com/Kistler-Group/sdbus-cpp
+Vcs-Git: https://salsa.debian.org/zhsj/sdbus-cpp.git
+Vcs-Browser: https://salsa.debian.org/zhsj/sdbus-cpp
+
+Package: libsdbus-c++-bin
+Section: utils
+Architecture: linux-any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: High-level C++ D-Bus library for Linux in modern C++ (utilities)
+ sdbus-c++ is a high-level C++ D-Bus library for Linux designed to provide
+ expressive, easy-to-use API in modern C++. It adds another layer of
+ abstraction on top of sd-bus, a nice, fresh C D-Bus implementation by systemd.
+ .
+ This package contains binary utilities.
+
+Package: libsdbus-c++-dev
+Architecture: linux-any
+Multi-Arch: same
+Depends:
+ libsdbus-c++1 (= ${binary:Version}),
+ libsystemd-dev,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ libsdbus-c++-bin,
+Description: High-level C++ D-Bus library for Linux in modern C++ (development files)
+ sdbus-c++ is a high-level C++ D-Bus library for Linux designed to provide
+ expressive, easy-to-use API in modern C++. It adds another layer of
+ abstraction on top of sd-bus, a nice, fresh C D-Bus implementation by systemd.
+ .
+ This package contains development files.
+
+Package: libsdbus-c++-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Build-Profiles: <!nodoc>
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: High-level C++ D-Bus library for Linux in modern C++ (documentation)
+ sdbus-c++ is a high-level C++ D-Bus library for Linux designed to provide
+ expressive, easy-to-use API in modern C++. It adds another layer of
+ abstraction on top of sd-bus, a nice, fresh C D-Bus implementation by systemd.
+ .
+ This package contains documentation.
+
+Package: libsdbus-c++1
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: High-level C++ D-Bus library for Linux in modern C++ (library)
+ sdbus-c++ is a high-level C++ D-Bus library for Linux designed to provide
+ expressive, easy-to-use API in modern C++. It adds another layer of
+ abstraction on top of sd-bus, a nice, fresh C D-Bus implementation by systemd.
+ .
+ This package contains library.

@@ -1,0 +1,108 @@
+sdbus-cpp (2.0.0-1ppa1) noble; urgency=medium
+
+  * Update to 2.0.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Oct 2024 09:10:11 +0200
+
+sdbus-cpp (1.4.0-2) unstable; urgency=medium
+
+  * Cherry pick upstream patch to fix resolving libsystemd dependency with
+    pkgconfig (Closes: #1059422)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 30 Dec 2023 05:00:40 +0800
+
+sdbus-cpp (1.4.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * skip GetMachineId test when /etc/machine-id doesn't exist
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 06 Nov 2023 21:51:25 +0800
+
+sdbus-cpp (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Revert "Backport patch to fix test with libsystemd v251"
+  * Depends on libsystemd-dev for libsdbus-c++-dev (Closes: #1053683)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 09 Oct 2023 17:01:32 +0800
+
+sdbus-cpp (1.2.0-2) unstable; urgency=medium
+
+  * Replace dbus with dbus-daemon in Build-Depends
+  * Backport patch to fix test with libsystemd v251 (Closes: #1022384)
+  * Update Standards-Version to 4.6.2 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 03 Jan 2023 23:19:19 +0800
+
+sdbus-cpp (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Standards-Version to 4.6.1 (no changes)
+  * Drop patch applied in new version
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 20 Aug 2022 15:35:03 +0800
+
+sdbus-cpp (1.1.0-3) unstable; urgency=medium
+
+  * Link libatomic on armel mipsel and powerpc
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 10 Feb 2022 03:25:25 +0800
+
+sdbus-cpp (1.1.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 09 Feb 2022 23:27:21 +0800
+
+sdbus-cpp (1.1.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump SO version to 1
+  * Backport patch to fix building with googletest 1.11.0
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 06 Feb 2022 23:05:41 +0800
+
+sdbus-cpp (0.8.3-5) unstable; urgency=medium
+
+  [ Luca Boccassi ]
+  * Mark d/rules as executable
+    'dpkg-buildpackage: warning: debian/rules is not executable; fixing that'
+  * Enable Multiarch support (Closes: #983335)
+  * libsdbus-c++-dev: downgrade Depends on libsdbus-c++-bin to Suggests.
+    It is not actually necessary to use the library headers and link against
+    the shared object, it's a useful development tool. A Suggests is enough
+    and doesn't have side effects on Multiarch installations.
+
+  [ Shengjing Zhu ]
+  * Add nodoc Build-Profiles
+  * Add nocheck Build-Profile
+  * Update Standards-Version to 4.6.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 01 Sep 2021 03:13:23 +0800
+
+sdbus-cpp (0.8.3-4) unstable; urgency=medium
+
+  [ Luca Boccassi ]
+  * Restrict googletest dependency to >= 1.10.0~
+    The build fails with googletest 1.8.1 (buster) so document the
+    minimum required version.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 19 Feb 2021 03:25:32 +0800
+
+sdbus-cpp (0.8.3-3) unstable; urgency=medium
+
+  * Miss dependencies on libsdbus-c++-dev package
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 11 Jan 2021 12:15:10 +0800
+
+sdbus-cpp (0.8.3-2) unstable; urgency=medium
+
+  * Source-only upload for testing migration.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 11 Jan 2021 10:05:21 +0800
+
+sdbus-cpp (0.8.3-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 25 Dec 2020 01:37:14 +0800

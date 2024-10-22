@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+  ENABLE_TESTS=ON
+else
+  ENABLE_TESTS=OFF
+endif
+
+ifneq (,$(filter $(DEB_HOST_ARCH), armel mipsel powerpc))
+  export DEB_LDFLAGS_MAINT_APPEND += -Wl,--no-as-needed -latomic -Wl,--as-needed
+endif
+
+%:
+	dh $@
+
+override_dh_auto_configure-arch:
+	dh_auto_configure -- -DSDBUSCPP_BUILD_CODEGEN=ON -DSDBUSCPP_BUILD_TESTS=$(ENABLE_TESTS)
+
+override_dh_auto_configure-indep:
+	dh_auto_configure -- -DSDBUSCPP_BUILD_DOXYGEN_DOCS=ON
+
+override_dh_auto_test-arch:
+	-kill -9 $$(cat /tmp/sdbuscpp.pid)
+	-rm -v /tmp/dbus.conf /tmp/sdbuscpp_bus /tmp/sdbuscpp.pid
+
+	sed 's|CURDIR|$(CURDIR)|g' debian/dbus.conf.tpl > /tmp/dbus.conf
+	dbus-daemon --config-file /tmp/dbus.conf --fork
+
+	DBUS_SYSTEM_BUS_ADDRESS=unix:path=/tmp/sdbuscpp_bus dh_auto_test --no-parallel
+
+	-kill -9 $$(cat /tmp/sdbuscpp.pid)
+	-rm -v /tmp/dbus.conf /tmp/sdbuscpp_bus /tmp/sdbuscpp.pid
+
+override_dh_auto_build-indep:
+	dh_auto_build -- doc
+
+override_dh_auto_install-indep:
+	dh_auto_install -- -C docs
+
+override_dh_auto_test-indep:
