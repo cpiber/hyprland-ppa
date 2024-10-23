@@ -1,3 +1,14 @@
+hyprland-unstable (0.44.1~1ppa1+git202410231825-6e0aadc5) noble; urgency=medium
+
+  * Update to main 6e0aadc5
+  * 6e0aadc5 updated flake.lock
+  * 2b6ff683 groups: add group_on_movetoworkspace (#8159)
+  * 29997ef4 default/config: improve default animations
+  * 5e96d738 hyprpm: Add option to notify on fail and keep original
+    notify (#8167)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 23 Oct 2024 18:25:51 +0200
+
 hyprland-unstable (0.44.1~1ppa1+git202410212017-9df0f0b6) noble; urgency=medium
 
   * Update to main 9df0f0b6
