@@ -65,3 +65,16 @@ Index: source/src/scroller.cpp
          // for gaps outer
          static auto PGAPSINDATA = CConfigValue<Hyprlang::CUSTOMTYPE>("general:gaps_in");
          static auto PGAPSOUTDATA = CConfigValue<Hyprlang::CUSTOMTYPE>("general:gaps_out");
+Index: source/src/main.cpp
+===================================================================
+--- source.orig/src/main.cpp
++++ source/src/main.cpp
+@@ -41,7 +41,7 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+     static auto P2 = HyprlandAPI::registerCallbackDynamic(PHANDLE, "focusedMon", [](void* self, SCallbackInfo& info, std::any param) {
+         if (!g_ScrollerLayout)
+             return;
+-        auto monitor = std::any_cast<CMonitor *>(param);
++        auto monitor = std::any_cast<PHLMONITOR>(param);
+         g_ScrollerLayout->post_event(monitor->activeWorkspaceID(), "mode");
+         g_ScrollerLayout->post_event(monitor->activeWorkspaceID(), "overview");
+     });
