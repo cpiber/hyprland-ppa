@@ -1,3 +1,11 @@
+hypridle (0.1.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.4
+  * af2d65d version: update to 0.1.4
+  * 127317f core: move to sdbus-cpp2 (#96)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 23 Oct 2024 08:23:36 +0200
+
 hypridle (0.1.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.3
