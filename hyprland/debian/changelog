@@ -1,3 +1,26 @@
+hyprland-unstable (0.44.1~1ppa1+git202410271943-b6e226c3) noble; urgency=medium
+
+  * Update to main b6e226c3
+  * b6e226c3 groupbar: set locked color when groups are globally locked
+    (#8257)
+  * f9b52203 internal: optimize cursor move a bit (#8264)
+  * a3d3b4fd groups: fix swallowing (#8223)
+  * f3f7d362 Build with hyprland-session.service (#8251)
+  * c356e425 misc: Fix bad links to wiki (#8240)
+  * 0b29caf9 core: fix group members disappearing when you move the
+    group to another monitor (#8237)
+  * 3dd8db83 pointer: add default auto for no_hw_cursors
+  * d5689bb5 internal: cleanup CMonitor usage and fix a few ref hogs
+  * e5384774 example/hyprland-session.service: add support for xdg
+    autostart (#8230)
+  * f0e023bf security-context: avoid UB in C macro (#8229)
+  * 3cec45d8 Improve hyprland-session.service (#8225)
+  * 7f46680a hyprctl: add caps/num lock state for keyboards (#8145)
+  * f603a22a internal: Remove some unused lambda captures (#8218)
+  * cdac6497 Makefile: fix legacyrendererdebug typo (#8214)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 27 Oct 2024 19:43:52 +0100
+
 hyprland-unstable (0.44.1~1ppa1+git202410231825-6e0aadc5) noble; urgency=medium
 
   * Update to main 6e0aadc5
