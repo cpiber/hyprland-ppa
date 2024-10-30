@@ -1,3 +1,20 @@
+hyprland-unstable (0.44.1~1ppa1+git202410301603-5f721dce) noble; urgency=medium
+
+  * Update to main 5f721dce
+  * 5f721dce group: fix moveWindowIntoGroup (#8297)
+  * d679d200 seat: avoid sending pointless 'keymap' and 'repeat_info'
+    events (#8276)
+  * 7188ee4f hyprctl: move setprop into dispatchers (#8275)
+  * c7315617 internal: few more marginal optimisations from profiling
+    (#8271)
+  * d49a1334 swallow: check if swallow_regex doesn't exist (#8265)
+  * 2c481202 layout: slight adjustments to snapping logic (#8273)
+  * 6cf193e1 layout: don't snap to self and allow same-pid snaps
+  * b1120ec4 layout: window snapping cleanup + fixes
+  * 5d4b54b0 core: move internal structures to monitor pointers (#8266)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Oct 2024 16:03:26 +0100
+
 hyprland-unstable (0.44.1~1ppa1+git202410271943-b6e226c3) noble; urgency=medium
 
   * Update to main b6e226c3
