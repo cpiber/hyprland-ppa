@@ -18,7 +18,7 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- hyprland-unstable (= 0.44.1~1ppa1+git202410271943-b6e226c3),
+ hyprland-unstable (= 0.44.1~1ppa1+git202410301603-5f721dce),
 Description: Hyprscroller creates a window layout similar to PaperWM.
  Hyprscroller is a Hyprland layout plugin that creates a window layout similar to PaperWM.
  .
