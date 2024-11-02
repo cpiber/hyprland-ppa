@@ -1,3 +1,15 @@
+hyprscroller (0.44.0~1ppa1+git202411021701-f87ffaf) noble; urgency=medium
+
+  * Update to master f87ffaf
+  * f87ffaf commit pin
+  * 0ecdaaa Remove old, disabled dispatcher
+  * 12df89a Update TUTORIAL.md
+  * 306de28 Add TUTORIAL
+  * f8bfda2 commit pin
+  * af5cebc Support default movefocus and movewindow
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 02 Nov 2024 17:01:51 +0100
+
 hyprscroller (0.44.0~1ppa1+git202410301613-ed725c5.1) noble; urgency=medium
 
   * Rebuild
