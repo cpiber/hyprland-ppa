@@ -1,3 +1,9 @@
+hyprland-plugins (0.44.0~1ppa1+git202411021658-60c5c63.1) noble; urgency=medium
+
+  * Patch
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 02 Nov 2024 22:06:30 +0100
+
 hyprland-plugins (0.44.0~1ppa1+git202411021658-60c5c63) noble; urgency=medium
 
   * Update to main 60c5c63
