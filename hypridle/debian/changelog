@@ -1,3 +1,11 @@
+hypridle (0.1.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.5
+  * 26780ac version: bump to 0.1.5
+  * 4d2fb9e core: handleDbusScreensaver must return uint32 (#98)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 02 Nov 2024 16:45:40 +0100
+
 hypridle (0.1.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.4
