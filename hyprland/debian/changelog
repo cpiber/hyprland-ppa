@@ -1,3 +1,24 @@
+hyprland-unstable (0.44.1~1ppa1+git202411021650-40081cb3) noble; urgency=medium
+
+  * Update to main 40081cb3
+  * 40081cb3 renderer: improve api around new framebuffer changes
+  * 32b18179 CMake: systemd fixes
+  * 29e7dc64 Systemd fixes
+  * 3c0605c6 hyprland-systemd.desktop improvements (#8318)
+  * d8b86536 renderer: Add a missing texture asset and a user check
+  * 3852418d hyprctl: reload windowrules on reloadAll
+  * c4d214c4 monitors: fix vrr breaking monitor disconnect (#8314)
+  * 93b4478e snap: add option `border_overlap` and other improvements
+    (#8289)
+  * 7c7a84ff internal: more profiling less calls and local copies
+    (#8300)
+  * a0b2169e input: revert #8279
+  * ee91df62 input: simulate mouse movement after scroll to refocus
+    window (#8279)
+  * 12c1bb93 internal: check size limit in layouts (#8298)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 02 Nov 2024 16:50:00 +0100
+
 hyprland-unstable (0.44.1~1ppa1+git202410301603-5f721dce) noble; urgency=medium
 
   * Update to main 5f721dce
