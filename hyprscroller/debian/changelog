@@ -1,3 +1,16 @@
+hyprscroller (0.44.0~1ppa1+git202411042226-5fdd89d) noble; urgency=medium
+
+  * Update to master 5fdd89d
+  * 5fdd89d commit pin
+  * c151896 Fix special workspace issues
+  * 62b7c6a commit pin
+  * d59efa5 Reset window data to general options when added to layout
+  * 30e4845 Add fullscreen mode to TUTORIAL.md
+  * d3b4ac0 commit pin
+  * b512d03 Much needed fullscreen mode rework
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 04 Nov 2024 22:26:07 +0100
+
 hyprscroller (0.44.0~1ppa1+git202411021701-f87ffaf) noble; urgency=medium
 
   * Update to master f87ffaf
