@@ -1,3 +1,10 @@
+hyprland-plugins (0.44.0~1ppa1+git202411042221-c347d8a) noble; urgency=medium
+
+  * Update to main c347d8a
+  * c347d8a all: chase hyprland fixes (#238)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 04 Nov 2024 22:21:18 +0100
+
 hyprland-plugins (0.44.0~1ppa1+git202411021658-60c5c63.1) noble; urgency=medium
 
   * Patch
