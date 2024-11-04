@@ -1,3 +1,17 @@
+hyprland-unstable (0.44.1~1ppa1+git202411042216-88e9e039) noble; urgency=medium
+
+  * Update to main 88e9e039
+  * 88e9e039 renderer: add expand_undersized_textures
+  * 0fb9a045 flake.lock: update xdph
+  * 44899cd5 nix/overlays: fix xdph overlay
+  * cd0d0491 flake.lock: update xdph
+  * 180c26ad renderer: safeguard against non-sampleable currentFB in
+    blurMainFb
+  * 5833abbb xwayland: minor fixups for stability (#8323)
+  * 514e0ff5 flake: update nixpkgs
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 04 Nov 2024 22:16:18 +0100
+
 hyprland-unstable (0.44.1~1ppa1+git202411021650-40081cb3) noble; urgency=medium
 
   * Update to main 40081cb3
