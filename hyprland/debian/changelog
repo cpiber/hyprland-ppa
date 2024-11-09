@@ -1,3 +1,34 @@
+hyprland-unstable (0.44.1~1ppa1+git202411090844-cca227a5) noble; urgency=medium
+
+  * Update to main cca227a5
+  * cca227a5 tablet: use inputMgr unified naming scheme
+  * b9c439a5 compositor: make sure we don't ret early on no surface
+  * 726d6978 popup: minor cleanups
+  * 0ccc0ace input: ignore non-kb ls-es in refocusLastWindow
+  * f43d4a86 layershell: minor cleanups and improvements to focus
+  * 4c7a2faf input: cleanup device naming logic
+  * 3b66351e input: Refocus window on scrolling if follows mouse (#8361)
+  * e58e97b0 Nix: build aquamarine and hyprutils in debug when using
+    hyprland-debug
+  * 2dd0b2af flake.lock: update
+  * 2ec2b3bf renderer: minor fixup to window rendering logic (#8359)
+  * 0ec128e5 renderer: don't rely on datarootdir for local share
+  * 083a5cf3 CI: update actions
+  * 8f42401a groups: add merge_groups_on_groupbar (#8362)
+  * 97a309b7 layershell: check if workspace is valid in onMap
+  * 3bf6f78d hyprland-systemd.desktop: change name back to Hyprland
+    (#8351)
+  * e4ab28b1 defaultConfig: update default config values for shadows
+    (#8360)
+  * 81ad218b shadow: fix double premultiplication
+  * 64c46db0 hyprctl: add mirrorOf to hyprctl monitors
+  * 0920572e shaders: improve corner AA in borders shader
+  * 55ccb1a8 shaders: fixup jagged edges in texture rounded corners
+  * d1638a09 shadow: add sharp and refactor options
+  * e3882b23 screencopy: fix build with legacyrenderer
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 Nov 2024 08:44:37 +0100
+
 hyprland-unstable (0.44.1~1ppa1+git202411042216-88e9e039) noble; urgency=medium
 
   * Update to main 88e9e039
