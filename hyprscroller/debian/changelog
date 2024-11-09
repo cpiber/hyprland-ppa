@@ -1,3 +1,18 @@
+hyprscroller (0.44.0~1ppa1+git202411090855-3c586e8) noble; urgency=medium
+
+  * Update to master 3c586e8
+  * 3c586e8 commit pin
+  * 599f32b Rework overview mode for added functionality
+  * 4cfaebd Small fix for hyprland-git
+  * f94203b Merge pull request #59 from cpiber/cmonitor
+  * 72d11a1 commit pin
+  * ab7cde8 Fix removing floating windows coming from special workspace
+  * 6cc122a Update for internal monitor
+  * 81af2c5 fix: hook should cast correctly
+  * 37682e4 Use PHLMONITOR monicker for CMonitor*
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 Nov 2024 08:55:53 +0100
+
 hyprscroller (0.44.0~1ppa1+git202411042226-5fdd89d) noble; urgency=medium
 
   * Update to master 5fdd89d
