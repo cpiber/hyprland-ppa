@@ -1,3 +1,10 @@
+hyprland-plugins (0.44.0~1ppa1+git202411090850-44859f8) noble; urgency=medium
+
+  * Update to main 44859f8
+  * 44859f8 expo: fix crash
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 Nov 2024 08:50:21 +0100
+
 hyprland-plugins (0.44.0~1ppa1+git202411042221-c347d8a) noble; urgency=medium
 
   * Update to main c347d8a
