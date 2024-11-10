@@ -7,3 +7,4 @@ usr/share/wayland-sessions/*
 usr/share/bash-completion/*
 usr/share/fish/*
 usr/share/zsh/*
+usr/lib/x86_64-linux-gnu/systemd/user/*.service

@@ -1,3 +1,171 @@
+hyprland (0.45.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.45.0
+  * a425fbeb version: bump to 0.45.0
+  * cca227a5 tablet: use inputMgr unified naming scheme
+  * b9c439a5 compositor: make sure we don't ret early on no surface
+  * 726d6978 popup: minor cleanups
+  * 0ccc0ace input: ignore non-kb ls-es in refocusLastWindow
+  * f43d4a86 layershell: minor cleanups and improvements to focus
+  * 4c7a2faf input: cleanup device naming logic
+  * 3b66351e input: Refocus window on scrolling if follows mouse (#8361)
+  * e58e97b0 Nix: build aquamarine and hyprutils in debug when using
+    hyprland-debug
+  * 2dd0b2af flake.lock: update
+  * 2ec2b3bf renderer: minor fixup to window rendering logic (#8359)
+  * 0ec128e5 renderer: don't rely on datarootdir for local share
+  * 083a5cf3 CI: update actions
+  * 8f42401a groups: add merge_groups_on_groupbar (#8362)
+  * 97a309b7 layershell: check if workspace is valid in onMap
+  * 3bf6f78d hyprland-systemd.desktop: change name back to Hyprland
+    (#8351)
+  * e4ab28b1 defaultConfig: update default config values for shadows
+    (#8360)
+  * 81ad218b shadow: fix double premultiplication
+  * 64c46db0 hyprctl: add mirrorOf to hyprctl monitors
+  * 0920572e shaders: improve corner AA in borders shader
+  * 55ccb1a8 shaders: fixup jagged edges in texture rounded corners
+  * d1638a09 shadow: add sharp and refactor options
+  * e3882b23 screencopy: fix build with legacyrenderer
+  * 88e9e039 renderer: add expand_undersized_textures
+  * 0fb9a045 flake.lock: update xdph
+  * 44899cd5 nix/overlays: fix xdph overlay
+  * cd0d0491 flake.lock: update xdph
+  * 180c26ad renderer: safeguard against non-sampleable currentFB in
+    blurMainFb
+  * 5833abbb xwayland: minor fixups for stability (#8323)
+  * 514e0ff5 flake: update nixpkgs
+  * 40081cb3 renderer: improve api around new framebuffer changes
+  * 32b18179 CMake: systemd fixes
+  * 29e7dc64 Systemd fixes
+  * 3c0605c6 hyprland-systemd.desktop improvements (#8318)
+  * d8b86536 renderer: Add a missing texture asset and a user check
+  * 3852418d hyprctl: reload windowrules on reloadAll
+  * c4d214c4 monitors: fix vrr breaking monitor disconnect (#8314)
+  * 93b4478e snap: add option `border_overlap` and other improvements
+    (#8289)
+  * 7c7a84ff internal: more profiling less calls and local copies
+    (#8300)
+  * a0b2169e input: revert #8279
+  * ee91df62 input: simulate mouse movement after scroll to refocus
+    window (#8279)
+  * 12c1bb93 internal: check size limit in layouts (#8298)
+  * 5f721dce group: fix moveWindowIntoGroup (#8297)
+  * d679d200 seat: avoid sending pointless 'keymap' and 'repeat_info'
+    events (#8276)
+  * 7188ee4f hyprctl: move setprop into dispatchers (#8275)
+  * c7315617 internal: few more marginal optimisations from profiling
+    (#8271)
+  * d49a1334 swallow: check if swallow_regex doesn't exist (#8265)
+  * 2c481202 layout: slight adjustments to snapping logic (#8273)
+  * 6cf193e1 layout: don't snap to self and allow same-pid snaps
+  * b1120ec4 layout: window snapping cleanup + fixes
+  * 5d4b54b0 core: move internal structures to monitor pointers (#8266)
+  * b6e226c3 groupbar: set locked color when groups are globally locked
+    (#8257)
+  * f9b52203 internal: optimize cursor move a bit (#8264)
+  * a3d3b4fd groups: fix swallowing (#8223)
+  * f3f7d362 Build with hyprland-session.service (#8251)
+  * c356e425 misc: Fix bad links to wiki (#8240)
+  * 0b29caf9 core: fix group members disappearing when you move the
+    group to another monitor (#8237)
+  * 3dd8db83 pointer: add default auto for no_hw_cursors
+  * d5689bb5 internal: cleanup CMonitor usage and fix a few ref hogs
+  * e5384774 example/hyprland-session.service: add support for xdg
+    autostart (#8230)
+  * f0e023bf security-context: avoid UB in C macro (#8229)
+  * 3cec45d8 Improve hyprland-session.service (#8225)
+  * 7f46680a hyprctl: add caps/num lock state for keyboards (#8145)
+  * f603a22a internal: Remove some unused lambda captures (#8218)
+  * cdac6497 Makefile: fix legacyrendererdebug typo (#8214)
+  * 6e0aadc5 updated flake.lock
+  * 2b6ff683 groups: add group_on_movetoworkspace (#8159)
+  * 29997ef4 default/config: improve default animations
+  * 5e96d738 hyprpm: Add option to notify on fail and keep original
+    notify (#8167)
+  * 9df0f0b6 renderer: fix floating window damage (#8182)
+  * 4093b993 input: add snapping to floating windows (#8088)
+  * 08cc063e monitor: avoid crash on released buffer in surf
+  * a17850e4 layersurface: fixup brace style
+  * 6a5c3420 layersurface: round geom in arrangeLayerArray
+  * f044e4c9 internal: Move CMonitor to SP (#8178)
+  * ce3ba798 defaultConfig: improve smart gaps
+  * 0eaf3581 window: guard PMONITOR in commit listener
+  * 62ee5cc2 monitor: modernize/refactor last legacy-handled events
+  * 48bf32c5 foreign-toplevel-wlr: don't send updates to X11 OR windows
+  * 904f9b6a foreign-toplevel: don't send updates to X11 OR windows
+  * e5d3a712 config: fix generateConfig loop (#8164)
+  * 0e630e9e session-lock: reset seat grab on a new session lock (#8147)
+  * 5f30cb77 windowrules: allow specifying max size in size window rule
+    (#8021)
+  * 495b92fb makefile: fix typo (#8127)
+  * b57086aa window: properly break cycles in X11TransientFor
+  * 09581d32 hyprpm: Fix crashes due to misplaced fmt argument(s)
+    (#8140)
+  * 86e9f69a layout: move applyGroupRules() to onWindowCreated() (#8139)
+  * 781828a5 output: send enter events on late wl_output binds
+  * 0baf166d [gha] Nix: update inputs
+  * ace80394 layout: enable group rules for new floating windows (#8122)
+  * 01c2ff34 layout: simplify the conditions to autogroup (#8120)
+  * 22b1370a IME: Fixup IME popup candidate windows position when scale
+    is not 1.0 (#8117)
+  * f309681d example: update desktop file to include DesktopNames
+  * ce625218 drm-lease: fix crashes and implementation (#8116)
+  * e7fd0f5a layout: deny auto-grouping a new floating window into a
+    tiled group (#8108)
+  * abfd550e xwm: avoid infinite parent lookup loop in
+    lookupParentExists
+  * 8e51a36c config/example: add optional smart gaps to the default
+    config
+  * 5c3bd8e9 notif-overlay: add a bit of padding for icons
+  * 05a5e0b4 hyprland: convert std::cout and std::cerr to std::println()
+  * b61d4c36 hyprctl: convert std::cout and std::cerr to std::println()
+  * e79d3cd2 hyprpm: convert std::cout and std::cerr to std::println()
+  * 1822707c drm-syncobj: fix crash on missing timelines
+  * c3f7c9bb xcursor: don't crash on broken permissions in X themes
+  * ee8116ac input: Fix VRR for constrained cursors (#6877)
+  * f5db4839 drm-timeline: Add check for conflicting acquire and release
+    points (#8083)
+  * 7564b26b internal: improve version query and define HYPRLAND_VERSION
+    (#8034)
+  * 178a300e xwayland: minor cleanups and fixes (#8076)
+  * d655a103 config/layout: nuke no_gaps_when_only (#8072)
+  * b65773be hyprpm: disallow shallow on unknown branch
+  * c4eb1940 gammactrl: guard pMonitor in setGamma
+  * 6ae89940 layout: add merge_floated_into_tiled_on_groupbar (#8042)
+  * 3d28879c hyprerror: fix height calc with bottom bar (#8043)
+  * 223dcc8b output: update state even if no owner exists (#8044)
+  * 6ce07ee8 CI/release: remove script backup line
+  * bc299928 output/xdg-output: avoid sending events to released globals
+  * ac658500 keyboard: update group state on change for the sym resolve
+    state
+  * 8cced091 renderer: reserve space for error at the bottom if that's
+    set
+  * 91299f70 hyprerror: make hyprerror reserve space (#8040)
+  * 60308a2b defaultConfig: add a nofocus rule for weird X windows
+  * 613eac46 layout: remove unnecessary check after 45e8219 (#8037)
+  * e4a26f4f dispatchers: allow leading whitespace in window parameter
+    (#8016)
+  * 57b632ea pointer: expand sw cursor damage box
+  * 1bf63dfd protocols: Add support for hyprland-ctm-control-v1 (#8023)
+  * e0cfbec6 keybinds: fixup xkb_states for resolve_by_sym
+  * b3a7e310 misc: refactor version command (#8027)
+  * 45e82199 layout: add drag_into_group to control merging dragging
+    windows (#8004)
+  * 4711796d config: give simple help for super+q not working
+  * 0d70c442 screencopy: fix screencopy frames not being cleaned up
+    (#8017)
+  * a364df4c internal: use clampWindowSize to unify min/maxsize handling
+    (#8014)
+  * 46d990f1 feat: add a custom made treewide formatter (#7992)
+  * 5bf7b1e1 flake.nix: add xdph follows
+  * 97444ed7 layout: fix auto group when opening a new window in a non-
+    focused workspace using window rules (#8006)
+  * 4e41cda2 security-context: close client fds after disconnect
+  * da86aac0 security-context: implement protocol
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 10 Nov 2024 09:19:50 +0100
+
 hyprland (0.44.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.44.1
