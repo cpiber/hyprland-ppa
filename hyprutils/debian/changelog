@@ -1,3 +1,14 @@
+hyprutils (0.2.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.4
+  * 60d3dec version: bump to 0.2.4
+  * 3ce0cde nix: add debug flag
+  * fd4be8b os: Add process
+  * 3f52934 tests: enhance memory + format
+  * db95628 mat3x3: fix comment
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 10 Nov 2024 09:29:13 +0100
+
 hyprutils (0.2.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.3
