@@ -1,3 +1,15 @@
+aquamarine (0.4.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.4
+  * f5ed91d version: bump to 0.4.4
+  * a49bc35 nix: add stdenvAdapters
+  * 8d732fa drm: guard cursorFB buffer in restoreAfterVT (#100)
+  * e6ea0e0 nix: libseat renamed to seatd
+  * 9874e08 version: bump to 0.4.3
+  * 7c1322d drm: fix leases not having a backend attached (#97)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 10 Nov 2024 09:26:17 +0100
+
 aquamarine (0.4.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.2
