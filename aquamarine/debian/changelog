@@ -1,3 +1,11 @@
+aquamarine (0.4.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.5
+  * ae32a98 version: bump to 0.4.5
+  * e6c392a DRM: Add a dumb allocator (#104)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 11 Nov 2024 14:21:31 +0100
+
 aquamarine (0.4.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.4
