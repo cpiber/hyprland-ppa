@@ -1,3 +1,13 @@
+hyprutils (0.2.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.5
+  * 91c1634 version: update to 0.2.5
+  * 4c5f18d process: better reading for spawnSync
+  * 8d21d1d os: fixup process possible deadlock
+  * d504d45 os: add missing header for BSDs after fd4be8b9ca93 (#16)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 12 Nov 2024 17:39:08 +0100
+
 hyprutils (0.2.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.4
