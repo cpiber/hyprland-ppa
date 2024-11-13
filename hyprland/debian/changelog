@@ -1,3 +1,31 @@
+hyprland-unstable (0.45.0~1ppa1+git202411131823-bb160cfe) noble; urgency=medium
+
+  * Update to main bb160cfe
+  * bb160cfe makefile: add stub to discourage direct make
+  * a29cfa78 logging: Add some context to config error logs (#8326)
+  * f5fa8455 config: Changed the default value of
+    decoration:blur:ignore_opacity to true (#8418)
+  * b88e4a1a Nix: disable uwsm desktop file installation
+  * ff411658 Lock uwsm desktop file behind feature flag
+  * 943c7d18 meson: autodetect systemd
+  * ccfae82a rename hyprland-systemd.desktop and remove hyprland-
+    session.service
+  * 430b5c30 systemd: hyprland-systemd.desktop -> hyprland-uwsm.desktop
+  * 8fa4cfb7 keybinds: don't animate fullscreen size/pos changes coming
+    in
+  * a551f85b renderer: scaled surfaces could have zero area (#8423)
+  * 07052a51 pointer: map devices across all outputs by default (#8352)
+  * 1fa0cd7a debug: clean up fetching of the contents of /proc/device-
+    tree (#8413)
+  * c10739e6 core: fixup execAndGet
+  * 9e628067 debug: clean up opening of files in HyprCtl (#8401)
+  * 99b01c5d hyprpm: fix format
+  * a8ff3a45 core: move to os/Process from hyprutils
+  * dca75db1 defaultConfig: fixup smart gaps rules
+  * a425fbeb version: bump to 0.45.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 13 Nov 2024 18:23:48 +0100
+
 hyprland-unstable (0.44.1~1ppa1+git202411090844-cca227a5) noble; urgency=medium
 
   * Update to main cca227a5
