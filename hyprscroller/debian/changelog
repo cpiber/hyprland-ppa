@@ -1,3 +1,13 @@
+hyprscroller (0.44.0~1ppa1+git202411131838-d5762be) noble; urgency=medium
+
+  * Update to master d5762be
+  * d5762be commit pin
+  * 148a1fd Fix closing floating window when special open #68
+  * 556e014 Update README.md typo
+  * 14f309f commit pin for v0.45.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 13 Nov 2024 18:38:58 +0100
+
 hyprscroller (0.44.0~1ppa1+git202411090855-3c586e8) noble; urgency=medium
 
   * Update to master 3c586e8
