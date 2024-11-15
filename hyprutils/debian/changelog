@@ -1,3 +1,12 @@
+hyprutils (0.2.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.6
+  * e911361 version: bump to 0.2.6
+  * e74177e os: add setEnv to process
+  * 315fba5 process: avoid zombies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 15 Nov 2024 21:33:03 +0100
+
 hyprutils (0.2.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.5
