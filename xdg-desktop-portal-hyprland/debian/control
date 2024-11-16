@@ -17,8 +17,8 @@ Build-Depends:
  libdrm-dev,
  libgbm-dev,
  libsdbus-c++-dev (>= 2.0.0),
- hyprlang-dev (>= 0.2.0),
- hyprutils-dev,
+ libhyprlang-dev (>= 0.2.0),
+ libhyprutils-dev,
  hyprwayland-scanner (>= 0.4.2),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
