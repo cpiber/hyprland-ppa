@@ -11,7 +11,7 @@ Build-Depends:
  libcairo2-dev,
  librsvg2-dev,
  libtomlplusplus-dev,
- hyprlang-dev (>=0.4.2),
+ libhyprlang-dev (>= 0.4.2),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/hyprcursor

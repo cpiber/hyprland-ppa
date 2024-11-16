@@ -1,3 +1,9 @@
+hyprcursor (0.1.10-1ppa3) noble; urgency=medium
+
+  * Rebuild for renamed deps
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:27:44 +0100
+
 hyprcursor (0.1.10-1ppa2) noble; urgency=medium
 
   * Rebuild with new name
