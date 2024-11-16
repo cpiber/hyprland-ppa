@@ -1,3 +1,18 @@
+hyprland-unstable (0.45.0~1ppa1+git202411161835-83be2480) noble; urgency=medium
+
+  * Update to main 83be2480
+  * 83be2480 workspace: fix missing name via
+    focusworkspaceoncurrentmonitor (#8484)
+  * 7affc34a bind: new long press option (#8302)
+  * 098e491a protocols: mark primarySelection as not privileged
+  * 967fe76a drm: enable explit out fence in AQ (#8431)
+  * 940ed3d5 xcursors: store themes in a std:set to order it (#8474)
+  * 6f7280a6 descriptions: add use_cpu_buffer
+  * 20031cea pointer: add drm dumb buffers for cursors (#8399)
+  * 3fb47372 flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:35:29 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411131823-bb160cfe) noble; urgency=medium
 
   * Update to main bb160cfe
