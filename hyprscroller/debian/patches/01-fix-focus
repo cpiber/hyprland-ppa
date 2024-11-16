@@ -1,0 +1,18 @@
+Index: source/src/scroller.cpp
+===================================================================
+--- source.orig/src/scroller.cpp
++++ source/src/scroller.cpp
+@@ -408,13 +408,7 @@ static void toggle_window_fullscreen_int
+ }
+ 
+ static void force_focus_to_window(PHLWINDOW window) {
+-    g_pInputManager->unconstrainMouse();
+     g_pCompositor->focusWindow(window);
+-    g_pCompositor->warpCursorTo(window->middle());
+-
+-    g_pInputManager->m_pForcedFocus = window;
+-    g_pInputManager->simulateMouseMovement();
+-    g_pInputManager->m_pForcedFocus.reset();
+ }
+ 
+ static void switch_to_window(PHLWINDOW from, PHLWINDOW to)

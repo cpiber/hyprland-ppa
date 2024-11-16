@@ -1,3 +1,20 @@
+hyprscroller (0.44.0~1ppa1+git202411161317-b59929c) noble; urgency=medium
+
+  * Update to master b59929c
+  * b59929c commit pin
+  * 743d952 overview: support hardware cursors
+  * d12e8f6 commit pin
+  * 07f77ba Remove borders, now they are part of the decoration
+  * 8455cb0 commit pin
+  * 220b10b recalculate windows when gaps_in changes
+  * c3a5c77 commit pin
+  * a9dce43 forgot to remove delete after moving code
+  * b9363ad Update TUTORIAL.md
+  * 4835f29 commit pin
+  * 7a6bdd5 New scaled overview mode
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 13:17:26 +0100
+
 hyprscroller (0.44.0~1ppa1+git202411131838-d5762be) noble; urgency=medium
 
   * Update to master d5762be
