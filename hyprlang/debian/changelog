@@ -1,3 +1,9 @@
+hyprlang (0.5.3-1ppa3) noble; urgency=medium
+
+  * Rebuild for renamed deps
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:29:11 +0100
+
 hyprlang (0.5.3-1ppa2) noble; urgency=medium
 
   * Rebuild with new name
