@@ -28,17 +28,11 @@
 [submodule "hyprland-stable/source"]
 	path = hyprland-stable/source
 	url = https://github.com/hyprwm/Hyprland.git
-[submodule "hyprwayland-scanner-stable/source"]
-	path = hyprwayland-scanner-stable/source
-	url = https://github.com/hyprwm/hyprwayland-scanner.git
 [submodule "waybar/source"]
 	path = waybar/source
 	url = https://github.com/Alexays/Waybar.git
 [submodule "hyprutils/source"]
 	path = hyprutils/source
-	url = https://github.com/hyprwm/hyprutils.git
-[submodule "hyprutils-stable/source"]
-	path = hyprutils-stable/source
 	url = https://github.com/hyprwm/hyprutils.git
 [submodule "pipewire/source"]
 	path = pipewire/source
