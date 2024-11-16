@@ -1,3 +1,13 @@
+hyprscroller (0.45.0~1ppa1+git202411161905-6d0f24e) noble; urgency=medium
+
+  * Update to master 6d0f24e
+  * 6d0f24e fixed typo
+  * 6c89314 commit pin
+  * fee68d9 gestures: add workspace prefix option and disable
+    workspace_swipe
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 19:05:15 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411161413-a3595f6.1) noble; urgency=medium
 
   * Rebuild for renamed deps
