@@ -1,3 +1,9 @@
+hyprlang (0.5.3-1ppa2) noble; urgency=medium
+
+  * Rebuild with new name
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:01:23 +0100
+
 hyprlang (0.5.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.3

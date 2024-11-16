@@ -13,24 +13,26 @@ Homepage: https://hyprland.org/hyprlang
 Vcs-Browser: https://github.com/hyprwm/hyprlang
 Vcs-Git: https://github.com/hyprwm/hyprlang.git
 
-Package: hyprlang-dev
+Package: libhyprlang-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- hyprlang1 (= ${binary:Version}),
+ libhyprlang2 (= ${binary:Version}),
  ${misc:Depends},
+Breaks: hyprlang-dev
 Description: Configuration language for linux applications.
  The hypr configuration language is an extremely efficient, yet easy to work with, configuration language for linux applications.
  It's user-friendly, easy to grasp, and easy to implement.
  This package includes the build-headers for using hyprlang in your own project.
 
-Package: hyprlang1
+Package: libhyprlang2
 Architecture: any
 Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
+Breaks: hyprlang1
 Description: Configuration language for linux applications.
  The hypr configuration language is an extremely efficient, yet easy to work with, configuration language for linux applications.
  It's user-friendly, easy to grasp, and easy to implement.
