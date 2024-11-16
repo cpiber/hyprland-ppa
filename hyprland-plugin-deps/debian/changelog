@@ -1,3 +1,9 @@
+hyprland-plugin-deps (0-1ppa5) noble; urgency=medium
+
+  * Rebuild for renamed deps
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:42:09 +0100
+
 hyprland-plugin-deps (0-1ppa4) noble; urgency=medium
 
   * Add new aquamarine dependency

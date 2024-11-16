@@ -38,10 +38,10 @@ Depends:
  libxcb-ewmh-dev,
  libxcb-errors-dev,
  libtomlplusplus-dev,
- aquamarine-dev,
- hyprlang-dev (>= 0.3.2),
- hyprcursor-dev (>= 0.1.7),
- hyprutils-dev,
+ libaquamarine-dev,
+ libhyprlang-dev (>= 0.3.2),
+ libhyprcursor-dev (>= 0.1.7),
+ libhyprutils-dev,
  hyprwayland-scanner,
 Description: Meta package for build dependencies
  Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
