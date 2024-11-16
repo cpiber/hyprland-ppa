@@ -25,13 +25,14 @@ Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/aquamarine
 Vcs-Git: https://github.com/hyprwm/aquamarine.git
 
-Package: aquamarine-dev
+Package: libaquamarine-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- aquamarine0 (= ${binary:Version}),
+ libaquamarine3 (= ${binary:Version}),
  ${misc:Depends},
+Breaks: aquamarine-dev
 Description: Aquamarine is a very light linux rendering backend library.
  It provides basic abstractions for an application to render on a Wayland
  session (in a window) or a native DRM session.
@@ -39,12 +40,13 @@ Description: Aquamarine is a very light linux rendering backend library.
  performant, and minimal.
  Aquamarine provides no bindings for other languages. It is C++-only.
 
-Package: aquamarine0
+Package: libaquamarine3
 Architecture: any
 Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
+Breaks: aquamarine0
 Description: Aquamarine is a very light linux rendering backend library.
  It provides basic abstractions for an application to render on a Wayland
  session (in a window) or a native DRM session.
