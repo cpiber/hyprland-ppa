@@ -1,3 +1,13 @@
+aquamarine (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * b31a6a4 props: bump version to 0.5.0
+  * 3b00e96 drm: scan only cards and not outputs, safeguard against null
+    renderer (#106)
+  * 545f506 drm: fix fences according to spec (#105)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:16:59 +0100
+
 aquamarine (0.4.5-1ppa2) noble; urgency=medium
 
   * Rebuild with new name
