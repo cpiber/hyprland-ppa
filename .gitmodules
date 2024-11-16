@@ -67,3 +67,6 @@
 [submodule "sdbus-cpp/source"]
 	path = sdbus-cpp/source
 	url = https://github.com/Kistler-Group/sdbus-cpp.git
+[submodule "iio-hyprland/source"]
+	path = iio-hyprland/source
+	url = https://github.com/JeanSchoeller/iio-hyprland.git

@@ -1,0 +1,7 @@
+iio-hyprland for Debian
+----------------------
+
+A fork of okeri/iio-sway for Hyprland.
+
+Listens to iio-sensor-proxy and automatically changes Hyprland output orientation.
+
