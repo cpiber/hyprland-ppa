@@ -40,7 +40,7 @@ newhead="`git rev-parse HEAD`"
 shorthead="`git rev-parse --short HEAD`"
 if [ "$curhead" = "$newhead" ]; then
   echo "Already up-to-date"
-  exit 0
+  exit 1
 fi
 changes="`git log --pretty="%h %s" $curhead..$newhead`"
 cd ..
@@ -59,3 +59,7 @@ echo "$changes" |
   while IFS= read -r line; do
     dch -a "$line"
   done
+if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ]; then
+  hyprver="`head -n1 "$reporoot/hyprland/debian/changelog" | sed 's/.*(\([^)]*\)).*/\1/'`"
+  sed -i 's/^ hyprland-unstable .*/ hyprland-unstable (= '$hyprver'),/' "$reporoot/$project/debian/control"
+fi
