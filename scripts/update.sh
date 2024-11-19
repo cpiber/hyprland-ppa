@@ -40,6 +40,14 @@ newhead="`git rev-parse HEAD`"
 shorthead="`git rev-parse --short HEAD`"
 if [ "$curhead" = "$newhead" ]; then
   echo "Already up-to-date"
+  if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ]; then
+    hyprver="`head -n1 "$reporoot/hyprland/debian/changelog" | sed 's/.*(\([^)]*\)).*/\1/'`"
+    if sed -i 's/^ hyprland-unstable .*/ hyprland-unstable (= '$hyprver'),/w /dev/stdout' "$reporoot/$project/debian/control" | grep -q .; then
+      cd ..
+      dist="`dpkg-parsechangelog --show-field Distribution`"
+      dch -D "$dist" -R "$@" "Rebuild for unstable"
+    fi
+  fi
   exit 1
 fi
 changes="`git log --pretty="%h %s" $curhead..$newhead`"
