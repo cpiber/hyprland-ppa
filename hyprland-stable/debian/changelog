@@ -1,3 +1,26 @@
+hyprland (0.45.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.45.1
+  * 500d2a35 [gha] Nix: update inputs
+  * 77b9d03c version: bump to 0.45.1
+  * 53e85130 constraints: don't warp pointer position on release (#8491)
+  * 7976bfa2 shell: don't use fgrep, prefer grep -F
+  * a77ffa8c windows/xdg: minor cleanup of min/max size calculations
+  * a4a1ad1f hyprpm: fix format crash
+  * 737b51d0 renderer: don't render unmapped popups
+  * b3251f29 workspacerules: Do not check 'on-created-empty' if using a
+    workspace windowrule (#8486)
+  * c4a77b8d core: guard pmonitor in focuswindow
+  * 38b6f3ba workspace: fix missing name via
+    focusworkspaceoncurrentmonitor (#8484)
+  * ace7ece4 protocols: mark primarySelection as not privileged
+  * 0557b2ed xcursors: store themes in a std:set to order it (#8474)
+  * 9728a39b makefile: add stub to discourage direct make
+  * 7120dde3 renderer: scaled surfaces could have zero area (#8423)
+  * e7ab2d85 defaultConfig: fixup smart gaps rules
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 19 Nov 2024 21:28:38 +0100
+
 hyprland (0.45.0-1ppa2) noble; urgency=medium
 
   * Rebuild for renamed deps
