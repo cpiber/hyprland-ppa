@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -lt 1 ]; then
-  echo "Usage: $0 {project}"
+  echo "Usage: $0 {project} [dist]"
   exit 1
 fi
 
@@ -17,4 +17,7 @@ mkdir -p /tmp/hyprland-ppa/
 rm -rf "$buildfolder"
 [ -d "$sourcefolder" ] && cp -ra "$sourcefolder" "$buildfolder" || mkdir "$buildfolder"
 cp -ra "$debianfolder" "$buildfolder"
+if [ $# -gt 0 ]; then
+  dch -c "$buildfolder/debian/changelog" -l "~1$1" -D "$1" "Rebuild for $1"
+fi
 [ -f "$reporoot/$project/prepare.sh" ] && . "$reporoot/$project/prepare.sh" || :
