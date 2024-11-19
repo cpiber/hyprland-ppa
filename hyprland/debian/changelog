@@ -1,3 +1,36 @@
+hyprland-unstable (0.45.0~1ppa1+git202411192150-67cee430) noble; urgency=medium
+
+  * Update to main 67cee430
+  * 67cee430 internal: minor cleanups for color results
+  * 47a1650c miscfunctions: move configStringToInt to std::expected
+  * 936dfedb keybinds: move to managed pointers
+  * 6113f4da keybinds: allow repeating multiple binds (#8290)
+  * cc923ad0 config: update the configStringToInt implementation (#8476)
+  * df9ff448 Fix example config name in auto-generated cfg header
+    (#8509)
+  * 97493511 internal: fix changeWindowZOrder reordering incorrectly
+    (#8494)
+  * 505c1f8f miscfunctions: fix cross build
+  * 6744bb57 constraints: don't warp pointer position on release (#8491)
+  * 2259a885 miscfunctions: add missing include
+  * 1ba050d6 shell: propagate new machanism from hyprctl to
+    miscfunctions
+  * e8717a4f shell: don't use fgrep, prefer grep -F
+  * 9b033076 hooks: add pre connected/disconnected monitor events
+    (#8503)
+  * b735295d windows/xdg: minor cleanup of min/max size calculations
+  * 8d5cdedb hyprpm: fix format crash
+  * 4f591e80 renderer: simplify blur enabling logic
+  * fb91c255 renderer: don't render unmapped popups
+  * 0ddbd1c3 renderer: add lockdead_screen_delay (#8467)
+  * af83c825 hyprctl: add json output on hyprctl -j plugins list (#8480)
+  * 9d37b1b0 workspacerules: Do not check 'on-created-empty' if using a
+    workspace windowrule (#8486)
+  * cf18eca8 [gha] Nix: update inputs
+  * ec1e6be0 core: guard pmonitor in focuswindow
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 19 Nov 2024 21:50:27 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411161835-83be2480) noble; urgency=medium
 
   * Update to main 83be2480
