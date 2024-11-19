@@ -1,3 +1,14 @@
+hyprland (0.45.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.45.2
+  * 12f9a0d0 [gha] Nix: update inputs
+  * fab0f426 version: bump to 0.45.2
+  * e735eae4 xdg-shell: don't report invalid min/max sizes on unset
+  * 57cf6d81 internal: fix changeWindowZOrder reordering incorrectly
+    (#8494)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 19 Nov 2024 23:04:50 +0100
+
 hyprland (0.45.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.45.1
