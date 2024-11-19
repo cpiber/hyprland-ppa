@@ -1,0 +1,92 @@
+Index: source/borders-plus-plus/main.cpp
+===================================================================
+--- source.orig/borders-plus-plus/main.cpp
++++ source/borders-plus-plus/main.cpp
+@@ -37,7 +37,7 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:borders-plus-plus:natural_rounding", Hyprlang::INT{1});
+ 
+     for (size_t i = 0; i < 9; ++i) {
+-        HyprlandAPI::addConfigValue(PHANDLE, "plugin:borders-plus-plus:col.border_" + std::to_string(i + 1), Hyprlang::INT{configStringToInt("rgba(000000ee)")});
++        HyprlandAPI::addConfigValue(PHANDLE, "plugin:borders-plus-plus:col.border_" + std::to_string(i + 1), Hyprlang::INT{*configStringToInt("rgba(000000ee)")});
+         HyprlandAPI::addConfigValue(PHANDLE, "plugin:borders-plus-plus:border_size_" + std::to_string(i + 1), Hyprlang::INT{-1});
+     }
+ 
+@@ -60,4 +60,4 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+ 
+ APICALL EXPORT void PLUGIN_EXIT() {
+     ;
+-}
+\ No newline at end of file
++}
+Index: source/hyprbars/barDeco.cpp
+===================================================================
+--- source.orig/hyprbars/barDeco.cpp
++++ source/hyprbars/barDeco.cpp
+@@ -2,6 +2,7 @@
+ 
+ #include <hyprland/src/Compositor.hpp>
+ #include <hyprland/src/desktop/Window.hpp>
++#include <hyprland/src/helpers/MiscFunctions.hpp>
+ #include <pango/pangocairo.h>
+ 
+ #include "globals.hpp"
+@@ -567,7 +568,7 @@ void CHyprBar::applyRule(const SWindowRu
+     if (r.szRule == "plugin:hyprbars:nobar")
+         m_bHidden = true;
+     else if (r.szRule.starts_with("plugin:hyprbars:bar_color"))
+-        m_bForcedBarColor = CColor(configStringToInt(arg));
++        m_bForcedBarColor = CColor(configStringToInt(arg).value_or(0));
+     else if (r.szRule.starts_with("plugin:hyprbars:title_color"))
+-        m_bForcedTitleColor = CColor(configStringToInt(arg));
++        m_bForcedTitleColor = CColor(configStringToInt(arg).value_or(0));
+ }
+Index: source/hyprbars/main.cpp
+===================================================================
+--- source.orig/hyprbars/main.cpp
++++ source/hyprbars/main.cpp
+@@ -74,7 +74,12 @@ Hyprlang::CParseResult onNewButton(const
+         return result;
+     }
+ 
+-    g_pGlobalState->buttons.push_back(SHyprButton{vars[3], configStringToInt(vars[0]), size, vars[2]});
++    auto X = configStringToInt(vars[0]);
++    if (!X) {
++        result.setError("var2 is not a valid number");
++        return result;
++    }
++    g_pGlobalState->buttons.push_back(SHyprButton{vars[3], *X, size, vars[2]});
+ 
+     for (auto& b : g_pGlobalState->bars) {
+         b->m_bButtonsDirty = true;
+@@ -101,9 +106,9 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+     static auto P3 = HyprlandAPI::registerCallbackDynamic(PHANDLE, "windowUpdateRules",
+                                                           [&](void* self, SCallbackInfo& info, std::any data) { onUpdateWindowRules(std::any_cast<PHLWINDOW>(data)); });
+ 
+-    HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:bar_color", Hyprlang::INT{configStringToInt("rgba(33333388)")});
++    HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:bar_color", Hyprlang::INT{*configStringToInt("rgba(33333388)")});
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:bar_height", Hyprlang::INT{15});
+-    HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:col.text", Hyprlang::INT{configStringToInt("rgba(ffffffff)")});
++    HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:col.text", Hyprlang::INT{*configStringToInt("rgba(ffffffff)")});
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:bar_text_size", Hyprlang::INT{10});
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:bar_title_enabled", Hyprlang::INT{1});
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprbars:bar_text_font", Hyprlang::STRING{"Sans"});
+Index: source/hyprtrails/main.cpp
+===================================================================
+--- source.orig/hyprtrails/main.cpp
++++ source/hyprtrails/main.cpp
+@@ -111,7 +111,7 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprtrails:points_per_step", Hyprlang::INT{2});
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprtrails:history_points", Hyprlang::INT{20});
+     HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprtrails:history_step", Hyprlang::INT{2});
+-    HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprtrails:color", Hyprlang::INT{configStringToInt("rgba(ffaa00ff)")});
++    HyprlandAPI::addConfigValue(PHANDLE, "plugin:hyprtrails:color", Hyprlang::INT{*configStringToInt("rgba(ffaa00ff)")});
+ 
+     static auto P = HyprlandAPI::registerCallbackDynamic(PHANDLE, "openWindow", [&](void* self, SCallbackInfo& info, std::any data) { onNewWindow(self, data); });
+ 
+@@ -135,4 +135,4 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+ 
+ APICALL EXPORT void PLUGIN_EXIT() {
+     wl_event_source_remove(g_pGlobalState->tick);
+-}
+\ No newline at end of file
++}

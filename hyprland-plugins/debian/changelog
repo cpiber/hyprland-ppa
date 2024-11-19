@@ -1,3 +1,10 @@
+hyprland-plugins (0.45.0~1ppa1+git202411192209-95fee7d) noble; urgency=medium
+
+  * Update to main 95fee7d
+  * 95fee7d hyprpm: add pin for 0.45.1
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 19 Nov 2024 22:09:54 +0100
+
 hyprland-plugins (0.45.0~1ppa1+git202411161844-344a69d) noble; urgency=medium
 
   * Update to main 344a69d
