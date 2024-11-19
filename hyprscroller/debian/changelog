@@ -1,3 +1,11 @@
+hyprscroller (0.45.0~1ppa1+git202411191814-5686720) noble; urgency=medium
+
+  * Update to master 5686720
+  * 5686720 commit pin
+  * 11f5519 fix focus logic for windows removed in background
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 19 Nov 2024 18:14:30 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411191808-e820dbf) noble; urgency=medium
 
   * Update to master e820dbf
