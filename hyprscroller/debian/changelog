@@ -1,3 +1,16 @@
+hyprscroller (0.45.0~1ppa1+git202411191808-e820dbf) noble; urgency=medium
+
+  * Update to master e820dbf
+  * e820dbf Merge pull request #75 from BinaryInk/feature-workspace-
+    swipe-invert
+  * 19075a2 gestures: respect built-in setting gestures:workspace-swipe-
+    invert
+  * a883cc1 commit pin
+  * eed0d58 gestures: fix logic for natural scrolling
+  * 6eb99bb commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 19 Nov 2024 18:08:24 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411161905-6d0f24e) noble; urgency=medium
 
   * Update to master 6d0f24e
