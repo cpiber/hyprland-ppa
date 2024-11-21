@@ -1,3 +1,21 @@
+hyprscroller (0.45.0~1ppa1+git202411211516-1022bdc) noble; urgency=medium
+
+  * Update to master 1022bdc
+  * 1022bdc commit pin
+  * 5025ee2 decorator: avoid duplicating border, draw over
+  * 74fd883 commit pin
+  * c63b744 pin: change behavior to toggle
+  * f7edd43 commit pin
+  * df4e41b selections: fix merging error
+  * fd472a0 commit pin
+  * 1a6ef35 selections: toggle, reset, move
+  * c68a121 commit pin
+  * 20eb2d8 windowrule: add columnwidth and windowheight
+  * 19e317e README: supported version update
+  * b88fac4 commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 21 Nov 2024 15:16:22 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411191814-5686720build1) noble; urgency=medium
 
   * Rebuild for unstable
