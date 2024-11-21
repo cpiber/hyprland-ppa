@@ -1,3 +1,13 @@
+hyprland-unstable (0.45.0~1ppa1+git202411211506-940f7aa9) noble; urgency=medium
+
+  * Update to main 940f7aa9
+  * 940f7aa9 renderer: fixup blur optimization considitons
+  * e5fa0171 internal: fix some misused configStringToInt conversions
+  * c4eda46d xdg-shell: even more robust layout min/max size
+  * aa067a4c xdg-shell: don't report invalid min/max sizes on unset
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 21 Nov 2024 15:06:57 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411192150-67cee430) noble; urgency=medium
 
   * Update to main 67cee430
