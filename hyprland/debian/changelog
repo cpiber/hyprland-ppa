@@ -1,3 +1,22 @@
+hyprland-unstable (0.45.0~1ppa1+git202411242243-cc38e7e1) noble; urgency=medium
+
+  * Update to main cc38e7e1
+  * cc38e7e1 config: don't overwrite errors in gradients
+  * 55ec8bd5 config: throw an error explicitly when parsing colors in
+    gradients
+  * 54f57797 snap: account for position of multiple monitors (#8543)
+  * 65f66dcf binds: add option to allow fullscreening a pinned window
+    (#8526)
+  * 451d7a41 renderer: add option to blur IME popups (#8521)
+  * 00d6261c hyprpm: move temp files to XDG_RUNTIME_DIR
+  * 745a82ce core: workspace-related function cleanup / refactor
+  * a847bc67 monitor: fix default focus when switching to a fs workspace
+  * b1003445 keybinds: actually suppress internal keybinds instead of
+    passing them along (#8538)
+  * 943b3d46 bezier: optimize setup of bezier curves (#8528)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 24 Nov 2024 22:43:16 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411211506-940f7aa9) noble; urgency=medium
 
   * Update to main 940f7aa9
