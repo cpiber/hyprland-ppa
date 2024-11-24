@@ -1,3 +1,21 @@
+hyprscroller (0.45.0~1ppa1+git202411242258-362be85) noble; urgency=medium
+
+  * Update to master 362be85
+  * 362be85 commit pin
+  * 02a6c1f jump: initial implementation
+  * f1e09fd commit pin
+  * 983f609 sizes: add eighths for ultra-wide monitors
+  * 447e001 commit pin for v0.45.0 and v0.45.1
+  * ff52cda commit pin
+  * 65917aa add trails and trailmarks
+  * ec680dd commit pin
+  * 2898619 selection: remove confusing overview holes
+  * bdc6146 fix compile warnings
+  * dde2daf commit pin
+  * 9ba653a selection: fix problem with multiple monitors
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 24 Nov 2024 22:58:04 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411211516-1022bdc) noble; urgency=medium
 
   * Update to master 1022bdc
