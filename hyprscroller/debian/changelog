@@ -1,3 +1,17 @@
+hyprscroller (0.45.0~1ppa1+git202411271113-543e01d) noble; urgency=medium
+
+  * Update to master 543e01d
+  * 543e01d commit pin
+  * cead619 movewindow: #84 between monitors
+  * 1ff685b commit pin
+  * db2ba19 fullscreen: #83 fullscreen not necessarily the active window
+  * 0bbbbee commit pin
+  * ba0a32a decorations: clarify texture release
+  * 37eb0e4 commit pin
+  * 20dda17 reorganize code and fix jump in full screen
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 27 Nov 2024 11:13:36 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411242258-362be85) noble; urgency=medium
 
   * Update to master 362be85
