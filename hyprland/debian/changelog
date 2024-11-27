@@ -1,3 +1,14 @@
+hyprland-unstable (0.45.0~1ppa1+git202411271105-1fb720b6) noble; urgency=medium
+
+  * Update to main 1fb720b6
+  * 1fb720b6 seat: fix double scrolling in some applications (#8583)
+  * 26877882 hyprctl: verify runtime dir exists in instances()
+  * 0ddb952d hyprland-uwsm.desktop: Just reference plain entry (#8553)
+  * 1930a950 shm: fix shm fd size check before creating or resizing
+    shm_pool (#8572)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 27 Nov 2024 11:05:35 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411242243-cc38e7e1) noble; urgency=medium
 
   * Update to main cc38e7e1
