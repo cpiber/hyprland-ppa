@@ -1,3 +1,24 @@
+hyprscroller (0.45.0~1ppa1+git202411291220-50a87a8) noble; urgency=medium
+
+  * Update to master 50a87a8
+  * 50a87a8 commit pin
+  * f252d34 request: #88, add cyclewidth and cycleheight
+  * 174eaa4 commit pin
+  * 1c9cc3e align: fix windows in columns regression
+  * 8b23d4d focus: improvements when changing monitor
+  * dc7144d commit pin
+  * 5d25800 fullscreen: fixes for overview mode
+  * 3f39d6c Remove NixOS flakes and redirect to official package
+  * 2bcf3a1 Merge pull request #87 from skissue/fix-typos
+  * add867a Fix typos in README
+  * e7fb497 commit pin
+  * 7d9fc42 jump: #85 custom keys
+  * 31dc999 commit pin
+  * 2289ee3 fullscreen: typo was preventing
+    exit_window_retains_fullscreen to work
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 29 Nov 2024 12:20:09 +0100
+
 hyprscroller (0.45.0~1ppa1+git202411271113-543e01d) noble; urgency=medium
 
   * Update to master 543e01d
