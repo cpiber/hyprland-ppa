@@ -1,3 +1,63 @@
+waybar-unstable (0.11.0+76~1ppa1) noble; urgency=medium
+
+  * Update to master 20ca48c3
+  * 20ca48c3 Merge pull request #3768 from
+    deprekated/fix_privacy_null_deref
+  * b863627c Merge pull request #3730 from TripleTrable/AModuls/expand-
+    fill-no-center
+  * 1e481b7a fix broken clang-format to run pipeline
+  * f9acc1fe Add stretching of modules and  modules-center toggling
+  * 86ce9f72 fix null-deref due to unconstructed PrivacyNodeInfo
+  * 86451156 Merge pull request #3736 from
+    Alexays/update_flake_lock_action
+  * 63edb402 Merge pull request #3747 from Aqa-Ib/patch-1
+  * 52d582b9 Merge pull request #3758 from ArijanJ/signals-in-manpage
+  * 724a4a5e Add signals section to manpage
+  * 77b50b4c fix hyprland's grouped window flags
+  * 3f80e507 flake.lock: Update
+  * 5f260516 Merge pull request #3674 from PassiHD2004/master
+  * 9d89ddae Merge pull request #3464 from findus/pulseaudio-default-
+    sink
+  * bb40e169 feat: update man page
+  * dacecb9b Merge pull request #3695 from cfillion/fix-hyprland-crashes
+  * 92242f0b hyprland: fix a data race at startup between sockets 1 and
+    2
+  * 0e03c7a8 fix a segfault on signals received after main returns
+  * 6df26ccb feat: add warning threshold to temperature module
+  * 280f11e2 Merge pull request #3658 from
+    Alexays/update_flake_lock_action
+  * 95eaffcf flake.lock: Update
+  * e7b2d33d Merge pull request #3637 from
+    TripleTrable/backlight/add_min_brightness
+  * 281911c9 Merge pull request #3652 from khaneliman/flake
+  * e53497ba .github/workflows: allow forks to manually run flake lock
+    update
+  * a1adf684 Merge pull request #3650 from khaneliman/nix
+  * 6322fa28 Merge pull request #3651 from khaneliman/github
+  * e3944858 .github/workflows: don't run on forks
+  * edab49f2 nix/default: cava bump
+  * 486b99c2 Merge pull request #3646 from LukashonakV/cava_bump
+  * e46a1c6b cava bump
+  * d684a6de Backlight: Set default to 0 to prevent breaking existing
+    setups
+  * cad18f39 Merge pull request #3640 from mslxl/master
+  * 47f767b0 Backlight: Add documentation for min-brightness
+  * 04bda9f4 Backlight: Add minimum brightness
+  * c88a86f5 nix: remove patches from downstream
+  * 07f75e30 Merge pull request #3632 from LukashonakV/ISSUE#3383
+  * b4e97eb2 FreeBSD format fix
+  * 773b1d48 Default value for cldYearShift_ = 1900/01/01
+  * 57156bce removed manual flag from clang format again
+  * e3095c6d clang-format
+  * 951b89ff Update clang-format.yml
+  * d6bfeb5a added is running condition to default_sink_is_running check
+  * 8b1d7369 added running check to default sink return condition
+  * 9c47b2e9 removed debug logging
+  * dedee8cd pulseaudio: show correct sink volume on default output
+    changes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 29 Nov 2024 11:59:18 +0100
+
 waybar-unstable (0.11.0+22~1ppa1) noble; urgency=medium
 
   * Update to master 21af48fd
