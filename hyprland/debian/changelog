@@ -1,3 +1,17 @@
+hyprland-unstable (0.45.0~1ppa1+git202411291206-8f83d29f) noble; urgency=medium
+
+  * Update to main 8f83d29f
+  * 8f83d29f renderer: restore discard mode after IME render pass
+  * 22bf2853 hyprpm: fix incomplete unmet dependencies message
+  * 5963970b descriptions: change allow_pin_fullscreen value to false
+    (#8592)
+  * 8b51eeb7 core: fix compilation outside stdlibc++
+  * 5329298b sessionLock: don't send motion events on every surface
+    commit (#8584)
+  * e9a7fb8f renderer: fix incorrect early return (#8590)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 29 Nov 2024 12:06:23 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411271105-1fb720b6) noble; urgency=medium
 
   * Update to main 1fb720b6

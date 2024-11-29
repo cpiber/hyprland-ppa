@@ -14,7 +14,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +    const bool bIsGlobal = url.find('/') == std::string::npos && std::filesystem::exists(std::string{DATAROOTDIR "/hyprpm/"} + url);
 +
 +    if (!bIsGlobal && !hasDeps()) {
-         std::println(stderr, "\n{}", failureString("Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, meson, cpio"));
+         std::println(stderr, "\n{}", failureString("Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, meson, cpio, pkg-config"));
          return false;
      }
 @@ -134,6 +136,13 @@ bool CPluginManager::addNewPluginRepo(co
