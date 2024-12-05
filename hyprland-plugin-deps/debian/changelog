@@ -1,3 +1,9 @@
+hyprland-plugin-deps (0-1ppa6) noble; urgency=medium
+
+  * Add new dependency
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 05 Dec 2024 22:18:52 +0100
+
 hyprland-plugin-deps (0-1ppa5) noble; urgency=medium
 
   * Rebuild for renamed deps

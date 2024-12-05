@@ -42,6 +42,7 @@ Depends:
  libhyprlang-dev (>= 0.3.2),
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev,
+ libhyprgraphics-dev,
  hyprwayland-scanner,
 Description: Meta package for build dependencies
  Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
