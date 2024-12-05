@@ -1,3 +1,25 @@
+hyprland-unstable (0.45.0~1ppa1+git202412052127-a7a6eedc) noble; urgency=medium
+
+  * Update to main a7a6eedc
+  * a7a6eedc core: move version include to hyprctl
+  * 888bdf4e hyprctl: add directScanout to hyprctl monitors
+  * ceef4fb3 core: feeling a bit quirky today.
+  * 22f7d6f1 core: add a few festive splashes
+  * f9e4998a snap: check which corner is being grabbed for monitor
+    snapping (#8637)
+  * 3c617ce3 internal: fixup some missed updateColorsOk() calls
+  * f6ac755c cleanup: Revert use doLater instead of adding idle event
+    handlers (#8624)
+  * 320144ae core: move colorspace handling to oklab (#8635)
+  * 92186898 version: add link versions for other utils (#8619)
+  * 10a9fec7 master: make center ignore reserved areas (#8625)
+  * 6d754445 cleanup: use doLater instead of adding idle event handlers
+    (#8624)
+  * d26439a0 nix: update flake
+  * ef6b0c81 cleanup: remove leftover var in ThreadManager.cpp (#8611)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 05 Dec 2024 21:27:22 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202411291206-8f83d29f) noble; urgency=medium
 
   * Update to main 8f83d29f
