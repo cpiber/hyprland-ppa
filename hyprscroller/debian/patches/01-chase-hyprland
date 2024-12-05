@@ -1,0 +1,39 @@
+Index: source/src/decorations.cpp
+===================================================================
+--- source.orig/src/decorations.cpp
++++ source/src/decorations.cpp
+@@ -203,7 +203,7 @@ void JumpDecoration::draw(PHLMONITOR pMo
+         static auto  FALLBACKFONT = CConfigValue<std::string>("misc:font_family");
+         static auto const *TEXTFONTFAMILY = (Hyprlang::STRING const *)HyprlandAPI::getConfigValue(PHANDLE, "plugin:scroller:jump_labels_font")->getDataStaticPtr();
+         static auto *const *TEXTCOL = (Hyprlang::INT *const *)HyprlandAPI::getConfigValue(PHANDLE, "plugin:scroller:jump_labels_color")->getDataStaticPtr();
+-        const CColor color = CColor(**TEXTCOL);
++        const CHyprColor color = CHyprColor(**TEXTCOL);
+         std::string font_family(*TEXTFONTFAMILY);
+         if (font_family == "")
+             font_family = *FALLBACKFONT;
+Index: source/src/main.cpp
+===================================================================
+--- source.orig/src/main.cpp
++++ source/src/main.cpp
+@@ -19,7 +19,7 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO P
+ 
+     if (HASH != GIT_COMMIT_HASH) {
+         HyprlandAPI::addNotification(PHANDLE, "[hyprscroller] Failure in initialization: Version mismatch (headers ver is not equal to running hyprland ver)",
+-                                     CColor{1.0, 0.2, 0.2, 1.0}, 5000);
++                                     CHyprColor{1.0, 0.2, 0.2, 1.0}, 5000);
+         throw std::runtime_error("[hyprscroller] Version mismatch");
+     }
+ 
+Index: source/src/window.cpp
+===================================================================
+--- source.orig/src/window.cpp
++++ source/src/window.cpp
+@@ -89,7 +89,7 @@ void Window::update_height(StandardSize
+ CGradientValueData Window::get_border_color() const
+ {
+     static auto *const *SELECTEDCOL = (Hyprlang::INT *const *)HyprlandAPI::getConfigValue(PHANDLE, "plugin:scroller:col.selection_border")->getDataStaticPtr();
+-    static CColor selected_col = **SELECTEDCOL;
++    static CHyprColor selected_col = **SELECTEDCOL;
+     return selected ? selected_col : window->m_cRealBorderColor;
+ }
+ 
