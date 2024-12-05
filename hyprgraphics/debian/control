@@ -1,0 +1,43 @@
+Source: hyprgraphics
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc-14,
+ g++-14,
+ libpixman-1-dev,
+ libcairo2-dev,
+ libhyprutils-dev,
+ libjpeg-dev,
+ libwebp-dev,
+ libjxl-dev,
+ libmagic-dev,
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprgraphics
+Vcs-Git: https://github.com/hyprwm/hyprgraphics.git
+
+Package: libhyprgraphics-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libhyprgraphics0 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Hyprgraphics is a small C++ library with graphics utilities
+ Hyprgraphics is a small C++ library with graphics / resource related
+ utilities used across the hypr* ecosystem.
+
+Package: libhyprgraphics0
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Hyprgraphics is a small C++ library with graphics utilities
+ Hyprgraphics is a small C++ library with graphics / resource related
+ utilities used across the hypr* ecosystem.

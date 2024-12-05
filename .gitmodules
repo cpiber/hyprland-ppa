@@ -70,3 +70,6 @@
 [submodule "iio-hyprland/source"]
 	path = iio-hyprland/source
 	url = https://github.com/JeanSchoeller/iio-hyprland.git
+[submodule "hyprgraphics/source"]
+	path = hyprgraphics/source
+	url = https://github.com/hyprwm/hyprgraphics.git
