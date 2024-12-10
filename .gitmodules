@@ -85,3 +85,6 @@
 [submodule "hyprpaper/source"]
 	path = hyprpaper/source
 	url = https://github.com/hyprwm/hyprpaper.git
+[submodule "hyprpicker/source"]
+	path = hyprpicker/source
+	url = https://github.com/hyprwm/hyprpicker.git

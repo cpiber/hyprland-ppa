@@ -1,0 +1,30 @@
+Source: hyprpicker
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ libwayland-dev,
+ wayland-protocols (>= 1.36),
+ libxkbcommon-dev,
+ libcairo2-dev,
+ libpango1.0-dev,
+ libjpeg-dev,
+ libhyprutils-dev (>= 0.2.0),
+ hyprwayland-scanner (>= 0.4.0),
+ hyprland-protocols (>= 0.4.0),
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprpicker
+Vcs-Git: https://github.com/hyprwm/hyprpicker.git
+
+Package: hyprpicker
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: hyprpicker is a neat utility for picking a color
