@@ -82,3 +82,6 @@
 [submodule "hyprsunset/source"]
 	path = hyprsunset/source
 	url = https://github.com/hyprwm/hyprsunset.git
+[submodule "hyprpaper/source"]
+	path = hyprpaper/source
+	url = https://github.com/hyprwm/hyprpaper.git
