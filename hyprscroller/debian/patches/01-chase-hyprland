@@ -37,3 +37,18 @@ Index: source/src/window.cpp
      return selected ? selected_col : window->m_cRealBorderColor;
  }
  
+Index: source/src/functions.h
+===================================================================
+--- source.orig/src/functions.h
++++ source/src/functions.h
+@@ -1,7 +1,10 @@
+ #ifndef SCROLLER_FUNCTIONS_H
+ #define SCROLLER_FUNCTIONS_H
+ 
++#include <hyprland/src/Compositor.hpp>
++#include <hyprland/src/desktop/Window.hpp>
+ #include <hyprland/src/desktop/Workspace.hpp>
++#include <hyprland/src/helpers/Timer.hpp>
+ #include <hyprland/src/managers/KeybindManager.hpp>
+ 
+ SDispatchResult this_moveFocusTo(std::string args);

@@ -1,3 +1,11 @@
+hyprscroller (0.45.0~1ppa1+git202412102043-a584f3a) noble; urgency=medium
+
+  * Update to master a584f3a
+  * a584f3a commit pin
+  * 8d78856 option: Add center_row_if_space_available
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Dec 2024 20:43:26 +0100
+
 hyprscroller (0.45.0~1ppa1+git202412052224-43fe2ee) noble; urgency=medium
 
   * Update to master 43fe2ee
