@@ -79,3 +79,6 @@
 [submodule "hyprsysteminfo/source"]
 	path = hyprsysteminfo/source
 	url = https://github.com/hyprwm/hyprsysteminfo.git
+[submodule "hyprsunset/source"]
+	path = hyprsunset/source
+	url = https://github.com/hyprwm/hyprsunset.git

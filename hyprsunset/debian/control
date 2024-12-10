@@ -1,0 +1,29 @@
+Source: hyprsunset
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ libwayland-dev,
+ wayland-protocols,
+ libhyprutils-dev (>= 0.2.3),
+ hyprland-protocols (>= 0.4.0),
+ hyprwayland-scanner (>= 0.4.0),
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprsunset
+Vcs-Git: https://github.com/hyprwm/hyprsunset.git
+
+Package: hyprsunset
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: hyprsunset provides a blue light filter for your system
+ hyprsunset is a small utility to provide a blue light filter for your system.
+ This method is preferred to screen shaders as it will not be
+ captured via recording / screenshots.
