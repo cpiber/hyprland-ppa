@@ -1,3 +1,19 @@
+hyprland-unstable (0.45.0~1ppa1+git202412102027-bb5c3f27) noble; urgency=medium
+
+  * Update to main bb5c3f27
+  * bb5c3f27 core/output: don't send enter too aggresively
+  * 0a27af8c crashreporter: avoid clang warning
+  * c106f454 CI/Nix: temporarily disable cross build
+  * 875b598a github: mention PR guidelines in the template
+  * 8bbeee11 core: Add clang-tidy (#8664)
+  * b1e5cc66 core: Add support for hyprqtutils' update screen (#8651)
+  * 5ff02902 snap: use the bit mask to check if snapping occurred
+    (#8659)
+  * cccca7c0 renderer: drop requesting OUT_FENCE_PTR
+  * 10a4365f Nix: create TAG info from version
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Dec 2024 20:27:40 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202412052127-a7a6eedc) noble; urgency=medium
 
   * Update to main a7a6eedc
