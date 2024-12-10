@@ -72,6 +72,12 @@ Recommends:
 Suggests:
  hyprland-plugin-deps,
  hyprland-docs,
+ hypridle,
+ hyprlock,
+ hyprpaper,
+ hyprpicker,
+ hyprsunset,
+ hyprsysteminfo,
 Description: Hyprland is a dynamic tiling Wayland compositor
  Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
  It provides the latest Wayland features, is highly customizable, has all the eyecandy, the most powerful plugins, easy IPC, much more QoL stuff than other wlr-based compositors and more...
