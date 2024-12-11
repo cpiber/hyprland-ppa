@@ -91,3 +91,6 @@
 [submodule "polkit-qt-1/source"]
 	path = polkit-qt-1/source
 	url = https://invent.kde.org/libraries/polkit-qt-1.git
+[submodule "hyprpolkitagent/source"]
+	path = hyprpolkitagent/source
+	url = https://github.com/hyprwm/hyprpolkitagent.git

@@ -1,0 +1,34 @@
+Source: hyprpolkitagent
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ gcc-14,
+ g++-14,
+ pkgconf,
+ libhyprutils-dev,
+ libpolkit-qt6-1-dev,
+ libpolkit-agent-1-dev,
+ qt6-base-dev,
+ qt6-base-private-dev,
+ qt6-declarative-dev,
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprpolkitagent
+Vcs-Git: https://github.com/hyprwm/hyprpolkitagent.git
+
+Package: hyprpolkitagent
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ qml6-module-qtquick-controls,
+ qml6-module-qtquick-layouts,
+ qml6-module-qtquick-templates,
+ qml6-module-qtqml-workerscript,
+Description: hyprpolkitagent is a polkit authentication daemon
+ It is required for GUI applications to be able to request elevated privileges.

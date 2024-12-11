@@ -1,0 +1,5 @@
+hyprpolkitagent
+-------------------------
+
+hyprpolkitagent is a polkit authentication daemon. It is required for GUI applications to be able to request elevated privileges.
+
