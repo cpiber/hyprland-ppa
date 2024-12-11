@@ -1,0 +1,268 @@
+polkit-qt-1 (0.200.0-4ppa1) noble; urgency=medium
+
+  * Backport polkit-qt6-1 from oracular to noble
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 11 Dec 2024 14:05:46 +0100
+
+polkit-qt-1 (0.200.0-4) unstable; urgency=medium
+
+  * Reupload source-only so the package can migrate to testing.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 07 Jun 2024 22:49:56 +0200
+
+polkit-qt-1 (0.200.0-3) unstable; urgency=medium
+
+  * Rebuild against the latest version of Qt6 that drop the t64 suffix
+    for most of its libraries.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 07 Jun 2024 22:11:31 +0200
+
+polkit-qt-1 (0.200.0-2) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * Added myself to the uploaders.
+  * Also build qt6 libraries.
+  * Activate build hardening flags.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Thu, 18 Apr 2024 09:06:06 +0200
+
+polkit-qt-1 (0.200.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update the build dependencies according to the upstream build system:
+    - bump libglib2.0-dev to 2.36
+  * Update standards version to 4.6.2, no changes needed.
+  * Update symbols file.
+  * Switch the obsolete pkg-config build dependency to pkgconf.
+  * Remove inactive Uploaders, adding myself as one to avoid leaving the source
+    with no human maintainers.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 24 Feb 2024 07:01:56 +0100
+
+polkit-qt-1 (0.114.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update the build dependencies according to the upstream build system:
+    - bump cmake to 3.11
+    - bump Qt to 5.5.0
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper-compat build dependency to 13
+  * Bump Standards-Version to 4.6.0, no changes required.
+  * Small update of copyright.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 28 Aug 2021 08:19:35 +0200
+
+polkit-qt-1 (0.113.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release:
+    - fixes QDBusArgument warnings (Closes: #945528)
+  * Add the upstream GPG signing key.
+  * Update the patches:
+    - upstream_Do_not_use_static_instancebus.patch: drop, backported from
+      upstream
+    - upstream_fix-build-with-Qt4-which-doesn-t-have-QStringLiteral.patch:
+      drop, backported from upstream
+  * Stop passing -DUSE_QT5=True to cmake, as it is no more needed now.
+  * Update symbols file.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 22 Jul 2020 16:50:23 +0200
+
+polkit-qt-1 (0.112.0-8) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexander Volkov ]
+  * Update watch file.
+
+  [ Scarlett Moore ]
+  * Add salsa ci config file with team defaults.
+
+  [ Pino Toscano ]
+  * Drop the 'testsuite' autopkgtest, as it does not test the installed
+    packages.
+  * Remove unused DEB_HOST_MULTIARCH variable in rules.
+  * Switch from dhmk to the dh sequencer:
+    - call the right debhelper command instead of $(overridden_command)
+  * Use DEB_CFLAGS_MAINT_APPEND & DEB_CXXFLAGS_MAINT_APPEND to append the
+    visibility build flags, instead of setting CFLAGS & CXXFLAGS directly.
+  * Explicitly add the libglib2.0-dev, and pkg-config.
+  * Switch the debhelper build dependency to debhelper-compat
+    - remove debian/compat
+  * Use https://invent.kde.org/libraries/polkit-qt-1 for Homepage/Source
+    references.
+  * Bump Standards-Version to 4.5.0, no changes required.
+  * Add Rules-Requires-Root: no.
+  * Remove the dh_missing override, as --list-missing is the default in
+    debhelper compat 12.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 20 Jul 2020 11:53:27 +0200
+
+polkit-qt-1 (0.112.0-7.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Apply patch from Mark Hindley to Use new logind virtual packages
+    instead of libpam-systemd (Closes: #925344)
+
+ -- Thorsten Glaser <tg@mirbsd.de>  Wed, 09 Oct 2019 19:22:38 +0200
+
+polkit-qt-1 (0.112.0-7) unstable; urgency=medium
+
+  * Teamp upload.
+  * Drop Qt 4 support (Closes: #875092). Work heavily based in Moritz
+    Mühlenhoff's patch.
+  * Bump debhelper compatibility to 12.
+    - Pass --list-missing to dh_missing.
+  * Bump Standards-Version to 4.4.0, no changes required.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 31 Aug 2019 16:24:32 -0300
+
+polkit-qt-1 (0.112.0-6) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * Drop automoc build dependency.
+    Thanks to Александр Волков for reporting (Closes: 824125)
+  * Bump Standards-Version to 3.9.8
+  * Add symbolshelper header
+  * Update symbols files with the buildds logs.
+  * Update uploaders list as requested by MIA team (Closes: #879422)
+  * Update vcs fields
+
+  [ Pino Toscano ]
+  * Remove the consolekit alternative dependency: while it was already
+    available only on non-Linux architectures for a while, somebody
+    unilaterally decided to remove it altogether from the archive (#911416).
+  * Do not install README, README.porting, and TODO anymore as documentation
+    of libpolkit-qt-1-dev, since they have little to no value for users.
+  * Bump the debhelper compatibility to 11:
+    - bump the debhelper build dependency to 11~
+    - bump compat to 11
+  * Add Build-Depends-Package in the symbols file of libpolkit-qt5-1-1.
+  * Use https for Format in copyright.
+  * Remove extra XS-Testsuite header in control, now added automatically.
+  * Bump Standards-Version to 4.2.1, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 08 Nov 2018 07:34:04 +0100
+
+polkit-qt-1 (0.112.0-5) unstable; urgency=medium
+
+  * Apply the same Depends used in libpolkit-qt-1-1. (Closes: #800666)
+    Thanks to Michael Biebl
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 04 Mar 2016 09:52:15 +0100
+
+polkit-qt-1 (0.112.0-4) unstable; urgency=medium
+
+  * Update symbols files for gcc5 compatibility. (Closes: #791734)
+    Thanks to Martin Michlmayr
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 08 Aug 2015 11:59:55 +0200
+
+polkit-qt-1 (0.112.0-3) unstable; urgency=medium
+
+  * Fix my previous systemd dependency. Thanks to Ansgar Burchardt.
+  * Update watch file.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 27 Jun 2015 12:01:52 +0200
+
+polkit-qt-1 (0.112.0-2) experimental; urgency=medium
+
+  * Add systemd as an alternative to the deprecated consolekit.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 25 Jan 2015 20:46:28 +0100
+
+polkit-qt-1 (0.112.0-1) experimental; urgency=low
+
+  [ Iain Lane ]
+  * Add Depends on consolekit, since we're using its D-Bus API.
+
+  [ Felix Geyer ]
+  * Convert package to multiarch, based on a patch from Daniel Schaal.
+    (Closes: #636067)
+  * Bump Standards-Version to 3.9.4, no changes needed.
+  * Add watch file, thanks to Bart Martens.
+
+  [ Pino Toscano ]
+  * Simplify watch file.
+  * Bump priority from extra to optional.
+  * Fix Vcs-* headers.
+
+  [ Maximiliano Curia ]
+  * New upstream release (0.112.0).
+  * Bump debhelper compat and build dep to 9.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * Add myself as Uploader.
+  * Add Homepage field.
+  * Add qt5 packages.
+  * Update install files.
+  * Update watch file.
+  * Set rules to build the source twice.
+  * Update copyright information.
+  * Add basic autopkgtests support.
+  * Update symbols files.
+  * Update build dependencies to follow cmake.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 25 Jan 2015 18:52:37 +0100
+
+polkit-qt-1 (0.103.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - fix annoying crash on shutdown. (Closes: #651815)
+
+  [ Felix Geyer ]
+  * Modify CFLAGS/CXXFLAGS after including debian-qt-kde.mk so the changes are
+    not overwritten.
+
+  [ Fathi Boudra ]
+  * Update debian/compat: bump to 8.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 14 Dec 2011 09:15:10 -0500
+
+polkit-qt-1 (0.99.0-3) unstable; urgency=low
+
+  [ Modestas Vainius ]
+  * Update symbol files.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 26 May 2011 00:31:01 +0300
+
+polkit-qt-1 (0.99.0-2) experimental; urgency=low
+
+  * Bump Standards-Version to 3.9.2: no changes needed.
+  * Build library with -fvisibility=hidden -fvisibility-inlines-hidden.
+  * Update symbol file: many private symbols are gone due to above.
+
+ -- Modestas Vainius <modax@debian.org>  Thu, 28 Apr 2011 11:53:35 +0300
+
+polkit-qt-1 (0.99.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+  [ Modestas Vainius ]
+  * Add Vcs fields to debian/control.
+  * Switch debian/rules engine to qt-kde-team/2/*.
+  * Bump Standards-Version to 3.9.1: no changes needed.
+  * Remove dupe "Section" field from debian/control.
+  * Include verbatim BSD license to debian/copyright.
+  * Override lintian libpolkit-qt-1-0: package-name-doesnt-match-sonames.
+  * Use more failsafe wildcards in libpolkit-qt-1-0.install.
+  * Add myself to Uploaders.
+  * SONAME bumped: rename libpolkit-qt-1-0 to libpolkit-qt-1-1.
+  * Add symbol file for libpolkit-qt-1-1.
+  * Update debian/copyright.
+
+  [ Didier Raboud ]
+  * Bump B-D of libpolkit to >= 0.98.
+
+  [ José Manuel Santamaría Lema ]
+  * Update installed files.
+
+ -- Modestas Vainius <modax@debian.org>  Mon, 14 Mar 2011 01:03:06 +0200
+
+polkit-qt-1 (0.95.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #565395)
+
+ -- Fathi Boudra <fabo@debian.org>  Fri, 15 Jan 2010 12:50:13 +0100

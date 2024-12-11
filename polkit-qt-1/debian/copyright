@@ -1,0 +1,66 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: polkit-qt-1
+Source: https://invent.kde.org/libraries/polkit-qt-1
+
+Files: *
+Copyright: 2009, Daniel Nicoletti <dantti85-pk@yahoo.com.br>
+           2009-2010, Dario Freddi <drf@kde.org>
+           2007, David Faure <faure@kde.org>
+           2009, Jaroslav Reznik <jreznik@redhat.com>
+           2009, Lukas Tinkl <ltinkl@redhat.com>
+           2009, Radek Novacek <rnovacek@redhat.com>
+           2007, Sebastian Trueg <trueg@kde.org>
+License: LGPL-2+
+
+Files: examples/*
+Copyright: 2009, Daniel Nicoletti
+           2008, Daniel Nicoletti <dantti85-pk@yahoo.com.br>
+           2009, Jaroslav Reznik
+           2009, Radek Novacek <rnovacek@redhat.com>
+License: GPL-2+
+
+Files: examples/agent/klistener.cpp
+       examples/agent/klistener.h
+Copyright: 2009, Jaroslav Reznik <jreznik@redhat.com>
+License: LGPL-2+
+
+Files: debian/*
+Copyright: 2010, Fathi Boudra <fabo@debian.org>
+           2011, Modestas Vainius <modax@debian.org>
+License: GPL-2+
+
+License: LGPL-2+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; either version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program; if not, write to the Free Software Foundation, Inc., 51
+ Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2'.

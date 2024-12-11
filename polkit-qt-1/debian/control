@@ -1,0 +1,100 @@
+Source: polkit-qt-1
+Section: libs
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Pino Toscano <pino@debian.org>,
+           Constantin Piber <cp.piber@gmail.com>,
+Build-Depends: cmake (>= 3.11.0~),
+               debhelper-compat (= 13),
+               libglib2.0-dev (>= 2.36),
+               libpolkit-agent-1-dev (>= 0.98),
+               libpolkit-gobject-1-dev (>= 0.98),
+               libxkbcommon-dev (>= 0.5.0~),
+               pkgconf,
+               pkg-kde-tools (>= 0.11),
+               qt6-base-dev,
+               qtbase5-dev (>= 5.5.0~),
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: https://invent.kde.org/libraries/polkit-qt-1
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/extras/polkit-qt-1
+Vcs-Git: https://salsa.debian.org/qt-kde-team/extras/polkit-qt-1.git
+
+Package: libpolkit-qt5-1-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libpolkit-qt5-1-1 (= ${binary:Version}), qtbase5-dev, ${misc:Depends}
+Description: PolicyKit-qt5-1 development files
+ PolicyKit is an application-level toolkit for defining and handling the policy
+ that allows unprivileged processes to speak to privileged processes.
+ .
+ It is a framework for centralizing the decision making process with respect to
+ granting access to privileged operations (like calling the HAL Mount() method)
+ for unprivileged (desktop) applications.
+ .
+ libpolkit-qt5-1 provides convenience classes and methods for Qt 5/KDE
+ applications that want to use PolicyKit-1.
+ .
+ This package contains the development libraries and headers for the Qt 5
+ version.
+
+Package: libpolkit-qt5-1-1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ default-logind [linux-any] | logind [linux-any]
+Description: PolicyKit-qt5-1 library
+ PolicyKit is an application-level toolkit for defining and handling the policy
+ that allows unprivileged processes to speak to privileged processes.
+ .
+ It is a framework for centralizing the decision making process with respect to
+ granting access to privileged operations (like calling the HAL Mount() method)
+ for unprivileged (desktop) applications.
+ .
+ libpolkit-qt5-1 provides convenience classes and methods for Qt 5/KDE
+ applications that want to use PolicyKit.
+ .
+ This package contains the files necessary for running applications that use
+ the libpolkit-qt5-1 library.
+
+Package: libpolkit-qt6-1-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libpolkit-qt6-1-1 (= ${binary:Version}), qt6-base-dev, ${misc:Depends}
+Description: PolicyKit-qt6-1 development files
+ PolicyKit is an application-level toolkit for defining and handling the policy
+ that allows unprivileged processes to speak to privileged processes.
+ .
+ It is a framework for centralizing the decision making process with respect to
+ granting access to privileged operations (like calling the HAL Mount() method)
+ for unprivileged (desktop) applications.
+ .
+ libpolkit-qt6-1 provides convenience classes and methods for Qt 6/KDE
+ applications that want to use PolicyKit-1.
+ .
+ This package contains the development libraries and headers for the Qt 6
+ version.
+
+Package: libpolkit-qt6-1-1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ default-logind [linux-any] | logind [linux-any]
+Description: PolicyKit-qt6-1 library
+ PolicyKit is an application-level toolkit for defining and handling the policy
+ that allows unprivileged processes to speak to privileged processes.
+ .
+ It is a framework for centralizing the decision making process with respect to
+ granting access to privileged operations (like calling the HAL Mount() method)
+ for unprivileged (desktop) applications.
+ .
+ libpolkit-qt6-1 provides convenience classes and methods for Qt 6/KDE
+ applications that want to use PolicyKit.
+ .
+ This package contains the files necessary for running applications that use
+ the libpolkit-qt6-1 library.

@@ -88,3 +88,6 @@
 [submodule "hyprpicker/source"]
 	path = hyprpicker/source
 	url = https://github.com/hyprwm/hyprpicker.git
+[submodule "polkit-qt-1/source"]
+	path = polkit-qt-1/source
+	url = https://invent.kde.org/libraries/polkit-qt-1.git

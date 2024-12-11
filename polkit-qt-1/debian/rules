@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+export DEB_CFLAGS_MAINT_APPEND = -fvisibility=hidden -fvisibility-inlines-hidden
+export DEB_CXXFLAGS_MAINT_APPEND = -fvisibility=hidden -fvisibility-inlines-hidden
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure
+	dh_auto_configure --builddirectory=build-qt6 -- -DQT_MAJOR_VERSION=6
+
+override_dh_auto_build:
+	dh_auto_build
+	dh_auto_build --builddirectory=build-qt6
+
+override_dh_auto_test:
+	dh_auto_test
+	dh_auto_test --builddirectory=build-qt6
+
+override_dh_auto_install:
+	dh_auto_install
+	dh_auto_install --builddirectory=build-qt6
