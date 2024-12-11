@@ -1,3 +1,11 @@
+hyprland-qtutils (0.1.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.1
+  * ddfb590 version: bump to 0.1.1
+  * b5b415a all: unify dialog handling
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 11 Dec 2024 18:40:43 +0100
+
 hyprland-qtutils (0.1.0-1ppa1) noble; urgency=medium
 
   * Initial release.
