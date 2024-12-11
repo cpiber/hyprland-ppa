@@ -1,3 +1,9 @@
+hyprsysteminfo (0.1.0-1ppa2) noble; urgency=medium
+
+  * Add missing runtime dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 11 Dec 2024 14:26:54 +0100
+
 hyprsysteminfo (0.1.0-1ppa1) noble; urgency=medium
 
   * Initial release.
