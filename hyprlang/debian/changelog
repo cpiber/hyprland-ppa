@@ -1,3 +1,11 @@
+hyprlang (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * 1b0c595 version: bump to 0.6.0
+  * 058fcf8 API: add a templated config value wrapper
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 13 Dec 2024 22:00:23 +0100
+
 hyprlang (0.5.3-1ppa3) noble; urgency=medium
 
   * Rebuild for renamed deps
