@@ -1,3 +1,15 @@
+aquamarine (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * 9441860 version: bump to 0.5.1
+  * 9fc2d8e drm: allow multigpu blit from explicit to implicit (#114)
+  * 1af9816 drm: clearer flow when rescanning connectors (#113)
+  * 7dea26b buffer: remove useless forward def
+  * 4468981 drm: Validate conn before dereference in
+    CDRMAtomicRequest::commit() (#108)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 14 Dec 2024 10:03:32 +0100
+
 aquamarine (0.5.0-1ppa2) noble; urgency=medium
 
   * Rebuild for renamed deps
