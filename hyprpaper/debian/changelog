@@ -1,3 +1,23 @@
+hyprpaper (0.7.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.2
+  * 5b763f1 version: bump to 0.7.2
+  * 85e850b Core: modernize internals (#219)
+  * a3ceb20 README: add hyprgraphics dep
+  * b3ee62f Core: Move to hyprgraphics for image parsing (#216)
+  * 11d9144 cmake: drop # from commit messages
+  * 0b5e350 core: use C++ streams to load Jpeg and Webp (#214)
+  * dbea6cd core: Add support for JPEG-XL (#212)
+  * 3f8cc92 Add systemd service (#208)
+  * e6e5c47 core: add tile as an image mode (#207)
+  * 1c18ad6 flake.lock: update
+  * 36e83af nix: add pkg-config to depsBuildBuild
+  * 6c6e54f CMakeLists: look for wayland.xml protocol in wayland-scanner
+    pkgdata
+  * 91e17e1 CMakeLists: require native hyprwayland-scanner
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 14 Dec 2024 16:14:10 +0100
+
 hyprpaper (0.7.1-1ppa1) noble; urgency=medium
 
   * Initial release.

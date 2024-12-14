@@ -7,6 +7,8 @@ Build-Depends:
  debhelper-compat (= 13),
  cmake,
  pkgconf,
+ gcc-14,
+ g++-14,
  libgles-dev,
  libgl1-mesa-dev,
  libwayland-dev,
@@ -15,9 +17,11 @@ Build-Depends:
  libpango1.0-dev,
  libjpeg-dev,
  libwebp-dev,
+ libjxl-dev,
  libmagic-dev,
- libhyprlang-dev (>= 0.2.0),
- libhyprutils-dev (>= 0.2.0),
+ libhyprgraphics-dev,
+ libhyprlang-dev (>= 0.6.0),
+ libhyprutils-dev (>= 0.2.4),
  hyprwayland-scanner (>= 0.4.0),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org

@@ -1,0 +1,16 @@
+Description: Remove dependency on libjxl_cms
+ On Ubuntu, we don't yet have CMS separated in its own library
+Author: Constantin Piber <cp.piber@gmail.com>
+
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -61,7 +61,6 @@ pkg_check_modules(
+   libjpeg
+   libwebp
+   libjxl
+-  libjxl_cms
+   libjxl_threads
+   hyprlang>=0.6.0
+   hyprutils>=0.2.4
