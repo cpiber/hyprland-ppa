@@ -1,3 +1,14 @@
+hyprland-plugins (0.46.0~1ppa1+git202412171826-179fab7) noble; urgency=medium
+
+  * Update to main 179fab7
+  * 179fab7 flake.nix: overlay mkHyprlandPlugin
+  * 424503d hyprpm: add pin for 0.46.1
+  * 3dcca4c hyprpm: update pin
+  * 17ef806 hyprbars: chase hyprland
+  * d39901f hyprpm: add pin for 0.46.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Dec 2024 18:26:30 +0100
+
 hyprland-plugins (0.45.0~1ppa1+git202412052214-2530394build1) noble; urgency=medium
 
   * Rebuild for unstable
