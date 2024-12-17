@@ -1,3 +1,11 @@
+hyprland (0.46.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.46.1
+  * 254fc2bc version: bump to 0.46.1
+  * 42886201 windowrules: fixup duplicate rule enum tags
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Dec 2024 18:21:41 +0100
+
 hyprland (0.46.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.46.0
