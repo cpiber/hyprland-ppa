@@ -1,3 +1,15 @@
+hyprscroller (0.46.0~1ppa1+git202412171833-e2deef4) noble; urgency=medium
+
+  * Update to master e2deef4
+  * e2deef4 commit pin
+  * 2ba52bd commit pin for Hyprland v0.46.1
+  * 9dc46c3 commit pin
+  * 3c5e2f7 Updates for Hyprland v0.46.0
+  * 9f7d9d7 Merge pull request #90 from cpiber/chase-hyprland
+  * 4042199 CColor -> CHyprColor
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Dec 2024 18:33:44 +0100
+
 hyprscroller (0.45.0~1ppa1+git202412102043-a584f3a) noble; urgency=medium
 
   * Update to master a584f3a
