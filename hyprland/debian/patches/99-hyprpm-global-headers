@@ -7,9 +7,9 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 ===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -358,6 +358,9 @@ bool CPluginManager::removePluginRepo(co
+@@ -373,6 +373,9 @@ bool CPluginManager::removePluginRepo(co
  eHeadersErrors CPluginManager::headersValid() {
-     const auto HLVER = getHyprlandVersion();
+     const auto HLVER = getHyprlandVersion(false);
  
 +    if (std::filesystem::exists("/usr/share/pkgconfig/hyprland.pc"))
 +        return HEADERS_OK;
@@ -17,7 +17,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
          return HEADERS_MISSING;
  
-@@ -430,6 +433,13 @@ bool CPluginManager::updateHeaders(bool
+@@ -445,6 +448,13 @@ bool CPluginManager::updateHeaders(bool
          std::filesystem::permissions(getTempRoot(), std::filesystem::perms::owner_all, std::filesystem::perm_options::replace);
      }
  

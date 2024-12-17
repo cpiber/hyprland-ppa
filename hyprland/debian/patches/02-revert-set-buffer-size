@@ -7,7 +7,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -121,7 +121,7 @@ pkg_check_modules(
+@@ -119,7 +119,7 @@ pkg_check_modules(
    IMPORTED_TARGET
    xkbcommon
    uuid
@@ -20,7 +20,7 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -257,7 +257,7 @@ void CCompositor::initServer(std::string
+@@ -259,7 +259,7 @@ void CCompositor::initServer(std::string
          Debug::trace = true;
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while

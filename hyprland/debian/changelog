@@ -1,3 +1,48 @@
+hyprland-unstable (0.46.0~1ppa1+git202412170907-7ae79205) noble; urgency=medium
+
+  * Update to main 7ae79205
+  * 7ae79205 flake.lock: update (#8742)
+  * 4b6163ae windowrules: fixup duplicate rule enum tags
+  * 788ae588 version: bump to 0.46.0
+  * bba2d9a1 versionkeeper: init version to 0.0.0 if no file is present
+  * e340e9f4 nix/meson: add re2 dependency (#8738)
+  * c2d14a20 opengl: fixup missed /4 in oklab parsing
+  * 95cdedee windowrules: fix prop rules with boolean values
+  * 0706c1a1 layerrules: fix ignorezero not working
+  * aecf1abd opengl: fixup invalid ogl uniform reads
+  * b9f82e99 animationmgr: fixup stack-use-after-return
+  * e06b5204 core: Move regex from stdlib to re2 (#8736)
+  * dab50b3e core: Optimize window/layer rule application and scanning
+    (#8735)
+  * eaac5c7c flake.lock: update
+  * a5234f26 core: drop using deques in favor of vectors
+  * de3ad245 input: add warp_back_after_non_mouse_input
+  * db249648 xwayland: Support cross DnD from Wayland (#8708)
+  * 9f7a96b9 core/data: Use pointer focus for DnD operations (#8707)
+  * 3cba4ba4 hyprctl: avoid crash on null pwuid
+  * 8237627f compositor: fix monitor arrangement with mixed auto
+    directions
+  * 35e134e5 hyprctl: add an inhibitingIdle field to windows
+  * 452a7e69 dispatchers: Add an option to prioritize focus change
+    within groups with movefocus  (#8601)
+  * 61a51bb4 snap: bias reserved area when its size is greater than zero
+    (#8694)
+  * aefaeedf data-device: fixup wrong box expansion
+  * cef5e6dd layersurface: use lastMonitor and not monitor from cursor
+    for new ls
+  * 7c03e9d3 core/data-device: expand damage region to fix minor px
+    errors
+  * df956a0f windowrules: add rules for mouse and touchpad scroll
+    factors (#8655)
+  * 33f271c2 hyprpm: target installed instead of running version (#8634)
+  * e8923109 workspace: update hasFullscreenWindow in updateWindows
+  * 4d05677e config: add 'force' option for
+    'cursor:warp_on_change_workspace' (#8681)
+  * c16044a5 core: Fix workspace selector parsing (#8687)
+  * d94d8b4a windows: allow replacing existing fullscreen (#8566)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Dec 2024 09:07:19 +0100
+
 hyprland-unstable (0.45.0~1ppa1+git202412102027-bb5c3f27) noble; urgency=medium
 
   * Update to main bb5c3f27

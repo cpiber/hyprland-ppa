@@ -30,6 +30,7 @@ Build-Depends:
  libxcb-errors-dev,
  libxcursor-dev,
  libtomlplusplus-dev,
+ libre2-dev,
  libhyprlang-dev (>= 0.3.2),
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev (>= 0.2.0),
