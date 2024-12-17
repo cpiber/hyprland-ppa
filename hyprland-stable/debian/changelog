@@ -1,3 +1,159 @@
+hyprland (0.46.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.46.0
+  * 788ae588 version: bump to 0.46.0
+  * bba2d9a1 versionkeeper: init version to 0.0.0 if no file is present
+  * e340e9f4 nix/meson: add re2 dependency (#8738)
+  * c2d14a20 opengl: fixup missed /4 in oklab parsing
+  * 95cdedee windowrules: fix prop rules with boolean values
+  * 0706c1a1 layerrules: fix ignorezero not working
+  * aecf1abd opengl: fixup invalid ogl uniform reads
+  * b9f82e99 animationmgr: fixup stack-use-after-return
+  * e06b5204 core: Move regex from stdlib to re2 (#8736)
+  * dab50b3e core: Optimize window/layer rule application and scanning
+    (#8735)
+  * eaac5c7c flake.lock: update
+  * a5234f26 core: drop using deques in favor of vectors
+  * de3ad245 input: add warp_back_after_non_mouse_input
+  * db249648 xwayland: Support cross DnD from Wayland (#8708)
+  * 9f7a96b9 core/data: Use pointer focus for DnD operations (#8707)
+  * 3cba4ba4 hyprctl: avoid crash on null pwuid
+  * 8237627f compositor: fix monitor arrangement with mixed auto
+    directions
+  * 35e134e5 hyprctl: add an inhibitingIdle field to windows
+  * 452a7e69 dispatchers: Add an option to prioritize focus change
+    within groups with movefocus  (#8601)
+  * 61a51bb4 snap: bias reserved area when its size is greater than zero
+    (#8694)
+  * aefaeedf data-device: fixup wrong box expansion
+  * cef5e6dd layersurface: use lastMonitor and not monitor from cursor
+    for new ls
+  * 7c03e9d3 core/data-device: expand damage region to fix minor px
+    errors
+  * df956a0f windowrules: add rules for mouse and touchpad scroll
+    factors (#8655)
+  * 33f271c2 hyprpm: target installed instead of running version (#8634)
+  * e8923109 workspace: update hasFullscreenWindow in updateWindows
+  * 4d05677e config: add 'force' option for
+    'cursor:warp_on_change_workspace' (#8681)
+  * c16044a5 core: Fix workspace selector parsing (#8687)
+  * d94d8b4a windows: allow replacing existing fullscreen (#8566)
+  * bb5c3f27 core/output: don't send enter too aggresively
+  * 0a27af8c crashreporter: avoid clang warning
+  * c106f454 CI/Nix: temporarily disable cross build
+  * 875b598a github: mention PR guidelines in the template
+  * 8bbeee11 core: Add clang-tidy (#8664)
+  * b1e5cc66 core: Add support for hyprqtutils' update screen (#8651)
+  * 5ff02902 snap: use the bit mask to check if snapping occurred
+    (#8659)
+  * cccca7c0 renderer: drop requesting OUT_FENCE_PTR
+  * 10a4365f Nix: create TAG info from version
+  * a7a6eedc core: move version include to hyprctl
+  * 888bdf4e hyprctl: add directScanout to hyprctl monitors
+  * ceef4fb3 core: feeling a bit quirky today.
+  * 22f7d6f1 core: add a few festive splashes
+  * f9e4998a snap: check which corner is being grabbed for monitor
+    snapping (#8637)
+  * 3c617ce3 internal: fixup some missed updateColorsOk() calls
+  * f6ac755c cleanup: Revert use doLater instead of adding idle event
+    handlers (#8624)
+  * 320144ae core: move colorspace handling to oklab (#8635)
+  * 92186898 version: add link versions for other utils (#8619)
+  * 10a9fec7 master: make center ignore reserved areas (#8625)
+  * 6d754445 cleanup: use doLater instead of adding idle event handlers
+    (#8624)
+  * d26439a0 nix: update flake
+  * ef6b0c81 cleanup: remove leftover var in ThreadManager.cpp (#8611)
+  * 8f83d29f renderer: restore discard mode after IME render pass
+  * 22bf2853 hyprpm: fix incomplete unmet dependencies message
+  * 5963970b descriptions: change allow_pin_fullscreen value to false
+    (#8592)
+  * 8b51eeb7 core: fix compilation outside stdlibc++
+  * 5329298b sessionLock: don't send motion events on every surface
+    commit (#8584)
+  * e9a7fb8f renderer: fix incorrect early return (#8590)
+  * 1fb720b6 seat: fix double scrolling in some applications (#8583)
+  * 26877882 hyprctl: verify runtime dir exists in instances()
+  * 0ddb952d hyprland-uwsm.desktop: Just reference plain entry (#8553)
+  * 1930a950 shm: fix shm fd size check before creating or resizing
+    shm_pool (#8572)
+  * cc38e7e1 config: don't overwrite errors in gradients
+  * 55ec8bd5 config: throw an error explicitly when parsing colors in
+    gradients
+  * 54f57797 snap: account for position of multiple monitors (#8543)
+  * 65f66dcf binds: add option to allow fullscreening a pinned window
+    (#8526)
+  * 451d7a41 renderer: add option to blur IME popups (#8521)
+  * 00d6261c hyprpm: move temp files to XDG_RUNTIME_DIR
+  * 745a82ce core: workspace-related function cleanup / refactor
+  * a847bc67 monitor: fix default focus when switching to a fs workspace
+  * b1003445 keybinds: actually suppress internal keybinds instead of
+    passing them along (#8538)
+  * 943b3d46 bezier: optimize setup of bezier curves (#8528)
+  * 940f7aa9 renderer: fixup blur optimization considitons
+  * e5fa0171 internal: fix some misused configStringToInt conversions
+  * c4eda46d xdg-shell: even more robust layout min/max size
+  * aa067a4c xdg-shell: don't report invalid min/max sizes on unset
+  * 67cee430 internal: minor cleanups for color results
+  * 47a1650c miscfunctions: move configStringToInt to std::expected
+  * 936dfedb keybinds: move to managed pointers
+  * 6113f4da keybinds: allow repeating multiple binds (#8290)
+  * cc923ad0 config: update the configStringToInt implementation (#8476)
+  * df9ff448 Fix example config name in auto-generated cfg header
+    (#8509)
+  * 97493511 internal: fix changeWindowZOrder reordering incorrectly
+    (#8494)
+  * 505c1f8f miscfunctions: fix cross build
+  * 6744bb57 constraints: don't warp pointer position on release (#8491)
+  * 2259a885 miscfunctions: add missing include
+  * 1ba050d6 shell: propagate new machanism from hyprctl to
+    miscfunctions
+  * e8717a4f shell: don't use fgrep, prefer grep -F
+  * 9b033076 hooks: add pre connected/disconnected monitor events
+    (#8503)
+  * b735295d windows/xdg: minor cleanup of min/max size calculations
+  * 8d5cdedb hyprpm: fix format crash
+  * 4f591e80 renderer: simplify blur enabling logic
+  * fb91c255 renderer: don't render unmapped popups
+  * 0ddbd1c3 renderer: add lockdead_screen_delay (#8467)
+  * af83c825 hyprctl: add json output on hyprctl -j plugins list (#8480)
+  * 9d37b1b0 workspacerules: Do not check 'on-created-empty' if using a
+    workspace windowrule (#8486)
+  * cf18eca8 [gha] Nix: update inputs
+  * ec1e6be0 core: guard pmonitor in focuswindow
+  * 83be2480 workspace: fix missing name via
+    focusworkspaceoncurrentmonitor (#8484)
+  * 7affc34a bind: new long press option (#8302)
+  * 098e491a protocols: mark primarySelection as not privileged
+  * 967fe76a drm: enable explit out fence in AQ (#8431)
+  * 940ed3d5 xcursors: store themes in a std:set to order it (#8474)
+  * 6f7280a6 descriptions: add use_cpu_buffer
+  * 20031cea pointer: add drm dumb buffers for cursors (#8399)
+  * 3fb47372 flake.lock: update
+  * bb160cfe makefile: add stub to discourage direct make
+  * a29cfa78 logging: Add some context to config error logs (#8326)
+  * f5fa8455 config: Changed the default value of
+    decoration:blur:ignore_opacity to true (#8418)
+  * b88e4a1a Nix: disable uwsm desktop file installation
+  * ff411658 Lock uwsm desktop file behind feature flag
+  * 943c7d18 meson: autodetect systemd
+  * ccfae82a rename hyprland-systemd.desktop and remove hyprland-
+    session.service
+  * 430b5c30 systemd: hyprland-systemd.desktop -> hyprland-uwsm.desktop
+  * 8fa4cfb7 keybinds: don't animate fullscreen size/pos changes coming
+    in
+  * a551f85b renderer: scaled surfaces could have zero area (#8423)
+  * 07052a51 pointer: map devices across all outputs by default (#8352)
+  * 1fa0cd7a debug: clean up fetching of the contents of /proc/device-
+    tree (#8413)
+  * c10739e6 core: fixup execAndGet
+  * 9e628067 debug: clean up opening of files in HyprCtl (#8401)
+  * 99b01c5d hyprpm: fix format
+  * a8ff3a45 core: move to os/Process from hyprutils
+  * dca75db1 defaultConfig: fixup smart gaps rules
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Dec 2024 08:52:18 +0100
+
 hyprland (0.45.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.45.2

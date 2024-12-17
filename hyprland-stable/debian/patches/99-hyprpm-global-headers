@@ -3,11 +3,13 @@ Description: Find global headers
  a separate clone.
 Author: Constantin Piber <cp.piber@gmail.com>
 
---- hyprland-unstable-0.40.0~1ppa3+git202406050915.orig/hyprpm/src/core/PluginManager.cpp
-+++ hyprland-unstable-0.40.0~1ppa3+git202406050915/hyprpm/src/core/PluginManager.cpp
-@@ -349,6 +349,9 @@ bool CPluginManager::removePluginRepo(co
+Index: source/hyprpm/src/core/PluginManager.cpp
+===================================================================
+--- source.orig/hyprpm/src/core/PluginManager.cpp
++++ source/hyprpm/src/core/PluginManager.cpp
+@@ -373,6 +373,9 @@ bool CPluginManager::removePluginRepo(co
  eHeadersErrors CPluginManager::headersValid() {
-     const auto HLVER = getHyprlandVersion();
+     const auto HLVER = getHyprlandVersion(false);
  
 +    if (std::filesystem::exists("/usr/share/pkgconfig/hyprland.pc"))
 +        return HEADERS_OK;
