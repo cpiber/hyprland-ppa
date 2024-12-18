@@ -1,3 +1,37 @@
+hyprlock (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * 381a284 version: bump to 0.6.0
+  * fe35a80 core: terminate auth after recieving `finished` (#586)
+  * 61be0cb nix/overlays: gcc13 -> gcc14; flake.lock: update (#584)
+  * a4b0562 auth: add an interface for different authentication methods
+    (#578)
+  * 4681f8f input-field: fix width animations (#582)
+  * 8010b81 core: move to Hyprutils::OS::CProcess for spawning processes
+    (#575)
+  * cc7ffe7 renderer: round boxes (#571)
+  * 4667f72 Core: move to hyprgraphics (#570)
+  * 578246b config: use removeEmpty for the gradient varlist (#565)
+  * b9cf515 input-field: fix colorConfig caps, num and both when they
+    are empty (#559)
+  * d159e14 config: make configStringToInt support rgb(a) with decimal
+    values (#558)
+  * 2775ab2 widgets: render frambuffers with alpha 1.0 (#554)
+  * c3c28fe widget: show 12AM instead of 0AM
+  * eadcbc0 widget: fix time12 when it's 12pm
+  * d8bd25b core: add support for composed keys (#551)
+  * 6c3c444 core: add border shader and border gradients (#548)
+  * 4fc133c widgets: add support for specifing size and position options
+    via percentages of output dimensions (#541)
+  * 1cd3231 auth: make fingerprint initialization async (#544)
+  * f225e23 misc: make Debug::log flush stdout (#542)
+  * edbecc8 widgets: remove debug remnants from #527 (#532)
+  * 29dd33d widgets: check current_zone pointer (#527)
+  * ae3bb0f input-field: fix invert_numlock regression (#530)
+  * f13d97e config: make the default widget position be 0,0 (#529)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Dec 2024 16:07:11 +0100
+
 hyprlock (0.5.0-1ppa2) noble; urgency=medium
 
   * Non-maintainer upload.
