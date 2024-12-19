@@ -1,3 +1,26 @@
+xdg-desktop-portal-hyprland (1.3.9-1ppa1) noble; urgency=medium
+
+  * Update to release 1.3.9
+  * fa50ab3 version: bump to 1.3.9
+  * 3e884d9 flake.lock: update
+  * 7116c9f nix/overlays: gcc13 -> gcc14 (#305)
+  * 0c6861f config: add screencopy:custom_picker_binary
+  * fd85ef3 core: move to stable/linux-dmabuf-v1 instead of unstable
+    (#299)
+  * 8070f36 core: move to CProcess from hyprutils
+  * 09b23ce nix/overlays: fix attrset error
+  * 753a89a flake.lock: update
+  * 998f646 nix: overlays: default: change composition order
+  * fa0dcd7 nix: overlays: remove needless with
+  * 9c6084b nix: overlays: remove mkJoinedOverlays function
+  * 9c3a0ae gitignore: reorder and label sections
+  * 0698d72 gitignore: add nix result and result-man
+  * 33da30c nix: package: replace sdbus-cpp with sdbus-cpp_2
+  * 8b14505 flake: packages: export sdbus-cpp_2
+  * b15018f nix: overlays: replace sdbuscpp with sdbus-cpp_2
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Dec 2024 08:14:00 +0100
+
 xdg-desktop-portal-hyprland (1.3.8-1ppa2) noble; urgency=medium
 
   * Rebuild for renamed deps

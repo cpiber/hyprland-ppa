@@ -7,6 +7,8 @@ Build-Depends:
  debhelper-compat (= 13),
  cmake,
  meson,
+ gcc-14,
+ g++-14,
  pkgconf,
  qt6-base-dev,
  wayland-protocols,
@@ -18,7 +20,7 @@ Build-Depends:
  libgbm-dev,
  libsdbus-c++-dev (>= 2.0.0),
  libhyprlang-dev (>= 0.2.0),
- libhyprutils-dev,
+ libhyprutils-dev (>= 0.2.6),
  hyprwayland-scanner (>= 0.4.2),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
