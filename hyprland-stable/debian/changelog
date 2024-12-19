@@ -1,3 +1,21 @@
+hyprland (0.46.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.46.2
+  * 0bd541f2 version: bump to 0.46.2
+  * 23d00cdd layout: apply group rules after window creation (#8779)
+  * 061241d3 core: fix possible crash on null active workspace
+  * b9df70be hyprpm: fix hyrpm sometimes returning 0 despite errors
+    occuring (#8761)
+  * 9583429e core: Unbreak build on FreeBSD (#8762)
+  * 747c3811 xwayland: fix compile with no xwayland
+  * 508e8234 xwm: fixup targets in selection requests
+  * ec0a3830 xwayland: fix dnd including xwayland
+  * d0bffc4f core: avoid activating toplevel-less surfaces
+  * 07a19e2c hyprctl: Fix `hyprctl` batch JSON command (#8749)
+  * 46d5b363 windowrules: fixup duplicate rule enum tags
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Dec 2024 20:48:53 +0100
+
 hyprland (0.46.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.46.1
