@@ -1,3 +1,26 @@
+hyprland-unstable (0.46.0~1ppa1+git202412192056-fd67ee9e) noble; urgency=medium
+
+  * Update to main fd67ee9e
+  * fd67ee9e layout: apply group rules after window creation (#8779)
+  * bec18dc6 core: fix possible crash on null active workspace
+  * 5b714f05 internal: Make static analysis more happy (#8767)
+  * 7c43eed2 hyprpm: fix hyrpm sometimes returning 0 despite errors
+    occuring (#8761)
+  * 23e7d8f6 logging: fix Gpu info (#8764)
+  * df06cb4d core: Unbreak build on FreeBSD (#8762)
+  * 0fec38fe xwayland: fix compile with no xwayland
+  * 80a48522 xwm: fixup targets in selection requests
+  * 4c4471c6 xwayland: fix dnd including xwayland
+  * 6378c8ed core: avoid activating toplevel-less surfaces
+  * 49e5f9c4 logging: get broader GPUINFO (#8753)
+  * 5f1df55f hyprctl: Fix `hyprctl` batch JSON command (#8749)
+  * e2c78c00 internal: remove dead code (#8748)
+  * bd7092a9 binds: cycle within group on single monitor if no window
+    found in the argument direction. (#8714)
+  * c7d97199 flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Dec 2024 20:56:58 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202412170907-7ae79205) noble; urgency=medium
 
   * Update to main 7ae79205
