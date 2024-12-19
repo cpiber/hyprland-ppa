@@ -1,3 +1,11 @@
+hyprland-plugins (0.46.0~1ppa1+git202412192101-b8293c3) noble; urgency=medium
+
+  * Update to main b8293c3
+  * b8293c3 hyprpm: add pin for 0.46.2
+  * 2bfda39 hyprbars: manually detect pointer focus
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Dec 2024 21:01:06 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202412171826-179fab7) noble; urgency=medium
 
   * Update to main 179fab7
