@@ -1,3 +1,13 @@
+hyprscroller (0.46.0~1ppa1+git202412202147-e5416f9) noble; urgency=medium
+
+  * Update to master e5416f9
+  * e5416f9 commit pin
+  * af08f46 gestures: add gesture_workspace_switch_*
+  * b782168 commit pin
+  * 9a4c688 dispatchers: add setsize, setwidth, setheight
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 20 Dec 2024 21:47:40 +0100
+
 hyprscroller (0.46.0~1ppa1+git202412201433-9262b81) noble; urgency=medium
 
   * Update to master 9262b81
