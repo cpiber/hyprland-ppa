@@ -1,3 +1,15 @@
+hyprscroller (0.46.0~1ppa1+git202412201433-9262b81) noble; urgency=medium
+
+  * Update to master 9262b81
+  * 9262b81 commit pin
+  * f09abfe options: add cyclesize_wrap
+  * c8ed474 commit pin
+  * 8be0909 IPC: new event for marks
+  * 5144971 commit pin for Hyprland v0.46.2
+  * b1c3b81 Update README for resizeactive
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 20 Dec 2024 14:33:17 +0100
+
 hyprscroller (0.46.0~1ppa1+git202412171833-e2deef4build1) noble; urgency=medium
 
   * Rebuild for unstable
