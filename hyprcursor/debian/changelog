@@ -1,3 +1,21 @@
+hyprcursor (0.1.11-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.11
+  * 3b3259e version: bump to 0.1.11
+  * abc1c60 meta: clamp nominalSize
+  * 84203d8 core: add nominal size support (#73)
+  * f388aac flake.lock: update
+  * c18572a util: add missing header for libc++ (#71)
+  * 0264e69 core: allow ;-separated values in hl format
+  * 70fb494 CI: add test action
+  * 572cb49 Nix: add hyprcursor-with-tests
+  * 53a23e4 CMake: allow installing tests
+  * d60e1e0 tests: fixup C test override checking
+  * 5729b97 core: fixup overridenBy reporting
+  * 34efe23 core: add missing header for libc++ after 5a95d8512b3e (#66)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 21 Dec 2024 22:02:09 +0100
+
 hyprcursor (0.1.10-1ppa3) noble; urgency=medium
 
   * Rebuild for renamed deps
