@@ -1,3 +1,9 @@
+aquamarine (0.5.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 14:56:01 +0100
+
 aquamarine (0.5.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.1
