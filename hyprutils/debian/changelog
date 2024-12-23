@@ -1,3 +1,15 @@
+hyprutils (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * 5e45b1a version: bump to 0.3.0
+  * c333111 os/process: add pid()
+  * e6cf45c flake.nix: gcc13 -> gcc14; flake.lock: update (#22)
+  * 104117a region: fix header path
+  * b26f33c README: fix invalid getconf value
+  * 2e21319 os: implent a new FileDescriptor class (#21)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 08:37:22 +0100
+
 hyprutils (0.2.6-1ppa2) noble; urgency=medium
 
   * Rebuild with new name
