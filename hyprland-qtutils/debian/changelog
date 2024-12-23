@@ -1,3 +1,9 @@
+hyprland-qtutils (0.1.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 15:26:21 +0100
+
 hyprland-qtutils (0.1.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.1
