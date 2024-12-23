@@ -1,3 +1,20 @@
+hyprscroller (0.46.0~1ppa1+git202412231546-03ad54e) noble; urgency=medium
+
+  * Update to master 03ad54e
+  * 03ad54e commit pin
+  * bf366a3 selection: add selectionworkspace
+  * bff88b5 commit pin
+  * 956735e overview: fix for HW cursor
+  * cab413f commit pin
+  * f477e65 options: add cyclesize_closest
+  * 0340f47 commit pin
+  * 992c77e options: monitor_options, added column_widths and
+    window_heights
+  * e7f6ab3 commit pin
+  * 3db74fc jump: keep aspect ratio of labels
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 15:46:08 +0100
+
 hyprscroller (0.46.0~1ppa1+git202412202147-e5416f9) noble; urgency=medium
 
   * Update to master e5416f9
