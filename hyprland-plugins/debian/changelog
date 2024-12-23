@@ -1,3 +1,15 @@
+hyprland-plugins (0.46.0~1ppa1+git202412231542-859b9cd) noble; urgency=medium
+
+  * Update to main 859b9cd
+  * 859b9cd hyprbars: expand the bar pass bb a bit
+  * a98c16d hyprbars: add an option to blur the bar
+  * 8a29b42 all: chase hyprland
+  * 067bbc9 xtra-dispatchers: add nix
+  * 2a01b29 README: add xtra-dispatchers
+  * d4525d5 xtra-dispatchers: init new plugin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 15:42:38 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202412192101-b8293c3) noble; urgency=medium
 
   * Update to main b8293c3
