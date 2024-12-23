@@ -7,6 +7,8 @@ Build-Depends:
  debhelper-compat (= 13),
  cmake,
  pkgconf,
+ gcc-14,
+ g++-14,
  libwayland-dev,
  wayland-protocols,
  libsdbus-c++-dev (>= 2.0.0),
@@ -24,5 +26,4 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  wayland-protocols,
-Description: <insert up to 60 chars description>
- <Insert long description, indented with spaces.>
+Description: Hyprland's idle daemon
