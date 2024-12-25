@@ -60,10 +60,15 @@ Information about my build setup: https://github.com/cpiber/ppa/blob/main/build.
 
 ```console
 $ ./scripts/rebuild.sh <package>
+$ ./scripts/rebuild-depends.sh <packages...>
 ```
 
-This script simply increments the patch part of the version number (new changelog entry).
+The first script simply increments the patch part of the version number (new changelog entry).
 This allows a rebuild of the package when no source changes were found, as necessary when a dependency changes (with ABI changes) or a new patch is introduced.
+
+The second script instead takes a package name (or multiple) and asks `apt-cache` for dependents.
+It then calls the former script to rebuild all reverse dependencies.
+Use this when a breaking change is introduced and a new build needs to be kicked off for depending packages.
 
 See [Building a package](#building-a-package) for actually starting the build.
 
