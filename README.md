@@ -66,3 +66,14 @@ This script simply increments the patch part of the version number (new changelo
 This allows a rebuild of the package when no source changes were found, as necessary when a dependency changes (with ABI changes) or a new patch is introduced.
 
 See [Building a package](#building-a-package) for actually starting the build.
+
+### Working with patches
+
+The unconventional location of the `debian/` folder means existing tooling will not automatically pick it up.
+When working with `quilt`, I recommend the following setting:
+
+```console
+$ export QUILT_PATCHES=../debian/patches
+```
+
+With this, `quilt` will pick up the patches and patches can be applied as usual, see [the manual](https://www.debian.org/doc/manuals/maint-guide/modify.en.html).
