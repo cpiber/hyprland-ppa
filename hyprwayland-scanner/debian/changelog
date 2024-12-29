@@ -1,3 +1,16 @@
+hyprwayland-scanner (0.4.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.4
+  * de91347 version: bump to 0.4.4
+  * 4a53f1a client: drop wl_resource usage
+  * 3d6681f version: bump to 0.4.3
+  * c0c13f0 client: drop wl_resource typedef
+  * 4d7367b client: use the proper new_id index in marshalling
+  * 90e87f7 flake.nix: gcc13 -> gcc14; flake.lock: update (#12)
+  * 500c81a README: clarify function
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 29 Dec 2024 20:54:32 +0100
+
 hyprwayland-scanner (0.4.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.2
