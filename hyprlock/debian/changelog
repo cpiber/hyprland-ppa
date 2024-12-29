@@ -1,3 +1,32 @@
+hyprlock (0.6.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.1
+  * 3d63d9b input-field: don't change outer color when numlock_color is
+    not set (#621)
+  * 753c538 Core: move to hyprwayland-scanner (#624)
+  * 77d194c core: clean up pointer logic and clang-format
+  * d94cc3a widgets: algin rect outline radius with inner border radius
+    (#614)
+  * 820eaff misc: print the correct commit hash (#619)
+  * d212f4c fingerprint: better feedback and don't clear input field on
+    retry (#613)
+  * 181294c widgets: use absolutePath to get last_write_time and ignore
+    when no reloadTime (#615)
+  * 90bc976 input-field: use IWidget::formatString for placeholder text
+    (#603)
+  * bf37645 auth: assert username (#604)
+  * 5361dc4 misc: move to std::print (#592)
+  * 002e44f label: fix redrawing shadow on label updates (#599)
+  * 83bda48 input-field: improve behavior of *lock colors (#596)
+  * 8a9f05f core: fix parsing grad with decimal rgb(a) colors (#595)
+  * f2c153c nix: pass commit info to cmake
+  * ee37e41 misc: add git commit hash to --version when not on tag
+    v${VERSION} (#590)
+  * d12b4a7 pam: add missing header for libc++ after a4b056274963 (#589)
+  * 0588306 widgets: Reload backgrounds and not just images (#583)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 29 Dec 2024 20:57:06 +0100
+
 hyprlock (0.6.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
