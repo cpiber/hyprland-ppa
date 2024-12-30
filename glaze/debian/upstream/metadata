@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://github.com/stephenberry/glaze/issues
+Bug-Submit: https://github.com/stephenberry/glaze/issues/new
+Changelog: https://github.com/stephenberry/glaze/releases
+Documentation: https://github.com/stephenberry/glaze
+Repository-Browse: https://github.com/stephenberry/glaze
+Repository: https://github.com/stephenberry/glaze.git

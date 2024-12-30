@@ -1,0 +1,10 @@
+glaze
+---------------
+
+One of the fastest JSON libraries in the world. Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance.
+
+Glaze also supports:
+
+- BEVE (binary efficient versatile encoding)
+- CSV (comma separated value)
+

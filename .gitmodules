@@ -94,3 +94,6 @@
 [submodule "hyprpolkitagent/source"]
 	path = hyprpolkitagent/source
 	url = https://github.com/hyprwm/hyprpolkitagent.git
+[submodule "glaze/source"]
+	path = glaze/source
+	url = https://github.com/stephenberry/glaze.git

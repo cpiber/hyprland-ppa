@@ -1,0 +1,22 @@
+Source: glaze
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+Standards-Version: 4.6.2
+Homepage: https://github.com/stephenberry/glaze/tree/main
+Vcs-Browser: https://github.com/stephenberry/glaze
+Vcs-Git: https://github.com/stephenberry/glaze.git
+
+Package: libglaze-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libglaze1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: One of the fastest JSON libraries in the world.
+ Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance.
