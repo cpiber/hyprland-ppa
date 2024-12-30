@@ -16,7 +16,6 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libglaze1 (= ${binary:Version}),
  ${misc:Depends},
 Description: One of the fastest JSON libraries in the world.
  Glaze reads and writes from object memory, simplifying interfaces and offering incredible performance.

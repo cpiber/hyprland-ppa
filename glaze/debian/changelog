@@ -1,3 +1,9 @@
+glaze (4.2.3-1ppa2) noble; urgency=medium
+
+  * Fix dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 30 Dec 2024 19:20:55 +0100
+
 glaze (4.2.3-1ppa1) noble; urgency=medium
 
   * Initial release.
