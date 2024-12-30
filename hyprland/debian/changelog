@@ -1,3 +1,39 @@
+hyprland-unstable (0.46.0~1ppa1+git202412301838-8c14c2a5) noble; urgency=medium
+
+  * Update to main 8c14c2a5
+  * 8c14c2a5 ctm: disable fade animation by default on nvidia
+  * cb211d83 internal: few small monitor improvements (#8890)
+  * fde569db master: replace always_center_master with
+    slave_count_for_center_master (#8871)
+  * 5b37d539 hyprpm: add an option to force reload all plugins (#8883)
+  * deb077c3 ctm: add an internal fade animation to ctm transitions
+  * 3f40d6d9 pass: scale blur region in ::render
+  * a364e804 snap: give edge snapping precedence over corner snapping
+    (#8873)
+  * 2b01a5bc xwayland: don't create an abstract unix domain socket on
+    linux (#8874)
+  * 8d4c18d7 core: refactor/improve monitor mode selection (#8804)
+  * c600e1aa [gha] Nix: update inputs
+  * cca0adf6 snap: revert #8659, use bounds checking instead of bit mask
+    (#8872)
+  * 534adad6 pass: scale blur regions properly
+  * 775111b6 foreign-toplevel: update active on null window focus
+    (#8860)
+  * 85632e7c internal: update window position/size after changing
+    fullscreenstate (#8865)
+  * 43ca6677 hyprpm: use glaze to parse hyprctl plugin list (#8812)
+  * e75e2cda functionHooks: wait for hyprland pages before returning
+    addr for trampo
+  * 2eaa4d80 debug: fix overlay not rendering
+  * dddb64dc internal: added reference to CTimer class in KeybindManager
+    (#8836)
+  * 1a3d17da debug: fix ISDEBUG checking (#8823)
+  * 2a24a611 pass: improve blur region detection
+  * 2e2e2e2c monitor: bring back old description behavior
+  * 68a5842f Nix: fix TAG substitution
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 30 Dec 2024 18:38:36 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202412231536-5f7ad767) noble; urgency=medium
 
   * Update to main 5f7ad767

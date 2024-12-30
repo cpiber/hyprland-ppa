@@ -6,7 +6,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 ===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -129,7 +129,9 @@ bool CPluginManager::createSafeDirectory
+@@ -128,7 +128,9 @@ bool CPluginManager::createSafeDirectory
  bool CPluginManager::addNewPluginRepo(const std::string& url, const std::string& rev) {
      const auto HLVER = getHyprlandVersion();
  
@@ -17,7 +17,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
          std::println(stderr, "\n{}", failureString("Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, meson, cpio, pkg-config"));
          return false;
      }
-@@ -149,6 +151,13 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -148,6 +150,13 @@ bool CPluginManager::addNewPluginRepo(co
          DataState::updateGlobalState(GLOBALSTATE);
      }
  
@@ -31,19 +31,19 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
                << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
                << " install random plugins without verifying the code and author.\n  "
-@@ -162,6 +171,20 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -161,6 +170,20 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
 +    if (bIsGlobal) {
-+        const auto PATH = DataState::getDataStatePath() + "/" + url;
++        const auto PATH = DataState::getDataStatePath() / url;
 +
 +        std::filesystem::create_directories(PATH);
 +        for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + url)) {
 +            if (entry.path().filename() == "state.toml")
-+                std::filesystem::copy_file(entry, PATH + "/state.toml");
++                std::filesystem::copy_file(entry, PATH / "state.toml");
 +            else
-+                std::filesystem::create_symlink(entry, PATH + "/" + entry.path().filename().string());
++                std::filesystem::create_symlink(entry, PATH / entry.path().filename().string());
 +        }
 +        std::cout << Colors::GREEN << "✔" << Colors::RESET << " global repository added";
 +        return true;
@@ -52,7 +52,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -623,6 +646,49 @@ bool CPluginManager::updatePlugins(bool
+@@ -622,6 +645,49 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  
@@ -83,12 +83,12 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +            }
 +
 +            DataState::removePluginRepo(repo.name);
-+            const auto PATH = DataState::getDataStatePath() + "/" + newrepo.name;
++            const auto PATH = DataState::getDataStatePath() / newrepo.name;
 +            std::filesystem::create_directories(PATH);
 +            for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + newrepo.name)) {
 +                if (entry.path().filename() == "state.toml")
 +                    continue;
-+                std::filesystem::create_symlink(entry, PATH + "/" + entry.path().filename().string());
++                std::filesystem::create_symlink(entry, PATH / entry.path().filename().string());
 +            }
 +            for (auto& p : newrepo.plugins) {
 +                const auto OLDPLUGINIT = std::find_if(repo.plugins.begin(), repo.plugins.end(), [&](const auto& other) { return other.name == p.name; });
@@ -106,9 +106,9 @@ Index: source/hyprpm/CMakeLists.txt
 ===================================================================
 --- source.orig/hyprpm/CMakeLists.txt
 +++ source/hyprpm/CMakeLists.txt
-@@ -15,6 +15,8 @@ add_executable(hyprpm ${SRCFILES})
+@@ -16,6 +16,8 @@ add_executable(hyprpm ${SRCFILES})
  
- target_link_libraries(hyprpm PUBLIC PkgConfig::hyprpm_deps)
+ target_link_libraries(hyprpm PUBLIC PkgConfig::hyprpm_deps glaze::glaze)
  
 +add_compile_definitions(DATAROOTDIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}")
 +

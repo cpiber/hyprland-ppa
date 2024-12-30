@@ -31,6 +31,7 @@ Build-Depends:
  libxcursor-dev,
  libtomlplusplus-dev,
  libre2-dev,
+ libglaze-dev,
  libhyprlang-dev (>= 0.3.2),
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev (>= 0.2.0),
