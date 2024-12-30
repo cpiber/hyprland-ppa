@@ -1,3 +1,13 @@
+hyprland-plugins (0.46.0~1ppa1+git202412301954-a41bcdc) noble; urgency=medium
+
+  * Update to main a41bcdc
+  * a41bcdc expo: fixup workspace rendering
+  * 616e7ef hyprbars: fix typo in error message (#262)
+  * 7dc20bd hyprbars: focus on mouse down on the bar
+  * 3cd8d37 borderspp: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 30 Dec 2024 19:54:32 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202412231542-859b9cd) noble; urgency=medium
 
   * Update to main 859b9cd
