@@ -5,6 +5,14 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
+sethyprver() {
+  hyprver="`head -n1 "$reporoot/hyprland/debian/changelog" | sed 's/.*(\([^)]*\)).*/\1/'`"
+  # NOTE: The ~ in the first dependency sorts before all, so any suffix is allowed, including none
+  # The second line uses 9 as suffix, which sorts the lowest
+  # Together, this depends on exactly this upstream and debian version, but allows any suffix including none
+  sed -i 's/^ hyprland-unstable .*/ hyprland-unstable (>= '$hyprver'~), hyprland-unstable (<< '$hyprver'9),/w /dev/stdout' "$reporoot/$project/debian/control" | grep -q .
+}
+
 set -xe
 reporoot="`cd "$(dirname "$0")/.." && pwd`"
 
@@ -41,8 +49,7 @@ shorthead="`git rev-parse --short HEAD`"
 if [ "$curhead" = "$newhead" ]; then
   echo "Already up-to-date"
   if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ]; then
-    hyprver="`head -n1 "$reporoot/hyprland/debian/changelog" | sed 's/.*(\([^)]*\)).*/\1/'`"
-    if sed -i 's/^ hyprland-unstable .*/ hyprland-unstable (= '$hyprver'),/w /dev/stdout' "$reporoot/$project/debian/control" | grep -q .; then
+    if sethyprver; then
       cd ..
       dist="`dpkg-parsechangelog --show-field Distribution`"
       dch -D "$dist" -R "$@" "Rebuild for unstable"
@@ -68,6 +75,5 @@ echo "$changes" |
     dch -a "$line"
   done
 if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ]; then
-  hyprver="`head -n1 "$reporoot/hyprland/debian/changelog" | sed 's/.*(\([^)]*\)).*/\1/'`"
-  sed -i 's/^ hyprland-unstable .*/ hyprland-unstable (= '$hyprver'),/' "$reporoot/$project/debian/control"
+  sethyprver
 fi
