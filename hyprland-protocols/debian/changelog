@@ -1,3 +1,11 @@
+hyprland-protocols (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * 271df55 protocols: add hyprland-surface-v1 (#11)
+  * a7c1838 README: add hyprland-ctm-control
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 01 Jan 2025 19:24:24 +0100
+
 hyprland-protocols (0.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.0
