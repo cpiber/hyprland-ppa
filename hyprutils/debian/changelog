@@ -1,3 +1,14 @@
+hyprutils (0.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.1
+  * c42ce87 version: bump to 0.3.1
+  * 8af7e4b animation: add BezierCurve, AnimationManager and
+    AnimatedVariable (#27)
+  * 8f15d45 region: Revert "fix header path"
+  * 9be03a8 misc: fix some compile warnings (#25)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 01 Jan 2025 19:19:04 +0100
+
 hyprutils (0.3.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.3.0
