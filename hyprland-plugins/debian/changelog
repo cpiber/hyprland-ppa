@@ -1,3 +1,10 @@
+hyprland-plugins (0.46.0~1ppa1+git202501031447-920af33) noble; urgency=medium
+
+  * Update to main 920af33
+  * 920af33 all: avoid crash on unload if using render pass elements
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Jan 2025 14:47:37 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202412301954-a41bcdc) noble; urgency=medium
 
   * Update to main a41bcdc
