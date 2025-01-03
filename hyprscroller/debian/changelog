@@ -1,3 +1,11 @@
+hyprscroller (0.46.0~1ppa1+git202501031456-294f585) noble; urgency=medium
+
+  * Update to master 294f585
+  * 294f585 commit pin
+  * d26cb05 dispatchers: add fitwidth, fitheight
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Jan 2025 14:56:27 +0100
+
 hyprscroller (0.46.0~1ppa1+git202412302005-e8333d6) noble; urgency=medium
 
   * Update to master e8333d6
