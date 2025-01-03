@@ -1,3 +1,30 @@
+hyprland-unstable (0.46.0~1ppa1+git202501031432-b0cd9972) noble; urgency=medium
+
+  * Update to main b0cd9972
+  * b0cd9972 github: bug issue template improvements (#8894)
+  * f3c49c12 pass: ignore empty rectangles queued
+  * 4971725b config: avoid querying the fs every tick
+  * 1697171f pass: allow removing all pass elements of a given type
+  * 81721b8a groupbar: unify title rendering
+  * 365caa49 keybinds: attempt to wrap around if fallback is allowed in
+    movefocus
+  * 94381e59 dnd/seat: avoid sending button events during a dnd op
+  * 42fd3660 protocols: fix alpha-modifier noncompliance (#8929)
+  * cbd24515 renderer: fix CRendererHintsPassElement reset duplication
+    issue (#8928)
+  * dde3e082 protocols: add hyprland_surface_v1 implementation (#8877)
+  * 9f3c9ac0 pass: mark crucial elements as undiscardable
+  * 7f177fa1 layershell: return focus to a valid ls on close if possible
+  * d64ac472 pass: improve pass debugging
+  * 4e93b2de renderer: use a render pass for render modif in client
+    render
+  * aff34089 monitor: avoid crashes on no good modes
+  * 1989b004 hyprpm: add glaze dependency FetchContent fallback (#8899)
+  * 9f933da1 renderer: fix oversized blur precalcs not blurring at all
+  * af301312 core: fix custom resolutions (#8897)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Jan 2025 14:32:08 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202412301838-8c14c2a5) noble; urgency=medium
 
   * Update to main 8c14c2a5
