@@ -6,7 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  yq,
- hyprland-unstable (>= 0.46.0~1ppa1+git202501031432-b0cd9972~), hyprland-unstable (<< 0.46.0~1ppa1+git202501031432-b0cd99729),
+ hyprland-unstable (>= 0.46.0~1ppa1+git202501052208-1b06d222~), hyprland-unstable (<< 0.46.0~1ppa1+git202501052208-1b06d2229),
  hyprland-plugin-deps,
  gcc-14,
  g++-14,
@@ -21,6 +21,6 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- hyprland-unstable (>= 0.46.0~1ppa1+git202501031432-b0cd9972~), hyprland-unstable (<< 0.46.0~1ppa1+git202501031432-b0cd99729),
+ hyprland-unstable (>= 0.46.0~1ppa1+git202501052208-1b06d222~), hyprland-unstable (<< 0.46.0~1ppa1+git202501052208-1b06d2229),
 Description: Official plugins for Hyprland.
  Packaged for hyprland-unstable.
