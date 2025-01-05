@@ -1,3 +1,9 @@
+hyprland (0.46.2-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Jan 2025 22:04:55 +0100
+
 hyprland (0.46.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
