@@ -1,3 +1,19 @@
+hyprland-unstable (0.46.0~1ppa1+git202501052208-1b06d222) noble; urgency=medium
+
+  * Update to main 1b06d222
+  * 1b06d222 pass/surface: fixup invalid expansion by old -1 rounding
+    param
+  * 391ff291 pass: improve pass debug mode
+  * a5c14370 renderer: Add supercircular window corners (#8943)
+  * b0bae154 master: make loop around optional when cycling (#8926)
+  * e8317ae3 xwayland: don't define atoms on no_xwayland builds
+  * a25d2288 windows: minor initial workspace improvements
+  * 60f069d5 groupbar: fix missing ellipsize for text
+  * 2e6e0e92 core: guard workspace and monitor in moveWorkspaceToMonitor
+  * f69e72ec socket2: add focusedmonv2 event (#8921)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Jan 2025 22:08:59 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501031432-b0cd9972) noble; urgency=medium
 
   * Update to main b0cd9972
