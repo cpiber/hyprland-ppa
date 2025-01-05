@@ -1,3 +1,20 @@
+aquamarine (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * 4846091 version: bump to 0.6.0
+  * aeab812 core/drm: Add HDR Support (#112)
+  * f7082be drm: only clear buffers when fullReconfigure succeeds (#124)
+  * eecb74d flake.lock: update
+  * 5e3f601 drm: only fail INVALID format when enabled (#122)
+  * a23e9a9 drm: moved null check for renderer to shouldBlit() (#109)
+    (#121)
+  * ae2bf91 drm: log errno set by drmModeAtomicCommit (#120)
+  * a132fa4 drm: udev scan only drm_minor, not connectors (#119)
+  * 3375378 flake.nix: gcc13 -> gcc14 (#118)
+  * 8e77618 flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Jan 2025 20:44:34 +0100
+
 aquamarine (0.5.1-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
