@@ -1,3 +1,11 @@
+hyprscroller (0.46.0~1ppa1+git202501052234-3f9bdb6) noble; urgency=medium
+
+  * Update to master 3f9bdb6
+  * 3f9bdb6 commit pin
+  * 1b40d06 Support workspace rules
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Jan 2025 22:34:39 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501031456-294f585) noble; urgency=medium
 
   * Update to master 294f585
