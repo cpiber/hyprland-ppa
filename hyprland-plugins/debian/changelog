@@ -1,3 +1,10 @@
+hyprland-plugins (0.46.0~1ppa1+git202501062131-b6b3111) noble; urgency=medium
+
+  * Update to main b6b3111
+  * b6b3111 expo: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 06 Jan 2025 21:31:08 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202501031447-920af33build1) noble; urgency=medium
 
   * Rebuild for unstable
