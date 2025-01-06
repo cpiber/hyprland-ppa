@@ -1,3 +1,13 @@
+hyprland-qtutils (0.1.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.2
+  * 6997fe3 version: bump to 0.1.2
+  * 8fcc443 update-screen: add a support button
+  * c77109d flake.lock: update
+  * 3833097 Nix: remove unneeded kirigami-addons
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 06 Jan 2025 11:29:18 +0100
+
 hyprland-qtutils (0.1.1-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
