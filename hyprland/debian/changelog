@@ -1,3 +1,19 @@
+hyprland-unstable (0.46.0~1ppa1+git202501062129-b9f110ef) noble; urgency=medium
+
+  * Update to main b9f110ef
+  * b9f110ef shaders: fix blank windows when using corner rounding
+    (#8969) (#8971)
+  * 1bf4937b hyprctl: fix hyprctl --batch not working with exec rules
+    (#8952)
+  * 6a90b505 core/compositor: fix too early buffer release (#8966)
+  * 602d6b73 snap: don't snap to any windows if workspace has a
+    fullscreen window (#8870)
+  * 780e3dd5 [gha] Nix: update inputs
+  * f1a7a749 datadevice: guard XWayland server against crashes
+  * f390f48a pass: fixup debug mode rendering of input boxes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 06 Jan 2025 21:29:19 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501052208-1b06d222) noble; urgency=medium
 
   * Update to main 1b06d222
