@@ -1,3 +1,39 @@
+hyprland-unstable (0.46.0~1ppa1+git202501102057-a8b568c6) noble; urgency=medium
+
+  * Update to main a8b568c6
+  * a8b568c6 core: Add render:allow_early_buffer_release to make buffer
+    release configurable (#9019)
+  * b5fb6110 core: Add a periodic donation request (#8981)
+  * da9252a2 keybinds: fix nullptr deref in forcekillactive (#9021)
+  * 8475a8ef core: always use goal size to send to clients
+  * f9c37ca4 windows: honor xdg_toplevel_set_fullscreen output hint
+    (#8965)
+  * 9dc9366f config: fix animations requiring all args
+  * 85aba23c ci(clang-format): directly do the clang-format instead of
+    error (#8955)
+  * 2d1ebadb selectors: add a tag: to for matching window tag(s) by
+    regex (#8985)
+  * e66eab7b animationmgr: don't warp based on POINTY value (#9000)
+  * c9822b08 keybinds: add new window destruction dispatchers (#8962)
+  * 983bc067 opengl: fix crash on null fb stencil op
+  * b320bc2d core: use cpu-buffer hw cursors on nvidia by default
+  * ad64726f opengl: only allocate offMainFB on demand
+  * 5fa25946 renderer: don't access hdrMetadata optional if it has no
+    value (#8987)
+  * 75727e7c protocols: fix compilation error (#8988)
+  * 67e1e46f window: fixup fade out animation on silent moves
+  * 308b1f3a core: minor fixes for animation rewrite
+  * c1439078 config: update animation even if disabled
+  * 830350a1 core: Add support for HDR and color management protocols
+    (#8715)
+  * 95542e44 animationmgr: fix invalid include
+  * 5642ed33 core: move parts of the animation system to hyprutils
+    (#8868)
+  * c7086f93 master: add option to show slaves on left in center
+    orientation (#8940)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 20:57:17 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501062129-b9f110ef) noble; urgency=medium
 
   * Update to main b9f110ef

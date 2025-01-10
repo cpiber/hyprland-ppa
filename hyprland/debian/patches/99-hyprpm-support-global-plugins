@@ -106,7 +106,7 @@ Index: source/hyprpm/CMakeLists.txt
 ===================================================================
 --- source.orig/hyprpm/CMakeLists.txt
 +++ source/hyprpm/CMakeLists.txt
-@@ -16,6 +16,8 @@ add_executable(hyprpm ${SRCFILES})
+@@ -29,6 +29,8 @@ add_executable(hyprpm ${SRCFILES})
  
  target_link_libraries(hyprpm PUBLIC PkgConfig::hyprpm_deps glaze::glaze)
  

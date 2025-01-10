@@ -1,0 +1,20 @@
+Description: Reduce required version
+ hyprutils 0.3.2 forgot to bump version, so 0.3.3 was released to fix this.
+ We did not publish this bump, so pkgconf claims we are at version 0.3.1, even
+ though we are actually at 0.3.2 (which is functionally equivalent to 0.3.3).
+ The control file correctly depends on this version, thus this is valid.
+Author: Constantin Piber <cp.piber@gmail.com>
+
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -104,7 +104,7 @@ find_package(OpenGL REQUIRED COMPONENTS
+ pkg_check_modules(aquamarine_dep REQUIRED IMPORTED_TARGET aquamarine>=0.4.5)
+ pkg_check_modules(hyprlang_dep REQUIRED IMPORTED_TARGET hyprlang>=0.3.2)
+ pkg_check_modules(hyprcursor_dep REQUIRED IMPORTED_TARGET hyprcursor>=0.1.7)
+-pkg_check_modules(hyprutils_dep REQUIRED IMPORTED_TARGET hyprutils>=0.3.3)
++pkg_check_modules(hyprutils_dep REQUIRED IMPORTED_TARGET hyprutils>=0.3.1)
+ pkg_check_modules(hyprgraphics_dep REQUIRED IMPORTED_TARGET hyprgraphics>=0.1.1)
+ 
+ add_compile_definitions(AQUAMARINE_VERSION="${aquamarine_dep_VERSION}")
