@@ -1,3 +1,13 @@
+hyprland-qtutils (0.1.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.3
+  * b021484 version: bump to 0.1.3
+  * 8c9483a nix: move to hyprland-qt-support (#7)
+  * 196e043 core: move to hyprland-qt-support instead of KDE's qqc2
+  * 6cc1cf5 utils: add donate-screen
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 20:38:58 +0100
+
 hyprland-qtutils (0.1.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.2
