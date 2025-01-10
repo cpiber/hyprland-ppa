@@ -1,3 +1,9 @@
+hyprland-qt-support (0.1.0-1ppa2) noble; urgency=medium
+
+  * Fix copyright
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 19:54:15 +0100
+
 hyprland-qt-support (0.1.0-1ppa1) noble; urgency=medium
 
   * Initial release.
