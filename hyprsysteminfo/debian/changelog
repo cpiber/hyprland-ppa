@@ -1,3 +1,13 @@
+hyprsysteminfo (0.1.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.3
+  * 17f041e version: bump to 0.1.3
+  * 9d07b2e flake.lock: update
+  * 54ce0e6 nix: move to hyprland-qt-support (#13)
+  * 5351581 core: move to hyprland-qt-support instead of KDE's qqc2
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 19:57:30 +0100
+
 hyprsysteminfo (0.1.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.2
