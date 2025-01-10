@@ -1,0 +1,29 @@
+Source: hyprland-qt-support
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ gcc-14,
+ g++-14,
+ libhyprlang-dev (>= 0.6.0),
+ qt6-base-dev,
+ qt6-base-private-dev,
+ qt6-wayland,
+ qt6-wayland-dev,
+ qt6-wayland-private-dev,
+ qt6-declarative-dev,
+Standards-Version: 4.6.2
+Homepage: https://hyprland.org
+Vcs-Browser: https://github.com/hyprwm/hyprland-qt-support
+Vcs-Git: https://github.com/hyprwm/hyprland-qt-support.git
+
+Package: hyprland-qt-support0
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: A qt6 qml style provider for hypr* apps

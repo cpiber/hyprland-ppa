@@ -1,0 +1,142 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -14,12 +14,12 @@ string(STRIP ${VER_RAW} VER)
+ 
+ project(hyprland-qt-support VERSION ${VER} LANGUAGES CXX)
+ 
+-find_package(Qt6 6.6 REQUIRED COMPONENTS Qml Quick QuickControls2)
++find_package(Qt6 6.4 REQUIRED COMPONENTS Qml Quick QuickControls2)
+ find_package(PkgConfig REQUIRED)
+ 
+ pkg_check_modules(hyprlang REQUIRED IMPORTED_TARGET hyprlang>=0.6.0)
+ 
+-qt_standard_project_setup(REQUIRES 6.6)
++qt_standard_project_setup(REQUIRES 6.4)
+ set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/qml)
+ 
+ add_subdirectory(src)
+Index: source/src/style/impl/checkdelegate.hpp
+===================================================================
+--- source.orig/src/style/impl/checkdelegate.hpp
++++ source/src/style/impl/checkdelegate.hpp
+@@ -12,11 +12,11 @@ namespace hyprqml::style {
+     class CheckDelegate : public QQuickPaintedItem {
+         Q_OBJECT;
+         QML_ELEMENT;
+-        Q_PROPERTY(Qt::CheckState checkState READ default WRITE default BINDABLE bindableCheckState
++        Q_PROPERTY(Qt::CheckState checkState READ valueCheckState WRITE setValueCheckState BINDABLE bindableCheckState
+                        NOTIFY checkStateChanged);
+ 
+         Q_PROPERTY(
+-            QColor color READ default WRITE default BINDABLE bindableColor NOTIFY colorChanged);
++            QColor color READ valueColor WRITE setValueColor BINDABLE bindableColor NOTIFY colorChanged);
+ 
+       public:
+         explicit CheckDelegate();
+@@ -27,6 +27,18 @@ namespace hyprqml::style {
+         [[nodiscard]] QBindable<Qt::CheckState> bindableCheckState() {
+             return &this->bCheckState;
+         }
++        [[nodiscard]] QColor valueColor() {
++            return this->bColor.value();
++        }
++        [[nodiscard]] Qt::CheckState valueCheckState() {
++            return this->bCheckState.value();
++        }
++        void setValueColor(QColor value) {
++            return this->bColor.setValue(value);
++        }
++        void setValueCheckState(Qt::CheckState value) {
++            return this->bCheckState.setValue(value);
++        }
+ 
+         void paint(QPainter* painter) override;
+ 
+Index: source/src/style/impl/hyprlandstyle.hpp
+===================================================================
+--- source.orig/src/style/impl/hyprlandstyle.hpp
++++ source/src/style/impl/hyprlandstyle.hpp
+@@ -11,11 +11,11 @@ namespace hyprqml::style {
+         Q_OBJECT;
+         QML_ELEMENT;
+         // writes are mostly intended for tester
+-        Q_PROPERTY(int roundness READ default WRITE default BINDABLE bindableRoundness NOTIFY
++        Q_PROPERTY(int roundness READ valueRoundness WRITE setValueRoundness BINDABLE bindableRoundness NOTIFY
+                        roundnessChanged);
+-        Q_PROPERTY(int borderWidth READ default WRITE default BINDABLE bindableBorderWidth NOTIFY
++        Q_PROPERTY(int borderWidth READ valueBorderWidth WRITE setValueBorderWidth BINDABLE bindableBorderWidth NOTIFY
+                        borderWidthChanged);
+-        Q_PROPERTY(bool reduceMotion READ default WRITE default BINDABLE bindableReduceMotion NOTIFY
++        Q_PROPERTY(bool reduceMotion READ valueReduceMotion WRITE setValueReduceMotion BINDABLE bindableReduceMotion NOTIFY
+                        reduceMotionChanged);
+ 
+       public:
+@@ -30,6 +30,24 @@ namespace hyprqml::style {
+         [[nodiscard]] QBindable<bool> bindableReduceMotion() {
+             return &this->bReduceMotion;
+         }
++        [[nodiscard]] int valueRoundness() {
++            return this->bRoundness.value();
++        }
++        [[nodiscard]] int valueBorderWidth() {
++            return this->bBorderWidth.value();
++        }
++        [[nodiscard]] bool valueReduceMotion() {
++            return this->bReduceMotion.value();
++        }
++        void setValueRoundness(int value) {
++            return this->bRoundness.setValue(value);
++        }
++        void setValueBorderWidth(int value) {
++            return this->bBorderWidth.setValue(value);
++        }
++        void setValueReduceMotion(bool value) {
++            return this->bReduceMotion.setValue(value);
++        }
+ 
+       signals:
+         void roundnessChanged();
+Index: source/src/style/impl/hyprlandstyle.cpp
+===================================================================
+--- source.orig/src/style/impl/hyprlandstyle.cpp
++++ source/src/style/impl/hyprlandstyle.cpp
+@@ -1,12 +1,12 @@
+ #include "hyprlandstyle.hpp"
+ #include <hyprlang.hpp>
+ #include <any>
++#include <qstringbuilder.h>
+ #include <qfileinfo.h>
+ #include <qfilesystemwatcher.h>
+ #include <qlist.h>
+ #include <qdir.h>
+ #include <qobject.h>
+-#include <qtenvironmentvariables.h>
+ #include <qlogging.h>
+ #include <qloggingcategory.h>
+ 
+Index: source/src/style/test/main.cpp
+===================================================================
+--- source.orig/src/style/test/main.cpp
++++ source/src/style/test/main.cpp
+@@ -4,7 +4,6 @@
+ #include <qnamespace.h>
+ #include <qqmlapplicationengine.h>
+ #include <qquickstyle.h>
+-#include <qtenvironmentvariables.h>
+ 
+ int main(int argc, char** argv) {
+     auto app = QGuiApplication(argc, argv);
+Index: source/src/style/plugin.cpp
+===================================================================
+--- source.orig/src/style/plugin.cpp
++++ source/src/style/plugin.cpp
+@@ -4,7 +4,6 @@
+ #include <qqmlextensioninterface.h>
+ #include <qtmetamacros.h>
+ #include <qstylehints.h>
+-#include <qtpreprocessorsupport.h>
+ #include <qobject.h>
+ 
+ void qml_register_types_org_hyprland_style(); // NOLINT
