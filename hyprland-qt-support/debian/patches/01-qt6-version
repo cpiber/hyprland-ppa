@@ -140,3 +140,38 @@ Index: source/src/style/plugin.cpp
  #include <qobject.h>
  
  void qml_register_types_org_hyprland_style(); // NOLINT
+Index: source/src/style/CMakeLists.txt
+===================================================================
+--- source.orig/src/style/CMakeLists.txt
++++ source/src/style/CMakeLists.txt
+@@ -2,6 +2,7 @@ add_subdirectory(impl)
+ 
+ qt_add_qml_module(hyprland-quick-style SHARED
+     URI org.hyprland.style
++    RESOURCE_PREFIX /qt/qml
+     VERSION 0.1
+     PLUGIN_TARGET hyprland-quick-styleplugin
+     NO_PLUGIN_OPTIONAL
+Index: source/src/style/impl/HyprlandStyle.qml
+===================================================================
+--- source.orig/src/style/impl/HyprlandStyle.qml
++++ source/src/style/impl/HyprlandStyle.qml
+@@ -1,5 +1,6 @@
+ pragma Singleton
+ import QtQuick
++import org.hyprland.style.impl
+ 
+ HyprlandStyleBase {
+     id: root
+Index: source/src/style/impl/CMakeLists.txt
+===================================================================
+--- source.orig/src/style/impl/CMakeLists.txt
++++ source/src/style/impl/CMakeLists.txt
+@@ -7,6 +7,7 @@ qt_add_library(hyprland-quick-style-impl
+ 
+ qt_add_qml_module(hyprland-quick-style-impl
+     URI org.hyprland.style.impl
++    RESOURCE_PREFIX /qt/qml
+     VERSION 0.1
+     QML_FILES
+         HyprlandStyle.qml

@@ -1,3 +1,9 @@
+hyprland-qt-support (0.1.0-1ppa3) noble; urgency=medium
+
+  * Fix qml namespace
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 20:09:35 +0100
+
 hyprland-qt-support (0.1.0-1ppa2) noble; urgency=medium
 
   * Fix copyright
