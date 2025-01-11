@@ -1,3 +1,9 @@
+hyprscroller (0.46.0~1ppa1+git202501052234-3f9bdb6build2) noble; urgency=medium
+
+  * Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 22:41:41 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501052234-3f9bdb6build1) noble; urgency=medium
 
   * Rebuild for unstable

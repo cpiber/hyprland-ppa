@@ -1,0 +1,182 @@
+Index: source/src/decorations.cpp
+===================================================================
+--- source.orig/src/decorations.cpp
++++ source/src/decorations.cpp
+@@ -44,7 +44,7 @@ CBox SelectionBorders::assignedBoxGlobal
+     if (!PWORKSPACE)
+         return box;
+ 
+-    const auto WORKSPACEOFFSET = PWORKSPACE && !m_pWindow->m_bPinned ? PWORKSPACE->m_vRenderOffset.value() : Vector2D();
++    const auto WORKSPACEOFFSET = PWORKSPACE && !m_pWindow->m_bPinned ? PWORKSPACE->m_vRenderOffset->value() : Vector2D();
+     return box.translate(WORKSPACEOFFSET);
+ }
+ 
+@@ -61,22 +61,23 @@ void SelectionBorders::draw(PHLMONITOR p
+         return;
+ 
+     auto       grad     = window->get_border_color();
+-    const bool ANIMATED = m_pWindow->m_fBorderFadeAnimationProgress.isBeingAnimated();
+-    float      a1       = a * (ANIMATED ? m_pWindow->m_fBorderFadeAnimationProgress.value() : 1.f);
++    const bool ANIMATED = m_pWindow->m_fBorderFadeAnimationProgress->isBeingAnimated();
++    float      a1       = a * (ANIMATED ? m_pWindow->m_fBorderFadeAnimationProgress->value() : 1.f);
+ 
+-    if (m_pWindow->m_fBorderAngleAnimationProgress.getConfig()->pValues->internalEnabled) {
+-        grad.m_fAngle += m_pWindow->m_fBorderAngleAnimationProgress.value() * M_PI * 2;
++    if (m_pWindow->m_fBorderAngleAnimationProgress->getConfig()->pValues->internalEnabled) {
++        grad.m_fAngle += m_pWindow->m_fBorderAngleAnimationProgress->value() * M_PI * 2;
+         grad.m_fAngle = normalizeAngleRad(grad.m_fAngle);
+     }
+ 
+     int        borderSize = m_pWindow->getRealBorderSize();
+     const auto ROUNDING   = m_pWindow->rounding() * pMonitor->scale;
++    const auto ROUNDINGPOWER = m_pWindow->roundingPower();
+ 
+-    g_pHyprOpenGL->renderBorder(&windowBox, grad, ROUNDING, borderSize, a1);
++    g_pHyprOpenGL->renderBorder(&windowBox, grad, ROUNDING, borderSize, a1, ROUNDINGPOWER);
+ 
+     if (ANIMATED) {
+-        float a2 = a * (1.f - m_pWindow->m_fBorderFadeAnimationProgress.value());
+-        g_pHyprOpenGL->renderBorder(&windowBox, m_pWindow->m_cRealBorderColorPrevious, ROUNDING, borderSize, a2);
++        float a2 = a * (1.f - m_pWindow->m_fBorderFadeAnimationProgress->value());
++        g_pHyprOpenGL->renderBorder(&windowBox, m_pWindow->m_cRealBorderColorPrevious, ROUNDING, borderSize, a2, ROUNDINGPOWER);
+     }
+ }
+ 
+@@ -108,8 +109,8 @@ void SelectionBorders::damageEntire() {
+     const auto BORDERSIZE   = m_pWindow->getRealBorderSize() + 1;
+ 
+     const auto PWINDOWWORKSPACE = m_pWindow->m_pWorkspace;
+-    if (PWINDOWWORKSPACE && PWINDOWWORKSPACE->m_vRenderOffset.isBeingAnimated() && !m_pWindow->m_bPinned)
+-        surfaceBox.translate(PWINDOWWORKSPACE->m_vRenderOffset.value());
++    if (PWINDOWWORKSPACE && PWINDOWWORKSPACE->m_vRenderOffset->isBeingAnimated() && !m_pWindow->m_bPinned)
++        surfaceBox.translate(PWINDOWWORKSPACE->m_vRenderOffset->value());
+     surfaceBox.translate(m_pWindow->m_vFloatingOffset);
+ 
+     CBox surfaceBoxExpandedBorder = surfaceBox;
+@@ -191,7 +192,7 @@ CBox JumpDecoration::assignedBoxGlobal()
+     if (!PWORKSPACE)
+         return box;
+ 
+-    const auto WORKSPACEOFFSET = PWORKSPACE->m_vRenderOffset.value();
++    const auto WORKSPACEOFFSET = PWORKSPACE->m_vRenderOffset->value();
+     return box.translate(WORKSPACEOFFSET);
+ }
+ 
+@@ -201,7 +202,7 @@ void JumpDecoration::draw(PHLMONITOR pMo
+     if (windowBox.width < 1 || windowBox.height < 1)
+         return;
+     
+-    const bool ANIMATED = m_pWindow->m_vRealPosition.isBeingAnimated() || m_pWindow->m_vRealSize.isBeingAnimated();
++    const bool ANIMATED = m_pWindow->m_vRealPosition->isBeingAnimated() || m_pWindow->m_vRealSize->isBeingAnimated();
+ 
+     if (m_pTexture.get() == nullptr) {
+         m_iFrames++;
+Index: source/src/scroller.cpp
+===================================================================
+--- source.orig/src/scroller.cpp
++++ source/src/scroller.cpp
+@@ -483,7 +483,8 @@ void ScrollerLayout::resizeActiveWindow(
+     auto s = getRowForWindow(PWINDOW);
+     if (s == nullptr) {
+         // Window is not tiled
+-        PWINDOW->m_vRealSize = Vector2D(std::max((PWINDOW->m_vRealSize.goal() + delta).x, 20.0), std::max((PWINDOW->m_vRealSize.goal() + delta).y, 20.0));
++        *PWINDOW->m_vRealSize = Vector2D(std::max((PWINDOW->m_vRealSize->goal() + delta).x, 20.0), std::max((PWINDOW->m_vRealSize->goal() + delta).y, 20.0));
++        g_pXWaylandManager->setWindowSize(PWINDOW, PWINDOW->m_vRealSize->goal());
+         PWINDOW->updateWindowDecos();
+         return;
+     }
+@@ -505,17 +506,17 @@ void ScrollerLayout::fullscreenRequestFo
+     if (s == nullptr) {
+         // save position and size if floating
+         if (window->m_bIsFloating && CURRENT_EFFECTIVE_MODE == FSMODE_NONE) {
+-            window->m_vLastFloatingSize     = window->m_vRealSize.goal();
+-            window->m_vLastFloatingPosition = window->m_vRealPosition.goal();
+-            window->m_vPosition             = window->m_vRealPosition.goal();
+-            window->m_vSize                 = window->m_vRealSize.goal();
++            window->m_vLastFloatingSize     = window->m_vRealSize->goal();
++            window->m_vLastFloatingPosition = window->m_vRealPosition->goal();
++            window->m_vPosition             = window->m_vRealPosition->goal();
++            window->m_vSize                 = window->m_vRealSize->goal();
+         }
+         if (EFFECTIVE_MODE == FSMODE_NONE) {
+             // window is not tiled
+             if (window->m_bIsFloating) {
+                 // get back its' dimensions from position and size
+-                window->m_vRealPosition = window->m_vLastFloatingPosition;
+-                window->m_vRealSize     = window->m_vLastFloatingSize;
++                *window->m_vRealPosition = window->m_vLastFloatingPosition;
++                *window->m_vRealSize     = window->m_vLastFloatingSize;
+ 
+                 window->unsetWindowData(PRIORITY_LAYOUT);
+                 window->updateWindowData();
+@@ -524,13 +525,14 @@ void ScrollerLayout::fullscreenRequestFo
+             // apply new pos and size being monitors' box
+             const auto PMONITOR   = window->m_pMonitor.lock();
+             if (EFFECTIVE_MODE == FSMODE_FULLSCREEN) {
+-                window->m_vRealPosition = PMONITOR->vecPosition;
+-                window->m_vRealSize     = PMONITOR->vecSize;
++                *window->m_vRealPosition = PMONITOR->vecPosition;
++                *window->m_vRealSize     = PMONITOR->vecSize;
+             } else {
+                 Box box = { PMONITOR->vecPosition + PMONITOR->vecReservedTopLeft,
+                             PMONITOR->vecSize - PMONITOR->vecReservedTopLeft - PMONITOR->vecReservedBottomRight};
+-                window->m_vRealPosition = Vector2D(box.x, box.y);
+-                window->m_vRealSize = Vector2D(box.w, box.h);
++                *window->m_vRealPosition = Vector2D(box.x, box.y);
++                *window->m_vRealSize = Vector2D(box.w, box.h);
++                g_pXWaylandManager->setWindowSize(window, window->m_vRealSize->goal());
+             }
+         }
+     } else {
+Index: source/src/window.h
+===================================================================
+--- source.orig/src/window.h
++++ source/src/window.h
+@@ -44,8 +44,9 @@ public:
+     void set_geometry(const Box &box) {
+         window->m_vPosition = Vector2D(box.x, box.y);
+         window->m_vSize = Vector2D(box.w, box.h);
+-        window->m_vRealPosition = window->m_vPosition;
+-        window->m_vRealSize = window->m_vSize;
++        *window->m_vRealPosition = window->m_vPosition;
++        *window->m_vRealSize = window->m_vSize;
++        g_pXWaylandManager->setWindowSize(get_window(), window->m_vRealSize->goal());
+     }
+     bool is_window(PHLWINDOW w) const {
+         return window == w;
+@@ -63,8 +64,9 @@ public:
+         window->m_vSize.x *= scale;
+         window->m_vSize.y = (window->m_vSize.y + reserved_area.topLeft.y + reserved_area.bottomRight.y + gap0 + gap1) * scale - gap0 - gap1 - reserved_area.topLeft.y - reserved_area.bottomRight.y;
+         window->m_vSize = Vector2D(std::max(window->m_vSize.x, 1.0), std::max(window->m_vSize.y, 1.0));
+-        window->m_vRealSize = window->m_vSize;
+-        window->m_vRealPosition = window->m_vPosition;
++        *window->m_vRealSize = window->m_vSize;
++        *window->m_vRealPosition = window->m_vPosition;
++        g_pXWaylandManager->setWindowSize(get_window(), window->m_vRealSize->goal());
+     }
+ 
+     void move_to_bottom(double x, const Box &max, const Vector2D &gap_x, double gap) {
+@@ -92,8 +94,9 @@ public:
+         auto reserved = window->getFullWindowReservedArea();
+         //win->m_vSize = Vector2D(w - gap_x.x - gap_x.y, wh - gap0 - gap1);
+         window->m_vSize = Vector2D(std::max(w - reserved.topLeft.x - reserved.bottomRight.x - gap_x.x - gap_x.y, 1.0), std::max(get_geom_h() - reserved.topLeft.y - reserved.bottomRight.y - gap0 - gap1, 1.0));
+-        window->m_vRealPosition = window->m_vPosition;
+-        window->m_vRealSize = window->m_vSize;
++        *window->m_vRealPosition = window->m_vPosition;
++        *window->m_vRealSize = window->m_vSize;
++        g_pXWaylandManager->setWindowSize(get_window(), window->m_vRealSize->goal());
+     }
+     bool can_resize_width(double geomw, double maxw, const Vector2D &gap_x, double gap, double deltax) {
+         // First, check if resize is possible or it would leave any window
+@@ -165,8 +168,9 @@ private:
+         w->m_vPosition.y = mem.pos_y;
+         w->m_vPosition = mem.vPosition;
+         w->m_vSize = mem.vSize;
+-        w->m_vRealPosition = w->m_vPosition;
+-        w->m_vRealSize = w->m_vSize;
++        *w->m_vRealPosition = w->m_vPosition;
++        *w->m_vRealSize = w->m_vSize;
++        g_pXWaylandManager->setWindowSize(w, w->m_vRealSize->goal());
+     }
+ 
+     PHLWINDOWREF window;
