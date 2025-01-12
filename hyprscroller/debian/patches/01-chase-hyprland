@@ -85,7 +85,7 @@ Index: source/src/scroller.cpp
          PWINDOW->updateWindowDecos();
          return;
      }
-@@ -505,17 +506,17 @@ void ScrollerLayout::fullscreenRequestFo
+@@ -505,32 +506,34 @@ void ScrollerLayout::fullscreenRequestFo
      if (s == nullptr) {
          // save position and size if floating
          if (window->m_bIsFloating && CURRENT_EFFECTIVE_MODE == FSMODE_NONE) {
@@ -109,7 +109,9 @@ Index: source/src/scroller.cpp
  
                  window->unsetWindowData(PRIORITY_LAYOUT);
                  window->updateWindowData();
-@@ -524,13 +525,14 @@ void ScrollerLayout::fullscreenRequestFo
++                g_pXWaylandManager->setWindowSize(window, window->m_vRealSize->goal());
+             }
+         } else {
              // apply new pos and size being monitors' box
              const auto PMONITOR   = window->m_pMonitor.lock();
              if (EFFECTIVE_MODE == FSMODE_FULLSCREEN) {
