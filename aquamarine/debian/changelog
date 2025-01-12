@@ -1,3 +1,12 @@
+aquamarine (0.7.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.1
+  * e7719f9 version: bump to 0.7.1
+  * 10fb69d drm: remove wrong property settings (#133)
+  * 6904802 core: Unbreak build with libc++ (#131)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 12 Jan 2025 18:24:03 +0100
+
 aquamarine (0.7.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.7.0
