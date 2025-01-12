@@ -1,3 +1,23 @@
+hyprland-unstable (0.46.0~1ppa1+git202501121826-a6b26371) noble; urgency=medium
+
+  * Update to main a6b26371
+  * a6b26371 protocols: allow hyprland-toplevel-export to capture hidden
+    windows (#9041)
+  * 4f0f512c protocols: do not capture cursor in toplevel without
+    pointer focus (#9042)
+  * a3a74993 renderer: Do not set hdr metadata unless needed (#9014)
+  * b117fae3 keybinds: fix movefocus fallback for special workspaces
+    (#9040)
+  * 2671656a helpers/Monitor.cpp: fix include path (#9039)
+  * 2778aff0 animations: fix XWayland cursor glitch and refactor skill
+    issues (#9033)
+  * 9e4f90ae animation: fixup adding animvars during ::tick (#9030)
+  * 15dc024a keybinds: fix previous_per_monitor logic (#9010)
+  * 3b85690a config: add exec(-onec) with rules and execr(-once) (#8953)
+  * cef09fbf animation: avoid crashes in ::tick() on mutations
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 12 Jan 2025 18:26:44 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501102057-a8b568c6) noble; urgency=medium
 
   * Update to main a8b568c6
