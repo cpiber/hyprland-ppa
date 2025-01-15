@@ -1,3 +1,12 @@
+hyprland-unstable (0.46.0~1ppa1+git202501152042-25add268) noble; urgency=medium
+
+  * Update to main 25add268
+  * 25add268 renderer: unload background texture if it's disabled
+  * f16f1704 protocols: immediately copy toplevel content when
+    ignoreDamage set (#9049)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 15 Jan 2025 20:42:13 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501121826-a6b26371) noble; urgency=medium
 
   * Update to main a6b26371
