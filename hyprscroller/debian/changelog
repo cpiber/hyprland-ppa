@@ -1,3 +1,13 @@
+hyprscroller (0.46.0~1ppa1+git202501152053-e250f38) noble; urgency=medium
+
+  * Update to master e250f38
+  * e250f38 commit pin
+  * cd1f75f ooops!
+  * 716a6ad commit pin
+  * b01fdb1 window rules: add scroller:pinned tag
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 15 Jan 2025 20:53:41 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501052234-3f9bdb6build3) noble; urgency=medium
 
   * Rebuild for unstable
