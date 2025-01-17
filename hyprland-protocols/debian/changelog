@@ -1,3 +1,13 @@
+hyprland-protocols (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * 455c055 version: bump to 0.6.0
+  * d63f333 README: add lock_notify
+  * 5c2317e protocols: add hyprland-lock-notify-v1 (#12)
+  * e3b6af9 README: reword some parts
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 17 Jan 2025 16:48:11 +0100
+
 hyprland-protocols (0.5.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.0
