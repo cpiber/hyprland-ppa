@@ -75,7 +75,7 @@ Index: source/src/scroller.cpp
 ===================================================================
 --- source.orig/src/scroller.cpp
 +++ source/src/scroller.cpp
-@@ -483,7 +483,8 @@ void ScrollerLayout::resizeActiveWindow(
+@@ -493,7 +493,8 @@ void ScrollerLayout::resizeActiveWindow(
      auto s = getRowForWindow(PWINDOW);
      if (s == nullptr) {
          // Window is not tiled
@@ -85,7 +85,7 @@ Index: source/src/scroller.cpp
          PWINDOW->updateWindowDecos();
          return;
      }
-@@ -505,32 +506,34 @@ void ScrollerLayout::fullscreenRequestFo
+@@ -515,32 +516,34 @@ void ScrollerLayout::fullscreenRequestFo
      if (s == nullptr) {
          // save position and size if floating
          if (window->m_bIsFloating && CURRENT_EFFECTIVE_MODE == FSMODE_NONE) {
@@ -170,7 +170,7 @@ Index: source/src/window.h
      }
      bool can_resize_width(double geomw, double maxw, const Vector2D &gap_x, double gap, double deltax) {
          // First, check if resize is possible or it would leave any window
-@@ -165,8 +168,9 @@ private:
+@@ -175,8 +178,9 @@ private:
          w->m_vPosition.y = mem.pos_y;
          w->m_vPosition = mem.vPosition;
          w->m_vSize = mem.vSize;

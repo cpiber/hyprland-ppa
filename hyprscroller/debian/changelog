@@ -1,3 +1,11 @@
+hyprscroller (0.46.0~1ppa1+git202501210830-2f8156a) noble; urgency=medium
+
+  * Update to master 2f8156a
+  * 2f8156a commit pin
+  * 7385ab8 focus: fix focus problems with certain XWayland windows
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 21 Jan 2025 08:30:49 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501152053-e250f38) noble; urgency=medium
 
   * Update to master e250f38
