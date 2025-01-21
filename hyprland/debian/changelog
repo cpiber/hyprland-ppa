@@ -1,3 +1,35 @@
+hyprland-unstable (0.46.0~1ppa1+git202501210754-a661203b) noble; urgency=medium
+
+  * Update to main a661203b
+  * a661203b xwayland: fix crash when trying to initialize without
+    Xwayland installed (#9077)
+  * 9e8d9791 xwayland: support sending clipboard change notification on
+    focus (#9111)
+  * 2d82a923 config: fix float animation speeds < 0 (#9123)
+  * 40745316 protocols: add hyprland_lock_notify_v1 implementation
+    (#9092)
+  * 8dd2cd41 core: move to inotify for monitoring the config files
+  * 0a0e56d9 core: use readFileAsString instead of cat for os-release
+  * 086fd7ec protocols: do not destroy screencopy resources before
+    client request (#9048)
+  * 4da9b7cc core: reserve vector sizes as much as we can (#9118)
+  * f56153a9 nix/module.nix: expand nixos module for configuring
+    hyprland
+  * a36fa5c2 Nix: disable hyprpm
+  * fdfcfc82 CMake, Meson: add option controlling hyprpm building
+  * d01756c1 Meson: properly install 'hyprland' symlink (#9091)
+  * 078e13f4 renderer: Auto enable wide color gamut in HDR mode (#9090)
+  * 47d645d8 core: fixup includes
+  * b65f8a87 desktop/DesktopTypes.hpp: fix include (#9104)
+  * 401a3bae core: fix warning in shadow
+  * 76a89962 regex: log an error if regex parsing fails
+  * b7a3c452 core: add LIKELY and UNLIKELY macros
+  * 2bad7335 core: cleanup header includes (#9088)
+  * 0dc7367a renderer: use cairo for cpu buffer rendering (#9071)
+  * 52b9ae59 renderer: fix fullscreen hdr check (#9076)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 21 Jan 2025 07:54:35 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501152042-25add268) noble; urgency=medium
 
   * Update to main 25add268
