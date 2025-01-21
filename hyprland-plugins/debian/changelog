@@ -1,3 +1,10 @@
+hyprland-plugins (0.46.0~1ppa1+git202501210824-d2dad5b) noble; urgency=medium
+
+  * Update to main d2dad5b
+  * d2dad5b all: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 21 Jan 2025 08:24:34 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202501102228-b4c0fa3build2) noble; urgency=medium
 
   * Rebuild for unstable
