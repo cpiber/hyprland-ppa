@@ -1,3 +1,17 @@
+hyprlock (0.6.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.2
+  * 9cb5cd9 version: bump to 0.6.2
+  * 71cada2 helpers: fix absolutePath relative with tilde (#640)
+  * 77e4a05 core: bind to wl_seat v8
+  * 83f5be0 output: fix setting transform (#636)
+  * ee142d3 config: fix gradient rgb(a) parsing with spaces (for real
+    this time) (#628)
+  * fa3bb00 core: add missing header for BSDs after 753c538dea87 (#630)
+  * f1ba9ec widgets: add TZ env var support for $TIME (#627)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 22:51:15 +0100
+
 hyprlock (0.6.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.1
