@@ -30,14 +30,3 @@ Index: source/CMakeLists.txt
          qml/main.qml
 Index: source/src/core/Agent.cpp
 ===================================================================
---- source.orig/src/core/Agent.cpp
-+++ source/src/core/Agent.cpp
-@@ -60,7 +60,7 @@ void CAgent::initAuthPrompt() {
-     authState.qmlIntegration = new CQMLIntegration();
- 
-     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE"))
--        QQuickStyle::setStyle("org.kde.desktop");
-+        QQuickStyle::setStyle("Basic");
- 
-     authState.qmlEngine = new QQmlApplicationEngine();
-     authState.qmlEngine->rootContext()->setContextProperty("hpa", authState.qmlIntegration);

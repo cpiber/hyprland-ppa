@@ -1,3 +1,24 @@
+hyprpolkitagent (0.1.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.2
+  * 0f0d412 version: bump to 0.1.2
+  * 126a229 nix: move to hyprland-qt-support (#25)
+  * d870718 core: move to hyprland-qt-support instead of KDE's qqc2
+  * 08cab3a dbus: add proper ini-type config file (#22)
+  * ae7c5be systemd: don't create duplicate service file (#17)
+  * b6e8667 core: fix deprecated qt syntax (#18)
+  * b2cdeba qml: Add support for Numpad Enter key in authentication
+    (#15)
+  * d94cbab qml: update deprecated syntax (#14)
+  * 3ccff04 flake.lock: update
+  * 615efd4 qml: adjust dialog size to message length
+  * b22dfc2 systemd: Add [install] section to hyprpolkitagent.service
+    (#3)
+  * 065eff3 CI: init
+  * 2d83b10 Nix: init
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 23:33:35 +0100
+
 hyprpolkitagent (0.1.1-1ppa1) noble; urgency=medium
 
   * Initial release.
