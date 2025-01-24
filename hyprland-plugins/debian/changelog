@@ -1,3 +1,10 @@
+hyprland-plugins (0.46.0~1ppa1+git202501242315-7634792) noble; urgency=medium
+
+  * Update to main 7634792
+  * 7634792 all: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 23:15:08 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202501210824-d2dad5b) noble; urgency=medium
 
   * Update to main d2dad5b
