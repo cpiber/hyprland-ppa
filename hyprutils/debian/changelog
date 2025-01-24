@@ -1,3 +1,19 @@
+hyprutils (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * 006620e version: bump to 0.4.0
+  * ca1253c animation: add virtual dtor to AnimationManager (#31)
+  * 423c69d memory: implement a unique pointer
+  * 59414c4 math/region: fix scale using x scale as y scale (#39)
+  * 72dfbf5 animations: fix adding/removing vars during ::tick (#35)
+  * 5dd4f4a animation: don't fire update events if the avar is not being
+    animated
+  * 3c895da version: bump to 0.3.3
+  * fb9a816 animation: add missing header for libc++ after 6a26d08bacb4
+    (#30)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 20:14:07 +0100
+
 hyprutils (0.3.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.3.2
