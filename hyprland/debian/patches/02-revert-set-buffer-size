@@ -20,7 +20,7 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -262,7 +262,7 @@ void CCompositor::initServer(std::string
+@@ -297,7 +297,7 @@ void CCompositor::initServer(std::string
          Debug::trace = true;
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while

@@ -1,3 +1,42 @@
+hyprland-unstable (0.46.0~1ppa1+git202501242302-d8f79d76) noble; urgency=medium
+
+  * Update to main d8f79d76
+  * d8f79d76 core: add --verify-config to verify the config with
+    Hyprland
+  * 80b2fd13 animations: fix borderangle once (#9149)
+  * fda9790c layout: force full damage on toggling floating mode
+  * 9b3f7139 layershell: check if layer is valid (#9156)
+  * 0e5d03a5 datadevice: do the unfocus surface stuff before dndActive
+    is true (#9157)
+  * 57a39984 input: abord dnd op on escape pressed
+  * 944e36ea config: fix misc:disable_autoreload
+  * 4a1b960c layout: set window size after toggling floating
+  * 5d8261ae xwayland: avoid sending value of real size to xwayland
+  * d075d1ca pass/rect: fix bounding box
+  * bb099e57 pass/rect: fix box shrinking with bb
+  * dadb2e09 opengl: use uv to avoid rendering the entire blurbox
+  * a8c2d5a6 layout: damage window properly on float mode changes
+  * 465cf66d protocols: add hyprland_surface_v1.set_visible_region
+    implementation (#9120)
+  * 1a0a22ad configmgr: fix crash on very early plugin loads
+  * 0a1ae48a core: move all shared_ptrs from the STL to hyprutils
+    (#9143)
+  * ae403e6a flake.lock: update
+  * ae4e38d9 tablet: send `motion`s on tip events (#9132)
+  * ecae3c5e ci: fix "Resource not accessible by integration" for cf
+    workflow (#9144)
+  * f1bd6280 core/renderer: Add GPU hotplug support (#8980)
+  * fda56265 xwayland: fix sending large clipboard data (#9134)
+  * c90dbfab xwayland: fix clipboard mime name and atom mismatch (#9137)
+  * d335c8f1 fractional-scale: avoid redundant and duplicate scale
+    events
+  * c8a0443a config/ConfigManager.cpp: add instruction to edit config
+    (#9130)
+  * ce48bc54 flake.lock: update (#9128)
+  * da6e9663 keybinds: add visible arg for cyclenext (#9045)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 23:02:37 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501210754-a661203b) noble; urgency=medium
 
   * Update to main a661203b
