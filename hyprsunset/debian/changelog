@@ -1,3 +1,9 @@
+hyprsunset (0.1.0-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 22:55:35 +0100
+
 hyprsunset (0.1.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
