@@ -1,3 +1,15 @@
+hyprscroller (0.46.0~1ppa1+git202501242320-822df71) noble; urgency=medium
+
+  * Update to master 822df71
+  * 822df71 commit pin
+  * 05eb7a7 dispatchers: warp cursor when moving column
+  * 25acf5a commit pin
+  * bcd78d4 options: fix some cases of persistent_warps
+  * 1858676 commit pin
+  * 00725c3 dispatchers: add scroller:setmodemodifier
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 23:20:04 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501210830-2f8156a) noble; urgency=medium
 
   * Update to master 2f8156a
