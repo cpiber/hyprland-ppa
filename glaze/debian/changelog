@@ -1,3 +1,63 @@
+glaze (4.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 4.3.1
+  * 5980f9a6 version 4.3.1 bump
+  * 8c2eb577 Committing clang-format changes
+  * b2a465fd gcc_maybe_uninitialized_t test (#1562)
+  * 9756ea1e Update jmespath.hpp (#1559)
+  * 4489f051 Committing clang-format changes
+  * 8f125f65 More async_string testing (#1556)
+  * 0bc0c5ff add support for Eigen::Transform (#1555)
+  * b716727b version 4.3.0 bump
+  * 63c2b767 Committing clang-format changes
+  * 7a65db74 Comments and cleanup (#1553)
+  * cb8b3b82 Committing clang-format changes
+  * c0bc0d36 Support for reflection with Eigen vector types (#1552)
+  * ac09e849 Committing clang-format changes
+  * 752515ff append_arrays compile time option (#1549)
+  * 77bb2c32 Committing clang-format changes
+  * 2d418669 Cleaning (#1547)
+  * 4e39cae8 More efficient numerical keys (#1546)
+  * 3570e437 Committing clang-format changes
+  * 8b6e1f90 Fix for always_null_t in object handling and faster always
+    null write (#1545)
+  * eb7b085b Committing clang-format changes
+  * b14b9e70 Removing global glz::trace (#1544)
+  * 921f45f2 Committing clang-format changes
+  * 0ba9d363 add support of dynamically sized Eigen types (#1541)
+  * 9a116201 Committing clang-format changes
+  * 591fce7f Cleaning up map writing (#1542)
+  * 23641728 Remove old boost ut references (#1540)
+  * 402f42db Merge branch 'main' of
+    https://github.com/stephenberry/glaze
+  * 212eae8e Better == operators for glz::async_string
+  * a145b440 Committing clang-format changes
+  * 0f6bed11 Merge branch 'main' of
+    https://github.com/stephenberry/glaze
+  * 22a63b2a shared_lock
+  * 7392be4e Committing clang-format changes
+  * c7870d77 Add explicit operator std::string for glz::async_string
+  * d62e505b Committing clang-format changes
+  * 52ca1f7e Adding insert to glz::async_string (#1538)
+  * feb51b30 Committing clang-format changes
+  * 910a9f70 async_string proxy implicit string_view conversion (#1537)
+  * 23771485 Committing clang-format changes
+  * 4e4446eb Improved async_string with more methods and std::format
+    support (#1536)
+  * e652b11c version 4.2.4 bump
+  * 9d3f8d40 Committing clang-format changes
+  * 04d007ac number option clarification and unit test (#1535)
+  * 25d7e4d4 Committing clang-format changes
+  * 6a62fe44 Faster writing (#1534)
+  * 3e397af9 Committing clang-format changes
+  * 3554b758 Skipping and tuple cleanup (#1531)
+  * d9486ba8 Committing clang-format changes
+  * 58a45f24 Better API for repe requests (#1528)
+  * 02aae829 Committing clang-format changes
+  * 0eba9c6e Simplify REPE error handling, remove from state (#1527)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 23:38:33 +0100
+
 glaze (4.2.3-1ppa2) noble; urgency=medium
 
   * Fix dependencies
