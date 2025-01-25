@@ -1,3 +1,9 @@
+hyprlang (0.6.0-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Jan 2025 09:34:32 +0100
+
 hyprlang (0.6.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
