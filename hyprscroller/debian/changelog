@@ -1,3 +1,14 @@
+hyprscroller (0.46.0~1ppa1+git202501261540-8df095f) noble; urgency=medium
+
+  * Update to master 8df095f
+  * 8df095f commit pin
+  * e590a24 fixed window dragging after changes to
+    onWindowRemovedTiling()
+  * 44431f3 Merge pull request #117 from gepau/fix-no-gcc-build
+  * dbbb3d4 Fix build with non GCC compiler
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jan 2025 15:40:31 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501242320-822df71) noble; urgency=medium
 
   * Update to master 822df71

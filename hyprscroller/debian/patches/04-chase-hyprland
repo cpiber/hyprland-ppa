@@ -1,0 +1,79 @@
+Index: source/src/scroller.cpp
+===================================================================
+--- source.orig/src/scroller.cpp
++++ source/src/scroller.cpp
+@@ -8,6 +8,7 @@
+ #include <hyprland/src/managers/EventManager.hpp>
+ #include <hyprland/src/plugins/PluginAPI.hpp>
+ #include <hyprland/src/render/Renderer.hpp>
++#include <hyprland/src/managers/input/InputManager.hpp>
+ 
+ #include "scroller.h"
+ #include "common.h"
+@@ -501,7 +502,7 @@ void ScrollerLayout::resizeActiveWindow(
+     if (s == nullptr) {
+         // Window is not tiled
+         *PWINDOW->m_vRealSize = Vector2D(std::max((PWINDOW->m_vRealSize->goal() + delta).x, 20.0), std::max((PWINDOW->m_vRealSize->goal() + delta).y, 20.0));
+-        g_pXWaylandManager->setWindowSize(PWINDOW, PWINDOW->m_vRealSize->goal());
++        PWINDOW->sendWindowSize(PWINDOW->m_vRealSize->goal());
+         PWINDOW->updateWindowDecos();
+         return;
+     }
+@@ -537,7 +538,7 @@ void ScrollerLayout::fullscreenRequestFo
+ 
+                 window->unsetWindowData(PRIORITY_LAYOUT);
+                 window->updateWindowData();
+-                g_pXWaylandManager->setWindowSize(window, window->m_vRealSize->goal());
++                window->sendWindowSize(window->m_vRealSize->goal());
+             }
+         } else {
+             // apply new pos and size being monitors' box
+@@ -550,7 +551,7 @@ void ScrollerLayout::fullscreenRequestFo
+                             PMONITOR->vecSize - PMONITOR->vecReservedTopLeft - PMONITOR->vecReservedBottomRight};
+                 *window->m_vRealPosition = Vector2D(box.x, box.y);
+                 *window->m_vRealSize = Vector2D(box.w, box.h);
+-                g_pXWaylandManager->setWindowSize(window, window->m_vRealSize->goal());
++                window->sendWindowSize(window->m_vRealSize->goal());
+             }
+         }
+     } else {
+Index: source/src/window.h
+===================================================================
+--- source.orig/src/window.h
++++ source/src/window.h
+@@ -46,7 +46,7 @@ public:
+         window->m_vSize = Vector2D(box.w, box.h);
+         *window->m_vRealPosition = window->m_vPosition;
+         *window->m_vRealSize = window->m_vSize;
+-        g_pXWaylandManager->setWindowSize(get_window(), window->m_vRealSize->goal());
++        window->sendWindowSize(window->m_vRealSize->goal());
+     }
+     bool is_window(PHLWINDOW w) const {
+         return window == w;
+@@ -66,7 +66,7 @@ public:
+         window->m_vSize = Vector2D(std::max(window->m_vSize.x, 1.0), std::max(window->m_vSize.y, 1.0));
+         *window->m_vRealSize = window->m_vSize;
+         *window->m_vRealPosition = window->m_vPosition;
+-        g_pXWaylandManager->setWindowSize(get_window(), window->m_vRealSize->goal());
++        window->sendWindowSize(window->m_vRealSize->goal());
+     }
+ 
+     void move_to_bottom(double x, const Box &max, const Vector2D &gap_x, double gap) {
+@@ -96,7 +96,7 @@ public:
+         window->m_vSize = Vector2D(std::max(w - reserved.topLeft.x - reserved.bottomRight.x - gap_x.x - gap_x.y, 1.0), std::max(get_geom_h() - reserved.topLeft.y - reserved.bottomRight.y - gap0 - gap1, 1.0));
+         *window->m_vRealPosition = window->m_vPosition;
+         *window->m_vRealSize = window->m_vSize;
+-        g_pXWaylandManager->setWindowSize(get_window(), window->m_vRealSize->goal());
++        window->sendWindowSize(window->m_vRealSize->goal());
+     }
+     bool can_resize_width(double geomw, double maxw, const Vector2D &gap_x, double gap, double deltax) {
+         // First, check if resize is possible or it would leave any window
+@@ -180,7 +180,7 @@ private:
+         w->m_vSize = mem.vSize;
+         *w->m_vRealPosition = w->m_vPosition;
+         *w->m_vRealSize = w->m_vSize;
+-        g_pXWaylandManager->setWindowSize(w, w->m_vRealSize->goal());
++        w->sendWindowSize(w->m_vRealSize->goal());
+     }
+ 
+     PHLWINDOWREF window;
