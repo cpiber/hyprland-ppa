@@ -1,3 +1,9 @@
+hyprland-plugins (0.46.0~1ppa1+git202501242315-7634792build1) noble; urgency=medium
+
+  * Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jan 2025 15:26:53 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202501242315-7634792) noble; urgency=medium
 
   * Update to main 7634792
