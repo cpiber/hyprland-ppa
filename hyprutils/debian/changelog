@@ -1,3 +1,13 @@
+hyprutils (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * 6a8bc9d version: bump to 0.5.0
+  * de58286 animation: fix crashes and cleanup of active vars (#42)
+  * fb0c2d1 memory/weak: add missing nullptr comparison operators (#41)
+  * 3411e5b memory: add WP == UP comparison fn
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 13:05:43 +0100
+
 hyprutils (0.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.0
