@@ -1,3 +1,247 @@
+hyprland (0.47.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.47.0
+  * 04ac46c5 version: bump to 0.47.0
+  * 2f55806d renderer: fix rare case when a tiled window would be
+    rendered over fs
+  * 3b207d29 core: update groups on movewindow (#9183)
+  * 6bd6c551 hooksystem: avoid huge include for HANDLE
+  * bb5b09de renderer: fix funky corners
+  * efe29a24 shadow: avoid drawing empty shadows
+  * e9510115 renderer/internal: stop using box pointers
+  * 16aeb24b core: make persistent workspaces always follow the config
+  * 74d0f34c pointer: always scale the cpu cursor to the right size
+  * 4abf9155 window: only set m_iMonitorMovedFrom when the workspace is
+    visible (#9178)
+  * 0a28e137 desktop: move desktop types to memory-safe pointers
+  * 3cd6e396 xwayland: fix pointer mismatches with multiple monitors
+    (#9179)
+  * 8b1d6e30 subsurface: damage the entire parent on size change
+  * 445acec2 core: move sendWindowSize off of xwaylandmgr
+  * 45c3787e window: revert only set m_iMonitorMovedFrom, when moving to
+    a different monitor
+  * 9199a974 input: pass touch events to lock screens (#9129)
+  * bce58d9d dwindle: fix possible crash on null ws
+  * f3fc8d59 config/ConfigWatcher.cpp: add missing include needed for
+    clang (#9166)
+  * 107723bd config: disable borderangle by default (#9165)
+  * 065e8964 flake.lock: update
+  * 354d4594 xwayland: various window handling fixes
+  * 089fdd1e window: only set m_iMonitorMovedFrom, when moving to a
+    different monitor (#9160)
+  * 1815f9a2 compositor: fix incorrect cast, use lambda capture instead
+    (#9161)
+  * d8f79d76 core: add --verify-config to verify the config with
+    Hyprland
+  * 80b2fd13 animations: fix borderangle once (#9149)
+  * fda9790c layout: force full damage on toggling floating mode
+  * 9b3f7139 layershell: check if layer is valid (#9156)
+  * 0e5d03a5 datadevice: do the unfocus surface stuff before dndActive
+    is true (#9157)
+  * 57a39984 input: abord dnd op on escape pressed
+  * 944e36ea config: fix misc:disable_autoreload
+  * 4a1b960c layout: set window size after toggling floating
+  * 5d8261ae xwayland: avoid sending value of real size to xwayland
+  * d075d1ca pass/rect: fix bounding box
+  * bb099e57 pass/rect: fix box shrinking with bb
+  * dadb2e09 opengl: use uv to avoid rendering the entire blurbox
+  * a8c2d5a6 layout: damage window properly on float mode changes
+  * 465cf66d protocols: add hyprland_surface_v1.set_visible_region
+    implementation (#9120)
+  * 1a0a22ad configmgr: fix crash on very early plugin loads
+  * 0a1ae48a core: move all shared_ptrs from the STL to hyprutils
+    (#9143)
+  * ae403e6a flake.lock: update
+  * ae4e38d9 tablet: send `motion`s on tip events (#9132)
+  * ecae3c5e ci: fix "Resource not accessible by integration" for cf
+    workflow (#9144)
+  * f1bd6280 core/renderer: Add GPU hotplug support (#8980)
+  * fda56265 xwayland: fix sending large clipboard data (#9134)
+  * c90dbfab xwayland: fix clipboard mime name and atom mismatch (#9137)
+  * d335c8f1 fractional-scale: avoid redundant and duplicate scale
+    events
+  * c8a0443a config/ConfigManager.cpp: add instruction to edit config
+    (#9130)
+  * ce48bc54 flake.lock: update (#9128)
+  * da6e9663 keybinds: add visible arg for cyclenext (#9045)
+  * a661203b xwayland: fix crash when trying to initialize without
+    Xwayland installed (#9077)
+  * 9e8d9791 xwayland: support sending clipboard change notification on
+    focus (#9111)
+  * 2d82a923 config: fix float animation speeds < 0 (#9123)
+  * 40745316 protocols: add hyprland_lock_notify_v1 implementation
+    (#9092)
+  * 8dd2cd41 core: move to inotify for monitoring the config files
+  * 0a0e56d9 core: use readFileAsString instead of cat for os-release
+  * 086fd7ec protocols: do not destroy screencopy resources before
+    client request (#9048)
+  * 4da9b7cc core: reserve vector sizes as much as we can (#9118)
+  * f56153a9 nix/module.nix: expand nixos module for configuring
+    hyprland
+  * a36fa5c2 Nix: disable hyprpm
+  * fdfcfc82 CMake, Meson: add option controlling hyprpm building
+  * d01756c1 Meson: properly install 'hyprland' symlink (#9091)
+  * 078e13f4 renderer: Auto enable wide color gamut in HDR mode (#9090)
+  * 47d645d8 core: fixup includes
+  * b65f8a87 desktop/DesktopTypes.hpp: fix include (#9104)
+  * 401a3bae core: fix warning in shadow
+  * 76a89962 regex: log an error if regex parsing fails
+  * b7a3c452 core: add LIKELY and UNLIKELY macros
+  * 2bad7335 core: cleanup header includes (#9088)
+  * 0dc7367a renderer: use cairo for cpu buffer rendering (#9071)
+  * 52b9ae59 renderer: fix fullscreen hdr check (#9076)
+  * 25add268 renderer: unload background texture if it's disabled
+  * f16f1704 protocols: immediately copy toplevel content when
+    ignoreDamage set (#9049)
+  * a6b26371 protocols: allow hyprland-toplevel-export to capture hidden
+    windows (#9041)
+  * 4f0f512c protocols: do not capture cursor in toplevel without
+    pointer focus (#9042)
+  * a3a74993 renderer: Do not set hdr metadata unless needed (#9014)
+  * b117fae3 keybinds: fix movefocus fallback for special workspaces
+    (#9040)
+  * 2671656a helpers/Monitor.cpp: fix include path (#9039)
+  * 2778aff0 animations: fix XWayland cursor glitch and refactor skill
+    issues (#9033)
+  * 9e4f90ae animation: fixup adding animvars during ::tick (#9030)
+  * 15dc024a keybinds: fix previous_per_monitor logic (#9010)
+  * 3b85690a config: add exec(-onec) with rules and execr(-once) (#8953)
+  * cef09fbf animation: avoid crashes in ::tick() on mutations
+  * a8b568c6 core: Add render:allow_early_buffer_release to make buffer
+    release configurable (#9019)
+  * b5fb6110 core: Add a periodic donation request (#8981)
+  * da9252a2 keybinds: fix nullptr deref in forcekillactive (#9021)
+  * 8475a8ef core: always use goal size to send to clients
+  * f9c37ca4 windows: honor xdg_toplevel_set_fullscreen output hint
+    (#8965)
+  * 9dc9366f config: fix animations requiring all args
+  * 85aba23c ci(clang-format): directly do the clang-format instead of
+    error (#8955)
+  * 2d1ebadb selectors: add a tag: to for matching window tag(s) by
+    regex (#8985)
+  * e66eab7b animationmgr: don't warp based on POINTY value (#9000)
+  * c9822b08 keybinds: add new window destruction dispatchers (#8962)
+  * 983bc067 opengl: fix crash on null fb stencil op
+  * b320bc2d core: use cpu-buffer hw cursors on nvidia by default
+  * ad64726f opengl: only allocate offMainFB on demand
+  * 5fa25946 renderer: don't access hdrMetadata optional if it has no
+    value (#8987)
+  * 75727e7c protocols: fix compilation error (#8988)
+  * 67e1e46f window: fixup fade out animation on silent moves
+  * 308b1f3a core: minor fixes for animation rewrite
+  * c1439078 config: update animation even if disabled
+  * 830350a1 core: Add support for HDR and color management protocols
+    (#8715)
+  * 95542e44 animationmgr: fix invalid include
+  * 5642ed33 core: move parts of the animation system to hyprutils
+    (#8868)
+  * c7086f93 master: add option to show slaves on left in center
+    orientation (#8940)
+  * b9f110ef shaders: fix blank windows when using corner rounding
+    (#8969) (#8971)
+  * 1bf4937b hyprctl: fix hyprctl --batch not working with exec rules
+    (#8952)
+  * 6a90b505 core/compositor: fix too early buffer release (#8966)
+  * 602d6b73 snap: don't snap to any windows if workspace has a
+    fullscreen window (#8870)
+  * 780e3dd5 [gha] Nix: update inputs
+  * f1a7a749 datadevice: guard XWayland server against crashes
+  * f390f48a pass: fixup debug mode rendering of input boxes
+  * 1b06d222 pass/surface: fixup invalid expansion by old -1 rounding
+    param
+  * 391ff291 pass: improve pass debug mode
+  * a5c14370 renderer: Add supercircular window corners (#8943)
+  * b0bae154 master: make loop around optional when cycling (#8926)
+  * e8317ae3 xwayland: don't define atoms on no_xwayland builds
+  * a25d2288 windows: minor initial workspace improvements
+  * 60f069d5 groupbar: fix missing ellipsize for text
+  * 2e6e0e92 core: guard workspace and monitor in moveWorkspaceToMonitor
+  * f69e72ec socket2: add focusedmonv2 event (#8921)
+  * b0cd9972 github: bug issue template improvements (#8894)
+  * f3c49c12 pass: ignore empty rectangles queued
+  * 4971725b config: avoid querying the fs every tick
+  * 1697171f pass: allow removing all pass elements of a given type
+  * 81721b8a groupbar: unify title rendering
+  * 365caa49 keybinds: attempt to wrap around if fallback is allowed in
+    movefocus
+  * 94381e59 dnd/seat: avoid sending button events during a dnd op
+  * 42fd3660 protocols: fix alpha-modifier noncompliance (#8929)
+  * cbd24515 renderer: fix CRendererHintsPassElement reset duplication
+    issue (#8928)
+  * dde3e082 protocols: add hyprland_surface_v1 implementation (#8877)
+  * 9f3c9ac0 pass: mark crucial elements as undiscardable
+  * 7f177fa1 layershell: return focus to a valid ls on close if possible
+  * d64ac472 pass: improve pass debugging
+  * 4e93b2de renderer: use a render pass for render modif in client
+    render
+  * aff34089 monitor: avoid crashes on no good modes
+  * 1989b004 hyprpm: add glaze dependency FetchContent fallback (#8899)
+  * 9f933da1 renderer: fix oversized blur precalcs not blurring at all
+  * af301312 core: fix custom resolutions (#8897)
+  * 8c14c2a5 ctm: disable fade animation by default on nvidia
+  * cb211d83 internal: few small monitor improvements (#8890)
+  * fde569db master: replace always_center_master with
+    slave_count_for_center_master (#8871)
+  * 5b37d539 hyprpm: add an option to force reload all plugins (#8883)
+  * deb077c3 ctm: add an internal fade animation to ctm transitions
+  * 3f40d6d9 pass: scale blur region in ::render
+  * a364e804 snap: give edge snapping precedence over corner snapping
+    (#8873)
+  * 2b01a5bc xwayland: don't create an abstract unix domain socket on
+    linux (#8874)
+  * 8d4c18d7 core: refactor/improve monitor mode selection (#8804)
+  * c600e1aa [gha] Nix: update inputs
+  * cca0adf6 snap: revert #8659, use bounds checking instead of bit mask
+    (#8872)
+  * 534adad6 pass: scale blur regions properly
+  * 775111b6 foreign-toplevel: update active on null window focus
+    (#8860)
+  * 85632e7c internal: update window position/size after changing
+    fullscreenstate (#8865)
+  * 43ca6677 hyprpm: use glaze to parse hyprctl plugin list (#8812)
+  * e75e2cda functionHooks: wait for hyprland pages before returning
+    addr for trampo
+  * 2eaa4d80 debug: fix overlay not rendering
+  * dddb64dc internal: added reference to CTimer class in KeybindManager
+    (#8836)
+  * 1a3d17da debug: fix ISDEBUG checking (#8823)
+  * 2a24a611 pass: improve blur region detection
+  * 2e2e2e2c monitor: bring back old description behavior
+  * 68a5842f Nix: fix TAG substitution
+  * 5f7ad767 flake.lock: update
+  * a4a4ffff renderer: allow plugins to know what window was rendered in
+    post
+  * 1830296d debug: add debug:pass for debugging the render pass
+  * e536b022 Renderer: rewrite render scheduling (#8683)
+  * 1cc1a46c core: fade in windows when they are brought from invisible
+    workspaces
+  * 31422ae2 windowrules: add negative: prefix for negating a regex
+  * 57921d7d windowrules: precompute regexes for window/layer rules
+  * 8e8073c4 groups: honor group lock window rule (#8782)
+  * 52ee7a87 data-device: fix edge case crash on null xwm
+  * 71dc9f61 pluginAPI: add register dispatcher v2
+  * fd67ee9e layout: apply group rules after window creation (#8779)
+  * bec18dc6 core: fix possible crash on null active workspace
+  * 5b714f05 internal: Make static analysis more happy (#8767)
+  * 7c43eed2 hyprpm: fix hyrpm sometimes returning 0 despite errors
+    occuring (#8761)
+  * 23e7d8f6 logging: fix Gpu info (#8764)
+  * df06cb4d core: Unbreak build on FreeBSD (#8762)
+  * 0fec38fe xwayland: fix compile with no xwayland
+  * 80a48522 xwm: fixup targets in selection requests
+  * 4c4471c6 xwayland: fix dnd including xwayland
+  * 6378c8ed core: avoid activating toplevel-less surfaces
+  * 49e5f9c4 logging: get broader GPUINFO (#8753)
+  * 5f1df55f hyprctl: Fix `hyprctl` batch JSON command (#8749)
+  * e2c78c00 internal: remove dead code (#8748)
+  * bd7092a9 binds: cycle within group on single monitor if no window
+    found in the argument direction. (#8714)
+  * c7d97199 flake.lock: update
+  * 7ae79205 flake.lock: update (#8742)
+  * 4b6163ae windowrules: fixup duplicate rule enum tags
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 15:39:03 +0100
+
 hyprland (0.46.2-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
