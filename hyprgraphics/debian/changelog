@@ -1,3 +1,9 @@
+hyprgraphics (0.1.1-1ppa4) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 19:00:56 +0100
+
 hyprgraphics (0.1.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
