@@ -1,3 +1,22 @@
+hyprland-unstable (0.47.0~1ppa1+git202501271849-e7a72de9) noble; urgency=medium
+
+  * Update to main e7a72de9
+  * e7a72de9 xwayland: send synthetic configure events (#9193)
+  * cb7ed4f6 ci: clang-format fix (#9145)
+  * 2a478c30 core: fix clang-format
+  * 04ac46c5 version: bump to 0.47.0
+  * 2f55806d renderer: fix rare case when a tiled window would be
+    rendered over fs
+  * 3b207d29 core: update groups on movewindow (#9183)
+  * 6bd6c551 hooksystem: avoid huge include for HANDLE
+  * bb5b09de renderer: fix funky corners
+  * efe29a24 shadow: avoid drawing empty shadows
+  * e9510115 renderer/internal: stop using box pointers
+  * 16aeb24b core: make persistent workspaces always follow the config
+  * 74d0f34c pointer: always scale the cpu cursor to the right size
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 18:49:15 +0100
+
 hyprland-unstable (0.46.0~1ppa1+git202501261517-4abf9155) noble; urgency=medium
 
   * Update to main 4abf9155
