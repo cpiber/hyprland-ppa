@@ -1,3 +1,14 @@
+aquamarine (0.7.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.2
+  * 6934e7d version: bump to 0.7.2
+  * a0553cd headless/wayland: emit present events after commit
+  * 7fe0069 flake.lock: update
+  * f0519bf headless: fix headless supported formats (#136)
+  * 4edeb99 core: add clang-tidy (#135)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Jan 2025 08:42:25 +0100
+
 aquamarine (0.7.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
