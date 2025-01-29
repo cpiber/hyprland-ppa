@@ -1,3 +1,19 @@
+hyprscroller (0.46.0~1ppa1+git202501290844-cdb22de) noble; urgency=medium
+
+  * Update to master cdb22de
+  * cdb22de Updated README.md
+  * 0717e1f commit pin
+  * ce75036 Changes for Hyprland v0.47.0
+  * 4cffa12 Chase hyprland
+  * c4d31b5 Chase 445acec
+  * 8963d3e Update to new Unique Pointer implementation
+  * 3b3a6ae Add new includes
+  * 8c05644 Also update window size for floating windows
+  * 9758ba5 Add missing `setWindowSize`
+  * cbf4725 First attempt
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Jan 2025 08:44:31 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501261540-8df095fbuild1) noble; urgency=medium
 
   * Rebuild for unstable
