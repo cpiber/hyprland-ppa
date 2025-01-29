@@ -1,3 +1,11 @@
+hyprland-plugins (0.46.0~1ppa1+git202501291007-014003b) noble; urgency=medium
+
+  * Update to main 014003b
+  * 014003b hyprpm: update pin for 0.47.0
+  * 3e51162 expo: fix for 0.47
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Jan 2025 10:07:42 +0100
+
 hyprland-plugins (0.46.0~1ppa1+git202501271917-a07cebf) noble; urgency=medium
 
   * Update to main a07cebf
