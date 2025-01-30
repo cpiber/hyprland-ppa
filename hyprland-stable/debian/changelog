@@ -1,3 +1,26 @@
+hyprland (0.47.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.47.1
+  * 75dff720 version: bump to 0.47.1
+  * 48817b97 subsurface: fix invalid parent typo
+  * 664da71d popup: stop refocusing at unmap
+  * a285722b monitor: round refresh rates in sorting modes
+  * bdee557d config/hyprctl: fix keyword not updating autoreload
+  * 901271fa pass/rect: fix bounding / opaque regions
+  * fa610422 renderer: calculate UV using both pixel and monitor
+    dimensions (#9210)
+  * 778508e3 presentation: log a fixme when there is a feedback leak
+  * 762bbf58 configmgr: properly free glob memory
+  * c68653d7 ikeyboard: free xkbSymState in clearManuallyAllocd
+  * 56540f5b xwayland: respect window size set by configure requests
+    (#9190)
+  * 017f3225 deps: add libinotify-kqueue on BSDs after 8dd2cd41fb4c
+    (#9197)
+  * a7d7df5c xwayland: send synthetic configure events (#9193)
+  * 0d06f287 core: fix clang-format
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 Jan 2025 08:55:03 +0100
+
 hyprland (0.47.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.47.0
