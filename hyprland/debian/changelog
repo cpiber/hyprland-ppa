@@ -1,3 +1,27 @@
+hyprland-unstable (0.47.0~1ppa1+git202501300903-d462cc7f) noble; urgency=medium
+
+  * Update to main d462cc7f
+  * d462cc7f subsurface: fix invalid parent typo
+  * 09ec1cca popup: stop refocusing at unmap
+  * 6fc9c8e4 flake.lock: update
+  * 61319197 monitor: round refresh rates in sorting modes
+  * aaa5573c config/hyprctl: fix keyword not updating autoreload
+  * 344e32d7 pass/rect: fix bounding / opaque regions
+  * d41135d0 input: change window grab cursor to closed hand (#9196)
+  * b884f1f7 renderer: calculate UV using both pixel and monitor
+    dimensions (#9210)
+  * 3d1dd6b5 presentation: log a fixme when there is a feedback leak
+  * 1d3904c3 configmgr: properly free glob memory
+  * 529ad4ea ikeyboard: free xkbSymState in clearManuallyAllocd
+  * d3042e53 xwayland: respect window size set by configure requests
+    (#9190)
+  * d2773d7a deps: add libinotify-kqueue on BSDs after 8dd2cd41fb4c
+    (#9197)
+  * 5fd90548 nix: fix duplicate inputs and update flake.lock
+  * 25d5ce48 CI/setup_base: add libspng
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 Jan 2025 09:03:05 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202501271849-e7a72de9) noble; urgency=medium
 
   * Update to main e7a72de9
