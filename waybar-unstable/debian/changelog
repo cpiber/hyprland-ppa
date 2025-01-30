@@ -1,3 +1,56 @@
+waybar-unstable (0.11.0+113~1ppa1) noble; urgency=medium
+
+  * Update to master 481b01d9
+  * 481b01d9 fix: lint
+  * 90911a15 Merge pull request #3902 from Alexays/revert-3474-battery-
+    plugging-instant-updates
+  * bb2c67eb Revert "Make battery module update on plugging/unplugging
+    again (refs #2519)"
+  * dc64b354 Merge pull request #3474 from schmop/battery-plugging-
+    instant-updates
+  * a4241d70 Merge pull request #3823 from
+    thetwistedlogic/feature/river-hide-vacant
+  * ab0acd07 Merge pull request #3862 from emar10/config-include-
+    wildcards
+  * 4ec12182 Merge pull request #3877 from pol-rivero/tray-tooltip
+  * 0992bf1b Escape tray tooltip text
+  * 369c81d6 Merge pull request #3875 from alexlnkp/master
+  * 6a29abb4 fix: never sleep cava when sleep_timer is 0
+  * 9d9f1d68 Merge pull request #3866 from AngryLoki/libcxx
+  * 865121b2 Fix compilation with libc++
+  * d1dac285 Allow using wildcards in config include paths
+  * ac08b752 Merge pull request #3859 from
+    Alexays/update_flake_lock_action
+  * fe2f847e Merge pull request #3860 from JasonnnW3000/master
+  * 3555417a Update LICENSE, fix license year
+  * 88455096 flake.lock: Update
+  * 5346649f Merge pull request #3827 from pope/master
+  * 6ce881ab Merge pull request #3826 from DreamMaoMao/fix-hyprland-
+    window-crash
+  * dbb708c8 Merge pull request #3831 from c4rlo/sway-fix-config-warning
+  * 8e276bb3 sway: fix "Mapping is not an object" warning
+  * 157ea445 Escape markup characters in dwl/window
+  * 01ae117c fix: hyprland/window get empty ipc json data
+  * 8e0964ad feat: is visible and urgent checks as well
+  * 8024df04 fix: edge case where tags get hidden after all views are
+    killed
+  * 43af1b9e feat: implement hide vacant for river
+  * e959f1d2 Merge pull request #3808 from Nambers/master
+  * 347c4420 Merge pull request #3806 from meithecatte/livelock-fix
+  * 758c14c5 Merge pull request #3801 from majutsushi/sway-workspaces-
+    x11-class
+  * 78d2ce37 Merge pull request #3809 from gustafullberg/ipv4ipv6
+  * db943dae Let network module handle ipv4 and ipv6 simultaneously
+  * 6bac784b fix: use auto and add self as fallback
+  * 6d287408 Add locking for interacting with the pulseaudio thread
+  * 3abac0ab Merge pull request #3800 from
+    Alexays/update_flake_lock_action
+  * 0e5728b5 flake.lock: Update
+  * 4e056591 sway/workspaces: use X11 class for XWayland windows
+  * f4608b3e Fix battery status changes not being detected
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 Jan 2025 18:14:40 +0100
+
 waybar-unstable (0.11.0+76~1ppa1) noble; urgency=medium
 
   * Update to master 20ca48c3
