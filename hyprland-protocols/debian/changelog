@@ -1,3 +1,11 @@
+hyprland-protocols (0.6.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.2
+  * 755aef8 version: bump to 0.6.2
+  * 6c52013 protocols: add hyprland_ctm_control_manager_v1.blocked (#14)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 01 Feb 2025 16:25:25 +0100
+
 hyprland-protocols (0.6.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.1
