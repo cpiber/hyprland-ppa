@@ -1,3 +1,31 @@
+hyprland-unstable (0.47.0~1ppa1+git202502011628-c6f67225) noble; urgency=medium
+
+  * Update to main c6f67225
+  * c6f67225 desktop: move popup and subsurface ctors to factories
+  * 5b43c106 animation: don't immediately disconnect active vars during
+    tick (#9272)
+  * d11d0697 CI/Nix: remove deprecated magic-nix-cache-action
+  * ddf180fa render: enforce framebuffer offloading and remove
+    introspection toggle (#9217)
+  * a4b7d1c2 xwayland: correct pointer coordinate mismatch in X11
+    windows (#9259)
+  * 12b5034c configWatcher: watch both symlinks and canonical paths
+    (#9219)
+  * 9c382874 groupbar: various visual improvements
+  * ac566819 desktop: fix segfault when destroying a partially create
+    layer surface (#9247)
+  * 7d51dee1 hyprctl: Extract IPC code to separate method (#9223)
+  * ea16b64e xwayland: prevent invalid window configurations for X11
+    apps (#9253)
+  * e6a9cfab monitor: preferred mode now tries first 3 modes if
+    preferred fails before erroring (#9246)
+  * ef03f691 xwayland: handle window coords correctly (#9238)
+  * 32c0fa2f core: begin using CFileDescriptor from hyprutils (#9122)
+  * 7d1c78f4 core,hyprctl: clang, clang-tidy, typo fixes and dtors
+    changes (#9233)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 01 Feb 2025 16:28:30 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202501300903-d462cc7f) noble; urgency=medium
 
   * Update to main d462cc7f
