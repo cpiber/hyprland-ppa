@@ -1,3 +1,11 @@
+hyprscroller (0.46.0~1ppa1+git202502011636-e4b1354) noble; urgency=medium
+
+  * Update to master e4b1354
+  * e4b1354 Updated README.md
+  * feb46d9 commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 01 Feb 2025 16:36:16 +0100
+
 hyprscroller (0.46.0~1ppa1+git202501290844-cdb22debuild1) noble; urgency=medium
 
   * Rebuild for unstable
