@@ -1,3 +1,13 @@
+hyprland-unstable (0.47.0~1ppa1+git202502020940-64fefa37) noble; urgency=medium
+
+  * Update to main 64fefa37
+  * 64fefa37 desktop: move popups to UPs and fix missing subsurface
+    resource
+  * e380b6ed popup: take xdg geometry into account in input calcs
+  * 88adae73 pass: add input region debug
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 02 Feb 2025 09:40:03 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202502011628-c6f67225) noble; urgency=medium
 
   * Update to main c6f67225
