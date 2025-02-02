@@ -1,3 +1,11 @@
+hyprscroller (0.46.0~1ppa1+git202502020955-bbd4a2d) noble; urgency=medium
+
+  * Update to master bbd4a2d
+  * bbd4a2d README: supported version update
+  * 355e0c3 commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 02 Feb 2025 09:55:00 +0100
+
 hyprscroller (0.46.0~1ppa1+git202502011636-e4b1354) noble; urgency=medium
 
   * Update to master e4b1354
