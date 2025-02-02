@@ -1,3 +1,27 @@
+hyprland (0.47.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.47.2
+  * 882f7ad7 version: bump to 0.47.2
+  * 3822673c desktop: move popups to UPs and fix missing subsurface
+    resource
+  * bdbfa933 popup: take xdg geometry into account in input calcs
+  * f8276909 desktop: move popup and subsurface ctors to factories
+  * ff8b5b70 animation: don't immediately disconnect active vars during
+    tick (#9272)
+  * 32365669 xwayland: correct pointer coordinate mismatch in X11
+    windows (#9259)
+  * dd647576 configWatcher: watch both symlinks and canonical paths
+    (#9219)
+  * 047ea028 desktop: fix segfault when destroying a partially create
+    layer surface (#9247)
+  * c8eec191 xwayland: prevent invalid window configurations for X11
+    apps (#9253)
+  * c062fd29 monitor: preferred mode now tries first 3 modes if
+    preferred fails before erroring (#9246)
+  * f04d94aa xwayland: handle window coords correctly (#9238)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 02 Feb 2025 09:59:33 +0100
+
 hyprland (0.47.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.47.1
