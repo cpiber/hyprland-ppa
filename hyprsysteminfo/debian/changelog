@@ -1,3 +1,9 @@
+hyprsysteminfo (0.1.3-1ppa4) noble; urgency=medium
+
+  * Missing SVG runtime dependency
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 02 Feb 2025 23:04:02 +0100
+
 hyprsysteminfo (0.1.3-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
