@@ -6,11 +6,11 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -48,7 +48,6 @@ pkg_check_modules(
-   libjpeg
-   libwebp
+@@ -53,7 +53,6 @@ pkg_check_modules(
+ pkg_check_modules(
+   JXL
    libjxl
 -  libjxl_cms
    libjxl_threads
-   libmagic)
- 
+ )
+ if(NOT JXL_FOUND)

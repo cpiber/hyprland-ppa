@@ -16,6 +16,7 @@ Build-Depends:
  libwebp-dev,
  libjxl-dev,
  libmagic-dev,
+ libspng-dev,
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/hyprgraphics

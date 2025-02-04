@@ -1,3 +1,21 @@
+hyprgraphics (0.1.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.2
+  * e19ee90 version: bump to 0.1.2
+  * 5ac80e3 tests: add a symlink test (#10)
+  * 12cd703 png: handle invalid buffer size returned by libspng
+  * 23783b9 CI/Arch/Clang: add libspng
+  * 6355b72 Nix: add libspng dep
+  * 0c11438 core: move to libspng for png
+  * 0d77b48 flake.lock: update
+  * 5220227 core: Allow compiling without JXL support (#6)
+  * b099807 README: Add Dependencies (#4)
+  * 6dea3fb flake.lock: update
+  * 0f9b8ca color: add missing header for libc++ (#3)
+  * fb2c026 image: add symlink support (#1)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 04 Feb 2025 18:02:20 +0100
+
 hyprgraphics (0.1.1-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies
