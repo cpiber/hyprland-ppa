@@ -1,3 +1,35 @@
+hyprland-unstable (0.47.0~1ppa1+git202502072046-54441e0c) noble; urgency=medium
+
+  * Update to main 54441e0c
+  * 54441e0c renderer: fix fade out on silent moves to special
+  * acbcf0cf toplevelexport: fix transformed origin for shm buffers
+    (#9343)
+  * 30b49c75 popup: improve ::at() behavior
+  * ff9e059d window: move size reporting to animation begin callback
+    (#9298)
+  * f1e32cd1 core: avoid .at() and use [] operator (#9347)
+  * 868b2b54 window: fix missing surface null checks to prevent crashes
+    (#9350)
+  * 8a6778f0 scripts: don't overwrite generated version if we're not in
+    a git repo
+  * 64591c85 nix: add hydraJobs output for aggregating Hyprland build
+    jobs
+  * 873bff39 renderer: fix missing null checks to prevent crashes
+    (#9332)
+  * 84c9baec keybinds: Added `toggleswallow` dispatcher (#5548)
+  * 3b99e906 compositor: don't iterate over unmapped ls-es in vectorToLS
+  * 5e729243 compositor: guard null ws in updating fade
+  * 70cfc7cc cmonitor: guard old workspace
+  * 1da0b2c0 subprojects: update h-p
+  * 708d1663 dispatchers: add cyclenext hist option (#9055)
+  * 44004abc config: fix includes
+  * 31431a92 protocols: Support content-type-v1 proto (#9226)
+  * 70d94fec refactor: clang-tidy in compositor (#9241)
+  * 37310810 protocols: implement hyprland-ctm-control rev 2 (#9267)
+  * 97a24ec6 Nix: change meson buildtype from debugoptimized to debug
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Feb 2025 20:46:53 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202502020940-64fefa37) noble; urgency=medium
 
   * Update to main 64fefa37

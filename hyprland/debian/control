@@ -39,7 +39,7 @@ Build-Depends:
  libaquamarine-dev (>= 0.4.5),
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),
- hyprland-protocols (>= 0.4.0),
+ hyprland-protocols (>= 0.6.2),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
