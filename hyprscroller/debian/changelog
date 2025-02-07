@@ -1,3 +1,11 @@
+hyprscroller (0.47.0~1ppa1+git202502072116-964aced) noble; urgency=medium
+
+  * Update to master 964aced
+  * 964aced commit pin
+  * 5fbf8b8 jump: make it work with one window only
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Feb 2025 21:16:01 +0100
+
 hyprscroller (0.46.0~1ppa1+git202502020955-bbd4a2d) noble; urgency=medium
 
   * Update to master bbd4a2d
