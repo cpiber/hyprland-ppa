@@ -1,3 +1,12 @@
+hyprland-plugins (0.47.0~1ppa1+git202502072058-6d525bc) noble; urgency=medium
+
+  * Update to main 6d525bc
+  * 6d525bc Hyprbars: center button text (#291)
+  * 557e7b4 Hyprbars: disable drag when clicking button (#289)
+  * eefa87d Hyprbars: fix hyprbar-button bgcolor (#288)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Feb 2025 20:58:01 +0100
+
 hyprland-plugins (0.47.0~1ppa1+git202502020947-1c4b446) noble; urgency=medium
 
   * Update to main 1c4b446

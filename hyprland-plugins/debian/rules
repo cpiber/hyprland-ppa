@@ -19,7 +19,7 @@ DEST ?= debian/$(NAME)/usr/share/hyprpm/$(NAME)
 
 
 export CXX = /usr/bin/g++-14
-export CXXFLAGS = -std=gnu++26
+export CXXFLAGS = -std=gnu++26 -Wno-narrowing
 export CC = /usr/bin/gcc-14
 
 %:
