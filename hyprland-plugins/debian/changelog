@@ -1,3 +1,10 @@
+hyprland-plugins (0.47.0~1ppa1+git202502122132-4f48dbe) noble; urgency=medium
+
+  * Update to main 4f48dbe
+  * 4f48dbe hyprwinwrap: chase ff9e059 (#294)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Feb 2025 21:32:34 +0100
+
 hyprland-plugins (0.47.0~1ppa1+git202502072058-6d525bc) noble; urgency=medium
 
   * Update to main 6d525bc
