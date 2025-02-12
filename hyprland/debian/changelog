@@ -1,3 +1,26 @@
+hyprland-unstable (0.47.0~1ppa1+git202502122109-68bb3e7f) noble; urgency=medium
+
+  * Update to main 68bb3e7f
+  * 68bb3e7f env: move XDG_SESSION_TYPE to before backend init (#9390)
+  * f83fe998 protocols: add version 2 of ext-idle-notify-v1 protocol
+    (#8959)
+  * f2d43e5f nix/overlays: add wayland-protocols overlay
+  * e1179b66 flake.lock: update
+  * f261fb6f groupbar: fix groupbar missing when indicator_height is <=
+    0
+  * 3a43e7bb config: default movefocus_cycles_fullscreen to false
+  * 1f97643e core: add mallopt to modify trim threshold
+  * 56f6f615 tablet: take `active_area_size` into account when sending
+    tip event (#9325)
+  * 8e10ddb5 datadevice: fix wrong param (#9370)
+  * feb8ad48 groups: deactivate unfocused windows in groups (#9354)
+  * f7fcbe32 renderer: various fixes towards improving gpu calls
+    robustness (#9188)
+  * a724332e desktop: add ability to target pinned windows in workspace
+    rules (#9344)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Feb 2025 21:09:02 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202502072046-54441e0c) noble; urgency=medium
 
   * Update to main 54441e0c
