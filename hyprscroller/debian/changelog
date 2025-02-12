@@ -1,3 +1,11 @@
+hyprscroller (0.47.0~1ppa1+git202502122136-2fe8ef6) noble; urgency=medium
+
+  * Update to master 2fe8ef6
+  * 2fe8ef6 commit pin
+  * 4769be4 setsize: accept a string value
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Feb 2025 21:36:35 +0100
+
 hyprscroller (0.47.0~1ppa1+git202502072116-964aced) noble; urgency=medium
 
   * Update to master 964aced
