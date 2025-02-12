@@ -4,13 +4,14 @@ Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Héctor Orón Martínez <zumbi@debian.org>,
            Emilio Pozuelo Monfort <pochu@debian.org>,
+           Dylan Aïssi <daissi@debian.org>,
            Constantin Piber <cp.piber@gmail.com>
 Build-Depends:
  debhelper-compat (= 13),
- meson (>= 0.55.0),
- libwayland-dev,
+ meson (>= 0.58.0),
+ libwayland-dev (>= 1.22.0),
  pkgconf
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Rules-Requires-Root: no
 Homepage: http://wayland.freedesktop.org/
 Vcs-Git: https://salsa.debian.org/xorg-team/wayland/wayland-protocols.git
