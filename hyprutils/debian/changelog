@@ -1,3 +1,16 @@
+hyprutils (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * 61a5382 version: bump to 0.5.1
+  * 77d7ea3 os/process: populate pid when ran sync
+  * e4e018a CI: remove deprecated magic-nix-cache-action
+  * 3d9ae75 core: reenable wreorder (#46)
+  * 9aad80a core: clang, clang-tidy fixes and comp options (#45)
+  * dd790b9 animation: fix end callbacks readding the animation var
+    (#43)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 18 Feb 2025 18:43:29 +0100
+
 hyprutils (0.5.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.0
