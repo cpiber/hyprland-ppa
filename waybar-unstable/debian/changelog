@@ -1,3 +1,38 @@
+waybar-unstable (0.12.0+0~1ppa1) noble; urgency=medium
+
+  * Update to master 8490a1d9
+  * 8490a1d9 chore: 0.12.0
+  * a3ee5f11 Update clang-format.yml
+  * 0b87af93 Merge pull request #3922 from hansp27/niri-language-dont-
+    ellipsize
+  * fe3dda4c Merge pull request #3932 from rokiden/fix-urgent-special
+  * 0d8d4257 Merge pull request #3945 from zjeffer/fix/zjeffer/hyprland-
+    ipc
+  * d098dbbe Merge pull request #3940 from Malix-Labs/patch-1
+  * 533d5de2 Merge pull request #3942 from aruhier/pr_battery_module
+  * d3c7ff65 Merge pull request #3947 from
+    zjeffer/fix/zjeffer/workspacerules-defaultname
+  * bcee548f Fix workspacerules not taking into account defaultName
+  * 37c6cd42 fix freebsd compilation
+  * a4989ced formatting
+  * 5b8839ab Hyprland IPC improvements
+  * 4be1f3bf fix: battery runtime estimation with negative sysfs values
+  * 6c4f0af2 update(docs): link
+  * cc94278c hyprland/workspaces: fixed urgent for special workspaces
+  * 0abb2166 turn off ellipsize for niri/language module
+  * c32d5e38 Merge pull request #3898 from Duckulus/master
+  * 834868e0 Merge pull request #3914 from
+    Alexays/update_flake_lock_action
+  * b2d11f9e Merge pull request #3919 from KasyanDiGris/master
+  * e32a6784 Hide upower module when specified device disconnected
+  * 0d5a4f82 Merge pull request #3913 from ladenburger/fix-json-
+    hyprland-kb-manpage
+  * 8bdb5c19 flake.lock: Update
+  * 8a741f6e fix: JSON format for Hyprland keyboard example
+  * ba12ca71 enable tooltip for hyprland window module
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Feb 2025 09:15:20 +0100
+
 waybar-unstable (0.11.0+113~1ppa1) noble; urgency=medium
 
   * Update to master 481b01d9
