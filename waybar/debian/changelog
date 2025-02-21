@@ -1,3 +1,174 @@
+waybar (0.12.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.0
+  * 8490a1d9 chore: 0.12.0
+  * a3ee5f11 Update clang-format.yml
+  * 0b87af93 Merge pull request #3922 from hansp27/niri-language-dont-
+    ellipsize
+  * fe3dda4c Merge pull request #3932 from rokiden/fix-urgent-special
+  * 0d8d4257 Merge pull request #3945 from zjeffer/fix/zjeffer/hyprland-
+    ipc
+  * d098dbbe Merge pull request #3940 from Malix-Labs/patch-1
+  * 533d5de2 Merge pull request #3942 from aruhier/pr_battery_module
+  * d3c7ff65 Merge pull request #3947 from
+    zjeffer/fix/zjeffer/workspacerules-defaultname
+  * bcee548f Fix workspacerules not taking into account defaultName
+  * 37c6cd42 fix freebsd compilation
+  * a4989ced formatting
+  * 5b8839ab Hyprland IPC improvements
+  * 4be1f3bf fix: battery runtime estimation with negative sysfs values
+  * 6c4f0af2 update(docs): link
+  * cc94278c hyprland/workspaces: fixed urgent for special workspaces
+  * 0abb2166 turn off ellipsize for niri/language module
+  * c32d5e38 Merge pull request #3898 from Duckulus/master
+  * 834868e0 Merge pull request #3914 from
+    Alexays/update_flake_lock_action
+  * b2d11f9e Merge pull request #3919 from KasyanDiGris/master
+  * e32a6784 Hide upower module when specified device disconnected
+  * 0d5a4f82 Merge pull request #3913 from ladenburger/fix-json-
+    hyprland-kb-manpage
+  * 8bdb5c19 flake.lock: Update
+  * 8a741f6e fix: JSON format for Hyprland keyboard example
+  * 481b01d9 fix: lint
+  * 90911a15 Merge pull request #3902 from Alexays/revert-3474-battery-
+    plugging-instant-updates
+  * bb2c67eb Revert "Make battery module update on plugging/unplugging
+    again (refs #2519)"
+  * dc64b354 Merge pull request #3474 from schmop/battery-plugging-
+    instant-updates
+  * ba12ca71 enable tooltip for hyprland window module
+  * a4241d70 Merge pull request #3823 from
+    thetwistedlogic/feature/river-hide-vacant
+  * ab0acd07 Merge pull request #3862 from emar10/config-include-
+    wildcards
+  * 4ec12182 Merge pull request #3877 from pol-rivero/tray-tooltip
+  * 0992bf1b Escape tray tooltip text
+  * 369c81d6 Merge pull request #3875 from alexlnkp/master
+  * 6a29abb4 fix: never sleep cava when sleep_timer is 0
+  * 9d9f1d68 Merge pull request #3866 from AngryLoki/libcxx
+  * 865121b2 Fix compilation with libc++
+  * d1dac285 Allow using wildcards in config include paths
+  * ac08b752 Merge pull request #3859 from
+    Alexays/update_flake_lock_action
+  * fe2f847e Merge pull request #3860 from JasonnnW3000/master
+  * 3555417a Update LICENSE, fix license year
+  * 88455096 flake.lock: Update
+  * 5346649f Merge pull request #3827 from pope/master
+  * 6ce881ab Merge pull request #3826 from DreamMaoMao/fix-hyprland-
+    window-crash
+  * dbb708c8 Merge pull request #3831 from c4rlo/sway-fix-config-warning
+  * 8e276bb3 sway: fix "Mapping is not an object" warning
+  * 157ea445 Escape markup characters in dwl/window
+  * 01ae117c fix: hyprland/window get empty ipc json data
+  * 8e0964ad feat: is visible and urgent checks as well
+  * 8024df04 fix: edge case where tags get hidden after all views are
+    killed
+  * 43af1b9e feat: implement hide vacant for river
+  * e959f1d2 Merge pull request #3808 from Nambers/master
+  * 347c4420 Merge pull request #3806 from meithecatte/livelock-fix
+  * 758c14c5 Merge pull request #3801 from majutsushi/sway-workspaces-
+    x11-class
+  * 78d2ce37 Merge pull request #3809 from gustafullberg/ipv4ipv6
+  * db943dae Let network module handle ipv4 and ipv6 simultaneously
+  * 6bac784b fix: use auto and add self as fallback
+  * 6d287408 Add locking for interacting with the pulseaudio thread
+  * 3abac0ab Merge pull request #3800 from
+    Alexays/update_flake_lock_action
+  * 0e5728b5 flake.lock: Update
+  * 4e056591 sway/workspaces: use X11 class for XWayland windows
+  * 20ca48c3 Merge pull request #3768 from
+    deprekated/fix_privacy_null_deref
+  * b863627c Merge pull request #3730 from TripleTrable/AModuls/expand-
+    fill-no-center
+  * 1e481b7a fix broken clang-format to run pipeline
+  * f9acc1fe Add stretching of modules and  modules-center toggling
+  * 86ce9f72 fix null-deref due to unconstructed PrivacyNodeInfo
+  * 86451156 Merge pull request #3736 from
+    Alexays/update_flake_lock_action
+  * 63edb402 Merge pull request #3747 from Aqa-Ib/patch-1
+  * 52d582b9 Merge pull request #3758 from ArijanJ/signals-in-manpage
+  * 724a4a5e Add signals section to manpage
+  * 77b50b4c fix hyprland's grouped window flags
+  * 3f80e507 flake.lock: Update
+  * 5f260516 Merge pull request #3674 from PassiHD2004/master
+  * 9d89ddae Merge pull request #3464 from findus/pulseaudio-default-
+    sink
+  * bb40e169 feat: update man page
+  * dacecb9b Merge pull request #3695 from cfillion/fix-hyprland-crashes
+  * 92242f0b hyprland: fix a data race at startup between sockets 1 and
+    2
+  * 0e03c7a8 fix a segfault on signals received after main returns
+  * 6df26ccb feat: add warning threshold to temperature module
+  * 280f11e2 Merge pull request #3658 from
+    Alexays/update_flake_lock_action
+  * 95eaffcf flake.lock: Update
+  * e7b2d33d Merge pull request #3637 from
+    TripleTrable/backlight/add_min_brightness
+  * 281911c9 Merge pull request #3652 from khaneliman/flake
+  * e53497ba .github/workflows: allow forks to manually run flake lock
+    update
+  * a1adf684 Merge pull request #3650 from khaneliman/nix
+  * 6322fa28 Merge pull request #3651 from khaneliman/github
+  * e3944858 .github/workflows: don't run on forks
+  * edab49f2 nix/default: cava bump
+  * 486b99c2 Merge pull request #3646 from LukashonakV/cava_bump
+  * e46a1c6b cava bump
+  * d684a6de Backlight: Set default to 0 to prevent breaking existing
+    setups
+  * cad18f39 Merge pull request #3640 from mslxl/master
+  * 47f767b0 Backlight: Add documentation for min-brightness
+  * 04bda9f4 Backlight: Add minimum brightness
+  * c88a86f5 nix: remove patches from downstream
+  * 07f75e30 Merge pull request #3632 from LukashonakV/ISSUE#3383
+  * b4e97eb2 FreeBSD format fix
+  * 773b1d48 Default value for cldYearShift_ = 1900/01/01
+  * 57156bce removed manual flag from clang format again
+  * e3095c6d clang-format
+  * 951b89ff Update clang-format.yml
+  * d6bfeb5a added is running condition to default_sink_is_running check
+  * 8b1d7369 added running check to default sink return condition
+  * 9c47b2e9 removed debug logging
+  * dedee8cd pulseaudio: show correct sink volume on default output
+    changes
+  * 21af48fd chore: lint
+  * b5395f4e Merge pull request #3523 from S0nter/master
+  * 3462769f Merge branch 'Alexays:master' into master
+  * ac1a4229 Merge pull request #3617 from lukasfink1/fix-custom-format-
+    bug
+  * a3e7031f Fix formatting
+  * 254111ff Improve error message for mixed arg indexing in format
+    string
+  * de170fa5 Update documentation
+  * 83992d29 Fix formatting
+  * 3bb3c2d2 fix(custom): stop mixing manual and automatic arg indexing
+  * ff66b5dd Update waybar-cava man page
+  * 9e8ebe66 Merge branch 'Alexays:master' into master
+  * 9cfb1e38 Merge pull request #3528 from alebastr/sway-scene-fixes
+  * ae997ad7 Merge pull request #3613 from ThatOneCalculator/fix/3612
+  * 085a1ede fix: use app_identifier itself in AAppIconLabel if it's an
+    absolute path
+  * 0d02f687 Merge pull request #3604 from alebastr/tray-fix
+  * e0be3ac1 flake.lock: Update
+  * 45fec7bc Revert "change layer for mode invisible to nullopt"
+  * 7b23d586 fix(bar): force commit for occluded surfaces
+  * 0006e471 fix(tray): revert ustring formatting changes
+  * f60c291b chore: update fmt wrap to 11.0.2
+  * 8e2a7420 Merge branch 'Alexays:master' into master
+  * 4a6af0da fix(bar): use overlay layer for `hide` and `overlay` modes
+  * d177969f chore: lint
+  * 59b77153 Merge pull request #3580 from hramrach/rotate-doc
+  * 5b1826d2 label: Add warning for invalid rotate property
+  * 1fa8019a man: Clarify rotate option
+  * bf36f2ab Merge branch 'Alexays:master' into master
+  * 29459371 Merge branch 'Alexays:master' into master
+  * 36497cd4 Rename cava css values
+  * 367f156e Add cava.update to css
+  * ed40168d Add cava.silence to css
+  * 62cb61c6 Add format_silent to cava module
+  * f4608b3e Fix battery status changes not being detected
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Feb 2025 09:10:25 +0100
+
 waybar (0.11.0-1ppa2) noble; urgency=medium
 
   * Rebuild with tests disabled
