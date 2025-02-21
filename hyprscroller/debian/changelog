@@ -1,3 +1,14 @@
+hyprscroller (0.47.0~1ppa1+git202502210934-e26b8e3) noble; urgency=medium
+
+  * Update to master e26b8e3
+  * e26b8e3 commit pin
+  * 686bf83 Added focus_edge_ms option to delay mouse focusing on the
+    edges of a monitor
+  * 5fb27fc commit pin
+  * da68e3f expelwindow: keep height
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Feb 2025 09:34:03 +0100
+
 hyprscroller (0.47.0~1ppa1+git202502122136-2fe8ef6) noble; urgency=medium
 
   * Update to master 2fe8ef6
