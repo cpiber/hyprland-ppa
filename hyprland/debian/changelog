@@ -1,3 +1,41 @@
+hyprland-unstable (0.47.0~1ppa1+git202502210921-fa246cb6) noble; urgency=medium
+
+  * Update to main fa246cb6
+  * fa246cb6 flake.lock: update hyprutils and aquamarine
+  * 6d25ef09 xwayland: add INCR support for clipboard transfers (#9434)
+  * 0137a5f6 anr: capitalize options
+  * 3c1a2e9f config/descriptions: add enable_anr_dialog
+  * fb8eaba8 core: add an ANR dialog
+  * 3352317c scripts/generateVersion.sh: convert to posix (#9433)
+  * e59623d1 hyprctl: don't return empty str if there are no global
+    shortcuts
+  * d01f9943 subsurfaces: dont try to access popup surfaces when
+    handling subsurface updates (#9421)
+  * 59c615c3 input: add follow_mouse_threshold (#9392)
+  * e2a92711 animations: add the gnomed animation style for windows
+  * 897ee276 xwayland: configure on a configure request and cleanup
+    geometry conversion (#9375)
+  * 94a30889 keybinds: fix some errors not returning a failure (#9416)
+  * 9228116c xwayland: fix a possible clipboard race condition (#9394)
+  * 410da2e4 workspaces: update persistence on workspace rename (#9368)
+  * 7a6fde84 internal: redirect exec'd app output to /dev/null (#9411)
+  * 3eb6cb18 syncobj: ensure we only add waiters on succesful checks
+    (#9412)
+  * 2f967037 config: set no_hw_cursors to auto by default and disable on
+    tearing
+  * 1309b59f monitor: report a scheduled frame when tearing on cursor
+    move
+  * fb36815b renderer: remove spammy log
+  * df3fba15 internal: remove unused variable (#9402)
+  * 40adb3df config: actually set initial beziers (#9400)
+  * 5d2b0082 renderer: disable explicit if aquamarine output doesn't
+    support it (#9396) (#9398)
+  * 208f94fe animations: sync inactive/active border angles when using
+    borderangle animations (#9401)
+  * 17894051 session-lock: send locked when in unsafe state (#9399)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Feb 2025 09:21:55 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202502122109-68bb3e7f) noble; urgency=medium
 
   * Update to main 68bb3e7f
