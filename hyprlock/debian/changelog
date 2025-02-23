@@ -1,3 +1,52 @@
+hyprlock (0.7.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.0
+  * e588351 version: bump to 0.7.0
+  * 2a6ec58 cmake: bump hyprutils version (#693)
+  * f6e4c13 animations: linear bezier for gradient, warp behavior (#689)
+  * c4b2175 core: don't rely on the locked event to create lock surfaces
+    dynamically (#687)
+  * 82b63a6 nix/cmake: make it print the version hash (#683)
+  * a27585b core: add mallopt to modify trim threshold
+  * ad7600d CI: remove deprecated magic-nix-cache-action
+  * dc6d721 core: clang-tidy and comp fixes (#679)
+  * ce75045 fingerprint: handle failed dbus connection (#676)
+  * ec82da7 input-field: improve dynamic width (#647)
+  * 465148a input-field: Fix crash when numlock is on and numlock_color
+    is fallback (#673)
+  * c976b6a input-field: fix color updates for BORDERLESS
+    swap_font_color false (#669)
+  * 1bfa79e core: move to hyprlang config value wrapper (#667)
+  * e77bc92 core: don't attempt to unlock when we are not locked yet
+    (#661)
+  * 408ce95 widgets: chase libc++ < 19 compat after 2c5ae4d6610a (#659)
+  * 07b5e1b core: fix background screenshot on nvidia (#656)
+  * 742eb98 flake.lock: update
+  * d547d1d core: move wayland event reading into the poll thread (#655)
+  * 02639c2 animation: small gradient fail transition fixup (#648)
+  * 4f96437 auth: fixup prompt and fail substitution (#641)
+  * 023aff5 cmake: explicitly require GLES3 component (#645)
+  * e842670 animation: allow adding vars during ::tick (#644)
+  * a5e3467 examples: Add default animations to the example config
+    (#643)
+  * 73e23e5 animations: fix overshoot beziers and cleanup animation
+    config parsing (#642)
+  * de844d3 helpers: fix absolutePath relative with tilde (#640)
+  * 00d2cbf core: introduce animation manager and animation config
+    (#631)
+  * 8f68fad core: bind to wl_seat v8
+  * c3d9595 output: fix setting transform (#636)
+  * e01afaf fingerprint: add a delay after an unrecognized fingerprint
+    (#625)
+  * a2f00fb config: fix gradient rgb(a) parsing with spaces (for real
+    this time) (#628)
+  * 836dbfb core: add missing header for BSDs after 753c538dea87 (#630)
+  * 2c5ae4d widgets: add TZ env var support for $TIME (#627)
+  * 3d63d9b input-field: don't change outer color when numlock_color is
+    not set (#621)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 23 Feb 2025 09:32:04 +0100
+
 hyprlock (0.6.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
