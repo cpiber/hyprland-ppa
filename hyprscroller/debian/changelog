@@ -1,3 +1,16 @@
+hyprscroller (0.47.0~1ppa1+git202502271856-40521cc) noble; urgency=medium
+
+  * Update to master 40521cc
+  * 40521cc commit pin
+  * c3459cb Recursive jumping with different triggers could cause a
+    crash
+  * a364c12 commit pin
+  * b0a8337 options: added center_active_window and center_active_column
+  * 795c4c0 commit pin
+  * 668bfa3 window rules: add scroller:modemodifier
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 27 Feb 2025 18:56:05 +0100
+
 hyprscroller (0.47.0~1ppa1+git202502210934-e26b8e3) noble; urgency=medium
 
   * Update to master e26b8e3
