@@ -1,3 +1,28 @@
+hyprland-unstable (0.47.0~1ppa1+git202502271834-d5920bc5) noble; urgency=medium
+
+  * Update to main d5920bc5
+  * d5920bc5 internal: fix include paths (#9500)
+  * aee9b8ac protocols: fix relative include
+  * 32a3d84d protocols: fix wrong iface for xdg_dialog
+  * 002cd91f nix: wp-protocol version bump (#9494)
+  * 01f40744 hyprctl/layers: print pid for layershell clients (#9468)
+  * 6787fe89 protocols: Support wp color management proto (#9444)
+  * f0850905 cmake: add CXX_STANDARD_REQUIRED flag to ensure c++ version
+    must be c++26 (#9476)
+  * d1ea18b4 hyprctl/config: fixup config descriptions, fill out missing
+    ones, provide more data
+  * 73ae9790 hyprpm: add --hl-url for custom forks
+  * 3458d7ac xwayland: improve dnd and cleanup (#9405)
+  * e5946462 config: fix a possible crash in the monitor config parser
+    (#9460)
+  * 2e816489 internal: use isNumber from hyprutils (#9467)
+  * 8f50460b xcursor: move config check to sync gsettings (#9473)
+  * f4b148df anr: add xwayland support (#9456)
+  * 0e24f9c0 anr: add a note for no pid dialogs
+  * 2cfa5d24 hyprctl: Add IPC support for Hyprsunset (#9315)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 27 Feb 2025 18:34:30 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202502210921-fa246cb6) noble; urgency=medium
 
   * Update to main fa246cb6
