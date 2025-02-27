@@ -1,8 +1,16 @@
-wayland-protocols (1.40-1.1) noble; urgency=medium
+wayland-protocols (1.41-1.1) noble; urgency=medium
 
   * Backport
 
- -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Feb 2025 21:23:00 +0100
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 27 Feb 2025 18:40:32 +0100
+
+wayland-protocols (1.41-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #1096197, LP: #1844775)
+  * debian/watch: rely on gitlab releases instead of releases.html
+      which tends to be outdated.
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 17 Feb 2025 18:05:14 +0100
 
 wayland-protocols (1.40-1) unstable; urgency=medium
 

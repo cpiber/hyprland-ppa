@@ -1,3 +1,4 @@
 version=4
-opts=pgpsigurlmangle=s/$/.sig/ \
-https://wayland.freedesktop.org/releases.html https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/[\d].*/downloads/wayland-protocols-([\d].*)\.tar\.xz
+opts="searchmode=plain,pgpsigurlmangle=s/$/.sig/" \
+https://gitlab.freedesktop.org/api/v4/projects/wayland%2Fwayland-protocols/releases \
+ https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/?\d[\d.]+/downloads/wayland-protocols-@ANY_VERSION@\.tar\.xz
