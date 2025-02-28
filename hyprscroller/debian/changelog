@@ -1,3 +1,9 @@
+hyprscroller (0.47.0~1ppa1+git202502271856-40521cc.1) noble; urgency=medium
+
+  * Patch
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 28 Feb 2025 17:55:50 +0100
+
 hyprscroller (0.47.0~1ppa1+git202502271856-40521cc) noble; urgency=medium
 
   * Update to master 40521cc
