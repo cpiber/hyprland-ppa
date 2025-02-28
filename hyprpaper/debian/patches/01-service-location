@@ -1,0 +1,10 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -142,4 +142,4 @@ endif(CMAKE_BUILD_TYPE MATCHES Debug OR
+ include(GNUInstallDirs)
+ 
+ install(TARGETS hyprpaper)
+-install(FILES ${CMAKE_BINARY_DIR}/systemd/hyprpaper.service DESTINATION ${CMAKE_INSTALL_LIBDIR}/systemd/user)
++install(FILES ${CMAKE_BINARY_DIR}/systemd/hyprpaper.service DESTINATION lib/systemd/user)

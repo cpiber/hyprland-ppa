@@ -1,3 +1,9 @@
+hyprpaper (0.7.4-1ppa3) noble; urgency=medium
+
+  * #8 Patch service location
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 28 Feb 2025 18:13:55 +0100
+
 hyprpaper (0.7.4-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
