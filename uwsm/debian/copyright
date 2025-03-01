@@ -4,12 +4,12 @@ Upstream-Name: uwsm
 Upstream-Contact: https://github.com/Vladimir-csp/uwsm/issues/new
 
 Files: *
-Copyright: 2022-2024 Vladimir-csp
+Copyright: 2022-2024 Vladimir-csp <4061903+Vladimir-csp@users.noreply.github.com>
 License: MIT
 
 Files:
  debian/*
 Copyright:
- 2022-2024 Vladimir-csp
+ 2022-2024 Vladimir-csp <4061903+Vladimir-csp@users.noreply.github.com>
  2025 Constantin Piber <cp.piber@gmail.com>
 License: MIT
