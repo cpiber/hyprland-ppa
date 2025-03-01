@@ -100,3 +100,6 @@
 [submodule "hyprland-qt-support/source"]
 	path = hyprland-qt-support/source
 	url = https://github.com/hyprwm/hyprland-qt-support.git
+[submodule "uwsm/source"]
+	path = uwsm/source
+	url = https://github.com/Vladimir-csp/uwsm.git
