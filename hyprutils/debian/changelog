@@ -1,3 +1,12 @@
+hyprutils (0.5.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.2
+  * dd1f720 version: bump to 0.5.2
+  * 6b0154b memory: Add shared pointer reinterpretPointerCast function
+    (#47)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 09 Mar 2025 17:59:04 +0100
+
 hyprutils (0.5.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.1
