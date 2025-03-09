@@ -1,3 +1,46 @@
+hyprland-unstable (0.47.0~1ppa1+git202503091802-d30cc19d) noble; urgency=medium
+
+  * Update to main d30cc19d
+  * d30cc19d renderer: skip ds commits if buffer didn't change (#9556)
+  * f15b49e0 core: prevent crash when monitor list is empty (#9572)
+  * c544c511 windowrules: store floating size on close instead of resize
+    (#9569)
+  * b80b64cd windowrules: add option to allow size persistence between
+    app launches (#9422)
+  * 4082e876 [gha] Nix: update inputs
+  * 8ce1665f protocols: Fix blocked color management get_information
+    (#9563)
+  * 7753e8ea keybinds): prevent crash when executing movewindoworgroup
+    (#9551)
+  * cb4230e1 touch: reject swipe on locked sessions
+  * 7055d0c1 master: add option to keep master window position (#9537)
+  * 4435f5c5 input: fixup mouse check for flipping x / y (#9529)
+  * 7a84317f protocols: Fix cursor shape protocol valid shape check
+    (#9547)
+  * 24337607 hyprctl: Error handling improvements, minor cleanups
+    (#9536)
+  * b51ab182 socket2: add activespecialv2 (#9530)
+  * d7e7a292 input: add flip_x and flip_y for touchpad (#9481)
+  * f1ef724a protocols: Ensure protocol dtors are called in
+    ProtocolManager dtor (#9521)
+  * 474bfcbc core: fix clang-format
+  * 905ca39b nix/module: toHyprconf -> toHyprlang (#9221)
+  * 3a21dd84 core: cleanup some smart pointer usage
+  * e6be4af2 core: add default initializers for ccompositor ptrs
+  * 2c78867a core: cleanup window properties
+  * 2acbb59b core: ignore internal move workspace calls if the workspace
+    doesn't change (#9516)
+  * 11943f76 monitor: avoid crash on expired special workspace monitor
+    owner
+  * f148b96b input: Provide a non-zero time for button release triggered
+    during window unmap. (#9513)
+  * 445337d0 protocols: Fix IWaylandProtocol onDisplayDestroy m_pGlobal
+    double-free (#9507)
+  * 34f2a471 core: Add null activeWorkspace check in
+    moveWorkspaceToMonitor (#9503)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 09 Mar 2025 18:02:06 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202502271834-d5920bc5) noble; urgency=medium
 
   * Update to main d5920bc5
