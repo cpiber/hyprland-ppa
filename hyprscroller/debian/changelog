@@ -1,3 +1,28 @@
+hyprscroller (0.47.0~1ppa1+git202503091817-fb3b2ec) noble; urgency=medium
+
+  * Update to master fb3b2ec
+  * fb3b2ec commit pin
+  * de8e4bf gestures: fix scrolling update animation glitches
+  * 4c5e3aa commit pin
+  * 08988eb gestures: disable animation while scrolling updates
+  * e87f2ca commit pin
+  * 4bf2052 trackpad gestures: natural_scroll was inverted
+  * 6c4266d commit pin
+  * 446c365 trackpad gestures: add smooth scrolling
+  * 5d6967b commit pin
+  * 6424495 pin: fix some of the logic
+  * cf446d5 commit pin
+  * d8eb5e8 add enums.cpp
+  * a68f4df commit pin
+  * 03b855c setmodemodifier: added center_column center_window
+  * 1dd9461 commit pin
+  * 5e7830b dispatchers: add movewindow nomode and admit/expel window
+    directional parameter
+  * 1a3aa3e unify sizing criteria
+  * fe99201 keep memory of window standard width
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 09 Mar 2025 18:17:24 +0100
+
 hyprscroller (0.47.0~1ppa1+git202502271856-40521cc.1) noble; urgency=medium
 
   * Patch
