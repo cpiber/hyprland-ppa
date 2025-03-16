@@ -1,3 +1,4 @@
+03-include-shaders
 01-cmake-version-patch
 02-revert-set-buffer-size
 99-hyprpm-global-headers

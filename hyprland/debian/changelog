@@ -1,3 +1,9 @@
+hyprland-unstable (0.47.0~1ppa1+git202503161344-b1ab0f75.1) noble; urgency=medium
+
+  * Patch fragment shader install
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 16 Mar 2025 14:13:25 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202503161344-b1ab0f75) noble; urgency=medium
 
   * Update to main b1ab0f75
