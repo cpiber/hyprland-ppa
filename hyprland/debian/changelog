@@ -1,3 +1,27 @@
+hyprland-unstable (0.47.0~1ppa1+git202503161344-b1ab0f75) noble; urgency=medium
+
+  * Update to main b1ab0f75
+  * b1ab0f75 splashes: update for 3ya
+  * bf5e4bf1 syncobj: dont crash compositor on protocol errors (#9627)
+  * 4c471218 renderer: fix window offset for dragged windows (#9629)
+  * e5968048 input: Fix clicking through groupbar tabs (#9606)
+  * f4315db5 nix: mesa -> libgbm (#9612)
+  * 3cc8e8c6 renderer: don't crash if cm fails to compile
+  * b3794460 protocols: fix include
+  * f4995c18 descriptions: remove allow_early_buffer_release
+  * 6ffde364 syncobj: use eventfd instead of stalling fd checks (#9437)
+  * c754d796  nix: remove wayland-protocols overlay and bump flake
+    (#9613)
+  * 8c97cb78 renderer: add simple color management (#9506)
+  * e86d3a14 groupbar: add an option to adjust gap sizes (#9578)
+  * 4b25fbe5 windows: respect noinitialfocus with workspace changes
+    (#9586)
+  * 81e93acb groupbar: pass alpha to title tex render pass
+  * b21edb1a input: fix touch calibration matrix overriding
+  * e4af4b5e core: update decorations on lockgroups (#9573)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 16 Mar 2025 13:44:33 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202503091802-d30cc19d) noble; urgency=medium
 
   * Update to main d30cc19d
