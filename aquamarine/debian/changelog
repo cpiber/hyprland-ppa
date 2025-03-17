@@ -1,3 +1,31 @@
+aquamarine (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * 1c8fa0b version: bump to 0.8.0
+  * b058847 backend, allocator: Fix mGPU backend + allocator swapchain
+    combos (#159)
+  * bea48d0 nix: mesa -> libgbm
+  * 258cfeb misc: Fix Attachment shared pointer reinterpret (#154)
+  * 8149856 wayland: Fix backend idleCallbacks destruction (#151)
+  * b236a43 drm: only scan connected connectors (#155)
+  * 7b5db3d drm: Add strict typing to attachment manager (#152)
+  * 09b3fd5 drm: Fix multi-GPU support for Nvidia (#147)
+  * 76508fe drm: Use RAII to manage EGL context (#150)
+  * e62592f drm/atomic: fix atomic reset being skipped, check nullptr
+    elsewhere instead (#149)
+  * 2ff0634 drm: get max bpc from drm format (#146)
+  * f239e5a backend: log no allocator errors
+  * a3dda0d drm: prioritize gpus with the most internal panels (#144)
+  * 427077c CI: remove deprecated magic-nix-cache-action
+  * ecd2c81 drm: only allow multigpu blit to implcit, not all external
+    formats (#143)
+  * 343178b core: Compiler fixes and options (#141)
+  * 257b205 drm/output: add api to set drm content type property (#140)
+  * 95506e5 egl/drm: consolidate EGL init/state (#138)
+  * 48a000c flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 17 Mar 2025 08:57:14 +0100
+
 aquamarine (0.7.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.7.2

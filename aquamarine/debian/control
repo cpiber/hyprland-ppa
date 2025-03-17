@@ -11,7 +11,7 @@ Build-Depends:
  libseat-dev (>= 0.8.0),
  libinput-dev (>= 1.26.0),
  libwayland-dev,
- libhyprutils-dev (>= 0.1.5),
+ libhyprutils-dev (>= 0.5.2),
  libpixman-1-dev,
  libdrm-dev,
  libgbm-dev,
@@ -30,7 +30,7 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libaquamarine6 (= ${binary:Version}),
+ libaquamarine7 (= ${binary:Version}),
  ${misc:Depends},
 Breaks: aquamarine-dev
 Description: Aquamarine is a very light linux rendering backend library.
@@ -40,7 +40,7 @@ Description: Aquamarine is a very light linux rendering backend library.
  performant, and minimal.
  Aquamarine provides no bindings for other languages. It is C++-only.
 
-Package: libaquamarine6
+Package: libaquamarine7
 Architecture: any
 Multi-Arch: same
 Depends:
