@@ -1,3 +1,17 @@
+hyprcursor (0.1.12-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.12
+  * 028bedb version: bump to 0.1.12
+  * 7c6d165 meta: fix hyprlang colon handling
+  * 0a8e83d core: clang-tidy and comp fixes (#79)
+  * 43e5139 cmake: remove clang workaround (#78)
+  * dcadd33 core: fix memory leak by freeing rsvg handle (#77)
+  * 9c5dd1f flake.lock: update
+  * 3219b31 tests: fix %d->%ld (#76)
+  * 69270ba flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 17 Mar 2025 14:29:59 +0100
+
 hyprcursor (0.1.11-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.11
