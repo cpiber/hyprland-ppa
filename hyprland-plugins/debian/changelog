@@ -1,3 +1,14 @@
+hyprland-plugins (0.48.0~1ppa1+git202503231729-7429a0e) noble; urgency=medium
+
+  * Update to main 7429a0e
+  * 7429a0e flake: remove merged overlay
+  * 4e85fb4 hyprbars: fix outdated render call
+  * 306e416 hyprbars: animate bar color with border
+  * 0eb996c Hyprbars: set pango base direction to neutral for rendering
+    title (#302)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 23 Mar 2025 17:29:18 +0100
+
 hyprland-plugins (0.47.0~1ppa1+git202502122132-4f48dbebuild4) noble; urgency=medium
 
   * Rebuild for unstable
