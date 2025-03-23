@@ -7,7 +7,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 ===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -373,6 +373,9 @@ bool CPluginManager::removePluginRepo(co
+@@ -372,6 +372,9 @@ bool CPluginManager::removePluginRepo(co
  eHeadersErrors CPluginManager::headersValid() {
      const auto HLVER = getHyprlandVersion(false);
  

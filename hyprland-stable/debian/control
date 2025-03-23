@@ -18,7 +18,7 @@ Build-Depends:
  libxkbcommon-dev,
  uuid-dev,
  libwayland-dev,
- wayland-protocols (>= 1.36),
+ wayland-protocols (>= 1.41),
  libcairo2-dev,
  libpango1.0-dev,
  libdrm-dev,
@@ -34,12 +34,12 @@ Build-Depends:
  libglaze-dev,
  libhyprlang-dev (>= 0.3.2),
  libhyprcursor-dev (>= 0.1.7),
- libhyprutils-dev (>= 0.5.0),
+ libhyprutils-dev (>= 0.5.1),
  libhyprgraphics-dev (>= 0.1.1),
- libaquamarine-dev (>= 0.5.0),
+ libaquamarine-dev (>= 0.8.0),
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),
- hyprland-protocols (>= 0.4.0),
+ hyprland-protocols (>= 0.6.2),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
