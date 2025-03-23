@@ -1,3 +1,50 @@
+hyprland-unstable (0.48.0~1ppa1+git202503231720-e4abf260) noble; urgency=medium
+
+  * Update to main e4abf260
+  * e4abf260 Nix: add changes from Nixpkgs derivation
+  * 006bd9ee protocols/meson.build: use native wayland-scanner
+  * 5ee35f91 version: bump to 0.48.0
+  * aa1bd647 core/Compositor.hpp: fix non-relative Texture import
+    (#9703)
+  * fdb7ca6c core/compositor: Fix dropping cursor buffer data early
+    (#9700)
+  * 6ab5a0be renderer: fix cm_fs_passthrough (#9698)
+  * 6384f4ac core/compositor: Correctly track SHM buffer damage (#9678)
+  * 4600043a hyprpm: return 1 when plugins are outdated (#9694)
+  * 279b0604 screencopy, render: Use explicit sync for screencopy
+    (#9697)
+  * ccbdba7e syncobj: refactor point timelines (#9689)
+  * c7f0519f core: fix DS and VRR automation (#9334)
+  * 7ea4fbf0 types: Upgrade buffer ref from WP to SP (#9677)
+  * f6ca4bac syncobj: restore SHM buffer reset (#9675)
+  * 155eba57 groupbar: remove 2 pixel gap above groupbar (#9664)
+  * 7b10530a XWayland: restore the abstract socket, and make it optional
+    (#9615)
+  * a25a2145 dmabuf: pop buffer on failure (#9620)
+  * c8d80a29 ci: Fail on warnings (#9668)
+  * 03385fc0 seatmgr: avoid crash on null surfs
+  * cca0f48b renderer: add an option to disable cm and auto-skip cm if
+    not necessary
+  * 60edb376 config/defaultConfig.hpp: windowrulev2 -> windowrule
+    (#9663)
+  * 6f74d8d7 example/hyprland.conf: windowrulev2 -> windowrule (#9662)
+  * ec4bea79 config: nuke windowrule v1 syntax
+  * 9171db19 renderer: delete now redundant ifdefs (#9651)
+  * 5f60fc7d renderer: only commit hw cursor stuff if needed (#9654)
+  * c4f46473 monitor: Optimize direct scanout damage (#9653)
+  * 011d7ccb internal: Fix compiler warnings (#9646)
+  * efc51eb7 managers: Use primary backend for cursor swapchain (#9645)
+  * c2835b6b groupbar: remove recursive window recalc (#9561)
+  * d5d7f69d flake.lock: update
+  * 5cef2f44 renderer: allow commits when buffer is unchanged but cursor
+    changed (#9648)
+  * 22154fa2 opengl: simplify cm pipeline
+  * 2ddd16ef CMake: install frag files (for real this time)
+  * d7382aa8 CMake: install frag files
+  * 90306bda Meson: include frags in globber
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 23 Mar 2025 17:20:04 +0100
+
 hyprland-unstable (0.47.0~1ppa1+git202503161344-b1ab0f75.2) noble; urgency=medium
 
   * Rebuild for dependencies
