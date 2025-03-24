@@ -1,3 +1,15 @@
+hyprpicker (0.4.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.3
+  * 09101f7 version: bump to 0.4.3
+  * e990630 layerSurface: fix circle not following cursor movement
+    (#113)
+  * b85b065 core: clang-tidy and comp fixes (#110)
+  * 36a24e6 core: Fix negative HSV values (#111)
+  * c377732 flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 24 Mar 2025 13:18:34 +0100
+
 hyprpicker (0.4.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
