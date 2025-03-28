@@ -1,3 +1,18 @@
+hypridle (0.1.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.6
+  * 84f9f2e version: bump to 0.1.6
+  * 71e875e assets: update example.conf (#137)
+  * 9d97c22 core: fix sleep delay and simplify process spawning (#127)
+  * 3e30a63 core: clang-tidy and comp fixes (#126)
+  * cf5b4da CI: remove deprecated magic-nix-cache-action
+  * 15ca902 core: implement hyprlock-lock-notify-v1 functionality (#122)
+  * 33ac8ca flake.lock: update
+  * 413564c nix/overlays: gcc13 -> gcc14; flake.lock: update (#116)
+  * 9f23e70 core: add --version
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 28 Mar 2025 15:20:43 +0100
+
 hypridle (0.1.5-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
