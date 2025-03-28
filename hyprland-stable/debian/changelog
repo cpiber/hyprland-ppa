@@ -1,3 +1,24 @@
+hyprland (0.48.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.48.1
+  * 29e2e59f version: bump to v0.48.1
+  * 1fdb5ba0 xwayland: Cleanup server startup and FDs (#9769)
+  * aa421c2e core: Don't damage the entire surface every frame (#9763)
+  * 3c36e083 surfacestate: reset buffer bit before applying to current
+  * 3fc0abcb workspaces: minor fixes to persistence
+  * 273f43bd internal: fix minor ubsan errors (#9743)
+  * 0a394810 surfacestate: track and apply updated state
+  * 189e1839 opengl: don't attempt to compile cm on gles3.0
+  * 3eb859bb pass/rect: include clipBox in opaque calculations
+  * eaa96630 groupbar: round boxes
+  * 5da8281d pass: remove unusued timeline in texpass (#9734)
+  * d2031ba3 Groupbar: apply scaling factor to text (#9731)
+  * c22f4676 xwl: dont close the fd to early (#9715)
+  * 66470020 seat: avoid sending null surfaces in leave/enter events
+  * ed2f50d5 renderer: Simplify and fix hdr metadata setting (#9706)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 28 Mar 2025 18:04:49 +0100
+
 hyprland (0.48.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.48.0
