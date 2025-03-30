@@ -1,3 +1,19 @@
+hyprscroller (0.47.0~1ppa1+git202503300934-b14552a) noble; urgency=medium
+
+  * Update to master b14552a
+  * b14552a README: update version
+  * 015784d commit pin for v0.48.1
+  * 5b62ca5 commit pin
+  * 3f86916 decorations: working around a bug where OVERLAY decorations
+    don't render unless there is a popup
+  * ec54fc9 README: update version
+  * b4e57ed commit pin
+  * b6d66e6 Changes for Hyprland v0.48.0
+  * 29b31e9 Merge pull request #130 from cpiber/decorations-crash
+  * 6690aa7 Remove border_part_of_window check
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 30 Mar 2025 09:34:16 +0200
+
 hyprscroller (0.47.0~1ppa1+git202503091817-fb3b2ecbuild2) noble; urgency=medium
 
   * Rebuild for unstable
