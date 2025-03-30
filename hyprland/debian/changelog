@@ -1,3 +1,36 @@
+hyprland-unstable (0.48.0~1ppa1+git202503300910-da2d7c39) noble; urgency=medium
+
+  * Update to main da2d7c39
+  * da2d7c39 config: Fix matching monitor by description to allow space
+    prefix (#9788)
+  * 05eb0aa4 workspaces: Add binds:hide_special_on_workspace_change
+    (#9728)
+  * fc7223ed synctimeline: check if fd is readable before wait (#9789)
+  * 86c279d7 protocols: Don't update hdr metadata if image description
+    is unchanged (#9776)
+  * 46b00a4a makefile: add new shaders to `make installheaders` (#9783)
+  * 4a79eea6 opengl: check for g_pHyprOpengl pointer (#9791)
+  * 7374a023 renderer/opengl: Extract shaders from source (#9600)
+  * a46576af xwayland: Cleanup server startup and FDs (#9769)
+  * 10035a85 core: Don't damage the entire surface every frame (#9763)
+  * c93140a5 surfacestate: reset buffer bit before applying to current
+  * 5380cbcd workspaces: minor fixes to persistence
+  * 9ea76428 internal: fix minor ubsan errors (#9743)
+  * 0cd04bd6 surfacestate: track and apply updated state
+  * 1c2b9a9c opengl: don't attempt to compile cm on gles3.0
+  * cec084c1 pass/rect: include clipBox in opaque calculations
+  * c2ef8fcc groupbar: round boxes
+  * 3fc3521a pass: remove unusued timeline in texpass (#9734)
+  * 9a67354f Groupbar: apply scaling factor to text (#9731)
+  * f7ba86d1 keybinds: add sendkeystate dispatcher (#9599)
+  * f3db1b17 decoration: bring back border_part_of_window
+  * 2a6d0707 xwl: dont close the fd to early (#9715)
+  * aec69131 seat: avoid sending null surfaces in leave/enter events
+  * 4b968e5b [gha] Nix: update inputs
+  * a852461c renderer: Simplify and fix hdr metadata setting (#9706)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 30 Mar 2025 09:10:09 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202503231720-e4abf260) noble; urgency=medium
 
   * Update to main e4abf260
