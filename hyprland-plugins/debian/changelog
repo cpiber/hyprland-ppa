@@ -1,3 +1,11 @@
+hyprland-plugins (0.48.0~1ppa1+git202503300920-1f332c0) noble; urgency=medium
+
+  * Update to main 1f332c0
+  * 1f332c0 hyprbars: avoid derefing null workspace in inputIsValid
+  * 4e36349 hyprbars: don't remove bar on unmap, keep it around
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 30 Mar 2025 09:20:37 +0200
+
 hyprland-plugins (0.48.0~1ppa1+git202503231729-7429a0e) noble; urgency=medium
 
   * Update to main 7429a0e
