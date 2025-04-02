@@ -1,3 +1,12 @@
+hyprland-protocols (0.6.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.3
+  * 4ab17cc version: bump to 0.6.3
+  * 9cb8776 README: add hyprland_toplevel_mapping
+  * 9830bfb protocols: Add toplevel mapping protocol (#16)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 02 Apr 2025 07:57:45 +0200
+
 hyprland-protocols (0.6.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.2
