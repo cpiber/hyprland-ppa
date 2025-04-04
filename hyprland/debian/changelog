@@ -1,3 +1,29 @@
+hyprland-unstable (0.48.0~1ppa1+git202504041630-ff97d18c) noble; urgency=medium
+
+  * Update to main ff97d18c
+  * ff97d18c flake.lock: update
+  * 5e8bb717 ctm: fix crash when finishing ctm progress with a destroyed
+    monitor (#9835)
+  * b496e2c7 nix/module: load plugins using exec-once (#9836)
+  * a41b8d5e groupbar: add text offset and upper gap settings (#9733)
+  * 8654029f versionkeeper: create version file if not present (#9829)
+  * a4e6c5d6 window: don't deactivate unfocused xwayland windows in
+    groups (#9781)
+  * 3a47c73f layout: center floating window at cursor when picked up
+    from fullscreen (#9780)
+  * 1f0fd79b internal: Don't force default cursor on config
+    reload/monitor reconfigure (#9815)
+  * d1a59ec3 renderer: render tiled fading out above other tiled windows
+  * 4c987b20 makefile: fix find command in installheaders
+  * 23092707 anr: add config for ping number before popup shows up
+    (#9782)
+  * 79b526a0 socket2: add minimized event for foreign-wlr
+  * 075bbeca core: fix artifacts when fullscreening (#9778)
+  * 8aaffda9 core: fix null ref when resuming system (#9794)
+  * 10a33563 solitary: Fix the non-working tearing #9429 (#9772)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 04 Apr 2025 16:30:03 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202503300910-da2d7c39) noble; urgency=medium
 
   * Update to main da2d7c39
