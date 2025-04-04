@@ -1,3 +1,11 @@
+hyprland-plugins (0.48.0~1ppa1+git202504041653-6dca4ec) noble; urgency=medium
+
+  * Update to main 6dca4ec
+  * 6dca4ec hyprpm: add pins for 0.48.0 and .1
+  * d84f5d5 hyprtrails: chase hyprland (#313)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 04 Apr 2025 16:53:58 +0200
+
 hyprland-plugins (0.48.0~1ppa1+git202503300920-1f332c0) noble; urgency=medium
 
   * Update to main 1f332c0
