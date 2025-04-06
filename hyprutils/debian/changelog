@@ -1,3 +1,13 @@
+hyprutils (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * f2dc70e version: bump to 0.6.0
+  * 966d0c0 os/process: add fd control for async
+  * 7248194 animations: minor follow-up fix for std::string (#49)
+  * fbd02eb animation: avoid using constexpr std::string
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 17:54:30 +0200
+
 hyprutils (0.5.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.2
