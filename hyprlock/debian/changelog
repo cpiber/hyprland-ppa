@@ -1,3 +1,9 @@
+hyprlock (0.7.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 18:02:57 +0200
+
 hyprlock (0.7.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.7.0
