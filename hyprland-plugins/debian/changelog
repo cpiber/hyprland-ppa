@@ -1,3 +1,11 @@
+hyprland-plugins (0.48.0~1ppa1+git202504062016-be6b987) noble; urgency=medium
+
+  * Update to main be6b987
+  * be6b987 hyprbars: Add `icon_on_hover` option (#305)
+  * cef1854 hyprbars: fix type mismatch on 32-bit systems (#317)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 20:16:40 +0200
+
 hyprland-plugins (0.48.0~1ppa1+git202504041653-6dca4ec) noble; urgency=medium
 
   * Update to main 6dca4ec
