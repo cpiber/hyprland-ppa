@@ -1,3 +1,35 @@
+hyprlock (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * 8f73c39 version: bump to 0.8.0
+  * a8de918 auth: use static for getValue (#732)
+  * 6daab05 fingerprint: update widgets after changing prompt (#730)
+  * 854235e output: refuse to create session lock surfaces with size 0x0
+    (#729)
+  * dd4c1d5 fingerprint: allow fprint to suspend and cancel verify for
+    us (#722)
+  * 0b1f2a9 input-field: decouple outer color and base for hidden input
+    random colors (#727)
+  * ce1eb7b core: move fail_timeout from input-field to general (#718)
+  * 1ebbc35 core: remove attemptRestoreOnDeath and replace some exits
+    with RASSERT (#720)
+  * d9a1625 assets: update example.conf (#709)
+  * 9e54d02 renderer: remove loading bar (#714)
+  * f883e66 CMake: require wayland-protocols>=1.35 (#713)
+  * ee8ee1f core: move password buffer clearing to handleInput (#708)
+  * 7ab3162 nix: mesa -> libgbm
+  * 9e82fe3 core: some guards for reconnecting monitors (#704)
+  * a13b6f0 core: print hyprlock version in the logs (#703)
+  * 78ad1d4 label: fix crashes when keymap is a nullptr after suspend
+    (#699)
+  * cb1c504 image: set resourceId in configure (#701)
+  * 9f37c1c core: more hyprutils smart pointer usage and safe references
+    to widgets (#686)
+  * 712ab62 config: make sure disabled animation don't need a valid
+    speed or bezier (#698)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 08 Apr 2025 17:50:16 +0200
+
 hyprlock (0.7.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
