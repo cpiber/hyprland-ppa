@@ -1,3 +1,20 @@
+hyprlang (0.6.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.1
+  * f1000c5 version: bump to 0.6.1
+  * 72df386 README: fix typo (#65)
+  * 1d7d96a docs: fix incorrect doc about getValue type
+  * a733490 CI: remove deprecated magic-nix-cache-action
+  * 7a59f2d core: clang-tidy and comp fixes (#63)
+  * f41271d flake.lock: update
+  * 55608ef core: add multiline support (#58)
+  * 0404833 flake.lock: update
+  * 16e59c1 flake.lock: update
+  * 9441266 cmakelists: remove clang-specific config
+  * f7acd5d flake.nix: use gcc14Stdenv, update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 12 Apr 2025 16:38:57 +0200
+
 hyprlang (0.6.0-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
