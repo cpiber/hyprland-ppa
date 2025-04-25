@@ -1,0 +1,538 @@
+Index: source/src/column.cpp
+===================================================================
+--- source.orig/src/column.cpp
++++ source/src/column.cpp
+@@ -520,7 +520,7 @@ void Column::cycle_size_active_window(in
+         static auto* const *CYCLESIZE_CLOSEST = (Hyprlang::INT* const *)HyprlandAPI::getConfigValue(PHANDLE, "plugin:scroller:cyclesize_closest")->getDataStaticPtr();
+         if (**CYCLESIZE_CLOSEST) {
+             double fraction = active->data()->get_geom_h() / row->get_max().h;
+-            height = scroller_sizes.get_window_closest_height(g_pCompositor->m_pLastMonitor, fraction, step);
++            height = scroller_sizes.get_window_closest_height(g_pCompositor->m_lastMonitor, fraction, step);
+         } else {
+             height = scroller_sizes.get_window_default_height(active->data()->get_window());
+         }
+Index: source/src/decorations.cpp
+===================================================================
+--- source.orig/src/decorations.cpp
++++ source/src/decorations.cpp
+@@ -49,7 +49,7 @@ CBox SelectionBorders::assignedBoxGlobal
+     if (!PWORKSPACE)
+         return box;
+ 
+-    const auto WORKSPACEOFFSET = PWORKSPACE && !m_pWindow->m_bPinned ? PWORKSPACE->m_vRenderOffset->value() : Vector2D();
++    const auto WORKSPACEOFFSET = PWORKSPACE && !m_pWindow->m_bPinned ? PWORKSPACE->m_renderOffset->value() : Vector2D();
+     return box.translate(WORKSPACEOFFSET);
+ }
+ 
+@@ -70,8 +70,8 @@ void SelectionBorders::draw(PHLMONITOR p
+     float      a1       = a * (ANIMATED ? m_pWindow->m_fBorderFadeAnimationProgress->value() : 1.f);
+ 
+     if (m_pWindow->m_fBorderAngleAnimationProgress->enabled()) {
+-        grad.m_fAngle += m_pWindow->m_fBorderAngleAnimationProgress->value() * M_PI * 2;
+-        grad.m_fAngle = normalizeAngleRad(grad.m_fAngle);
++        grad.m_angle += m_pWindow->m_fBorderAngleAnimationProgress->value() * M_PI * 2;
++        grad.m_angle = normalizeAngleRad(grad.m_angle);
+     }
+ 
+     int        borderSize = m_pWindow->getRealBorderSize();
+@@ -124,8 +124,8 @@ void SelectionBorders::damageEntire() {
+     const auto BORDERSIZE   = m_pWindow->getRealBorderSize() + 1;
+ 
+     const auto PWINDOWWORKSPACE = m_pWindow->m_pWorkspace;
+-    if (PWINDOWWORKSPACE && PWINDOWWORKSPACE->m_vRenderOffset->isBeingAnimated() && !m_pWindow->m_bPinned)
+-        surfaceBox.translate(PWINDOWWORKSPACE->m_vRenderOffset->value());
++    if (PWINDOWWORKSPACE && PWINDOWWORKSPACE->m_renderOffset->isBeingAnimated() && !m_pWindow->m_bPinned)
++        surfaceBox.translate(PWINDOWWORKSPACE->m_renderOffset->value());
+     surfaceBox.translate(m_pWindow->m_vFloatingOffset);
+ 
+     CBox surfaceBoxExpandedBorder = surfaceBox;
+@@ -136,7 +136,7 @@ void SelectionBorders::damageEntire() {
+     CRegion borderRegion(surfaceBoxExpandedBorder);
+     borderRegion.subtract(surfaceBoxShrunkRounding);
+ 
+-    for (auto const& m : g_pCompositor->m_vMonitors) {
++    for (auto const& m : g_pCompositor->m_monitors) {
+         if (!g_pHyprRenderer->shouldRenderWindow(m_pWindow.lock(), m)) {
+             const CRegion monitorRegion({m->vecPosition, m->vecSize});
+             borderRegion.subtract(monitorRegion);
+@@ -205,7 +205,7 @@ CBox JumpDecoration::assignedBoxGlobal()
+     if (!PWORKSPACE)
+         return box;
+ 
+-    const auto WORKSPACEOFFSET = PWORKSPACE->m_vRenderOffset->value();
++    const auto WORKSPACEOFFSET = PWORKSPACE->m_renderOffset->value();
+     return box.translate(WORKSPACEOFFSET);
+ }
+ 
+Index: source/src/dispatchers.cpp
+===================================================================
+--- source.orig/src/dispatchers.cpp
++++ source/src/dispatchers.cpp
+@@ -43,10 +43,10 @@ namespace dispatchers {
+             return -1;
+ 
+         int workspace_id;
+-        if (g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID()) {
+-            workspace_id = g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID();
++        if (g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID()) {
++            workspace_id = g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID();
+         } else {
+-            workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++            workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+         }
+         if (workspace_id == WORKSPACE_INVALID)
+             return -1;
+Index: source/src/functions.cpp
+===================================================================
+--- source.orig/src/functions.cpp
++++ source/src/functions.cpp
+@@ -36,10 +36,10 @@ void toggle_window_fullscreen_internal(P
+ WORKSPACEID get_workspace_id()
+ {
+     WORKSPACEID workspace_id;
+-    if (g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID()) {
+-        workspace_id = g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID();
++    if (g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID()) {
++        workspace_id = g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID();
+     } else {
+-        workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++        workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+     }
+     if (workspace_id == WORKSPACE_INVALID)
+         return -1;
+@@ -76,7 +76,7 @@ void switch_to_window(PHLWINDOW from, PH
+     bool change_workspace = fwid != twid;
+     if (from != to) {
+         const PHLWORKSPACE workspace = to->m_pWorkspace;
+-        eFullscreenMode mode = workspace->m_efFullscreenMode;
++        eFullscreenMode mode = workspace->m_fullscreenMode;
+         if (mode != eFullscreenMode::FSMODE_NONE) {
+             if (change_workspace) {
+                 auto fwindow = workspace->getLastFocusedWindow(); 
+@@ -87,7 +87,7 @@ void switch_to_window(PHLWINDOW from, PH
+         }
+         if (change_workspace) {
+             // This is to override overview trying to stay in an overview workspace
+-            g_pCompositor->m_pLastMonitor = to->m_pMonitor;
++            g_pCompositor->m_lastMonitor = to->m_pMonitor;
+         }
+         force_focus_to_window(to);
+         if (mode != eFullscreenMode::FSMODE_NONE) {
+Index: source/src/functions.h
+===================================================================
+--- source.orig/src/functions.h
++++ source/src/functions.h
+@@ -1,7 +1,7 @@
+ #ifndef SCROLLER_FUNCTIONS_H
+ #define SCROLLER_FUNCTIONS_H
+ 
+-#include <hyprland/src/helpers/Timer.hpp>
++#include <hyprland/src/helpers/time/Timer.hpp>
+ #include <hyprland/src/desktop/Workspace.hpp>
+ #include <hyprland/src/managers/KeybindManager.hpp>
+ 
+Index: source/src/overview.cpp
+===================================================================
+--- source.orig/src/overview.cpp
++++ source/src/overview.cpp
+@@ -88,7 +88,7 @@ static void hookRenderLayer(void *thispt
+ // Needed to scale the range of the cursor in overview mode to cover the whole area.
+ static CBox hookLogicalBox(void *thisptr) {
+     CMonitor *monitor = static_cast<CMonitor *>(thisptr);
+-    if (g_pCompositor->m_pLastMonitor.get() != monitor)
++    if (g_pCompositor->m_lastMonitor.get() != monitor)
+         return CBox();
+ 
+     WORKSPACEID workspace = monitor->activeSpecialWorkspaceID();
+@@ -108,7 +108,7 @@ static CBox hookLogicalBox(void *thisptr
+ 
+ // Needed to render the HW cursor at the right position
+ static Vector2D hookGetCursorPosForMonitor(void *thisptr, PHLMONITOR monitor) {
+-    if (g_pCompositor->m_pLastMonitor.lock() != monitor)
++    if (g_pCompositor->m_lastMonitor.lock() != monitor)
+         return { 0.0, 0.0 };
+ 
+     WORKSPACEID workspace = monitor->activeSpecialWorkspaceID();
+@@ -130,10 +130,10 @@ static Vector2D hookGetCursorPosForMonit
+ static void hookRenderSoftwareCursorsFor(void *thisptr, PHLMONITOR monitor, timespec* now, CRegion& damage, std::optional<Vector2D> overridePos) {
+     // Should render the cursor for all the extent of the workspace, and only on
+     // overview workspaces when there is one active, and it is in the current monitor.
+-    PHLMONITOR last = g_pCompositor->m_pLastMonitor.lock();
++    PHLMONITOR last = g_pCompositor->m_lastMonitor.lock();
+     PHLMONITOR mon;
+     bool overview_enabled = false;
+-    for (auto const& m : g_pCompositor->m_vMonitors) {
++    for (auto const& m : g_pCompositor->m_monitors) {
+         WORKSPACEID workspace = m->activeSpecialWorkspaceID();
+         if (!workspace)
+             workspace = m->activeWorkspaceID();
+@@ -163,7 +163,7 @@ static void hookRenderSoftwareCursorsFor
+ // Needed to fake an overview monitor's desktop contains all its windows
+ // instead of some of them being in the other monitor.
+ static Vector2D hookClosestValid(void *thisptr, const Vector2D& pos) {
+-    PHLMONITOR last = g_pCompositor->m_pLastMonitor.lock();
++    PHLMONITOR last = g_pCompositor->m_lastMonitor.lock();
+     WORKSPACEID workspace = last->activeSpecialWorkspaceID();
+     if (!workspace)
+         workspace = last->activeWorkspaceID();
+@@ -177,9 +177,9 @@ static Vector2D hookClosestValid(void *t
+ static PHLMONITOR hookGetMonitorFromVector(void *thisptr, const Vector2D& point) {
+     CCompositor *compositor = static_cast<CCompositor *>(thisptr);
+     // First, see if the current monitor contains the point
+-    PHLMONITOR last = compositor->m_pLastMonitor.lock();
++    PHLMONITOR last = compositor->m_lastMonitor.lock();
+     PHLMONITOR mon;
+-    for (auto const& m : compositor->m_vMonitors) {
++    for (auto const& m : compositor->m_monitors) {
+         WORKSPACEID workspace = m->activeSpecialWorkspaceID();
+         if (!workspace)
+             workspace = m->activeWorkspaceID();
+@@ -205,7 +205,7 @@ static PHLMONITOR hookGetMonitorFromVect
+     float      bestDistance = 0.f;
+     PHLMONITOR pBestMon;
+ 
+-    for (auto const& m : compositor->m_vMonitors) {
++    for (auto const& m : compositor->m_monitors) {
+         float dist = vecToRectDistanceSquared(point, m->vecPosition, m->vecPosition + m->vecSize);
+ 
+         if (dist < bestDistance || !pBestMon) {
+@@ -216,7 +216,7 @@ static PHLMONITOR hookGetMonitorFromVect
+ 
+     if (!pBestMon) { // ?????
+         //Debug::log(WARN, "getMonitorFromVector no close mon???");
+-        return compositor->m_vMonitors.front();
++        return compositor->m_monitors.front();
+     }
+ 
+     return pBestMon;
+Index: source/src/row.cpp
+===================================================================
+--- source.orig/src/row.cpp
++++ source/src/row.cpp
+@@ -1,4 +1,5 @@
+ #include <hyprland/src/config/ConfigValue.hpp>
++#include <hyprland/src/config/ConfigManager.hpp>
+ #include <hyprland/src/managers/EventManager.hpp>
+ #include <hyprland/src/plugins/PluginAPI.hpp>
+ #include <hyprland/src/render/Renderer.hpp>
+@@ -19,7 +20,7 @@ Row::Row(WORKSPACEID workspace)
+       reorder(Reorder::Auto), pinned(nullptr), active(nullptr)
+ {
+     post_event("overview");
+-    const auto PMONITOR = g_pCompositor->m_pLastMonitor.lock();
++    const auto PMONITOR = g_pCompositor->m_lastMonitor.lock();
+     set_mode(scroller_sizes.get_mode(PMONITOR));
+     update_sizes(PMONITOR);
+ }
+@@ -356,7 +357,7 @@ void Row::resize_active_column(int step)
+             static auto* const *CYCLESIZE_CLOSEST = (Hyprlang::INT* const *)HyprlandAPI::getConfigValue(PHANDLE, "plugin:scroller:cyclesize_closest")->getDataStaticPtr();
+             if (**CYCLESIZE_CLOSEST) {
+                 double fraction = active->data()->get_geom_w() / max.w;
+-                width = scroller_sizes.get_column_closest_width(g_pCompositor->m_pLastMonitor, fraction, step);
++                width = scroller_sizes.get_column_closest_width(g_pCompositor->m_lastMonitor, fraction, step);
+             } else {
+                 width = scroller_sizes.get_column_default_width(get_active_window());
+             }
+@@ -984,7 +985,7 @@ bool Row::update_sizes(PHLMONITOR monito
+     auto *const PGAPSOUT = (CCssGapData *)(PGAPSOUTDATA.ptr())->getData();
+     const auto WORKSPACERULE = g_pConfigManager->getWorkspaceRuleFor(g_pCompositor->getWorkspaceByID(workspace));
+     // For now, support only constant CCssGapData
+-    auto gaps_in = WORKSPACERULE.gapsIn.value_or(*PGAPSIN).top;
++    auto gaps_in = WORKSPACERULE.gapsIn.value_or(*PGAPSIN).m_top;
+     auto gaps_out = WORKSPACERULE.gapsOut.value_or(*PGAPSOUT);
+     const auto SIZE = monitor->vecSize;
+     const auto POS = monitor->vecPosition;
+@@ -992,10 +993,10 @@ bool Row::update_sizes(PHLMONITOR monito
+     const auto BOTTOMRIGHT = monitor->vecReservedBottomRight;
+ 
+     full = Box(POS, SIZE);
+-    const Box newmax = Box(POS.x + TOPLEFT.x + gaps_out.left,
+-                           POS.y + TOPLEFT.y + gaps_out.top,
+-                           SIZE.x - TOPLEFT.x - BOTTOMRIGHT.x - gaps_out.left - gaps_out.right,
+-                           SIZE.y - TOPLEFT.y - BOTTOMRIGHT.y - gaps_out.top - gaps_out.bottom);
++    const Box newmax = Box(POS.x + TOPLEFT.x + gaps_out.m_left,
++                           POS.y + TOPLEFT.y + gaps_out.m_top,
++                           SIZE.x - TOPLEFT.x - BOTTOMRIGHT.x - gaps_out.m_left - gaps_out.m_right,
++                           SIZE.y - TOPLEFT.y - BOTTOMRIGHT.y - gaps_out.m_top - gaps_out.m_bottom);
+     bool changed = gap != gaps_in;
+     gap = gaps_in;
+ 
+@@ -1188,7 +1189,7 @@ void Row::toggle_overview()
+             }
+             adjust_overview_columns();
+ 
+-            PHLMONITOR monitor = window->m_pWorkspace->m_pMonitor.lock();
++            PHLMONITOR monitor = window->m_pWorkspace->m_monitor.lock();
+             g_pHyprRenderer->damageMonitor(monitor);
+ 
+             overviews->set_scale(workspace, scale);
+@@ -1210,7 +1211,7 @@ void Row::toggle_overview()
+         }
+     } else {
+         if (**overview_scale_content && overviews->is_initialized()) {
+-            PHLMONITOR monitor = get_active_window()->m_pWorkspace->m_pMonitor.lock();
++            PHLMONITOR monitor = get_active_window()->m_pWorkspace->m_monitor.lock();
+             overviews->disable(workspace);
+             g_pHyprRenderer->damageMonitor(monitor);
+         }
+@@ -1559,7 +1560,7 @@ void Row::scroll_update(Direction dir, c
+         break;
+     }
+ 
+-    auto monitor = g_pCompositor->getWorkspaceByID(workspace)->m_pMonitor;
++    auto monitor = g_pCompositor->getWorkspaceByID(workspace)->m_monitor;
+     g_pHyprRenderer->damageMonitor(monitor.lock());
+ }
+ 
+Index: source/src/scroller.cpp
+===================================================================
+--- source.orig/src/scroller.cpp
++++ source/src/scroller.cpp
+@@ -51,7 +51,7 @@ public:
+     void del(const std::string &name) {
+         const auto mark = marks.find(name);
+         if (mark != marks.end()) {
+-            if (g_pCompositor->m_pLastWindow == mark->second)
++            if (g_pCompositor->m_lastWindow == mark->second)
+                 post_mark_event(nullptr);
+             marks.erase(mark);
+         }
+@@ -153,7 +153,7 @@ protected:
+             g_ScrollerLayout->selection_set(win->data());
+         }
+         // Re-render windows to show decorations
+-        for (auto monitor : g_pCompositor->m_vMonitors) {
++        for (auto monitor : g_pCompositor->m_monitors) {
+             g_pHyprRenderer->damageMonitor(monitor);
+         }
+     }
+@@ -380,9 +380,9 @@ void ScrollerLayout::onWindowRemovedTili
+     if (window == g_pInputManager->currentlyDraggedWindow)
+         return;
+ 
+-    WORKSPACEID workspace_id = g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID();
++    WORKSPACEID workspace_id = g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID();
+     if (!workspace_id) {
+-        workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++        workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+     }
+     s = getRowForWorkspace(workspace_id);
+     if (s != nullptr)
+@@ -394,9 +394,9 @@ void ScrollerLayout::onWindowRemovedTili
+ */
+ void ScrollerLayout::onWindowRemovedFloating(PHLWINDOW)
+ {
+-    WORKSPACEID workspace_id = g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID();
++    WORKSPACEID workspace_id = g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID();
+     if (!workspace_id) {
+-        workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++        workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+     }
+     auto s = getRowForWorkspace(workspace_id);
+     if (s != nullptr)
+@@ -448,8 +448,8 @@ void ScrollerLayout::recalculateMonitor(
+         const Box oldmax = sw->get_max();
+         const bool force = sw->update_sizes(PMONITOR);
+         auto PWORKSPACESPECIAL = PMONITOR->activeSpecialWorkspace;
+-        if (PWORKSPACESPECIAL->m_bHasFullscreenWindow) {
+-            sw->set_fullscreen_mode_windows(PWORKSPACESPECIAL->m_efFullscreenMode);
++        if (PWORKSPACESPECIAL->m_hasFullscreenWindow) {
++            sw->set_fullscreen_mode_windows(PWORKSPACESPECIAL->m_fullscreenMode);
+         } else {
+             sw->update_windows(oldmax, force);
+         }
+@@ -459,14 +459,14 @@ void ScrollerLayout::recalculateMonitor(
+     if (!PWORKSPACE)
+         return;
+ 
+-    auto s = getRowForWorkspace(PWORKSPACE->m_iID);
++    auto s = getRowForWorkspace(PWORKSPACE->m_id);
+     if (s == nullptr)
+         return;
+ 
+     const Box oldmax = s->get_max();
+     const bool force = s->update_sizes(PMONITOR);
+-    if (PWORKSPACE->m_bHasFullscreenWindow) {
+-        s->set_fullscreen_mode_windows(PWORKSPACE->m_efFullscreenMode);
++    if (PWORKSPACE->m_hasFullscreenWindow) {
++        s->set_fullscreen_mode_windows(PWORKSPACE->m_fullscreenMode);
+     } else {
+         s->update_windows(oldmax, force);
+     }
+@@ -497,7 +497,7 @@ void ScrollerLayout::recalculateWindow(P
+ void ScrollerLayout::resizeActiveWindow(const Vector2D &delta,
+                                         eRectCorner /* corner */, PHLWINDOW window)
+ {
+-    const auto PWINDOW = window ? window : g_pCompositor->m_pLastWindow.lock();
++    const auto PWINDOW = window ? window : g_pCompositor->m_lastWindow.lock();
+     auto s = getRowForWindow(PWINDOW);
+     if (s == nullptr) {
+         // Window is not tiled
+@@ -649,9 +649,9 @@ PHLWINDOW ScrollerLayout::getNextWindowC
+     // in Row, because WORKSPACE has also lost it. Storing it in Row is hard
+     // to keep synchronized. So for now, unmapping a window from a workspace
+     // different than the active one, loses full screen state.
+-    WORKSPACEID workspace_id = g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID();
++    WORKSPACEID workspace_id = g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID();
+     if (!workspace_id) {
+-        workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++        workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+     }
+     auto s = getRowForWorkspace(workspace_id);
+     if (s == nullptr)
+@@ -685,8 +685,8 @@ void ScrollerLayout::onEnable() {
+     // Register dynamic callbacks for events
+     workspaceHookCallback = HyprlandAPI::registerCallbackDynamic(PHANDLE, "workspace", [&](void* /* self */, SCallbackInfo& /* info */, std::any param) {
+         auto WORKSPACE = std::any_cast<PHLWORKSPACE>(param);
+-        post_event(WORKSPACE->m_iID, "mode");
+-        post_event(WORKSPACE->m_iID, "overview");
++        post_event(WORKSPACE->m_id, "mode");
++        post_event(WORKSPACE->m_id, "overview");
+     });
+     focusedMonHookCallback = HyprlandAPI::registerCallbackDynamic(PHANDLE, "focusedMon", [&](void* /* self */, SCallbackInfo& /* info */, std::any param) {
+         auto monitor = std::any_cast<PHLMONITOR>(param);
+@@ -723,13 +723,13 @@ void ScrollerLayout::onEnable() {
+     overviews = new Overview;
+     marks.reset();
+     trails = new Trails();
+-    for (auto& window : g_pCompositor->m_vWindows) {
++    for (auto& window : g_pCompositor->m_windows) {
+         if (window->m_bIsFloating || !window->m_bIsMapped || window->isHidden())
+             continue;
+ 
+         onWindowCreatedTiling(window);
+     }
+-    for (auto &monitor : g_pCompositor->m_vMonitors) {
++    for (auto &monitor : g_pCompositor->m_monitors) {
+         recalculateMonitor(monitor->ID);
+     }
+ }
+@@ -788,13 +788,13 @@ void ScrollerLayout::onDisable() {
+     Return 0,0 if unpredictable
+ */
+ Vector2D ScrollerLayout::predictSizeForNewWindowTiled() {
+-    if (!g_pCompositor->m_pLastMonitor)
++    if (!g_pCompositor->m_lastMonitor)
+         return {};
+ 
+-    WORKSPACEID workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++    WORKSPACEID workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+     auto s = getRowForWorkspace(workspace_id);
+     if (s == nullptr) {
+-        Vector2D size =g_pCompositor->m_pLastMonitor->vecSize;
++        Vector2D size =g_pCompositor->m_lastMonitor->vecSize;
+         size.x *= 0.5;
+         return size;
+     }
+@@ -905,9 +905,9 @@ void ScrollerLayout::move_focus(WORKSPAC
+ 
+     if (s->move_focus(direction, **focus_wrap == 0 ? false : true)) {
+         // Changed workspace
+-        WORKSPACEID workspace_id = g_pCompositor->m_pLastMonitor->activeSpecialWorkspaceID();
++        WORKSPACEID workspace_id = g_pCompositor->m_lastMonitor->activeSpecialWorkspaceID();
+         if (!workspace_id) {
+-            workspace_id = g_pCompositor->m_pLastMonitor->activeWorkspaceID();
++            workspace_id = g_pCompositor->m_lastMonitor->activeWorkspaceID();
+         }
+         s = getRowForWorkspace(workspace_id);
+         if (s != nullptr) {
+@@ -1109,7 +1109,7 @@ void ScrollerLayout::selection_toggle(WO
+     s->selection_toggle();
+ 
+     // Re-render that monitor to remove decorations
+-    g_pHyprRenderer->damageMonitor(g_pCompositor->m_pLastMonitor.lock());
++    g_pHyprRenderer->damageMonitor(g_pCompositor->m_lastMonitor.lock());
+ }
+ 
+ void ScrollerLayout::selection_set(PHLWINDOWREF window) {
+@@ -1123,7 +1123,7 @@ void ScrollerLayout::selection_reset() {
+         row->data()->selection_reset();
+     }
+     // Re-render windows to remove decorations
+-    for (auto monitor : g_pCompositor->m_vMonitors) {
++    for (auto monitor : g_pCompositor->m_monitors) {
+         g_pHyprRenderer->damageMonitor(monitor);
+     }
+ }
+@@ -1137,7 +1137,7 @@ void ScrollerLayout::selection_workspace
+     s->selection_all();
+ 
+     // Re-render that monitor to render decorations
+-    g_pHyprRenderer->damageMonitor(g_pCompositor->m_pLastMonitor.lock());
++    g_pHyprRenderer->damageMonitor(g_pCompositor->m_lastMonitor.lock());
+ }
+ 
+ // Move all selected columns/windows to workspace, and locate them in direction wrt
+@@ -1246,7 +1246,7 @@ void ScrollerLayout::jump() {
+     jumping = true;
+     jump_data = new JumpData;
+ 
+-    for (auto monitor : g_pCompositor->m_vMonitors) {
++    for (auto monitor : g_pCompositor->m_monitors) {
+         WORKSPACEID workspace_id = monitor->activeSpecialWorkspaceID();
+         if (!workspace_id) {
+             workspace_id = monitor->activeWorkspaceID();
+@@ -1274,8 +1274,8 @@ void ScrollerLayout::jump() {
+ 
+     static auto const *KEYS = (Hyprlang::STRING const *)HyprlandAPI::getConfigValue(PHANDLE, "plugin:scroller:jump_labels_keys")->getDataStaticPtr();
+     jump_data->keys = *KEYS;
+-    jump_data->from_window = g_pCompositor->m_pLastWindow;
+-    jump_data->from_monitor = g_pCompositor->m_pLastMonitor;
++    jump_data->from_window = g_pCompositor->m_lastWindow;
++    jump_data->from_monitor = g_pCompositor->m_lastMonitor;
+ 
+     if (jump_data->keys.size() == 1 && jump_data->windows.size() > 1) {
+         delete jump_data;
+Index: source/src/sizes.cpp
+===================================================================
+--- source.orig/src/sizes.cpp
++++ source/src/sizes.cpp
+@@ -38,7 +38,7 @@ StandardSize ScrollerSizes::get_next(con
+ StandardSize ScrollerSizes::get_next_window_height(StandardSize size, int step)
+ {
+     update();
+-    const std::string &monitor = g_pCompositor->m_pLastMonitor->szName;
++    const std::string &monitor = g_pCompositor->m_lastMonitor->szName;
+     for (const auto monitor_data : monitors) {
+         if (monitor_data.name == monitor)
+             return get_next(monitor_data.window_heights, size, step);
+@@ -49,7 +49,7 @@ StandardSize ScrollerSizes::get_next_win
+ StandardSize ScrollerSizes::get_next_column_width(StandardSize size, int step)
+ {
+     update();
+-    const std::string &monitor = g_pCompositor->m_pLastMonitor->szName;
++    const std::string &monitor = g_pCompositor->m_lastMonitor->szName;
+     for (const auto monitor_data : monitors) {
+         if (monitor_data.name == monitor)
+             return get_next(monitor_data.column_widths, size, step);
+@@ -66,7 +66,7 @@ StandardSize ScrollerSizes::get_size(con
+ StandardSize ScrollerSizes::get_window_height(int index)
+ {
+     update();
+-    const std::string &monitor = g_pCompositor->m_pLastMonitor->szName;
++    const std::string &monitor = g_pCompositor->m_lastMonitor->szName;
+     for (const auto monitor_data : monitors) {
+         if (monitor_data.name == monitor)
+             return get_size(monitor_data.window_heights, index);
+@@ -77,7 +77,7 @@ StandardSize ScrollerSizes::get_window_h
+ StandardSize ScrollerSizes::get_column_width(int index)
+ {
+     update();
+-    const std::string &monitor = g_pCompositor->m_pLastMonitor->szName;
++    const std::string &monitor = g_pCompositor->m_lastMonitor->szName;
+     for (const auto monitor_data : monitors) {
+         if (monitor_data.name == monitor)
+             return get_size(monitor_data.column_widths, index);
+Index: source/src/window.h
+===================================================================
+--- source.orig/src/window.h
++++ source/src/window.h
+@@ -168,7 +168,7 @@ public:
+ 
+     void move_to_workspace(PHLWORKSPACE workspace) {
+         window->moveToWorkspace(workspace);
+-        window->m_pMonitor = workspace->m_pMonitor;
++        window->m_pMonitor = workspace->m_monitor;
+     }
+ 
+     void pin(bool pin) {

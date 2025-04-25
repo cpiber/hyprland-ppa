@@ -1,3 +1,10 @@
+hyprscroller (0.47.0~1ppa1+git202504251312-7e63677) noble; urgency=medium
+
+  * Update to master 7e63677
+  * 7e63677 Last commit :-(
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 13:12:08 +0200
+
 hyprscroller (0.47.0~1ppa1+git202503300934-b14552abuild2) noble; urgency=medium
 
   * Rebuild for unstable
