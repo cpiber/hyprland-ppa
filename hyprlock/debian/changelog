@@ -1,3 +1,14 @@
+hyprlock (0.8.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.1
+  * b3f1aa7 version: bump to 0.8.1
+  * 248dfb0 flake.lock: update
+  * 656704a config: default to center for label halign and valign (#748)
+  * d953296 renderer: fix gradient copy size in renderBorder (#742)
+  * 71d35aa image: remove left over raw pointer to COutput (#735)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 12:06:00 +0200
+
 hyprlock (0.8.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.0
