@@ -1,3 +1,85 @@
+hyprland-unstable (0.48.0~1ppa1+git202504251211-41f5f67f) noble; urgency=medium
+
+  * Update to main 41f5f67f
+  * 41f5f67f window: Fix order of urgency flag and event emission
+    (#10163)
+  * 02d7badd workspaces: refactor class member vars (#10167)
+  * 0e80ecc5 layers: refactor class member vars (#10149)
+  * be6268a7 groupbar: Add options for setting group bar title font
+    weight (and indicator gap) (#9617)
+  * a9549dbc protocols: add Hyprland toplevel mapping implementation
+    (#9775)
+  * b06fbdb7 dwindle: use idealIgnoreReserved for moveWindowTo bbs
+  * 241a4935 compositor: refactor class member vars (#10141)
+  * 3577a6be nix/overlays: add w-p 1.43
+  * 2e540e4e flake.lock: update
+  * a4f7d7c5 protocols: add xdg_toplevel_tag_v1 support
+  * 55e953b3 InputManager: add nofollowmouse (#9994)
+  * d29723cb keybinds: allow executing binds not bound to a key (#10102)
+  * 400dd160 debug: refactor class member vars (#10130)
+  * a3b96961 tablet: naive window refocusing (#10110)
+  * a3d32f3b hyprpm: fix format
+  * 4d14bcb0 config: Refactor class member vars (#10124)
+  * 9b4060f0 hyprpm: extend dep list
+  * 867bc860 compositor: fix getMonitorInDirection skipping active
+    monitor (#10114)
+  * f48ee7a3 protocols: ensure PointerConstraints activation occurs only
+    after attched to InputManager (#10096)
+  * 51afc2c2 ctm: enable fade animation on nvidia driver versions 575
+    and above (#10095)
+  * 02f7da2b [gha] Nix: update inputs
+  * 7631d4c7 render, helpers: Call OpenGL destroyMonitorResources on
+    disconnect (#10111)
+  * ddae3036 ci: close unwanted issues automatically (#10106)
+  * 225e13c3 InputManager: add config option to disable keybinds per
+    device (#10064)
+  * 3fa6320a desktop: Damage subsurface when position changes (#10094)
+  * 1ae7e216 xcursormgr: include <variant>
+  * 877fb5b9 time: move to stl's clocks and move timer
+  * 0e521788 core: wait for dmabuf readiness (#9806)
+  * ffd6cf65 windowrules: allow incrementing window props (#9566)
+  * 8b7b1690 flake.lock: update
+  * 533bc511 monitors: fix disconnected monitors are reconnected to an
+    empty workspace (#9874)
+  * 99ab3e19 framebuffer: Fix framebuffer size check (#10068)
+  * f4e19d3f layerSurface: warp position and size before taking a
+    snapshot (#10054)
+  * 06469b33 IHyprLayout: center floating window at cursor when picked
+    up from fullscreen (#10063)
+  * 303a10d2 IHyprLayout: respect minimum window size (#10017)
+  * 4d85e799 dwindle: ignore fullscreen window for positioning when
+    use_active_for_splits=false (#9838)
+  * 2da4f427 compositor/surface: fix surface opaque and input regions
+    not being updated (#10055)
+  * a17cea8b asyncDialogBox: fix missing pid
+  * 65389700 binds: add drag_threshold for click/drag isolation (#9839)
+  * 0399e642 screencopy: Handle explicit sync failure (#10050)
+  * 382f0f23 pass: revert "remove renderer finalDamage since it's unused
+    (#9996)" (#10039)
+  * b83c9f5c cmake: do not install version.h.in (#10035)
+  * d7756863 input: add warp_on_toggle_special (#9945)
+  * 0dc531c4 core: fix crash in data device on shutdown (#9997)
+  * 0a7e2cb1 pass: remove renderer finalDamage since it's unused (#9996)
+  * 4f991610 watchdog: remove watchdog
+  * ea852965 xdg-shell: fix some null refs (#9992)
+  * 260d8e1f Permission Manager: add permission management for
+    screencopy (#9930)
+  * 642f394e xwayland: sync primary selection with wayland (#9952)
+  * b15c2bff CursorManager: Store cursor pixel data retrieved from X/HC
+    as a copy (#9986)
+  * da86db43 core: refactor and improve surface commit (#9805)
+  * 70ae99f5 input/layers: Fix exclusive LS focus / refocus after unmap
+    (#9984)
+  * a8eda7f9 helpers: add missing include for BSDs after 3c128679ee8c
+    (#9982)
+  * 8a8f394d swipe: fix swiping onto a new workspace bound to another
+    monitor (#8176) (#9927)
+  * 51838fb5 layout: properly track floating window position (#9937)
+  * 85f874d1 swipe: fix prev workspace remembering
+  * 9b392500 DataDevice: position icon at cursor hotspot (#9895)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 12:11:43 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202504061948-3c128679) noble; urgency=medium
 
   * Update to main 3c128679
