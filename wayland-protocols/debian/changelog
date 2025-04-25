@@ -1,3 +1,25 @@
+wayland-protocols (1.43-1ppa1) noble; urgency=medium
+
+  * Update to release 1.43
+  * 4313a51 build: Bump version to 1.43
+  * 723270a staging: add toplevel tag protocol
+  * 7636151 meson: sort protocols alphabetically
+  * 86750c9 xdg-shell: Add edge constraints
+  * 00a5b23 color-management-v1: fix typo in feature.windows_scrgb
+  * a8d2201 build: Bump version to 1.42
+  * 8d0a522 tablet: add support for relative dials
+  * 96c8caa tablet: add a bustype event to the initial burst of tablet
+    events
+  * 23bfdb5 tablet: bump the tablet protocol version
+  * bd90966 cursor-shape: Add the 'all-resize' cursor shape
+  * 43620ec cursor-shape: Add the 'ask' cursor shape
+  * b697b9e cursor shape: Add some docs
+  * 22619f0 cursor-shape: Bump protocol version
+  * d5aed4e governance: Add chromium as a member project
+  * af2716e members: Add Xaver Hugl as a KWin point-of-contact
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 12:20:21 +0200
+
 wayland-protocols (1.41-1.1) noble; urgency=medium
 
   * Backport
