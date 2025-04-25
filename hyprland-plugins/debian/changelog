@@ -1,3 +1,13 @@
+hyprland-plugins (0.48.0~1ppa1+git202504251244-8e5e53a) noble; urgency=medium
+
+  * Update to main 8e5e53a
+  * 8e5e53a all: Change variable names to chase Hyprland (#322)
+  * faa4e78 all: chase hl time changes
+  * b08909e hyprexpo: get rid of some compiler warnings
+  * 8e86186 chore: update flake.lock
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 12:44:27 +0200
+
 hyprland-plugins (0.48.0~1ppa1+git202504062016-be6b987) noble; urgency=medium
 
   * Update to main be6b987
