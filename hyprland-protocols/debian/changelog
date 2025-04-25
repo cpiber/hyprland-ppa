@@ -1,3 +1,11 @@
+hyprland-protocols (0.6.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.4
+  * 3a5c2bd version: bump to 0.6.4
+  * 04428d6 fix: add toplevel mapping protocol to meson build (#17)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 12:30:27 +0200
+
 hyprland-protocols (0.6.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.3
