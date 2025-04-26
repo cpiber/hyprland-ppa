@@ -39,5 +39,10 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  wayland-protocols,
-Description: <insert up to 60 chars description>
- <Insert long description, indented with spaces.>
+Description: Hyprland's simple GPU-accelerated Wayland screen locking utility.
+ Hyprland's simple, yet multi-threaded and GPU-accelerated screen locking utility.
+ Features:
+  - uses the secure ext-session-lock protocol
+  - full support for fractional-scale
+  - fully GPU accelerated
+  - multi-threaded resource acquisition for no hitches
