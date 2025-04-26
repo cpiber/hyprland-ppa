@@ -1,3 +1,9 @@
+waybar (0.12.0-1ppa3) noble; urgency=medium
+
+  * Dependecy rebuild
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 26 Apr 2025 14:53:48 +0200
+
 waybar (0.12.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.12.0

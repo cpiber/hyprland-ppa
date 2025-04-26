@@ -1,3 +1,9 @@
+waybar-unstable (0.12.0+0~1ppa3) noble; urgency=medium
+
+  * Dependecy rebuild
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 26 Apr 2025 14:54:10 +0200
+
 waybar-unstable (0.12.0+0~1ppa1) noble; urgency=medium
 
   * Update to master 8490a1d9

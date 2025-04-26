@@ -29,7 +29,7 @@ Build-Depends:
  libupower-glib-dev,
  libjack-jackd2-dev,
  libsndio-dev,
- libwireplumber-0.4-dev,
+ libwireplumber-0.4-dev | libwireplumber-0.5-dev,
  libhowardhinnant-date-dev,
  libplayerctl-dev
 Standards-Version: 4.6.2
