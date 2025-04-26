@@ -103,3 +103,6 @@
 [submodule "uwsm/source"]
 	path = uwsm/source
 	url = https://github.com/Vladimir-csp/uwsm.git
+[submodule "fuzzel/source"]
+	path = fuzzel/source
+	url = https://codeberg.org/dnkl/fuzzel.git

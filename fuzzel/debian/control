@@ -1,0 +1,51 @@
+Source: fuzzel
+Section: x11
+Priority: optional
+Maintainer: Sway and related packages team <team+swaywm@tracker.debian.org>
+Uploaders:
+ Peter Colberg <peter@colberg.org>,
+ Constantin Piber <cp.piber@gmail.com>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-builtusing,
+ libcairo2-dev,
+ libfcft-dev (>= 3.0.0),
+ libharfbuzz-dev,
+ libnanosvg-dev,
+ libpixman-1-dev,
+ libpng-dev,
+ libtllist-dev,
+ libutf8proc-dev,
+ libwayland-dev,
+ libxkbcommon-dev,
+ meson (>= 0.58),
+ ninja-build,
+ pkgconf,
+ scdoc,
+ wayland-protocols,
+Standards-Version: 4.7.0
+Homepage: https://codeberg.org/dnkl/fuzzel
+Vcs-Git: https://salsa.debian.org/swaywm-team/fuzzel.git
+Vcs-Browser: https://salsa.debian.org/swaywm-team/fuzzel
+Rules-Requires-Root: no
+
+Package: fuzzel
+Architecture: any
+Multi-Arch: foreign
+Static-Built-Using:
+ ${dh-builtusing:libnanosvg-dev},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ hicolor-icon-theme,
+Description: Application launcher for wlroots based Wayland compositors
+ Fuzzel is a Wayland-native application launcher, similar to rofi's drun mode.
+ .
+ Features:
+  * Wayland native
+  * Rofi drun-like mode of operation
+  * dmenu mode where newline separated entries are read from stdin
+  * Emacs key bindings
+  * Icons!
+  * Remembers frequently launched applications

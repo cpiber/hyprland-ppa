@@ -1,0 +1,4 @@
+version=4
+opts="searchmode=plain,dversionmangle=s/\+ds$//,repacksuffix=+ds,filenamemangle=s#.+/(\d[\d.]+)\.tar\.gz#fuzzel-$1.tar.gz#" \
+https://codeberg.org/api/v1/repos/dnkl/fuzzel/tags \
+https://codeberg.org/dnkl/fuzzel/archive/(\d[\d.]+)\.tar\.gz
