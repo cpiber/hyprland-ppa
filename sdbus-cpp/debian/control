@@ -2,6 +2,7 @@ Source: sdbus-cpp
 Section: libdevel
 Priority: optional
 Maintainer: Shengjing Zhu <zhsj@debian.org>
+Uploaders: Constantin Piber <cp.piber@gmail.com>
 Rules-Requires-Root: no
 Build-Depends:
  cmake,
@@ -10,11 +11,10 @@ Build-Depends:
  libexpat1-dev,
  libgmock-dev (>= 1.10.0~) <!nocheck>,
  libsystemd-dev,
- pkg-config,
+ pkgconf,
 Build-Depends-Indep:
  doxygen <!nodoc>,
- graphviz <!nodoc>,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Homepage: https://github.com/Kistler-Group/sdbus-cpp
 Vcs-Git: https://salsa.debian.org/zhsj/sdbus-cpp.git
 Vcs-Browser: https://salsa.debian.org/zhsj/sdbus-cpp
@@ -36,7 +36,7 @@ Package: libsdbus-c++-dev
 Architecture: linux-any
 Multi-Arch: same
 Depends:
- libsdbus-c++1 (= ${binary:Version}),
+ libsdbus-c++2 (= ${binary:Version}),
  libsystemd-dev,
  ${misc:Depends},
  ${shlibs:Depends},
@@ -64,7 +64,7 @@ Description: High-level C++ D-Bus library for Linux in modern C++ (documentation
  .
  This package contains documentation.
 
-Package: libsdbus-c++1
+Package: libsdbus-c++2
 Section: libs
 Architecture: linux-any
 Multi-Arch: same

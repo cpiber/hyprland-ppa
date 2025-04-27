@@ -1,2 +1,1 @@
-01-fix-doxygen
-02-disable-test
+0001-skip-GetMachineId-test-when-etc-machine-id-doesn-t-e.patch

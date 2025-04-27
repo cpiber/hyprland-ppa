@@ -1,8 +1,31 @@
-sdbus-cpp (2.0.0-1ppa1) noble; urgency=medium
+sdbus-cpp (2.1.0-1ppa1) noble; urgency=medium
 
-  * Update to 2.0.0
+  * New upstream release
+  * Replace pkg-config with pkgconf in Build-Depends
 
- -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Oct 2024 09:10:11 +0200
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 30 Nov 2024 04:36:23 +0800
+
+sdbus-cpp (2.0.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * Bump Standards-Version to 4.7.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 31 Oct 2024 17:31:33 +0800
+
+sdbus-cpp (2.0.0-1) experimental; urgency=medium
+
+  * New upstream release (Closes: #1085735)
+  * Bump SO version to 2
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 28 Oct 2024 22:45:30 +0800
+
+sdbus-cpp (1.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+    + Fix FTBFS with GCC-14(Closes: #1075446)
+  * Drop patches applied in new version
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 29 Jul 2024 10:12:17 +0800
 
 sdbus-cpp (1.4.0-2) unstable; urgency=medium
 
