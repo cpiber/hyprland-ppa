@@ -1,3 +1,9 @@
+hyprlock (0.8.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 27 Apr 2025 13:21:31 +0200
+
 hyprlock (0.8.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.1
