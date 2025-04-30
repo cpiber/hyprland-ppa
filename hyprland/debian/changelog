@@ -1,3 +1,37 @@
+hyprland-unstable (0.48.0~1ppa1+git202504301500-54c89104) noble; urgency=medium
+
+  * Update to main 54c89104
+  * 54c89104 DonationNag: ask after each major update (#10213)
+  * b2ad21a6 flake.lock: update
+  * 72cb5d24 permissions: disable automatic reloading of permissions
+    from cfg
+  * 9868b183 input: don't use pointer hold logic for unmapped surfs
+  * 208f4c48 config: use natural increase and decrease of brightness for
+    default cfg (#10210)
+  * 45068713 xdg-bell: avoid crashes on null toplevel
+  * 6483f4ec screencopy: don't render cursor when frame doesn't want it
+  * ae1fe860 renderer: add render:send_content_type setting (#9851)
+  * 49974d5e cm: Use precomputed primaries conversion (#9814)
+  * 94bc1320 xdg-bell/xdg-tag: fix moved resource usage
+  * e9c3fcbb devices: refactor class member vars (#10206)
+  * 40147d3a asyncdialogbox: fix missing header
+  * 23ecce0e protocols: add support for xdg-system-bell-v1
+  * 465e3d97 window: make AsyncDialogBoxes not closeable
+  * b10a43da windowrules: add noclosefor
+  * 5bd7ff88 permissions: add perms for plugin loading (#10184)
+  * 21184404 windows: refactor class member vars (#10168)
+  * c505eb55 screencopy: support hw cursors while sharing with cursor
+  * f5c5cfa9 keybindmgr: fixup bindn regression
+  * 0302bfdc async: add Promise and use it for AsyncDialogBox
+  * 4f868a1f SECURITY: init security policy
+  * 94c55fe9 helpers: properly support next/prev for workspace switching
+    (#10074)
+  * 742bce01 decorationPositioner: update posinfo on window update
+  * 4cf62c11 layerrules: add abovelock to render above lockscreen
+    (#9793)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Apr 2025 15:00:07 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202504251211-41f5f67f) noble; urgency=medium
 
   * Update to main 41f5f67f
