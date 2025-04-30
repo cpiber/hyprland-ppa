@@ -63,7 +63,7 @@
 	url = https://github.com/hyprwm/hyprland-plugins.git
 [submodule "hyprscroller/source"]
 	path = hyprscroller/source
-	url = https://github.com/dawsers/hyprscroller.git
+	url = https://github.com/cpiber/hyprscroller.git
 [submodule "sdbus-cpp/source"]
 	path = sdbus-cpp/source
 	url = https://github.com/Kistler-Group/sdbus-cpp.git
