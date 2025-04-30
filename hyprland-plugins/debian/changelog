@@ -1,3 +1,14 @@
+hyprland-plugins (0.48.0~1ppa1+git202504301610-a53ebab) noble; urgency=medium
+
+  * Update to main a53ebab
+  * a53ebab hyprbars: chase hyprland
+  * e2fc760 hyprbars: fix rounding (#327)
+  * 2b9a54f all: chase hyprland
+  * 61ab038 all: Change variable names to chase Hyprland (#324)
+  * bd929f7 hyprpm: fix pin for 0.48.1
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Apr 2025 16:10:41 +0200
+
 hyprland-plugins (0.48.0~1ppa1+git202504251244-8e5e53a) noble; urgency=medium
 
   * Update to main 8e5e53a
