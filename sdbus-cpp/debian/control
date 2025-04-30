@@ -71,6 +71,10 @@ Multi-Arch: same
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
+Breaks:
+ libsdbus-c++1 (>= 2.0.0)
+Replaces:
+ libsdbus-c++1 (>= 2.0.0)
 Description: High-level C++ D-Bus library for Linux in modern C++ (library)
  sdbus-c++ is a high-level C++ D-Bus library for Linux designed to provide
  expressive, easy-to-use API in modern C++. It adds another layer of
