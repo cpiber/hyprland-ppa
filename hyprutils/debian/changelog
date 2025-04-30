@@ -1,3 +1,11 @@
+hyprutils (0.7.0-1ppa2) noble; urgency=medium
+
+  * Update to release 0.7.0
+  * 05878d9 version: bump to 0.7.0
+  * 5f51dce os/process: add exitCode()
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Apr 2025 07:47:51 +0200
+
 hyprutils (0.6.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.0
