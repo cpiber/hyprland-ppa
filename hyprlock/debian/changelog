@@ -1,3 +1,15 @@
+hyprlock (0.8.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.2
+  * 6c64630 version: bump to 0.8.2
+  * 0e3e720 core: use enqueueUnlock for unlocks via SIGUSR1 (#756)
+  * 867a71d core: avoid calling wl_display_read_events after poll
+    returned due to EINTR (#757)
+  * 8280829 core: correct $LAYOUT replacement (#755)
+  * eb28a71 clang-tidy: fix some errors (#751)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 May 2025 16:38:42 +0200
+
 hyprlock (0.8.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
