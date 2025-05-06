@@ -1,3 +1,50 @@
+hyprland-unstable (0.48.0~1ppa1+git202505060806-1ce614df) noble; urgency=medium
+
+  * Update to main 1ce614df
+  * 1ce614df animations: Add option for animating workspaces as if the
+    first and last were adjacent (#10277)
+  * 930eeac9 window: use stored size for new floating window when
+    persistentsize is set (#10212)
+  * ec93f8a1 socket2: add monitorremovedv2 event (#10229)
+  * 997fefbc render: refactor class member vars (#10292)
+  * c7eb1410 renderer: always try to apply a mode if pixel size is
+    invalid (#10291)
+  * 1f50cdfa hyprpm: wrap sudo cmd in quotes
+  * 1c530cbc hyprpm: Minor optimizations and refactor of helpers and
+    progress bar (#10246)
+  * 9cd5b257 protocols: refactor class member vars (u-z) (#10282)
+  * 78ff20dd workspaces: Fix empty flag not selecting active workspace
+    (#10237)
+  * 2626f89e protocols: refactor class member vars (n-t) (#10273)
+  * adbae0f7 protocols: refactor class member vars (a-m) (#10265)
+  * 46ac115b protocols: refactor class member vars (types) (#10261)
+  * 3465efcd internal: Use vecnotinrect instead of !vecinrect (#10262)
+  * cdf5736f layerrules: fix abovelock interactivity for touch input
+    (#10253)
+  * 2d6ca96e plugins: refactor class member vars (#10257)
+  * d9cad5e1 protocols: refactor class member vars (core) (#10259)
+  * 0c736217 configmgr: fix CConfigValue<> from plugins
+  * 77ecf095 internal: fix name confusion in SAlphaValue
+  * f1ac1847 [gha] Nix: update inputs
+  * ce821294 managers: refactor class member vars (#10242)
+  * 6f174a9e renderer: render fading out floating windows over fs
+  * 5b3e4891 inputs: refactor class member vars (#10230)
+  * 2670b8f7 hyprpm: add missing include for libc++ after 858c0e26d193
+    (#10234)
+  * 858c0e26 hyprpm: move to system directories for storing plugins
+    (#10211)
+  * b5ef049e master: Change center_master_slaves_on_right to
+    center_master_fallback (#10201)
+  * 615e0dae layouts: refactor class member vars (#10228)
+  * ce476677 hyprerror: refactor class member vars (#10227)
+  * 8d661810 cmake: ignore Wclobbered
+  * 50e1bec8 helpers: refactor class member vars (#10218)
+  * b8a204c2 ci: minor fixes to glaze
+  * 2ee5118d render: properly release rendered buffers (#9807)
+  * 5d005f11 xdg-bell: fix wrong resource cast
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 06 May 2025 08:06:49 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202504301500-54c89104) noble; urgency=medium
 
   * Update to main 54c89104
