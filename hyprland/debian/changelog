@@ -1,3 +1,9 @@
+hyprland-unstable (0.48.0~1ppa1+git202505060806-1ce614df.1) noble; urgency=medium
+
+  * Fix global plugin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 06 May 2025 18:00:00 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202505060806-1ce614df) noble; urgency=medium
 
   * Update to main 1ce614df

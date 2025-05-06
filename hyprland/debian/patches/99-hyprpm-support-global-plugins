@@ -31,19 +31,22 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
                << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
                << " install random plugins without verifying the code and author.\n  "
-@@ -172,6 +181,21 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -172,6 +181,24 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
 +    if (bIsGlobal) {
 +        const auto PATH = DataState::getDataStatePath() / url;
 +
-+        std::filesystem::create_directories(PATH);
++        std::error_code ec;
++        if (!std::filesystem::exists(PATH, ec) || ec)
++            NSys::runAsSuperuser("mkdir -p -m 755 '" + PATH.string() + "'");
 +        for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + url)) {
-+            if (entry.path().filename() == "state.toml")
-+                NSys::runAsSuperuser("cp '" + entry.path().string() + "' '" + (PATH / "state.toml").string() + "' && chmod 644 '" + (PATH / "state.toml").string() + "'");
++            const auto filename = entry.path().filename();
++            if (filename == "state.toml")
++                NSys::runAsSuperuser("cp '" + entry.path().string() + "' '" + (PATH / filename).string() + "' && chmod 644 '" + (PATH / filename).string() + "'");
 +            else
-+                std::filesystem::create_symlink(entry, PATH / entry.path().filename().string());
++                NSys::runAsSuperuser("cp '" + entry.path().string() + "' '" + (PATH / filename).string() + "' && chmod 755 '" + (PATH / filename).string() + "'");
 +        }
 +        std::cout << successString("global repository added");
 +        std::cout << successString("you can now enable the plugin(s) with hyprpm enable");
@@ -53,7 +56,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -648,6 +672,49 @@ bool CPluginManager::updatePlugins(bool
+@@ -648,6 +675,49 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  
@@ -84,18 +87,18 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +            }
 +
 +            DataState::removePluginRepo(repo.name);
-+            const auto PATH = DataState::getDataStatePath() / newrepo.name;
-+            std::filesystem::create_directories(PATH);
-+            for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + newrepo.name)) {
-+                if (entry.path().filename() == "state.toml")
-+                    continue;
-+                std::filesystem::create_symlink(entry, PATH / entry.path().filename().string());
-+            }
 +            for (auto& p : newrepo.plugins) {
 +                const auto OLDPLUGINIT = std::find_if(repo.plugins.begin(), repo.plugins.end(), [&](const auto& other) { return other.name == p.name; });
 +                p.enabled = OLDPLUGINIT != repo.plugins.end() ? OLDPLUGINIT->enabled : false;
 +            }
 +            DataState::addNewPluginRepo(newrepo);
++            const auto PATH = DataState::getDataStatePath() / newrepo.name;
++            for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + newrepo.name)) {
++                const auto filename = entry.path().filename();
++                if (filename == "state.toml")
++                    continue;
++                NSys::runAsSuperuser("cp '" + entry.path().string() + "' '" + (PATH / filename).string() + "' && chmod 755 '" + (PATH / filename).string() + "'");
++            }
 +            progress.printMessageAbove(successString("updated {}", repo.name));
 +            continue;
 +        }
