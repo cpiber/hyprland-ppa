@@ -1,3 +1,14 @@
+hyprpaper (0.7.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.5
+  * 753ffa7 version: bump to 0.7.5
+  * 05337a4 CMake: require wayland-protocols>=1.35 (#243)
+  * 6f4ba43 CMake: move systemd service install (#240)
+  * 7e18ebc core: add mallopt to modify trim threshold
+  * f827dc3 flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 06 May 2025 21:32:11 +0200
+
 hyprpaper (0.7.4-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
