@@ -1,3 +1,16 @@
+hyprland-plugins (0.48.0~1ppa1+git202505061808-eab6921) noble; urgency=medium
+
+  * Update to main eab6921
+  * eab6921 all: chase hyprland (#334)
+  * fcf1c2a all: Chase Hyprland (#331)
+  * 0ca682b hyprbars: chase hyprland
+  * 6904c6d hyprscrolling: fix nix
+  * 0152cb6 hyprpm: add hyprscrolling
+  * 6e215e4 hyprscrolling: init plugin
+  * 16fddaa all: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 06 May 2025 18:08:34 +0200
+
 hyprland-plugins (0.48.0~1ppa1+git202504301610-a53ebab) noble; urgency=medium
 
   * Update to main a53ebab
