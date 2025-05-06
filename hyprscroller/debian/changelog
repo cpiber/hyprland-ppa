@@ -1,3 +1,11 @@
+hyprscroller (0.47.0~1ppa1+git202505061838-0ef2592) noble; urgency=medium
+
+  * Update to master 0ef2592
+  * 0ef2592 More member renaming chase
+  * 3246394 Chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 06 May 2025 18:38:36 +0200
+
 hyprscroller (0.47.0~1ppa1+git202504251312-7e63677build1) noble; urgency=medium
 
   * Rebuild for unstable
