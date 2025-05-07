@@ -9,7 +9,7 @@ Build-Depends:
  pkgconf,
  gcc-14,
  g++-14,
- libhyprutils-dev (>= 0.1.1),
+ libhyprutils-dev (>= 0.7.1),
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org/hyprlang
 Vcs-Browser: https://github.com/hyprwm/hyprlang

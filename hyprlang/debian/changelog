@@ -1,3 +1,13 @@
+hyprlang (0.6.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.2
+  * a15e7ba version: bump to 0.6.2
+  * e863ebc flake.lock: update
+  * 6726cfd parser: add support for basic arithmetic
+  * 397600c clang-tidy: fix some errors (#70)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 07 May 2025 20:51:05 +0200
+
 hyprlang (0.6.1-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
