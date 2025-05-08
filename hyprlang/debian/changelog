@@ -1,3 +1,11 @@
+hyprlang (0.6.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.3
+  * 5572417 version: bump to 0.6.3
+  * a59e86a parser: change expression syntax to avoid bash clashes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 08 May 2025 08:30:33 +0200
+
 hyprlang (0.6.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.2
