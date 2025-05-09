@@ -1,0 +1,16 @@
+Index: source/hyprtrails/globals.hpp
+===================================================================
+--- source.orig/hyprtrails/globals.hpp
++++ source/hyprtrails/globals.hpp
+@@ -5,8 +5,8 @@
+ inline HANDLE PHANDLE = nullptr;
+ 
+ struct SGlobalState {
+-    CShader          trailShader;
++    SShader          trailShader;
+     wl_event_source* tick = nullptr;
+ };
+ 
+-inline UP<SGlobalState> g_pGlobalState;
+\ No newline at end of file
++inline UP<SGlobalState> g_pGlobalState;
