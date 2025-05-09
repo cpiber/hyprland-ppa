@@ -7,13 +7,13 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -128,7 +128,7 @@ pkg_check_modules(
+@@ -132,7 +132,7 @@ pkg_check_modules(
    IMPORTED_TARGET
    xkbcommon
    uuid
 -  wayland-server>=1.22.90
 +  wayland-server
-   wayland-protocols>=1.41
+   wayland-protocols>=1.43
    cairo
    pango
 Index: source/src/Compositor.cpp
@@ -21,11 +21,11 @@ Index: source/src/Compositor.cpp
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
 @@ -311,7 +311,7 @@ void CCompositor::initServer(std::string
-         Debug::trace = true;
+         Debug::m_trace = true;
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
--    wl_display_set_default_max_buffer_size(m_sWLDisplay, 1_MB);
-+    // wl_display_set_default_max_buffer_size(m_sWLDisplay, 1_MB);
+-    wl_display_set_default_max_buffer_size(m_wlDisplay, 1_MB);
++    // wl_display_set_default_max_buffer_size(m_wlDisplay, 1_MB);
  
      Aquamarine::SBackendOptions options{};
      options.logFunction = aqLog;

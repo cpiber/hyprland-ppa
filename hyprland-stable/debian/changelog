@@ -1,3 +1,229 @@
+hyprland (0.49.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.49.0
+  * 9958d297 version: bump to 0.49.0
+  * 239cdd67 socket2: fix order of window events on map (#10341)
+  * f01e3043 desktop: cleanup code and use std::ranges (#10289)
+  * 04c98abd layout: properly assign workspace and monitor when moving a
+    child to the parent (#10338)
+  * 53bfb92d layout: allow interacting with pinned windows when
+    fullscreened (#10326)
+  * 2b3cac01 flake.lock: update
+  * f909b0f1 opengl: fix legacyrenderer
+  * fa1e343b compositor: set fullscreenstate on movetoworkspace (#10303)
+  * 22b12e30 refactor: cshader class to sshader struct (#10324)
+  * 7a971735 flake.lock: update
+  * 6abb5b0c renderer: precompute fullalpha (#10319)
+  * 0dfcba98 DMABuffer: reserve vector and avoid UB (#10317)
+  * e5df8cdc xwayland: refactor class member vars (#10312)
+  * f8bbe512 hyprpm: clean up root access and properly check input
+    (#10304)
+  * 94827789 popup: damage old size on unmap as well as new (#10306)
+  * 708a7c24 hyprpm: add missing return (#10299)
+  * 1ce614df animations: Add option for animating workspaces as if the
+    first and last were adjacent (#10277)
+  * 930eeac9 window: use stored size for new floating window when
+    persistentsize is set (#10212)
+  * ec93f8a1 socket2: add monitorremovedv2 event (#10229)
+  * 997fefbc render: refactor class member vars (#10292)
+  * c7eb1410 renderer: always try to apply a mode if pixel size is
+    invalid (#10291)
+  * 1f50cdfa hyprpm: wrap sudo cmd in quotes
+  * 1c530cbc hyprpm: Minor optimizations and refactor of helpers and
+    progress bar (#10246)
+  * 9cd5b257 protocols: refactor class member vars (u-z) (#10282)
+  * 78ff20dd workspaces: Fix empty flag not selecting active workspace
+    (#10237)
+  * 2626f89e protocols: refactor class member vars (n-t) (#10273)
+  * adbae0f7 protocols: refactor class member vars (a-m) (#10265)
+  * 46ac115b protocols: refactor class member vars (types) (#10261)
+  * 3465efcd internal: Use vecnotinrect instead of !vecinrect (#10262)
+  * cdf5736f layerrules: fix abovelock interactivity for touch input
+    (#10253)
+  * 2d6ca96e plugins: refactor class member vars (#10257)
+  * d9cad5e1 protocols: refactor class member vars (core) (#10259)
+  * 0c736217 configmgr: fix CConfigValue<> from plugins
+  * 77ecf095 internal: fix name confusion in SAlphaValue
+  * f1ac1847 [gha] Nix: update inputs
+  * ce821294 managers: refactor class member vars (#10242)
+  * 6f174a9e renderer: render fading out floating windows over fs
+  * 5b3e4891 inputs: refactor class member vars (#10230)
+  * 2670b8f7 hyprpm: add missing include for libc++ after 858c0e26d193
+    (#10234)
+  * 858c0e26 hyprpm: move to system directories for storing plugins
+    (#10211)
+  * b5ef049e master: Change center_master_slaves_on_right to
+    center_master_fallback (#10201)
+  * 615e0dae layouts: refactor class member vars (#10228)
+  * ce476677 hyprerror: refactor class member vars (#10227)
+  * 8d661810 cmake: ignore Wclobbered
+  * 50e1bec8 helpers: refactor class member vars (#10218)
+  * b8a204c2 ci: minor fixes to glaze
+  * 2ee5118d render: properly release rendered buffers (#9807)
+  * 5d005f11 xdg-bell: fix wrong resource cast
+  * 54c89104 DonationNag: ask after each major update (#10213)
+  * b2ad21a6 flake.lock: update
+  * 72cb5d24 permissions: disable automatic reloading of permissions
+    from cfg
+  * 9868b183 input: don't use pointer hold logic for unmapped surfs
+  * 208f4c48 config: use natural increase and decrease of brightness for
+    default cfg (#10210)
+  * 45068713 xdg-bell: avoid crashes on null toplevel
+  * 6483f4ec screencopy: don't render cursor when frame doesn't want it
+  * ae1fe860 renderer: add render:send_content_type setting (#9851)
+  * 49974d5e cm: Use precomputed primaries conversion (#9814)
+  * 94bc1320 xdg-bell/xdg-tag: fix moved resource usage
+  * e9c3fcbb devices: refactor class member vars (#10206)
+  * 40147d3a asyncdialogbox: fix missing header
+  * 23ecce0e protocols: add support for xdg-system-bell-v1
+  * 465e3d97 window: make AsyncDialogBoxes not closeable
+  * b10a43da windowrules: add noclosefor
+  * 5bd7ff88 permissions: add perms for plugin loading (#10184)
+  * 21184404 windows: refactor class member vars (#10168)
+  * c505eb55 screencopy: support hw cursors while sharing with cursor
+  * f5c5cfa9 keybindmgr: fixup bindn regression
+  * 0302bfdc async: add Promise and use it for AsyncDialogBox
+  * 4f868a1f SECURITY: init security policy
+  * 94c55fe9 helpers: properly support next/prev for workspace switching
+    (#10074)
+  * 742bce01 decorationPositioner: update posinfo on window update
+  * 4cf62c11 layerrules: add abovelock to render above lockscreen
+    (#9793)
+  * 41f5f67f window: Fix order of urgency flag and event emission
+    (#10163)
+  * 02d7badd workspaces: refactor class member vars (#10167)
+  * 0e80ecc5 layers: refactor class member vars (#10149)
+  * be6268a7 groupbar: Add options for setting group bar title font
+    weight (and indicator gap) (#9617)
+  * a9549dbc protocols: add Hyprland toplevel mapping implementation
+    (#9775)
+  * b06fbdb7 dwindle: use idealIgnoreReserved for moveWindowTo bbs
+  * 241a4935 compositor: refactor class member vars (#10141)
+  * 3577a6be nix/overlays: add w-p 1.43
+  * 2e540e4e flake.lock: update
+  * a4f7d7c5 protocols: add xdg_toplevel_tag_v1 support
+  * 55e953b3 InputManager: add nofollowmouse (#9994)
+  * d29723cb keybinds: allow executing binds not bound to a key (#10102)
+  * 400dd160 debug: refactor class member vars (#10130)
+  * a3b96961 tablet: naive window refocusing (#10110)
+  * a3d32f3b hyprpm: fix format
+  * 4d14bcb0 config: Refactor class member vars (#10124)
+  * 9b4060f0 hyprpm: extend dep list
+  * 867bc860 compositor: fix getMonitorInDirection skipping active
+    monitor (#10114)
+  * f48ee7a3 protocols: ensure PointerConstraints activation occurs only
+    after attched to InputManager (#10096)
+  * 51afc2c2 ctm: enable fade animation on nvidia driver versions 575
+    and above (#10095)
+  * 02f7da2b [gha] Nix: update inputs
+  * 7631d4c7 render, helpers: Call OpenGL destroyMonitorResources on
+    disconnect (#10111)
+  * ddae3036 ci: close unwanted issues automatically (#10106)
+  * 225e13c3 InputManager: add config option to disable keybinds per
+    device (#10064)
+  * 3fa6320a desktop: Damage subsurface when position changes (#10094)
+  * 1ae7e216 xcursormgr: include <variant>
+  * 877fb5b9 time: move to stl's clocks and move timer
+  * 0e521788 core: wait for dmabuf readiness (#9806)
+  * ffd6cf65 windowrules: allow incrementing window props (#9566)
+  * 8b7b1690 flake.lock: update
+  * 533bc511 monitors: fix disconnected monitors are reconnected to an
+    empty workspace (#9874)
+  * 99ab3e19 framebuffer: Fix framebuffer size check (#10068)
+  * f4e19d3f layerSurface: warp position and size before taking a
+    snapshot (#10054)
+  * 06469b33 IHyprLayout: center floating window at cursor when picked
+    up from fullscreen (#10063)
+  * 303a10d2 IHyprLayout: respect minimum window size (#10017)
+  * 4d85e799 dwindle: ignore fullscreen window for positioning when
+    use_active_for_splits=false (#9838)
+  * 2da4f427 compositor/surface: fix surface opaque and input regions
+    not being updated (#10055)
+  * a17cea8b asyncDialogBox: fix missing pid
+  * 65389700 binds: add drag_threshold for click/drag isolation (#9839)
+  * 0399e642 screencopy: Handle explicit sync failure (#10050)
+  * 382f0f23 pass: revert "remove renderer finalDamage since it's unused
+    (#9996)" (#10039)
+  * b83c9f5c cmake: do not install version.h.in (#10035)
+  * d7756863 input: add warp_on_toggle_special (#9945)
+  * 0dc531c4 core: fix crash in data device on shutdown (#9997)
+  * 0a7e2cb1 pass: remove renderer finalDamage since it's unused (#9996)
+  * 4f991610 watchdog: remove watchdog
+  * ea852965 xdg-shell: fix some null refs (#9992)
+  * 260d8e1f Permission Manager: add permission management for
+    screencopy (#9930)
+  * 642f394e xwayland: sync primary selection with wayland (#9952)
+  * b15c2bff CursorManager: Store cursor pixel data retrieved from X/HC
+    as a copy (#9986)
+  * da86db43 core: refactor and improve surface commit (#9805)
+  * 70ae99f5 input/layers: Fix exclusive LS focus / refocus after unmap
+    (#9984)
+  * a8eda7f9 helpers: add missing include for BSDs after 3c128679ee8c
+    (#9982)
+  * 8a8f394d swipe: fix swiping onto a new workspace bound to another
+    monitor (#8176) (#9927)
+  * 51838fb5 layout: properly track floating window position (#9937)
+  * 85f874d1 swipe: fix prev workspace remembering
+  * 9b392500 DataDevice: position icon at cursor hotspot (#9895)
+  * 3c128679 helpers: Add an async dialog box impl (#9919)
+  * e96b8ce4 window: send fractional scale on updateScaleTransform
+  * 433b7881 compositor: fix crash when moving a workspace to a monitor
+    with size 0x0 (#9848)
+  * ed05f143 ci: nuke stalebot
+  * c62fb08d github: remove issue templates
+  * 8ba20fca compositor: avoid crash on null window monitor move
+  * ff97d18c flake.lock: update
+  * 5e8bb717 ctm: fix crash when finishing ctm progress with a destroyed
+    monitor (#9835)
+  * b496e2c7 nix/module: load plugins using exec-once (#9836)
+  * a41b8d5e groupbar: add text offset and upper gap settings (#9733)
+  * 8654029f versionkeeper: create version file if not present (#9829)
+  * a4e6c5d6 window: don't deactivate unfocused xwayland windows in
+    groups (#9781)
+  * 3a47c73f layout: center floating window at cursor when picked up
+    from fullscreen (#9780)
+  * 1f0fd79b internal: Don't force default cursor on config
+    reload/monitor reconfigure (#9815)
+  * d1a59ec3 renderer: render tiled fading out above other tiled windows
+  * 4c987b20 makefile: fix find command in installheaders
+  * 23092707 anr: add config for ping number before popup shows up
+    (#9782)
+  * 79b526a0 socket2: add minimized event for foreign-wlr
+  * 075bbeca core: fix artifacts when fullscreening (#9778)
+  * 8aaffda9 core: fix null ref when resuming system (#9794)
+  * 10a33563 solitary: Fix the non-working tearing #9429 (#9772)
+  * da2d7c39 config: Fix matching monitor by description to allow space
+    prefix (#9788)
+  * 05eb0aa4 workspaces: Add binds:hide_special_on_workspace_change
+    (#9728)
+  * fc7223ed synctimeline: check if fd is readable before wait (#9789)
+  * 86c279d7 protocols: Don't update hdr metadata if image description
+    is unchanged (#9776)
+  * 46b00a4a makefile: add new shaders to `make installheaders` (#9783)
+  * 4a79eea6 opengl: check for g_pHyprOpengl pointer (#9791)
+  * 7374a023 renderer/opengl: Extract shaders from source (#9600)
+  * a46576af xwayland: Cleanup server startup and FDs (#9769)
+  * 10035a85 core: Don't damage the entire surface every frame (#9763)
+  * c93140a5 surfacestate: reset buffer bit before applying to current
+  * 5380cbcd workspaces: minor fixes to persistence
+  * 9ea76428 internal: fix minor ubsan errors (#9743)
+  * 0cd04bd6 surfacestate: track and apply updated state
+  * 1c2b9a9c opengl: don't attempt to compile cm on gles3.0
+  * cec084c1 pass/rect: include clipBox in opaque calculations
+  * c2ef8fcc groupbar: round boxes
+  * 3fc3521a pass: remove unusued timeline in texpass (#9734)
+  * 9a67354f Groupbar: apply scaling factor to text (#9731)
+  * f7ba86d1 keybinds: add sendkeystate dispatcher (#9599)
+  * f3db1b17 decoration: bring back border_part_of_window
+  * 2a6d0707 xwl: dont close the fd to early (#9715)
+  * aec69131 seat: avoid sending null surfaces in leave/enter events
+  * 4b968e5b [gha] Nix: update inputs
+  * a852461c renderer: Simplify and fix hdr metadata setting (#9706)
+  * e4abf260 Nix: add changes from Nixpkgs derivation
+  * 006bd9ee protocols/meson.build: use native wayland-scanner
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 09 May 2025 09:14:26 +0200
+
 hyprland (0.48.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
