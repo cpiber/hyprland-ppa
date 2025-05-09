@@ -1,3 +1,33 @@
+hyprland-unstable (0.49.0~1ppa1+git202505091607-25cf06f6) noble; urgency=medium
+
+  * Update to main 25cf06f6
+  * 25cf06f6 build: require hyprgraphics>=0.1.3 (#10350)
+  * e44aae0c hyprpm: switch to numeric owner/group after f8bbe5124c00
+    (#10345)
+  * fcb6f936 hyprpm: add missing include for libc++ after 1c530cbc66db
+    (#10344)
+  * 9958d297 version: bump to 0.49.0
+  * 239cdd67 socket2: fix order of window events on map (#10341)
+  * f01e3043 desktop: cleanup code and use std::ranges (#10289)
+  * 04c98abd layout: properly assign workspace and monitor when moving a
+    child to the parent (#10338)
+  * 53bfb92d layout: allow interacting with pinned windows when
+    fullscreened (#10326)
+  * 2b3cac01 flake.lock: update
+  * f909b0f1 opengl: fix legacyrenderer
+  * fa1e343b compositor: set fullscreenstate on movetoworkspace (#10303)
+  * 22b12e30 refactor: cshader class to sshader struct (#10324)
+  * 7a971735 flake.lock: update
+  * 6abb5b0c renderer: precompute fullalpha (#10319)
+  * 0dfcba98 DMABuffer: reserve vector and avoid UB (#10317)
+  * e5df8cdc xwayland: refactor class member vars (#10312)
+  * f8bbe512 hyprpm: clean up root access and properly check input
+    (#10304)
+  * 94827789 popup: damage old size on unmap as well as new (#10306)
+  * 708a7c24 hyprpm: add missing return (#10299)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 09 May 2025 16:07:43 +0200
+
 hyprland-unstable (0.48.0~1ppa1+git202505060806-1ce614df.1) noble; urgency=medium
 
   * Fix global plugin

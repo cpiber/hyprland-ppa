@@ -31,7 +31,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
                << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
                << " install random plugins without verifying the code and author.\n  "
-@@ -172,6 +181,28 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -172,6 +181,27 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
@@ -44,13 +44,12 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +                Debug::die("addNewPluginRepo: failed to create cache dir");
 +        for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + url)) {
 +            const auto filename = entry.path().filename();
-+            if (filename == "state.toml") {
++            if (filename == "state.toml")
 +                if (!NSys::root::install(entry.path().string(), (PATH / filename).string(), "0644"))
 +                    Debug::die("addNewPluginRepo: Failed to write plugin state");
-+            } else {
++            else
 +                if (!NSys::root::install(entry.path().string(), (PATH / filename).string(), "0755"))
 +                    Debug::die("addNewPluginRepo: failed to install so file");
-+            }
 +        }
 +        std::cout << successString("global repository added");
 +        std::cout << successString("you can now enable the plugin(s) with hyprpm enable");
@@ -60,7 +59,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -649,6 +680,50 @@ bool CPluginManager::updatePlugins(bool
+@@ -649,6 +679,50 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  
