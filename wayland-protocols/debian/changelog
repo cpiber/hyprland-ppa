@@ -1,3 +1,9 @@
+wayland-protocols (1.43-1ppa2) noble; urgency=medium
+
+  * Relax libwayland-dev requirement
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 15 May 2025 20:12:38 +0200
+
 wayland-protocols (1.43-1ppa1) noble; urgency=medium
 
   * Update to release 1.43

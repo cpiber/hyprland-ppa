@@ -9,7 +9,7 @@ Uploaders: Héctor Orón Martínez <zumbi@debian.org>,
 Build-Depends:
  debhelper-compat (= 13),
  meson (>= 0.58.0),
- libwayland-dev (>= 1.22.0),
+ libwayland-dev,
  pkgconf
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
