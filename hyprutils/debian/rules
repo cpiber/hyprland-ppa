@@ -15,6 +15,9 @@
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 
+export CXX = /usr/bin/g++-14
+export CC = /usr/bin/gcc-14
+
 %:
 	dh $@
 
