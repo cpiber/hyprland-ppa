@@ -1,0 +1,34 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -59,7 +59,7 @@ pkg_check_modules(
+   IMPORTED_TARGET
+   wayland-client
+   wayland-protocols
+-  libpipewire-0.3>=1.1.82
++  libpipewire-0.3
+   libspa-0.2
+   libdrm
+   gbm
+Index: source/src/shared/ScreencopyShared.hpp
+===================================================================
+--- source.orig/src/shared/ScreencopyShared.hpp
++++ source/src/shared/ScreencopyShared.hpp
+@@ -5,12 +5,16 @@
+ extern "C" {
+ #include <spa/pod/builder.h>
+ 
++#undef SPA_VERSION_POD_BUILDER_CALLBACKS
++#define SPA_VERSION_POD_BUILDER_CALLBACKS .version = 0
+ #include <spa/buffer/meta.h>
+ #include <spa/utils/result.h>
+ #include <spa/param/props.h>
+ #include <spa/param/format-utils.h>
+ #include <spa/param/video/format-utils.h>
+ #include <spa/pod/dynamic.h>
++#undef SPA_VERSION_POD_BUILDER_CALLBACKS
++#define SPA_VERSION_POD_BUILDER_CALLBACKS 0
+ }
+ #include "wayland.hpp"
+ #include "wlr-foreign-toplevel-management-unstable-v1.hpp"
