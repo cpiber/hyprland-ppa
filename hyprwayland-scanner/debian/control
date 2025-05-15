@@ -6,7 +6,8 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  cmake,
- gcc (>= 11),
+ gcc-14,
+ g++-14,
  pkgconf,
  libpugixml-dev,
 Standards-Version: 4.6.2
