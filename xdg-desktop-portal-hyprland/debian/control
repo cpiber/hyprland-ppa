@@ -11,6 +11,8 @@ Build-Depends:
  g++-14,
  pkgconf,
  qt6-base-dev,
+ libgl-dev,
+ libvulkan-dev,
  wayland-protocols,
  libwayland-bin,
  libwayland-dev,
