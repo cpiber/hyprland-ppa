@@ -24,5 +24,6 @@ if [ $# -gt 0 ]; then
     rm -r "$buildfolder/debian/patches/01-patch-cms" || :
     sed -i '/^01-patch-cms$/d' "$buildfolder/debian/patches/series" || :
   fi
+  [ -f "$reporoot/$project/$1.sh" ] && . "$reporoot/$project/$1.sh" || :
 fi
 [ -f "$reporoot/$project/prepare.sh" ] && . "$reporoot/$project/prepare.sh" || :
