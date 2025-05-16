@@ -1,0 +1,13 @@
+Index: source/src/renderer/AsyncResourceGatherer.hpp
+===================================================================
+--- source.orig/src/renderer/AsyncResourceGatherer.hpp
++++ source/src/renderer/AsyncResourceGatherer.hpp
+@@ -10,6 +10,8 @@
+ #include "Shared.hpp"
+ #include <hyprgraphics/cairo/CairoSurface.hpp>
+ 
++#define CAIRO_FORMAT_RGB96F 6
++
+ class CAsyncResourceGatherer {
+   public:
+     CAsyncResourceGatherer();
