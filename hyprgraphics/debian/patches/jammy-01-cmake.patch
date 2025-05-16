@@ -1,0 +1,13 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -20,8 +20,6 @@ set(LIBDIR ${CMAKE_INSTALL_FULL_LIBDIR})
+ 
+ configure_file(hyprgraphics.pc.in hyprgraphics.pc @ONLY)
+ 
+-set(CMAKE_CXX_STANDARD 26)
+-
+ if(CMAKE_BUILD_TYPE MATCHES Debug OR CMAKE_BUILD_TYPE MATCHES DEBUG)
+   message(STATUS "Configuring hyprgraphics in Debug")
+   add_compile_definitions(HYPRGRAPHICS_DEBUG)
