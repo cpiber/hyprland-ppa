@@ -11,6 +11,8 @@ Build-Depends:
  g++-14,
  libwayland-dev,
  wayland-protocols,
+ libgl-dev,
+ libvulkan-dev,
  libhyprlang-dev (>= 0.4.0),
  libhyprutils-dev (>= 0.2.3),
  libhyprgraphics-dev,
