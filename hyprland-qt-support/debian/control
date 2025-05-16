@@ -9,6 +9,8 @@ Build-Depends:
  gcc-14,
  g++-14,
  libhyprlang-dev (>= 0.6.0),
+ libgl-dev,
+ libvulkan-dev,
  qt6-base-dev,
  qt6-base-private-dev,
  qt6-wayland,
