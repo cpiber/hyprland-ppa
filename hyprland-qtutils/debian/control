@@ -10,6 +10,8 @@ Build-Depends:
  gcc-14,
  g++-14,
  libhyprutils-dev,
+ libgl-dev,
+ libvulkan-dev,
  qt6-base-dev,
  qt6-base-private-dev,
  qt6-wayland,
