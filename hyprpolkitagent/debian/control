@@ -9,6 +9,8 @@ Build-Depends:
  gcc-14,
  g++-14,
  pkgconf,
+ libgl-dev,
+ libvulkan-dev,
  libhyprutils-dev,
  libpolkit-qt6-1-dev,
  libpolkit-agent-1-dev,
