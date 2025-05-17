@@ -33,6 +33,8 @@ Depends:
  qml6-module-qtquick-templates,
  qml6-module-qtqml-workerscript,
  hyprland-qt-support0,
+ qt6-qpa-plugins,
+ qt6-wayland,
  libqt6svg6,
 Description: hyprsysteminfo displays your system information
  hyprsysteminfo is a small GUI application to display your system information,
