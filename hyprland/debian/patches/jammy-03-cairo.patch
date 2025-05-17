@@ -1,0 +1,13 @@
+Index: source/src/render/OpenGL.cpp
+===================================================================
+--- source.orig/src/render/OpenGL.cpp
++++ source/src/render/OpenGL.cpp
+@@ -35,6 +35,8 @@
+ using namespace Hyprutils::OS;
+ using namespace NColorManagement;
+ 
++#define CAIRO_FORMAT_RGB96F 6
++
+ const std::vector<const char*> ASSET_PATHS = {
+ #ifdef DATAROOTDIR
+     DATAROOTDIR,

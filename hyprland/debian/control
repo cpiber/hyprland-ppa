@@ -5,7 +5,7 @@ Maintainer: Constantin Piber <cp.piber@gmail.com>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
- cmake (>= 3.27),
+ cmake,
  ninja-build,
  meson,
  gcc-14,
