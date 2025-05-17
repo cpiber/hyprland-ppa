@@ -5,7 +5,7 @@ Maintainer: Constantin Piber <cp.piber@gmail.com>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
- cmake (>= 3.27),
+ cmake,
  ninja-build,
  meson,
  gcc-14,
@@ -17,7 +17,7 @@ Build-Depends:
  libgbm-dev,
  libxkbcommon-dev,
  uuid-dev,
- libwayland-dev,
+ libwayland-dev (>= 1.22),
  wayland-protocols (>= 1.43),
  libcairo2-dev,
  libpango1.0-dev,
