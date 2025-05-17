@@ -1,0 +1,34 @@
+Index: source/polkit-qt6-agent-1.pc.cmake
+===================================================================
+--- source.orig/polkit-qt6-agent-1.pc.cmake
++++ source/polkit-qt6-agent-1.pc.cmake
+@@ -6,6 +6,5 @@ includedir=${prefix}/@CMAKE_INSTALL_INCL
+ Name: @POLKITQT-1_AGENT_PCNAME@
+ Description: Convenience library for using polkit Agent with a Qt-styled API
+ Version: @POLKITQT-1_VERSION_STRING@
+-Requires: Qt@QT_MAJOR_VERSION@Core Qt@QT_MAJOR_VERSION@Gui
+ Libs: -L${libdir} -l@POLKITQT-1_AGENT_PCNAME@
+ Cflags: -I${includedir}
+Index: source/polkit-qt6-core-1.pc.cmake
+===================================================================
+--- source.orig/polkit-qt6-core-1.pc.cmake
++++ source/polkit-qt6-core-1.pc.cmake
+@@ -6,6 +6,5 @@ includedir=${prefix}/@CMAKE_INSTALL_INCL
+ Name: @POLKITQT-1_CORE_PCNAME@
+ Description: Convenience library for using polkit with a Qt-styled API, non-GUI classes
+ Version: @POLKITQT-1_VERSION_STRING@
+-Requires: Qt@QT_MAJOR_VERSION@Core
+ Libs: -L${libdir} -l@POLKITQT-1_CORE_PCNAME@
+ Cflags: -I${includedir}
+Index: source/polkit-qt6-gui-1.pc.cmake
+===================================================================
+--- source.orig/polkit-qt6-gui-1.pc.cmake
++++ source/polkit-qt6-gui-1.pc.cmake
+@@ -6,6 +6,6 @@ includedir=${prefix}/@CMAKE_INSTALL_INCL
+ Name: @POLKITQT-1_GUI_PCNAME@
+ Description: Convenience library for using polkit with a Qt-styled API, GUI classes
+ Version: @POLKITQT-1_VERSION_STRING@
+-Requires: Qt@QT_MAJOR_VERSION@Core Qt@QT_MAJOR_VERSION@Gui @POLKITQT-1_CORE_PCNAME@
++Requires: @POLKITQT-1_CORE_PCNAME@
+ Libs: -L${libdir} -l@POLKITQT-1_GUI_PCNAME@
+ Cflags: -I${includedir}
