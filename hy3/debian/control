@@ -1,0 +1,31 @@
+Source: hy3
+Section: universe/x11
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ yq,
+ hyprland-unstable (>= 0.49.0~1ppa1+git202505240941-81cd526f~), hyprland-unstable (<< 0.49.0~1ppa1+git202505240941-81cd526f9),
+ hyprland-plugin-deps,
+ gcc-14,
+ g++-14,
+Standards-Version: 4.6.2
+Vcs-Browser: https://github.com/outfoxxed/hy3
+Vcs-Git: https://github.com/outfoxxed/hy3.git
+
+Package: hy3
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ hyprland-unstable (>= 0.49.0~1ppa1+git202505240941-81cd526f~), hyprland-unstable (<< 0.49.0~1ppa1+git202505240941-81cd526f9),
+Description: i3 / sway like layout for hyprland.
+ - i3 like tiling
+ - Node based window manipulation (you can interact with multiple windows at once)
+ - Greatly improved tabbed node groups over base hyprland
+ - Optional autotiling
+ Additional features may be suggested in the repo issues or the matrix room.
+ .
+ Packaged for hyprland-unstable.

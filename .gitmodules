@@ -106,3 +106,6 @@
 [submodule "fuzzel/source"]
 	path = fuzzel/source
 	url = https://codeberg.org/dnkl/fuzzel.git
+[submodule "hy3/source"]
+	path = hy3/source
+	url = https://github.com/outfoxxed/hy3.git

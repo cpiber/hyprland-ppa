@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://github.com/outfoxxed/hy3/issues
+Bug-Submit: https://github.com/outfoxxed/hy3/issues/new
+# Changelog: https://github.com/outfoxxed/hy3/blob/master/CHANGES
+Documentation: https://github.com/outfoxxed/hy3
+Repository-Browse: https://github.com/outfoxxed/hy3
+Repository: https://github.com/outfoxxed/hy3.git
