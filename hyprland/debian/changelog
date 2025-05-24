@@ -1,3 +1,56 @@
+hyprland-unstable (0.49.0~1ppa1+git202505240941-81cd526f) noble; urgency=medium
+
+  * Update to main 81cd526f
+  * 81cd526f cursor: fix screencopy cursor pos and duplicate shape with
+    sw cursors (#10519)
+  * bd4733a0 flake.lock: update
+  * 4f161da3 hyprpm: ignore pins when adding a package with a git rev
+    (#10502)
+  * 185c9684 input: unhide cursor on tablet events after touch events
+    (#10484)
+  * b90910c0 renderer: add wrapping options to renderTexture method
+    (#10497)
+  * eb3b38d4 eventLoop: fixup event source callbacks
+  * d9c8a378 input: always allow focus to permission popups
+  * 158c0f29 permissions: add permission management for keyboards
+    (#10367)
+  * 44cb8f76 internal: added error log when getEdgeDefinedPoint is
+    impossible (#10462)
+  * 705b97c4 input: revert #10416 and #10418
+  * c19f3836 hyprpm: fix crash with enable without an arg
+  * bb5cd5b2 screencopy: store a fb before permission popup if the
+    permission is pending (#10455)
+  * bb9aa79b hyprpm: reject remove without a param
+  * dfa48362 hyprpm: fix execute permission bit on installed dirs
+    (#10435)
+  * 18377d22 [gha] Nix: update inputs
+  * 2aa21625 input: ensure seat grabs from exclusive layers can be
+    dismissed (#10418)
+  * 29460090 input: do not send mouse events when outside of a surface
+    (#10416)
+  * b0cc4921 protocols: simulate mouse movement after activating a
+    toplevel (#10429)
+  * a5c9b3e4 core: Include cstring whenever strncpy is used (#10404)
+  * dfb841c3 desktop: prevent layers from dismissing their own seat
+    grabs on map (#10417)
+  * 5ceb0ec1 core: drop the legacy renderer (#10408)
+  * f707d869 protocols/hyprland-surface: account for scaled monitor
+    positions (#10415)
+  * 75f2cb5f xwayland: do not include xcb.h when xwayland is disabled
+    (#10407)
+  * a51e639d input: disallow virtual keyboards from changing LED state
+    (#10402)
+  * 59b23406 opengl: add missing vao for screenshader (#10397)
+  * da3583fd opengl: publicize shader creation/usage functions (#10378)
+  * 04124988 opengl: optimize shaders and reduce unneeded drawcalls
+    (#10364)
+  * 390a3578 renderer: use alpha for the lockttytext texture
+  * 9a87498b renderer: minor damage fixes
+  * f58bb72d renderer: render blur on fade out (#10356)
+  * 60cd5b7a renderer: always render snapshots as 8bit
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 24 May 2025 09:41:24 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202505091607-25cf06f6) noble; urgency=medium
 
   * Update to main 25cf06f6
