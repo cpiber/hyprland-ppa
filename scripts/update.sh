@@ -23,7 +23,7 @@ case "$project" in
   hyprland|hyprland-plugins)
     type="main"
     ;;
-  waybar-unstable|hyprscroller)
+  waybar-unstable|hyprscroller|hy3)
     type="master"
     ;;
   *)
@@ -36,19 +36,19 @@ curhead="`git rev-parse HEAD`"
 if [ "$type" != "tag" ]; then
   git checkout "$type"
   git pull --quiet --rebase
-  tag="`git describe --tags | sed 's/^v\|-[0-9]\+-g[0-9a-fA-F]\+//g'`"
+  tag="`git describe --tags | sed 's/^[^0-9]*\|-[0-9]\+-g[0-9a-fA-F]\+//g'`"
 else
   git fetch --tags
   tag="`git describe --tags origin | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//'`"
   git checkout "$tag"
-  tag="`echo "$tag" | sed 's/^v//'`"
+  tag="`echo "$tag" | sed 's/^[^0-9]*//'`"
 fi
 git submodule update --init --recursive
 newhead="`git rev-parse HEAD`"
 shorthead="`git rev-parse --short HEAD`"
 if [ "$curhead" = "$newhead" ]; then
   echo "Already up-to-date"
-  if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ]; then
+  if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ] || [ "$project" = "hy3" ]; then
     if sethyprver; then
       cd ..
       dist="`dpkg-parsechangelog --show-field Distribution`"
@@ -74,6 +74,6 @@ echo "$changes" |
   while IFS= read -r line; do
     dch -a "$line"
   done
-if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ]; then
+if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ] || [ "$project" = "hy3" ]; then
   sethyprver
 fi
