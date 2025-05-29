@@ -26,6 +26,9 @@ export CC = /usr/bin/gcc-14
 	dh $@
 
 
+override_dh_auto_configure:
+	# nothing to do
+
 override_dh_auto_build:
 	tomlq -r '.[].build | select(. != null) | join(" && ")' hyprpm.toml | while read -r line; do \
 			echo "Running \"$$line\""; \
