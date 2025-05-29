@@ -1,3 +1,16 @@
+hyprscroller (0.47.0~1ppa1+git202505290814-2c72e35) noble; urgency=medium
+
+  * Update to master 2c72e35
+  * 2c72e35 Commit pin
+  * 41b7a63 Fix losing focus on XWayland floating windows after input
+    method usage (#5)
+  * 5b3cdd1 flake correction (#4)
+  * 4681764 Add Nix section to readme
+  * 4013111 Merge pull request #2 from maotseantonio/master
+  * 9f425f9 for-nixos
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 29 May 2025 08:14:38 +0200
+
 hyprscroller (0.47.0~1ppa1+git202505061838-0ef2592build2) noble; urgency=medium
 
   * Rebuild for unstable
