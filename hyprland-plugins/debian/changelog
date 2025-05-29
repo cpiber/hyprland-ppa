@@ -1,3 +1,18 @@
+hyprland-plugins (0.49.0~1ppa1+git202505290803-367f4fc) noble; urgency=medium
+
+  * Update to main 367f4fc
+  * 367f4fc hyprpm: add pin for 0.49.0
+  * d81d96e scrolling: fixup refocus on close issues
+  * a2157f8 hyprbars: don't respond to input on disabled bars
+  * 1e57d4e hyprscrolling: fix colresize not always recalculating (#360)
+  * 032b2fd hyprscrolling: fix viewport should follow movewindowto
+    (#359)
+  * c04dee3 scrolling: add promote layoutmsg
+  * 19dc215 scrolling: make new windows columns by default
+  * d4df48e hyprscrolling: Fix focus not calling recalculate (#358)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 29 May 2025 08:03:56 +0200
+
 hyprland-plugins (0.49.0~1ppa1+git202505240947-139cccf) noble; urgency=medium
 
   * Update to main 139cccf
