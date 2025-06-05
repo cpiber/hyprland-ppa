@@ -1,3 +1,10 @@
+hyprland-plugins (0.49.0~1ppa1+git202506051944-2eee96f) noble; urgency=medium
+
+  * Update to main 2eee96f
+  * 2eee96f readme: install plugin without home-manager
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 05 Jun 2025 19:44:21 +0200
+
 hyprland-plugins (0.49.0~1ppa1+git202505290803-367f4fc) noble; urgency=medium
 
   * Update to main 367f4fc
