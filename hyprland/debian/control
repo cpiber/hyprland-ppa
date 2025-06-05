@@ -13,6 +13,7 @@ Build-Depends:
  python3,
  pkgconf,
  git,
+ xxd,
  libgl1-mesa-dev,
  libgbm-dev,
  libxkbcommon-dev,

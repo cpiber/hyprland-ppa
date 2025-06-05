@@ -7,7 +7,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -132,7 +132,7 @@ pkg_check_modules(
+@@ -128,7 +128,7 @@ pkg_check_modules(
    IMPORTED_TARGET
    xkbcommon
    uuid

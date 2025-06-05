@@ -1,3 +1,25 @@
+hyprland-unstable (0.49.0~1ppa1+git202506051834-abdfc5ea) noble; urgency=medium
+
+  * Update to main abdfc5ea
+  * abdfc5ea config: add a new monitor v2 config syntax (#9761)
+  * 59c886d8 internal: Catch filesystem exceptions while iterating
+    RunTimeDir (#10648)
+  * d7a87ce6 xwayland: fix xwayland -> wayland clipboard (#10646)
+  * d9f7448d xwayland: pad pid with leading zeroes in lockfile
+  * b5c0d0b8 keybinds: add an option to respect gaps out for floating to
+    movewindow (#9360)
+  * b1d0a727 internal: Center window on parent if available (#10582)
+  * ef2c73af internal: embed example config (#10608)
+  * 16c62a6d internal: Fix HyprError not displaying at startup (#10606)
+  * 2d1c6f88 xwm: Refactored functions in XWM.cpp (#10569)
+  * 82b85495 hyprpm: refuse adding a new repo without update
+  * 69c2b292 internal: refactor to use empty() (#10599)
+  * 4078e1d1 refactor: replace all `typedef` with `using` (#10594)
+  * af2fdb5d nix: use gcc15
+  * 9190443d refactor: use std::ranges whenever possible (#10584)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 05 Jun 2025 18:34:11 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202505290753-9bf1b491) noble; urgency=medium
 
   * Update to main 9bf1b491
