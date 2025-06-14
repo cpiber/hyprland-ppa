@@ -1,8 +1,26 @@
-libinput (1.26.2-1ppa1) noble; urgency=medium
+libinput (1.28.1-1) noble; urgency=medium
 
-  * Backport new libinput from ocular to noble
+  [ Timo Aaltonen ]
+  * New upstream release.
 
- -- Constantin Piber <cp.piber@gmail.com>  Sun, 13 Oct 2024 23:35:33 +0200
+  [ Constantin Piber ]
+  * Upload for noble
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 03 Apr 2025 15:47:30 +0300
+
+libinput (1.28.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 27 Mar 2025 11:05:52 +0200
+
+libinput (1.27.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 13 Feb 2025 10:20:47 +0200
 
 libinput (1.26.2-1) unstable; urgency=medium
 

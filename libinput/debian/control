@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>,
            Héctor Orón Martínez <zumbi@debian.org>,
-           Marius Gripsgard <marius@ubports.com>
+           Marius Gripsgard <marius@ubports.com>,
+           Constantin Piber <cp.piber@gmail.com>
 Build-Depends:
  debhelper-compat (= 13),
  meson,
