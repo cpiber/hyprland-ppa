@@ -1,3 +1,42 @@
+hyprland-unstable (0.49.0~1ppa1+git202506141050-ad854062) noble; urgency=medium
+
+  * Update to main ad854062
+  * ad854062 drm-lease: Add Multi-GPU Support (#10099)
+  * d14f81e6 protocols: whitelist wp_color_manager_v1 for
+    security_context (#10723)
+  * 826061d1 README: Update image cdn (#10722)
+  * 748419fa hyprpm: check version and update automatically on add
+    (#10706)
+  * 412c7dc7 renderer: fixup some missing fadeout cases with special
+  * 8329de1a input: grab the correct active workspace on mouseMove
+  * 144885d8 anr: make dialog disappear if the app dies
+  * f7526d6b renderer: refuse rendering invalid resolutions
+  * 6910ca76 protocols/subcompositor: fixup place_above and _below
+  * 6bdb1f41 dwindle: add the ability to specify an aspect ratio for a
+    singular window (#10650)
+  * 81468253 hyprpm: fix typo in help message (#10687)
+  * 231e01e3 hyprctl: don't detect a negative value as a parameter
+    (#10671)
+  * c6f713fe screencopy: fix incorrect noscreenshare positions with
+    monitor scaling (#10674)
+  * 91967f8e renderer: fix incorrect cursor position when screencopy
+    region with monitor scaling (#10675)
+  * 0a47575c internal: Use `using` instead of `#define` to alias smart
+    pointers (#10673)
+  * 88017709 [gha] Nix: update inputs
+  * 66b99bd2 monitor: ensure autoDir is applied when changed (#10672)
+  * 2794f485 hyprctl: Remove exceptions, use modern error handling
+    (#10664)
+  * 0ac3bef7 input: support configuring drag_3fg from libinput (#10631)
+  * 456c820d assets: update header
+  * c35c2fea config: Restore auto-center-* for monitors (#10660)
+  * d6fbd893 nix: use gcc15-built dependencies
+  * fb7548cb screencopy: fix applying `noscreenshare` to invisible
+    special workspaces (#10628)
+  * 423b69f5 config: add group: selector (#10588)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 14 Jun 2025 10:50:06 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202506051834-abdfc5ea) noble; urgency=medium
 
   * Update to main abdfc5ea
