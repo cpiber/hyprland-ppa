@@ -1,3 +1,19 @@
+hyprland-plugins (0.49.0~1ppa1+git202506141127-a2cc080) noble; urgency=medium
+
+  * Update to main a2cc080
+  * a2cc080 hyprbars: add on_double_click
+  * 5111562 README: add hyprpm install notes (#382)
+  * e8f212e hyprbars: invalidate input when overlay and top shell layers
+    are on top (#377)
+  * f58f65b expo: close on hovered workspace when using dispatcher with
+    toggle mode (#378)
+  * 7769e10 scrolling: avoid crash on clamp
+  * eb42a53 scrolling: add focus_fit_method
+  * 66de9f5 scrolling: do not leave empty space on close
+  * 209f5cb scrolling: fit column on resize
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 14 Jun 2025 11:27:12 +0200
+
 hyprland-plugins (0.49.0~1ppa1+git202506051944-2eee96f) noble; urgency=medium
 
   * Update to main 2eee96f
