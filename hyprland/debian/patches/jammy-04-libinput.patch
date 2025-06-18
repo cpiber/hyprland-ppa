@@ -18,3 +18,16 @@ Index: source/src/managers/input/InputManager.cpp
              if (libinput_device_config_dwt_is_available(LIBINPUTDEV)) {
                  const auto DWT =
                      static_cast<enum libinput_config_dwt_state>(g_pConfigManager->getDeviceInt(devname, "disable_while_typing", "input:touchpad:disable_while_typing") != 0);
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -136,7 +136,7 @@ pkg_check_modules(
+   pixman-1
+   xcursor
+   libdrm
+-  libinput>=1.28
++  libinput
+   gbm
+   gio-2.0
+   re2)
