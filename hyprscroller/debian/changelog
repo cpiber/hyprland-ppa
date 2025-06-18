@@ -1,3 +1,10 @@
+hyprscroller (0.47.0~1ppa1+git202506182222-919a0d3) noble; urgency=medium
+
+  * Update to master 919a0d3
+  * 919a0d3 Exit: Make sure to remove render pass elements
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Jun 2025 22:22:31 +0200
+
 hyprscroller (0.47.0~1ppa1+git202506051949-80f9a9cbuild1) noble; urgency=medium
 
   * Rebuild for unstable
