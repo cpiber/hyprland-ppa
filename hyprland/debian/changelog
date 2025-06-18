@@ -1,3 +1,26 @@
+hyprland-unstable (0.49.0~1ppa1+git202506182025-bef1321f) noble; urgency=medium
+
+  * Update to main bef1321f
+  * bef1321f xwayland: fix minor errors in previous refactor (#10763)
+  * 0ece4af3 grpupbar: Add config options to color inactive and locked
+    groupbar titles (#10667)
+  * aba2cfe7 asyncDialogBox: lock box in fdWrite to prevent a uaf
+    (#10759)
+  * d4e8a440 windowrules/move: clamp max pos in onscreen to avoid assert
+    crash
+  * 1905c41c xwayland: Use RAII instead or freeing memory manually
+    (#10677)
+  * bd5703d5 protocols/cm: fix wp invalid luminance check (#10752)
+  * d037c542 protocols: support xdg-shell v7
+  * c3894d92 config/monitor: Add monitor v2 HDR rules (#10623)
+  * 3db3baa1 opengl: use a stack for storing monitor transform enabled
+  * 57d20a1b internal: clean up dead snapshot code
+  * 472b52bc cursor: reset hc data after theme change
+  * 79b9edb8 [gha] Nix: update inputs
+  * f08167c8 input: add sticky option for drag_lock (#10702)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Jun 2025 20:25:37 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202506141050-ad854062) noble; urgency=medium
 
   * Update to main ad854062
