@@ -1,3 +1,21 @@
+hyprscroller (0.47.0~1ppa1+git202506192320-735a6a0) noble; urgency=medium
+
+  * Update to master 735a6a0
+  * 735a6a0 Commit pin
+  * af8ac43 Fix: Overview counter-scale reserved areas
+  * 13df829 Fix: Apply monitor scale only on render
+  * 622ffa8 Simplify hooking via macro
+  * 6362a66 Fix: renderLayer always damage monitor
+  * 2a23a8d Damage all monitors on overview toggle
+  * ae8abcf Allow mouse to move to other monitors again
+  * 632b34e Fix: Reset overview monitor geometry better
+  * 93860b1 Fix: Use correct scale
+  * 63d7c11 Draw layers in overview mode
+  * d20e646 Start refactor overview
+  * b829e51 Fix typo in hooking
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Jun 2025 23:20:37 +0200
+
 hyprscroller (0.47.0~1ppa1+git202506182222-919a0d3) noble; urgency=medium
 
   * Update to master 919a0d3
