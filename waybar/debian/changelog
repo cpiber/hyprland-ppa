@@ -1,3 +1,275 @@
+waybar (0.13.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.13.0
+  * 0fcda9af chore: 0.13.0
+  * 4730fc4d Merge pull request #4219 from yuannan/nix_gpsd
+  * 2b9601b9 added IPC fix and Nix GPS fix
+  * 6a1d89e8 Merge pull request #4217 from Alexays/revert-2886-
+    feat/upower_bat_bluetooth
+  * 35d5203b Revert "Bluetooth module: fetch battery percentage from
+    upower if not found from bluez"
+  * 13ed4999 Merge pull request #2886 from
+    levnikmyskin/feat/upower_bat_bluetooth
+  * 0c1f1f2d Merge pull request #3544 from nktnet1/hyprland/windowcount
+  * ee91d18a fix: lint
+  * f27df332 Merge pull request #3628 from adryzz/gps-module
+  * ea1ee2c0 Merge pull request #4068 from Rimsoo/patch-1
+  * 54f79913 Merge pull request #3762 from cc-
+    nogueira/add_rewrite_to_wlr_tooltip
+  * 9246297d Merge pull request #4113 from Duncaen/niri-workspace-
+    urgency
+  * 630f85dc Merge branch 'master' into niri-workspace-urgency
+  * 77b42105 Merge pull request #4136 from Roc25/special-centered
+  * df138e12 fix: compat freebsd
+  * 373fd77f chore: update cross-platform-actions/action
+  * f5e6e5e9 Merge pull request #3863 from yamader/wayfire
+  * a88e5795 Merge branch 'master' into wayfire
+  * e9d0f225 Merge pull request #1784 from ruanformigoni/issue-1681
+  * 71c6c603 Merge pull request #4133 from Roc25/persistent-only
+  * 780e96bd Merge pull request #4131 from belcaik/master
+  * a563a3fc Merge pull request #4127 from iostapyshyn/master
+  * 286cff2e fix: lint
+  * cbdbc492 Merge pull request #4097 from RobertMueller2/sway-window-
+    marks
+  * d6b6158a Update custom.cpp
+  * f3141507 Merge branch 'master' into issue-1681
+  * 6206cebd Merge pull request #3887 from torstehu/fix-typo
+  * 0cae5374 Merge pull request #3881 from TripleTrable/AModules/fix-
+    expand-fill-no-center
+  * 249b4528 Merge pull request #4040 from coreydoughty/hypr-submap-
+    patch
+  * bfedb7c4 Merge pull request #4155 from Yutsuten/fix/wide-char-
+    calendar
+  * 9ca04ee2 Merge pull request #4048 from
+    LiterallyVoid/literallyvoid/fix-4047-deadlock
+  * eea95615 Merge pull request #4092 from RobertMueller2/issue_3981
+  * bef539e4 Update privacy_item.cpp
+  * 456c3add Merge pull request #4102 from edwin0cheng/style-sym
+  * a4811679 Merge pull request #4088 from
+    Alexays/update_flake_lock_action
+  * 74a6726f Merge pull request #4096 from aereaux/idle_docs
+  * 3d00c4be Merge pull request #4160 from davidemanini/icon-label
+  * d8218a30 Merge pull request #4095 from Fengerros/patch-1
+  * 44a89100 Merge pull request #4173 from S0nter/master
+  * 341e39fb Merge pull request #4210 from stkth/feat/display-systemd-
+    system-state
+  * 7b9db134 Merge pull request #4207 from markx86/fix/mpris
+  * 7d5905b3 Merge pull request #4204 from stkth/feat/add-swap-state-to-
+    memory-module
+  * 5a013bdb Merge pull request #4209 from notpeelz/fix-formatting
+  * ae777c65 Merge pull request #4212 from notpeelz/fix-namespace-
+    pollution
+  * 103487f6 Merge pull request #4213 from notpeelz/fix-missing-cxx20-
+    chrono-literals
+  * 3c197811 Merge pull request #4214 from notpeelz/bump-freebsd-14-3
+  * 0bdea1e4 ci: bump FreeBSD to 14.3
+  * 8daaad1e fix: don't use c++20 chrono literals
+  * 25f432b0 refactor: avoid Gio namespace pollution
+  * e4dd2ecc refactor: avoid namespace pollution in util/date.hpp
+  * a40c53bd Merge pull request #4211 from notpeelz/fix-ci-gentoo
+  * 84bd0d45 ci: run the docker workflow monthly instead of daily
+  * d4f61ad2 ci: allow manual triggering of docker workflow
+  * c6fceb03 ci: relax gentoo gtkmm dependency requirement
+  * cfb47790 modules: systemd_failed_units: Introduce systemd state
+    variables
+  * d5e3a9f8 modules: systemd_failed_units: Enforce visibility of event
+    box on every update
+  * 07311176 modules: systemd_failed_units: Introduce RequestFailedUnits
+    member
+  * 4bb06b86 modules: systemd_failed_units: Use explicit
+    g_variant_get_uint32
+  * 74255d0c modules: systemd_failed_units: Move DBUS proxy check into
+    lambda function
+  * 5c2cf4c6 modules: systemd_failed_units: Fail early if state did not
+    change
+  * dcbbe3bb modules: systemd_failed_units: Move nr_failed calculation
+    to updateData
+  * 37a6106d modules: systemd_failed_units: Introduce nr_failed as
+    member
+  * b8a985d6 style: fix formatting
+  * 8f35dc17 Merge branch 'Alexays:master' into master
+  * dfbf1ff2 Merge pull request #4154 from
+    VannTen/fix/service_file_description
+  * 93d85a0c Merge pull request #4190 from notpeelz/fix-network-rfkill-
+    update
+  * 3abbdb84 Merge pull request #4191 from notpeelz/fix-length-error-
+    output-description
+  * 7da053f1 Merge pull request #4205 from stkth/feat/use-debian-slim-
+    for-container
+  * 2f6f9620 Merge branch 'Alexays:master' into master
+  * c266befe fix: MPRIS widget not hiding when no player is active
+  * 76d0b442 Dockerfiles: Use debian-slim for container
+  * bdcab011 modules: memory: Add swapState format argument
+  * f8f795ac Merge pull request #4202 from markx86/master
+  * af9d61fa fix: `cldMonShift_` not getting initialized in `Clock()`
+    constructor
+  * bd28bb95 fix: use spdlog in zxdg_output_v1_listener callbacks
+  * f4496c96 fix: length_error thrown in handleOutputDescription
+  * 07468357 fix: network module not displaying rfkill state
+  * 2c482a29 Merge pull request #4189 from notpeelz/fix-man-network-
+    frequency
+  * 5e14698b fix: network frequency is reported in GHz
+  * 250f58ee Merge pull request #4183 from Talbrelliles/custom-module-
+    memory-fix
+  * 3ebf2d96 fix continuousWorker in the custom module by capturing the
+    buffer by reference.
+  * 4d940360 privacy: format with clang-format
+  * f73d2672 privacy: add example configuration
+  * 6cfaf4ff privacy: document ignore options
+  * 831602a9 privacy: default to ignoring all stream.monitor pw nodes
+  * 703be13b privacy: introduce `ignore` option
+  * fca159ad Update man page
+  * 35c6e9c2 Update man page
+  * b36a283f Update man
+  * 715503ec Rename vector to hiddenWorkspaces
+  * c26978ec Update documentation
+  * 34484919 AIconLabel: honour `rotation' option; add `swap-icon-label'
+    option
+  * 05cfd738 Fix calendar extra padding if there are wide characters
+  * c0e7aad6 flake.lock: Update
+  * d53135f8 Fix Description= in systemd service file
+  * 15f54cd6 Fix hidden buttons
+  * 24a30b7f Add sorting with centered special workspaces
+  * 4f55d7da Add persistent-only setting for hyprland/workspaces
+  * 7613069a Merge pull request #1 from belcaik/feature/mpris-fordward-
+    backward-handle
+  * d41a6647 refactor: use command pattern for button actions
+  * cdf3ca91 feat: Add support for side buttons mouse navigation in
+    handleToggle
+  * 19d24305 niri/workspaces: Add empty icon
+  * 47e0f425 niri: add support for urgency indicators to workspaces
+  * 6319569e Merge branch 'Alexays:master' into hyprland/windowcount
+  * 0340760e Use load_symbolic for gtk icon instead of load_icon.
+  * f4b68f41 feat: sway/window: provide {marks} format replacement
+  * 7b520612 Add idle_inhibitor style docs.
+  * 9bf8c827 Update mediaplayer.py - Fix artist name display in
+    mediaplayer.py
+  * ff4ed826 memory leak: 2nd attempt
+  * 72184b22 Issue 3981: try and fix memory leak
+  * afeea622 fixes #3676 including #3224
+  * 0332d2eb Merge pull request #4046 from ebeem/sway-workspace-current-
+    not-shown-fix
+  * 7cbdce50 Merge pull request #4075 from
+    Alexays/update_flake_lock_action
+  * ba8ea3d9 flake.lock: Update
+  * 8b48982b Merge pull request #4032 from RobertMueller2/issue_3974
+  * 5382a09d Merge pull request #4025 from khaneliman/format
+  * 20642f47 Fixed variant bug
+  * d0c6e910 gps: add rfkill support
+  * 956e39d3 make gpsd receiver not poll
+  * 22ec8e07 fix factory copy&paste typo
+  * d331331b add manpage
+  * dfa40d6a add all arguments
+  * 45ebf453 Start GPS module
+  * 55f52c34 treewide: clang and nix format
+  * 5c48373c flake.nix: add treefmt formatter
+  * c8484ebb Merge pull request #4058 from khaneliman/cava
+  * bf4f3ab0 nix: cava bump
+  * 913e0665 Merge pull request #4056 from LukashonakV/cavaBump
+  * e85025f8 libCava bump: 0.10.4
+  * 517eb765 Run `clang-format` on main.cpp
+  * 67272cc4 Merge pull request #4042 from clemenscodes/wlr-taskbar-
+    icon-title-fallback
+  * 1dfde583 Merge pull request #4045 from khaneliman/pulse
+  * 3e16c3f7 Merge pull request #4052 from AOSC-Tracking/aosc/v0.12.0
+  * 252e4f78 fix: support libcava 0.10.4
+  * dbd3ffd7 Convert `reload` to a local
+  * 97591c82 Remove `signalThread` and move reaping to `catchSignals`
+  * b03ecb3d Move signal handling to main thread
+  * 7e845f50 sway workspace: fix workspace button not shown in nested
+    layouts
+  * afb1ee54 audio_backend: fix crash
+  * 682492f7 This commit fixes #4023
+  * 633bf9e0 Hyprland submap allow pango markup.
+  * addf44d9 test
+  * e92b0a86 wlr/taskbar: find icon by title as fallback
+  * 9ca52a48 wireplumber: fix potential nullpointer deref
+  * 056295cb Merge pull request #4026 from khaneliman/workflows
+  * 80669f71 Merge pull request #4024 from khaneliman/hyprland-crash
+  * 5ff6b0ad .github/workflows: tweak job names
+  * 84162ec6 .github/workflows/clang-format: bump github action
+  * 91ef6e51 hyprland/workspaces: range find lint cleanup
+  * c5bc3bc5 hyprland/workspaces: fix crash
+  * 569445f8 Merge pull request #4017 from RobertMueller2/issue_4015
+  * eb254db8 Merge pull request #4018 from
+    Alexays/update_flake_lock_action
+  * c0b8c4d4 flake.lock: Update
+  * 9d2b1375 fix manpage for backlight/slider
+  * 4a8d527d Merge pull request #3921 from bpandreotti/vertical-privacy
+  * b98e7174 Merge pull request #3941 from
+    ChaosInfinited/features/systray-custom-icons
+  * fda7abb3 Merge pull request #3878 from matt-fff/mw/hyprland-events-
+    workspaces-v2
+  * 9681cfd2 Merge pull request #4009 from teatwig/master
+  * 567ae16a fix incorrect type for `weeks-pos` in waybar-clock man page
+  * 2fdfd102 Merge pull request #3959 from voiceroy/ip-address-display
+  * 8476a7dc Merge pull request #3970 from khaneliman/nativeinstallcheck
+  * e74844b8 Merge pull request #3961 from
+    Alexays/update_flake_lock_action
+  * a622dfd0 Merge pull request #3969 from LawnGnome/cffi-config-value-
+    json
+  * 775067f2 Merge pull request #3995 from spectrum70/wip/login-proxy
+  * 508d3cd3 Merge pull request #3638 from RowanLeeder/ISSUE-3092
+  * eb2df58f Merge pull request #4002 from lbartoletti/freebsd_temp
+  * 4ba1947a fix(FreeBSD): Use dev.cpu temperature sysctl
+  * 6fd859c0 add login-proxy option
+  * 8a15cbad Fixes: Add stretching of modules and modules-center
+    toggling
+  * f631d5ea nix/default: disable version check
+  * 90617040 cffi: always return config values as JSON
+  * 5e4dac1c Newline as a seperator when displaying IPv4 and 6 at the
+    same time
+  * f7b44515 fix(hyprland): support additional v2 events
+  * 4a6c417e Add format replacements
+  * 9f71de52 flake.lock: Update
+  * 17cee0d8 feat(hyprland): support workspacev2
+  * 0c6ca832 feat(hyprland): support destroyworkspacev2
+  * 26a344b1 feat(hyprland): support createworkspacev2
+  * 8bd0285c Remove redundant if condition
+  * 212c6762 Provide an option to show ipv4 or ipv6 or both of them
+  * ddf5b3e0 add tray icons docs
+  * d1998de4 add setCustomIcon and try to apply such when ID is known
+  * 78d5c3ef init custom icons from config per tray
+  * 937b62ea add SNI custom icon manager
+  * a26ed50d Add support for vertical bars in privacy module
+  * 6004316f Fix typos in function, variable names and in documentation
+  * 36a1c89e Merge branch 'Alexays:master' into hyprland/windowcount
+  * d7e4a7d9 add module wayfire/window, wayfire/workspaces
+  * 56560211 Merge branch 'Alexays:master' into hyprland/windowcount
+  * d29a17d7 Merge branch 'Alexays:master' into hyprland/windowcount
+  * 334fc6e0 Merge branch 'Alexays:master' into hyprland/windowcount
+  * 17d7cea4 Merge branch 'Alexays:master' into hyprland/windowcount
+  * ddb30164 add rewrite to wlr tooltip
+  * 278588b1 Merge branch 'Alexays:master' into hyprland/windowcount
+  * 2dfef1c2 Issue-3092 Add node type to wireplumber logs
+  * 71a53eb7 Issue-3092 Add source support to wireplumber module
+  * 636ef21f Merge branch 'Alexays:master' into hyprland/windowcount
+  * 4cb2bf06 Merge branch 'Alexays:master' into hyprland/windowcount
+  * fd67c6e9 docs: rewording of separate-outputs in man page
+  * b82bcdb5 docs: updated documentation for windowcount.5.scd
+  * 13bc497a style: clang-format
+  * 8254bd72 style: applied clang-format on windowcount.cpp
+  * 9254ef6f docs: updated scd man pages
+  * a5e322ee fix: remove rewrite
+  * 6aa8aa3b fix: remove focused_
+  * f7e1d342 feat: added empty and fullscreen style classes
+  * 38ffb24c feat: format-fullscreen and format-windowed override added
+  * 1b282e67 fix: remove unused attributes
+  * 1806edcb fix: remove unused variable
+  * e40bc272 fix: default separate-outputs to true
+  * 58e4f89a fix: allow custom format
+  * d64c80e2 temp: working implementation
+  * 5c859bf5 temp: changed window -> windowcount
+  * ea4b95fd Fix: move init gdbusproxy after proxy_device_bat nullcheck
+  * d831a456 fix: restore signature
+  * 2de8a83d feat: fetch battery percentage from upower if not found
+    from bluez
+  * ee095897 Merge branch 'master' into issue-1681
+  * 15132aee Fix for leftover pids
+  * 38af4a6f exec runs after on-* events
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Jun 2025 18:23:48 +0200
+
 waybar (0.12.0-1ppa3) noble; urgency=medium
 
   * Dependecy rebuild
