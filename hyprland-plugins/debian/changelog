@@ -1,3 +1,20 @@
+hyprland-plugins (0.49.0~1ppa1+git202506262323-dd28351) noble; urgency=medium
+
+  * Update to main dd28351
+  * dd28351 hyprtrails: move to gles3 and new uniform caching in
+    hyprland (#406)
+  * c1fdf38 HyprExpo: update documentation (#405)
+  * aa23323 hyprbars: update documentation (#404)
+  * 132e610 xtra-dispatchers: fix closeunfocused
+  * 8b4405a readme: fixed a typo (#400)
+  * f49193f hyprfocus: fix nix
+  * 03b0717 CI/Nix: add cache-nix-action
+  * a65f46c hyprfocus: add default.nix
+  * 39c2832 focus: avoid replaying anim on an unchanged window
+  * f444ff0 hyprfocus: init new plugin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 23:23:06 +0200
+
 hyprland-plugins (0.49.0~1ppa1+git202506182224-c0e675d) noble; urgency=medium
 
   * Update to main c0e675d
