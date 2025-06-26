@@ -6,7 +6,7 @@ Index: source/src/managers/input/InputManager.cpp
 ===================================================================
 --- source.orig/src/managers/input/InputManager.cpp
 +++ source/src/managers/input/InputManager.cpp
-@@ -1252,11 +1252,6 @@ void CInputManager::setPointerConfigs()
+@@ -1253,11 +1253,6 @@ void CInputManager::setPointerConfigs()
                      libinput_device_config_scroll_set_natural_scroll_enabled(LIBINPUTDEV, g_pConfigManager->getDeviceInt(devname, "natural_scroll", "input:natural_scroll"));
              }
  
@@ -22,7 +22,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -136,7 +136,7 @@ pkg_check_modules(
+@@ -144,7 +144,7 @@ pkg_check_modules(
    pixman-1
    xcursor
    libdrm

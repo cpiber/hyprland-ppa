@@ -8,19 +8,20 @@ Index: source/CMakeLists.txt
  
  # Get version
  file(READ "${CMAKE_SOURCE_DIR}/VERSION" VER_RAW)
-@@ -9,8 +9,11 @@ project(
+@@ -9,9 +9,12 @@ project(
    DESCRIPTION "A Modern C++ Wayland Compositor"
    VERSION ${VER})
  
 +list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 +
+ include(CTest)
  include(CheckIncludeFile)
  include(GNUInstallDirs)
 +include(FindOpenGL)
  
  set(HYPRLAND_VERSION ${VER})
  set(PREFIX ${CMAKE_INSTALL_PREFIX})
-@@ -79,7 +82,6 @@ add_compile_definitions(HYPRLAND_VERSION
+@@ -85,7 +88,6 @@ add_compile_definitions(HYPRLAND_VERSION
  
  include_directories(. "src/" "protocols/")
  

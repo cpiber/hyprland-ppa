@@ -2,7 +2,7 @@ Index: source/src/render/OpenGL.cpp
 ===================================================================
 --- source.orig/src/render/OpenGL.cpp
 +++ source/src/render/OpenGL.cpp
-@@ -35,6 +35,8 @@
+@@ -36,6 +36,8 @@
  using namespace Hyprutils::OS;
  using namespace NColorManagement;
  

@@ -2,7 +2,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -29,6 +29,11 @@ execute_process(COMMAND ./scripts/genera
+@@ -30,6 +30,11 @@ execute_process(COMMAND ./scripts/genera
  execute_process(COMMAND ./scripts/generateShaderIncludes.sh
                  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
  

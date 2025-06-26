@@ -22,6 +22,9 @@ export CC = /usr/bin/gcc-14
 %:
 	dh $@ -S cmake
 
+override_dh_auto_configure:
+	dh_auto_configure -- -DNO_TESTS=1
+
 
 # dh_make generated override targets.
 # This is an example for Cmake (see <https://bugs.debian.org/641051>).

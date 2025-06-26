@@ -1,3 +1,41 @@
+hyprland-unstable (0.49.0~1ppa1+git202506262248-2796ec1c) noble; urgency=medium
+
+  * Update to main 2796ec1c
+  * 2796ec1c CI/Nix: separate xdph from hl
+  * 3d6476c9 Core: Add a test suite (#9297)
+  * 9a67e042 renderer: clamp rounding_power (#10816)
+  * 3bbdf9dc protocols: add ext-workspace implementation (#10818)
+  * 1f337a7a hyprctl: replace read-only strings with std::string_view
+    (#10851)
+  * 452a1581 config: use parseScale for monitorv2 (#10852)
+  * f4f090e4 renderer: reduce a lot of glcalls and cache various states
+    (#10757)
+  * 5a348fb7 Nix: filter src using fileset
+  * aea81320 buffer: don't use crazy listener::emit()
+  * cf7e3aa4 renderer/cm: Add automatic hdr (#9785)
+  * c7c8ca47 config: add missing description for enforce_permissions
+  * 24e5f997 hyprctl: print no open windows instead of invalid request
+    on empty clients
+  * dd33128c input: fix mouseDown triggering hl ops on locked (#10809)
+  * 8b1d5560 renderer: add wrapping options to renderTextureWithBlur
+    method (#10807)
+  * 23888747 [gha] Nix: update inputs
+  * 4be32dbf xwayland: Don't leave shell process (#10802)
+  * 8ebff194 [gha] build man pages
+  * a301d54d treewide: hyprland.org -> hypr.land
+  * ff2f8564 CI/Nix: add cache-nix-action
+  * b49d0ca2 xwayland: Fix crash when copying from wayland to xwayland
+    (#10786)
+  * 86b5e3bf config: nuke explicit_sync settings
+  * 54ccf9c6 renderer: make lock fail textures dynamically loaded
+  * e999ad66 hookSystem: avoid using manual mem management, fix leak
+  * 9fb6b5d9 input: Fix incorrect localcoords with a surface above an
+    XWayland window (#10773)
+  * 0fb63c68 permissions: properly print config requests for plugins
+  * 83a4c610 plugins: don't update config plugins on state unchanged
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 22:48:38 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202506182025-bef1321f) noble; urgency=medium
 
   * Update to main bef1321f
