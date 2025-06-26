@@ -1,3 +1,9 @@
+hyprland-qtutils (0.1.4-1ppa5) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 23:37:14 +0200
+
 hyprland-qtutils (0.1.4-1ppa4) noble; urgency=medium
 
   * Add runtime dependency on qt6-wayland

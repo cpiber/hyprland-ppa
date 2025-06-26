@@ -1,3 +1,9 @@
+hyprpaper (0.7.5-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 23:37:14 +0200
+
 hyprpaper (0.7.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.7.5
