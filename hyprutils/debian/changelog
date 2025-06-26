@@ -1,3 +1,23 @@
+hyprutils (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * 2cd5e4f version: bump to 0.8.0
+  * 376d020 signal: don't spam logs
+  * 9324626 signal: Typed signals (part 2) (#60)
+  * 6ee59e4 core: add editorconfig (#61)
+  * 925f266 memory: add CAtomicSharedPointer and CAtomicWeakPointer
+    (#57)
+  * 1b8090e signals: add typed signals with CSignalT<> (#58)
+  * d46bd32 os/process: add env to async calls too
+  * 38f3a21 CI/Nix: add cache-nix-action
+  * 15df5e3 Nix: move overlays to nix/ and add debug package
+  * c9cd5f1 os/process: disallow copying / moving
+  * 57ab2a8 tests: fix matrix test on 32b archs
+  * e36db00 nix: use gcc15 (#54)
+  * f1d0879 sharedPtr: include missing <cstdint> (#52)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 18:52:08 +0200
+
 hyprutils (0.7.1-1ppa2) noble; urgency=medium
 
   * Build with gcc-14
