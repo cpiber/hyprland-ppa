@@ -1,3 +1,16 @@
+hyprscroller (0.47.0~1ppa1+git202507031856-a48716c) noble; urgency=medium
+
+  * Update to master a48716c
+  * a48716c Commit pin
+  * 172542b [#7] Option to disable background layer rendering in
+    overview
+  * c689c39 [#7] Support hardware cursors
+  * c4a5976 Hook HW cursors with warning
+  * effc625 Refactor: Store inverse scale to avoid division
+  * 16e99e5 Refactor: Use vector instead of map
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 03 Jul 2025 18:56:10 +0200
+
 hyprscroller (0.47.0~1ppa1+git202506192320-735a6a0build1) noble; urgency=medium
 
   * Rebuild for unstable
