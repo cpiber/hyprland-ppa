@@ -1,3 +1,24 @@
+hyprland-unstable (0.49.0~1ppa1+git202507031834-90c8609c) noble; urgency=medium
+
+  * Update to main 90c8609c
+  * 90c8609c CMake: disable tests by default (#10899)
+  * b246f33a inputmgr: remove unused var
+  * e9c55941 renderer: add mouse zoom animations (#10882)
+  * e827b75e opengl: add missing skipcm if case (#10888)
+  * 9adacef7 buffer: check if buffer fd already readable (#10894)
+  * f464dfbe shader: replace texture2d with texture (#10893)
+  * 8c37d2ce sessionlock: restore cursor if hidden on unlock (#10889)
+  * ee8978b9 flake.lock: update
+  * ab900d87 screencopy: fix improper box calculations for transforms
+    (#10870)
+  * 0fea173f unbind: add unbind all
+  * a01d20cf CI/Nix: fix rebase oopsie
+  * e4b6fedf tester: simplify adding test files
+  * 1fc7e80b README: update previews
+  * b850b357 snap: move `gapOffset` logic outside of for loop (#10861)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 03 Jul 2025 18:34:20 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202506262248-2796ec1c) noble; urgency=medium
 
   * Update to main 2796ec1c
