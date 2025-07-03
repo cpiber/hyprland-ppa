@@ -1,3 +1,11 @@
+hyprland-plugins (0.49.0~1ppa1+git202507031847-109c734) noble; urgency=medium
+
+  * Update to main 109c734
+  * 109c734 hyprwinwrap: add an option to select window by title (#409)
+  * 9ec8d2d hyprbars: use the setcap to cache glenable/disable (#410)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 03 Jul 2025 18:47:50 +0200
+
 hyprland-plugins (0.49.0~1ppa1+git202506262323-dd28351) noble; urgency=medium
 
   * Update to main dd28351
