@@ -1,3 +1,91 @@
+uwsm (0.23.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.23.0
+  * b6e8a89 chore: bump version (minor)
+  * 919bbb4 fix: script perms, debug unit paths
+  * e7e511f docs: update readme and man
+  * b2cc236 fix: -T back switch for no tweaks, sort out "tweaks"
+    keyword/mark
+  * c8e4700 docs: update readme and man
+  * 12c983e fix: drop unneeded setting from kde portal tweak
+  * b62c56d fix: update labwc reload drop-in placement
+  * f55b4ed fix: control unit file rungs and categories
+  * f672214 refactor: move fumon.service to other unit files
+  * cc56915 fix(!): deprecate -S|-A start options and
+    UWSM_USE_SESSION_SLICE
+  * 5bf4b6f fix(!): enable static units by default
+  * 29c981e feat: permanent generated unit files
+  * af5e57c fix: drop gtk portal override, fixed upstream
+  * efaa8b0 feat: static units, initial pass, wip #68
+  * 1352c93 chore: bump version (git)
+  * 86efb05 chore: bump version (minor)
+  * 4897de7 fix: more informative waitpid messaging
+  * 7fffc51 docs: update readme
+  * e1161b1 fix: not a tuple, just segmented string
+  * 7163539 fix: restrict NotifyAccess from finalize and autoready
+  * fff761a refactor: rearrange some code and help messages
+  * 415a99f fix: use lowercase string for XDG_MENU_PREFIX
+  * 257c895 feat: terminal options
+  * a7127e7 docs: fixed typos (#135)
+  * 3680049 build: add option for examples subdirectory (#134)
+  * 6bf21e1 chore: bump version (git)
+  * 1e47082 chore: bump version (patch)
+  * af45da7 fix(uuctl): repair broken menu autodetection, also parse
+    targets
+  * 501246b chore: bump version (patch)
+  * c62c27c fix(plugins): variable expansion to whitespace in
+    UWSM_FINALIZE_VARNAMES (#131)
+  * 66522fe chore: bump version (patch)
+  * 75ea9f9 fix: read xdg-terminals.list in data dirs as xdg-terminal-
+    exec does, closes #128
+  * d453327 docs: extend uuctl manpage
+  * b8df00c fix: message for unsupported menu
+  * d560ed9 docs: add manpages for uwsm-app, uuctl, misc help fixes.
+  * 99d4f4c fix: generalize env string to boolean handling
+  * c4a4a48 chore: bump version (git)
+  * 17ed261 chore: bump version (patch)
+  * 3929da6 fix: s/UWSM_WAITENV_TIMEOUT/UWSM_WAIT_VARNAMES_TIMEOUT/,
+    also apply to units
+  * b76eb5b feat: show version
+  * f090e1c feat: silent start mode, closes #123
+  * 4217175 style: specify imports (#126)
+  * d7996ef style: remove unused f-strings (#127)
+  * ac8d5bd fix: typos (#125)
+  * b465c6a refactor(dbus): collapse duplicated add_* helpers into
+    generic cache (#124)
+  * 5922902 fix: Repair notifications by adding DbusInteractions import
+    to misc.
+  * 194fb47 feat: Added configurable timeout variable -
+    UWSM_WAITENV_TIMEOUT (#122)
+  * aed6372 docs(launcher): misc wording
+  * c41fe64 chore: bump version (git)
+  * ecf4c26 docs(launcher): fix wofi shell cmd, add sedless variant
+  * 366e618 docs(launcher): make wofi work with desktop action (#121)
+  * 3df1abf fix: correct encoding typo from `UTF=8` to `utf-8` (#119)
+  * 1af86eb chore: bump version (patch)
+  * d08b6b4 fix: handle entry's Path key (closes #118)
+  * 6f9b1e2 docs: correct spelling errors in man pages (#113)
+  * bf24be0 docs: update README
+  * 7c2196e docs: update README
+  * 769c10c chore: bump version (patch)
+  * 72bde76 docs: graphical.target stuff and misc
+  * 22bef02 feat: more options for graphical.target check on start (also
+    #106)
+  * eb628d5 feat: also wait (or not) for graphical.target on start
+    (fixes #106)
+  * 7ef4cb1 fix: add XDG_STATE_HOME assignment (fixes #102)
+  * 51a9442 chore: bump version (git)
+  * 42c36b7 chore: bump version (patch)
+  * 795fd9a fix: log start/stop only if really starting/stopping
+  * 7490520 docs: profile loading skip
+  * 8d12e97 style: black, profile loading message
+  * 5d216ec fix: stop sourcing profile, let inherited login shell env
+    override systemd env (#72) (#97)
+  * c52c2cc chore: bump version (git)
+  * 50562df docs: add app wrapper alternatives (#100), more mentions
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 03 Jul 2025 18:30:01 +0200
+
 uwsm (0.21.1~1ppa1) noble; urgency=medium
 
   * Upstream release 0.21.1
