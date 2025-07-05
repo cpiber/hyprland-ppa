@@ -1,0 +1,24 @@
+Description: Cherry-pick 0a47575c7f4d649e5a7bbbafb8acac9b10860c9e
+ Necessary because we're now building some newer stuff
+Author: Constantin Piber <cp.piber@gmail.com>
+
+Index: source/src/helpers/memory/Memory.hpp
+===================================================================
+--- source.orig/src/helpers/memory/Memory.hpp
++++ source/src/helpers/memory/Memory.hpp
+@@ -2,9 +2,11 @@
+ 
+ #include <hyprutils/memory/WeakPtr.hpp>
+ 
+-//NOLINTNEXTLINE
+ using namespace Hyprutils::Memory;
+ 
+-#define SP Hyprutils::Memory::CSharedPointer
+-#define WP Hyprutils::Memory::CWeakPointer
+-#define UP Hyprutils::Memory::CUniquePointer
++template <typename T>
++using SP = Hyprutils::Memory::CSharedPointer<T>;
++template <typename T>
++using WP = Hyprutils::Memory::CWeakPointer<T>;
++template <typename T>
++using UP = Hyprutils::Memory::CUniquePointer<T>;

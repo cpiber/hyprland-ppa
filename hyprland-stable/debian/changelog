@@ -1,3 +1,9 @@
+hyprland (0.49.0-1ppa4) noble; urgency=medium
+
+  * Patch `using`s via cherry-picked upstream patch
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Jul 2025 01:17:15 +0200
+
 hyprland (0.49.0-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
