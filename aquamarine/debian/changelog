@@ -1,3 +1,27 @@
+aquamarine (0.9.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.0
+  * dfc1db1 version: bump to 0.9.0
+  * 0bd03a8 swapchain: fix age
+  * b3208e8 wayland: don't force the swapchain to length
+  * 33ebde1 drm: revert "Avoid unnecessary modesetting (#183)"
+  * c0c56dd drm: Avoid unnecessary modesetting (#183)
+  * dc45d00 drm/renderer: optimize blitting and use gles3 shaders (#179)
+  * dd92142 core: Use new typed signals from hyprutils (#178)
+  * 7cef49d CI/Nix: add cache-nix-action
+  * 94981cf nix: use gcc15 (#176)
+  * 560926d drm: reduce a bit of local temporary copies going around in
+    renderer (#175)
+  * 389372c drm/renderer: depend on gles3 and use vertex array objects
+    (#173)
+  * 9d38b6a gl: a few small renderer optimisations (#172)
+  * a19cf76 clang-tidy: fix some errors (#166)
+  * c8282f4 atomic: fix compiler warning with string (#164)
+  * 1d2dbd7 drm: restore hdr metadata after vt switch (#163)
+  * 484b732 backend: Fix compiler warnings (#160)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 05 Jul 2025 22:03:06 +0200
+
 aquamarine (0.8.0-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
