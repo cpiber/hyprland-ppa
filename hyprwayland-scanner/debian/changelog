@@ -1,3 +1,17 @@
+hyprwayland-scanner (0.4.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.5
+  * fcca0c6 version: bump to 0.4.5
+  * 8fb426b server: fix empty interface arrays
+  * aa38edd CI/Nix: add cache-nix-action
+  * 8179183 nix: use gcc15 (#17)
+  * e511882 cmake: Make CMAKE builds arch independent (#16)
+  * 206367a core: member + designated init and remove redundant cast
+    (#14)
+  * 04146df CI: remove deprecated magic-nix-cache-action
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 07 Jul 2025 18:15:35 +0200
+
 hyprwayland-scanner (0.4.4-1ppa3) noble; urgency=medium
 
   * Build with gcc-14
