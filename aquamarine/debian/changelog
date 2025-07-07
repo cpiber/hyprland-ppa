@@ -1,3 +1,12 @@
+aquamarine (0.9.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.1
+  * 664b276 version: bump to 0.9.1
+  * c1fb82d backend: don't use a shorthand for SP
+  * e2e3f8b drm: Avoid unnecessary modeset (fixed) (#184)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 07 Jul 2025 18:12:52 +0200
+
 aquamarine (0.9.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.0
