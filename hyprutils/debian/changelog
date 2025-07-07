@@ -1,3 +1,15 @@
+hyprutils (0.8.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.1
+  * a822973 version: bump to 0.8.1
+  * e892695 math/vector: Added transform method to Vector2D class (#64)
+  * 4737241 animation/beziercurve: add getter for control points
+    (hyprwm/Hyprland#10413) (#63)
+  * 1eb6759 internal: fix missing cstdint include for GCC 16 (#62)
+  * d844a08 signal: don't mark signal as C++ deprecated
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 07 Jul 2025 18:17:25 +0200
+
 hyprutils (0.8.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.0
