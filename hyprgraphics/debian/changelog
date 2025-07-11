@@ -1,3 +1,15 @@
+hyprgraphics (0.1.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.5
+  * 340494a version: bump to 0.1.5
+  * 83885a6 formats: fix format selection and some safeguards (#28)
+  * b841473 png: libpng is straight alpha, but cairo is premult
+  * a71c052 internal: fix style as determined by clang (#27)
+  * 5f9c68e image: include span header (#26)
+  * 13375fa core: Add Image Embedding Support (#24)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 11 Jul 2025 12:15:59 +0200
+
 hyprgraphics (0.1.4-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
