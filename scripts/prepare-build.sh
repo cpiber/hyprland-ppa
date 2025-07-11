@@ -17,7 +17,7 @@ mkdir -p /tmp/hyprland-ppa/
 rm -rf "$buildfolder"
 [ -d "$sourcefolder" ] && cp -ra "$sourcefolder" "$buildfolder" || mkdir "$buildfolder"
 cp -ra "$debianfolder" "$buildfolder"
-if [ $# -gt 0 ]; then
+if [ $# -gt 0 ] && [ "$1" != "" ] && [ "$1" != "--" ]; then
   dch -c "$buildfolder/debian/changelog" -l "~1$1" -D "$1" "Rebuild for $1"
   if [ "$1" = "trixie" ]; then
     : Debian does not need this patch
