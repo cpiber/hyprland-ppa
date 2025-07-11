@@ -1,0 +1,12 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -43,7 +43,6 @@ execute_process(
+ #
+ 
+ include_directories(.)
+-set(CMAKE_CXX_STANDARD 26)
+ add_compile_options(
+   -Wall
+   -Wextra
