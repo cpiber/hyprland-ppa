@@ -15,7 +15,7 @@ patch -p1 <<- "EOF"
   libpango1.0-dev,
   libdrm-dev,
 + libinput-dev,
-- libinput-dev (>=1.28),
+- libinput-dev (>= 1.28),
   libxcb-xfixes0-dev,
   libxcb-icccm4-dev,
   libxcb-composite0-dev,
