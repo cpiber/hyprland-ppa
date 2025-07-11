@@ -1,3 +1,20 @@
+hyprsunset (0.2.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.0
+  * 7b7339f version: bump to 0.2.0
+  * 5f5dee3 core: Ensure only one instance of hyprsunset is running
+    (#17)
+  * d1811e4 add systemd service
+  * 005f0fc core: Add IPC Support (#18)
+  * e8b5cd5 CI: remove deprecated magic-nix-cache-action
+  * 4e19bbe core: Add gamma control (#16)
+  * cdcf145 flake.lock: update
+  * 7a2f65d core: Add InstanceLock to make sure that only one hyprsunset
+    is running. (#14)
+  * adaae9d README: Update hyprland note
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 11 Jul 2025 23:42:03 +0200
+
 hyprsunset (0.1.0-1ppa7) noble; urgency=medium
 
   * Rebuild for dependencies
