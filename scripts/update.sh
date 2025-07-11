@@ -36,12 +36,13 @@ curhead="`git rev-parse HEAD`"
 if [ "$type" != "tag" ]; then
   git checkout "$type"
   git pull --quiet --rebase
-  tag="`git describe --tags | sed 's/^[^0-9]*\|-[0-9]\+-g[0-9a-fA-F]\+//g'`"
+  tag="`git describe --tags | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//g'`"
+  tag="`echo "$tag" | sed 's/^[^0-9]*\([0-9.]\+\).*/\1/'`"
 else
   git fetch --tags
   tag="`git describe --tags origin | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//'`"
   git checkout "$tag"
-  tag="`echo "$tag" | sed 's/^[^0-9]*//'`"
+  tag="`echo "$tag" | sed 's/^[^0-9]*\([0-9.]\+\).*/\1/'`"
 fi
 git submodule update --init --recursive
 newhead="`git rev-parse HEAD`"
