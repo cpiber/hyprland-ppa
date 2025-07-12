@@ -1,3 +1,287 @@
+glaze (5.5.2-1ppa1) noble; urgency=medium
+
+  * Update to release 5.5.2
+  * f1c57bd7 version 5.5.2 bump
+  * 5125973c Committing clang-format changes
+  * 5451a066 Router validation custom function (#1829)
+  * cea331ab version 5.5.1 bump
+  * e9c2c37a Committing clang-format changes
+  * 70090dc3 Fix atoi for integers with exponents (#1826)
+  * 2edbe262 Add bounds check for seek vector access (#1822)
+  * d4d6ee98 add csv fuzzer (#1813)
+  * 6efaddda Cleaner boolean reading (#1818)
+  * cf787ad6 Committing clang-format changes
+  * 2b4f24f5 Add max-recursive-depth for beve_to_json (#1817)
+  * 17d81a64 ci: use clang-19 in quickfuzz job (#1812)
+  * b15946fc version 5.5.0 bump
+  * 511eb24c Add static_cast to remove warning (#1808)
+  * a418e9c2 Committing clang-format changes
+  * 739ec4fd Seek improvements and seeking on glz::json_t (#1805)
+  * 811a682a Fix hash collisions for glz::seek (#1804)
+  * 4e0f78d9 Committing clang-format changes
+  * 2393bda9 Add glaze_error_category and make_error_code for use with
+    std::error_code (#1803)
+  * 30038c5a Committing clang-format changes
+  * 371d86cc Stencil documentation updates and unit test error
+    formatting (#1802)
+  * dbb36c27 Committing clang-format changes
+  * fcbbf1ad std::string in stream_request_params
+  * ed447273 Add base64.hpp to primary glaze.hpp header
+  * 52d4a302 Committing clang-format changes
+  * c83334ed Remove warnings and use use of sstream in networking code
+    (#1801)
+  * 03cf64a0 Committing clang-format changes
+  * 3c0b7d7c HTTP client and server streaming (#1800)
+  * 98e71ca7 Committing clang-format changes
+  * 6b77b95a HTTP/REST documentation, examples, and code improvements
+    (#1798)
+  * fed2fce9 Update README.md
+  * 20a9a7d7 Update optimizing-performance.md
+  * c2db3562 Notify only for failed jobs (#1797)
+  * c8727112 Update stencil.md
+  * 48e1c978 Committing clang-format changes
+  * 8f1a28e8 REST API for Glaze (#1699)
+  * 039d41b3 version 5.4.1 bump
+  * 428c7779 Committing clang-format changes
+  * bbb98fd3 Separate glz::json_t test (#1795)
+  * aa584c77 Fix column wise keys with CRLF line endings (#1794)
+  * b3d70f2f Committing clang-format changes
+  * fe0667f2 Better missing key location, fixes formatted errors (#1792)
+  * bccd324d Update benchmarks
+  * 60e9b044 Committing clang-format changes
+  * 6bc54ea5 TOML reading (#1788)
+  * 75452dc6 Build and test on ix86 (#1789)
+  * 123f4d86 Fix packit specfile_path (#1787)
+  * a015eba7 Committing clang-format changes
+  * 384ebecd CSV parser properly handles quoted strings (#1786)
+  * eeb94938 version 5.4.0 bump
+  * c0563bf5 Add rename-keys.md documentation
+  * cfef6089 Committing clang-format changes
+  * a5cefd51 Move jump table parameter pack expansion into helper for
+    MSVC (#1783)
+  * 6d52705e Update mkdocs.yml
+  * 8048b025 Document performance optimization tips (#1785)
+  * 5d66756e Committing clang-format changes
+  * 6dd049b1 rename_key glz::meta utility (#1782)
+  * a97bee76 Update index.md
+  * dfe12e74 Update index.md
+  * 5748873b Update README.md
+  * ae56f8da update docs
+  * 91d59998 Add json.md
+  * d6b0d399 Update mkdocs.yml
+  * 858d579f Update mkdocs.yml
+  * 383267ae Update mkdocs.yml
+  * e83ca155 Update mkdocs.yml
+  * 44c269bc More documentation (#1781)
+  * feaf87a2 Update mkdocs.yml
+  * d59abc2c Create quick-start.md
+  * e926c85b max_recursive_depth_limit for glz::prettify_json (#1780)
+  * 6dec5428 Add testing on Fedora (#1772)
+  * 30ea42d3 Documentation page (#1778)
+  * b4bd43d6 Committing clang-format changes
+  * 0d8d03b3 Support non-null-terminated buffers with CSV reading
+    (#1777)
+  * bebfd1be Remove comments after looking into TODO (#1775)
+  * f413e889 Committing clang-format changes
+  * 477fe437 Help the compiler make an actual jump table (#1773)
+  * 15965c06 Committing clang-format changes
+  * 9c8880b5 Cleaner visiting and fixing GCC warnings for Os and Oz
+    (#1771)
+  * 86b5c844 Committing clang-format changes
+  * 43fc976d Remove use_hash_comparison (#1770)
+  * c21e0c39 Fix MSVC warnings (#1769)
+  * cae44bb3 Committing clang-format changes
+  * 4056564d Error handling for glz::custom (#1767)
+  * f7e9ba25 version 5.3.1 bump
+  * 168ccce2 Committing clang-format changes
+  * 6e5bfcff Report the first missing key in format_error (#1766)
+  * 85d951d5 Committing clang-format changes
+  * c1a7ceea Prettify test for variant integer ids (#1765)
+  * c28f0776 Committing clang-format changes
+  * e2f2b3ae Integer IDs for std::variant support (#1764)
+  * e5157915 Remove bad unit test causing GCC 15 failure (#1763)
+  * de6a80fa Committing clang-format changes
+  * 382fbd4f Add glz::cast wrapper (#1758)
+  * 13166f52 Committing clang-format changes
+  * 227282be Equality operators for glz::async_vector (#1757)
+  * c3d81a9d version 5.3.0 bump
+  * 6a7ec156 Committing clang-format changes
+  * 9b808e84 Requires checks for custom_read and custom_write for
+    objects (#1756)
+  * c9949876 Committing clang-format changes
+  * 2fc3a8da inout helper for asio_client (#1752)
+  * 582bea57 Committing clang-format changes
+  * 6337798a Support for read constraints (#1751)
+  * 9af60580 Committing clang-format changes
+  * aff92b31 Add allocating get to asio_client API (#1749)
+  * 21c276a8 Use std::move for custom reading (#1748)
+  * 12be66ed Committing clang-format changes
+  * 0d0a5d64 Asio client get/set throwing helpers (#1747)
+  * 03301179 Committing clang-format changes
+  * 50cadc83 Update fast_float from 7.0.0 to 8.0.2 (#1744)
+  * 54566118 version 5.2.1 bump
+  * 70dcb8c6 Committing clang-format changes
+  * 0e11a9bd Fix string parsing on inputs of factor of 8 (#1742)
+  * 035240da Removed float_max_write_precision from default opts
+  * 5a37891b Remove layout which is now part of opts_csv
+  * a644f20c Bump ut to v0.0.5 (#1741)
+  * 6fd00b0b Removed Wno-missing-braces flag on glaze interface target
+    (#1739)
+  * dd606c32 Committing clang-format changes
+  * 8ed7b03a Update clang format to v20 (#1738)
+  * 7047c984 Don't use static assert with message unless C++26 or higher
+    (#1737)
+  * b3ca2b2a Committing clang-format changes
+  * 66c20e0a Unscoped enum support and using more efficient jump_table
+    for cli_menu (#1733)
+  * e6f405ff version 5.2.0 bump
+  * 50e93cb6 version 5.1.3 bump
+  * 1964bcea Committing clang-format changes
+  * 05761f02 Fix reinitialization in glz::asio_client (#1730)
+  * 03e4d07d Committing clang-format changes
+  * 0dc70f29 CSV improvements (#1724)
+  * 3b2dd7be version 5.1.2 bump
+  * 5ec778bd Committing clang-format changes
+  * 84c7f3b2 noexcept traits (#1721)
+  * 5638b405 Committing clang-format changes
+  * 7105c6ec glz::trace better input argument order and fix for
+    async_scope (#1720)
+  * 167b26ec Update time-trace.md
+  * d55638c9 has_ -> check_ (#1714)
+  * 52e7acc6 Update options.md
+  * 0facf845 Committing clang-format changes
+  * dd275a19 Move float_max_write_precision out of glz::opts (#1713)
+  * 6b93d832 Committing clang-format changes
+  * 71ed752b Relax .as conversion for glz::json_t (#1712)
+  * 7be99119 version 5.1.1 bump
+  * 80ea5fbb Committing clang-format changes
+  * 6ad4f85b glz::custom support for error_on_missing_keys and nullable
+    fields (#1710)
+  * 293377fc Committing clang-format changes
+  * e12b939a Testing async_vector and beve (#1709)
+  * afac9049 Make value_proxy format agnostic (#1707)
+  * 2d75be77 fix `GLZ_ALWAYS_INLINE` define on clang-cl (#1702)
+  * ed64d2d3 Remove duplicate version_t (#1696)
+  * 8fd8d001 Committing clang-format changes
+  * 3ca28fd3 Support for member functions with the cli_menu (#1694)
+  * bcf97a05 version 5.1.0 bump
+  * ed6fb5e6 Committing clang-format changes
+  * e88fbe28 Add escape_control_characters compile time option (#1693)
+  * d1ac0583 Fix Erlang format workflow (#1691)
+  * e7c1d58a Committing clang-format changes
+  * a663d665 Fix some MSVC errors and warnings (#1689)
+  * 74136e7f Committing clang-format changes
+  * 9955f2be Merge branch 'main' of
+    https://github.com/stephenberry/glaze
+  * cb1c0960 glz::guard value_type
+  * e14ef16e Committing clang-format changes
+  * bc86a6fd Support for parse/serialize of glz::guard (#1686)
+  * cb2eaa70 EETF documentation (#1685)
+  * 0b39851b Swap read/write supported template parameters (#1684)
+  * 1e9ab765 Committing clang-format changes
+  * d47fe083 parse/serialize support for glz::async_vector (#1683)
+  * eebda81c Committing clang-format changes
+  * 8719ef9d Fix MSVC warnings (#1680)
+  * 0d07e5ee Committing clang-format changes
+  * 9295bf43 Erlang term parse and serialize (#1673)
+  * fafa42a3 fix always inline accidental testing removal
+  * 95b910d6 Committing clang-format changes
+  * 5d405ab1 updates
+  * cf50a0c4 Committing clang-format changes
+  * 42d06eaf fix raw_json compile error when using it in template func
+    (#1671)
+  * 6224560a version 5.0.2 bump
+  * 015d5222 Committing clang-format changes
+  * 99093337 Fix pair handling of named enum keys (#1670)
+  * 74456615 fix static_string (#1669)
+  * 2bca14fa Committing clang-format changes
+  * a9e1ec71 Add glz::array_apply, particularly useful for immutable
+    elements (#1664)
+  * a7d15de7 Use default spaceship operator for version_t (#1668)
+  * f6a464b4 Committing clang-format changes
+  * a2f8c8cc const char* assignment for glz::json_t (#1667)
+  * eaa61297 Committing clang-format changes
+  * 9c71a968 Create version.hpp (#1662)
+  * bc8c96cc Committing clang-format changes
+  * c4cb795e Example and documentation for handling private fields
+    (#1659)
+  * 962d495a version 5.0.1 bump
+  * 52683de3 Committing clang-format changes
+  * b6633aa0 Fix glz::seek for glz::custom fields (#1657)
+  * 68e5d403 Committing clang-format changes
+  * c588b79d Fix circular includes (#1656)
+  * 4a9e3079 Rename glz::atomic -> glz::guard (#1655)
+  * d7fcdd00 Committing clang-format changes
+  * b60e4d4f Add string API to async_string proxies (#1654)
+  * 589a01ba Committing clang-format changes
+  * 20af2e92 Adding glz::async_vector (#1652)
+  * cfa3c583 Committing clang-format changes
+  * 7bc2e63b Add glz::atom, a comparable and copyable atomic (#1651)
+  * 11d795de Remove FetchContent_GetProperties (#1650)
+  * 3def0abf Add GLZ_THROW_OR_ABORT to required headers (#1649)
+  * a08c7b57 Remove glz::expected and always use std::expected (#1314)
+  * 9c5d50e8 Committing clang-format changes
+  * c7b97fe8 Make glz::manage format agnostic (#1646)
+  * 07f8d491 Update documentation for v5.0.0
+  * ff57af07 version 5.0.0 bump
+  * 502d34bd More documentation updates
+  * 5f249bd4 Update documentation for v5.0.0
+  * 88e28a21 Update custom-wrappers.md
+  * 3cc77ae2 Asio test dependency bump to 1-32-0 (#1636)
+  * 231ba2cb Committing clang-format changes
+  * d5a872bc Make opts use generic (#1628)
+  * e3ccdef7 Additional max guards for MSVC (#1630)
+  * c52c1c2b Committing clang-format changes
+  * 088a63f2 Remove detail from specializations like to/from (#1625)
+  * 0a76cbcf Committing clang-format changes
+  * 694d4e81 If port was 0, get assigned port (#1621)
+  * 8eb5efe1 Revert "Update msvc.yml"
+  * 07a01f84 Update msvc.yml
+  * 8bd62da6 Committing clang-format changes
+  * 34ed7116 Generic supported concepts (#1622)
+  * 680446d4 version 4.4.3 bump
+  * 08954540 Committing clang-format changes
+  * 710ffa56 Remove forced reflection for top level structs in
+    repe::registry (#1623)
+  * 4a6b016b Committing clang-format changes
+  * 19a189e4 Removing macros (#1614)
+  * a308fd8e version 4.4.2 bump
+  * 7e525e8e Committing clang-format changes
+  * 8f83f3b1 Fix for empty objects with tagged variants (#1610)
+  * a1163077 Committing clang-format changes
+  * b2f90931 Fix trailing comma (#1609)
+  * c35b6f5b Committing clang-format changes
+  * b45d81d3 Initial TOML write support (#1603)
+  * fa4baa59 Committing clang-format changes
+  * 7cf95083 Static str (#1605)
+  * 2f9db34c version 4.4.1 bump
+  * c73fa932 Committing clang-format changes
+  * 29e92b85 Add error_handler to asio_server (#1602)
+  * 1dfdede4 Committing clang-format changes
+  * 820a66d5 fix ODR violations (#1604)
+  * 8e9d5aa0 Committing clang-format changes
+  * cd2d2ef0 rename glz::sync -> glz::async (#1600)
+  * 03188cf3 Committing clang-format changes
+  * 538d6feb Straightforward boolean write (#1597)
+  * dc9cfb8e Fix mismatch create function (#1596)
+  * f83c173c Committing clang-format changes
+  * 1bedbcf4 Add glz::sync (#1595)
+  * 767ed13f version 4.4.0 bump
+  * 2470bb59 Committing clang-format changes
+  * b92ddaf9 fix #1588 (#1590)
+  * 48d8ed5f Update README.md
+  * be35c419 Unify defines for tests (#1585)
+  * ae860242 Committing clang-format changes
+  * c0edaba1 asan non null_terminated fix (#1583)
+  * dc20b198 Update feature_test.hpp (#1582)
+  * 514e5321 reflect: fix uint16 compile error in
+    find_unique_sized_index (#1575)
+  * 37c19d1f Fix field names when the type has a const specifier (#1569)
+  * 698acb33 Committing clang-format changes
+  * 70b4a104 GCC Action Flags (#1563)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 12 Jul 2025 09:16:16 +0200
+
 glaze (4.3.1-1ppa1) noble; urgency=medium
 
   * Update to release 4.3.1
