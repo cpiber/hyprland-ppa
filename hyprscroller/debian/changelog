@@ -1,3 +1,16 @@
+hyprscroller (0.47.0~1ppa1+git202507121659-87296f2) noble; urgency=medium
+
+  * Update to master 87296f2
+  * 87296f2 fix: Update signatures
+  * de28591 renderMonitor: Add new argument
+  * 22ae201 Simplify `enable`/`set_scale` functions after `data_for`
+    changes
+  * 0a9ab2f Avoid copy of workspace data
+  * dd9f8fc Avoid damage while rendering software cursor
+  * 8ad5578 Avoid unnecessary monitor damage
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 12 Jul 2025 16:59:22 +0200
+
 hyprscroller (0.47.0~1ppa1+git202507112327-3190d91) noble; urgency=medium
 
   * Update to master 3190d91
