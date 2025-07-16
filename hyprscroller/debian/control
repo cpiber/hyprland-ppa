@@ -6,7 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  yq,
- hyprland-unstable (>= 0.49.0~1ppa1+git202507112253-e589adb0~), hyprland-unstable (<< 0.49.0~1ppa1+git202507112253-e589adb09),
+ hyprland-unstable (>= 0.50.0~1ppa1+git202507161209-c4a4c341~), hyprland-unstable (<< 0.50.0~1ppa1+git202507161209-c4a4c3419),
  hyprland-plugin-deps,
  gcc-14,
  g++-14,
@@ -20,7 +20,7 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- hyprland-unstable (>= 0.49.0~1ppa1+git202507112253-e589adb0~), hyprland-unstable (<< 0.49.0~1ppa1+git202507112253-e589adb09),
+ hyprland-unstable (>= 0.50.0~1ppa1+git202507161209-c4a4c341~), hyprland-unstable (<< 0.50.0~1ppa1+git202507161209-c4a4c3419),
 Description: Hyprscroller creates a window layout similar to PaperWM.
  Hyprscroller is a Hyprland layout plugin that creates a window layout similar to PaperWM.
  .

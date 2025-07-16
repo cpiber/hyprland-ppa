@@ -1,3 +1,11 @@
+hyprscroller (0.47.0~1ppa1+git202507161212-c4a04e6) noble; urgency=medium
+
+  * Update to master c4a04e6
+  * c4a04e6 feat: switch workspace on movefocus up/down (#12)
+  * 94745a2 feat: toggle row/column modes (#11)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 16 Jul 2025 12:12:49 +0200
+
 hyprscroller (0.47.0~1ppa1+git202507121659-87296f2) noble; urgency=medium
 
   * Update to master 87296f2
