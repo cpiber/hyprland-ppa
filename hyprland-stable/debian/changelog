@@ -1,3 +1,239 @@
+hyprland (0.50.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.50.0
+  * c4a4c341 version: bump to 0.50.0
+  * d4fbedcd core: never use hw cursors when tearing
+  * 5bfe6dc7 config: disable hw on mgpu nvidia by default (#11018)
+  * 8453fbf4 snap: fix `border_overlap` option for monitor snapping
+    (#10987)
+  * e15014e0 protocols/cm: Fix preferred image description (#11026)
+  * bc764f70 protocols: Remove incorrect CM proto debug check and fix
+    preferred image description (#11023)
+  * 06fcdbd9 renderer: use makeUnique for session-lock render passes
+    (#11019)
+  * 01971cb6 session-lock: don't render workspaces when locked (#10865)
+  * d0f58baf screencopy: ignore hidden windows in noscreenshare
+  * 8bfff878 debugOverlay: fix tick measurement
+  * 6821723b splashes: add zacoons' splash
+  * e589adb0 config: remove render_ahead* config options
+  * 523eed04 xwl: dont mark the even source as readable
+  * e6bb8096 monintor: remove rathandler
+  * b5433bb7 singlepixel: move to unique ptrs
+  * bcb96c55 presentation: move to unique ptrs
+  * f22b5971 dmabuf: move to unique ptrs
+  * 87653077 cursorshape: use unique ptrs
+  * a21882be ctmcontrol: move to unique ptrs
+  * 37be9a89 alphamodifier: move to unique ptrs
+  * f5af40af renderpass: use unique ptr instead of shared ptr
+  * 6375e471 config: disable new_render_scheduling by default
+  * c6497a71 internal: Prevent double-free in attemptDirectScanout
+    (#10974)
+  * 9517d0ea renderer: Added a pointer position uniform to the screen
+    shader. (#10821)
+  * 78e9eddf core: use new typed signals from hu (#10853)
+  * 2f34ef14 compositor: fix race to finish on null buffer (#10970)
+  * 8f948827 Renderer: Implement new render scheduling (#10936)
+  * 9856563f opengl: avoid reallocations in EGLImage (#10960)
+  * bb958a9e pass: overload TexPass constructor
+  * c75f8509 renderer: move render calculation behind if case
+  * 4a30e2ac eventloop: RAII the even source on readable fd
+  * ceec1943 compositor: dont send around int max values
+  * 83c453cb plugins: made currentWindow available in RENDER_PRE_WINDOW
+    (#10957)
+  * 54369adf internal: iso C++ prohibits anonymous structs (#10955)
+  * d23ed852 [gha] Nix: update inputs
+  * a16d0c76 texture: zero out the cached states in destroy (#10954)
+  * 6a5f4f59 Nix: fix overlay application
+  * b99c193e internal: handle setGroupCurrent properly on fs groups
+    (#10920)
+  * 9b51d73a hyprpm: print all dependencies that are missing (#10907)
+  * 3c9447ca nix: update aquamarine
+  * 90c8609c CMake: disable tests by default (#10899)
+  * b246f33a inputmgr: remove unused var
+  * e9c55941 renderer: add mouse zoom animations (#10882)
+  * e827b75e opengl: add missing skipcm if case (#10888)
+  * 9adacef7 buffer: check if buffer fd already readable (#10894)
+  * f464dfbe shader: replace texture2d with texture (#10893)
+  * 8c37d2ce sessionlock: restore cursor if hidden on unlock (#10889)
+  * ee8978b9 flake.lock: update
+  * ab900d87 screencopy: fix improper box calculations for transforms
+    (#10870)
+  * 0fea173f unbind: add unbind all
+  * a01d20cf CI/Nix: fix rebase oopsie
+  * e4b6fedf tester: simplify adding test files
+  * 1fc7e80b README: update previews
+  * b850b357 snap: move `gapOffset` logic outside of for loop (#10861)
+  * 2796ec1c CI/Nix: separate xdph from hl
+  * 3d6476c9 Core: Add a test suite (#9297)
+  * 9a67e042 renderer: clamp rounding_power (#10816)
+  * 3bbdf9dc protocols: add ext-workspace implementation (#10818)
+  * 1f337a7a hyprctl: replace read-only strings with std::string_view
+    (#10851)
+  * 452a1581 config: use parseScale for monitorv2 (#10852)
+  * f4f090e4 renderer: reduce a lot of glcalls and cache various states
+    (#10757)
+  * 5a348fb7 Nix: filter src using fileset
+  * aea81320 buffer: don't use crazy listener::emit()
+  * cf7e3aa4 renderer/cm: Add automatic hdr (#9785)
+  * c7c8ca47 config: add missing description for enforce_permissions
+  * 24e5f997 hyprctl: print no open windows instead of invalid request
+    on empty clients
+  * dd33128c input: fix mouseDown triggering hl ops on locked (#10809)
+  * 8b1d5560 renderer: add wrapping options to renderTextureWithBlur
+    method (#10807)
+  * 23888747 [gha] Nix: update inputs
+  * 4be32dbf xwayland: Don't leave shell process (#10802)
+  * 8ebff194 [gha] build man pages
+  * a301d54d treewide: hyprland.org -> hypr.land
+  * ff2f8564 CI/Nix: add cache-nix-action
+  * b49d0ca2 xwayland: Fix crash when copying from wayland to xwayland
+    (#10786)
+  * 86b5e3bf config: nuke explicit_sync settings
+  * 54ccf9c6 renderer: make lock fail textures dynamically loaded
+  * e999ad66 hookSystem: avoid using manual mem management, fix leak
+  * 9fb6b5d9 input: Fix incorrect localcoords with a surface above an
+    XWayland window (#10773)
+  * 0fb63c68 permissions: properly print config requests for plugins
+  * 83a4c610 plugins: don't update config plugins on state unchanged
+  * bef1321f xwayland: fix minor errors in previous refactor (#10763)
+  * 0ece4af3 grpupbar: Add config options to color inactive and locked
+    groupbar titles (#10667)
+  * aba2cfe7 asyncDialogBox: lock box in fdWrite to prevent a uaf
+    (#10759)
+  * d4e8a440 windowrules/move: clamp max pos in onscreen to avoid assert
+    crash
+  * 1905c41c xwayland: Use RAII instead or freeing memory manually
+    (#10677)
+  * bd5703d5 protocols/cm: fix wp invalid luminance check (#10752)
+  * d037c542 protocols: support xdg-shell v7
+  * c3894d92 config/monitor: Add monitor v2 HDR rules (#10623)
+  * 3db3baa1 opengl: use a stack for storing monitor transform enabled
+  * 57d20a1b internal: clean up dead snapshot code
+  * 472b52bc cursor: reset hc data after theme change
+  * 79b9edb8 [gha] Nix: update inputs
+  * f08167c8 input: add sticky option for drag_lock (#10702)
+  * ad854062 drm-lease: Add Multi-GPU Support (#10099)
+  * d14f81e6 protocols: whitelist wp_color_manager_v1 for
+    security_context (#10723)
+  * 826061d1 README: Update image cdn (#10722)
+  * 748419fa hyprpm: check version and update automatically on add
+    (#10706)
+  * 412c7dc7 renderer: fixup some missing fadeout cases with special
+  * 8329de1a input: grab the correct active workspace on mouseMove
+  * 144885d8 anr: make dialog disappear if the app dies
+  * f7526d6b renderer: refuse rendering invalid resolutions
+  * 6910ca76 protocols/subcompositor: fixup place_above and _below
+  * 6bdb1f41 dwindle: add the ability to specify an aspect ratio for a
+    singular window (#10650)
+  * 81468253 hyprpm: fix typo in help message (#10687)
+  * 231e01e3 hyprctl: don't detect a negative value as a parameter
+    (#10671)
+  * c6f713fe screencopy: fix incorrect noscreenshare positions with
+    monitor scaling (#10674)
+  * 91967f8e renderer: fix incorrect cursor position when screencopy
+    region with monitor scaling (#10675)
+  * 0a47575c internal: Use `using` instead of `#define` to alias smart
+    pointers (#10673)
+  * 88017709 [gha] Nix: update inputs
+  * 66b99bd2 monitor: ensure autoDir is applied when changed (#10672)
+  * 2794f485 hyprctl: Remove exceptions, use modern error handling
+    (#10664)
+  * 0ac3bef7 input: support configuring drag_3fg from libinput (#10631)
+  * 456c820d assets: update header
+  * c35c2fea config: Restore auto-center-* for monitors (#10660)
+  * d6fbd893 nix: use gcc15-built dependencies
+  * fb7548cb screencopy: fix applying `noscreenshare` to invisible
+    special workspaces (#10628)
+  * 423b69f5 config: add group: selector (#10588)
+  * abdfc5ea config: add a new monitor v2 config syntax (#9761)
+  * 59c886d8 internal: Catch filesystem exceptions while iterating
+    RunTimeDir (#10648)
+  * d7a87ce6 xwayland: fix xwayland -> wayland clipboard (#10646)
+  * d9f7448d xwayland: pad pid with leading zeroes in lockfile
+  * b5c0d0b8 keybinds: add an option to respect gaps out for floating to
+    movewindow (#9360)
+  * b1d0a727 internal: Center window on parent if available (#10582)
+  * ef2c73af internal: embed example config (#10608)
+  * 16c62a6d internal: Fix HyprError not displaying at startup (#10606)
+  * 2d1c6f88 xwm: Refactored functions in XWM.cpp (#10569)
+  * 82b85495 hyprpm: refuse adding a new repo without update
+  * 69c2b292 internal: refactor to use empty() (#10599)
+  * 4078e1d1 refactor: replace all `typedef` with `using` (#10594)
+  * af2fdb5d nix: use gcc15
+  * 9190443d refactor: use std::ranges whenever possible (#10584)
+  * 9bf1b491 snap: add option to respect gaps (#10524)
+  * 5cc6cb49 groupbar: force recalc on visibility changes
+  * 9b327ddf monitor: mark 0, 0 presentation timestamps as invalid
+  * 24915a3a windowrules: Add noscreenshare (#10482)
+  * 90d0b8ec core: add auto-center arrangements (#10527)
+  * ddb9f839 config: fix inconsistant hint of default value (#10556)
+  * a62ccb16 config: fix crash on misnamed variable (#10549)
+  * be6ee6e5 cmake: disable gprof by default
+  * c2805aad config: add maxwidth monitor resolution mode (#10528)
+  * 4c4c9bb3 dwindle: add better automatic window drag and drop
+    direction detection (#9704)
+  * 292a7456 eventLoop: fixup headers
+  * 23470502 pass/surface: make sure popup blurs are marked for require
+    live blur
+  * a58ab20e debug/pass: show live/precompile blur in debug
+  * cc0792c1 hyprland-uwsm.desktop: Add TryExec
+  * 28c9122a [gha] Nix: update inputs
+  * 55076eda versionkeeper: don't pop up on initial launch
+  * 81cd526f cursor: fix screencopy cursor pos and duplicate shape with
+    sw cursors (#10519)
+  * bd4733a0 flake.lock: update
+  * 4f161da3 hyprpm: ignore pins when adding a package with a git rev
+    (#10502)
+  * 185c9684 input: unhide cursor on tablet events after touch events
+    (#10484)
+  * b90910c0 renderer: add wrapping options to renderTexture method
+    (#10497)
+  * eb3b38d4 eventLoop: fixup event source callbacks
+  * d9c8a378 input: always allow focus to permission popups
+  * 158c0f29 permissions: add permission management for keyboards
+    (#10367)
+  * 44cb8f76 internal: added error log when getEdgeDefinedPoint is
+    impossible (#10462)
+  * 705b97c4 input: revert #10416 and #10418
+  * c19f3836 hyprpm: fix crash with enable without an arg
+  * bb5cd5b2 screencopy: store a fb before permission popup if the
+    permission is pending (#10455)
+  * bb9aa79b hyprpm: reject remove without a param
+  * dfa48362 hyprpm: fix execute permission bit on installed dirs
+    (#10435)
+  * 18377d22 [gha] Nix: update inputs
+  * 2aa21625 input: ensure seat grabs from exclusive layers can be
+    dismissed (#10418)
+  * 29460090 input: do not send mouse events when outside of a surface
+    (#10416)
+  * b0cc4921 protocols: simulate mouse movement after activating a
+    toplevel (#10429)
+  * a5c9b3e4 core: Include cstring whenever strncpy is used (#10404)
+  * dfb841c3 desktop: prevent layers from dismissing their own seat
+    grabs on map (#10417)
+  * 5ceb0ec1 core: drop the legacy renderer (#10408)
+  * f707d869 protocols/hyprland-surface: account for scaled monitor
+    positions (#10415)
+  * 75f2cb5f xwayland: do not include xcb.h when xwayland is disabled
+    (#10407)
+  * a51e639d input: disallow virtual keyboards from changing LED state
+    (#10402)
+  * 59b23406 opengl: add missing vao for screenshader (#10397)
+  * da3583fd opengl: publicize shader creation/usage functions (#10378)
+  * 04124988 opengl: optimize shaders and reduce unneeded drawcalls
+    (#10364)
+  * 390a3578 renderer: use alpha for the lockttytext texture
+  * 9a87498b renderer: minor damage fixes
+  * f58bb72d renderer: render blur on fade out (#10356)
+  * 60cd5b7a renderer: always render snapshots as 8bit
+  * 25cf06f6 build: require hyprgraphics>=0.1.3 (#10350)
+  * e44aae0c hyprpm: switch to numeric owner/group after f8bbe5124c00
+    (#10345)
+  * fcb6f936 hyprpm: add missing include for libc++ after 1c530cbc66db
+    (#10344)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 16 Jul 2025 12:03:15 +0200
+
 hyprland (0.49.0-1ppa4) noble; urgency=medium
 
   * Patch `using`s via cherry-picked upstream patch

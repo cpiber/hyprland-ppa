@@ -1,0 +1,26 @@
+Index: source/hyprctl/main.cpp
+===================================================================
+--- source.orig/hyprctl/main.cpp
++++ source/hyprctl/main.cpp
+@@ -268,7 +268,7 @@ int requestIPC(std::string_view filename
+     sockaddr_un serverAddress = {0};
+     serverAddress.sun_family  = AF_UNIX;
+ 
+-    std::string socketPath = getRuntimeDir() + "/" + instanceSignature + "/" + filename;
++    std::string socketPath = getRuntimeDir() + "/" + instanceSignature + "/" + std::string(filename);
+ 
+     strncpy(serverAddress.sun_path, socketPath.c_str(), sizeof(serverAddress.sun_path) - 1);
+ 
+Index: source/src/xwayland/XWM.hpp
+===================================================================
+--- source.orig/src/xwayland/XWM.hpp
++++ source/src/xwayland/XWM.hpp
+@@ -213,7 +213,7 @@ class CXWM {
+     std::vector<SP<CX11DataOffer>>            m_dndDataOffers;
+ 
+     inline xcb_connection_t*                  getConnection() {
+-        return m_connection ? *m_connection : nullptr;
++        return m_connection ? static_cast<xcb_connection_t*>(*m_connection) : nullptr;
+     }
+     struct {
+         CHyprSignalListener newWLSurface;

@@ -1,0 +1,14 @@
+Index: source/src/helpers/Monitor.cpp
+===================================================================
+--- source.orig/src/helpers/Monitor.cpp
++++ source/src/helpers/Monitor.cpp
+@@ -551,7 +551,8 @@ bool CMonitor::applyMonitorRule(SMonitor
+         std::ranges::sort(sortedModes, sortFunc);
+         if (sortedModes.size() > 3)
+             sortedModes.erase(sortedModes.begin() + 3, sortedModes.end());
+-        requestedModes.insert_range(requestedModes.end(), sortedModes | std::views::reverse);
++        auto x = sortedModes | std::views::reverse;
++        requestedModes.insert(requestedModes.end(), x.cbegin(), x.cend());
+     };
+ 
+     // last fallback is always preferred mode
