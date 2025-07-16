@@ -1,3 +1,12 @@
+hy3 (0.49.0~1ppa1+git202507161213-8911d4b) noble; urgency=medium
+
+  * Update to master 8911d4b
+  * 8911d4b remove duplicate tab bar render
+  * 3e377c3 fix broken render for first drawn tab-bar entry
+  * 8b48645 fixup: create new render pass UPs for tabs every frame
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 16 Jul 2025 12:13:12 +0200
+
 hy3 (0.47.0~1ppa1+git202505061838-567dc9dbuild8) noble; urgency=medium
 
   * Rebuild for unstable
