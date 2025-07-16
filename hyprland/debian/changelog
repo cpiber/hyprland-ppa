@@ -1,3 +1,23 @@
+hyprland-unstable (0.50.0~1ppa1+git202507161209-c4a4c341) noble; urgency=medium
+
+  * Update to main c4a4c341
+  * c4a4c341 version: bump to 0.50.0
+  * d4fbedcd core: never use hw cursors when tearing
+  * 5bfe6dc7 config: disable hw on mgpu nvidia by default (#11018)
+  * 8453fbf4 snap: fix `border_overlap` option for monitor snapping
+    (#10987)
+  * e15014e0 protocols/cm: Fix preferred image description (#11026)
+  * bc764f70 protocols: Remove incorrect CM proto debug check and fix
+    preferred image description (#11023)
+  * 06fcdbd9 renderer: use makeUnique for session-lock render passes
+    (#11019)
+  * 01971cb6 session-lock: don't render workspaces when locked (#10865)
+  * d0f58baf screencopy: ignore hidden windows in noscreenshare
+  * 8bfff878 debugOverlay: fix tick measurement
+  * 6821723b splashes: add zacoons' splash
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 16 Jul 2025 12:09:46 +0200
+
 hyprland-unstable (0.49.0~1ppa1+git202507112253-e589adb0) noble; urgency=medium
 
   * Update to main e589adb0
