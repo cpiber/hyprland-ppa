@@ -1,3 +1,14 @@
+aquamarine (0.9.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.2
+  * e31b575 version: bump to 0.9.2
+  * dfe9601 allocator: workaround linear blitting (#174)
+  * 8b22613 hdr: don't skip setting up HDR even when the modes are the
+    same (#188)
+  * d04e01e core: use -Wpedantic and fix warnings (#187)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 17 Jul 2025 18:08:40 +0200
+
 aquamarine (0.9.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.1
