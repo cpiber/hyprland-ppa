@@ -58,6 +58,17 @@ if [ "$curhead" = "$newhead" ]; then
   fi
   exit 1
 fi
+set +x
+if [ -n "`git log $curhead..$newhead -- CMakeLists.txt Makefile`" ]; then
+  echo "!!! Project configuration changed !!!"
+  git diff $curhead..$newhead -- CMakeLists.txt Makefile
+  echo "! Please review changes and continue or abort !"
+  read -p "continue? [y/N] " a
+  if [ "$a" != "y" ] && [ "$a" != "Y" ]; then
+    exit 1
+  fi
+fi
+set -x
 changes="`git log --pretty="%h %s" $curhead..$newhead`"
 cd ..
 dist="`dpkg-parsechangelog --show-field Distribution`"
