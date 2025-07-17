@@ -1,3 +1,28 @@
+hyprlock (0.9.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.0
+  * 31297a8 version: bump to 0.9.0
+  * 17fefce input-field: fix wrong placeholder text for resourceID
+    (#819)
+  * 46498da widgets: remove the libc++ version check (#818)
+  * fee04f6 flake.lock: update
+  * d84b44e core: use hyprutils atomic pointers (#808)
+  * 7999f44 core: replace grace option with --grace cli argument (#802)
+  * a963898 core: use a screenshot for fade in/out (#726)
+  * e67036e CI/Nix: add cache-nix-action
+  * f9d8dfa nix: use gcc15
+  * 1303bb4 cmake: Add check for libpam using pkg_check_modules (#795)
+  * 8455fc8 core: interpret touch as click (#788)
+  * da1d076 core: fix variable substitution for LAYOUT (#778)
+  * f7f0c9c example: Add config location hint to help new users (#771)
+  * c12cf8e core: disable fade in when using --immediate (#763)
+  * 0c5fd97 renderer: properly treat monitor `desc:` prefix (#765)
+  * fae1c4f misc: readme cleanup, remove deps required by hyprgraphics
+    (#762)
+  * e3bd47e widgets: add onclick feature (#736)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 17 Jul 2025 18:02:34 +0200
+
 hyprlock (0.8.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

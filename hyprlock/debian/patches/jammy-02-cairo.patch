@@ -2,9 +2,9 @@ Index: source/src/renderer/AsyncResourceGatherer.hpp
 ===================================================================
 --- source.orig/src/renderer/AsyncResourceGatherer.hpp
 +++ source/src/renderer/AsyncResourceGatherer.hpp
-@@ -10,6 +10,8 @@
- #include "Shared.hpp"
+@@ -11,6 +11,8 @@
  #include <hyprgraphics/cairo/CairoSurface.hpp>
+ #include <hyprutils/os/FileDescriptor.hpp>
  
 +#define CAIRO_FORMAT_RGB96F 6
 +
