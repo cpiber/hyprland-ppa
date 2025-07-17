@@ -1,0 +1,17 @@
+Description: Remove PAM from CMake's pkg_check_modules
+ The package on jammy doesn't provide pam.pc, so this fails, even
+ though the library is present
+Author: Constantin Piber <cp.piber@gmail.com>
+
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -89,7 +89,6 @@ pkg_check_modules(
+   pangocairo
+   libdrm
+   gbm
+-  pam
+   hyprutils>=0.8.0
+   sdbus-c++>=2.0.0
+   hyprgraphics)
