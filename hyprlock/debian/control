@@ -24,6 +24,7 @@ Build-Depends:
  libgbm-dev,
  libgl1-mesa-dev,
  libpam0g-dev,
+ libaudit-dev,
  libsdbus-c++-dev (>= 2.0.0),
  hyprwayland-scanner (>= 0.4.4),
 Standards-Version: 4.6.2
