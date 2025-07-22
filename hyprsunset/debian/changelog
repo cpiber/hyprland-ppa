@@ -1,3 +1,17 @@
+hyprsunset (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * a52fd15 version: bump to 0.3.0
+  * f663619 core: add a config (#41)
+  * 4b2f0f9 core: bind to output v3
+  * 845f7e8 core: remove output state on global remove
+  * b32b756 CI/Nix: add cache-nix-action
+  * 4528cca nix: use gcc15
+  * 2a8ef76 ipc: Don't crash when given bad input via IPC (#29)
+  * fdcc9a1 core: add -v and --verbose
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Jul 2025 09:18:54 +0200
+
 hyprsunset (0.2.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.2.0

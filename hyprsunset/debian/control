@@ -12,6 +12,7 @@ Build-Depends:
  libwayland-dev,
  wayland-protocols,
  libhyprutils-dev (>= 0.2.3),
+ libhyprlang-dev,
  hyprland-protocols (>= 0.4.0),
  hyprwayland-scanner (>= 0.4.0),
 Standards-Version: 4.6.2
