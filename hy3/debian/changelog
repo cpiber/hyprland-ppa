@@ -1,3 +1,11 @@
+hy3 (0.50.0~1ppa1+git202507220928-b813c13) noble; urgency=medium
+
+  * Update to master b813c13
+  * b813c13 remove catchall tab render
+  * d61a2eb version: update hyprland to 0.50.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Jul 2025 09:28:39 +0200
+
 hy3 (0.49.0~1ppa1+git202507161213-8911d4b) noble; urgency=medium
 
   * Update to master 8911d4b
