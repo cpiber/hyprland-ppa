@@ -1,3 +1,24 @@
+hyprland (0.50.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.50.1
+  * 4e242d08 [gha] Nix: update inputs
+  * 4a549a54 version: bump to 0.50.1
+  * 102bf351 sessionlock: fix timer logic on unsafe state
+  * 77ab8962 eventloop: improve timer handling to avoid crashes
+  * b0b1c70e eventloop: avoid duplicate timers
+  * 6c01b131 opengl: detect android fence support and disable explicit
+    if it's missing (#11077)
+  * 29b72860 snap: use window extents instead of border size (#11079)
+  * 95f4d5f7 framescheduler: check monitor validity in doLater
+  * c75a1b0c compositor: properly set infinite region on null input
+  * 24296d5b framescheduler: dont if check deleted weakpointer (#11063)
+  * fd724767 config: default drag_lock to 0
+  * f6ad0412 socket2: fixup invalid ws passed to openwindow
+  * ccf5c7dc version: bump to 0.50.0
+  * 1a405a7e core: never use hw cursors when tearing
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Jul 2025 09:14:41 +0200
+
 hyprland (0.50.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.50.0
