@@ -1,3 +1,40 @@
+hyprland-unstable (0.50.0~1ppa1+git202507220926-873914a2) noble; urgency=medium
+
+  * Update to main 873914a2
+  * 873914a2 CI/Nix: also check for qt version in update script
+  * 50758505 example: make screen shader example compatible with glsl
+    300 (#10846) (#11132)
+  * 462729d8 protocols/subcompositor: fix subsurface sorting (#11136)
+  * bf1602d9 renderer: implement wp-color-management-v1 transfer
+    functions (#11084)
+  * d4de6938 internal: set value and goal for window size and position
+    on setGroupCurrent (#11120)
+  * 503fc458 internal: replace unsafe strcpy with snprintf (#11128)
+  * a3d59b52 systeminfo: print more render info
+  * b7a91e02 renderer: Add cursor:invisible to allow to hide the cursor
+    (#11058)
+  * 58b6eceb sessionlock: fix flipped if condition
+  * 91d8a629 sessionlock: fix timer logic on unsafe state
+  * 8b383530 eventloop: improve timer handling to avoid crashes
+  * 3b041312 eventloop: avoid duplicate timers
+  * d84699d8 opengl: detect android fence support and disable explicit
+    if it's missing (#11077)
+  * ae3cc48f protocols/gamma: support pipes (#11076)
+  * 4adf6589 README: add link to CI from badge (#11085)
+  * 260a13a1 snap: use window extents instead of border size (#11079)
+  * 088e8af9 [gha] Nix: update inputs
+  * 49abc193 framescheduler: check monitor validity in doLater
+  * a05c797e compositor: properly set infinite region on null input
+  * b46dc9ee framescheduler: dont if check deleted weakpointer (#11063)
+  * 75c0675e config: add better zoomFactor default (#11060)
+  * 49d73d18 config: default drag_lock to 0
+  * 409b56f6 hyprctl: make animations print details about bezier curves
+    (#10413) (#10871)
+  * 148718b3 socket2: fixup invalid ws passed to openwindow
+  * 53496679 master: add ignoremaster to swapwithmaster
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 22 Jul 2025 09:26:55 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202507161209-c4a4c341) noble; urgency=medium
 
   * Update to main c4a4c341
