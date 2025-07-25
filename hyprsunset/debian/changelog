@@ -1,3 +1,12 @@
+hyprsunset (0.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.1
+  * 962f519 version: bump to 0.3.1
+  * e2116a1 core: fixup threading stuff
+  * f075fc4 README: fix wiki link (#43)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Jul 2025 10:43:39 +0200
+
 hyprsunset (0.3.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.3.0
