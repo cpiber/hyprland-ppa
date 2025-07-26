@@ -1,3 +1,16 @@
+hyprlang (0.6.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.4
+  * 12cb0e1 tests: minor typo fix
+  * 1386573 core: fix negating of ifs
+  * 235ce61 core: add support for conditional statements
+  * cee0145 CI/Nix: add cache-nix-action
+  * 1bfb84f nix: use gcc15 (#79)
+  * 163c83b parser: Add ability to escape {{EXPRESSION}} syntax from #75
+    (#76)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 26 Jul 2025 12:35:31 +0200
+
 hyprlang (0.6.3-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
