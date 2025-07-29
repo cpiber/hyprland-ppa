@@ -1,3 +1,17 @@
+hyprutils (0.8.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.2
+  * c65d41d version: bump to 0.8.2
+  * 8dd20c7 mat3x3: check for finite in toString (#70)
+  * 18fbac5 memory: add missing lock (#69)
+  * b074d4a memory: fix CAtomicSharedPointer mutex unlock and lifetime
+    issues (#68)
+  * bcabcba signal: reserve vector size to avoid reallocations
+  * 86905e2 mat3x3: use float versions of sin/cos reduce dereferencing
+  * e21b18f region: introduce foreach and cleanup clangd warnings (#65)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 29 Jul 2025 16:56:53 +0200
+
 hyprutils (0.8.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.1
