@@ -1,3 +1,16 @@
+hyprlock (0.9.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.1
+  * bdf0ef8 version: bump to 0.9.1
+  * 7169163 Add ctrl+a as binding to clear password (#832)
+  * 1e5e62d background: fix mismatched asset sizes and transforms (#830)
+  * d993bdc asyncResourceGatherer: fix conditions for skipping
+    screencopy (#829)
+  * 8ebcee2 seat: restore cursor shape to default (#820)
+  * 1553dd7 core: limit onClick to down events (#826)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 31 Jul 2025 16:03:47 +0200
+
 hyprlock (0.9.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.0
