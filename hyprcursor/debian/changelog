@@ -1,3 +1,14 @@
+hyprcursor (0.1.13-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.13
+  * 44e91d4 version: bump to 0.1.13
+  * 35c6fe2 core: fix resizing raster images
+  * 45fcc10 nix: use gcc15 (#91)
+  * ac903e8 docs: updated MAKING_THEMS.md (#86)
+  * 2fd3642 README: remove todos
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 31 Jul 2025 16:02:09 +0200
+
 hyprcursor (0.1.12-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.12
