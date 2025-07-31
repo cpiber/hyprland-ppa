@@ -1,3 +1,17 @@
+hyprpolkitagent (0.1.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.3
+  * 7e40544 version: bump to 0.1.3
+  * 70c2bab systemd: rename to org.hyprland.hyprpolkitagent.service
+    (#35)
+  * 5f8de19 CI/Nix: add cache-nix-action
+  * 20d5601 nix: use gcc15
+  * 352638e dbus: fix D-bus name (#30)
+  * 3bef8bf CI: remove deprecated magic-nix-cache-action
+  * 34ebabd flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 31 Jul 2025 16:05:44 +0200
+
 hyprpolkitagent (0.1.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.2
