@@ -1,3 +1,142 @@
+waybar-unstable (0.14.0~1ppa1+git202508081840-41de8964) noble; urgency=medium
+
+  * Update to master 41de8964
+  * 41de8964 chore: 0.14.0
+  * 7e0cbf4a fix: lint
+  * b3fbe1b5 Merge pull request #4319 from M0streng0/master
+  * 477f3070 Merge pull request #4208 from markx86/feat/battery-events
+  * 07d3a4da Merge pull request #4333 from
+    Arkoniak/relative_paths_in_includes
+  * 61b3c6d7 Merge pull request #3929 from xb-bx/master
+  * c63e332f Merge pull request #4278 from rwsalie/master
+  * 79c30e77 fix: lint
+  * b0983e9c Merge pull request #3833 from Bahnschrift/master
+  * 3dce0956 Merge pull request #3930 from Invertisment/master
+  * 9a545e75 Merge pull request #4080 from proycon/river-layout-class
+  * 7cfa708b Merge pull request #4326 from notpeelz/feat-network-match-
+    altnames
+  * f1b7d829 Merge pull request #4016 from jp7677/ext-workspaces
+  * 6679801a Merge pull request #3849 from haansn08/mpd-format-uri
+  * 13a4e5d4 Merge pull request #4337 from
+    Alexays/update_flake_lock_action
+  * b9a26f51 Merge pull request #3868 from pol-rivero/master
+  * ff69525e flake.lock: Update
+  * 1e0037a8 fixed extra copy
+  * 5bbace1d Merge remote-tracking branch 'upstream/master'
+  * 4c720333 refactor: why is that line there
+  * b5093f3e feat: match network interfaces by their altnames
+  * f824ae93 Relative paths in included configs
+  * 90f24904 Fix: Backlight same issue with states
+  * a6ac7598 Add: WirePlumber - format-source support
+  * 7cb1a0e3 Add: Wireplumber - support for microphone
+  * 91e57376 Fix: WirePlumber module - states not working
+  * 0776e694 Merge pull request #4316 from erikeah/master
+  * bb190409 fix: unable to disable upower's tooltip
+  * 39d6d80f Merge pull request #4315 from notpeelz/style-clang-format
+  * b4d95b40 style: clang-format
+  * 71b01fe5 Merge pull request #4161 from blackxored/feat/electron-
+    tray-hack
+  * 2baa9317 Merge pull request #4260 from notpeelz/feat-display-rfkill-
+    setting
+  * 321ed85a Merge pull request #4298 from csskevin/docu-arch
+  * e526afb9 Merge pull request #4310 from arnaud-ma/remove-persistent-
+    workspace-rules
+  * 8dcdd978 small fixes
+  * 2dc2b5cc fix #4307
+  * a4f200cd revert
+  * 64ed2cd9 fix indentation
+  * e4588308 hyprland: Remove redundant workspace rules loading
+  * 061c5617 adding dependency command for arch
+  * 506fd5c5 Merge branch 'Alexays:master' into master
+  * 682fc34c fix linters for css_reload_helper.cpp
+  * f91889ce format SafeSignal.hpp as the linters want
+  * 94777921 Merge pull request #4272 from labruzese/master
+  * ee9dc6ae Merge pull request #4292 from nraffp/4291
+  * 1cb30e0f Merge pull request #4275 from acarl005/master
+  * 50711bfb Merge pull request #4284 from
+    hritix/feature/markup_support_for_tooltip_of_battery_and_pulseaudio
+  * 19360462 respect gtk color schema variant for gtk css variable
+  * 73d9c5f5 fix(network): reset is_p2p_ in clearIface
+  * b85f0c17 fix(network): ignore carrier state when the interface is
+    down
+  * b02694ca fix(network): initialize all fields
+  * 2dfbaabf fix(network): use atomic_bool to store the rfkill state
+  * f991af28 style(network): fix trailing white space
+  * 0e07c7ac feat(network): add rfkill setting
+  * 46a152ab fix(network): display as disabled if rfkill and no carrier
+  * 310a473e enabled markup support for tooltip of battery and
+    pulseaudio modules
+  * d808c003 avoid useless vars on cpu_frequency, mimic
+    sigrtmin/sigrtmax
+  * 0cb605b5 start openbsd ports
+  * 04796988 feat(river): set layout name as class
+  * 4d74bb30 sway/workspaces: implement reverse-scroll
+  * fd670026 fix: prevent persistent workspaces from being duplicated if
+    they exist under a different name
+  * c98cb709 Merge remote-tracking branch 'upstream/master'
+  * cae5f9a5 Merge pull request #4274 from tpaau-17DB/master
+  * 10c116e5 Change default tooltip for the battery module.
+  * 6d3b93bb fix: added active workspace matching by name as fallback
+  * 9ef6dc73 fix: hyprland named persistent workspaces
+  * f409f531 Merge pull request #4256 from
+    Alexays/update_flake_lock_action
+  * 88766de1 Merge pull request #4258 from notpeelz/fix-network-eth-
+    rfkill-precedence
+  * b6c13ba5 fix: 'ethernet' network state should have precedence over
+    'disabled'
+  * e7a4bafe flake.lock: Update
+  * 6c48db6c ext/workspaces: log workspace id/name
+  * 984d0de1 ext/workspaces: introduce ignore-hidden option
+  * 29bf5d5d ext/workspaces: moved/renamed from wlr/workspaces
+  * 255c0ebe wlr/workspaces: port to ext-workspace-v1
+  * 8516d457 Merge pull request #4242 from mexanoz/fix-hyprland-language
+  * 7505e2c3 fix hyprland/language layout parsing
+  * c8dc3e70 Remove unused import
+  * b7ff47fb User kill signal config keys: Use underscore instead of
+    dash
+  * 7463be9b Fix initial null configuration; Fix doc compilation errors
+  * 125b59e2 Add more details on how 'reload' works in signals
+  * 3c7a9bf4 Documentation for sigusr1 and sigusr2 config
+  * aaea8142 Idempotent bar show/hide via configurable user kill signals
+  * c336bc54 Merge pull request #4234 from Invertisment/fix-default-icon
+  * 460b19ba Fix default icon in tray module
+  * 53d8d3cd fix: Code formatting for clang-format/lint CI
+  * eae22f32 battery: Document `events` in `waybar-battery` manpage
+  * 08da7b52 feat: Add support for battery related events
+  * 800c4b56 Merge remote-tracking branch 'source/master'
+  * 81fb0daa feat: add a way to override electron app tray icons
+  * 4ae2b6f1 Implement ignore-list
+  * c9215ad8 Minor code cleanup
+  * 61c5dad8 Fix some windows not being marked as active when opened
+  * 998fd7a1 Fix window title not being updated properly
+  * 72404a77 Initial implementation of active window
+  * 59c270ec Respect format-window-separator if workspace-taskbar is
+    enabled
+  * a816812f Run clang-format
+  * 451d4585 Fix compilation errors after merge
+  * 4222032f Merge remote-tracking branch 'upstream/master'
+  * e541936d Merge remote-tracking branch 'upstream/master'
+  * 4dbb874f Merge remote-tracking branch 'upstream/master'
+  * 1a9f5ace workspace taskbars: Add button param to click command
+  * 7b854112 workspace taskbars: Allow custom command on window click
+  * b4519c08 workspace taskbars: Use sigc::mem_fun instead of lambda
+  * e0f36955 workspace taskbars: Minor fixes
+  * 42affa4e workspace taskbars: Update manpage
+  * 5ee0d1c7 workspace taskbars: Fix windows not showing
+  * 3948c0d1 workspace taskbars: Focus window on click
+  * 53ca5a48 workspace taskbars: Display windows in a consistent order
+  * e1649b00 workspace taskbars: Fix title not updating
+  * 5e1d6d1c workspace taskbars: Fix title not updating
+  * fdb90040 workspace taskbars: More config options
+  * 1c07ca00 workspace taskbars: Add config parsing
+  * 69e2e249 Initial implementation of workspace taskbars
+  * bc2e143a Extract icon loading logic to separate class
+  * d100e788 mpd: add uri and filename format arguments
+  * cf64b2c8 fix: un-hide tray when new icons are added
+  * 622f22d6 fix: hide tray when there are no non-passive icons
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 08 Aug 2025 18:40:42 +0200
+
 waybar-unstable (0.13.0~1ppa1+git202506231934-0fcda9af) noble; urgency=medium
 
   * Update to master 0fcda9af
