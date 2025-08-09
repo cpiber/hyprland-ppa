@@ -1,0 +1,5 @@
+hyprchroma (0.50.0~1ppa1+git202508091418-0a70558) noble; urgency=medium
+
+  * Initial release. DOES NOT BUILD ON 0.50
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 Aug 2025 14:18:30 +0200
