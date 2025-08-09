@@ -1,0 +1,34 @@
+Source: hyprsplit
+Section: universe/x11
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ yq,
+ hyprland-unstable (>= 0.50.0~1ppa1+git202508091209-00da4450~), hyprland-unstable (<< 0.50.0~1ppa1+git202508091209-00da44509),
+ hyprland-plugin-deps,
+ gcc-14,
+ g++-14,
+Standards-Version: 4.6.2
+Vcs-Browser: https://github.com/shezdy/hyprsplit
+Vcs-Git: https://github.com/shezdy/hyprsplit.git
+
+Package: hyprsplit
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ hyprland-unstable (>= 0.50.0~1ppa1+git202508091209-00da4450~), hyprland-unstable (<< 0.50.0~1ppa1+git202508091209-00da44509),
+Description: awesome / dwm like workspaces for hyprland
+ A complete rewrite of split-monitor-workspaces that attempts to fix the issues
+ I experienced with it. Improvements include:
+ - Workspaces on each monitor are determined by that monitor's ID
+ - Ability to grab windows that get lost in invalid workspaces when
+   disconnecting monitors
+ - Dispatcher to swap all windows in active workspaces between two monitors
+ - Better handling of workspace params. For example empty will work properly
+   and select an empty workspace on the current monitor.
+ .
+ Packaged for hyprland-unstable.

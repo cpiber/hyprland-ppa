@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://github.com/shezdy/hyprsplit/issues
+Bug-Submit: https://github.com/shezdy/hyprsplit/issues/new
+# Changelog: https://github.com/shezdy/hyprsplit/blob/master/CHANGES
+Documentation: https://github.com/shezdy/hyprsplit
+Repository-Browse: https://github.com/shezdy/hyprsplit
+Repository: https://github.com/shezdy/hyprsplit.git

@@ -112,3 +112,6 @@
 [submodule "hyprspace/source"]
 	path = hyprspace/source
 	url = https://github.com/KZDKM/Hyprspace.git
+[submodule "hyprsplit/source"]
+	path = hyprsplit/source
+	url = https://github.com/shezdy/hyprsplit.git

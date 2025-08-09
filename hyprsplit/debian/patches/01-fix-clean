@@ -1,0 +1,13 @@
+Index: source/Makefile
+===================================================================
+--- source.orig/Makefile
++++ source/Makefile
+@@ -7,7 +7,7 @@ all:
+ 	$(CXX) $(CXXFLAGS) $(INCLUDES) $(SRC) -o $(TARGET)
+ 
+ clean:
+-	rm ./$(TARGET)
++	rm -f ./$(TARGET)
+ 
+ withhyprpmheaders: export PKG_CONFIG_PATH = /var/cache/hyprpm/$(USER)/headersRoot/share/pkgconfig
+ withhyprpmheaders: all

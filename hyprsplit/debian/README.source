@@ -1,0 +1,10 @@
+hyprsplit
+----------------------
+
+awesome / dwm like workspaces for [hyprland](https://github.com/hyprwm/hyprland)
+
+A complete rewrite of [split-monitor-workspaces](https://github.com/Duckonaut/split-monitor-workspaces) that attempts to fix the issues I experienced with it. Improvements include:
+- Workspaces on each monitor are determined by that monitor's ID
+- Ability to grab windows that get lost in invalid workspaces when disconnecting monitors
+- Dispatcher to swap all windows in active workspaces between two monitors
+- Better handling of workspace params. For example `empty` will work properly and select an empty workspace on the current monitor.
