@@ -1,3 +1,73 @@
+hyprland-unstable (0.50.0~1ppa1+git202508091209-00da4450) noble; urgency=medium
+
+  * Update to main 00da4450
+  * 00da4450 renderer: minor fixups to uv calcs (#11375)
+  * afbd8796 configWatcher: fix inotify event reading buffer size
+    (#11337)
+  * 6a1baa89 nix/lib: add bezier to topCommandsPrefixes
+  * a4529beb master: avoid crash if openingon null in onWindowCreated
+  * d1c8dc54 hyprtester: drop gcc flag
+  * ec26b753 descriptions: fix bad json output (#11350)
+  * 0c317f25 internal: Fix compilation with libc++ (#11355)
+  * 3c6536d9 config: format animation config as table for readability
+    (#11326)
+  * 2859f1b7 keybinds: use the triggering keyboard for repeat timings
+    (#11309)
+  * 2be309de virtualkeyboard: Add options to skip releasing pressed keys
+    on close and to skip sharing key states (#11214)
+  * 6491bb4f hyprctl: Include physical monitor size in IPC monitor info
+    (#11276)
+  * 1b86d35f popup: remove wlSurface ownership on destroy
+  * 549f5e8d popup: fix animation configs
+  * 0f1484c2 subsurface: check surface size in damageLastArea
+  * f6d8e864 popup: imorove logging, use fadeAlpha for opacity
+  * 61826dc7 renderer: fix snapshot coords
+  * 855d103a renderer: add popup fade-in-out (#11313)
+  * 77068c78 screencopy: multiply box pos by scale
+  * bfe7e090 hyprctl: fix typo in seterror
+  * 82443894 renderer: apply default luma for reverting back to srgb
+  * f1f1161c dwindle: fix single_window_aspect_ratio not updating with
+    config reload (#11305)
+  * e1e23eb9 screencopy: avoid crash on cm disabled
+  * c14f792f [gha] Nix: update inputs
+  * 310fc629 protocols: fix presentation time proto version (#11306)
+  * 314a0ea4 LICENSE: Update year (#11301)
+  * 9607e3b5 screencopy: un-hdr screencopy buffers for cm-unaware
+    clients (#11294)
+  * a907ecd4 opengl: improve render fn arg clarity (#11286)
+  * 3e35797b fix: add climits includes (#11288)
+  * 23be1db1 dnd: drop on tablet pen tip up (#11270)
+  * f309d860 session-lock: explicitly consider dpms states for sending
+    locked or denied (#11278)
+  * 38e13282 flake.lock: bump hyprutils
+  * 84c5e744 build: bump hu dep to 0.8.2
+  * 36a8b222 renderer: use CRegion foreach over getRects (#10980)
+  * 43966cc7 foreign-toplevel: update monitor properly on changed
+  * f51be7f2 layers: check monitor is not null on animation update
+    (#11267)
+  * 66a6ef38 core: disable esync for non-linux kernels
+  * 745a671c input: don't reload xkb configs if settings didnt change
+  * abe29647 monitor: fix crash on mutating workspace vec
+  * c63d0003 core: fix workspace persistence tracking (#11239)
+  * 5d4b4ecb input: lock focus for tablet when down (#11219)
+  * 211199e8 fix: include decorations in visibleOnMonitor calculation
+    (#11232)
+  * e1fff05d layerSurface: check for monitor validity in startAnimation
+  * 5c8d675e ci: correct tar command for xz compression & fix typos
+    (#11213)
+  * fd0c1f2a keybinds: do not reset scroll timer on not passed
+  * 31cc7f3b core: move workspace ptrs to weak (#11194)
+  * ecc04e8b drm: check syncobj timeline support before advertising
+    protocol (#11117)
+  * c51c6e38 tests: add a few more workspace tests
+  * 55f2daa2 swipe: fix workspace swipe not rendering last frame if
+    target ws is on edge (#11184)
+  * 2d2a5beb core: fix maxwidth resolution mode (#11183)
+  * 6ca7c14b CTM: check for finite value aswell (#11185)
+  * fdbbad04 core: enter unsafe state on boot if there are no mons
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 Aug 2025 12:09:33 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202507220926-873914a2) noble; urgency=medium
 
   * Update to main 873914a2
