@@ -1,3 +1,16 @@
+hyprland-plugins (0.50.0~1ppa1+git202508091210-c8dc6f3) noble; urgency=medium
+
+  * Update to main c8dc6f3
+  * c8dc6f3 Hyprscrolling: Respect general:no_focus_fallback config when
+    using layoutmsg focus (#443)
+  * bdd56d2 Hyprscrolling: Make resizeactive keyboard binds work for
+    vertical window resizing (#442)
+  * ba1823c hyprpm: add pins for 0.50.x
+  * 827a181 all: chase hyprland opengl render fn changes (#437)
+  * bf310cd csgo-vk-fix: allow more configs
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 Aug 2025 12:10:05 +0200
+
 hyprland-plugins (0.50.0~1ppa1+git202507220927-14f9a44) noble; urgency=medium
 
   * Update to main 14f9a44
