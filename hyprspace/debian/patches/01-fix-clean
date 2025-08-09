@@ -1,0 +1,15 @@
+Index: source/Makefile
+===================================================================
+--- source.orig/Makefile
++++ source/Makefile
+@@ -7,7 +7,7 @@ all:
+ 	$(CXX) $(CXXFLAGS) $(INCLUDES) $(SRC) -o $(TARGET)
+ 
+ clean:
+-	rm ./$(TARGET)
++	rm -f ./$(TARGET)
+ 
+ withhyprpmheaders: export PKG_CONFIG_PATH = $(XDG_DATA_HOME)/hyprpm/headersRoot/share/pkgconfig
+-withhyprpmheaders: all
+\ No newline at end of file
++withhyprpmheaders: all

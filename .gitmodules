@@ -109,3 +109,6 @@
 [submodule "hy3/source"]
 	path = hy3/source
 	url = https://github.com/outfoxxed/hy3.git
+[submodule "hyprspace/source"]
+	path = hyprspace/source
+	url = https://github.com/KZDKM/Hyprspace.git
