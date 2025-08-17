@@ -1,3 +1,29 @@
+hyprland-unstable (0.50.0~1ppa1+git202508170943-251288ec) noble; urgency=medium
+
+  * Update to main 251288ec
+  * 251288ec renderer: add dpms animations (#11452)
+  * 3d4dc194 renderer: improve zoom in anims (#11453)
+  * 78c9e208 framescheduler: fix edge case crashes
+  * 1cbb62ed masterlayout: add previous mode for focusmaster command
+    (#11361)
+  * 7580a9aa renderer: Add rounding power setting to groupbar and
+    gradient roundness. (#11420)
+  * edc473e8 xwayland: prevent infinite event loop in XWM clipboard
+    transfers (#11427)
+  * aaedce59 protocols: implement ext-data-control (#11323)
+  * 60d769a8 internal: unify VT getting
+  * beee22a9 refactor: Use new hyprutils casts (#11377)
+  * aa6a78f0 internal: Ensure unique identifiers for persistent
+    workspaces (#11409)
+  * 2b6e2ceb config: Hardened config logic against Time-Of-Check race
+    conditions (#11368)
+  * 449d5e11 internal: add missing c includes (#11417)
+  * cb6589db misc: remove commas from device names
+  * 584b844a [gha] Nix: update inputs
+  * 69c3ab1a tablet: do not lock focus when dnd-ing (#11390)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 17 Aug 2025 09:43:42 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202508091209-00da4450) noble; urgency=medium
 
   * Update to main 00da4450
