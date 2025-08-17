@@ -1,3 +1,15 @@
+aquamarine (0.9.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.3
+  * 98968ac version: bump to 0.9.3
+  * 498f466 renderer: use rendernode if available (#202)
+  * be166e1 gbm: Default to forcing linear blit for multigpu (#197)
+  * f0db9b7 core: introduce drmRenderNodeFD() (#193)
+  * 141a991 libinput: handle tablet axis on proximity, tip and button
+    events (#194)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 17 Aug 2025 22:54:38 +0200
+
 aquamarine (0.9.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.2
