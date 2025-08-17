@@ -1,3 +1,13 @@
+hyprutils (0.8.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.3
+  * e631ea3 version: bump to 0.8.3
+  * 69efb62 memory: smart pointer factories should not be static (#72)
+  * df6b882 memory: Add C++ cast aliases; replace existing casts and
+    remove redundant casts (#71)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 17 Aug 2025 09:41:05 +0200
+
 hyprutils (0.8.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.2
