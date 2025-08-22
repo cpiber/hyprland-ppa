@@ -24,6 +24,7 @@ Build-Depends:
  libhyprlang-dev (>= 0.2.0),
  libhyprutils-dev (>= 0.2.6),
  hyprwayland-scanner (>= 0.4.2),
+ hyprland-protocols,
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/xdg-desktop-portal-hyprland
