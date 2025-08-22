@@ -1,3 +1,10 @@
+hyprspace (0.50.0~1ppa1+git202508222015-2b61fd2) noble; urgency=medium
+
+  * Update to main 2b61fd2
+  * 2b61fd2 Update README.md
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 22 Aug 2025 20:15:58 +0200
+
 hyprspace (0.50.0~1ppa1+git202508091408-d626e9e) noble; urgency=medium
 
   * Initial release.

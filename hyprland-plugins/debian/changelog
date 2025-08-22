@@ -1,3 +1,13 @@
+hyprland-plugins (0.50.0~1ppa1+git202508222009-c1ddebb) noble; urgency=medium
+
+  * Update to main c1ddebb
+  * c1ddebb scrolling: add note about layout
+  * 984669e scrolling: centerOrFit with 'focus' when first or last
+    column already focused. (#447)
+  * 833af8e hyprbars: remove init notification (#446)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 22 Aug 2025 20:09:24 +0200
+
 hyprland-plugins (0.50.0~1ppa1+git202508091210-c8dc6f3) noble; urgency=medium
 
   * Update to main c8dc6f3
