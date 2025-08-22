@@ -1,3 +1,35 @@
+hyprland-unstable (0.50.0~1ppa1+git202508222008-0d45b277) noble; urgency=medium
+
+  * Update to main 0d45b277
+  * 0d45b277 internal: Solitary clients with single subsurface & verbose
+    solitary/tearing/DS checks (#11228)
+  * e95ba5bf renderer: add eRenderStage::RENDER_POST_WALLPAPER (#11501)
+  * 4e8875b5 hdr: scRGB, HLG and SDR -> HDR fixes (#11499)
+  * fdf1612f windowrules: Add `novrr` dynamic window rule (#11370)
+  * 42caff55 window: fix requestedMinSize crash (#11498)
+  * 50a242f1 config: add dim_modal
+  * 1ac1ff45 touch: detach from pointer input
+  * 9a202069 touch: fix popup coordinates for touch down
+  * 10cec2b7 dwindle: simplify split_bias logic and set of possible
+    values. (#11448)
+  * d0d728c6 render: include numbers header (#11475)
+  * 3370a6a8 monitor: fix dpms toggling animations when state is
+    unchanged (#11480)
+  * 1d679874 hdr: fix overrides and missing edid hdr metadata (#11476)
+  * 1a0ed00f protocols/wayland: use UP and rvalue refs for callbacks
+    (#11471)
+  * 21953ddf hyprctl: add getprop (#11394)
+  * d8901786 internal: reference command-line arguments instead of
+    copying them (#11422)
+  * bca96a5d protocols: Fix fading out windows with noscreenshare being
+    visible  (#11457)
+  * dfe58c48 compositor: mark createNewWorkspace as nodiscard
+  * e8731883 compositor: fix new workspace being lost in
+    moveWorkspaceToMonitor
+  * 0840103a renderer: improve modeset timings (#11461)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 22 Aug 2025 20:08:56 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202508170943-251288ec) noble; urgency=medium
 
   * Update to main 251288ec
