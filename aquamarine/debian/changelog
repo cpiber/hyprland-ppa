@@ -1,3 +1,14 @@
+aquamarine (0.9.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.4
+  * 81584da version: bump to 0.9.4
+  * 25fba03 flake.lock: update hyprutils
+  * adb34ed nix: make mold optional
+  * 50637ed drm: revert #203 and half of #202 (#204)
+  * 84d53ca drmdumb: reopen displaynode (#203)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 23 Aug 2025 16:05:42 +0200
+
 aquamarine (0.9.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.3
