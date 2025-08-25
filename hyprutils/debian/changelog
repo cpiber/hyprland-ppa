@@ -1,3 +1,12 @@
+hyprutils (0.8.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.4
+  * b2ae320 version: bump to 0.8.4
+  * bc193ef os/process: add setStdinFD  (#74)
+  * b364dcb nix: make mold optional
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 25 Aug 2025 14:24:50 +0200
+
 hyprutils (0.8.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.3
