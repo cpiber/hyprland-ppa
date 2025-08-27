@@ -1,3 +1,25 @@
+hypridle (0.1.7-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.7
+  * 5430b73 version: bump to 0.1.7
+  * dda793b README: expand build commands
+  * 25578b7 core: Add --help option (#160)
+  * cff17e8 CI/Nix: add cache-nix-action
+  * b2bc15b nix: use gcc15
+  * a282131 core: add an option to ignore idle inhibition per-listener
+    (#158)
+  * 63d08e8 core: Add ability to ignore Wayland idle inhibitors (#155)
+  * 4f1c165 core: guard against dbus logind interface not existing and
+    check if on_(un)lock_cmd is empty (#151)
+  * ecf2a36 README: update deps
+  * a0037ac config: add support for `source` option for additional
+    config files (#144)
+  * b18d830 clang-tidy: fix some errors (#143)
+  * 66d1815 core: log when ScreenSaver interface is already registered
+    (#133)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 27 Aug 2025 12:58:49 +0200
+
 hypridle (0.1.6-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
