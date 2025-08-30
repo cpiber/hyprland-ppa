@@ -6,23 +6,21 @@ Uploaders: Héctor Orón Martínez <zumbi@debian.org>,
            Emilio Pozuelo Monfort <pochu@debian.org>,
            Dylan Aïssi <daissi@debian.org>,
            Constantin Piber <cp.piber@gmail.com>
-Build-Depends:
- debhelper-compat (= 13),
- meson (>= 0.58.0),
- libwayland-dev,
- pkgconf
-Standards-Version: 4.7.0
+Build-Depends: debhelper-compat (= 13),
+               libwayland-dev,
+               meson (>= 0.58.0),
+               pkgconf
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
-Homepage: http://wayland.freedesktop.org/
+Homepage: https://wayland.freedesktop.org/
 Vcs-Git: https://salsa.debian.org/xorg-team/wayland/wayland-protocols.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/wayland/wayland-protocols
 
 Package: wayland-protocols
 Section: libdevel
 Architecture: all
-Depends:
- ${shlibs:Depends},
- ${misc:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Multi-Arch: foreign
 Description: wayland compositor protocols
  Wayland protocols that add functionality not available in the Wayland core

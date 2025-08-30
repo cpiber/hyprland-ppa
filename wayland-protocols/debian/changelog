@@ -1,36 +1,43 @@
-wayland-protocols (1.43-1ppa2) noble; urgency=medium
-
-  * Relax libwayland-dev requirement
-
- -- Constantin Piber <cp.piber@gmail.com>  Thu, 15 May 2025 20:12:38 +0200
-
-wayland-protocols (1.43-1ppa1) noble; urgency=medium
-
-  * Update to release 1.43
-  * 4313a51 build: Bump version to 1.43
-  * 723270a staging: add toplevel tag protocol
-  * 7636151 meson: sort protocols alphabetically
-  * 86750c9 xdg-shell: Add edge constraints
-  * 00a5b23 color-management-v1: fix typo in feature.windows_scrgb
-  * a8d2201 build: Bump version to 1.42
-  * 8d0a522 tablet: add support for relative dials
-  * 96c8caa tablet: add a bustype event to the initial burst of tablet
-    events
-  * 23bfdb5 tablet: bump the tablet protocol version
-  * bd90966 cursor-shape: Add the 'all-resize' cursor shape
-  * 43620ec cursor-shape: Add the 'ask' cursor shape
-  * b697b9e cursor shape: Add some docs
-  * 22619f0 cursor-shape: Bump protocol version
-  * d5aed4e governance: Add chromium as a member project
-  * af2716e members: Add Xaver Hugl as a KWin point-of-contact
-
- -- Constantin Piber <cp.piber@gmail.com>  Fri, 25 Apr 2025 12:20:21 +0200
-
-wayland-protocols (1.41-1.1) noble; urgency=medium
+wayland-protocols (1.45-1ppa1) noble; urgency=medium
 
   * Backport
 
- -- Constantin Piber <cp.piber@gmail.com>  Thu, 27 Feb 2025 18:40:32 +0100
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 Aug 2025 13:03:16 +0200
+
+wayland-protocols (1.45-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Dylan Aïssi <daissi@debian.org>  Fri, 13 Jun 2025 18:13:01 +0200
+
+wayland-protocols (1.44-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 28 Apr 2025 11:01:57 +0200
+
+wayland-protocols (1.43-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dylan Aïssi <daissi@debian.org>  Wed, 09 Apr 2025 18:15:11 +0200
+
+wayland-protocols (1.42-2) unstable; urgency=medium
+
+  * Mark autopkgtest as flaky for now.
+
+ -- Dylan Aïssi <daissi@debian.org>  Wed, 26 Mar 2025 17:47:03 +0100
+
+wayland-protocols (1.42-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add autopkgtest
+  * Add debian/salsa-ci.yml
+  * Use httpS for Homepage
+  * wrap-and-sort -a
+  * Update standards version to 4.7.0, no changes needed
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 24 Mar 2025 17:39:31 +0100
 
 wayland-protocols (1.41-1) unstable; urgency=medium
 
