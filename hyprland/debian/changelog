@@ -1,3 +1,24 @@
+hyprland-unstable (0.50.0~1ppa1+git202508301253-ea42041f) noble; urgency=medium
+
+  * Update to main ea42041f
+  * ea42041f protocols: implement pointer-warp-v1 (#11469)
+  * 05a1c0aa renderer: Fix CM for DS and SDR passthrough (#11503)
+  * 790e5446 config: update environment if cfg changes live (#11508)
+  * a209f991 window: allow rounding power of 1
+  * 4b2bfbd8 xwayland: fix game permanent blackscreen (#11542)
+  * 4e865756 xwayland: handle minimize and maximize requests (#11536)
+  * 81bf4ecc input: Add fully configurable trackpad gestures (#11490)
+  * 378e130f [gha] Nix: update inputs
+  * d7cf95b5 tablet: remove old comment
+  * 0ed880f3 protocols/activation: revert send an invalid token when
+    serial isn't valid (#11505)
+  * b329ea8e syncobj: use rendernode for timelines (#11087)
+  * ced38b1b disable buffer readability checks on intel (#11515)
+  * d9cf1cb7 protocols/activation: send an invalid token when serial
+    isn't valid (#11505)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 Aug 2025 12:53:34 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202508222008-0d45b277) noble; urgency=medium
 
   * Update to main 0d45b277

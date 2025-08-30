@@ -13,14 +13,14 @@ Index: source/CMakeLists.txt
    uuid
 -  wayland-server>=1.22.90
 +  wayland-server
-   wayland-protocols>=1.43
+   wayland-protocols>=1.45
    cairo
    pango
 Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -317,7 +317,7 @@ void CCompositor::initServer(std::string
+@@ -318,7 +318,7 @@ void CCompositor::initServer(std::string
          Debug::m_trace = true;
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
