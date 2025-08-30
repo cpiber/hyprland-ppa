@@ -1,3 +1,10 @@
+hyprsplit (0.50.0~1ppa1+git202508301255-7bf0261) noble; urgency=medium
+
+  * Update to main 7bf0261
+  * 7bf0261 chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 Aug 2025 12:55:05 +0200
+
 hyprsplit (0.50.0~1ppa1+git202508091430-9074f97build1) noble; urgency=medium
 
   * Rebuild for unstable

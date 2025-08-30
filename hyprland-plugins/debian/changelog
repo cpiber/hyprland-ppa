@@ -1,3 +1,14 @@
+hyprland-plugins (0.50.0~1ppa1+git202508301254-376d08b) noble; urgency=medium
+
+  * Update to main 376d08b
+  * 376d08b all: chase hyprland (#462)
+  * bf843fc scrolling: Add warpCursorTo for all layout move/focus
+    operations (#461)
+  * ee66b49 scrolling: SCollumnData::up/down Break out of the loop after
+    the first swap (#457)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 Aug 2025 12:54:01 +0200
+
 hyprland-plugins (0.50.0~1ppa1+git202508222009-c1ddebb) noble; urgency=medium
 
   * Update to main c1ddebb
