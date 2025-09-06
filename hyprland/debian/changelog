@@ -1,3 +1,17 @@
+hyprland-unstable (0.50.0~1ppa1+git202509061132-4e785d12) noble; urgency=medium
+
+  * Update to main 4e785d12
+  * 4e785d12 protocols/kde-deco: fix tug of war in deco mode
+  * 127aab81 input: add per-device scroll-factor (#11241)
+  * 78e86d87 config: fix crash when monitor position contains non-
+    integer values before/after 'x' (#11573)
+  * 00423bb7 plugins: expose csd functionality (#11551)
+  * 8a64168a window: treat maximize as toggle request (#11564)
+  * 641d85b1 CMake: fix tests message
+  * 5bb8adbc dispatchers: allow window address in swapwindow (#11518)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Sep 2025 11:32:49 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202508301253-ea42041f) noble; urgency=medium
 
   * Update to main ea42041f
