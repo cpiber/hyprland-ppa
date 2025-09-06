@@ -1,3 +1,12 @@
+hyprland-plugins (0.50.0~1ppa1+git202509061133-b8d6d36) noble; urgency=medium
+
+  * Update to main b8d6d36
+  * b8d6d36 hyprscrolling: respect focus_fit_method when moving windows
+    and fix left column centering (#460)
+  * 2ced5d8 README: Explain hyprpm version pinning (#468)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Sep 2025 11:33:11 +0200
+
 hyprland-plugins (0.50.0~1ppa1+git202508301254-376d08b) noble; urgency=medium
 
   * Update to main 376d08b
