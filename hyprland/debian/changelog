@@ -1,3 +1,9 @@
+hyprland-unstable (0.50.0~1ppa1+git202509061132-4e785d12.1) noble; urgency=medium
+
+  * Fix hyprpm global headers patch
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 09 Sep 2025 08:31:48 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202509061132-4e785d12) noble; urgency=medium
 
   * Update to main 4e785d12
