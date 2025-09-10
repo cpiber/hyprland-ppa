@@ -1,3 +1,188 @@
+hyprland (0.51.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.51.0
+  * 46174f78 version: bump to 0.51.0
+  * b8cff8a4 input: focus when first keyboard is added and m_lastFocus
+    is set (#11645)
+  * 150d693f hyprctl: add an active layout index field in devices
+    (#11531)
+  * ecc9e4d8 window: fix centering calculation for floating windows
+    (#11632)
+  * 1e3a0656 gestures: add unset
+  * b619f395 [gha] Nix: update inputs
+  * 02bb350b screencopy: add force 8 bit to fix 10b screensharing
+    (#11623)
+  * bce43f74 presentation: handle vrr for v1 clients (#11608)
+  * 56dd1124 animation: fix slide/slidevert to accept params (#11574)
+  * 4e785d12 protocols/kde-deco: fix tug of war in deco mode
+  * 127aab81 input: add per-device scroll-factor (#11241)
+  * 78e86d87 config: fix crash when monitor position contains non-
+    integer values before/after 'x' (#11573)
+  * 00423bb7 plugins: expose csd functionality (#11551)
+  * 8a64168a window: treat maximize as toggle request (#11564)
+  * 641d85b1 CMake: fix tests message
+  * 5bb8adbc dispatchers: allow window address in swapwindow (#11518)
+  * ea42041f protocols: implement pointer-warp-v1 (#11469)
+  * 05a1c0aa renderer: Fix CM for DS and SDR passthrough (#11503)
+  * 790e5446 config: update environment if cfg changes live (#11508)
+  * a209f991 window: allow rounding power of 1
+  * 4b2bfbd8 xwayland: fix game permanent blackscreen (#11542)
+  * 4e865756 xwayland: handle minimize and maximize requests (#11536)
+  * 81bf4ecc input: Add fully configurable trackpad gestures (#11490)
+  * 378e130f [gha] Nix: update inputs
+  * d7cf95b5 tablet: remove old comment
+  * 0ed880f3 protocols/activation: revert send an invalid token when
+    serial isn't valid (#11505)
+  * b329ea8e syncobj: use rendernode for timelines (#11087)
+  * ced38b1b disable buffer readability checks on intel (#11515)
+  * d9cf1cb7 protocols/activation: send an invalid token when serial
+    isn't valid (#11505)
+  * 0d45b277 internal: Solitary clients with single subsurface & verbose
+    solitary/tearing/DS checks (#11228)
+  * e95ba5bf renderer: add eRenderStage::RENDER_POST_WALLPAPER (#11501)
+  * 4e8875b5 hdr: scRGB, HLG and SDR -> HDR fixes (#11499)
+  * fdf1612f windowrules: Add `novrr` dynamic window rule (#11370)
+  * 42caff55 window: fix requestedMinSize crash (#11498)
+  * 50a242f1 config: add dim_modal
+  * 1ac1ff45 touch: detach from pointer input
+  * 9a202069 touch: fix popup coordinates for touch down
+  * 10cec2b7 dwindle: simplify split_bias logic and set of possible
+    values. (#11448)
+  * d0d728c6 render: include numbers header (#11475)
+  * 3370a6a8 monitor: fix dpms toggling animations when state is
+    unchanged (#11480)
+  * 1d679874 hdr: fix overrides and missing edid hdr metadata (#11476)
+  * 1a0ed00f protocols/wayland: use UP and rvalue refs for callbacks
+    (#11471)
+  * 21953ddf hyprctl: add getprop (#11394)
+  * d8901786 internal: reference command-line arguments instead of
+    copying them (#11422)
+  * bca96a5d protocols: Fix fading out windows with noscreenshare being
+    visible  (#11457)
+  * dfe58c48 compositor: mark createNewWorkspace as nodiscard
+  * e8731883 compositor: fix new workspace being lost in
+    moveWorkspaceToMonitor
+  * 0840103a renderer: improve modeset timings (#11461)
+  * 251288ec renderer: add dpms animations (#11452)
+  * 3d4dc194 renderer: improve zoom in anims (#11453)
+  * 78c9e208 framescheduler: fix edge case crashes
+  * 1cbb62ed masterlayout: add previous mode for focusmaster command
+    (#11361)
+  * 7580a9aa renderer: Add rounding power setting to groupbar and
+    gradient roundness. (#11420)
+  * edc473e8 xwayland: prevent infinite event loop in XWM clipboard
+    transfers (#11427)
+  * aaedce59 protocols: implement ext-data-control (#11323)
+  * 60d769a8 internal: unify VT getting
+  * beee22a9 refactor: Use new hyprutils casts (#11377)
+  * aa6a78f0 internal: Ensure unique identifiers for persistent
+    workspaces (#11409)
+  * 2b6e2ceb config: Hardened config logic against Time-Of-Check race
+    conditions (#11368)
+  * 449d5e11 internal: add missing c includes (#11417)
+  * cb6589db misc: remove commas from device names
+  * 584b844a [gha] Nix: update inputs
+  * 69c3ab1a tablet: do not lock focus when dnd-ing (#11390)
+  * 00da4450 renderer: minor fixups to uv calcs (#11375)
+  * afbd8796 configWatcher: fix inotify event reading buffer size
+    (#11337)
+  * 6a1baa89 nix/lib: add bezier to topCommandsPrefixes
+  * a4529beb master: avoid crash if openingon null in onWindowCreated
+  * d1c8dc54 hyprtester: drop gcc flag
+  * ec26b753 descriptions: fix bad json output (#11350)
+  * 0c317f25 internal: Fix compilation with libc++ (#11355)
+  * 3c6536d9 config: format animation config as table for readability
+    (#11326)
+  * 2859f1b7 keybinds: use the triggering keyboard for repeat timings
+    (#11309)
+  * 2be309de virtualkeyboard: Add options to skip releasing pressed keys
+    on close and to skip sharing key states (#11214)
+  * 6491bb4f hyprctl: Include physical monitor size in IPC monitor info
+    (#11276)
+  * 1b86d35f popup: remove wlSurface ownership on destroy
+  * 549f5e8d popup: fix animation configs
+  * 0f1484c2 subsurface: check surface size in damageLastArea
+  * f6d8e864 popup: imorove logging, use fadeAlpha for opacity
+  * 61826dc7 renderer: fix snapshot coords
+  * 855d103a renderer: add popup fade-in-out (#11313)
+  * 77068c78 screencopy: multiply box pos by scale
+  * bfe7e090 hyprctl: fix typo in seterror
+  * 82443894 renderer: apply default luma for reverting back to srgb
+  * f1f1161c dwindle: fix single_window_aspect_ratio not updating with
+    config reload (#11305)
+  * e1e23eb9 screencopy: avoid crash on cm disabled
+  * c14f792f [gha] Nix: update inputs
+  * 310fc629 protocols: fix presentation time proto version (#11306)
+  * 314a0ea4 LICENSE: Update year (#11301)
+  * 9607e3b5 screencopy: un-hdr screencopy buffers for cm-unaware
+    clients (#11294)
+  * a907ecd4 opengl: improve render fn arg clarity (#11286)
+  * 3e35797b fix: add climits includes (#11288)
+  * 23be1db1 dnd: drop on tablet pen tip up (#11270)
+  * f309d860 session-lock: explicitly consider dpms states for sending
+    locked or denied (#11278)
+  * 38e13282 flake.lock: bump hyprutils
+  * 84c5e744 build: bump hu dep to 0.8.2
+  * 36a8b222 renderer: use CRegion foreach over getRects (#10980)
+  * 43966cc7 foreign-toplevel: update monitor properly on changed
+  * f51be7f2 layers: check monitor is not null on animation update
+    (#11267)
+  * 66a6ef38 core: disable esync for non-linux kernels
+  * 745a671c input: don't reload xkb configs if settings didnt change
+  * abe29647 monitor: fix crash on mutating workspace vec
+  * c63d0003 core: fix workspace persistence tracking (#11239)
+  * 5d4b4ecb input: lock focus for tablet when down (#11219)
+  * 211199e8 fix: include decorations in visibleOnMonitor calculation
+    (#11232)
+  * e1fff05d layerSurface: check for monitor validity in startAnimation
+  * 5c8d675e ci: correct tar command for xz compression & fix typos
+    (#11213)
+  * fd0c1f2a keybinds: do not reset scroll timer on not passed
+  * 31cc7f3b core: move workspace ptrs to weak (#11194)
+  * ecc04e8b drm: check syncobj timeline support before advertising
+    protocol (#11117)
+  * c51c6e38 tests: add a few more workspace tests
+  * 55f2daa2 swipe: fix workspace swipe not rendering last frame if
+    target ws is on edge (#11184)
+  * 2d2a5beb core: fix maxwidth resolution mode (#11183)
+  * 6ca7c14b CTM: check for finite value aswell (#11185)
+  * fdbbad04 core: enter unsafe state on boot if there are no mons
+  * 873914a2 CI/Nix: also check for qt version in update script
+  * 50758505 example: make screen shader example compatible with glsl
+    300 (#10846) (#11132)
+  * 462729d8 protocols/subcompositor: fix subsurface sorting (#11136)
+  * bf1602d9 renderer: implement wp-color-management-v1 transfer
+    functions (#11084)
+  * d4de6938 internal: set value and goal for window size and position
+    on setGroupCurrent (#11120)
+  * 503fc458 internal: replace unsafe strcpy with snprintf (#11128)
+  * a3d59b52 systeminfo: print more render info
+  * b7a91e02 renderer: Add cursor:invisible to allow to hide the cursor
+    (#11058)
+  * 58b6eceb sessionlock: fix flipped if condition
+  * 91d8a629 sessionlock: fix timer logic on unsafe state
+  * 8b383530 eventloop: improve timer handling to avoid crashes
+  * 3b041312 eventloop: avoid duplicate timers
+  * d84699d8 opengl: detect android fence support and disable explicit
+    if it's missing (#11077)
+  * ae3cc48f protocols/gamma: support pipes (#11076)
+  * 4adf6589 README: add link to CI from badge (#11085)
+  * 260a13a1 snap: use window extents instead of border size (#11079)
+  * 088e8af9 [gha] Nix: update inputs
+  * 49abc193 framescheduler: check monitor validity in doLater
+  * a05c797e compositor: properly set infinite region on null input
+  * b46dc9ee framescheduler: dont if check deleted weakpointer (#11063)
+  * 75c0675e config: add better zoomFactor default (#11060)
+  * 49d73d18 config: default drag_lock to 0
+  * 409b56f6 hyprctl: make animations print details about bezier curves
+    (#10413) (#10871)
+  * 148718b3 socket2: fixup invalid ws passed to openwindow
+  * 53496679 master: add ignoremaster to swapwithmaster
+  * c4a4c341 version: bump to 0.50.0
+  * d4fbedcd core: never use hw cursors when tearing
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 10 Sep 2025 23:18:45 +0200
+
 hyprland (0.50.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.50.1
