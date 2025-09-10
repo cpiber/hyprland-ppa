@@ -1,3 +1,13 @@
+hyprland-qtutils (0.1.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.5
+  * 119bcb9 version: bump to 0.1.5
+  * b308a81 donate-screen: add hyprperks mentions
+  * b13c748 CI/Nix: add cache-nix-action
+  * 396e8aa nix: use gcc15 (#15)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 10 Sep 2025 23:11:03 +0200
+
 hyprland-qtutils (0.1.4-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
