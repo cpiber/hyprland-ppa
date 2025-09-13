@@ -1,3 +1,10 @@
+hyprsplit (0.51.0~1ppa1+git202509132059-e312272) noble; urgency=medium
+
+  * Update to main e312272
+  * e312272 pin 0.51.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Sep 2025 20:59:48 +0200
+
 hyprsplit (0.50.0~1ppa1+git202508301255-7bf0261build1) noble; urgency=medium
 
   * Rebuild for unstable

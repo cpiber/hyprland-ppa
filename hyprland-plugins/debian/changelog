@@ -1,3 +1,17 @@
+hyprland-plugins (0.50.0~1ppa1+git202509132058-5ff379f) noble; urgency=medium
+
+  * Update to main 5ff379f
+  * 5ff379f hyprscrolling: Ensure maximized state is restored from full-
+    screen (#479)
+  * 27e1ad9 expo: improve closing gesture
+  * c1d5db9 expo: skip first update for smoother gesture
+  * 8ba54e3 expo: fix crash in dispatcher
+  * 51b8f80 expo: fix gesture crash
+  * 44343bf expo: unload gesture on exit
+  * 5086bd2 expo: add new gesture
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Sep 2025 20:58:46 +0200
+
 hyprland-plugins (0.50.0~1ppa1+git202509061133-b8d6d36) noble; urgency=medium
 
   * Update to main b8d6d36
