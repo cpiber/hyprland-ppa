@@ -1,3 +1,31 @@
+hyprland-unstable (0.51.0~1ppa1+git202509132058-16c18dde) noble; urgency=medium
+
+  * Update to main 16c18dde
+  * 16c18dde windows: fix no decorate not disabling borders (#11673)
+  * adbf7c86 input: handle tablet active area scaling when axes swap due
+    to rotation (#11661)
+  * 797bfe90 dispatchers: fix movecursor not updating client pos
+    (#11672)
+  * 38169c8f input: support xkb v2 format (#11482)
+  * c7b99691 render/OpenGL: fix compilation for 32bit systems (#11667)
+  * 231b8007 flake.lock: update
+  * 8a959b43 meson: set minimum version
+  * 46174f78 version: bump to 0.51.0
+  * b8cff8a4 input: focus when first keyboard is added and m_lastFocus
+    is set (#11645)
+  * 150d693f hyprctl: add an active layout index field in devices
+    (#11531)
+  * ecc9e4d8 window: fix centering calculation for floating windows
+    (#11632)
+  * 1e3a0656 gestures: add unset
+  * b619f395 [gha] Nix: update inputs
+  * 02bb350b screencopy: add force 8 bit to fix 10b screensharing
+    (#11623)
+  * bce43f74 presentation: handle vrr for v1 clients (#11608)
+  * 56dd1124 animation: fix slide/slidevert to accept params (#11574)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Sep 2025 20:58:18 +0200
+
 hyprland-unstable (0.50.0~1ppa1+git202509061132-4e785d12.1) noble; urgency=medium
 
   * Fix hyprpm global headers patch
