@@ -1,3 +1,13 @@
+hyprland-unstable (0.51.0~1ppa1+git202509161902-5e96fac5) noble; urgency=medium
+
+  * Update to main 5e96fac5
+  * 5e96fac5 presentation: fix vrr check for reporting no refresh time
+  * 4a9c4dbc gestures/fs: fix typo
+  * 9e74d0ae renderer: clamp blur:passes 1-8
+  * 559024c3 gestures/float: fix typo
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 16 Sep 2025 19:02:58 +0200
+
 hyprland-unstable (0.51.0~1ppa1+git202509132058-16c18dde) noble; urgency=medium
 
   * Update to main 16c18dde

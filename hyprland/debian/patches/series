@@ -3,5 +3,6 @@
 03-embed
 04-gcc-port
 05-libcpp-port
+06-xkb
 99-hyprpm-global-headers
 99-hyprpm-support-global-plugins
