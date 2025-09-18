@@ -1,3 +1,16 @@
+hyprgraphics (0.1.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.6
+  * c44e749 version: bump to 0.1.6
+  * b86c4d9 asyncResourceGatherer: add new module (#36)
+  * aa9d149 png: fix gray pix formats (#35)
+  * 621e2e0 formats: include vector header (#34)
+  * 157cc52 formats: add optional AVIF image support with libheif (#32)
+  * 4c1d63a chore: replace libspng with libpng in README.md and CI/Arch
+    (#30)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 18 Sep 2025 18:19:21 +0200
+
 hyprgraphics (0.1.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.5

@@ -11,12 +11,14 @@ Build-Depends:
  g++-14,
  libpixman-1-dev,
  libcairo2-dev,
+ libpango1.0-dev,
  libhyprutils-dev,
  libjpeg-dev,
  libwebp-dev,
  libjxl-dev,
  libmagic-dev,
  libpng-dev,
+ libheif-dev,
 Standards-Version: 4.6.2
 Homepage: https://hyprland.org
 Vcs-Browser: https://github.com/hyprwm/hyprgraphics
