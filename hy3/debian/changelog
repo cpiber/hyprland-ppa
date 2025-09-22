@@ -1,3 +1,10 @@
+hy3 (0.51.0~1ppa1+git202509222334-3f314c6) noble; urgency=medium
+
+  * Update to master 3f314c6
+  * 3f314c6 support recoloring active tab bars on inactive monitors
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Sep 2025 23:34:17 +0200
+
 hy3 (0.51.0~1ppa1+git202509161904-e317a4c) noble; urgency=medium
 
   * Update to master e317a4c

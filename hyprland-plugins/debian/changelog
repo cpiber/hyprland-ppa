@@ -1,3 +1,15 @@
+hyprland-plugins (0.51.0~1ppa1+git202509222333-1cfcc6f) noble; urgency=medium
+
+  * Update to main 1cfcc6f
+  * 1cfcc6f chore: chase nixpkgs
+  * 4717ecd flake.lock: Update
+  * c8b2be3 Hyprscrolling: feat: Add column movement commands
+    (`swapcol`, `movecoltoworkspace`) (#481)
+  * ebb4040 Hyprscrolling: focus left/right moves to the best vertical
+    neighbour (#482)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Sep 2025 23:33:41 +0200
+
 hyprland-plugins (0.50.0~1ppa1+git202509132058-5ff379fbuild1) noble; urgency=medium
 
   * Rebuild for unstable
