@@ -1,3 +1,31 @@
+hyprland-unstable (0.51.0~1ppa1+git202509222333-70a7047e) noble; urgency=medium
+
+  * Update to main 70a7047e
+  * 70a7047e renderer: fix uv scaling detection (#11789)
+  * 26f29352 renderer: add "noscreenshare" layer rule (#11664)
+  * 45f007d4 ci: remove duplicate cp and redundant mkdir commands
+  * 22c8bc9b CI/Nix: Allow running CI in forks
+  * 26cbc673 renderer: fix uv calculations once and for all (#11770)
+  * 41dad381 config: fix multi-argument gesture dispatcher parsing
+    (#11721)
+  * 83843908 vkeyboard: update cached mods before IME; add share_states
+    = 2 config option (#11720)
+  * 6a88f2e8 monitors: auto apply suggested scale and notify the user.
+    (#11753)
+  * 88326075 [gha] Nix: update inputs
+  * 8fc7b2c1 input: fix virtual keyboard keymaps (#11763)
+  * afd1e717 renderer: fix inconsistent border thickness for
+    roundingPower < 2 (#11752)
+  * 4fc95d64 renderer: asynchronously load background tex (#11749)
+  * 91f592a8 workspace: fix relative workspaces with monitor descs
+  * 059ec60e hyprpm: make temp root if not present
+  * 56480779 animation: fix slide/slidefade to accept forced direction
+    (#11725)
+  * 1cb8cd39 solitary: fix check for config error (#11733)
+  * 7fd6998f core: fix clang-format
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Sep 2025 23:33:17 +0200
+
 hyprland-unstable (0.51.0~1ppa1+git202509161902-5e96fac5) noble; urgency=medium
 
   * Update to main 5e96fac5

@@ -36,7 +36,7 @@ Build-Depends:
  libhyprlang-dev (>= 0.3.2),
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev (>= 0.8.3),
- libhyprgraphics-dev (>= 0.1.3),
+ libhyprgraphics-dev (>= 0.1.6),
  libaquamarine-dev (>= 0.9.3),
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),

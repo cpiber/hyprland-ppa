@@ -5,7 +5,7 @@ Index: source/src/devices/IKeyboard.cpp
 ===================================================================
 --- source.orig/src/devices/IKeyboard.cpp
 +++ source/src/devices/IKeyboard.cpp
-@@ -91,13 +91,22 @@ void IKeyboard::setKeymap(const SStringR
+@@ -87,13 +87,22 @@ void IKeyboard::setKeymap(const SStringR
          if (FILE* const KEYMAPFILE = fopen(path.c_str(), "r"); !KEYMAPFILE)
              Debug::log(ERR, "Cannot open input:kb_file= file for reading");
          else {
@@ -28,29 +28,20 @@ Index: source/src/devices/IKeyboard.cpp
  
      if (!m_xkbKeymap) {
          g_pConfigManager->addParseError("Invalid keyboard layout passed. ( rules: " + rules.rules + ", model: " + rules.model + ", variant: " + rules.variant +
-@@ -113,13 +122,21 @@ void IKeyboard::setKeymap(const SStringR
+@@ -109,7 +118,11 @@ void IKeyboard::setKeymap(const SStringR
          m_currentRules.options = "";
          m_currentRules.layout  = "us";
  
+-        m_xkbKeymap = xkb_keymap_new_from_names2(CONTEXT, &XKBRULES, XKB_KEYMAP_FORMAT_TEXT_V2, XKB_KEYMAP_COMPILE_NO_FLAGS);
 +#ifdef XKB_KEYMAP_FORMAT_TEXT_V2
-         m_xkbKeymap = xkb_keymap_new_from_names2(CONTEXT, &XKBRULES, XKB_KEYMAP_FORMAT_TEXT_V2, XKB_KEYMAP_COMPILE_NO_FLAGS);
++         m_xkbKeymap = xkb_keymap_new_from_names2(CONTEXT, &XKBRULES, XKB_KEYMAP_FORMAT_TEXT_V2, XKB_KEYMAP_COMPILE_NO_FLAGS);
 +#else
-+        m_xkbKeymap = xkb_keymap_new_from_names(CONTEXT, &XKBRULES, XKB_KEYMAP_COMPILE_NO_FLAGS);
++         m_xkbKeymap = xkb_keymap_new_from_names(CONTEXT, &XKBRULES, XKB_KEYMAP_COMPILE_NO_FLAGS);
 +#endif
      }
  
-     auto cKeymapStr = xkb_keymap_get_as_string(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V1);
-     if (!cKeymapStr) {
-         Debug::log(ERR, "Couldn't convert keymap to V1 format");
-+#ifdef XKB_KEYMAP_FORMAT_TEXT_V2
-         m_xkbKeymapV1 = xkb_keymap_new_from_names2(CONTEXT, &XKBRULES, XKB_KEYMAP_FORMAT_TEXT_V1, XKB_KEYMAP_COMPILE_NO_FLAGS);
-+#else
-+        m_xkbKeymapV1 = xkb_keymap_new_from_names(CONTEXT, &XKBRULES, XKB_KEYMAP_COMPILE_NO_FLAGS);
-+#endif
-     } else {
-         m_xkbKeymapV1 = xkb_keymap_new_from_string(CONTEXT, cKeymapStr, XKB_KEYMAP_FORMAT_TEXT_V1, XKB_KEYMAP_COMPILE_NO_FLAGS);
-         free(cKeymapStr);
-@@ -166,7 +183,11 @@ void IKeyboard::updateKeymapFD() {
+     updateXKBTranslationState(m_xkbKeymap);
+@@ -153,7 +166,11 @@ void IKeyboard::updateKeymapFD() {
      if (m_xkbKeymapV1FD.isValid())
          m_xkbKeymapV1FD.reset();
  
@@ -62,8 +53,8 @@ Index: source/src/devices/IKeyboard.cpp
 +#endif
      m_xkbKeymapString = cKeymapStr;
      free(cKeymapStr);
-     auto cKeymapV1Str   = xkb_keymap_get_as_string(m_xkbKeymapV1, XKB_KEYMAP_FORMAT_TEXT_V1);
-@@ -251,19 +272,31 @@ void IKeyboard::updateXKBTranslationStat
+     auto cKeymapV1Str   = xkb_keymap_get_as_string(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V1);
+@@ -238,19 +255,31 @@ void IKeyboard::updateXKBTranslationStat
              rules.model   = model.c_str();
              rules.variant = variant.c_str();
  
@@ -97,7 +88,7 @@ Index: source/src/devices/IKeyboard.cpp
              }
  
              m_xkbState       = xkb_state_new(KEYMAP);
-@@ -287,7 +320,11 @@ void IKeyboard::updateXKBTranslationStat
+@@ -274,7 +303,11 @@ void IKeyboard::updateXKBTranslationStat
          .options = m_currentRules.options.c_str(),
      };
  
