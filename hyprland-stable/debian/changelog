@@ -1,3 +1,33 @@
+hyprland (0.51.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.51.1
+  * 71a1216a [gha] Nix: update inputs
+  * cbcad3e1 version: bump to 0.51.1
+  * c2ea4f43 vkeyboard: update cached mods before IME; add share_states
+    = 2 config option (#11720)
+  * 941f35c8 monitors: auto apply suggested scale and notify the user.
+    (#11753)
+  * 5d551fe1 renderer: fix inconsistent border thickness for
+    roundingPower < 2 (#11752)
+  * e837773c workspace: fix relative workspaces with monitor descs
+  * 948b4722 hyprpm: make temp root if not present
+  * df590f61 animation: fix slide/slidefade to accept forced direction
+    (#11725)
+  * 5ad227a1 solitary: fix check for config error (#11733)
+  * 60683736 core: fix clang-format
+  * 748cc2f4 presentation: fix vrr check for reporting no refresh time
+  * da5d681d gestures/fs: fix typo
+  * 4d5cce70 renderer: clamp blur:passes 1-8
+  * 3f643af5 gestures/float: fix typo
+  * ee37c123 windows: fix no decorate not disabling borders (#11673)
+  * 14a1cd89 input: handle tablet active area scaling when axes swap due
+    to rotation (#11661)
+  * 7d4429e6 dispatchers: fix movecursor not updating client pos
+    (#11672)
+  * 1f1c09c9 render/OpenGL: fix compilation for 32bit systems (#11667)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Sep 2025 23:21:28 +0200
+
 hyprland (0.51.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.51.0
