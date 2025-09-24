@@ -1,0 +1,9 @@
+hyprland-plugins for Ubuntu
+------------------
+
+This package contains a build of the plugin repository `hyprland-plugins`, matched to hyprland-unstable.
+To use it, run `hyprpm add hyprland-plugins` once to set it up (analogous to `hyprpm add https://github.com/hyprwm/hyprland-plugins`).
+Then, enable one of the plugins contained.
+
+Note that on every plugin update, you need to run `hyprpm update` to activate the update.
+Plugins are also updated on every Hyprland update, since plugins are built for a particular version of Hyprland.
