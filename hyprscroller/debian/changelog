@@ -1,3 +1,12 @@
+hyprscroller (0.47.0~1ppa1+git202509242138-2a447da) noble; urgency=medium
+
+  * Update to master 2a447da
+  * 2a447da commit pin
+  * 01a1014 Update README for last commit's changes
+  * 31949fd Remove cancellation of native workspace swipe
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 24 Sep 2025 21:38:53 +0200
+
 hyprscroller (0.47.0~1ppa1+git202508091210-b0dfb7bbuild6) noble; urgency=medium
 
   * Rebuild for unstable
