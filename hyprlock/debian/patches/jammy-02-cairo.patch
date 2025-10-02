@@ -2,7 +2,7 @@ Index: source/src/renderer/AsyncResourceGatherer.hpp
 ===================================================================
 --- source.orig/src/renderer/AsyncResourceGatherer.hpp
 +++ source/src/renderer/AsyncResourceGatherer.hpp
-@@ -11,6 +11,8 @@
+@@ -12,6 +12,8 @@
  #include <hyprgraphics/cairo/CairoSurface.hpp>
  #include <hyprutils/os/FileDescriptor.hpp>
  

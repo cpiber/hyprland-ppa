@@ -1,3 +1,24 @@
+hyprlock (0.9.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.2
+  * c48279d version: bump to 0.9.2
+  * 7f769fa Revert "background: unload screenshots when monitor is
+    removed"
+  * 1380ca0 background: unload screenshots when monitor is removed
+  * 61b36c6 renderer: fix nvidia workaround (#878)
+  * a7f2634 Refactor asset management to use shared_ptr (#870)
+  * 450ae1e lock-surface: remove redundant sendDestroy calls (#868)
+  * 04cfdc4 core: recreate rendering context when monitors are empty on
+    nvidia (#845)
+  * cedbb24 renderer: move asyncResourceGatherer out of the renderer
+    (#863)
+  * 8d0e569 core: remove dmabuf listeners after we are done with
+    Screencopy (#858)
+  * a356bf0 background: monitor transforms fixups (#859)
+  * 347e05a Make detection of pam library more portable (#840)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 02 Oct 2025 21:17:16 +0200
+
 hyprlock (0.9.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.1
