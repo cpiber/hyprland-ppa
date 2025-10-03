@@ -1,3 +1,9 @@
+hyprpicker (0.4.5-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:38:22 +0200
+
 hyprpicker (0.4.5-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

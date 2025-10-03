@@ -1,3 +1,15 @@
+aquamarine (0.9.5-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:38:21 +0200
+
+aquamarine (0.9.5-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:38:21 +0200
+
 aquamarine (0.9.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.5
