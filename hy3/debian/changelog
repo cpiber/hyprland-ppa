@@ -1,3 +1,11 @@
+hy3 (0.51.0~1ppa1+git202510031956-af94b01) noble; urgency=medium
+
+  * Update to master af94b01
+  * af94b01 fix debugnodes + show responses in hyprctl
+  * 5696733 fix active tab color when a group is active
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:56:34 +0200
+
 hy3 (0.51.0~1ppa1+git202509222334-3f314c6) noble; urgency=medium
 
   * Update to master 3f314c6

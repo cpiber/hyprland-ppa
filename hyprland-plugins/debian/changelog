@@ -1,3 +1,17 @@
+hyprland-plugins (0.51.0~1ppa1+git202510031955-4d940a1) noble; urgency=medium
+
+  * Update to main 4d940a1
+  * 4d940a1 Hyprscrolling: fix window size disturbance on focus change
+    (#492)
+  * 1a4a2dc hyprscrolling: add config example in README (#491)
+  * d0d8e8d all: fix build with clang (#489)
+  * 6913b8d Hyprscrolling: feat: improve focus stability with last-
+    focused memory (#484)
+  * 1e3fa62 Hyprscrolling: fix `layoutmsg fit visible` incorrectly
+    include window at the border (#487)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:55:56 +0200
+
 hyprland-plugins (0.51.0~1ppa1+git202509222333-1cfcc6f) noble; urgency=medium
 
   * Update to main 1cfcc6f

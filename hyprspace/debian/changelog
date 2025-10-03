@@ -1,3 +1,11 @@
+hyprspace (0.50.0~1ppa1+git202510031956-e54884d) noble; urgency=medium
+
+  * Update to main e54884d
+  * e54884d Merge pull request #197 from Pablonara/main
+  * 297bd95 Update AnimationManager headers import
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:56:54 +0200
+
 hyprspace (0.50.0~1ppa1+git202508222015-2b61fd2build5) noble; urgency=medium
 
   * Rebuild for unstable
