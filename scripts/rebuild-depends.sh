@@ -6,7 +6,7 @@ set -xe
 : NOTE: Arguments are apt package names, not the folders as with other scripts!
 
 reporoot="`cd "$(dirname "$0")/.." && pwd`"
-apt-cache rdepends "$@" | sed '/^[^ ]/d;s/^\s\+\(lib\)\?\|-dev$\|[0-9]\+$//g' | while read -r package; do
+apt-cache rdepends "$@" | sed '/^[^ ]/d;s/^\s\+\(lib\)\?\|-dev$\|[0-9]\+$//g' | sort | uniq | while read -r package; do
   if [ "$package" = "hyprland" ]; then
     package="hyprland-stable"
   elif [ "$package" = "hyprland-unstable" ]; then
