@@ -1,3 +1,43 @@
+hyprland-unstable (0.51.0~1ppa1+git202510031955-3bcfa94e) noble; urgency=medium
+
+  * Update to main 3bcfa94e
+  * 3bcfa94e renderer: add render:non_shader_cm and fixes (#11900)
+  * c467bb26 renderer: fix popup fadeout blur (#11756)
+  * e0c96276 renderer: optimize border drawcalls (#11891)
+  * 378438ff config: increase default anr_missed_pings value
+  * 13648d19 protocols/seat: force down rounding of coords at the
+    surface edge (#11890)
+  * 8c54c9b4 protocols/cm: remove unneeded preferred ref (#11877)
+  * 38c1e72c rules: fix some monitor rules (#11873)
+  * 09596725 renderer/cm: add more monitor cm options (#11861)
+  * 4d82cc59 internal: fix clang-tidy "errors" (#11862)
+  * 43fb4753 gestures: fix gesture direction detection (#11852)
+  * f854b5bf deco: reduce virtual calls in drop shadow
+  * eb25dfd3 opengl: move from unordered_set to array
+  * b6278857 decoration: reduce virtual calls
+  * c30036bd CI/Arch: build hyprgraphics after hyprutils
+  * 766acadc seat: release depressed modifiers on leave (#11854)
+  * ef479ff5 viewporter: clamp sub-pixel overflow (#11845)
+  * 6f1d2e77 config: fix rules with no parameters not being counted as
+    invalid (#11849)
+  * ae445606 config: allow negative to be used with tags. (#11779)
+  * 4f3dd1dd config: fix gesture dispatcher parsing with whitespaces
+    (#11784)
+  * d8f61575 config: support more than 1 window rule per rule line.
+    (#11689)
+  * 7ce451d2 renderer: disable anti-aliasing on cursor:zoom_factor
+    (#6135) (#11828)
+  * 5212099b layout: avoid nullptr deref (#11831)
+  * 8cce3b98 shm: refactor to UP and correct m_data check (#11820)
+  * 683fc77f hyprctl: nullptr guard --systeminfo (#11822)
+  * ec9a72d9 workspaces: fix persistence with no monitor specified
+    (#11807)
+  * 31bd9ec4 foreign-toplevel: continue past skipped invalid windows
+    (#11804)
+  * 29b103c3 exec: Spawn processes as direct children (#11735)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:55:29 +0200
+
 hyprland-unstable (0.51.0~1ppa1+git202509222333-70a7047e) noble; urgency=medium
 
   * Update to main 70a7047e

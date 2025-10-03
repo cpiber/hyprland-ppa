@@ -52,7 +52,7 @@ Index: source/src/devices/IKeyboard.cpp
 +    auto cKeymapStr = xkb_keymap_get_as_string(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V1);
 +#endif
      m_xkbKeymapString = cKeymapStr;
-     free(cKeymapStr);
+     free(cKeymapStr); // NOLINT(cppcoreguidelines-no-malloc,-warnings-as-errors)
      auto cKeymapV1Str   = xkb_keymap_get_as_string(m_xkbKeymap, XKB_KEYMAP_FORMAT_TEXT_V1);
 @@ -238,19 +255,31 @@ void IKeyboard::updateXKBTranslationStat
              rules.model   = model.c_str();
