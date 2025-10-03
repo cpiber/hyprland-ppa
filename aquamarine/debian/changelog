@@ -1,3 +1,11 @@
+aquamarine (0.9.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.5
+  * 655e067 version: bump to 0.9.5
+  * 11406cc backend: add a null backend (#209)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 16:07:36 +0200
+
 aquamarine (0.9.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.4
