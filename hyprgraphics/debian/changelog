@@ -1,3 +1,18 @@
+hyprgraphics (0.2.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.0
+  * 9431db6 version: bump to 0.2.0
+  * 2503063 ci: add librsvg to arch
+  * 899ff15 Nix: add librsvg dep
+  * f4995ea image: add svg support
+  * 32e6b83 text: recalc layout after setting limits
+  * 72e6801 text: make wrap and ellipsize passed
+  * d839c3f text: wrap when limited
+  * ecdbae4 text: minor fixups
+  * 758678a text: add aa and hint to text
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 18:14:32 +0200
+
 hyprgraphics (0.1.6-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.6
