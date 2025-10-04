@@ -1,3 +1,13 @@
+hyprsunset (0.3.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.3
+  * 057feb7 version: bump to 0.3.3
+  * 2b50ac5 logging: improve output debug message (#60)
+  * 7207170 core: fix scheduling after suspend (#59)
+  * fa2f7dd cmake: fix systemd user unit install path
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 04 Oct 2025 09:12:21 +0200
+
 hyprsunset (0.3.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
