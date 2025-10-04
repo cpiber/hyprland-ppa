@@ -1,3 +1,14 @@
+hyprland-protocols (0.7.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.0
+  * bd153e7 version: bump to 0.7.0
+  * 9c487e1 README: add new EIS protocol to readme
+  * c64dc1c protocols: Hyprland protocol expension for the Input Capture
+    Desktop Portal (#8)
+  * 613878c README: Add build instructions (#19)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 04 Oct 2025 22:51:05 +0200
+
 hyprland-protocols (0.6.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.4
