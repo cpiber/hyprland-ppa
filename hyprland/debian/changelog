@@ -1,3 +1,9 @@
+hyprland-unstable (0.51.0~1ppa1+git202510031955-3bcfa94f) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Oct 2025 09:44:16 +0200
+
 hyprland-unstable (0.51.0~1ppa1+git202510031955-3bcfa94e) noble; urgency=medium
 
   * Update to main 3bcfa94e
