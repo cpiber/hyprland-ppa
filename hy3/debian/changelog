@@ -1,3 +1,9 @@
+hy3 (0.51.0~1ppa1+git202510031956-af94b01build1) noble; urgency=medium
+
+  * Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Oct 2025 11:16:09 +0200
+
 hy3 (0.51.0~1ppa1+git202510031956-af94b01) noble; urgency=medium
 
   * Update to master af94b01
