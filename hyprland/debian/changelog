@@ -1,3 +1,12 @@
+hyprland-unstable (0.51.0~1ppa1+git202510051115-76d99874) noble; urgency=medium
+
+  * Update to main 76d99874
+  * 76d99874 cm: handle inert cm outputs (#11916)
+  * b7ef892e [gha] Nix: update inputs
+  * f0b4164e cm: fix primaries to proto scale (#11914)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Oct 2025 11:15:09 +0200
+
 hyprland-unstable (0.51.0~1ppa1+git202510031955-3bcfa94f) noble; urgency=medium
 
   * Rebuild for dependencies
