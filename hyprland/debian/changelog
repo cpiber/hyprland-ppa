@@ -1,3 +1,51 @@
+hyprland-unstable (0.51.0~1ppa1+git202510172123-8164b90b) noble; urgency=medium
+
+  * Update to main 8164b90b
+  * 8164b90b config: fix crash when some configurations include non-
+    integer values (#12056)
+  * 36c0477d tests: disable shortcut test for ci
+  * ab11af96 ext-foreign-toplevel: remove stale entries when remapping
+    (#12037)
+  * e40873be renderer: add cursor:zoom_disable_aa for controlling AA on
+    zoom (#12025)
+  * 60529e81 renderer: round box in damageBox
+  * f324a3a5 functionHook: fix distance check
+  * ee5d05f0 hookSystem: fix anchor point for mmap
+  * bbb83317 Nix: drop ninja for CMake build
+  * 0d6d19b2 Revert "nix: use meson"
+  * 541ef60f CMake: print pch messages based on var
+  * 4b55ec68 windowrules: add modal prop (#12024)
+  * 7fcaf332 layouts: apply [min|max]size window rules to dwindle &
+    master layouts (#11898)
+  * 6582f42d meson: disable lto explicitly
+  * ed936430 core: disable lto for hyprland builds (#11972)
+  * d599513d config: add automatic closing to submaps (#11760)
+  * 6a01c399 input: add option to rotate device input (#11947)
+  * da31e82a internal: prevent early exit processes from being zombies
+    (#11995)
+  * 32f32333 dmabuffer: ensure we only create one texture per buffer
+    (#11990)
+  * 2b0926dc tests: disable one test as it fails on ci
+  * b965fb2a flake.lock: bump hyprutils
+  * 82759d40 buffer: move texture creation to commit time (#11964)
+  * 0dc45b54 managers/helpers: add missing includes (#11969)
+  * ba24547d dispatchers: add set, unset and toggle to fullscreen
+    (#11893)
+  * 5ba2d221 compositor: make wl_surface::frame follow pending states
+    (#11953)
+  * 5a208621 hookSystem: use a full trampo setup for hooks
+  * c3747fab hookSystem: fix anchoring in seekNewPageAddr()
+  * dc72259a core/compositor: revert make wl_surface::frame follow
+    pending states (#11896)
+  * 02cda6be systeminfo: log system package versions (#11946)
+  * 73f06434 keybinds: fix repeat and long press keybinds release
+    (#11863)
+  * 17e77e04 core/compositor: make wl_surface::frame follow pending
+    states (#11896)
+  * cfac2725 debug: fix data race in Debug::log() (#11931)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 17 Oct 2025 21:23:08 +0200
+
 hyprland-unstable (0.51.0~1ppa1+git202510051115-76d99874) noble; urgency=medium
 
   * Update to main 76d99874
