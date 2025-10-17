@@ -1,3 +1,10 @@
+hyprsplit (0.51.1~1ppa1+git202510172124-0f7ca50) noble; urgency=medium
+
+  * Update to main 0f7ca50
+  * 0f7ca50 change e+1/e-1 to not loop when stepping through workspaces
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 17 Oct 2025 21:24:57 +0200
+
 hyprsplit (0.51.1~1ppa1+git202510031957-aa9519bbuild1) noble; urgency=medium
 
   * Rebuild for unstable

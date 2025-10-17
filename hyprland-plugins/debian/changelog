@@ -1,3 +1,17 @@
+hyprland-plugins (0.51.0~1ppa1+git202510172123-a5a6f93) noble; urgency=medium
+
+  * Update to main a5a6f93
+  * a5a6f93 scrolling: implement swapWindow
+  * bff3b23 hyprexpo: correct workspace wrap logic in center picker for
+    named workspaces (#509)
+  * 25a5d13 hyprbars: fix touch handling (#505)
+  * f6dd103 scrolling: Remove redundant workspace check (#506)
+  * 5cf12b0 Hyprscrolling: Fix colresize breaking the centered position
+    (#502)
+  * 7be897d Hyprscrolling: (feat) Add `togglefit` command (#498)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 17 Oct 2025 21:23:39 +0200
+
 hyprland-plugins (0.51.0~1ppa1+git202510031955-4d940a1build1) noble; urgency=medium
 
   * Rebuild for unstable
