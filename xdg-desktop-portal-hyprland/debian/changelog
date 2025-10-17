@@ -1,3 +1,12 @@
+xdg-desktop-portal-hyprland (1.3.11-1ppa1) noble; urgency=medium
+
+  * Update to release 1.3.11
+  * 753bbbd version: bump to 1.3.11
+  * a10726d screencopy: fix callback resetting (#358)
+  * add7285 portals: Fix use of a potentially destroyed session (#355)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 17 Oct 2025 21:21:38 +0200
+
 xdg-desktop-portal-hyprland (1.3.10-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
