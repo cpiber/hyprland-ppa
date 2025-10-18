@@ -1,3 +1,9 @@
+hyprland-qt-support (0.1.0-1ppa4) noble; urgency=medium
+
+  * Rebuild
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Oct 2025 21:33:06 +0200
+
 hyprland-qt-support (0.1.0-1ppa3) noble; urgency=medium
 
   * Fix qml namespace
