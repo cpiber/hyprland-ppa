@@ -1,3 +1,10 @@
+hyprscroller (0.47.0~1ppa1+git202510272045-2c17496) noble; urgency=medium
+
+  * Update to master 2c17496
+  * 2c17496 Chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Oct 2025 20:45:45 +0100
+
 hyprscroller (0.47.0~1ppa1+git202509242138-2a447dabuild4) noble; urgency=medium
 
   * Rebuild for unstable
