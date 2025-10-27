@@ -1,0 +1,69 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -136,49 +136,21 @@ set(GIT_DIRTY "unknown")
+ set(GIT_TAG "unknown")
+ set(GIT_COMMITS "0")
+ 
+-if(Git_FOUND)
+-  execute_process(
+-    COMMAND ${GIT_EXECUTABLE} rev-parse --show-toplevel
+-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+-    OUTPUT_VARIABLE GIT_TOPLEVEL
+-    OUTPUT_STRIP_TRAILING_WHITESPACE
+-    ERROR_QUIET
+-    RESULT_VARIABLE GIT_TOPLEVEL_RESULT
+-  )
+-
+-  if(GIT_TOPLEVEL_RESULT EQUAL 0)
+-    message(STATUS "Detected git repository root: ${GIT_TOPLEVEL}")
+-
+-    execute_process(COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      OUTPUT_VARIABLE GIT_COMMIT_HASH OUTPUT_STRIP_TRAILING_WHITESPACE)
+-    execute_process(COMMAND ${GIT_EXECUTABLE} branch --show-current
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      OUTPUT_VARIABLE GIT_BRANCH OUTPUT_STRIP_TRAILING_WHITESPACE)
+-    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%s
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      OUTPUT_VARIABLE GIT_COMMIT_MESSAGE OUTPUT_STRIP_TRAILING_WHITESPACE)
+-    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%cd --date=local
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      OUTPUT_VARIABLE GIT_COMMIT_DATE OUTPUT_STRIP_TRAILING_WHITESPACE)
+-    execute_process(COMMAND ${GIT_EXECUTABLE} diff-index --quiet HEAD --
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      RESULT_VARIABLE GIT_DIRTY_RESULT)
+-    if(NOT GIT_DIRTY_RESULT EQUAL 0)
+-      set(GIT_DIRTY "dirty")
+-    else()
+-      set(GIT_DIRTY "clean")
+-    endif()
+-    execute_process(COMMAND ${GIT_EXECUTABLE} describe --tags
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      OUTPUT_VARIABLE GIT_TAG OUTPUT_STRIP_TRAILING_WHITESPACE)
+-    execute_process(COMMAND ${GIT_EXECUTABLE} rev-list --count HEAD
+-      WORKING_DIRECTORY ${GIT_TOPLEVEL}
+-      OUTPUT_VARIABLE GIT_COMMITS OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  else()
+-    message(WARNING "No Git repository detected in ${CMAKE_SOURCE_DIR}")
+-  endif()
+-endif()
++message(STATUS "Setting build git data from prepare.sh")
++## git rev-parse HEAD
++set(GIT_COMMIT_HASH "<result>")
++## git branch --show-current
++set(GIT_BRANCH "<result>")
++## git show -s --format=%s
++set(GIT_COMMIT_MESSAGE "<result>")
++## git show -s --format=%cd --date=local
++set(GIT_COMMIT_DATE "<result>")
++## if ! git diff-index --quiet HEAD --; then echo "dirty"; else echo "clean"; fi
++set(GIT_DIRTY "<result>")
++## git describe --tags
++set(GIT_TAG "<result>")
++## git rev-list --count HEAD
++set(GIT_COMMITS "<result>")
+ 
+ configure_file(
+     ${CMAKE_SOURCE_DIR}/src/version.h.in

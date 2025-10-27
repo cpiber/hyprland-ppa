@@ -1,3 +1,48 @@
+hyprland-unstable (0.51.0~1ppa1+git202510272023-b186d3bf) noble; urgency=medium
+
+  * Update to main b186d3bf
+  * b186d3bf pass/surface: check for LS size anim for misaligned
+    fractional
+  * 560c53d8 monitor/dpms: fix possible invalid state
+  * fd42e9d0 CI/release: remove generateVersion call
+  * 17d0d696 screencopy: wait longer to re-enable DS (#12135)
+  * 88e34d7d IME: do not share keys/mods states from grabbed keyboards
+    with ime keys/mods (#11917)
+  * 05aa4e1c compositor: check for monitor layout issues post rule apply
+  * 748d2f65 xdg-shell: implement invalid parent errors
+  * 6ea4769b EGL: minor egl changes (#12132)
+  * 72cbb790 layer-shell: fix fullscreen alpha when changing layers
+    (#12124)
+  * b6f94699 meson: disable lto (#12129)
+  * b10b9660 screencopy: fix missing XBGR2101010 format with
+    screencopy_force_8b (#12125)
+  * da04afa4 surface: fix xwayland zero scaling damage calcs (#12123)
+  * 34812c33 hyprctl: include color management presets and sdr
+    information (#12019)
+  * 117e38db cmake: fix git lookup for when building out of
+    srcdir(#12116)
+  * 151b5f69 dwindle: rework split logic to be fully gap-aware (#12047)
+  * aa5a239a [gha] Nix: update inputs
+  * 019589e2 build: replace generateVersion.sh (#12110)
+  * 057695bc desktopAnimationMgr: don't set fade 0 for members of a fs
+    group (#12091)
+  * 892f642f plugins: incorporate hyprdep ABI into plugin info (#12001)
+  * d560c264 internal: fix cf
+  * 02b0c563 xwm: attempt to guess mime in sendData for DnD
+  * 4926332c monitor: remove spammy trace log
+  * 46dab01b renderer: add more uniforms to the screen shader (#11986)
+  * 474cd004 [gha] Nix: update inputs
+  * a4200acf input: fix refocus on grab dismiss (#12014)
+  * 59ff7b2f dispatchers: add forceidle (#11922)
+  * ba077d8f renderer: clean up surface UV size calcs, fix issues
+    (#12070)
+  * 39d62e14 protocols: fix output power protocol not sending mode
+    confirmation (#12072)
+  * 6607c644 renderer: add 1fv and 2fv uniform support (#12080)
+  * f3e13193 timer: constify methods (#12079)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Oct 2025 20:23:23 +0100
+
 hyprland-unstable (0.51.0~1ppa1+git202510172123-8164b90b) noble; urgency=medium
 
   * Update to main 8164b90b
