@@ -1,3 +1,10 @@
+hyprsplit (0.51.1~1ppa1+git202510272025-8e7b13d) noble; urgency=medium
+
+  * Update to main 8e7b13d
+  * 8e7b13d fix version check
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Oct 2025 20:25:14 +0100
+
 hyprsplit (0.51.1~1ppa1+git202510172124-0f7ca50) noble; urgency=medium
 
   * Update to main 0f7ca50

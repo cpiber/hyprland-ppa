@@ -1,3 +1,11 @@
+hyprland-plugins (0.51.0~1ppa1+git202510272023-81f6d14) noble; urgency=medium
+
+  * Update to main 81f6d14
+  * 81f6d14 all: chase hyprland
+  * f1b4524 hyprpm: add 0.51 pins
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Oct 2025 20:23:52 +0100
+
 hyprland-plugins (0.51.0~1ppa1+git202510172123-a5a6f93) noble; urgency=medium
 
   * Update to main a5a6f93
