@@ -1,3 +1,29 @@
+hyprland-unstable (0.51.0~1ppa1+git202511061845-8e8bfbb0) noble; urgency=medium
+
+  * Update to main 8e8bfbb0
+  * 8e8bfbb0 protocols: add Fifo-v1 and commit-timing-v1 (#12052)
+  * c757fd37 compositor: block parent window interaction when modal
+    dialog children window is open (#12057)
+  * 46b71eda [gha] Nix: update inputs
+  * d82538c6 protocols/dmabuf: handle null pointer in
+    CLinuxDMABufV1Protocol::resetFormatTable (#12207)
+  * 8e9add2a sessionlock: fix crash when sendScale is called on a
+    disconnected (#12171)
+  * 5e6cec96 cursor: refactor override handling (#12166)
+  * 6ade4d58 layout: fit floating window on toggle to float (#12139)
+  * 83a0a620 protocols/core: round dnd drop surface box
+  * ff50dc36 renderer/cm: allow gamma 2.2 instead of sRGB EOTF (#12094)
+  * ce9787b3 xwayland: set _NET_WORKAREA property (#12148)
+  * 9eb82774 Nix: build hyprtester along with hyprland
+  * a2f48ea4 CMake: allow building hyprtester without running tests
+  * 309c3c78 Nix/tests: wl-copy -> wl-clipboard
+  * 0907fdf4 CI/release: run cmake configure
+  * 431325ff config/rule: don't populate ID field for automatically id-
+    managed workspaces
+  * 40831a90 Nix/tests: add wl-copy
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 06 Nov 2025 18:45:41 +0100
+
 hyprland-unstable (0.51.0~1ppa1+git202510272023-b186d3bf) noble; urgency=medium
 
   * Update to main b186d3bf
