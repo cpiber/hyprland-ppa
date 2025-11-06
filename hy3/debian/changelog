@@ -1,3 +1,10 @@
+hy3 (0.51.0~1ppa1+git202511061848-16dae4d) noble; urgency=medium
+
+  * Update to master 16dae4d
+  * 16dae4d Updated hash checking
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 06 Nov 2025 18:48:09 +0100
+
 hy3 (0.51.0~1ppa1+git202510031956-af94b01build3) noble; urgency=medium
 
   * Rebuild for unstable

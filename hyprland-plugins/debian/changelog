@@ -1,3 +1,12 @@
+hyprland-plugins (0.51.0~1ppa1+git202511061847-bbb8d2c) noble; urgency=medium
+
+  * Update to main bbb8d2c
+  * bbb8d2c hyprexpo: Chase Hyprland (#529)
+  * 7a07883 CMakeLists.txt: add global/root CMakeLists (#524)
+  * e689220 xtra-dispatchers: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 06 Nov 2025 18:47:27 +0100
+
 hyprland-plugins (0.51.0~1ppa1+git202510272023-81f6d14) noble; urgency=medium
 
   * Update to main 81f6d14
