@@ -1,3 +1,13 @@
+hyprutils (0.10.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.1
+  * 926689d version: bump to 0.10.1
+  * 9637961 string/constVarList: fix UAF
+  * 164a30b animation/bezier: Fix OOB in getYForPoint for non-monotonic
+    4-point curves (#81)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 06 Nov 2025 18:41:40 +0100
+
 hyprutils (0.10.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.10.0
