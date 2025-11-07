@@ -1,0 +1,60 @@
+Source: hyprtoolkit
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc-14,
+ g++-14,
+ hyprwayland-scanner (>= 0.4.0),
+ libwayland-dev (>= 1.22),
+ wayland-protocols (>= 1.45),
+ libgl1-mesa-dev,
+ libhyprutils-dev (>= 0.9.0),
+ libhyprlang-dev (>= 0.6.0),
+ libpixman-1-dev,
+ libdrm-dev,
+ libgbm-dev,
+ libxkbcommon-dev,
+ libpango1.0-dev,
+ libcairo2-dev,
+ libiniparser-dev,
+ libhyprgraphics-dev (>= 0.3.0),
+ libaquamarine-dev (>= 0.9.5),
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/hyprtoolkit
+Vcs-Git: https://github.com/hyprwm/hyprtoolkit.git
+
+Package: libhyprtoolkit-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libhyprtoolkit2 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
+ Hyprtoolkit is designed to be a small, simple, and modern C++ toolkit
+ for making wayland GUI apps, with a few goals:
+ - Simple C++ API for making a GUI app
+ - Smooth animations
+ - Easy usage
+ - Simple system theming
+ This package includes the build-headers for using hyprutils in your own project.
+
+Package: libhyprtoolkit2
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
+ Hyprtoolkit is designed to be a small, simple, and modern C++ toolkit
+ for making wayland GUI apps, with a few goals:
+ - Simple C++ API for making a GUI app
+ - Smooth animations
+ - Easy usage
+ - Simple system theming

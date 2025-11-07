@@ -115,3 +115,6 @@
 [submodule "hyprsplit/source"]
 	path = hyprsplit/source
 	url = https://github.com/shezdy/hyprsplit.git
+[submodule "hyprtoolkit/source"]
+	path = hyprtoolkit/source
+	url = https://github.com/hyprwm/hyprtoolkit.git
