@@ -7,7 +7,7 @@ Build-Depends:
  debhelper-compat (= 13),
  cmake,
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org/
+Homepage: https://hypr.land/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
 Vcs-Git: https://github.com/hyprwm/Hyprland.git
 

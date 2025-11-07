@@ -11,7 +11,7 @@ Build-Depends:
  pkgconf,
  libpixman-1-dev,
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org
+Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprutils
 Vcs-Git: https://github.com/hyprwm/hyprutils.git
 

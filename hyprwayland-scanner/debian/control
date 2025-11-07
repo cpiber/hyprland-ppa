@@ -11,7 +11,7 @@ Build-Depends:
  pkgconf,
  libpugixml-dev,
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org
+Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprwayland-scanner
 Vcs-Git: https://github.com/hyprwm/hyprwayland-scanner.git
 

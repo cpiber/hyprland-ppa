@@ -16,7 +16,7 @@ Build-Depends:
  hyprland-protocols (>= 0.4.0),
  hyprwayland-scanner (>= 0.4.0),
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org
+Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprsunset
 Vcs-Git: https://github.com/hyprwm/hyprsunset.git
 

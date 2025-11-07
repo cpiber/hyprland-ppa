@@ -11,7 +11,7 @@ Build-Depends:
  g++-14,
  libhyprutils-dev (>= 0.7.1),
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org/hyprlang
+Homepage: https://hypr.land/hyprlang
 Vcs-Browser: https://github.com/hyprwm/hyprlang
 Vcs-Git: https://github.com/hyprwm/hyprlang.git
 

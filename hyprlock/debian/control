@@ -28,7 +28,7 @@ Build-Depends:
  libsdbus-c++-dev (>= 2.0.0),
  hyprwayland-scanner (>= 0.4.4),
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org
+Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprlock
 Vcs-Git: https://github.com/hyprwm/hyprlock.git
 

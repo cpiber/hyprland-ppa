@@ -15,7 +15,7 @@ Build-Depends:
  libtomlplusplus-dev,
  libhyprlang-dev (>= 0.4.2),
 Standards-Version: 4.6.2
-Homepage: https://hyprland.org
+Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprcursor
 Vcs-Git: https://github.com/hyprwm/hyprcursor.git
 
