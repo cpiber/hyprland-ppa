@@ -1,3 +1,12 @@
+hyprgraphics (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * ffc999d version: bump to 0.3.0
+  * e381b2f resources/text: fix alignment layout for center/right
+  * 50fb9f0 resource/image: add buffer option to image resource (#39)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Nov 2025 20:00:57 +0100
+
 hyprgraphics (0.2.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
