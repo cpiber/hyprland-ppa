@@ -1,3 +1,15 @@
+hyprland-unstable (0.52.0~1ppa1+git202511072302-522edc87) noble; urgency=medium
+
+  * Update to main 522edc87
+  * 522edc87 meson: fix version.h install location
+  * f56ec180 version: bump to 0.52.0
+  * fd50e78b render/cm: change non_shader_cm ignore behavior and set
+    default to it (#12210)
+  * 06198120 core: qtutils -> guiutils (#12231)
+  * 3fc8cb82 cm: follow preferred srgb eotf for screencopy (#12230)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Nov 2025 23:02:42 +0100
+
 hyprland-unstable (0.51.0~1ppa1+git202511062147-1ca6058b) noble; urgency=medium
 
   * Update to main 1ca6058b

@@ -75,7 +75,7 @@ Recommends:
  sway-notification-center | dunst,
  pipewire,
  wireplumber,
- hyprland-qtutils,
+ hyprland-guiutils,
 Suggests:
  hyprland-plugin-deps,
  hyprland-unstable-docs,
