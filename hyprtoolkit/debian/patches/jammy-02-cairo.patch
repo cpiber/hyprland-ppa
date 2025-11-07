@@ -1,0 +1,13 @@
+Index: source/src/renderer/gl/GLTexture.cpp
+===================================================================
+--- source.orig/src/renderer/gl/GLTexture.cpp
++++ source/src/renderer/gl/GLTexture.cpp
+@@ -3,6 +3,8 @@
+ 
+ #include "../../core/InternalBackend.hpp"
+ 
++#define CAIRO_FORMAT_RGB96F 6
++
+ using namespace Hyprtoolkit;
+ 
+ CGLTexture::CGLTexture(ASP<Hyprgraphics::IAsyncResource> resource) {
