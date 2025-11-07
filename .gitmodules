@@ -118,3 +118,6 @@
 [submodule "hyprtoolkit/source"]
 	path = hyprtoolkit/source
 	url = https://github.com/hyprwm/hyprtoolkit.git
+[submodule "hyprland-guiutils/source"]
+	path = hyprland-guiutils/source
+	url = https://github.com/hyprwm/hyprland-guiutils.git

@@ -1,0 +1,36 @@
+Source: hyprland-guiutils
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc-14,
+ g++-14,
+ libhyprlang-dev (>= 0.6.0),
+ libhyprutils-dev (>= 0.2.4),
+ libhyprtoolkit-dev (>= 0.2.2),
+ libpixman-1-dev,
+ libdrm-dev,
+ libcairo2-dev,
+ libhyprgraphics-dev (>= 0.3.0),
+ libaquamarine-dev (>= 0.9.5),
+# TODO: Remove above three dependencies, those are transitive from hyprtoolkit
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/hyprland-guiutils
+Vcs-Git: https://github.com/hyprwm/hyprland-guiutils.git
+
+Package: hyprland-guiutils
+Architecture: any
+Multi-Arch: foreign
+Breaks:
+ hyprland-qtutils,
+Replaces:
+ hyprland-qtutils,
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Hyprland GUI utilities (successor to hyprland-qtutils)
