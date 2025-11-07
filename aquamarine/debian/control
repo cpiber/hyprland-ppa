@@ -34,6 +34,7 @@ Multi-Arch: same
 Depends:
  libaquamarine8 (= ${binary:Version}),
  ${misc:Depends},
+ libhyprutils-dev (>= 0.8.0),
 Breaks: aquamarine-dev
 Description: Aquamarine is a very light linux rendering backend library.
  It provides basic abstractions for an application to render on a Wayland

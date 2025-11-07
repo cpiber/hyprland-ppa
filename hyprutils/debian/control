@@ -22,6 +22,7 @@ Multi-Arch: same
 Depends:
  libhyprutils9 (= ${binary:Version}),
  ${misc:Depends},
+ libpixman-1-dev,
 Breaks: hyprutils-dev
 Description: Hyprutils is a small C++ library for utilities
  used across the Hypr* ecosystem.

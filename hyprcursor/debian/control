@@ -26,6 +26,7 @@ Multi-Arch: same
 Depends:
  libhyprcursor1 (= ${binary:Version}),
  ${misc:Depends},
+ libcairo2-dev,
 Breaks: hyprcursor-dev
 Description: The hyprland cursor format, library and utilities.
  XCursor sucks, and we still use it today.
