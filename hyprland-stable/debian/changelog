@@ -1,3 +1,189 @@
+hyprland (0.52.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.52.0
+  * f56ec180 version: bump to 0.52.0
+  * fd50e78b render/cm: change non_shader_cm ignore behavior and set
+    default to it (#12210)
+  * 06198120 core: qtutils -> guiutils (#12231)
+  * 3fc8cb82 cm: follow preferred srgb eotf for screencopy (#12230)
+  * 1ca6058b chore: fix non-relative imports (#12228)
+  * ca4b68e4 renderer: fix fractional scale artifact (#12219)
+  * 8e8bfbb0 protocols: add Fifo-v1 and commit-timing-v1 (#12052)
+  * c757fd37 compositor: block parent window interaction when modal
+    dialog children window is open (#12057)
+  * 46b71eda [gha] Nix: update inputs
+  * d82538c6 protocols/dmabuf: handle null pointer in
+    CLinuxDMABufV1Protocol::resetFormatTable (#12207)
+  * 8e9add2a sessionlock: fix crash when sendScale is called on a
+    disconnected (#12171)
+  * 5e6cec96 cursor: refactor override handling (#12166)
+  * 6ade4d58 layout: fit floating window on toggle to float (#12139)
+  * 83a0a620 protocols/core: round dnd drop surface box
+  * ff50dc36 renderer/cm: allow gamma 2.2 instead of sRGB EOTF (#12094)
+  * ce9787b3 xwayland: set _NET_WORKAREA property (#12148)
+  * 9eb82774 Nix: build hyprtester along with hyprland
+  * a2f48ea4 CMake: allow building hyprtester without running tests
+  * 309c3c78 Nix/tests: wl-copy -> wl-clipboard
+  * 0907fdf4 CI/release: run cmake configure
+  * 431325ff config/rule: don't populate ID field for automatically id-
+    managed workspaces
+  * 40831a90 Nix/tests: add wl-copy
+  * b186d3bf pass/surface: check for LS size anim for misaligned
+    fractional
+  * 560c53d8 monitor/dpms: fix possible invalid state
+  * fd42e9d0 CI/release: remove generateVersion call
+  * 17d0d696 screencopy: wait longer to re-enable DS (#12135)
+  * 88e34d7d IME: do not share keys/mods states from grabbed keyboards
+    with ime keys/mods (#11917)
+  * 05aa4e1c compositor: check for monitor layout issues post rule apply
+  * 748d2f65 xdg-shell: implement invalid parent errors
+  * 6ea4769b EGL: minor egl changes (#12132)
+  * 72cbb790 layer-shell: fix fullscreen alpha when changing layers
+    (#12124)
+  * b6f94699 meson: disable lto (#12129)
+  * b10b9660 screencopy: fix missing XBGR2101010 format with
+    screencopy_force_8b (#12125)
+  * da04afa4 surface: fix xwayland zero scaling damage calcs (#12123)
+  * 34812c33 hyprctl: include color management presets and sdr
+    information (#12019)
+  * 117e38db cmake: fix git lookup for when building out of
+    srcdir(#12116)
+  * 151b5f69 dwindle: rework split logic to be fully gap-aware (#12047)
+  * aa5a239a [gha] Nix: update inputs
+  * 019589e2 build: replace generateVersion.sh (#12110)
+  * 057695bc desktopAnimationMgr: don't set fade 0 for members of a fs
+    group (#12091)
+  * 892f642f plugins: incorporate hyprdep ABI into plugin info (#12001)
+  * d560c264 internal: fix cf
+  * 02b0c563 xwm: attempt to guess mime in sendData for DnD
+  * 4926332c monitor: remove spammy trace log
+  * 46dab01b renderer: add more uniforms to the screen shader (#11986)
+  * 474cd004 [gha] Nix: update inputs
+  * a4200acf input: fix refocus on grab dismiss (#12014)
+  * 59ff7b2f dispatchers: add forceidle (#11922)
+  * ba077d8f renderer: clean up surface UV size calcs, fix issues
+    (#12070)
+  * 39d62e14 protocols: fix output power protocol not sending mode
+    confirmation (#12072)
+  * 6607c644 renderer: add 1fv and 2fv uniform support (#12080)
+  * f3e13193 timer: constify methods (#12079)
+  * 8164b90b config: fix crash when some configurations include non-
+    integer values (#12056)
+  * 36c0477d tests: disable shortcut test for ci
+  * ab11af96 ext-foreign-toplevel: remove stale entries when remapping
+    (#12037)
+  * e40873be renderer: add cursor:zoom_disable_aa for controlling AA on
+    zoom (#12025)
+  * 60529e81 renderer: round box in damageBox
+  * f324a3a5 functionHook: fix distance check
+  * ee5d05f0 hookSystem: fix anchor point for mmap
+  * bbb83317 Nix: drop ninja for CMake build
+  * 0d6d19b2 Revert "nix: use meson"
+  * 541ef60f CMake: print pch messages based on var
+  * 4b55ec68 windowrules: add modal prop (#12024)
+  * 7fcaf332 layouts: apply [min|max]size window rules to dwindle &
+    master layouts (#11898)
+  * 6582f42d meson: disable lto explicitly
+  * ed936430 core: disable lto for hyprland builds (#11972)
+  * d599513d config: add automatic closing to submaps (#11760)
+  * 6a01c399 input: add option to rotate device input (#11947)
+  * da31e82a internal: prevent early exit processes from being zombies
+    (#11995)
+  * 32f32333 dmabuffer: ensure we only create one texture per buffer
+    (#11990)
+  * 2b0926dc tests: disable one test as it fails on ci
+  * b965fb2a flake.lock: bump hyprutils
+  * 82759d40 buffer: move texture creation to commit time (#11964)
+  * 0dc45b54 managers/helpers: add missing includes (#11969)
+  * ba24547d dispatchers: add set, unset and toggle to fullscreen
+    (#11893)
+  * 5ba2d221 compositor: make wl_surface::frame follow pending states
+    (#11953)
+  * 5a208621 hookSystem: use a full trampo setup for hooks
+  * c3747fab hookSystem: fix anchoring in seekNewPageAddr()
+  * dc72259a core/compositor: revert make wl_surface::frame follow
+    pending states (#11896)
+  * 02cda6be systeminfo: log system package versions (#11946)
+  * 73f06434 keybinds: fix repeat and long press keybinds release
+    (#11863)
+  * 17e77e04 core/compositor: make wl_surface::frame follow pending
+    states (#11896)
+  * cfac2725 debug: fix data race in Debug::log() (#11931)
+  * 76d99874 cm: handle inert cm outputs (#11916)
+  * b7ef892e [gha] Nix: update inputs
+  * f0b4164e cm: fix primaries to proto scale (#11914)
+  * 3bcfa94e renderer: add render:non_shader_cm and fixes (#11900)
+  * c467bb26 renderer: fix popup fadeout blur (#11756)
+  * e0c96276 renderer: optimize border drawcalls (#11891)
+  * 378438ff config: increase default anr_missed_pings value
+  * 13648d19 protocols/seat: force down rounding of coords at the
+    surface edge (#11890)
+  * 8c54c9b4 protocols/cm: remove unneeded preferred ref (#11877)
+  * 38c1e72c rules: fix some monitor rules (#11873)
+  * 09596725 renderer/cm: add more monitor cm options (#11861)
+  * 4d82cc59 internal: fix clang-tidy "errors" (#11862)
+  * 43fb4753 gestures: fix gesture direction detection (#11852)
+  * f854b5bf deco: reduce virtual calls in drop shadow
+  * eb25dfd3 opengl: move from unordered_set to array
+  * b6278857 decoration: reduce virtual calls
+  * c30036bd CI/Arch: build hyprgraphics after hyprutils
+  * 766acadc seat: release depressed modifiers on leave (#11854)
+  * ef479ff5 viewporter: clamp sub-pixel overflow (#11845)
+  * 6f1d2e77 config: fix rules with no parameters not being counted as
+    invalid (#11849)
+  * ae445606 config: allow negative to be used with tags. (#11779)
+  * 4f3dd1dd config: fix gesture dispatcher parsing with whitespaces
+    (#11784)
+  * d8f61575 config: support more than 1 window rule per rule line.
+    (#11689)
+  * 7ce451d2 renderer: disable anti-aliasing on cursor:zoom_factor
+    (#6135) (#11828)
+  * 5212099b layout: avoid nullptr deref (#11831)
+  * 8cce3b98 shm: refactor to UP and correct m_data check (#11820)
+  * 683fc77f hyprctl: nullptr guard --systeminfo (#11822)
+  * ec9a72d9 workspaces: fix persistence with no monitor specified
+    (#11807)
+  * 31bd9ec4 foreign-toplevel: continue past skipped invalid windows
+    (#11804)
+  * 29b103c3 exec: Spawn processes as direct children (#11735)
+  * 70a7047e renderer: fix uv scaling detection (#11789)
+  * 26f29352 renderer: add "noscreenshare" layer rule (#11664)
+  * 45f007d4 ci: remove duplicate cp and redundant mkdir commands
+  * 22c8bc9b CI/Nix: Allow running CI in forks
+  * 26cbc673 renderer: fix uv calculations once and for all (#11770)
+  * 41dad381 config: fix multi-argument gesture dispatcher parsing
+    (#11721)
+  * 83843908 vkeyboard: update cached mods before IME; add share_states
+    = 2 config option (#11720)
+  * 6a88f2e8 monitors: auto apply suggested scale and notify the user.
+    (#11753)
+  * 88326075 [gha] Nix: update inputs
+  * 8fc7b2c1 input: fix virtual keyboard keymaps (#11763)
+  * afd1e717 renderer: fix inconsistent border thickness for
+    roundingPower < 2 (#11752)
+  * 4fc95d64 renderer: asynchronously load background tex (#11749)
+  * 91f592a8 workspace: fix relative workspaces with monitor descs
+  * 059ec60e hyprpm: make temp root if not present
+  * 56480779 animation: fix slide/slidefade to accept forced direction
+    (#11725)
+  * 1cb8cd39 solitary: fix check for config error (#11733)
+  * 7fd6998f core: fix clang-format
+  * 5e96fac5 presentation: fix vrr check for reporting no refresh time
+  * 4a9c4dbc gestures/fs: fix typo
+  * 9e74d0ae renderer: clamp blur:passes 1-8
+  * 559024c3 gestures/float: fix typo
+  * 16c18dde windows: fix no decorate not disabling borders (#11673)
+  * adbf7c86 input: handle tablet active area scaling when axes swap due
+    to rotation (#11661)
+  * 797bfe90 dispatchers: fix movecursor not updating client pos
+    (#11672)
+  * 38169c8f input: support xkb v2 format (#11482)
+  * c7b99691 render/OpenGL: fix compilation for 32bit systems (#11667)
+  * 231b8007 flake.lock: update
+  * 8a959b43 meson: set minimum version
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Nov 2025 23:18:45 +0100
+
 hyprland (0.51.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
