@@ -1,3 +1,9 @@
+hyprutils (0.10.2-1ppa2) noble; urgency=medium
+
+  * Add gtest
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 20:50:38 +0100
+
 hyprutils (0.10.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.10.2

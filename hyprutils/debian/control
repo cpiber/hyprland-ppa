@@ -10,6 +10,7 @@ Build-Depends:
  g++-14,
  pkgconf,
  libpixman-1-dev,
+ libgtest-dev,
 Standards-Version: 4.6.2
 Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprutils
