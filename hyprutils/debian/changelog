@@ -1,3 +1,13 @@
+hyprutils (0.10.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.2
+  * 0a28f35 version: bump to 0.10.2
+  * 01afe92 tests: move to gtest (#85)
+  * 9a9745d string: add VarList2 (#84)
+  * 968f881 i18n: add i18n engine (#83)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 20:35:47 +0100
+
 hyprutils (0.10.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.10.1
