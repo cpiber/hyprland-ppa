@@ -1,3 +1,16 @@
+hyprland (0.52.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.52.1
+  * 967c3c74 version: bump to 0.52.1
+  * eb53dae2 CI/release: populate git info (#12247)
+  * b45f304c protocols/layershell: do not raise protocol error if layer
+    surface is not anchored (#12241)
+  * a85c1f16 protocols/outputMgmt: fix wlr-randr by defering success
+    event until monitor reloads (#12236)
+  * 282f4233 meson: fix version.h install location
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 20:37:35 +0100
+
 hyprland (0.52.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.52.0
