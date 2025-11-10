@@ -1,3 +1,9 @@
+hyprutils (0.10.2-1ppa3) noble; urgency=medium
+
+  * Add missing header
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 21:10:15 +0100
+
 hyprutils (0.10.2-1ppa2) noble; urgency=medium
 
   * Add gtest

@@ -1,0 +1,19 @@
+Index: source/src/memory/Memory.cpp
+===================================================================
+--- source.orig/src/memory/Memory.cpp
++++ source/src/memory/Memory.cpp
+@@ -7,6 +7,7 @@ using namespace Hyprutils::Memory;
+ #ifdef HU_UNIT_TESTS
+ 
+ #include <gtest/gtest.h>
++#include <thread>
+ 
+ #define SP CSharedPointer
+ #define WP CWeakPointer
+@@ -176,4 +177,4 @@ TEST(Memory, memory) {
+     testAtomicImpl();
+ }
+ 
+-#endif
+\ No newline at end of file
++#endif
