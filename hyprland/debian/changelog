@@ -1,3 +1,15 @@
+hyprland-unstable (0.52.0~1ppa1+git202511102039-0b1d6906) noble; urgency=medium
+
+  * Update to main 0b1d6906
+  * 0b1d6906 flake.nix: update guiutils and override hw-s
+  * 29311849 CI/release: populate git info (#12247)
+  * 0bd11d5e protocols/layershell: do not raise protocol error if layer
+    surface is not anchored (#12241)
+  * 06b37c39 protocols/outputMgmt: fix wlr-randr by defering success
+    event until monitor reloads (#12236)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 20:39:57 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202511072302-522edc87) noble; urgency=medium
 
   * Update to main 522edc87
