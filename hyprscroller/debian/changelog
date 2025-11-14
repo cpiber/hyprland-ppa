@@ -1,3 +1,10 @@
+hyprscroller (0.47.0~1ppa1+git202511142200-a5843b9) noble; urgency=medium
+
+  * Update to master a5843b9
+  * a5843b9 Commit pins
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 14 Nov 2025 22:00:22 +0100
+
 hyprscroller (0.47.0~1ppa1+git202510272045-2c17496build4) noble; urgency=medium
 
   * Rebuild for unstable

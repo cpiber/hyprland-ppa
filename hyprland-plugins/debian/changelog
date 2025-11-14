@@ -1,3 +1,12 @@
+hyprland-plugins (0.52.0~1ppa1+git202511142159-befb267) noble; urgency=medium
+
+  * Update to main befb267
+  * befb267 hyprfocus: fix fullscreen windows not restoring original
+    state (#537)
+  * be3cbf6 CMakeLists.txt: remove version option (#535)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 14 Nov 2025 21:59:54 +0100
+
 hyprland-plugins (0.51.0~1ppa1+git202511061847-bbb8d2cbuild3) noble; urgency=medium
 
   * Rebuild for unstable
