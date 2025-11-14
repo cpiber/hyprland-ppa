@@ -1,3 +1,18 @@
+hyprlang (0.6.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.5
+  * 8b3da75 version: bump to 0.6.5
+  * b0d7b37 parser: fix lingering currentSpecialCat after dynamic calls
+  * 4302343 ci/arch: add gtest
+  * 771e915 config/parser: fix invalid ptr after move
+  * 995db11 config: try variables before handlers if possible
+  * 4dafa28 core: support nesting with special categories and fix
+    explicit key + nested (#82)
+  * 3d63fb4 config: allow nesting if statements
+  * 23f0deb README: update docs link (#81)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 14 Nov 2025 21:47:51 +0100
+
 hyprlang (0.6.4-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
