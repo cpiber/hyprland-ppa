@@ -1,3 +1,21 @@
+hyprland-unstable (0.52.0~1ppa1+git202511142158-43527d36) noble; urgency=medium
+
+  * Update to main 43527d36
+  * 43527d36 internal: fix crash at startup on FreeBSD (#12298)
+  * 55a93b8a internal: put Linux-only header behind ifdef (#12300)
+  * 64ee8f8a layout: include reserved area in float fit (#12289)
+  * b77cbad5 screencopy: fix possible crash in renderMon()
+  * 308226a4 config/keybinds: add a submap universal keybind flag
+    (#12100)
+  * ee2168c6 renderer/ime: fix fcitx5 popup artifacts (#12263)
+  * c330d433 renderer: fix noscreenshare layerrule popups (#12260)
+  * cadf9224 presentation: only send sync output on presented (#12255)
+  * ac8edc6a internal: fix subtractWindow typo for POSYSTR (#12259)
+  * b2ea6b01 renderer: Allow DS for surfaces with inert subsurfaces
+    (#12133)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 14 Nov 2025 21:58:41 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202511102039-0b1d6906) noble; urgency=medium
 
   * Update to main 0b1d6906
