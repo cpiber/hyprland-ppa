@@ -1,3 +1,12 @@
+hyprlang (0.6.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.6
+  * 3d30578 version: bump to 0.6.6
+  * deea98d config/parser: don't return found on dontErrorOnMissing in
+    special
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 17 Nov 2025 19:57:57 +0100
+
 hyprlang (0.6.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.5
