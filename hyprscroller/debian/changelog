@@ -1,3 +1,15 @@
+hyprscroller (0.47.0~1ppa1+git202511192318-75927f4) noble; urgency=medium
+
+  * Update to master 75927f4
+  * 75927f4 fix: Remove layout on plugin disable
+  * a691849 Update rule effects to match Hyprland and update README
+  * b6d063b fix window rule matching
+  * dd732ce fix doesntWantBorders check
+  * 45f4fb5 Fix unsetWindowData
+  * b87e794 Fix pin rules/tags
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 19 Nov 2025 23:18:09 +0100
+
 hyprscroller (0.47.0~1ppa1+git202511191930-b57e8d2) noble; urgency=medium
 
   * Update to master b57e8d2
