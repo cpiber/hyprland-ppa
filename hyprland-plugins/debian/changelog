@@ -1,3 +1,12 @@
+hyprland-plugins (0.52.0~1ppa1+git202511191930-1bc5b02) noble; urgency=medium
+
+  * Update to main 1bc5b02
+  * 1bc5b02 hyprbars: fix windowrules
+  * a2bf2df hyprbars: restrict keyword to cat
+  * 8c1212e hyprfocus: add only_on_monitor_change option (#538)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 19 Nov 2025 19:30:08 +0100
+
 hyprland-plugins (0.52.0~1ppa1+git202511142159-befb267) noble; urgency=medium
 
   * Update to main befb267
