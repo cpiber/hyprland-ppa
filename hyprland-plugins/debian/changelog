@@ -1,3 +1,10 @@
+hyprland-plugins (0.52.0~1ppa1+git202511192317-793d24e) noble; urgency=medium
+
+  * Update to main 793d24e
+  * 793d24e all: Window rules V3 Fixes (#541)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 19 Nov 2025 23:17:34 +0100
+
 hyprland-plugins (0.52.0~1ppa1+git202511191930-1bc5b02) noble; urgency=medium
 
   * Update to main 1bc5b02
