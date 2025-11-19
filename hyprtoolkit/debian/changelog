@@ -1,3 +1,17 @@
+hyprtoolkit (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * 2af07d3 version: bump to 0.3.0
+  * 83ed855 toolkitWindow: ignore empty tooltip timer items
+  * 69315f6 elements/text: scale maxSize for render
+  * d4f4157 version: bump to 0.2.4
+  * c8419ca core/element: Add tooltips (#16)
+  * 0d9305b core/toolkitWindow: always set needsFrame on scheduleFrame
+  * 38b5b36 backend: clear wakeup fd after poll
+  * a932a1f scripts: fix a typo (#15)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 19 Nov 2025 19:52:54 +0100
+
 hyprtoolkit (0.2.3-1ppa1) noble; urgency=medium
 
   * Initial release.

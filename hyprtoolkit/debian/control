@@ -34,7 +34,7 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libhyprtoolkit2 (= ${binary:Version}),
+ libhyprtoolkit3 (= ${binary:Version}),
  ${misc:Depends},
  libaquamarine-dev (>= 0.9.5),
  libhyprgraphics-dev (>= 0.3.0),
@@ -48,7 +48,7 @@ Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
  - Simple system theming
  This package includes the build-headers for using hyprutils in your own project.
 
-Package: libhyprtoolkit2
+Package: libhyprtoolkit3
 Architecture: any
 Multi-Arch: same
 Depends:
