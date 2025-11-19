@@ -104,7 +104,7 @@ Index: source/src/managers/KeybindManager.cpp
 ===================================================================
 --- source.orig/src/managers/KeybindManager.cpp
 +++ source/src/managers/KeybindManager.cpp
-@@ -291,8 +291,13 @@ void CKeybindManager::updateXKBTranslati
+@@ -296,8 +296,13 @@ void CKeybindManager::updateXKBTranslati
      const auto        PCONTEXT   = xkb_context_new(XKB_CONTEXT_NO_FLAGS);
      FILE* const       KEYMAPFILE = FILEPATH.empty() ? nullptr : fopen(absolutePath(FILEPATH, g_pConfigManager->m_configCurrentPath).c_str(), "r");
  
@@ -120,7 +120,7 @@ Index: source/src/managers/KeybindManager.cpp
      if (KEYMAPFILE)
          fclose(KEYMAPFILE);
  
-@@ -305,7 +310,11 @@ void CKeybindManager::updateXKBTranslati
+@@ -310,7 +315,11 @@ void CKeybindManager::updateXKBTranslati
                     rules.rules, rules.model, rules.options);
          memset(&rules, 0, sizeof(rules));
  
@@ -148,3 +148,16 @@ Index: source/src/protocols/VirtualKeyboard.cpp
          munmap(keymapData, len);
  
          if UNLIKELY (!xkbKeymap) {
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -197,7 +197,7 @@ pkg_check_modules(
+   deps
+   REQUIRED
+   IMPORTED_TARGET
+-  xkbcommon>=1.11.0
++  xkbcommon
+   uuid
+   wayland-server
+   wayland-protocols>=1.45

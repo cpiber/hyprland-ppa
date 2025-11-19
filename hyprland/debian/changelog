@@ -1,3 +1,68 @@
+hyprland-unstable (0.52.0~1ppa1+git202511191926-fbb31503) noble; urgency=medium
+
+  * Update to main fbb31503
+  * fbb31503 CI/AI translate: fix yet again
+  * 9f02dca8 i18n: add Norwegian Bokmål translations (#12354)
+  * 6a8d3069 examples: fix example config (#12394)
+  * e4b40abc windowrules: bring back windowUpdateRules
+  * 9495f989 hyprpm: remove -nn flag and make notification behaviour
+    more consist… (#11272)
+  * 2c9c4d09 windowrules: fix matching against xdgTag (#12393)
+  * e15409bb CMake: fix GIT_COMMIT_MESSAGE parsing
+  * 312073ce CMake: add min version for xkbcommon
+  * edc31154 dwindle: Revert rework split logic to be fully gap-aware
+    (#12047)
+  * 37fe7b2e config: export version variable for versioned configs
+  * c2670e9a windowrules: rewrite completely (#12269)
+  * 95ee08b3 ci: fix translation ci again
+  * ff6d771b i18n: add Persian translations (#12361)
+  * 64e4e913 ci: fix translator ci
+  * ad52ba9c i18n: Add Dutch translations (#12326)
+  * 526aa1d0 CI/Nix: simplify cache config
+  * 5f057573 CI/AI translate: only run on src/i18n
+  * 4695f858 i18n: add Simplified Chinese translations (#12332)
+  * 1796dbcd i18n: Add hungarian translations (#12346)
+  * e3540669 groupbar: fix rounding logic for edge cases (#12366)
+  * 2b14f27c [gha] Nix: update inputs
+  * 68c23fbd CI: drop no_pch and make default, drop noxwayland
+  * 484d87d4 CI: drop meson build, simplify c-f check
+  * cefa63c2 meson: drop
+  * 9d675118 i18n: add Serbian Translations (#12341)
+  * 5265fa3b i18n: add pt_BR translations (#12351)
+  * dfb4dcd5 i18n: add Assamese translations (#12356)
+  * 9d02fe9c i18n: add Arabic (ar) translations (#12352)
+  * 76edcfc6 i18n: add Belarusian language (#12358)
+  * 11451d68 i18n: add Turkish translations (#12331)
+  * 3534dbdb ci: translation note fix
+  * 6e2fe103 i18n: add Malayalam translations (#12345)
+  * 7910bc42 renderer: fix fractional scale artifacts (#12287)
+  * 0770494d i18n: add Russian translations (#12335)
+  * 49c0c97c CI: fix translator
+  * e948445f CI: minor translation fixes
+  * 7a617753 i18n: add Spanish translations (#12334)
+  * f0de61ca CI: run translator in pull_request_target for comment
+    access
+  * c02a6184 CI: add a fail note to translation ci
+  * 15b4b1dd ci: fix comment workflow for translations
+  * a6b877fe CMake: prepopulate GIT vars from env
+  * d2d1613e Nix: fix GIT_* env vars
+  * c7e14ecd i18n: Add Hindi translations (#12324)
+  * 9321f52e CI: Add AI translation checks  (#12342)
+  * b04e8e00 cursor: fix m_cursorSurfaceInfo not being updated while a
+    cursor override is set (#12327)
+  * 5b373ea9 i18n: add French translations (#12330)
+  * d52639fd i18n: init german translations (#12323)
+  * e616e595 i18n: init localization for ANR, Permissions and
+    Notifications (#12316)
+  * cb47eb1d deco/groupbar: add groupbar blur (#12310)
+  * 9b006b2c plugin/hook: disallow multiple hooks per function (#12320)
+  * b35f7843 cursor: ensure cursor reset on changed window states
+    (#12301)
+  * b62ab4b5 cmake,meson: fix inclusion of GPG info in Git commit info
+    (#12302)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 19 Nov 2025 19:26:17 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202511142158-43527d36) noble; urgency=medium
 
   * Update to main 43527d36
