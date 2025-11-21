@@ -30,15 +30,16 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libhyprgraphics2 (= ${binary:Version}),
+ libhyprgraphics3 (= ${binary:Version}),
  ${misc:Depends},
  libcairo2-dev,
  libhyprutils-dev,
 Description: Hyprgraphics is a small C++ library with graphics utilities
  Hyprgraphics is a small C++ library with graphics / resource related
  utilities used across the hypr* ecosystem.
+ This package includes the build-headers for using hyprgraphics in your own project.
 
-Package: libhyprgraphics2
+Package: libhyprgraphics3
 Architecture: any
 Multi-Arch: same
 Depends:
