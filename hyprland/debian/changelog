@@ -1,3 +1,23 @@
+hyprland-unstable (0.52.0~1ppa1+git202511212044-abb2f7ee) noble; urgency=medium
+
+  * Update to main abb2f7ee
+  * abb2f7ee renderer: fix render_unfocused
+  * 79a27819 protocols/workspace: fix crash in initial group sending
+  * d66c9222 CI/AI translate: expose output
+  * b5a2ef77 i18n: add Português (Portugal) translation (#12328)
+  * c5d45b76 hyprctl: fix no_vrr prop ref (#12410)
+  * c249a9f4 windowrules: fix group rule recalcs (#12403)
+  * 00cce1c8 i18n: improve Spanish translations for clarity and
+    consistency (#12378)
+  * 6b8e3358 CI/AI translate: change path filter action
+  * 80b96a31 hyprctl: show contentType in activewindow (#12214)
+  * f9d1da66 i18n: slight update to it_IT translations (#12372)
+  * 75321153 rule: nuke parseRelativeVector
+  * 1c29d6b1 i18n: add Slovenian translation (#12369)
+  * d0503bea i18n: add Ukrainian translation (#12370)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Nov 2025 20:44:04 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202511191926-fbb31503) noble; urgency=medium
 
   * Update to main fbb31503
