@@ -1,3 +1,11 @@
+hy3 (0.52.0~1ppa1+git202511212045-0a41a2a) noble; urgency=medium
+
+  * Update to master 0a41a2a
+  * 0a41a2a fixup: account for window rules rewrite
+  * 8b819e2 version: update to Hyprland 0.52.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Nov 2025 20:45:05 +0100
+
 hy3 (0.51.0~1ppa1+git202511191930-72913cb) noble; urgency=medium
 
   * Update to master 72913cb

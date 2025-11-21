@@ -1,3 +1,12 @@
+hyprland-plugins (0.52.0~1ppa1+git202511212044-57961d6) noble; urgency=medium
+
+  * Update to main 57961d6
+  * 57961d6 hyprbars: fix bar_color and title_color rules (#545)
+  * a707757 scrolling: fixed +conf and -conf logic in colresize (#542)
+  * a75241d hyprpm: add pins for 0.52.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Nov 2025 20:44:29 +0100
+
 hyprland-plugins (0.52.0~1ppa1+git202511192317-793d24e) noble; urgency=medium
 
   * Update to main 793d24e
