@@ -1,3 +1,19 @@
+hyprutils (0.10.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.3
+  * a9fe974 version: bump to 0.10.3
+  * b311dc9 cli: add logger (#90)
+  * 16a7fe7 cli: add CArgumentParser (#89)
+  * 31f2995 Nix: always test in debug mode
+  * 1454845 cmake: add coverage reports
+  * 2698ac1 tests: move tests out of source tree (#88)
+  * 671792b i18n: fix error with localizing multi-var strings
+  * 0c64118 i18n/engine: optimize string generation
+  * e3cae69 i18n/engine: fix pure stem matches
+  * cb3e797 internal: fix missing headers (#86)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 23 Nov 2025 17:47:32 +0100
+
 hyprutils (0.10.2-1ppa3) noble; urgency=medium
 
   * Add missing header
