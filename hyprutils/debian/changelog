@@ -1,3 +1,12 @@
+hyprutils (0.10.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.4
+  * bc9803c version: bump to 0.10.4
+  * 44c2ba0 src/cli/ArgumentParser.cpp: clang requires <algorithm> (#91)
+  * 96df6f6 cli/logger: add redirection of connections
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 17:52:02 +0100
+
 hyprutils (0.10.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.10.3
