@@ -1,3 +1,10 @@
+hy3 (0.52.0~1ppa1+git202511251920-1d74cd9) noble; urgency=medium
+
+  * Update to master 1d74cd9
+  * 1d74cd9 update window rules in missing places
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 19:20:00 +0100
+
 hy3 (0.52.0~1ppa1+git202511212045-0a41a2a) noble; urgency=medium
 
   * Update to master 0a41a2a

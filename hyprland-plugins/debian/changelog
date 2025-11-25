@@ -1,3 +1,10 @@
+hyprland-plugins (0.52.0~1ppa1+git202511251919-7ffc0b3) noble; urgency=medium
+
+  * Update to main 7ffc0b3
+  * 7ffc0b3 hyprscrolling: fixed moveWindowTo behavior (#546)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 19:19:26 +0100
+
 hyprland-plugins (0.52.0~1ppa1+git202511212044-57961d6) noble; urgency=medium
 
   * Update to main 57961d6
