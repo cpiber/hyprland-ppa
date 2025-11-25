@@ -32,7 +32,7 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libaquamarine8 (= ${binary:Version}),
+ libaquamarine9 (= ${binary:Version}),
  ${misc:Depends},
  libhyprutils-dev (>= 0.8.0),
 Breaks: aquamarine-dev
@@ -43,7 +43,7 @@ Description: Aquamarine is a very light linux rendering backend library.
  performant, and minimal.
  Aquamarine provides no bindings for other languages. It is C++-only.
 
-Package: libaquamarine8
+Package: libaquamarine9
 Architecture: any
 Multi-Arch: same
 Depends:

@@ -1,3 +1,18 @@
+aquamarine (0.10.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.0
+  * a20a0e6 version: bump to 0.10.0
+  * 23e4e25 backend: implement hyprutils' cli::logger
+  * 6d0b356 drm: prevent nullptr deref during DRM backend shutdown
+    (#218)
+  * 6247923 renderer: drop the mods.empty() check
+  * 79b515f renderer: use array and EGLint in creating image
+  * 1826a99 wayland: send commit after frame
+  * 3b3d8a8 drm: ensure disconnect called for removed connectors (#215)
+  * 81a0ddf rendernode: dont bother finding one on evdi
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 17:53:25 +0100
+
 aquamarine (0.9.5-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies
