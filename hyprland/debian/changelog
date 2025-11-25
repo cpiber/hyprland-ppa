@@ -1,3 +1,21 @@
+hyprland-unstable (0.52.0~1ppa1+git202511251918-1c1746de) noble; urgency=medium
+
+  * Update to main 1c1746de
+  * 1c1746de i18n: add Croatian translations (#12374)
+  * 619e9d28 [gha] Nix: update inputs
+  * ec3b3403 i18n: add Czech translations (#12428)
+  * 703394af protocols/workspace: avoid crash on inert outputs
+  * fe6a855b renderer: stop looping over null texture surfaces (#12446)
+  * 475e87b3 windowrules: fix persistent_size not applying (#12441)
+  * 3d7ea9c0 CrashReporter.cpp: fix stderr conflict (#12440)
+  * 2b0fd417 animation: improve animations on multi refresh rate
+    monitors (#12418)
+  * 56904edb i18n: add Latvian translations (#12430)
+  * e584a8ba config: added locale config option (#12416)
+  * 2ac9ded2 ci: fix ai workflow for the nth time
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 19:18:59 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202511212044-abb2f7ee) noble; urgency=medium
 
   * Update to main abb2f7ee
