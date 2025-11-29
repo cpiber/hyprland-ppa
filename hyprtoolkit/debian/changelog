@@ -1,3 +1,18 @@
+hyprtoolkit (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * a8473c0 version: bump to 0.4.0
+  * 919e001 elements/textbox: add currentText()
+  * 9174fa1 cmake: enable coverage for debug
+  * 1ad078c tests: move out of source tree (#20)
+  * 77e6228 element/positioning: Add synchronous prelayouting options
+    (#19)
+  * f4e1e12 core: add session lock support (#5)
+  * eb3657a config: add font_family and _monospace
+  * 8305fd9 internal: fix build on FreeBSD (#18)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 29 Nov 2025 15:49:36 +0100
+
 hyprtoolkit (0.3.0-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies

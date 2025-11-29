@@ -13,14 +13,14 @@ Index: source/CMakeLists.txt
    pangocairo
 -  iniparser
    hyprgraphics>=0.3.0
-   aquamarine>=0.9.5
- )
-@@ -77,7 +76,7 @@ target_include_directories(
-   PRIVATE "./src" "./src/include" "./protocols" "${CMAKE_BINARY_DIR}")
+   aquamarine>=0.9.5)
+ 
+@@ -74,7 +73,7 @@ target_include_directories(
  set_target_properties(hyprtoolkit PROPERTIES VERSION ${HYPRTOOLKIT_VERSION}
-                                             SOVERSION 3)
--target_link_libraries(hyprtoolkit PUBLIC OpenGL::EGL OpenGL::OpenGL PkgConfig::deps)
-+target_link_libraries(hyprtoolkit PUBLIC OpenGL::EGL OpenGL::OpenGL PkgConfig::deps iniparser)
+                                              SOVERSION 4)
+ target_link_libraries(hyprtoolkit PUBLIC OpenGL::EGL OpenGL::OpenGL
+-                                         PkgConfig::deps)
++                                         PkgConfig::deps iniparser)
  
  check_include_file("sys/timerfd.h" HAS_TIMERFD)
  pkg_check_modules(epoll IMPORTED_TARGET epoll-shim)
