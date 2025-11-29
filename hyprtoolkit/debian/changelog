@@ -1,3 +1,9 @@
+hyprtoolkit (0.4.0-1ppa2) noble; urgency=medium
+
+  * Fix optional (again)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 29 Nov 2025 15:55:51 +0100
+
 hyprtoolkit (0.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.0
