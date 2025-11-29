@@ -1,3 +1,9 @@
+hyprland-guiutils (0.1.0-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 29 Nov 2025 15:50:41 +0100
+
 hyprland-guiutils (0.1.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
