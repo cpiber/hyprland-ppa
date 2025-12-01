@@ -1,3 +1,21 @@
+hyprland-guiutils (0.2.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.0
+  * ebe7023 version: bump to 0.2.0
+  * f992ccd dialog: precalculate layout size (#7)
+  * 067c5e7 welcome: add launcher selection, cleanup code
+  * e83430c nix: add libxkbcommon to buildInputs
+  * 763c94a cmake: add xkbcommon
+  * ed01979 nix: add libxkbcommon dep
+  * e748245 run: focus input by default
+  * 5bdd2e5 run: init run
+  * 7724d3a flake.lock: update
+  * e59e704 welcome: remove autogen on finish
+  * 48bc06b welcome: init
+  * 66356e2 flake.nix: add hyprwayland-scanner
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 01 Dec 2025 20:07:25 +0100
+
 hyprland-guiutils (0.1.0-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies

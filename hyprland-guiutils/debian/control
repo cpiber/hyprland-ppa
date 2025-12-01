@@ -11,13 +11,10 @@ Build-Depends:
  g++-14,
  libhyprlang-dev (>= 0.6.0),
  libhyprutils-dev (>= 0.2.4),
- libhyprtoolkit-dev (>= 0.2.2),
+ libhyprtoolkit-dev (>= 0.4.0),
  libpixman-1-dev,
+ libxkbcommon-dev,
  libdrm-dev,
- libcairo2-dev,
- libhyprgraphics-dev (>= 0.3.0),
- libaquamarine-dev (>= 0.9.5),
-# TODO: Remove above three dependencies, those are transitive from hyprtoolkit
 Standards-Version: 4.6.2
 Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprland-guiutils
