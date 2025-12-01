@@ -1,3 +1,14 @@
+hyprlang (0.6.7-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.7
+  * 0d00dc1 version: bump to 0.6.7
+  * eb5be96 core: fix crash with same name special category and keyword
+    (#87)
+  * 3d66ec7 core: add changeRootPath for CConfig
+  * a318dee core: fix dynamic env changes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 01 Dec 2025 19:16:42 +0100
+
 hyprlang (0.6.6-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.6
