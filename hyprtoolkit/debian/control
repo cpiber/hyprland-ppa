@@ -13,7 +13,7 @@ Build-Depends:
  libwayland-dev (>= 1.22),
  wayland-protocols (>= 1.45),
  libgl1-mesa-dev,
- libhyprutils-dev (>= 0.9.0),
+ libhyprutils-dev (>= 0.10.4),
  libhyprlang-dev (>= 0.6.0),
  libpixman-1-dev,
  libdrm-dev,
@@ -23,7 +23,7 @@ Build-Depends:
  libcairo2-dev,
  libiniparser-dev,
  libhyprgraphics-dev (>= 0.3.0),
- libaquamarine-dev (>= 0.9.5),
+ libaquamarine-dev (>= 0.10.0),
 Standards-Version: 4.6.2
 Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprtoolkit
@@ -36,9 +36,9 @@ Multi-Arch: same
 Depends:
  libhyprtoolkit4 (= ${binary:Version}),
  ${misc:Depends},
- libaquamarine-dev (>= 0.9.5),
+ libaquamarine-dev (>= 0.10.0),
  libhyprgraphics-dev (>= 0.3.0),
- libhyprutils-dev (>= 0.9.0),
+ libhyprutils-dev (>= 0.10.4),
 Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
  Hyprtoolkit is designed to be a small, simple, and modern C++ toolkit
  for making wayland GUI apps, with a few goals:

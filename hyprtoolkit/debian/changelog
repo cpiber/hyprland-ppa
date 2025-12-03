@@ -1,3 +1,19 @@
+hyprtoolkit (0.4.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.1
+  * a07c89a version: bump to 0.4.1
+  * 34a758f core: Add integration with hyprutils' cli::logger (#21)
+  * 5cfe074 internal: Fix build on FreeBSD after 0.4.0 release (#23)
+  * 4428f14 platform/wayland: roundtrip after new display
+  * 205daa4 elements/resources: unload Async resources after use
+  * 79c9d5b elements/text: fix alpha
+  * 5790151 elements/image: add sync mode
+  * 3b77100 element/image: add fit mode
+  * 6812e12 element/image: auto size detection for single edge auto
+  * 3c15dba window/layer: impl preferred output
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 03 Dec 2025 18:55:36 +0100
+
 hyprtoolkit (0.4.0-1ppa2) noble; urgency=medium
 
   * Fix optional (again)
