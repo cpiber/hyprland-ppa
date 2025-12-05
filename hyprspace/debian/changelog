@@ -1,3 +1,14 @@
+hyprspace (0.50.0~1ppa1+git202512051935-0467be8) noble; urgency=medium
+
+  * Update to main 0467be8
+  * 0467be8 Merge pull request #210 from crizzy9/main
+  * 4979e33 changed to libHyprspace in postInstall
+  * 9ff8f30 fixed build path
+  * c561dde fixed nodiscard and unused variable warnings
+  * 63257c9 Update dispatcher calls to use addDispatcherV2
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 19:35:57 +0100
+
 hyprspace (0.50.0~1ppa1+git202510031956-e54884dbuild11) noble; urgency=medium
 
   * Rebuild for unstable

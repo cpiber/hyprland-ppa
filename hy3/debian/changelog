@@ -1,3 +1,13 @@
+hy3 (0.52.0~1ppa1+git202512051935-c0437b2) noble; urgency=medium
+
+  * Update to master c0437b2
+  * c0437b2 fixup: account for focusState changes in 40d8fa8
+  * ff06474 set xwayland work area
+  * ae011bb replace SelectionHook with layout render hints
+  * 43790aa add missing workspace updates on window changes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 19:35:18 +0100
+
 hy3 (0.52.0~1ppa1+git202511251920-1d74cd9) noble; urgency=medium
 
   * Update to master 1d74cd9

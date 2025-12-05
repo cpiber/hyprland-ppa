@@ -1,3 +1,11 @@
+hyprscroller (0.47.0~1ppa1+git202512051934-b754928) noble; urgency=medium
+
+  * Update to master b754928
+  * b754928 Add commit pin for 0.52.2
+  * 6ca4286 chase hyprland-git (focus state) (#24)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 19:34:53 +0100
+
 hyprscroller (0.47.0~1ppa1+git202511192318-75927f4build2) noble; urgency=medium
 
   * Rebuild for unstable

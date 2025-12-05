@@ -1,3 +1,11 @@
+hyprsplit (0.52.1~1ppa1+git202512051938-7820e07) noble; urgency=medium
+
+  * Update to main 7820e07
+  * 7820e07 pin 0.52.2
+  * a1f95ac chase hyprland (#63)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 19:38:57 +0100
+
 hyprsplit (0.52.1~1ppa1+git202511191931-25d42f7build2) noble; urgency=medium
 
   * Rebuild for unstable

@@ -1,3 +1,14 @@
+hyprland-plugins (0.52.0~1ppa1+git202512051932-4ccb444) noble; urgency=medium
+
+  * Update to main 4ccb444
+  * 4ccb444 bars: fix readme
+  * 391818e hyprpm: add pin for 0.52.2
+  * 8f796f7 hyprbars: update readme
+  * be3fac6 hyprscrolling: fix layoutmsg move -col (#558)
+  * 84659a2 all: chase hyprland for 40d8fa8 (#549)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 19:32:09 +0100
+
 hyprland-plugins (0.52.0~1ppa1+git202511251919-7ffc0b3) noble; urgency=medium
 
   * Update to main 7ffc0b3
