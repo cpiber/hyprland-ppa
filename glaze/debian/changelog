@@ -1,3 +1,273 @@
+glaze (6.1.0-1ppa1) noble; urgency=medium
+
+  * Update to release 6.1.0
+  * f2ffb152 version 6.1.0 bump
+  * 08b3fe38 Committing clang-format changes
+  * dd822af8 Make get_enum_name work with non-monotonic enums (#2082)
+  * 3e8d9a15 Committing clang-format changes
+  * e6b7f708 JMESPath slicing support for tuples (#2081)
+  * 32e4f168 Committing clang-format changes
+  * db4df857 Demonstrate glz::custom with optional types through
+    glz::generic (#2080)
+  * fe4a725f Committing clang-format changes
+  * 41c4f07c Add glz::escape_bytes_t (#2079)
+  * 4f4ab2f0 Feature/http server port (#2078)
+  * 0d90a09c Committing clang-format changes
+  * fa5063fa improve asio_server error handling and keep-alive (#2070)
+  * 1fa1deb9 Committing clang-format changes
+  * 5a0a3c91 Fix request_line UB (#2075)
+  * ea748038 Committing clang-format changes
+  * ff47a5ef validate_utf8 SWAR (#2074)
+  * e155fda3 Committing clang-format changes
+  * 53b157fe websocket client fixes (#2071)
+  * 443ac7bf Committing clang-format changes
+  * 7257b7fc Websocket Client (#2068)
+  * c5493eb1 Revert "Add WebSocket client support"
+  * 70864ad4 Revert "Added WebSocket client support with WSS capability"
+  * 473a2dc6 Added WebSocket client support with WSS capability
+  * a5f385d8 Add WebSocket client support
+  * 9bad26e0 Better constructors for glz::generic (#2067)
+  * 22bcdbf5 Committing clang-format changes
+  * 47127900 Allow http_server to run on external io_context. (#2063)
+  * ce3c675a Support for move only types in std::variant and broader
+    variant id support (#2064)
+  * 9e8246fc Committing clang-format changes
+  * 4cac3dc9 Remove bools_as_numbers from glz::opts (#2008)
+  * c78fd31d Committing clang-format changes
+  * 1f1edb6e Support for requires_key with JSON reading (#2061)
+  * c88002a8 Committing clang-format changes
+  * e6520733 Nullable lambda tests (#2059)
+  * 02084815 Update variant_ambiguous_test.cpp (#2058)
+  * 7045136f Committing clang-format changes
+  * 9bb1afa4 Wrapping Middleware (#2044)
+  * 6e669de3 version 6.0.3 bump
+  * 6d0b70e9 Committing clang-format changes
+  * 233bcb0c Fix MSVC warnings and errors (#2055)
+  * dde1e157 Committing clang-format changes
+  * b1043a4c safe_resizable_buffer concept for output_buffer (#2056)
+  * cb7e14aa Committing clang-format changes
+  * 16a13d66 BEVE skip null members support (#2054)
+  * 96df367f Committing clang-format changes
+  * 9b41a220 glz::get for glz::generic and containers (#2052)
+  * 5e54cba9 MSVC fix (#2051)
+  * db162f5e Revert "Disable msvc warning for unary minus operator
+    applied to unsigned type (#2049)"
+  * 84296154 Disable msvc warning for unary minus operator applied to
+    unsigned type (#2049)
+  * e90050c7 Do not use msvc-specific pragmas with clang-based compilers
+    (#2050)
+  * 2f7cbe92 Prevent Clang missing braces warnings (#2024 updated)
+    (#2043)
+  * a27d9bc1 Committing clang-format changes
+  * 501588f2 const Eigen support (#2042)
+  * 9f7e3423 Fix BEVE serialization for empty arrays (#2041)
+  * a4cc1e41 version 6.0.2 bump
+  * 31ff9161 Committing clang-format changes
+  * 5272a38e `skip_if` runtime value skipping (#2029)
+  * 82d1466a more shared library api documentation
+  * 02948648 Committing clang-format changes
+  * 4ebef0dd Write member functions when `write_member_functions = true`
+    (#2028)
+  * 238294a3 Committing clang-format changes
+  * 72c72aff REPE to/from JSON RPC 2.0 (#2026)
+  * 2f6c98ef Prevent Clang missing braces warnings (#2024)
+  * b24f3aa1 Fix integer UB (#2023)
+  * d34aca1d Committing clang-format changes
+  * f88e177f Support for nullable_value_t with BEVE (#2021)
+  * 526dd9e6 Fix a typo of a field declaration in unknown-keys.md
+    (#2017)
+  * dbf321a1 Fix websocket closing code and make it more robust (#2020)
+  * 43c8df13 TOML documentation
+  * f6a1977f version 6.0.1 bump
+  * 5cb16aca Reduce use of always inlining for TOML (#2014)
+  * 3f41b790 Committing clang-format changes
+  * 1b98800b Better TOML skipping and thus unknown key handling (#2013)
+  * 7189100c Committing clang-format changes
+  * b8931098 Fix read_constraint optional handling with missing-key
+    option (#2010)
+  * d63f1fa7 Update custom-serialization.md
+  * f5be3a0d Committing clang-format changes
+  * 68583434 Improve parsing for TOML integers (#2007)
+  * ee85dace Committing clang-format changes
+  * 0a63aa1d Strong ID and deeper cast support for use with map keys
+    with BEVE (#2002)
+  * 7166a609 Checking for Opts.comments when skipping ws to fix JSONC
+    parse issue (#2005)
+  * 71fecbbc Update README.md
+  * 121d54b1 version 6.0.0 bump
+  * 84cd9de7 Committing clang-format changes
+  * 2ff970e0 Use member_names to support modify and rename together
+    (#2000)
+  * 1bc8b4d1 Committing clang-format changes
+  * a8ae4120 CORS preflight requests succeed w/o user stubs (#1997)
+  * 2143562b Make the return type of TOML match JSON code (#1995)
+  * ac1dcf60 CSV char parsing support (#1989)
+  * 891182bb Committing clang-format changes
+  * 18d2b54a glz::as_array wrapper for reflected structs (#1992)
+  * 7d9d2f10 Committing clang-format changes
+  * e00b2f82 Rename glz::json_t to glz::generic (#1984)
+  * c743544d Removing Glaze FFI interop (#1976)
+  * 2fa3d37d Committing clang-format changes
+  * 3384a028 glz::skip support for CSV format (#1983)
+  * f0e1fd98 Test gcc15 (#1979)
+  * 9bf6116c Committing clang-format changes
+  * 4c6c06b7 Self constraints (#1981)
+  * fc5ba177 Committing clang-format changes
+  * ad984186 jmespath fix for unterminated object (#1978)
+  * addd2da3 Committing clang-format changes
+  * 3bb8bb27 Merge branch 'main' of
+    https://github.com/stephenberry/glaze
+  * 892c8db4 Update json_test.cpp
+  * 316380e5 Committing clang-format changes
+  * 0d189d7b Fix CSV parsing for signed integral min and named enums
+    (#1977)
+  * 9af44b08 Committing clang-format changes
+  * 2c6c0786 glz::meta modify for pure reflection modification (#1973)
+  * 0731b9c6 Committing clang-format changes
+  * f7bfd166 Skip member functions when serializing. (#1969)
+  * 38081f23 remove test csv files
+  * dcb19913 Committing clang-format changes
+  * 55ac183b More detailed status for http errors (#1970)
+  * e48f9997 version 5.7.2 bump
+  * 5d7f4de3 Committing clang-format changes
+  * 8474614e Add `use` method or http_server (#1968)
+  * 8b696367 Construct string_view explicitly (#1963)
+  * 47dbda20 Committing clang-format changes
+  * c0476ceb Added PUT request support to HTTP client. (#1961)
+  * 680c618d Support other string key types in handle_unknown (#1958)
+  * a860b5c6 add fuzzer for json jmespath (#1815)
+  * d0a4b0fd Committing clang-format changes
+  * fb8c13b2 Empty string char decoding (#1957)
+  * 764b94b0 extend csv fuzzer to cover also rowvise operations (#1827)
+  * e5540f23 Committing clang-format changes
+  * 15f0c3ed Bounds checking CSV read (#1954)
+  * c0dc842d Fix for concurrent_iterator_stress
+  * cfecd2e0 Committing clang-format changes
+  * 8a1d38b9 CSV support when lacking header (#1945)
+  * 6eb7da32 Document with_signals for HTTP server (#1952)
+  * c398e85b Add Boost.Asio workflow (#1887)
+  * db2de6b4 fixed compile error when including both toml and json
+    (#1949)
+  * 3f5a7047 Fix Boost.Asio compatibility (#1948)
+  * 1089fb60 made stencil spacing preservation more consistent inside
+    section iteration ({{#items}} ... {{/items}}) (#1947)
+  * 309394e6 version 5.7.1 bump
+  * 18ac036c Committing clang-format changes
+  * 42c298e4 ID preservation for REPE errors (#1946)
+  * 0fd80a1f Update stencil-mustache.md
+  * 7ea8bbc0 Fix quick start doc error handling example (#1941)
+  * 02242dc4 Committing clang-format changes
+  * f7a4c89e Treat HTTP header names as case-insensitive (#1940)
+  * 1108518b Committing clang-format changes
+  * 8bc00304 prettify support for whitespace (#1934)
+  * 3cf04c84 Committing clang-format changes
+  * ae0e71f0 Faster BEVE compile time known key writing (#1933)
+  * d0554910 version 5.7.0 bump
+  * 1b29d159 Committing clang-format changes
+  * 4097a367 New has_reflect concept to check if glz::reflect<T> is
+    applicable (#1929)
+  * 43ffbb30 Committing clang-format changes
+  * 4839924e Support for read_binary_untagged with static tags (#1928)
+  * 4ab97933 Committing clang-format changes
+  * 4ac24019 Support for pure reflection and raw pointers (#1927)
+  * 7b27cddf Committing clang-format changes
+  * 4b80680b Fix for partial_read when error_on_missing_keys is true
+    (#1922)
+  * b839e5d0 Committing clang-format changes
+  * 020f9e04 Support for tagged variants with default case (#1921)
+  * d11f8b28 Committing clang-format changes
+  * 7d080d6d Variant tag validation for auto-deduced structs (#1919)
+  * dc6e2bbc version 5.6.1 bump
+  * 7c2d3219 Committing clang-format changes
+  * 1939f639 Support variant determination via parsability (#1916)
+  * bcd03f1c Committing clang-format changes
+  * f6bc86a2 Testing enum tags for variants (#1915)
+  * 16fce1bc Committing clang-format changes
+  * 7fea4875 add more auto deduction variant tests
+  * 502f1d84 Committing clang-format changes
+  * 7f6e8b67 Support purely reflected structs in variants (#1913)
+  * 2af7555b Committing clang-format changes
+  * f24b8494 Support for std::optional<T> with glz::cast (#1910)
+  * d39db121 Committing clang-format changes
+  * 9f7721ca Properly specifying REPE formats and validating (#1908)
+  * 879857fa Interop cleanup (#1907)
+  * 33204107 Update custom-wrappers.md
+  * a9738d60 version 5.6.0 bump
+  * 6247e74e Committing clang-format changes
+  * 6f135f6a Use smallest object when encountering ambiguous variants
+    (#1903)
+  * 6f96fd2e Add title and required to generated JSON schema (#1850)
+  * b3bead1c Committing clang-format changes
+  * c85af965 Key transformers (#1889)
+  * 51927338 Committing clang-format changes
+  * c4306ce3 glz::json_t struct assignment (#1902)
+  * d0c224b2 Update CMakePresets.json to use system GCC and G++
+    compilers (#1899)
+  * e97f60ba Committing clang-format changes
+  * 0b2f6c70 Testing std::vector of std::variant (#1901)
+  * bad13609 Update Dockerfile to use official devcontainer image
+    (#1897)
+  * 45c216c2 add missing interop functions (#1896)
+  * fa7a5572 Update interop.md
+  * 469447d7 Update interop.md
+  * 48b28f07 Update interop.md
+  * 951a4ed5 Update interop.md
+  * b5d36bea interop documentation updates
+  * 36e4952d Committing clang-format changes
+  * 37c6b881 C shared library interop (FFI) using Glaze and modern C++
+    reflection (#1890)
+  * 350972b8 devcontainer version updates (#1894)
+  * b81876cb devcontainer: remove unneeded CMake extension (twxs.cmake)
+    (#1893)
+  * acd3e81e Use explicit arguments for cleaner documentation
+  * 8d6ace16 glz::obj documentation
+  * 5c24f146 version 5.5.5 bump
+  * 56619189 Committing clang-format changes
+  * d3e38f01 Network Signal Handling (#1882)
+  * 7f962720 fix std::function not being captured by reference
+  * 0e91bc35 Committing clang-format changes
+  * 24af92ea Fix MSVC errors (#1879)
+  * 6f9dc0ca undef Windows.h DELETE macro (#1878)
+  * df40e748 Read toml tests fixes (#1876)
+  * 5a58d793 Support reading tuples in variants (#1874)
+  * 3b309a1b Faster BEVE serialization for complex typed arrays (#1872)
+  * 69e6867c Committing clang-format changes
+  * bff898ad REPE Spec Updates (#1869)
+  * 02791b89 Committing clang-format changes
+  * 8a32b8d0 Openapi schema (#1864)
+  * d6bfbee8 Fix incorrect error message on missing required key
+    (#1867)
+  * 4ac84f73 Committing clang-format changes
+  * 6a782d24 Add support for the Boost version of Asio (#1863)
+  * c0910af5 Remove usage of deprecated asio::buffer_cast (#1861)
+  * 0275c0a5 version 5.5.4 bump
+  * 35bc7e7b Committing clang-format changes
+  * a71acde2 OpenAPI (#1856)
+  * aac82544 write_beve_untagged(T&&) fix (#1859)
+  * 7af9ac0c Committing clang-format changes
+  * 48ae4aab fix use after move in websocket handshake method (#1857)
+  * 01cbe202 const paths for registry and support for const variables
+    (#1855)
+  * 1d106e5b version 5.5.3 bump
+  * ad979e73 export compile commands if top level (#1851)
+  * eb158ab3 Committing clang-format changes
+  * df05b358 meta_context and skip documentation (#1853)
+  * c15d9233 Don't run float128_test on Mac
+  * 5b0c1a55 Committing clang-format changes
+  * bac89132 Fix issue with BEVE and empty strings (#1852)
+  * 7c082853 Committing clang-format changes
+  * 24515958 Add skip function for glz::meta to ignore members during
+    write (#1846)
+  * 58ec7f33 Add support for inplace_vector (#1729)
+  * dc906c2f Update clang-linux-latest.yml (#1849)
+  * 76c30fe3 Update options.md
+  * 9a23539e Create clang-tidy.yml and add missing cstdint include
+    (#1848)
+  * 1e8b0480 Catch all asio errors on failed ake_address (#1830)
+  * 6834cad7 Update http_client.hpp (#1841)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 16:48:46 +0100
+
 glaze (5.5.2-1ppa1) noble; urgency=medium
 
   * Update to release 5.5.2
