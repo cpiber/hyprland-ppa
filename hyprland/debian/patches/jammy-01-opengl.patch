@@ -768,3 +768,15 @@ Index: source/cmake/FindOpenGL.cmake
 +
 +mark_as_advanced(${_OpenGL_CACHE_VARS})
 +unset(_OpenGL_CACHE_VARS)
+Index: source/start/CMakeLists.txt
+===================================================================
+--- source.orig/start/CMakeLists.txt
++++ source/start/CMakeLists.txt
+@@ -4,7 +4,6 @@ project(start-hyprland DESCRIPTION "Hypr
+ 
+ include(GNUInstallDirs)
+ 
+-set(CMAKE_CXX_STANDARD 26)
+ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
+ 
+ find_package(PkgConfig REQUIRED)
