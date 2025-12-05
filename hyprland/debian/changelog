@@ -1,3 +1,11 @@
+hyprland-unstable (0.52.0~1ppa1+git202512051840-016eb7a2) noble; urgency=medium
+
+  * Update to main 016eb7a2
+  * 016eb7a2 start: init start-hyprland and safe mode (#12484)
+  * ec6756f9 cmake: add missing space (#12549)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 18:40:39 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202512051554-9264436f) noble; urgency=medium
 
   * Update to main 9264436f

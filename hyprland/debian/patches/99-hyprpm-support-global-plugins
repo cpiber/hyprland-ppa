@@ -60,7 +60,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -656,6 +687,50 @@ bool CPluginManager::updatePlugins(bool
+@@ -657,6 +688,50 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  
