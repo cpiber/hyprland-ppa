@@ -6,7 +6,7 @@ Index: source/src/managers/input/InputManager.cpp
 ===================================================================
 --- source.orig/src/managers/input/InputManager.cpp
 +++ source/src/managers/input/InputManager.cpp
-@@ -1255,11 +1255,6 @@ void CInputManager::setPointerConfigs()
+@@ -1256,11 +1256,6 @@ void CInputManager::setPointerConfigs()
                      libinput_device_config_scroll_set_natural_scroll_enabled(LIBINPUTDEV, g_pConfigManager->getDeviceInt(devname, "natural_scroll", "input:natural_scroll"));
              }
  
@@ -22,11 +22,11 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -209,7 +209,7 @@ pkg_check_modules(
+@@ -233,7 +233,7 @@ pkg_check_modules(
    pixman-1
    xcursor
    libdrm
--  libinput>=1.28
+-  libinput>=${LIBINPUT_MINIMUM_VERSION}
 +  libinput
    gbm
    gio-2.0

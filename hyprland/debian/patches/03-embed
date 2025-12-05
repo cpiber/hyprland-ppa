@@ -2,7 +2,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -27,6 +27,11 @@ message(STATUS "Gathering git info")
+@@ -26,6 +26,11 @@ message(STATUS "Gathering git info")
  execute_process(COMMAND ./scripts/generateShaderIncludes.sh
                  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
  

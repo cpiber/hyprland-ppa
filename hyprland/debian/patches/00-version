@@ -2,7 +2,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -164,49 +164,21 @@ if(NOT GIT_COMMITS)
+@@ -183,49 +183,21 @@ if(NOT GIT_COMMITS)
    set(GIT_COMMITS "0")
  endif()
  

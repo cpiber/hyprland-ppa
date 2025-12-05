@@ -7,20 +7,20 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -194,7 +194,7 @@ pkg_check_modules(
-   IMPORTED_TARGET
-   xkbcommon>=1.11.0
+@@ -218,7 +218,7 @@ pkg_check_modules(
+   IMPORTED_TARGET GLOBAL
+   xkbcommon>=${XKBCOMMMON_MINIMUM_VERSION}
    uuid
--  wayland-server>=1.22.90
+-  wayland-server>=${WAYLAND_SERVER_MINIMUM_VERSION}
 +  wayland-server
-   wayland-protocols>=1.45
+   wayland-protocols>=${WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION}
    cairo
    pango
 Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -320,7 +320,7 @@ void CCompositor::initServer(std::string
+@@ -322,7 +322,7 @@ void CCompositor::initServer(std::string
          Debug::m_trace = true;
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while

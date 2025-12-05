@@ -1,3 +1,48 @@
+hyprland-unstable (0.52.0~1ppa1+git202512051554-9264436f) noble; urgency=medium
+
+  * Update to main 9264436f
+  * 9264436f desktop: rewrite reserved area handling + improve tests
+    (#12383)
+  * d5c52ef5 renderer/cm: fix typo on color simage description op
+    (#12551)
+  * 52b3c8cb i18n: add Indonesian translations (#12468)
+  * 279a07c2 i18n: add Tatar translations (#12538)
+  * 17ae3fb7 pointer: apply locked pointer workaround only on xwayland
+    (#12402)
+  * 43ed0db3 cmake: track dependencies in pkgconfig file (#12543)
+  * 38f912c4 renderer: remove unnecessary assert from
+    renderRoundedShadow (#12540)
+  * 9cd070fd hyprpm: check for abi strings in headersValid (#12504)
+  * d9657a95 hyprctl: use new hyprpaper ipc format (#12537)
+  * 9b1891e4 desktop/overridableVar: fix possible crash
+  * 93e5e92b crashReporter: cleanup code (#12534)
+  * 3cf0280b renderer: add quirks:prefer_hdr to fix HDR activation for
+    some clients (#12436)
+  * 2cadc8ab welcome: init welcome manager (#12409)
+  * f82a8630 desktop/rules: tag static rule being ignored (#12514)
+  * bb963fb0 protocols/cursor-shape: impl version 2 (#12270)
+  * f11cf6f1 renderer: fix uv sufrace calc with scales < 1 (#12481)
+  * 574ee71d desktop/overridableVar: improve performance
+  * 7e1e24fe i18n: fix typos/unnatural spellings in french translation
+    (#12443)
+  * 68eecf61 desktop/windowRule: return reset props from resetProps and
+    recheck them (#12458)
+  * f9742ab5 keybinds: restore pointer warp on switch
+  * e42185b8 i18n: add Nepali translations (#12451)
+  * a51918fd src/protocols/types/DMABuffer.cpp: <sys/ioctl.h> is
+    required for ioctl(), not only linux (#12483)
+  * 379ee99c window: implement CWindow::getEnv() for BSDs (#12462)
+  * 4036e35e protocols/lock: fix missing output enter on surface
+    (#12448)
+  * d21f2e57 config: move config parsers to VarList2 (#12465)
+  * 4e5a284b CMakeLists.txt: improve libudis86 and librt detection
+    (#12472)
+  * 210930be buffers: revert state merging (#12461)
+  * 40d8fa84 compositor: Configurable behavior when window to be focused
+    conflicts with fullscreen (#12033)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 15:54:43 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202511251918-1c1746de) noble; urgency=medium
 
   * Update to main 1c1746de

@@ -59,9 +59,10 @@ if [ "$curhead" = "$newhead" ]; then
   exit 1
 fi
 set +x
-if [ -n "`git log $curhead..$newhead -- CMakeLists.txt Makefile`" ]; then
+buildfiles="`find . -name CMakeLists.txt -o -name Makefile`"
+if [ -n "`git log $curhead..$newhead -- $buildfiles`" ]; then
   echo "!!! Project configuration changed !!!"
-  git diff $curhead..$newhead -- CMakeLists.txt Makefile
+  git diff $curhead..$newhead -- $buildfiles
   echo "! Please review changes and continue or abort !"
   read -p "continue? [y/N] " a
   if [ "$a" != "y" ] && [ "$a" != "Y" ]; then
