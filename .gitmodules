@@ -121,3 +121,6 @@
 [submodule "hyprland-guiutils/source"]
 	path = hyprland-guiutils/source
 	url = https://github.com/hyprwm/hyprland-guiutils.git
+[submodule "hyprwire/source"]
+	path = hyprwire/source
+	url = https://github.com/hyprwm/hyprwire.git

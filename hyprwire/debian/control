@@ -1,0 +1,42 @@
+Source: hyprwire
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ gcc-14,
+ g++-14,
+ pkgconf,
+ libffi-dev,
+ libhyprutils-dev (>= 0.9.0),
+ libpugixml-dev,
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/hyprwire
+Vcs-Git: https://github.com/hyprwm/hyprwire.git
+
+Package: libhyprwire-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libhyprwire2 (= ${binary:Version}),
+ ${misc:Depends},
+ libffi-dev,
+ libhyprutils-dev,
+Description: A fast and consistent wire protocol for IPC
+ Hyprwire is a fast and consistent wire protocol, and its implementation.
+ This is essentially a "method" for processes to talk to each other.
+ This package includes the build-headers for using hyprwire in your own project.
+
+Package: libhyprwire2
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: A fast and consistent wire protocol for IPC
+ Hyprwire is a fast and consistent wire protocol, and its implementation.
+ This is essentially a "method" for processes to talk to each other.
