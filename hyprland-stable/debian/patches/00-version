@@ -25,10 +25,10 @@ Index: source/CMakeLists.txt
 -    execute_process(COMMAND ${GIT_EXECUTABLE} branch --show-current
 -      WORKING_DIRECTORY ${GIT_TOPLEVEL}
 -      OUTPUT_VARIABLE GIT_BRANCH OUTPUT_STRIP_TRAILING_WHITESPACE)
--    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%s
+-    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%s --no-show-signature
 -      WORKING_DIRECTORY ${GIT_TOPLEVEL}
 -      OUTPUT_VARIABLE GIT_COMMIT_MESSAGE OUTPUT_STRIP_TRAILING_WHITESPACE)
--    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%cd --date=local
+-    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%cd --date=local --no-show-signature
 -      WORKING_DIRECTORY ${GIT_TOPLEVEL}
 -      OUTPUT_VARIABLE GIT_COMMIT_DATE OUTPUT_STRIP_TRAILING_WHITESPACE)
 -    execute_process(COMMAND ${GIT_EXECUTABLE} diff-index --quiet HEAD --
@@ -54,9 +54,9 @@ Index: source/CMakeLists.txt
 +set(GIT_COMMIT_HASH "<result>")
 +## git branch --show-current
 +set(GIT_BRANCH "<result>")
-+## git show -s --format=%s
++## git show -s --format=%s --no-show-signature
 +set(GIT_COMMIT_MESSAGE "<result>")
-+## git show -s --format=%cd --date=local
++## git show -s --format=%cd --date=local --no-show-signature
 +set(GIT_COMMIT_DATE "<result>")
 +## if ! git diff-index --quiet HEAD --; then echo "dirty"; else echo "clean"; fi
 +set(GIT_DIRTY "<result>")

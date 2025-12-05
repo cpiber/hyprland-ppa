@@ -1,3 +1,30 @@
+hyprland (0.52.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.52.2
+  * 38637640 [gha] Nix: update inputs
+  * c38bb1a7 version: bump to 0.52.2
+  * afb27cf4 src/protocols/types/DMABuffer.cpp: <sys/ioctl.h> is
+    required for ioctl(), not only linux (#12483)
+  * 67db067a protocols/lock: fix missing output enter on surface
+    (#12448)
+  * 6eca4263 buffers: revert state merging (#12461)
+  * 461d4721 protocols/workspace: avoid crash on inert outputs
+  * c450f23a renderer: stop looping over null texture surfaces (#12446)
+  * ce968da7 protocols/workspace: fix crash in initial group sending
+  * 7bb241ac plugin/hook: disallow multiple hooks per function (#12320)
+  * 0c004938 cursor: ensure cursor reset on changed window states
+    (#12301)
+  * 1b55937f cmake,meson: fix inclusion of GPG info in Git commit info
+    (#12302)
+  * a75f4283 internal: fix crash at startup on FreeBSD (#12298)
+  * 9008835c internal: put Linux-only header behind ifdef (#12300)
+  * b9399f17 screencopy: fix possible crash in renderMon()
+  * c790b614 renderer/ime: fix fcitx5 popup artifacts (#12263)
+  * c95f15c3 renderer: fix noscreenshare layerrule popups (#12260)
+  * b3084dc3 presentation: only send sync output on presented (#12255)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 05 Dec 2025 17:10:45 +0100
+
 hyprland (0.52.1-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies
