@@ -1,3 +1,9 @@
+hyprlock (0.9.2-1ppa6) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:38 +0100
+
 hyprlock (0.9.2-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies

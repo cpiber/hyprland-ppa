@@ -1,3 +1,9 @@
+hyprwire (0.2.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:39 +0100
+
 hyprwire (0.2.1-1ppa1) noble; urgency=medium
 
   * Initial release. Follows release 0.2.1.

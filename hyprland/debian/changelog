@@ -1,3 +1,9 @@
+hyprland-unstable (0.52.0~1ppa1+git202512051840-016eb7a2.2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:38 +0100
+
 hyprland-unstable (0.52.0~1ppa1+git202512051840-016eb7a2.1) noble; urgency=medium
 
   * Fix jammy build

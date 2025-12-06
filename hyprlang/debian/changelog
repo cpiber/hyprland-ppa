@@ -1,3 +1,9 @@
+hyprlang (0.6.7-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:38 +0100
+
 hyprlang (0.6.7-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.7

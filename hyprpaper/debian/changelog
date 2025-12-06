@@ -1,3 +1,9 @@
+hyprpaper (0.7.6-1ppa4) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:38 +0100
+
 hyprpaper (0.7.6-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies

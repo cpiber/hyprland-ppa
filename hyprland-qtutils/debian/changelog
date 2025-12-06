@@ -1,3 +1,9 @@
+hyprland-qtutils (0.1.5-1ppa5) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:38 +0100
+
 hyprland-qtutils (0.1.5-1ppa4) noble; urgency=medium
 
   * Rebuild
