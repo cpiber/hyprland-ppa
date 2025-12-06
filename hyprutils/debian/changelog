@@ -1,3 +1,17 @@
+hyprutils (0.11.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.0
+  * fe68648 version: bump to 0.11.0
+  * 2f24138 logger: don't crash on failing to print to stdout
+  * 9f8e158 memory/shared: add dynamicPointerCast (#92)
+  * 7e6346f i18n: fix typo in sorting entries (#94)
+  * a64517c animation: allow/intend for animated vars to be unique
+    pointers (#93)
+  * 0168583 cli/argumentParser: improve formatting of description
+  * 5e1a14b cli/argumentParser: allow empty short
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:43:16 +0100
+
 hyprutils (0.10.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.10.4
