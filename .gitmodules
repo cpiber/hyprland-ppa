@@ -73,9 +73,6 @@
 [submodule "hyprgraphics/source"]
 	path = hyprgraphics/source
 	url = https://github.com/hyprwm/hyprgraphics.git
-[submodule "hyprland-qtutils/source"]
-	path = hyprland-qtutils/source
-	url = https://github.com/hyprwm/hyprland-qtutils.git
 [submodule "hyprsysteminfo/source"]
 	path = hyprsysteminfo/source
 	url = https://github.com/hyprwm/hyprsysteminfo.git
