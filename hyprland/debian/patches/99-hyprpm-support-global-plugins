@@ -90,7 +90,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +                newrepo.plugins.push_back(SPlugin{std::string{key.str()}, FILENAME, ENABLED, FAILED});
 +            }
 +
-+            DataState::removePluginRepo(repo.name);
++            DataState::removePluginRepo(SPluginRepoIdentifier::fromUrl(repo.url));
 +            for (auto& p : newrepo.plugins) {
 +                const auto OLDPLUGINIT = std::find_if(repo.plugins.begin(), repo.plugins.end(), [&](const auto& other) { return other.name == p.name; });
 +                p.enabled = OLDPLUGINIT != repo.plugins.end() ? OLDPLUGINIT->enabled : false;
