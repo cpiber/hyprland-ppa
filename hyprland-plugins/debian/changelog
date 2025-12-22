@@ -1,3 +1,13 @@
+hyprland-plugins (0.52.0~1ppa1+git202512220821-3e29d68) noble; urgency=medium
+
+  * Update to main 3e29d68
+  * 3e29d68 expo: fix a few crash points
+  * 9b2b156 all: chase hyprland
+  * e058ea2 all: chase hyprland
+  * fc76c56 scrolling: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Dec 2025 08:21:27 +0100
+
 hyprland-plugins (0.52.0~1ppa1+git202512051932-4ccb444) noble; urgency=medium
 
   * Update to main 4ccb444

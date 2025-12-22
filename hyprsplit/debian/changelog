@@ -1,3 +1,11 @@
+hyprsplit (0.52.1~1ppa1+git202512220822-131a2bc) noble; urgency=medium
+
+  * Update to main 131a2bc
+  * 131a2bc chase hyprland
+  * 18fd958 chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Dec 2025 08:22:58 +0100
+
 hyprsplit (0.52.1~1ppa1+git202512051938-7820e07) noble; urgency=medium
 
   * Update to main 7820e07

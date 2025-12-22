@@ -1,3 +1,14 @@
+hy3 (0.52.0~1ppa1+git202512220822-50643d6) noble; urgency=medium
+
+  * Update to master 50643d6
+  * 50643d6 fixup: fix upstream log breakage
+  * 30f1b5e fix: update dispatchers to use V2 API and return
+    SDispatchResult
+  * ecf6dc5 feat: add hy3:equalize dispatcher
+  * 33fb5c0 fix: pin 0.52.2
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Dec 2025 08:22:17 +0100
+
 hy3 (0.52.0~1ppa1+git202512051935-c0437b2) noble; urgency=medium
 
   * Update to master c0437b2

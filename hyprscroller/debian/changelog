@@ -1,3 +1,10 @@
+hyprscroller (0.47.0~1ppa1+git202512220821-99e0ac5) noble; urgency=medium
+
+  * Update to master 99e0ac5
+  * 99e0ac5 Fix commit pins for 0.52.xx
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Dec 2025 08:21:53 +0100
+
 hyprscroller (0.47.0~1ppa1+git202512051934-b754928) noble; urgency=medium
 
   * Update to master b754928
