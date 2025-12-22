@@ -1,3 +1,10 @@
+hyprscroller (0.47.0~1ppa1+git202512221836-79d74cb) noble; urgency=medium
+
+  * Update to master 79d74cb
+  * 79d74cb Fix includes after Hyprland moved stuff
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 22 Dec 2025 18:36:25 +0100
+
 hyprscroller (0.47.0~1ppa1+git202512220821-99e0ac5build1) noble; urgency=medium
 
   * Rebuild for unstable
