@@ -7,10 +7,10 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -208,7 +208,7 @@ configure_file(
+@@ -215,7 +215,7 @@ configure_file(
  set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
  
- set(XKBCOMMMON_MINIMUM_VERSION 1.11.0)
+ set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
 -set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.90)
 +set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.0)
  set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.45)
@@ -20,12 +20,12 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -326,7 +326,7 @@ void CCompositor::initServer(std::string
-         Debug::m_trace = true;
+@@ -312,7 +312,7 @@ void CCompositor::initServer(std::string
+     Log::logger->initCallbacks();
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
 -    wl_display_set_default_max_buffer_size(m_wlDisplay, 1_MB);
 +    // wl_display_set_default_max_buffer_size(m_wlDisplay, 1_MB);
  
-     Aquamarine::SBackendOptions options{};
-     options.logFunction = aqLog;
+     Aquamarine::SBackendOptions           options{};
+     SP<Hyprutils::CLI::CLoggerConnection> conn = makeShared<Hyprutils::CLI::CLoggerConnection>(Log::logger->hu());

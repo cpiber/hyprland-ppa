@@ -21,7 +21,7 @@ Index: source/CMakeLists.txt
  
  set(HYPRLAND_VERSION ${VER})
  set(PREFIX ${CMAKE_INSTALL_PREFIX})
-@@ -95,7 +98,6 @@ add_compile_definitions(HYPRLAND_VERSION
+@@ -102,7 +105,6 @@ add_compile_definitions(HYPRLAND_VERSION
  
  include_directories(. "src/" "protocols/")
  
