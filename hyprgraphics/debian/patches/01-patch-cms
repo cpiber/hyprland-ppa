@@ -6,7 +6,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -54,7 +54,6 @@ pkg_check_modules(
+@@ -66,7 +66,6 @@ pkg_check_modules(
    JXL
    IMPORTED_TARGET
    libjxl

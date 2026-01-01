@@ -1,3 +1,14 @@
+hyprgraphics (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * 4af02a3 version: bump to 0.5.0
+  * 790adab image: fix missing svg byte stream
+  * 6cfc891 resource/image: add byte stream
+  * 28e17fb image/svg: implement embedded
+  * 8a860f2 image: cleanup format detection
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 01 Jan 2026 15:23:33 +0100
+
 hyprgraphics (0.4.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
