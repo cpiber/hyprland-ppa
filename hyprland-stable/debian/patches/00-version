@@ -2,9 +2,9 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -136,49 +136,21 @@ set(GIT_DIRTY "unknown")
- set(GIT_TAG "unknown")
- set(GIT_COMMITS "0")
+@@ -190,49 +190,21 @@ if(NOT GIT_COMMITS)
+   set(GIT_COMMITS "0")
+ endif()
  
 -if(Git_FOUND)
 -  execute_process(
@@ -25,7 +25,7 @@ Index: source/CMakeLists.txt
 -    execute_process(COMMAND ${GIT_EXECUTABLE} branch --show-current
 -      WORKING_DIRECTORY ${GIT_TOPLEVEL}
 -      OUTPUT_VARIABLE GIT_BRANCH OUTPUT_STRIP_TRAILING_WHITESPACE)
--    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%s --no-show-signature
+-    execute_process(COMMAND sh "-c" "${GIT_EXECUTABLE} show -s --format=%s --no-show-signature | sed \"s/\\\"/\'/g\""
 -      WORKING_DIRECTORY ${GIT_TOPLEVEL}
 -      OUTPUT_VARIABLE GIT_COMMIT_MESSAGE OUTPUT_STRIP_TRAILING_WHITESPACE)
 -    execute_process(COMMAND ${GIT_EXECUTABLE} show -s --format=%cd --date=local --no-show-signature
@@ -54,7 +54,7 @@ Index: source/CMakeLists.txt
 +set(GIT_COMMIT_HASH "<result>")
 +## git branch --show-current
 +set(GIT_BRANCH "<result>")
-+## git show -s --format=%s --no-show-signature
++## git show -s --format=%s --no-show-signature | sed 's/"/'"'"'/g'
 +set(GIT_COMMIT_MESSAGE "<result>")
 +## git show -s --format=%cd --date=local --no-show-signature
 +set(GIT_COMMIT_DATE "<result>")

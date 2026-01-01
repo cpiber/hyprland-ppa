@@ -1,8 +1,8 @@
-Index: source/hyprctl/main.cpp
+Index: source/hyprctl/src/main.cpp
 ===================================================================
---- source.orig/hyprctl/main.cpp
-+++ source/hyprctl/main.cpp
-@@ -270,7 +270,7 @@ int requestIPC(std::string_view filename
+--- source.orig/hyprctl/src/main.cpp
++++ source/hyprctl/src/main.cpp
+@@ -271,7 +271,7 @@ int requestIPC(std::string_view filename
      sockaddr_un serverAddress = {0};
      serverAddress.sun_family  = AF_UNIX;
  

@@ -2,9 +2,9 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -27,6 +27,11 @@ message(STATUS "Gathering git info")
- execute_process(COMMAND ./scripts/generateShaderIncludes.sh
-                 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+@@ -33,6 +33,11 @@ if(NOT HYPR_SHADER_GEN_RESULT EQUAL 0)
+   )
+ endif()
  
 +execute_process(COMMAND xxd -i
 +                INPUT_FILE ./example/hyprland.conf

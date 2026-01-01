@@ -7,7 +7,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 ===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -391,6 +391,9 @@ bool CPluginManager::removePluginRepo(co
+@@ -385,6 +385,9 @@ bool CPluginManager::removePluginRepo(co
  eHeadersErrors CPluginManager::headersValid() {
      const auto HLVER = getHyprlandVersion(false);
  
@@ -17,7 +17,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
          return HEADERS_MISSING;
  
-@@ -463,6 +466,17 @@ bool CPluginManager::updateHeaders(bool
+@@ -462,6 +465,17 @@ bool CPluginManager::updateHeaders(bool
          std::filesystem::permissions(getTempRoot(), std::filesystem::perms::owner_all, std::filesystem::perm_options::replace);
      }
  
@@ -26,8 +26,8 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +        return false;
 +    }
 +
-+    auto GLOBALSTATE                = DataState::getGlobalState();
-+    GLOBALSTATE.headersHashCompiled = HLVER.hash;
++    auto GLOBALSTATE               = DataState::getGlobalState();
++    GLOBALSTATE.headersAbiCompiled = HLVER.abiHash;;
 +    DataState::updateGlobalState(GLOBALSTATE);
 +    std::println("\n{}", successString("Headers up to date."));
 +    return true;
