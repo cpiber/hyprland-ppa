@@ -1,3 +1,14 @@
+hyprpaper (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * c6657e7 version: bump to 0.8.0
+  * 4d775be flake.lock: Update
+  * b431a94 config: fix default value for fit_mode to match wiki
+  * 07eb33e ui: add namespace
+  * 1d8df14 core: migrate to hyprtoolkit (#288)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 01 Jan 2026 16:25:22 +0100
+
 hyprpaper (0.7.6-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies

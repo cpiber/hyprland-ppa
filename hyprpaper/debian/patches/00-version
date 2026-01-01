@@ -1,0 +1,42 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -17,29 +17,14 @@ message(STATUS "Configuring hyprpaper!")
+ configure_file(systemd/hyprpaper.service.in systemd/hyprpaper.service @ONLY)
+ 
+ # Get git info hash and branch
+-execute_process(
+-  COMMAND git rev-parse --abbrev-ref HEAD
+-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+-  OUTPUT_VARIABLE GIT_BRANCH
+-  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-
+-execute_process(
+-  COMMAND git rev-parse HEAD
+-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+-  OUTPUT_VARIABLE GIT_COMMIT_HASH
+-  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-
+-execute_process(
+-  COMMAND bash -c "git show ${GIT_COMMIT_HASH} | head -n 5 | tail -n 1 | sed -s 's/\#//g; s/^[[:space:]]*//'"
+-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+-  OUTPUT_VARIABLE GIT_COMMIT_MESSAGE
+-  OUTPUT_STRIP_TRAILING_WHITESPACE)
+-
+-execute_process(
+-  COMMAND bash -c "git diff-index --quiet HEAD -- || echo \"dirty\""
+-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+-  OUTPUT_VARIABLE GIT_DIRTY
+-  OUTPUT_STRIP_TRAILING_WHITESPACE)
++## git rev-parse --abbrev-ref HEAD
++set(GIT_BRANCH "<result>")
++## git rev-parse HEAD
++set(GIT_COMMIT_HASH "<result>")
++## git show HEAD | head -n 5 | tail -n 1 | sed -s 's/\#//g; s/^[[:space:]]*//'
++set(GIT_COMMIT_MESSAGE "<result>")
++## git diff-index --quiet HEAD -- || echo "dirty"
++set(GIT_DIRTY "<result>")
+ 
+ include_directories(. hw-protocols protocols)
+ set(CMAKE_CXX_STANDARD 23)

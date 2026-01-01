@@ -1,0 +1,13 @@
+Index: source/src/config/WallpaperMatcher.cpp
+===================================================================
+--- source.orig/src/config/WallpaperMatcher.cpp
++++ source/src/config/WallpaperMatcher.cpp
+@@ -16,7 +16,7 @@ void CWallpaperMatcher::addStates(std::v
+     }
+ 
+     std::erase_if(m_settings, [&s](const auto& e) { return std::ranges::any_of(s, [&e](const auto& el) { return el.monitor == e.monitor; }); });
+-    m_settings.append_range(std::move(s));
++    m_settings.insert(m_settings.end(), s.cbegin(), s.cend());
+     recalcStates();
+ }
+ 
