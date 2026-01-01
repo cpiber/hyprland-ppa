@@ -1,3 +1,15 @@
+hyprland-guiutils (0.2.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.1
+  * c2e9062 version: bump to 0.2.1
+  * 7cbd7ab run: escape closes the window (#13)
+  * e50ae91 welcome: add ecosystem tab
+  * fd32136 welcome: add some missing apps to the dropdown menu (#9)
+  * fff53f2 cmake: bump hu
+  * 25cedbf welcome: mention launcher keybind
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 01 Jan 2026 16:27:06 +0100
+
 hyprland-guiutils (0.2.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

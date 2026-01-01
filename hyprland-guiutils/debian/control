@@ -10,7 +10,7 @@ Build-Depends:
  gcc-14,
  g++-14,
  libhyprlang-dev (>= 0.6.0),
- libhyprutils-dev (>= 0.2.4),
+ libhyprutils-dev (>= 0.10.2),
  libhyprtoolkit-dev (>= 0.4.0),
  libpixman-1-dev,
  libxkbcommon-dev,
