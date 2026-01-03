@@ -1,3 +1,23 @@
+hyprland (0.53.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.53.1
+  * ab1d80f3 version: bump to 0.53.1
+  * 3254fa7b desktop/layerRuleApplicator: fix an epic c+p fail
+  * 27bee5bf core/xwaylandmgr: fix min/max clamp potentially crashing
+  * 23d8c372 dekstop/window: read static rules before guessing initial
+    size if possible (#12783)
+  * c57b20dc desktop/window: use workArea for idealBB (#12802)
+  * 429e366a input/ti: avoid sending events to inactive TIs
+  * 2ca2c1c7 desktop/LS: avoid creating an invalid LS if no monitor
+    could be found (#12787)
+  * 587402e5 input: guard null `view()` when processing mouse down
+    (#12772)
+  * 12d68196 desktop/window: go back to the previously focused window in
+    a group (#12763)
+  * 127e206e desktopAnimationMgr: fix slide direction
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 Jan 2026 08:36:17 +0100
+
 hyprland (0.53.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.53.0
