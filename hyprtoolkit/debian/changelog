@@ -1,3 +1,11 @@
+hyprtoolkit (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * e422ef1 version: bump to 0.5.1
+  * 5958fcd core/backend: don't reset logger on createWithData
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 Jan 2026 08:29:50 +0100
+
 hyprtoolkit (0.5.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.0
