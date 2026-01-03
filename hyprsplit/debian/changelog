@@ -1,3 +1,12 @@
+hyprsplit (0.53.0~1ppa1+git202601030834-d858547) noble; urgency=medium
+
+  * Update to main d858547
+  * d858547 add HYPRSPLIT environment variable during configuration
+    parsing (#69)
+  * 49c7d67 pin 0.53.0 and 0.53.1
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 Jan 2026 08:34:24 +0100
+
 hyprsplit (0.52.1~1ppa1+git202601011552-9a8b55f) noble; urgency=medium
 
   * Update to main 9a8b55f

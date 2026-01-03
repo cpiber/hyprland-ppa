@@ -1,3 +1,12 @@
+hyprland-plugins (0.53.0~1ppa1+git202601030833-7f94d2c) noble; urgency=medium
+
+  * Update to main 7f94d2c
+  * 7f94d2c hyprpm: add pin for 0.53.1
+  * 7a85211 hyprpm: add a 0.53.0 pin
+  * c2fe049 expo: Chase new gesture param disableInhibit (#581)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 Jan 2026 08:33:34 +0100
+
 hyprland-plugins (0.53.0~1ppa1+git202601011550-64b7c2d) noble; urgency=medium
 
   * Update to main 64b7c2d

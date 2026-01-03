@@ -1,3 +1,10 @@
+hyprscroller (0.53.0~1ppa1+git202601030833-f0b3f73) noble; urgency=medium
+
+  * Update to master f0b3f73
+  * f0b3f73 add commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 Jan 2026 08:33:48 +0100
+
 hyprscroller (0.47.0~1ppa1+git202512221836-79d74cbbuild1) noble; urgency=medium
 
   * Rebuild for unstable

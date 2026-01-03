@@ -6,7 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  yq,
- hyprland-unstable (>= 0.53.0~1ppa1+git202601011549-bd7f9aad~), hyprland-unstable (<< 0.53.0~1ppa1+git202601011549-bd7f9aad9),
+ hyprland-unstable (>= 0.53.0~1ppa1+git202601030833-ee672780~), hyprland-unstable (<< 0.53.0~1ppa1+git202601030833-ee6727809),
  hyprland-plugin-deps,
  gcc-14,
  g++-14,
@@ -20,7 +20,7 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- hyprland-unstable (>= 0.53.0~1ppa1+git202601011549-bd7f9aad~), hyprland-unstable (<< 0.53.0~1ppa1+git202601011549-bd7f9aad9),
+ hyprland-unstable (>= 0.53.0~1ppa1+git202601030833-ee672780~), hyprland-unstable (<< 0.53.0~1ppa1+git202601030833-ee6727809),
 Description: i3 / sway like layout for hyprland.
  - i3 like tiling
  - Node based window manipulation (you can interact with multiple windows at once)
