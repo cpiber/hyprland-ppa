@@ -1,3 +1,15 @@
+hyprland-unstable (0.53.0~1ppa1+git202601030833-ee672780) noble; urgency=medium
+
+  * Update to main ee672780
+  * ee672780 hyprerror: fix horizontal overflow and damage box (#12719)
+  * b9bd9d14 desktop/layerRuleApplicator: fix an epic c+p fail
+  * ec4beb1b core/xwaylandmgr: fix min/max clamp potentially crashing
+  * 31d3181e dekstop/window: read static rules before guessing initial
+    size if possible (#12783)
+  * 9b93d621 desktop/window: use workArea for idealBB (#12802)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 03 Jan 2026 08:33:14 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202601011549-bd7f9aad) noble; urgency=medium
 
   * Update to main bd7f9aad
