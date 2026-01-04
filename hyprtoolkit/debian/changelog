@@ -1,3 +1,18 @@
+hyprtoolkit (0.5.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.2
+  * 28b31c9 version: bump to 0.5.2
+  * e048322 element/layouts: fix tug-of-war with ellipsized text in
+    layouts
+  * 25543a0 element/image: avoid rare crash on tex fail in cacheEntry
+  * 4ec2c12 toolkitWindow: fix tooltip rendering
+  * 694b945 element/text: fix acceptsMouseInput
+  * 2ce43f9 element/text: fix some missing repositions
+  * 2d021c9 element/text: fix layout calcs
+  * 42bab5f element/textbox: implemented proper keybinds (#34)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 04 Jan 2026 14:12:10 +0100
+
 hyprtoolkit (0.5.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.1
