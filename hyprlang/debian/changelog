@@ -1,3 +1,12 @@
+hyprlang (0.6.8-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.8
+  * 3a1c1b2 version: bump to 0.6.8
+  * 0567ba7 core/parser: correctly match keyed special categories by
+    value being set (#89)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 05 Jan 2026 21:43:48 +0100
+
 hyprlang (0.6.7-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
