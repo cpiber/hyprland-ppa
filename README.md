@@ -2,7 +2,7 @@
 
 This repository contains the `debian/` files for my PPA.
 These files detail the recipe for building a .deb package.
-Currently these work for Ubuntu 24.04 Noble, 25.04 Plucky 25.10 Questing.
+Currently these work for Ubuntu 24.04 Noble and 25.10 Questing.
 
 Ubuntu 22.04 Jammy is also supported, but in limited capacity, has the system is quite outdated.
 Some packages may have reduced functionality or only older versions of the package.
