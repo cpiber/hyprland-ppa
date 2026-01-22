@@ -1,3 +1,14 @@
+hyprtoolkit (0.5.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.3
+  * 71515e8 version: bump to 0.5.3
+  * 41f2c72 elements/text: fix a possible texture race that would result
+    in an empty texture asset
+  * d4e1603 config: add rounding_large and _small
+  * 0e2c0c6 core: fix build on BSDs (#35)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 23 Jan 2026 00:15:39 +0100
+
 hyprtoolkit (0.5.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.5.2
