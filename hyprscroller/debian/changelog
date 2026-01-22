@@ -1,3 +1,10 @@
+hyprscroller (0.53.0~1ppa1+git202601221813-424137b) noble; urgency=medium
+
+  * Update to master 424137b
+  * 424137b Commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 22 Jan 2026 18:13:03 +0100
+
 hyprscroller (0.53.0~1ppa1+git202601030833-f0b3f73) noble; urgency=medium
 
   * Update to master f0b3f73

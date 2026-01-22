@@ -1,3 +1,16 @@
+hyprland-plugins (0.53.0~1ppa1+git202601221812-fef398e) noble; urgency=medium
+
+  * Update to main fef398e
+  * fef398e all: update Makefiles to allow CXX, CXXFLAGS, LDFLAGS env
+    vars (#584)
+  * 0b35605 scrolling: don't leave configuredWidths empty. (#585)
+  * a084d66 hyprscrolling: Allow follow_focus to honour fit_method
+    (#571)
+  * eeb8d6c hyprscrolling: remove notification on successfull load
+    (#582)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 22 Jan 2026 18:12:46 +0100
+
 hyprland-plugins (0.53.0~1ppa1+git202601030833-7f94d2c) noble; urgency=medium
 
   * Update to main 7f94d2c

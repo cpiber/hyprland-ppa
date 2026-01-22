@@ -1,3 +1,11 @@
+hyprspace (0.50.0~1ppa1+git202601221813-bcd9692) noble; urgency=medium
+
+  * Update to main bcd9692
+  * bcd9692 Merge pull request #214 from Appolon24800/main
+  * cd97199 feat: Hyprland 0.53 compatibility
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 22 Jan 2026 18:13:37 +0100
+
 hyprspace (0.50.0~1ppa1+git202512051935-0467be8build4) noble; urgency=medium
 
   * Rebuild for unstable
