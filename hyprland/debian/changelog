@@ -1,3 +1,92 @@
+hyprland-unstable (0.53.0~1ppa1+git202601221807-82de66a0) noble; urgency=medium
+
+  * Update to main 82de66a0
+  * 82de66a0 renderer: fix frame sync (#13061)
+  * 22fc8136 desktop/windowRule: allow expression in min_size/max_size
+    (#12977)
+  * e7985ca4 desktop: restore invisible floating window alpha/opacity
+    when focused over fullscreen (#12994)
+  * 6c3ebed7 renderer: add surface shader variants with less branching
+    and uniforms (#13030)
+  * f9fb2457 animation: reset tick state on session activation (#13024)
+  * 55f40ecc renderer: fix non shader cm reset (#13027)
+  * 441a8714 hyprpm: fix clang-format
+  * 57e6a57e hyprerror: clear reserved area on destroy (#13046)
+  * c44292c7 protocols/toplevelExport: Support transparency in toplevel
+    export (#12824)
+  * f0b67145 Nix: re-enable hyprpm
+  * 8f547c6f hyprpm: drop meson dep
+  * d6e2ae02 hyprpm,Makefile: drop cmake ninja build
+  * eb0480ba tests: Test the `no_focus_on_activate` window rule (#13015)
+  * 0896775f pointermgr: remove onRenderBufferDestroy (#13008)
+  * c99eb238 renderer: optimise shader usage further, split shaders and
+    add more caching (#12992)
+  * 92a3b919 anr: remove window on closewindow (#13007)
+  * 36aa465a cmakelists: add fno-omit-frame-pointer for tracy builds
+  * fec17e5e desktop/ruleApplicator: fix typo in border color rule
+    parsing (#12995)
+  * eff484b9 core: optimize some common branches
+  * 2e697ce2 cmakelists: don't require debug for tracy
+  * 0b13d398 desktop/window: avoid uaf on instant removal of a window
+  * ac9df447 desktop/workspaceHistory: fix tracking for multiple
+    monitors (#12979)
+  * e0cf8880 protocols/cm: Fix image description info events (#12781)
+  * e43f949f shm: ensure we use right gl unpack alignment (#12975)
+  * 8d03fcc8 protocols/syncobj: fix DRM sync obj support logging
+    (#12946)
+  * 5e181111 renderer: shader code refactor (#12926)
+  * fbf421df LICENSE: update year
+  * 8f8b31e7 decoration: take desiredExtents on all sides into account
+    (#12935)
+  * 81e7498e nix: add hyprland-uwsm to passthru.providedSessions
+  * fa41c822 desktop/window: track explicit workspace assignments to
+    prevent X11 configure overwrites (#12850)
+  * 5b1b79c2 fix: handle fullscreen windows on special workspaces
+    (#12851)
+  * eb623bd9 animationMgr: avoid uaf in ::tick() if handleUpdate
+    destroys AV
+  * 3dcaadbd desktop/ls: fix invalid clamp
+  * a649dbe4 main: add watchdog-fd and safe-mode options to help message
+    (#12922)
+  * f767782e desktop/reservedArea: clamp dynamic types to 0
+  * f54dd4da desktop/reservedArea: clamp to 0
+  * 3aa4e027 config: don't crash on permission with a config check
+  * 83685660 start: use nixGL if Hyprland is nix but not NixOS (#12845)
+  * 918e2bb9 renderer/gl: add internal gl formats and reduce internal
+    driver format conversions (#12879)
+  * a383ca18 groupbar: added group:groupbar:text_padding (#12818)
+  * f1652b29 start: add parent-death handling for BSDs (#12863)
+  * cbfbd971 anr: open anr dialog on parent's workspace (#12509)
+  * 9817553c config: return windowrulev2 layerrulev2 error messages
+    (#12847)
+  * 6fce2d72 renderer/opengl: invalidate intermediate FBs post render,
+    avoid stencil if possible (#12848)
+  * 10727523 desktop/ls: clamp layer from protocol
+  * 3b77c784 protocols/contentType: fix missing destroy
+  * d46df728 protocols/contentType: fix typo in already constructed
+    check
+  * 8eb3ecc7 input/TI: avoid UAF in destroy
+  * 97c8a2f1 protocolMgr: remove IME / virtual input protocols from
+    sandbox whitelist
+  * a492fa38 desktop/window: catch bad any cast tokens
+  * e165f841 core/compositor: immediately do readable if adding waiter
+    fails for scheduling state
+  * 686eda9d eventLoop: remove failed readable waiters
+  * 70c5fe5c systemd/sdDaemon: fix incorrect strnlen
+  * 32978176 systemd/sdDaemon: initialize sockaddr_un
+  * 1761909b mainLoopExecutor: fix incorrect pipe check
+  * 7d8f5708 testers: add missing #include <unistd.h> (#12862)
+  * a3c8533d subprojects: bump tracy
+  * 0b3b0128 framebuffer: revert viewport (#12842)
+  * 583c4074 [gha] Nix: update inputs
+  * 922e53c6 pluginsystem: fix crash when unloading plugin hyprctl
+    commands (#12821)
+  * 17bc3b83 renderer/fb: dont forget to set m_drmFormat (#12833)
+  * fab33702 renderer: minor framebuffer and renderbuffer changes
+    (#12831)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 22 Jan 2026 18:07:24 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202601030833-ee672780) noble; urgency=medium
 
   * Update to main ee672780
