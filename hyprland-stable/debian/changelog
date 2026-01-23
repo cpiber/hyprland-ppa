@@ -1,3 +1,41 @@
+hyprland (0.53.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.53.2
+  * 39f3fedd [gha] Nix: update inputs
+  * c86e56ed version: bump to 0.53.2
+  * df8a24c0 hyprpm: use provided pkgconf env if available
+  * a213321a desktop: restore invisible floating window alpha/opacity
+    when focused over fullscreen (#12994)
+  * 7e85c629 animation: reset tick state on session activation (#13024)
+  * 34610223 hyprerror: clear reserved area on destroy (#13046)
+  * 4350f47a Nix: re-enable hyprpm
+  * 486019e5 hyprpm: drop meson dep
+  * e266f8bf hyprpm,Makefile: drop cmake ninja build
+  * 65a70936 anr: remove window on closewindow (#13007)
+  * 64818bd1 desktop/ruleApplicator: fix typo in border color rule
+    parsing (#12995)
+  * 6b7fd1da desktop/window: avoid uaf on instant removal of a window
+  * 6eb6aeb7 desktop/workspaceHistory: fix tracking for multiple
+    monitors (#12979)
+  * 39029454 desktop/window: track explicit workspace assignments to
+    prevent X11 configure overwrites (#12850)
+  * 4ac5fc17 fix: handle fullscreen windows on special workspaces
+    (#12851)
+  * 7bc7a7af animationMgr: avoid uaf in ::tick() if handleUpdate
+    destroys AV
+  * 68743492 desktop/reservedArea: clamp dynamic types to 0
+  * 380c63f8 desktop/reservedArea: clamp to 0
+  * 50ce5504 config: don't crash on permission with a config check
+  * f2a42a77 start: use nixGL if Hyprland is nix but not NixOS (#12845)
+  * 7c9fb6e8 start: add parent-death handling for BSDs (#12863)
+  * 49293f03 config: return windowrulev2 layerrulev2 error messages
+    (#12847)
+  * e11dbc05 testers: add missing #include <unistd.h> (#12862)
+  * 9a1311e3 pluginsystem: fix crash when unloading plugin hyprctl
+    commands (#12821)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 23 Jan 2026 22:05:22 +0100
+
 hyprland (0.53.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.53.1
