@@ -1,3 +1,11 @@
+hy3 (0.53.0~1ppa1+git202601242137-c9d598a) noble; urgency=medium
+
+  * Update to master c9d598a
+  * c9d598a fixup: follow upstream shader usage changes
+  * f34775d fix tab bar stencil rendering and damage
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 24 Jan 2026 21:37:57 +0100
+
 hy3 (0.53.0~1ppa1+git202601221813-3287049) noble; urgency=medium
 
   * Update to master 3287049
