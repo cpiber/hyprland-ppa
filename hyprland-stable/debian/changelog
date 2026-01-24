@@ -1,3 +1,12 @@
+hyprland (0.53.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.53.3
+  * dd220efe version: bump to 0.53.3
+  * bf665d05 hyprpm: fix build step execution
+  * ec060999 hyprctl: remove trailing comma from json object (#13042)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 24 Jan 2026 21:36:17 +0100
+
 hyprland (0.53.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.53.2
