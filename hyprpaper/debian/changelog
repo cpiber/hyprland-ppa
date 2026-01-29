@@ -1,3 +1,14 @@
+hyprpaper (0.8.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.3
+  * 64b991c version: bump to 0.8.3
+  * ca754f6 matcher: fix matching in getSetting
+  * a69c8d7 wallpaperMatcher: fix empty desc
+  * eb71d0f wallpaperMatcher: fix desc typo and keep the state stable
+    (#330)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 29 Jan 2026 18:52:23 +0100
+
 hyprpaper (0.8.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.8.2
