@@ -1,3 +1,33 @@
+hyprland-unstable (0.53.0~1ppa1+git202601311934-db6114c6) noble; urgency=medium
+
+  * Update to main db6114c6
+  * db6114c6 renderer/pass: fix surface opaque region bounds used in
+    occluding (#13124)
+  * cbeb6984 renderer: fix mouse motion in VRR (#12665)
+  * 4330b49a buffer: add move constructor and operator to
+    CHLBufferReference (#13157)
+  * 2ad7f6ed xwayland/xwm: get supported props on constructing surface
+    (#13156)
+  * ec120d57 opengl: set EGL_CONTEXT_RELEASE_BEHAVIOR_KHR if supported
+    (#13114)
+  * fe6c2130 xwayland/xwm: fix _NET_WM_STATE_MAXIMIZED_VERT type
+    (#13151)
+  * b8fc0def xwayland/xwm: handle INCR clipboard transfer chunks
+    correctly (#13125)
+  * c92fb5e8 xwayland/xwm: prevent onWrite infinite loop and clean
+    orphan transfers (#13122)
+  * 7d209b29 Nix: apply glaze patch
+  * e92b2029 Revert "hyprpm: bump glaze version"
+  * 22e53345 flake.lock: update
+  * 116537b4 hyprpm: bump glaze version
+  * c8b5023b opengl: allow texture filter to be changed (#13078)
+  * bcb34275 hyprctl: fix layerrules not being applied dynamically with
+    hyprctl (#13080)
+  * 21325f93 eventLoop: various eventloopmgr fixes (#13091)
+  * 50454c6d i18n: add Romanian translations (#13075)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 31 Jan 2026 19:34:54 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202601242137-c65c7614) noble; urgency=medium
 
   * Update to main c65c7614
