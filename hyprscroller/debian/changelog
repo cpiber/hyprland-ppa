@@ -1,3 +1,20 @@
+hyprscroller (0.53.0~1ppa1+git202601311935-c05b71f) noble; urgency=medium
+
+  * Update to master c05b71f
+  * c05b71f commit pin
+  * 38212d3 Implement cross-workspace moving for up/down as well
+  * 6e40339 Remove empty row on movewindow
+  * 2e9b710 Fix crash on plugin unload
+  * 77fd409 Protect against several more crashes
+  * a11a247 Prevent a crash if no column is active
+  * f0f75e2 Row: Use correct monitor for initial sizing
+  * e452e04 Consider overview and damage
+  * 2286e01 Implement proper moving between workspaces
+  * c2f6b3c Make `movewindow` consider end-of-workspace
+  * 42d7249 commit pin
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 31 Jan 2026 19:35:19 +0100
+
 hyprscroller (0.53.0~1ppa1+git202601221813-424137bbuild1) noble; urgency=medium
 
   * Rebuild for unstable

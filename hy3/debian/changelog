@@ -1,3 +1,11 @@
+hy3 (0.53.0.1~1ppa1+git202601311935-9625801) noble; urgency=medium
+
+  * Update to master 9625801
+  * 9625801 fixup: follow upstream shader usage changes
+  * 4b42544 version: 0.53.0.1
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 31 Jan 2026 19:35:28 +0100
+
 hy3 (0.53.0~1ppa1+git202601242137-c9d598a) noble; urgency=medium
 
   * Update to master c9d598a
