@@ -1,3 +1,260 @@
+waybar (0.15.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.15.0
+  * 90b209ad chore: 0.15.0
+  * a8bbc90e Merge pull request #4819 from cebem1nt/master
+  * 429d7df5 fix: backlight/slider fix rounding issue on scroll up
+  * 26c09f1e Merge pull request #4814 from Alexays/copilot/fix-menu-
+    freeze-issue
+  * 65e70877 Fix function overload order to resolve compilation error
+  * 04766452 Use idiomatic empty() check for strings
+  * c4982efa Add output_name parameter to forkExec for
+    WAYBAR_OUTPUT_NAME env var
+  * dad6e8a2 Merge pull request #4812 from Alexays/copilot/fix-tooltip-
+    sync-issue
+  * 98c2ace0 Merge pull request #4813 from Alexays/copilot/fix-
+    bluetooth-module-issue
+  * 68d3e13f Fix menu freezing when launching applications
+  * 2b29c9a5 Fix tooltip sync issue by removing conditional checks
+  * 08baa3fd Merge pull request #4808 from Alexays/copilot/fix-
+    corrupted-double-linked-list
+  * 717cc4a4 Fix Pango markup rendering in bluetooth module tooltip
+  * be9d9c87 Initial plan
+  * e8558dd6 Initial plan
+  * 7921ab40 Initial plan
+  * 4c516708 Merge pull request #4809 from Alexays/copilot/fix-
+    unhandled-exception
+  * 7261d00c Merge pull request #4810 from Alexays/copilot/fix-waybar-
+    crash-pango
+  * cb54b98f Final updates - thread safety fix complete
+  * da8fd864 Simplify mutex locking in WindowCount module
+  * 0a8b7b09 Simplify fix: only add isInt() check in refresh methods
+  * c1240a98 Fix mutex locking in WindowCount module
+  * e0a2cb8f Complete fix for Pango NULL layout crash
+  * 74fb2f25 Remove CodeQL artifact from repository
+  * 330c77c8 Fix thread safety in Hyprland modules to prevent corrupted
+    double-linked list crash
+  * 19ede92d Complete fix for unhandled exception in signal handler
+  * 03de38b4 Fix Pango NULL layout crash by clearing markup before
+    hiding label
+  * 4cadae83 Improve comments for cached signal values
+  * 1466ca8b Merge pull request #4729 from xav-ie/fix-cava-audio-height-
+    init
+  * c34b1b6a Fix unhandled JSON exception in signal handlers
+  * 2c3aab88 Initial plan
+  * f16a6c7d Initial plan
+  * 68e1e6dc Initial plan
+  * 39e59e55 fix: double free / uncatched errors
+  * 47fb21a2 chore: upgrade to clang-format@21
+  * 6cecaf56 Merge pull request #4806 from jackinfurs/fraudulent-
+    website-notice
+  * 60e73e8d docs: add fraudulent site notice on proj README.md
+  * 0d27c093 Merge pull request #4803 from BBaoVanC/fix-4776-
+    set_namespace-string-return-type
+  * 5ab28b90 Fix return type of input to gtk_layer_set_namespace
+  * ddab2971 Merge pull request #4776 from Holbormon/master
+  * 09cbec0a Merge pull request #4796 from
+    Alexays/update_flake_lock_action
+  * c12658de flake.lock: Update
+  * 2f944350 Merge pull request #4789 from xander1421/fix/json-type-
+    check-crash
+  * 1639dec7 fix(json): use local CharReaderBuilder for thread safety
+  * 762c4f2e Use `name` config field to set GTK layer namespace
+  * b4854f96 Merge pull request #4766 from
+    zjeffer/fix/zjeffer/persistent-special-workspaces
+  * 8f5fc990 hyprland/workspaces: don't show persistent special
+    workspaces if show-special is disabled
+  * a02180a8 Merge pull request #4739 from LorenzBischof/man-reverse-
+    mouse-scrolling
+  * af7eebba Merge pull request #4745 from cartok/docs/arch-update-
+    readme
+  * 479ea9f3 Merge pull request #4746 from cartok/chore/maintainance
+  * f990486a Merge pull request #4748 from
+    Alexays/update_flake_lock_action
+  * d0f5fab5 flake.lock: Update
+  * a05e6c6f chore: update .gitingore
+  * 99867005 docs(arch): install build deps as deps to keep system clean
+  * 959f41ca docs: add missing reverse-mouse-scrolling to pulseaudio
+    module man page
+  * 19bb8987 fix(cava): default data_format to ascii for correct bar
+    scaling
+  * 06484547 Merge pull request #4677 from mliszcz/remove-window-format
+  * 46a6f601 Merge pull request #4728 from xav-ie/fix-cava-config
+  * 83a6998f Merge pull request #4708 from khaneliman/cava
+  * 386036a6 Merge pull request #4710 from LukashonakV/cavaMan
+  * e3186abd fix(cava): handle all output methods in frontend
+  * c8c3287b cava man
+  * 601b5f02 nix: bump cava again
+  * 97eb6067 Merge pull request #4616 from schmop/battery-plugging-
+    instant-updates
+  * 3d0b9429 Merge pull request #4689 from ospafford/feat-dwl_tag_state
+  * c3d29b11 Merge branch 'master' into battery-plugging-instant-updates
+  * c6844781 Merge pull request #4671 from touero/dev
+  * c1218fa8 Merge pull request #4646 from gszy/swap-abused
+  * 11c4e553 Merge pull request #4591 from rrrnld/fix/multiple-batteries
+  * 6b05d73a Merge pull request #4589 from cebem1nt/master
+  * 374ccbb8 Merge pull request #4705 from rwwiv/fix/duplicate-layers-
+    on-monitor-hotplug
+  * d012de3c Merge pull request #4682 from LukashonakV/cavaGLSL
+  * 7ecad322 Merge pull request #4650 from BartiX259/master
+  * 278e8822 Merge pull request #4686 from marvelpokemaster/fix-
+    wireplumber-init-order
+  * a23cef45 Merge pull request #4615 from
+    Alexays/update_flake_lock_action
+  * a9ef11a2 fix: prevent duplicate layer surfaces on monitor hotplug
+  * 07cb2c02 feat(dwl/tags): add empty tag option
+  * e03119fe Factory. cava_frontend
+  * 5ee3bd53 fix(wireplumber): reorder initializer list to match header
+    and fix -Wreorder warnings
+  * 37730215 cavaGLSL
+  * 52f4db11 Moving GTK dispatcher into frontend
+  * e362550e fix(sway/workspaces): window-rewrite: do not check for
+    window-format
+  * cb0ee665 flake.lock: Update
+  * e189649c docs(custom): fix example error about update moudle by
+    signal
+  * 13519ca5 cava. nonsafe thread.= & cava bump
+  * 097c00c7 fix(docs): pulseaudio man page example
+  * 73808dfa modules: memory: fix fully utilized swap percentage
+    calculation
+  * ce1da5a1 Make udev_deleter not linux-only and fix freebsd build
+  * 4e258716 Reapply "Make battery module update on plugging/unplugging
+    again (refs #2519)"
+  * ca62481d fix: default weighted average to true
+  * b701d7f7 docs: add information about weighted-average config option
+  * 68cbb507 fixing crash on group scrolling
+  * 161367d9 Merge pull request #4579 from khaneliman/freebsd
+  * a62455e1 Merge pull request #4578 from khaneliman/fmt
+  * 588c344c Merge pull request #4577 from khaneliman/cava
+  * bf0ccfd9 fix(clock): fix freebsd compatibility
+  * 8b0a82ad fix(subprojects): fmt hash mismatch
+  * 37ac2daa flake.lock: update
+  * 97682a13 nix: bump cava
+  * 4beb7dda nix: remove useless parens
+  * 84ec25bb Merge pull request #4551 from LukashonakV/cavaBump
+  * b475399a Merge pull request #4541 from aanderse/master
+  * 15a503ae Merge pull request #4546 from kosa12/fix/fmt-version
+  * 46d3e80b Merge pull request #4559 from
+    carljustineoyales/chore/update-pulseaudio-slider-module
+  * 9221508e Merge pull request #4560 from NicolasBuchin/fix-css-memory-
+    leak
+  * 9d37dedb fix: resolve memory leak by removing old CSS provider
+    before reloading styles
+  * 60212613 fix(pulseaudio-slider): Use `background` in CSS example
+  * 966da11f cava bump & fixing memory leaks
+  * 7add8b27 fix: FMT version update from 11.0.2 to 12.0.0
+  * bef35e48 backlight: gracefully handle a null epoll device
+  * 559079e9 fix: lint
+  * 0c41cf47 Merge pull request #4359 from zjeffer/fix/zjeffer/thread-
+    sanitizer-warning
+  * a16d53b3 Merge branch 'master' into fix/zjeffer/thread-sanitizer-
+    warning
+  * 151cf545 fix: lint
+  * b3f1d02b Merge pull request #4516 from DreamMaoMao/fix-ext-ws
+  * bea012d0 Merge pull request #4518 from DreamMaoMao/fix-network
+  * 197ee780 Merge pull request #4525 from lairez/makepkg
+  * d8e23924 Fixes #4521 and #4522
+  * 801319f0 fix: Correct the error in converting network speed units
+  * 6f308d8e fix: right and middle button not work in ext/workspace
+    module
+  * 18a9835b Merge pull request #4246 from edeustua/master
+  * 632af16b Merge pull request #4448 from winkelnp/gamemode-icon
+  * 9acf032c Merge pull request #4458 from kolayne/patch-1
+  * 9dd75d4f Merge pull request #4507 from workflow/niri-language-add-
+    css-classes
+  * 4f16ec16 Merge pull request #4395 from pol-rivero/workspace-taskbar-
+    improvements
+  * b4c80cfb Merge pull request #4387 from seschwar/include-xdg-data-
+    home
+  * e00db588 Merge pull request #4372 from rellimn/fix-menu-hover
+  * a613cd54 Merge pull request #4371 from khaneliman/nixfmt
+  * 5c01ad75 Merge pull request #4358 from labruzese/master
+  * 3cc5943c Merge pull request #4373 from Arkoniak/4354-wildcard-
+    config-regression
+  * c7a77f2c Merge pull request #4390 from aidansunbury/master
+  * a15565ac Merge pull request #4408 from lfos/fix-hyprland-ipc-
+    destructor
+  * 23220eb5 Merge pull request #4410 from lfos/fix-clock-asan-use-
+    after-scope
+  * 32d4cf4c Merge pull request #4414 from PedroManse/master
+  * f29e843d Merge pull request #4428 from
+    Alexays/update_flake_lock_action
+  * 97f1e54b Merge pull request #4447 from guttermonk/clock-fix
+  * 6824a765 Merge pull request #4380 from khaneliman/test-tweak
+  * 0f1d3114 Merge pull request #4457 from dmyTRUEk/fix-4455
+  * d3b09450 Merge pull request #4493 from LukashonakV/cava_backend
+  * fbec0454 Merge pull request #4437 from jp7677/ext-workspaces-remove-
+    dirty-tracking
+  * c31d1504 Merge pull request #4452 from dmyTRUEk/master
+  * 8bb19a95 Merge pull request #4474 from LordMZTE/river-vacant-startup
+  * 08b36955 Merge pull request #4488 from RQuarx/patch-1
+  * 6978193c Merge pull request #4485 from coleleavitt/master
+  * 70922444 Merge pull request #4495 from stefonarch/patch-2
+  * 8013556d Merge pull request #4476 from notpeelz/fix-sni-item-menu-
+    destroy
+  * 5f1db15c Workspaces containing only ignored windows should be
+    considered empty
+  * db2dfb6f flake.lock: Update
+  * 862ba2f5 feat(niri/language): add CSS classes
+  * 76d3b47f Cava back/front end transformation
+  * cbab9c97 spdlog bump
+  * cbd8930e Fix example in waybar-niri-language.5.scd
+  * b08d0c21 ext/workspaces: add deactivate action
+  * 9e3a9f7d fix: changed *waybar-styles(5)" to *waybar-styles(5)* in
+    the last line
+  * 45cfaf4a fix: validate 'swap-icon-label' configuration type and log
+    warnings
+  * 4a5358e8 fix: handle null GDK window reference in surface
+    initialization
+  * 0c3e8221 fix: close sni menu on item destruction
+  * fd601801 fix(river): hide vacant tags on initial startup
+  * e87ece44 set gamemode icon size and spacing to 0 if use-icon is
+    false
+  * 3435e338 Fix: style: show active workspace on hyprland
+  * 09a07cd4 fix(temperature): `critical` style not being removed
+    (#4455)
+  * e8a2e6c6 docs(temperature): add missed `warning` style
+  * d45ce841 Keep the local timezone from being in the tooltip.
+  * 97fa6aa4 Added option to show timezones in tooltip only and removed
+    the extra blank line at the bottom of the timezone list.
+  * af9c31cc ext/workspaces: fix appearing of hidden workspaces
+  * 19468d43 docs: fix waybar menu example and formatting
+  * 9720d805 add asan.supp
+  * 8e488b4d clock: fix use after scope
+  * 5a294730 Prevent child zombie process from tearing down Hyprland IPC
+  * 3c3164eb Fix warning if swap-icon-label is not defined in config
+  * 556c5f5a Add tsan.supp file to easily ignore common tsan issues from
+    external libraries
+  * 45d01ce6 Implement "active-window-position"
+  * 691b7d42 Implement "reverse-direction"
+  * 5a87a9d6 Merge pull request #1 from aidansunbury/AS-millisecond-
+    intervals
+  * 2b81782f more changes
+  * 2b552f7f compat
+  * 6dc5a73a initial changes
+  * e8755b1a fix: display icons for userwide installed applications
+  * 25ac6b7a refactor(makefile): allow build on test command
+  * 8fe76317 feat(makefile): support more detailed test output
+  * 691e66a7 tests: additional tests for bugfix (#4354)
+  * 5ac28f39 bugfix: expanding wildcards in config includes (#4354)
+  * 089b9a20 Fix module and tray item staying in hover state after
+    opening menu
+  * d09a4072 chore(flake): nixfmt-rfc-style -> nixfmt
+  * a0c21318 chore(format): run treefmt
+  * be48f6bf fix(flake): fix formatter configuration
+  * 5079884b Hyprland IPC improvements, fix tsan warning, WindowCount
+    shouldn't create a separate IPC
+  * 83f16a20 Document newer config options of workspace-taskbar
+  * 64b64d03 Moved workspace id failing to parse from an error to part
+    of the trace. With named persistent workspaces it is expected
+    behavior that they have no id since their workspace may not have
+    been created by hyprland yet.
+  * be819be8 fix: Revert formatting to clang
+  * 08a39dd9 refactor: Change config key name
+  * 649a98a6 feat: Add ISO 8601 calendar to clock module
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 06 Feb 2026 21:40:01 +0100
+
 waybar (0.14.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.14.0
