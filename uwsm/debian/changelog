@@ -1,3 +1,148 @@
+uwsm (0.26.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.26.1
+  * 9c3f28b chore: Release 0.26.1
+  * 6b9bf62 build: staisfy dpkg-source
+  * 7ac97e2 style(scripts): shfmt -s -sr (#200)
+  * e352bdd style(uwsm-plugins): shfmt -s -sr (#199)
+  * 6ec3d16 docs: fix wrong may-start syntax examples
+  * d022915 feat: add may-start checks for root, local session
+  * 0309242 fix: quotes in f-string for python before 3.12 (#201)
+  * cc18ba5 docs: Fix formatting of hyprlauncher launch prefix (#195)
+  * 55a4116 docs: Add LXQt integration to documentation (#193)
+  * 344958c style(uuctl): shfmt
+  * f1fc975 docs: update readme
+  * 1bf1ec5 feat: Added hyprlauncher support (#190)
+  * 12d9e90 fix: revamp check may-start
+  * 3cf95ad feat: add niri plugin
+  * ace99f5 feat: sourcing environment from env.d dirs
+  * 5fa8485 docs: mention vicinae in uuctl manpage
+  * f6db83b chore: bump version to git
+  * 433174c chore: Release 0.26.0 "It Has to Stop-And-Go Somewhere"
+  * 8791e56 docs: update readme and manpage
+  * 9f18661 fix!: demote compositor executable to the last resort
+    fallback for desktop names
+  * b07df1c fix: address some pylint issues
+  * c0e599b fix: probe for $DBUS_SESSION_BUS_ADDRESS before trying to
+    talk to DBus in checks
+  * 1fda1e8 build: bump meson version due to follow_symlinks param
+  * 6018f6e build: add actual plugin symlink to track, cleanup unneeded
+    debian/watch params
+  * b9c2f21 fix: properly name plugin and function by bin_id rules
+  * 3895e67 fix: properly name plugin by bin_id rules
+  * 8239262 build: cherry pick some changes from official debian
+    packaging
+  * 7c32f7b fix(uuctl): properly fallback cleanup function to true
+  * 9755e4c fix: add plugin link for start-hyprland
+  * 60e159f style: black
+  * 506210c fix: autolaunch bindpid service on login session leader if
+    none running
+  * 0a50f31 fix: match session to VTNr actually by VTNr
+  * 9f34c48 feat: session envelope target
+  * f380870 fix: improve desktop names parsing/propagation (fixes #186),
+    session vars fallback saving
+  * 0df37e3 fix!: bake in transient session vars behavior and drop test
+    switch var
+  * c5574be fix: always log to journal in signal handler
+  * 8e0a1e7 fix!: drop non-static units
+  * c832b15 fix: do not auto-add executable name to XDG_CURRENT_DESKTOP
+    if entry's DesktopNames has content, fixes #186
+  * e9610fd fix: STATIC_UNITS boolean configuration templating
+  * 3c7896a refactor: move shell code from main body to libexec dir
+  * 49e9e0a chore: bump version (git)
+  * d9c7de4 chore: bump version (patch)
+  * 9c8466b build: "public-modules" option to install python modules to
+    public dir
+  * c5cc798 fix: unconditionally reset terminal opts during argument
+    parsing, fixes #185
+  * a92ace7 chore: bump version (git)
+  * 6538000 chore: bump version (patch)
+  * 964a407 fix: observe silent mode in signal handler, ignore fb kmscon
+  * bd3472a chore: bump version (patch)
+  * ab61ca4 docs: update readme
+  * 1e4e613 fix: more terminal-related vars to not export
+  * f60c867 chore: bump version (git)
+  * b68cf06 chore: bump version (minor)
+  * 9d7daa0 docs: update readme
+  * aa6902b feat: kmscon support, detect kmscon and print
+    background/foreground requests
+  * 643d38e fix: use escaped specifier in autoready and finalize, fixes
+    #182
+  * fa328ef fix: replace login session part of binding/hodling
+    mechanism.
+  * cbf2da9 fix: undefined var due to missing cleanup file, typo fix
+  * 09ffe62 build(deb): do not reinstall/update build-deps package if
+    dependencies match
+  * 0178117 fix(uuctl): remove `--now` variants of enable/disable
+    actions for templated units
+  * 9d910f5 feat: add ttyautolock script, systemd presets for it and
+    fumon
+  * fc090f6 fix: read UWSM_SEPARATE_SESSION_VARS from login_env first
+  * 690abdd fix(!): get rid of double negatives in boolean vars.
+  * e73830d fix: better name for environment file
+  * d28e629 fix: prepare for removal of transient session vars from
+    activation environment
+  * 323a8ae refactor: consistent unit templating
+  * e5596d0 feat(uuctl): vicinae support in readme and uuctl (#180)
+  * fd890bc chore: bump version (git)
+  * 3b08fed chore: bump version (patch)
+  * 04c6281 fix(uwsm-app): drop hacky ps/kill logic, apply more traps,
+    prevent zombies. Fixes #177
+  * 4a6df01 fix(wait-tray): add optional delay and usage message
+  * ef19428 feat: add wait-tray script
+  * b87fc63 chore: bump version (git)
+  * 9fae82c chore: bump version (patch)
+  * bcc6d34 fix: use correct waitpid path in wayland-session-
+    bindpid@.service unit (#175)
+  * 2e86253 chore: bump version (patch)
+  * e7ec670 fix: uwsm start help (#173)
+  * 98c1b56 chore: bump version (minor)
+  * 7e89365 fix(fumon): also preserve backslashes in initial
+    notification
+  * 011fd33 fix: drop deprecated -S, -A options
+  * d9df0b4 fix: save backslashes in fumon notifications
+  * 2e20293 build: ensure proper version gets into params.py via build-
+    deb.sh
+  * 6823933 build: parametrize waitpid in wayland-session-
+    bindpid@.service
+  * af52103 docs: update readme
+  * bd4db0f build: Make external program paths configurable (#171)
+  * 9256ccb docs: reflect uwsm-app.sh fix
+  * a404d04 fix: add mutex to uwsm-app.sh
+  * 7a797fd build: it's a subdir
+  * b032baf build: package deb from cleanly exported HEAD in /tmp
+  * 4a1c184 fix: xdg-user-dirs 0.19 has systemd service
+  * 400c64c docs: update manpage
+  * 2d9d776 chore: bump version (git)
+  * cf2b1d8 chore: bump version (patch)
+  * 6e401d2 fix(uuctl): whitespace in prompt
+  * 7dca131 docs: entry example (#162)
+  * b1023f9 fix: make session holder wait through all potential
+    timeouts, closes #76
+  * de11ef4 fix: debug function dummy args
+  * c7bc79a feat(app): -p for unit property pass-through, closes #161
+  * d899127 style: formatting, comments, local var renames
+  * 1786280 feat(uuctl): seamless/background mode for walker (closes
+    #165)
+  * 49950fc fix: consolidate icons and summaries in notifications
+  * e98889e fix: only warn about invalid Entry ID if entry is given as
+    path, fixes #155
+  * 1f82fe1 fix: increase default timeout to 30, aux routines take
+    timeout from their units. Wip #76
+  * 5a45dfc chore: bump version (git)
+  * 93bc364 chore: bump version (patch)
+  * e62ab5b fix: previous miscommit drop-in paths, fixes #151
+  * 764dbac chore: bump version (patch)
+  * 50b0042 fix: restore startup timeout customization with static units
+  * ab6afc8 docs: tweak launcher table
+  * 9b33fa1 docs: Add Albert applications command prefix example (#149)
+  * 405b631 build: python version check (#147)
+  * 5fc68fc feat: run xdg-user-dirs-update at the end of env preloader
+    if available
+  * 4419de2 chore: bump version (git)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 06 Feb 2026 21:24:05 +0100
+
 uwsm (0.23.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.23.0
