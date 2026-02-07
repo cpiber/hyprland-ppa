@@ -6,8 +6,9 @@ Maintainer: Vladimir-csp <4061903+Vladimir-csp@users.noreply.github.com>,
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
- dh-python,
+ dh-sequence-python3,
  meson,
+ ninja-build,
  cmake,
  scdoc,
  pkgconf,

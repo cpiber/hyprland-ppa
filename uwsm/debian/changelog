@@ -1,3 +1,9 @@
+uwsm (0.26.1-1ppa2) noble; urgency=medium
+
+  * Fix build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 07 Feb 2026 12:18:42 +0100
+
 uwsm (0.26.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.26.1
