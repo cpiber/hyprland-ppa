@@ -15,7 +15,7 @@ Index: source/src/xwayland/XWM.hpp
 ===================================================================
 --- source.orig/src/xwayland/XWM.hpp
 +++ source/src/xwayland/XWM.hpp
-@@ -214,7 +214,7 @@ class CXWM {
+@@ -217,7 +217,7 @@ class CXWM {
      std::vector<SP<CX11DataOffer>>            m_dndDataOffers;
  
      inline xcb_connection_t*                  getConnection() {
