@@ -1,3 +1,24 @@
+hyprpicker (0.4.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.6
+  * 345eab2 version: bump to 0.4.6
+  * 5ab0e1a input: add keyboard movement (#143)
+  * b645b89 wayland: Add null check for cursor shape device (#145)
+  * cd7ba93 core: add custom format decoration (#142)
+  * b3f3f23 docs: change css example in man page to use hsl (#139)
+  * 6f32582 core: add more flexible positioning and scaling (#138)
+  * d6a1363 CI/Nix: add cache-nix-action
+  * 166dce0 core: fix the zoom bubble showing without coords (#133)
+  * 68bc787 core: add Notifications Support (#130)
+  * b01491a nix: use gcc15
+  * 500c461 core: Make preview format match output format (#123)
+  * 8f886f9 README: update arch package (#126)
+  * 1efe0fa core: Exit with the code 2 when the user has cancelled
+    picking a color (#125)
+  * b0c0db6 core: remove spammy log
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Feb 2026 19:00:08 +0100
+
 hyprpicker (0.4.5-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
