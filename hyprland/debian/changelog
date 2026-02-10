@@ -1,3 +1,42 @@
+hyprland-unstable (0.53.0~1ppa1+git202602101900-5b6c42ca) noble; urgency=medium
+
+  * Update to main 5b6c42ca
+  * 5b6c42ca dynamicPermManager: fix c+p fail
+  * 857a78ce hyprpm: add full nix integration (#13189)
+  * 33966122 desktop/reserved: fix a possible reserved crash (#13207)
+  * ff061d17 protocols: commit and presentation timing fixes (#13174)
+  * 407a6238 hyprctl: add error messages to hyprctl hyprpaper wallpaper
+    (#13234)
+  * 171ad7d3 input: fix kinetic scroll (#13233)
+  * f16ebef0 [gha] Nix: update inputs
+  * 65074457 layershell: restore focus to layer shell surface after
+    popup is destroyed (#13225)
+  * f68ac7ef i18n: add Traditional Chinese (zh_TW) translations (#13210)
+  * 60f1c613 protocols/dmabuf: fix DMA-BUF checks and events (#12965)
+  * 9f9dbb0d renderer: allow tearing with DS with invisible cursors
+    (#13155)
+  * cfbbfb59 popup: reposition with reserved taken into account
+  * 63eb6b3b opengl: add debug:gl_debugging (#13183)
+  * 8606bc25 proto/shm: update wl_shm to v2 (#13187)
+  * 562171ab i18n: add bengali translations (#13185)
+  * 9ce9ef27 decorations/border: fix damage scheduling after #12665
+  * 02ff4130 monitor: fix DS deactivation (#13188)
+  * 1bc857b1 fifo: miscellaneous fifo fixes (#13136)
+  * cd7bdc7a hyprerror: add padding & adjust for scale when reserving
+    area (#13158)
+  * e123fd3e monitor: revert "remove disconnected monitor before unsafe
+    state #12544" (#13154)
+  * 30756d87 gestures/fs: remove unneeded floating state switch (#13127)
+  * 94330607 renderer: fix screen export back to srgb (#13148)
+  * a0ec2e4d i18n: add Vietnamese translation (#13163)
+  * d9d9d935 gestures: add cursor zoom (#13033)
+  * 95c8f8b2 input: fix edge grab resize logic for gaps_out > 0 (#13144)
+  * beeca9da xwayland: ensure NO_XWAYLAND builds (#13160)
+  * 47f90356 time: ensure type correctness and calculate nsec correctly
+    (#13167)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Feb 2026 19:00:46 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202601311934-db6114c6) noble; urgency=medium
 
   * Update to main db6114c6
