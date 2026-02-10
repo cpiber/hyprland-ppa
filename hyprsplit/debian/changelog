@@ -1,3 +1,13 @@
+hyprsplit (0.53.2~1ppa1+git202602101902-a83c662) noble; urgency=medium
+
+  * Update to main a83c662
+  * a83c662 Fix workspace rule monitor assignment to use monitor name
+    instead of ID (#73)
+  * f254cf8 pin 0.53.2 and 0.53.3
+  * 6434862 fix workspace swipe (#71)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Feb 2026 19:02:01 +0100
+
 hyprsplit (0.53.0~1ppa1+git202601030834-d858547build3) noble; urgency=medium
 
   * Rebuild for unstable
