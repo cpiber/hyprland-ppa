@@ -1,3 +1,177 @@
+fuzzel (1.14.0-1ppa1) noble; urgency=medium
+
+  * Update to release 1.14.0
+  * 35d4d13 meson+pkgbuild: bump version to 1.14.0
+  * 65dd260 changelog: prepare for 1.14.0
+  * 35a4bed changelog: fix highlighting
+  * 179cc8e Move delete-line closer to other delete-line-*
+  * 37bd183 docs: remove duplicated delete-line-forward
+  * ab92c6c docs: remove delete-input which is replaced by delete-line
+  * 9fb7e6c config: add --mesg, --mesg-mode and --message-color command
+    line options
+  * 72f6b2f launch-prefix: Pass more environment variables
+  * ccf43f3 docs: Document --nth-delimiter in the Changelog
+  * 3a9558c wayland: always select the first match when typing
+  * 6554dbe match: fzf: prioritize matches at word boundary, like fzf
+  * 785c444 wayland: scale x,y in touch events
+  * ce5dd7f dmenu: add --only-match
+  * 33116fd wayland: fix crash when desktop scaling is enabled
+  * 3ccfb60 changelog: --match-nth
+  * 41c85f5 doc: fuzzel.1: document --match-nth
+  * 9fda61f completions: add --match-nth
+  * da0c1eb test: add test for --match-nth
+  * c006428 dmenu: add support for --match-nth
+  * 945f85d timing: finish: use time_stamp() when stop == NULL
+  * d4d01e7 timing: time values have different sizes on 32- and 64-bit
+  * 89e8fbc timing: codespell: bootup -> boot-up
+  * 7ad9b9d timing: codespell: bootup -> boot_up
+  * d226f7f timing: rename time_end() -> time_finish()
+  * 0221d35 timing: new minimal timing framework
+  * 82b0558 wayland: use the single-pixel protocol for the initial,
+    transparent frame
+  * 70ee26b main: don't render immediately in application mode
+  * 988fac2 wayland: improve scrolling with mouse wheel and touchpad
+  * a813b9e wayland: avoid rendering first transparent frame twice
+  * bb3727e meson: "meson [options]" is deprecated, do "meson setup
+    [optins]" instead
+  * 2a61d78 main: regression: --{with,accept}-nth=0 should be "ignored"
+    (#671)
+  * 1f7ee5e render: resvg output is a8b8g8r8 already
+  * e3538d2 internal: Add .editorconfig for shared cross-editor settings
+  * 4bce89d nanosvg: optimize pixman image generation with gamma
+    correction
+  * e7649b4 packaging: make resvg without cairo the default on Arch.
+  * faf6fea ✨ Add resvg as SVG render option.
+  * 8d3fcd1 test: accept-nth: add test case with empty column
+  * 9c22de1 column: fix off-by-one when splitting input into columns
+  * c09c9a6 lint: remove EOL whitespace from doc/
+  * 6de06b9 changelog: add new 'unreleased' section
+  * e5be00b Merge branch 'releases/1.13'
+  * e0f8667 meson+pkgbuild: bump version to 1.13.1
+  * e8da8b1 changelog: prepare for 1.13.1
+  * 0e478f6 Merge branch 'master' into releases/1.13
+  * 7c98384 changelog: formatting, stick to 80 column lines
+  * 1199ff5 docs: correct syntax in CHANGELOG
+  * c46a8c2 render: use SRC operator instead of OVER when rendering the
+    background
+  * fbb11f2 render: regression: restore --password functionality
+  * b4e9c1c 🐛 Don't ignore execute action when using dmenu mode
+  * eec69ad changelog: add new 'unreleased' section
+  * 367094c Merge branch 'releases/1.13'
+  * a54fbf6 meson+pkgbuild: bump version to 1.13.0
+  * 1d4cdf9 changelog: prepare for 1.13.0
+  * b537211 meson: tests: require wtype
+  * 099ea2a column: detect invalid index range where end < start
+  * 6d2fb1e test: accept-nth: new test suite
+  * fc2ae1b doc: fuzzel: clarify column indices are 1-based
+  * 2dd56d8 config: --nth-delimiter=CHR
+  * 4929e73 Rework --accept-nth and --with-nth to accept a format string
+  * 117dc1f application: assert argv is not empty
+  * 06b4ebb 🐛 Fix segfault when execute action is triggered
+  * 8c9e76d feat: config/cli option to disable mouse input
+  * 1f83f32 meson: re-enable the auto-select test
+  * e96e76c test: Add more test coverage for --auto-select plus --search
+    in dmenu mode.
+  * c751abd main: fix --auto-select combined with --search
+  * c9ab144 wayland: use check_auto_select() instead of manual checking
+  * 94de6b8 doc: fuzzel: replace markdown with .scd highlighting
+  * ea49370 logs: warn when no apps are found.
+  * 376abbe changelog: add credit for doc help
+  * 2b75740 doc: document search paths
+  * 737fd52 Remove extra close call on config_load success
+  * f7c632d xdg: don't crash when no applications were found
+  * 7550217 meson: add fish-based test scripts
+  * 6f40720 render: fix crash: don't assume render->selection_corners
+    has been initialized
+  * 805769a key-binding: fix crash in debug builds, if exiting early
+  * 1c28aa5 fixup: update changelog
+  * 9836d81 feat: border radius for selected entries
+  * 04f7d64 changelog: fold long lines
+  * ab66010 render: rounded-corners: don't hardcode a8r8g8b8 for the
+    msaa interim buffer
+  * d5df9d0 /usr/local/share/pixmaps not searched: typos
+  * 3869fe3 changelog: /usr/local/share/pixmaps not searched
+  * 2f91ae2 icon: spelling: explicitely -> explicitly
+  * 07d77fd icon: fix #622 pixmaps not searched in /usr/local/share
+  * 4c1ba8f Re-enable legacy icon context directories in application
+    mode
+  * 6fd584b 🐛 Fix memory leak with font_bold
+  * 1f6e155 wayland: don't ignore the mouse's X coordinate when
+    selecting
+  * 5751a65 ✨ Add --auto-select opt. When one entry is left,
+    automatically select it.
+  * 544c59a render: scroll input to ensure cursor is always visible
+  * d2fed96 completions: add --hide-prompt
+  * 1ea0283 ✨ New Feature: Hide Input Line (#597)
+  * 0d0e65f main: fix possible memory leak(s) when failing to load
+    config
+  * 8aa4cc3 doc: clarify which icon formats we support.
+  * 08ef4de ✨ Add {cmd} in --terminal command, like Rofi. (#600)
+  * 0baffbd doc: clarify default value of filter-desktop
+  * 10191b8 docs: README/Changelog/code comment for touchscreen support
+  * 211f29c fixup: Refine touchscreen support.
+  * 0e9c79b ✨ New Feature: Touchscreen scrolling
+  * 3e7c9a2 Add `delete-line` binding
+  * 1e50fff Add Changelog entry for #595
+  * 1b05c80 render: fix border width and border radius scaling
+  * 6200008 Add new --minimal-flag option
+  * 63cd8ea wayland: dmenu: prevent window from being displayed until we
+    have loaded at least one entry
+  * 830d2d2 completions: add missing --prompt-only
+  * a02d635 Fix scrolling speed be by line instead of by page.
+  * 67f93a2 docs: provide a primer on the fontconfig format
+  * db3385d application: exec: error out on non-spec compliant quoting
+    (#585)
+  * 35ce4b5 completions: add missing --launch-prefix
+  * 7b7337c icon: fix theme lookup in ~/.icons and /usr/share/pixmaps
+  * c24a0da config: change default icon theme from 'hicolor' to
+    'default'
+  * 5b90bed render: use the width of 'o' instead of 'W' when calculating
+    window width
+  * aa29ae8 render: sync rounded corners implementation with fnott's
+  * 6d36913 icon: dirs: don't filter on context in dmenu mode
+  * 3866f60 config: add scaling-filter option
+  * 40964b5 icon: in application mode (not dmenu), filter out non-
+    application icon theme dirs
+  * 1ea01b1 debug: add a --print-timing-info command line option
+  * 7835e25 match+render: log number of worker threads (at info level)
+  * cb796a5 render: nanosvg: don't assume image is square
+  * 80947e5 render: use the larger value of width/height when scaling
+    too large PNGs
+  * 56526e8 dmenu: --with-nth: don't match "other" columns
+  * 2d19826 Implement gamma-correct blending
+  * 468ae06 clipboard: disable debug logging
+  * 4b2defd doc: fuzzel.ini: fix sort-result description
+  * f9b56dc doc: fuzzel.1: escape escape chars
+  * b66389c doc: update wrong default values
+  * 17e2567 zsh: correct quoting error
+  * f2ce5a9 wayland: sys/poll.h -> poll.h
+  * 9dcbc7b wayland: improve wayl_flush()
+  * 6d38404 wayland: always call wl_display_dispatch_pending() at least
+    once, after reading
+  * 77b35eb Fix spelling in error message
+  * 0794bbb readme: add liberapay donation button
+  * c9ec6fe readme: add 'donations' section
+  * f70d550 doc: fuzzel.ini: mention ctrl+u as a way to delete
+    everything
+  * a2337d9 docs: keyword-stuff delete-input description
+  * 49cfb07 wayland: reset keyboard modifiers on keyboard leave
+  * 5255c0a wayland: allow setting namespace in config and from the
+    command line
+  * b789998 dmenu: add support for fallbacks in icon metadata
+  * 9d00e7f changelog: add missing bug ref
+  * a843274 doc: fuzzel.ini: *-workers: "if you have a ridiculous number
+    of cores"
+  * a8e0ddf render: limit number of worker threads to --lines
+  * b4ed87b match: reduce length of thread title, to allow for core IDs
+    > 99
+  * 9105e77 changelog: add --select-index to 1.12.0
+  * 70275b9 changelog: add missing bug ref
+  * cc4a8e8 changelog: add new 'unreleased' section
+  * 1b6d311 Merge branch 'releases/1.12'
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Feb 2026 19:30:22 +0100
+
 fuzzel (1.12.0-1ppa1) noble; urgency=medium
 
   * Update to release 1.12.0
