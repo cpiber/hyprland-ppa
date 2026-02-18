@@ -1,3 +1,9 @@
+hyprland (0.53.3-1ppa3) noble; urgency=medium
+
+  * Switch to glaze-stable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Feb 2026 21:05:52 +0100
+
 hyprland (0.53.3-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

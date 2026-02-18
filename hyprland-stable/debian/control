@@ -33,7 +33,7 @@ Build-Depends:
  libtomlplusplus-dev,
  libre2-dev,
  libmuparser-dev,
- libglaze-dev (>= 6.1.0),
+ libglaze-stable-dev (>= 6.1.0) | libglaze-dev (< 7.0.0),
  libhyprlang-dev (>= 0.6.7),
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev (>= 0.11.0),
