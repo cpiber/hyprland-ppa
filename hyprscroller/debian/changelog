@@ -1,3 +1,11 @@
+hyprscroller (0.53.0~1ppa1+git202602181921-60dc548) noble; urgency=medium
+
+  * Update to master 60dc548
+  * 60dc548 fix double-unmap windows (#34)
+  * 248d5c1 Fix potential null deref when removing windows (#32)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Feb 2026 19:21:15 +0100
+
 hyprscroller (0.53.0~1ppa1+git202601311935-c05b71fbuild1) noble; urgency=medium
 
   * Rebuild for unstable

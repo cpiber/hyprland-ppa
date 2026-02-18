@@ -1,3 +1,10 @@
+hyprland-plugins (0.53.0~1ppa1+git202602181921-e03c34c) noble; urgency=medium
+
+  * Update to main e03c34c
+  * e03c34c README/Nix: system -> stdenv.hostPlatform.system (#613)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Feb 2026 19:21:02 +0100
+
 hyprland-plugins (0.53.0~1ppa1+git202601242137-06c0749build2) noble; urgency=medium
 
   * Rebuild for unstable
