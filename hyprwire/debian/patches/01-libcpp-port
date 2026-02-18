@@ -1,35 +1,8 @@
-Index: source/src/core/client/ClientSocket.cpp
-===================================================================
---- source.orig/src/core/client/ClientSocket.cpp
-+++ source/src/core/client/ClientSocket.cpp
-@@ -106,14 +106,20 @@ bool CClientSocket::dispatchEvents(bool
-     if (sizeWritten <= 0)
-         return false;
- 
--    data.append_range(std::span<uint8_t>(buffer, sizeWritten));
-+    {
-+        auto x = std::span<uint8_t>(buffer, sizeWritten);
-+        data.insert(data.end(), x.cbegin(), x.cend());
-+    }
- 
-     while (sizeWritten == BUFFER_SIZE) {
-         sizeWritten = read(m_fd.get(), buffer, BUFFER_SIZE);
-         if (sizeWritten < 0)
-             return false;
- 
--        data.append_range(std::span<uint8_t>(buffer, sizeWritten));
-+        {
-+            auto x = std::span<uint8_t>(buffer, sizeWritten);
-+            data.insert(data.end(), x.cbegin(), x.cend());
-+        }
-     }
- 
-     g_messageParser->handleMessage(data, m_self.lock());
 Index: source/src/core/message/messages/BindProtocol.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/BindProtocol.cpp
 +++ source/src/core/message/messages/BindProtocol.cpp
-@@ -65,10 +65,16 @@ CBindProtocolMessage::CBindProtocolMessa
+@@ -67,10 +67,16 @@ CBindProtocolMessage::CBindProtocolMessa
  
      m_data.emplace_back(HW_MESSAGE_MAGIC_TYPE_VARCHAR);
  
@@ -47,15 +20,15 @@ Index: source/src/core/message/messages/BindProtocol.cpp
 +        m_data.insert(m_data.end(), x.cbegin(), x.cend());
 +    }
  
-     *rc<uint32_t*>(&m_data[m_data.size() - 4]) = version;
+     std::memcpy(&m_data[m_data.size() - 4], &version, sizeof(version));
  
 Index: source/src/core/message/messages/FatalProtocolError.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/FatalProtocolError.cpp
 +++ source/src/core/message/messages/FatalProtocolError.cpp
-@@ -58,7 +58,10 @@ CFatalErrorMessage::CFatalErrorMessage(S
-     *rc<uint32_t*>(&m_data[2]) = obj->m_id;
-     *rc<uint32_t*>(&m_data[7]) = errorId;
+@@ -61,7 +61,10 @@ CFatalErrorMessage::CFatalErrorMessage(S
+         std::memcpy(&m_data[2], &obj->m_id, sizeof(obj->m_id));
+     std::memcpy(&m_data[7], &errorId, sizeof(errorId));
  
 -    m_data.append_range(g_messageParser->encodeVarInt(msg.size()));
 -    m_data.append_range(msg);
@@ -70,7 +43,7 @@ Index: source/src/core/message/messages/HandshakeBegin.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/HandshakeBegin.cpp
 +++ source/src/core/message/messages/HandshakeBegin.cpp
-@@ -57,7 +57,10 @@ CHandshakeBeginMessage::CHandshakeBeginM
+@@ -58,7 +58,10 @@ CHandshakeBeginMessage::CHandshakeBeginM
          HW_MESSAGE_MAGIC_TYPE_UINT,
      };
  
@@ -86,7 +59,7 @@ Index: source/src/core/message/messages/HandshakeProtocols.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/HandshakeProtocols.cpp
 +++ source/src/core/message/messages/HandshakeProtocols.cpp
-@@ -56,11 +56,17 @@ CHandshakeProtocolsMessage::CHandshakePr
+@@ -57,11 +57,17 @@ CHandshakeProtocolsMessage::CHandshakePr
          HW_MESSAGE_MAGIC_TYPE_VARCHAR,
      };
  
@@ -107,38 +80,11 @@ Index: source/src/core/message/messages/HandshakeProtocols.cpp
      }
  
      m_data.emplace_back(HW_MESSAGE_MAGIC_END);
-Index: source/src/core/server/ServerSocket.cpp
-===================================================================
---- source.orig/src/core/server/ServerSocket.cpp
-+++ source/src/core/server/ServerSocket.cpp
-@@ -227,14 +227,20 @@ void CServerSocket::dispatchClient(SP<CS
-     if (sizeWritten <= 0)
-         return;
- 
--    data.append_range(std::span<uint8_t>(buffer, sizeWritten));
-+    {
-+        auto x = std::span<uint8_t>(buffer, sizeWritten);
-+        data.insert(data.end(), x.cbegin(), x.cend());
-+    }
- 
-     while (sizeWritten == BUFFER_SIZE) {
-         sizeWritten = read(client->m_fd.get(), buffer, BUFFER_SIZE);
-         if (sizeWritten < 0)
-             return;
- 
--        data.append_range(std::span<uint8_t>(buffer, sizeWritten));
-+        {
-+            auto x = std::span<uint8_t>(buffer, sizeWritten);
-+            data.insert(data.end(), x.cbegin(), x.cend());
-+        }
-     }
- 
-     g_messageParser->handleMessage(data, client);
 Index: source/src/core/wireObject/IWireObject.cpp
 ===================================================================
 --- source.orig/src/core/wireObject/IWireObject.cpp
 +++ source/src/core/wireObject/IWireObject.cpp
-@@ -101,8 +101,14 @@ uint32_t IWireObject::call(uint32_t id,
+@@ -118,8 +118,14 @@ uint32_t IWireObject::call(uint32_t id,
              case HW_MESSAGE_MAGIC_TYPE_VARCHAR: {
                  data.emplace_back(HW_MESSAGE_MAGIC_TYPE_VARCHAR);
                  auto str = va_arg(va, const char*);
@@ -155,7 +101,7 @@ Index: source/src/core/wireObject/IWireObject.cpp
                  break;
              }
  
-@@ -113,7 +119,10 @@ uint32_t IWireObject::call(uint32_t id,
+@@ -130,7 +136,10 @@ uint32_t IWireObject::call(uint32_t id,
  
                  auto arrayData = va_arg(va, void*);
                  auto arrayLen  = va_arg(va, uint32_t);
@@ -167,7 +113,7 @@ Index: source/src/core/wireObject/IWireObject.cpp
  
                  switch (arrType) {
                      case HW_MESSAGE_MAGIC_TYPE_UINT:
-@@ -129,8 +138,14 @@ uint32_t IWireObject::call(uint32_t id,
+@@ -153,8 +162,14 @@ uint32_t IWireObject::call(uint32_t id,
                      case HW_MESSAGE_MAGIC_TYPE_VARCHAR: {
                          for (size_t i = 0; i < arrayLen; ++i) {
                              const char* element = rc<const char**>(arrayData)[i];
@@ -184,3 +130,31 @@ Index: source/src/core/wireObject/IWireObject.cpp
                          }
                          break;
                      }
+@@ -233,7 +248,10 @@ void IWireObject::called(uint32_t id, co
+     if (!method.returnsType.empty())
+         params.emplace_back(HW_MESSAGE_MAGIC_TYPE_SEQ);
+ 
+-    params.append_range(method.params);
++    {
++        auto x = method.params;
++        params.insert(params.end(), x.cbegin(), x.cend());
++    }
+ 
+     if (method.since > m_version) {
+         const auto MSG = std::format("method {} since {} but has {}", id, method.since, m_version);
+Index: source/src/core/socket/SocketHelpers.cpp
+===================================================================
+--- source.orig/src/core/socket/SocketHelpers.cpp
++++ source/src/core/socket/SocketHelpers.cpp
+@@ -42,7 +42,10 @@ SSocketRawParsedMessage Hyprwire::parseF
+         if (sizeWritten < 0)
+             return {.bad = true};
+ 
+-        message.data.append_range(std::span<uint8_t>(buffer, sizeWritten));
++        {
++            auto x = std::span<uint8_t>(buffer, sizeWritten);
++            message.data.insert(message.data.end(), x.cbegin(), x.cend());
++        }
+ 
+         // check for control
+         cmsghdr* recvdCmsg = CMSG_FIRSTHDR(&msg);
