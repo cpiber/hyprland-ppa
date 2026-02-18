@@ -1,3 +1,34 @@
+hyprland-unstable (0.53.0~1ppa1+git202602181920-184af52f) noble; urgency=medium
+
+  * Update to main 184af52f
+  * 184af52f config: support no_vrr rule on vrr 1 (#13250)
+  * 1af260ec compositor: dont unlock all states on empty commits
+    (#13303)
+  * 0de216e7 cm: block DS for scRGB in HDR mode (#13262)
+  * 661314e1 CI/c-f check: adapt jidicula script
+  * 17fc159a desktop/windowRule: use content rule as enum directly
+    (#13275)
+  * 6716b8a0 xwayland: fix size mismatch for no scaling (#13263)
+  * 59f19e46 nix: fix evaluation warnings, the xorg package set has been
+    deprecated (#13231)
+  * e6ca1413 CI/c-f check: set older clang ver
+  * 48176160 commit-timing: avoid use-after-free in timer callback
+    (#13271)
+  * e5a2b9e5 hyprctl: bump hyprpaper protocol to rev 2 (#12838)
+  * e80f705d compositor: guard null view() in getWindowFromSurface
+    (#13255)
+  * 1bf410e1 renderer: fix dgpu directscanout explicit sync (#13229)
+  * 1c767de9 [gha] Nix: update inputs
+  * a8a8929b i18n: update russian translation (#13247)
+  * eb0d3f9f cmake: use OpenGL::GLES3 when OpenGL::GL does not exist
+    (#13260)
+  * 81a029e5 hyprpm: exclude glaze from all targets during fetch
+  * 380d1499 nix: remove glaze patch
+  * fd48d102 Reapply "hyprpm: bump glaze version"
+  * 531fc432 cmake: bump wayland-server version to 1.22.91 (#13242)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Feb 2026 19:20:37 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202602101900-5b6c42ca+1) noble; urgency=medium
 
   * Fix build
