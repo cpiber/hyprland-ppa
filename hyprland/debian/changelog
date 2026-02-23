@@ -1,3 +1,27 @@
+hyprland-unstable (0.53.0~1ppa1+git202602230742-b88813c7) noble; urgency=medium
+
+  * Update to main b88813c7
+  * b88813c7 event: refactor HookSystem into a typed event bus (#13333)
+  * b4ee4674 protocols: implement image-capture-source-v1 and image-
+    copy-capture-v1 (#11709)
+  * 93dbf884 pointermgr: revert "damage only the surface size (#13284)"
+  * 0eb4755a example: fixup config for togglesplit
+  * 72387033 layout: rethonk layouts from the ground up (#12890)
+  * 51f8849e github: add ai policy to mr template
+  * b9b1eda2 hyprctl: adjust json case
+  * 13dab66b pointermgr: damage only the surface size (#13284)
+  * 9f59ed78 multigpu: fix multi gpu checking (#13277)
+  * a20142bc xwayland/xwm: fix window closing when props race
+  * d91952c5 wayland/output: return all bound wl_output instances in
+    outputResourceFrom (#13315)
+  * 8b17a740 config/descriptions: fix use_cpu_buffer (#13285)
+  * 9ea6d0e1 desktop/popup: only remove reserved for window popups
+  * a1e62dcb welcome: skip in safe mode
+  * 7a566942 versionKeeper: ignore minor rev version
+  * 68456a5d desktop/window: add stable id and use it for foreign
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Feb 2026 07:42:28 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202602181920-184af52f) noble; urgency=medium
 
   * Update to main 184af52f
