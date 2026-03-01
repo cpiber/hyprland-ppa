@@ -1,3 +1,245 @@
+hyprland (0.54.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.54.0
+  * 0002f148 version: bump to 0.54.0
+  * ffec41c4 desktop/rules: fix border colors not resetting. (#13382)
+  * f624449c start: add --force-nixgl and check /run/opengl-driver
+    (#13385)
+  * 70cdd819 desktop/rules: use pid for exec rules (#13374)
+  * cc14dd1b xwayland: validate size hints before floating (#13361)
+  * c71fbd85 renderer: better sdr eotf settings (#12812)
+  * 0e919686 algo/dwindle: fix focal point not being properly used in
+    movedTarget (#13373)
+  * 1e06ab46 algo/master: fix orientation cycling (#13372)
+  * 62318517 desktop/popup: avoid crash on null popup child in
+    rechecking
+  * d0583e17 compositor: fix calculating x11 work area (#13347)
+  * 5b2efe54 input: use fresh cursor pos when sending motion events
+    (#13366)
+  * 457617b5 xwayland: normalize OR geometry to logical coords with
+    force_zero_scaling (#13359)
+  * c60b3cb2 target: fix geometry for x11 floats
+  * fbf67ef0 algo/scrolling: adjust focus callbacks to be more intuitive
+  * be893a81 algo/master: fix master:orientation being a noop
+  * 5a80bc12 algo/scrolling: fix crashes on destroying ws
+  * a2488051 [gha] Nix: update inputs
+  * 8ab4d1dc popup: check for expired weak ptr (#13352)
+  * ae82a554 view: send wl_surface.enter to subsurfaces of popups
+    (#13353)
+  * bc09504e desktop/popup: fix use after free in Popup (#13335)
+  * f4bc8c3a keybinds: fix unguarded member access in moveWindowOrGroup
+    (#13337)
+  * b88813c7 event: refactor HookSystem into a typed event bus (#13333)
+  * b4ee4674 protocols: implement image-capture-source-v1 and image-
+    copy-capture-v1 (#11709)
+  * 93dbf884 pointermgr: revert "damage only the surface size (#13284)"
+  * 0eb4755a example: fixup config for togglesplit
+  * 72387033 layout: rethonk layouts from the ground up (#12890)
+  * 51f8849e github: add ai policy to mr template
+  * b9b1eda2 hyprctl: adjust json case
+  * 13dab66b pointermgr: damage only the surface size (#13284)
+  * 9f59ed78 multigpu: fix multi gpu checking (#13277)
+  * a20142bc xwayland/xwm: fix window closing when props race
+  * d91952c5 wayland/output: return all bound wl_output instances in
+    outputResourceFrom (#13315)
+  * 8b17a740 config/descriptions: fix use_cpu_buffer (#13285)
+  * 9ea6d0e1 desktop/popup: only remove reserved for window popups
+  * a1e62dcb welcome: skip in safe mode
+  * 7a566942 versionKeeper: ignore minor rev version
+  * 68456a5d desktop/window: add stable id and use it for foreign
+  * 184af52f config: support no_vrr rule on vrr 1 (#13250)
+  * 1af260ec compositor: dont unlock all states on empty commits
+    (#13303)
+  * 0de216e7 cm: block DS for scRGB in HDR mode (#13262)
+  * 661314e1 CI/c-f check: adapt jidicula script
+  * 17fc159a desktop/windowRule: use content rule as enum directly
+    (#13275)
+  * 6716b8a0 xwayland: fix size mismatch for no scaling (#13263)
+  * 59f19e46 nix: fix evaluation warnings, the xorg package set has been
+    deprecated (#13231)
+  * e6ca1413 CI/c-f check: set older clang ver
+  * 48176160 commit-timing: avoid use-after-free in timer callback
+    (#13271)
+  * e5a2b9e5 hyprctl: bump hyprpaper protocol to rev 2 (#12838)
+  * e80f705d compositor: guard null view() in getWindowFromSurface
+    (#13255)
+  * 1bf410e1 renderer: fix dgpu directscanout explicit sync (#13229)
+  * 1c767de9 [gha] Nix: update inputs
+  * a8a8929b i18n: update russian translation (#13247)
+  * eb0d3f9f cmake: use OpenGL::GLES3 when OpenGL::GL does not exist
+    (#13260)
+  * 81a029e5 hyprpm: exclude glaze from all targets during fetch
+  * 380d1499 nix: remove glaze patch
+  * fd48d102 Reapply "hyprpm: bump glaze version"
+  * 531fc432 cmake: bump wayland-server version to 1.22.91 (#13242)
+  * 5b6c42ca dynamicPermManager: fix c+p fail
+  * 857a78ce hyprpm: add full nix integration (#13189)
+  * 33966122 desktop/reserved: fix a possible reserved crash (#13207)
+  * ff061d17 protocols: commit and presentation timing fixes (#13174)
+  * 407a6238 hyprctl: add error messages to hyprctl hyprpaper wallpaper
+    (#13234)
+  * 171ad7d3 input: fix kinetic scroll (#13233)
+  * f16ebef0 [gha] Nix: update inputs
+  * 65074457 layershell: restore focus to layer shell surface after
+    popup is destroyed (#13225)
+  * f68ac7ef i18n: add Traditional Chinese (zh_TW) translations (#13210)
+  * 60f1c613 protocols/dmabuf: fix DMA-BUF checks and events (#12965)
+  * 9f9dbb0d renderer: allow tearing with DS with invisible cursors
+    (#13155)
+  * cfbbfb59 popup: reposition with reserved taken into account
+  * 63eb6b3b opengl: add debug:gl_debugging (#13183)
+  * 8606bc25 proto/shm: update wl_shm to v2 (#13187)
+  * 562171ab i18n: add bengali translations (#13185)
+  * 9ce9ef27 decorations/border: fix damage scheduling after #12665
+  * 02ff4130 monitor: fix DS deactivation (#13188)
+  * 1bc857b1 fifo: miscellaneous fifo fixes (#13136)
+  * cd7bdc7a hyprerror: add padding & adjust for scale when reserving
+    area (#13158)
+  * e123fd3e monitor: revert "remove disconnected monitor before unsafe
+    state #12544" (#13154)
+  * 30756d87 gestures/fs: remove unneeded floating state switch (#13127)
+  * 94330607 renderer: fix screen export back to srgb (#13148)
+  * a0ec2e4d i18n: add Vietnamese translation (#13163)
+  * d9d9d935 gestures: add cursor zoom (#13033)
+  * 95c8f8b2 input: fix edge grab resize logic for gaps_out > 0 (#13144)
+  * beeca9da xwayland: ensure NO_XWAYLAND builds (#13160)
+  * 47f90356 time: ensure type correctness and calculate nsec correctly
+    (#13167)
+  * db6114c6 renderer/pass: fix surface opaque region bounds used in
+    occluding (#13124)
+  * cbeb6984 renderer: fix mouse motion in VRR (#12665)
+  * 4330b49a buffer: add move constructor and operator to
+    CHLBufferReference (#13157)
+  * 2ad7f6ed xwayland/xwm: get supported props on constructing surface
+    (#13156)
+  * ec120d57 opengl: set EGL_CONTEXT_RELEASE_BEHAVIOR_KHR if supported
+    (#13114)
+  * fe6c2130 xwayland/xwm: fix _NET_WM_STATE_MAXIMIZED_VERT type
+    (#13151)
+  * b8fc0def xwayland/xwm: handle INCR clipboard transfer chunks
+    correctly (#13125)
+  * c92fb5e8 xwayland/xwm: prevent onWrite infinite loop and clean
+    orphan transfers (#13122)
+  * 7d209b29 Nix: apply glaze patch
+  * e92b2029 Revert "hyprpm: bump glaze version"
+  * 22e53345 flake.lock: update
+  * 116537b4 hyprpm: bump glaze version
+  * c8b5023b opengl: allow texture filter to be changed (#13078)
+  * bcb34275 hyprctl: fix layerrules not being applied dynamically with
+    hyprctl (#13080)
+  * 21325f93 eventLoop: various eventloopmgr fixes (#13091)
+  * 50454c6d i18n: add Romanian translations (#13075)
+  * c65c7614 hyprpm: fix build step execution
+  * 891e029b hyprctl: add overFullscreen field in hyprctl window debug
+    (#13066)
+  * b1d1c984 hyprctl: remove trailing comma from json object (#13042)
+  * 2a2c2b0e opengl/fb: use GL_DEPTH24_STENCIL8 instead of
+    GL_STENCIL_INDEX8 (#13067)
+  * 64db62d7 hyprpm: use provided pkgconf env if available
+  * 82de66a0 renderer: fix frame sync (#13061)
+  * 22fc8136 desktop/windowRule: allow expression in min_size/max_size
+    (#12977)
+  * e7985ca4 desktop: restore invisible floating window alpha/opacity
+    when focused over fullscreen (#12994)
+  * 6c3ebed7 renderer: add surface shader variants with less branching
+    and uniforms (#13030)
+  * f9fb2457 animation: reset tick state on session activation (#13024)
+  * 55f40ecc renderer: fix non shader cm reset (#13027)
+  * 441a8714 hyprpm: fix clang-format
+  * 57e6a57e hyprerror: clear reserved area on destroy (#13046)
+  * c44292c7 protocols/toplevelExport: Support transparency in toplevel
+    export (#12824)
+  * f0b67145 Nix: re-enable hyprpm
+  * 8f547c6f hyprpm: drop meson dep
+  * d6e2ae02 hyprpm,Makefile: drop cmake ninja build
+  * eb0480ba tests: Test the `no_focus_on_activate` window rule (#13015)
+  * 0896775f pointermgr: remove onRenderBufferDestroy (#13008)
+  * c99eb238 renderer: optimise shader usage further, split shaders and
+    add more caching (#12992)
+  * 92a3b919 anr: remove window on closewindow (#13007)
+  * 36aa465a cmakelists: add fno-omit-frame-pointer for tracy builds
+  * fec17e5e desktop/ruleApplicator: fix typo in border color rule
+    parsing (#12995)
+  * eff484b9 core: optimize some common branches
+  * 2e697ce2 cmakelists: don't require debug for tracy
+  * 0b13d398 desktop/window: avoid uaf on instant removal of a window
+  * ac9df447 desktop/workspaceHistory: fix tracking for multiple
+    monitors (#12979)
+  * e0cf8880 protocols/cm: Fix image description info events (#12781)
+  * e43f949f shm: ensure we use right gl unpack alignment (#12975)
+  * 8d03fcc8 protocols/syncobj: fix DRM sync obj support logging
+    (#12946)
+  * 5e181111 renderer: shader code refactor (#12926)
+  * fbf421df LICENSE: update year
+  * 8f8b31e7 decoration: take desiredExtents on all sides into account
+    (#12935)
+  * 81e7498e nix: add hyprland-uwsm to passthru.providedSessions
+  * fa41c822 desktop/window: track explicit workspace assignments to
+    prevent X11 configure overwrites (#12850)
+  * 5b1b79c2 fix: handle fullscreen windows on special workspaces
+    (#12851)
+  * eb623bd9 animationMgr: avoid uaf in ::tick() if handleUpdate
+    destroys AV
+  * 3dcaadbd desktop/ls: fix invalid clamp
+  * a649dbe4 main: add watchdog-fd and safe-mode options to help message
+    (#12922)
+  * f767782e desktop/reservedArea: clamp dynamic types to 0
+  * f54dd4da desktop/reservedArea: clamp to 0
+  * 3aa4e027 config: don't crash on permission with a config check
+  * 83685660 start: use nixGL if Hyprland is nix but not NixOS (#12845)
+  * 918e2bb9 renderer/gl: add internal gl formats and reduce internal
+    driver format conversions (#12879)
+  * a383ca18 groupbar: added group:groupbar:text_padding (#12818)
+  * f1652b29 start: add parent-death handling for BSDs (#12863)
+  * cbfbd971 anr: open anr dialog on parent's workspace (#12509)
+  * 9817553c config: return windowrulev2 layerrulev2 error messages
+    (#12847)
+  * 6fce2d72 renderer/opengl: invalidate intermediate FBs post render,
+    avoid stencil if possible (#12848)
+  * 10727523 desktop/ls: clamp layer from protocol
+  * 3b77c784 protocols/contentType: fix missing destroy
+  * d46df728 protocols/contentType: fix typo in already constructed
+    check
+  * 8eb3ecc7 input/TI: avoid UAF in destroy
+  * 97c8a2f1 protocolMgr: remove IME / virtual input protocols from
+    sandbox whitelist
+  * a492fa38 desktop/window: catch bad any cast tokens
+  * e165f841 core/compositor: immediately do readable if adding waiter
+    fails for scheduling state
+  * 686eda9d eventLoop: remove failed readable waiters
+  * 70c5fe5c systemd/sdDaemon: fix incorrect strnlen
+  * 32978176 systemd/sdDaemon: initialize sockaddr_un
+  * 1761909b mainLoopExecutor: fix incorrect pipe check
+  * 7d8f5708 testers: add missing #include <unistd.h> (#12862)
+  * a3c8533d subprojects: bump tracy
+  * 0b3b0128 framebuffer: revert viewport (#12842)
+  * 583c4074 [gha] Nix: update inputs
+  * 922e53c6 pluginsystem: fix crash when unloading plugin hyprctl
+    commands (#12821)
+  * 17bc3b83 renderer/fb: dont forget to set m_drmFormat (#12833)
+  * fab33702 renderer: minor framebuffer and renderbuffer changes
+    (#12831)
+  * ee672780 hyprerror: fix horizontal overflow and damage box (#12719)
+  * b9bd9d14 desktop/layerRuleApplicator: fix an epic c+p fail
+  * ec4beb1b core/xwaylandmgr: fix min/max clamp potentially crashing
+  * 31d3181e dekstop/window: read static rules before guessing initial
+    size if possible (#12783)
+  * 9b93d621 desktop/window: use workArea for idealBB (#12802)
+  * bd7f9aad input/ti: avoid sending events to inactive TIs
+  * 48a024e0 desktop/window: remove old fn defs
+  * bd02178e desktop/LS: avoid creating an invalid LS if no monitor
+    could be found (#12787)
+  * 214fdb09 input: guard null `view()` when processing mouse down
+    (#12772)
+  * d622c09d tester: fix sleeps waiting for too long (#12774)
+  * 52955971 desktop/window: go back to the previously focused window in
+    a group (#12763)
+  * 293d3e5d desktopAnimationMgr: fix slide direction
+  * f8464866 keybinds: add inhibiting gestures under shortcut inhibitors
+    (#12692)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Mar 2026 16:50:02 +0100
+
 hyprland (0.53.3-1ppa3) noble; urgency=medium
 
   * Switch to glaze-stable

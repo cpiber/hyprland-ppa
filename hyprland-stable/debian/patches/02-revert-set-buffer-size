@@ -1,5 +1,5 @@
-Description: Revert 3ddb16bd5bb7146d125a7d68e4e9f3b54c381a20
- This reverts the mentioned commit, since it depends on a newer
+Description: Revert 3ddb16bd5bb7146d125a7d68e4e9f3b54c381a20 and 8606bc255b5cfe2ca6270fa71053c76a6ce5e837
+ This reverts the mentioned commits, since they depend on a newer
  version of libwayland, that is not yet available on noble
 Author: Constantin Piber <cp.piber@gmail.com>
 
@@ -7,11 +7,11 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -215,7 +215,7 @@ configure_file(
+@@ -216,7 +216,7 @@ configure_file(
  set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
  
  set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
--set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.90)
+-set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.91)
 +set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.0)
  set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.45)
  set(LIBINPUT_MINIMUM_VERSION 1.28)
@@ -20,7 +20,7 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -312,7 +312,7 @@ void CCompositor::initServer(std::string
+@@ -309,7 +309,7 @@ void CCompositor::initServer(std::string
      Log::logger->initCallbacks();
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
@@ -29,3 +29,28 @@ Index: source/src/Compositor.cpp
  
      Aquamarine::SBackendOptions           options{};
      SP<Hyprutils::CLI::CLoggerConnection> conn = makeShared<Hyprutils::CLI::CLoggerConnection>(Log::logger->hu());
+Index: source/src/managers/ProtocolManager.cpp
+===================================================================
+--- source.orig/src/managers/ProtocolManager.cpp
++++ source/src/managers/ProtocolManager.cpp
+@@ -142,7 +142,7 @@ CProtocolManager::CProtocolManager() {
+     PROTO::data          = makeUnique<CWLDataDeviceProtocol>(&wl_data_device_manager_interface, 3, "WLDataDevice");
+     PROTO::compositor    = makeUnique<CWLCompositorProtocol>(&wl_compositor_interface, 6, "WLCompositor");
+     PROTO::subcompositor = makeUnique<CWLSubcompositorProtocol>(&wl_subcompositor_interface, 1, "WLSubcompositor");
+-    PROTO::shm           = makeUnique<CWLSHMProtocol>(&wl_shm_interface, 2, "WLSHM");
++    PROTO::shm           = makeUnique<CWLSHMProtocol>(&wl_shm_interface, 1, "WLSHM");
+ 
+     // Extensions
+     PROTO::viewport            = makeUnique<CViewporterProtocol>(&wp_viewporter_interface, 1, "Viewporter");
+Index: source/src/protocols/core/Shm.cpp
+===================================================================
+--- source.orig/src/protocols/core/Shm.cpp
++++ source/src/protocols/core/Shm.cpp
+@@ -176,7 +176,6 @@ CWLSHMResource::CWLSHMResource(UP<CWlShm
+     if UNLIKELY (!good())
+         return;
+ 
+-    m_resource->setRelease([this](CWlShm* r) { PROTO::shm->destroyResource(this); });
+     m_resource->setOnDestroy([this](CWlShm* r) { PROTO::shm->destroyResource(this); });
+ 
+     m_resource->setCreatePool([](CWlShm* r, uint32_t id, int32_t fd, int32_t size) {
