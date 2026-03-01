@@ -1,3 +1,9 @@
+hy3 (0.53.0.1~1ppa1+git202601311935-9625801build3) noble; urgency=medium
+
+  * Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Mar 2026 20:03:01 +0100
+
 hy3 (0.53.0.1~1ppa1+git202601311935-9625801build2) noble; urgency=medium
 
   * Rebuild for unstable

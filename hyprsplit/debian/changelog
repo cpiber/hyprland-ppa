@@ -1,3 +1,11 @@
+hyprsplit (0.53.2~1ppa1+git202603012002-1d8ab25) noble; urgency=medium
+
+  * Update to main 1d8ab25
+  * 1d8ab25 chase hyprland event changes
+  * 1001864 refactor some stuff, and chase hyprland workspace changes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Mar 2026 20:02:47 +0100
+
 hyprsplit (0.53.2~1ppa1+git202602101902-a83c662build1) noble; urgency=medium
 
   * Rebuild for unstable

@@ -1,3 +1,10 @@
+hyprland-plugins (0.53.0~1ppa1+git202603012001-b85a56b) noble; urgency=medium
+
+  * Update to main b85a56b
+  * b85a56b all: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Mar 2026 20:01:22 +0100
+
 hyprland-plugins (0.53.0~1ppa1+git202602181921-e03c34c) noble; urgency=medium
 
   * Update to main e03c34c
