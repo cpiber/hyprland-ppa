@@ -1,3 +1,62 @@
+hyprland-unstable (0.54.0~1ppa1+git202603011651-8ad96a95) noble; urgency=medium
+
+  * Update to main 8ad96a95
+  * 8ad96a95 screencopy: fix nullptr deref if shm format is weird
+  * f41e3c22 scroll: clamp column widths properly
+  * f0a80ce5 keybinds: fixup changegroupactive
+  * 2928d6af layouts: fix crash on missed relayout updates (#13444)
+  * 93aacfc0 [gha] Nix: update inputs
+  * 19c263e5 screencopy: scale window region for toplevel export
+    (#13442)
+  * a0320900 monitor: damage old special monitor on change
+  * 0b55c55f monitor: update pinned window states properly on
+    changeWorkspace (#13441)
+  * 85c2764f deco/border: fix damageEntire
+  * c2bed410 monitor: keep workspace monitor bindings on full reconnect
+    (#13384)
+  * 82729db3 build: fix build on gcc 16.x after #6b2c08d (#13429)
+  * f12904e6 layout/algo: fix swar on removing a target (#13427)
+  * b90c61c0 compositor: fix focus edge detection (#13425)
+  * e333a330 desktop/group: fix movegroupwindow not following focus
+    (#13426)
+  * 1c64ef06 desktop/window: fix idealBB reserved (#13421)
+  * 6b2c08d3 pointer: damage entire buffer in begin of rendering hw
+  * db8509df build: remove auto-generated hyprctl/hw-protocols/ files
+    during make clear (#13399)
+  * d2b9957f format: safeguard drmGetFormat functions (#13416)
+  * 362ea7b0 hyprctl: fix buffer overflowing writes to the socket
+  * f7114016 desktop/rule: fix matching for content type by str
+  * 0002f148 version: bump to 0.54.0
+  * ffec41c4 desktop/rules: fix border colors not resetting. (#13382)
+  * f624449c start: add --force-nixgl and check /run/opengl-driver
+    (#13385)
+  * 70cdd819 desktop/rules: use pid for exec rules (#13374)
+  * cc14dd1b xwayland: validate size hints before floating (#13361)
+  * c71fbd85 renderer: better sdr eotf settings (#12812)
+  * 0e919686 algo/dwindle: fix focal point not being properly used in
+    movedTarget (#13373)
+  * 1e06ab46 algo/master: fix orientation cycling (#13372)
+  * 62318517 desktop/popup: avoid crash on null popup child in
+    rechecking
+  * d0583e17 compositor: fix calculating x11 work area (#13347)
+  * 5b2efe54 input: use fresh cursor pos when sending motion events
+    (#13366)
+  * 457617b5 xwayland: normalize OR geometry to logical coords with
+    force_zero_scaling (#13359)
+  * c60b3cb2 target: fix geometry for x11 floats
+  * fbf67ef0 algo/scrolling: adjust focus callbacks to be more intuitive
+  * be893a81 algo/master: fix master:orientation being a noop
+  * 5a80bc12 algo/scrolling: fix crashes on destroying ws
+  * a2488051 [gha] Nix: update inputs
+  * 8ab4d1dc popup: check for expired weak ptr (#13352)
+  * ae82a554 view: send wl_surface.enter to subsurfaces of popups
+    (#13353)
+  * bc09504e desktop/popup: fix use after free in Popup (#13335)
+  * f4bc8c3a keybinds: fix unguarded member access in moveWindowOrGroup
+    (#13337)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Mar 2026 16:51:58 +0100
+
 hyprland-unstable (0.53.0~1ppa1+git202602230742-b88813c7) noble; urgency=medium
 
   * Update to main b88813c7
