@@ -1,3 +1,67 @@
+hyprland (0.54.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.54.1
+  * 4b07770b [gha] Nix: update inputs
+  * 8940e596 version: bump to 0.54.1
+  * a9d10d01 desktop/window: don't group modals
+  * c0fbf334 algo/scrolling: fix rare crash
+  * 58017aa1 desktop/window: fix floating windows being auto-grouped
+    (#13475)
+  * c275d9ef hyprctl: fix workspace dynamic effect reloading (#13537)
+  * c4266033 layout/windowTarget: override maximized box status in
+    updateGeom (#13535)
+  * e2646581 algo/dwindle: don't crash on empty swapsplit (#13533)
+  * 51b220ab tests/workspace: fix one test case failing
+  * 9803deee renderer: fix crash on mirrored outputs needing recalc
+    (#13534)
+  * f8a47e05 algo/master: fix crash after dpms (#13522)
+  * 81873930 layout/algos: use binds:window_direction_monitor_fallback
+    for moves (#13508)
+  * bd4aad85 algo/scrolling: fix offset on removeTarget (#13515)
+  * d2f63278 desktop/group: respect direction when moving window out of
+    group (#13490)
+  * 918602a0 algo/dwindle: use focal point correctly for x-ws moves
+    (#13514)
+  * 6817446c algo/scroll: improve directional moves (#13423)
+  * 956bedb3 compositor: damage monitors on workspace attachment updates
+  * 9a7d4a93 layout: store and preserve size and pos after fullscreen
+    (#13500)
+  * 19fac51c layout/windowTarget: don't use swar on maximized (#13501)
+  * 2cec6ec1 algo/dwindle: add back splitratio (#13498)
+  * f58179f1 layout/windowTarget: damage before and after moves (#13496)
+  * 779f8499 layout/scroll: fix configuredWidths not setting properly on
+    new workspaces (#13476)
+  * b84f5c7d hyprpm: fix url sanitization in add
+  * 6eb2b57a layout/windowTarget: fix size_limits_tiled (#13445)
+  * 77db91ae layout/scrolling: fix size_t underflow in idxForHeight
+    (#13465)
+  * d5d08b3f screencopy: fix nullptr deref if shm format is weird
+  * 83dd46bb scroll: clamp column widths properly
+  * 31a33113 keybinds: fixup changegroupactive
+  * c4dfa1b0 layouts: fix crash on missed relayout updates (#13444)
+  * 6791f5d4 screencopy: scale window region for toplevel export
+    (#13442)
+  * 64e1c390 monitor: damage old special monitor on change
+  * 37702cd4 monitor: update pinned window states properly on
+    changeWorkspace (#13441)
+  * d84457f3 deco/border: fix damageEntire
+  * 4b6284d8 monitor: keep workspace monitor bindings on full reconnect
+    (#13384)
+  * 6b9d8829 build: fix build on gcc 16.x after #6b2c08d (#13429)
+  * 96548f77 layout/algo: fix swar on removing a target (#13427)
+  * 650322c0 compositor: fix focus edge detection (#13425)
+  * f2b39ddd desktop/group: fix movegroupwindow not following focus
+    (#13426)
+  * da8a3684 desktop/window: fix idealBB reserved (#13421)
+  * 60dc22cd pointer: damage entire buffer in begin of rendering hw
+  * feb1cc6f build: remove auto-generated hyprctl/hw-protocols/ files
+    during make clear (#13399)
+  * c2ba7fc9 format: safeguard drmGetFormat functions (#13416)
+  * 74c087ca hyprctl: fix buffer overflowing writes to the socket
+  * db3d7828 desktop/rule: fix matching for content type by str
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 03 Mar 2026 22:24:46 +0100
+
 hyprland (0.54.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.54.0
