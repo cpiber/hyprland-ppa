@@ -47,7 +47,7 @@ if [ $# -gt 0 ]; then
 
   if [ "$project" = "hyprland" ] && [ "${2:-}" != "-s" ]; then
     buildplugin "hyprland-plugins" "${2:-}"
-    buildplugin "hyprscroller" "${2:-}"
+    # buildplugin "hyprscroller" "${2:-}"
     buildplugin "hy3" "${2:-}"
     buildplugin "hyprspace" "${2:-}"
     buildplugin "hyprsplit" "${2:-}"
@@ -69,7 +69,7 @@ else
 
     if [ "$project" = "hyprland" ] && [ "$rc" -eq 0 ]; then
       buildplugin "hyprland-plugins" "${2:-}"
-      buildplugin "hyprscroller" "${2:-}"
+      # buildplugin "hyprscroller" "${2:-}"
       buildplugin "hy3" "${2:-}"
       buildplugin "hyprspace" "${2:-}"
       buildplugin "hyprsplit" "${2:-}"
