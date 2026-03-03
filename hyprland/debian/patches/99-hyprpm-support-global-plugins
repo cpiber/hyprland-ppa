@@ -6,9 +6,9 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 ===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -134,7 +134,9 @@ bool CPluginManager::createSafeDirectory
- bool CPluginManager::addNewPluginRepo(const std::string& url, const std::string& rev) {
-     const auto HLVER = getHyprlandVersion();
+@@ -143,7 +143,9 @@ bool CPluginManager::addNewPluginRepo(co
+         return false;
+     }
  
 -    if (!hasDeps()) {
 +    const bool bIsGlobal = url.find('/') == std::string::npos && std::filesystem::exists(std::string{DATAROOTDIR "/hyprpm/"} + url);
@@ -17,7 +17,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
          std::println(stderr, "\n{}", failureString("Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, cpio, pkg-config, git, g++, gcc"));
          return false;
      }
-@@ -159,6 +161,13 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -168,6 +170,13 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
@@ -31,7 +31,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
                << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
                << " install random plugins without verifying the code and author.\n  "
-@@ -172,6 +181,28 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -181,6 +190,28 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
@@ -60,7 +60,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -677,6 +708,50 @@ bool CPluginManager::updatePlugins(bool
+@@ -686,6 +717,50 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  

@@ -1,3 +1,42 @@
+hyprland-unstable (0.54.0~1ppa1+git202603032228-c11cadd8) noble; urgency=medium
+
+  * Update to main c11cadd8
+  * c11cadd8 desktop/window: don't group modals
+  * dc4b082e algo/scrolling: fix rare crash
+  * edf70983 desktop/window: fix floating windows being auto-grouped
+    (#13475)
+  * 7299a3b0 hyprctl: fix workspace dynamic effect reloading (#13537)
+  * b06a4b5e layout/windowTarget: override maximized box status in
+    updateGeom (#13535)
+  * 3faddf40 algo/dwindle: don't crash on empty swapsplit (#13533)
+  * a6e3a247 tests/workspace: fix one test case failing
+  * ff0b706e renderer: fix crash on mirrored outputs needing recalc
+    (#13534)
+  * 4f44df7b algo/master: fix crash after dpms (#13522)
+  * be03497b layout/algos: use binds:window_direction_monitor_fallback
+    for moves (#13508)
+  * ff20cbf8 algo/scrolling: fix offset on removeTarget (#13515)
+  * fe0a2021 desktop/group: respect direction when moving window out of
+    group (#13490)
+  * 75a815fb algo/dwindle: use focal point correctly for x-ws moves
+    (#13514)
+  * 3b7401b0 algo/scroll: improve directional moves (#13423)
+  * d4d17d5d compositor: damage monitors on workspace attachment updates
+  * 52ece2b0 treewide: alejandra -> nixfmt
+  * d98f7ffa layout: store and preserve size and pos after fullscreen
+    (#13500)
+  * 5f650f8e layout/windowTarget: don't use swar on maximized (#13501)
+  * 9f98f744 algo/dwindle: add back splitratio (#13498)
+  * 5cb12810 layout/windowTarget: damage before and after moves (#13496)
+  * 743dffd6 layout/scroll: fix configuredWidths not setting properly on
+    new workspaces (#13476)
+  * 5c370c33 hyprpm: fix url sanitization in add
+  * cf0d256c layout/windowTarget: fix size_limits_tiled (#13445)
+  * 6ebafcf1 layout/scrolling: fix size_t underflow in idxForHeight
+    (#13465)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 03 Mar 2026 22:28:11 +0100
+
 hyprland-unstable (0.54.0~1ppa1+git202603011651-8ad96a95) noble; urgency=medium
 
   * Update to main 8ad96a95
