@@ -7,7 +7,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -216,7 +216,7 @@ configure_file(
+@@ -217,7 +217,7 @@ configure_file(
  set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
  
  set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
@@ -20,7 +20,7 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -309,7 +309,7 @@ void CCompositor::initServer(std::string
+@@ -312,7 +312,7 @@ void CCompositor::initServer(std::string
      Log::logger->initCallbacks();
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
@@ -46,7 +46,7 @@ Index: source/src/protocols/core/Shm.cpp
 ===================================================================
 --- source.orig/src/protocols/core/Shm.cpp
 +++ source/src/protocols/core/Shm.cpp
-@@ -176,7 +176,6 @@ CWLSHMResource::CWLSHMResource(UP<CWlShm
+@@ -174,7 +174,6 @@ CWLSHMResource::CWLSHMResource(UP<CWlShm
      if UNLIKELY (!good())
          return;
  

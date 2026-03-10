@@ -1,3 +1,60 @@
+hyprland-unstable (0.54.0~1ppa1+git202603101812-bc5bd897) noble; urgency=medium
+
+  * Update to main bc5bd897
+  * bc5bd897 compositor: When processing fullscreen states, only use
+    effective mode where necessary (#13607)
+  * 53899907 renderer: fix crash on null blur framebuffer during monitor
+    disconnect
+  * 318673e7 protocols/sessionLock: fix crash when monitor is gone
+    during lock surface creation
+  * b9ddb4bb layout: fix crash on monitor reconnect due to stale
+    workspace state
+  * 8217dabc layout: fix null deref in focalPointForDir and
+    moveInDirection (#13652)
+  * 8a12d6cf algo/dwindle: Respect `force_split` when moving windows to
+    workspaces (#13038)
+  * e32eeb1d algo/dwindle: do NOT use smart_split for overridden focal
+    point (#13635)
+  * e172a26b layout: fix drag_threshold window snap regression (rebased
+    for #12890) (#13140)
+  * 5cf53f58 layout/windowTarget: add visualBox (#13626)
+  * 03f444e0 renderer: fix crash with nullptr FBs (#13641)
+  * a4ecae91 desktop/windowRule: fix matching CONTENT (#13636)
+  * 3cf62bea algo/scroll: fix unsigned wrap (#13634)
+  * 4aee773d renderer: fix sdr mod (#13630)
+  * 3b09986f layout/groupTarget: fix crash on null space assignment
+    (#13614)
+  * 02f30ea1 renderer: refactor gl renderer (#13488)
+  * b227efc8 renderer: refactor projection setting (#13485)
+  * 73fca55e renderer: move m_renderData to renderer (#13474)
+  * 966f20d3 renderer: refactor resources and flags (#13471)
+  * 32e75e3e renderer: refactor render elements (#13438)
+  * 36b19075 deco/border: fix damage region
+  * 4152ac76 renderer: refactor Texture, Framebuffer and Renderbuffer
+    (#13437)
+  * a5858018 renderer: shader variants refactor (#13434)
+  * 8685fd7b dwindle: add rotatesplit layoutmsg and tests (#13235)
+  * 1fa157cf compositor: fix missing recheckWorkArea to prevent
+    CReservedArea assert failure (#13590)
+  * e0c57100 layerrules: add dynamically registered rules for plugins
+    (#13331)
+  * 42f0a600 keybinds: Remove removed keybinds (#13605)
+  * ae9ca17b pointer: fix hardware cursor rendering on rotated/flipped
+    monitors (#13574)
+  * 972f23ef screencopy: fix isOutputBeingSSd (#13586)
+  * 4c60d9df desktop/rules: fix empty workspace handling (#13544)
+  * b7dfb475 config/descriptions: add missing desc entry
+  * 3284dd72 algo/scrolling: add config options for focus and swapcol
+    wrapping (#13518)
+  * 803e81ac screenshare: improve destroy logic of objects (#13554)
+  * 34c7cc7d i18n: update Vietnamese translations (#13489)
+  * c47ae950 screencopy: fix minor crash (#13566)
+  * 3f169ee5 socket2: emit `kill` event (hyprctl kill) (#13104)
+  * 10754745 render/cm: add ICC profile pipeline (#12711)
+  * 8271cfc9 core: fix i586 build (#13550)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Mar 2026 18:12:13 +0100
+
 hyprland-unstable (0.54.0~1ppa1+git202603032228-c11cadd8) noble; urgency=medium
 
   * Update to main c11cadd8

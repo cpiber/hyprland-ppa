@@ -2,7 +2,7 @@ Index: source/src/protocols/types/DMABuffer.cpp
 ===================================================================
 --- source.orig/src/protocols/types/DMABuffer.cpp
 +++ source/src/protocols/types/DMABuffer.cpp
-@@ -108,7 +108,7 @@ CFileDescriptor CDMABuffer::exportSyncFi
+@@ -105,7 +105,7 @@ CFileDescriptor CDMABuffer::exportSyncFi
      if (!good())
          return {};
  
