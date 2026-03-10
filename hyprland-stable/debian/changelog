@@ -1,3 +1,37 @@
+hyprland (0.54.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.54.2
+  * 59f9f268 version: bump to 0.54.2
+  * e3bce4c0 protocols/sessionLock: fix crash when monitor is gone
+    during lock surface creation
+  * 48ac5b32 layout: fix crash on monitor reconnect due to stale
+    workspace state
+  * 470997f7 layout: fix null deref in focalPointForDir and
+    moveInDirection (#13652)
+  * 7c4a23af algo/dwindle: Respect `force_split` when moving windows to
+    workspaces (#13038)
+  * d05b805c algo/dwindle: do NOT use smart_split for overridden focal
+    point (#13635)
+  * ad4f5f15 layout: fix drag_threshold window snap regression (rebased
+    for #12890) (#13140)
+  * 895c49a2 layout/windowTarget: add visualBox (#13626)
+  * a32a1a8d desktop/windowRule: fix matching CONTENT (#13636)
+  * 932d676c algo/scroll: fix unsigned wrap (#13634)
+  * 9cdd5e83 layout/groupTarget: fix crash on null space assignment
+    (#13614)
+  * cc19f2ee deco/border: fix damage region
+  * fadd8e94 compositor: fix missing recheckWorkArea to prevent
+    CReservedArea assert failure (#13590)
+  * af6416b9 pointer: fix hardware cursor rendering on rotated/flipped
+    monitors (#13574)
+  * 9286abb8 desktop/rules: fix empty workspace handling (#13544)
+  * c7fadefc config/descriptions: add missing desc entry
+  * 942f4e88 screenshare: improve destroy logic of objects (#13554)
+  * 4e43a335 screencopy: fix minor crash (#13566)
+  * 628cc608 core: fix i586 build (#13550)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Mar 2026 17:55:16 +0100
+
 hyprland (0.54.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.54.1
