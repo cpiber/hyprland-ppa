@@ -1,3 +1,34 @@
+hyprland-unstable (0.54.0~1ppa1+git202603171756-9f599e31) noble; urgency=medium
+
+  * Update to main 9f599e31
+  * 9f599e31 window/rules: add scrolling_width (#13754)
+  * 35ef8dc1 protocols/workspace: schedule done after output update
+    (#13743)
+  * be96e06a view: consolidate group flags and apply window rules
+    (#13694)
+  * 30c498ac build: add glaze dependency with FetchContent fallback
+    (#13666)
+  * 902e8de7 source: c-f for new clang version
+  * 94bd4123 desktop/rules: fix static rules and content type. (#13725)
+  * 3fd2a954 [gha] Nix: update inputs
+  * df557522 algo/scroll: fix std::clamp assertion crash on resume from
+    suspend (#13737)
+  * 9bf8fe7a renderer: fix blockBlurOptimization check (#13685)
+  * de3471b3 config/workspacerule: add animation style (#13380)
+  * 2877ca29 algo/scroll: reverse horizontal dir mapping of vertical
+    scroll directions (#13647)
+  * 030e8921 hyprland.pc.in: add src include flag
+  * 9683e261 Nix: always test in debug mode
+  * 8aff5003 internal: fix relative path header locations (#13650)
+  * 24a95621 input: add device specific binds (#13073)
+  * e8684034 protocols: fix image-copy-capture stop handling and remove
+    non protocol errors (#13706)
+  * 8662ecba renderer: fix share window projection (#13695)
+  * 0e083e88 algo/dwindle: fix precise mouse setting (#13678)
+  * a714c7fe shader: delete shader on success path (#13682)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Mar 2026 17:56:44 +0100
+
 hyprland-unstable (0.54.0~1ppa1+git202603101812-bc5bd897) noble; urgency=medium
 
   * Update to main bc5bd897
