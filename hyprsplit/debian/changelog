@@ -1,3 +1,10 @@
+hyprsplit (0.54.0~1ppa1+git202603171757-395b780) noble; urgency=medium
+
+  * Update to main 395b780
+  * 395b780 pin 0.54.0 and 0.54.1
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Mar 2026 17:57:32 +0100
+
 hyprsplit (0.53.2~1ppa1+git202603012002-1d8ab25build1) noble; urgency=medium
 
   * Rebuild for unstable

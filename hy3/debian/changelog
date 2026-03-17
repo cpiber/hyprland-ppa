@@ -1,3 +1,14 @@
+hy3 (0.54.2~1ppa1+git202603171757-778f232) noble; urgency=medium
+
+  * Update to master 778f232
+  * 778f232 remove nodiscard on collapseParents
+  * 032636f prevent borders on unfocused workspaces from being left
+    highlighted
+  * 94623f7 version: 0.54.2
+  * e385b26 massive refactor + rebase on 0.54
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 17 Mar 2026 17:57:12 +0100
+
 hy3 (0.53.0.1~1ppa1+git202601311935-9625801build4) noble; urgency=medium
 
   * Rebuild for unstable
