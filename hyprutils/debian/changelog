@@ -1,3 +1,9 @@
+hyprutils (0.11.1-1ppa1ubuntu1) noble; urgency=medium
+
+  * Fix C++26 build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Mar 2026 22:11:00 +0100
+
 hyprutils (0.11.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.11.1
