@@ -1,3 +1,23 @@
+hyprutils (0.11.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.1
+  * b85b779 version: bump to 0.11.1
+  * 668b22d string: add isNumber2 for sv
+  * 6b4c476 path: add resolvePath
+  * d32196a string/numeric: add hex parsing
+  * 7d3be08 string/numeric: add numeric parsing
+  * 5e228db i18n: include vector header (#103)
+  * 8eb974b memory: add dynamicPointerCast for weak ptrs
+  * e63f3a7 treewide: alejandra -> nixfmt
+  * 340a792 logger: bump to C++26, set FD_CLOEXEC on log file descriptor
+    (#100)
+  * 9038eec memory: fix a few UAF cases, add asan to test
+  * 51a4f93 signals: check if listeners is empty in emitInternal (#96)
+  * 5ac060b signal: check for trivially copyable (#95)
+  * 1c527b3 cli/logger: flush stdout after logging
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Mar 2026 21:49:56 +0100
+
 hyprutils (0.11.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.11.0
