@@ -1,3 +1,19 @@
+hyprland-unstable (0.54.0~1ppa1+git202603212223-8726a736) noble; urgency=medium
+
+  * Update to main 8726a736
+  * 8726a736 config: cleanup the entire config infrastructure (#13785)
+  * b940b0d2 screencopy: fix crash in screensharing toplevel with
+    invalid handle (#13781)
+  * 3b902a47 input: fix touch screen focus on multi monitor (#13764)
+  * ad46ff63 renderer: fix crash when shader path isn't a file (#13756)
+  * d635b499 input: focus monitor on touch down events (#13773)
+  * 77595178 misc: fix missing noreturn attribute for throwError
+    (#13746)
+  * aef76309 layershell: fix popup crash with nullptr mon (#13763)
+  * 3a720645 algo/master: fix crash on null target in getNextTarget
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 21 Mar 2026 22:23:31 +0100
+
 hyprland-unstable (0.54.0~1ppa1+git202603171756-9f599e31) noble; urgency=medium
 
   * Update to main 9f599e31

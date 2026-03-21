@@ -39,7 +39,7 @@ Build-Depends:
  libglaze-dev (>= 7.0.0),
  libhyprlang-dev (>= 0.6.7),
  libhyprcursor-dev (>= 0.1.7),
- libhyprutils-dev (>= 0.11.0),
+ libhyprutils-dev (>= 0.11.1),
  libhyprgraphics-dev (>= 0.1.6),
  libaquamarine-dev (>= 0.9.3),
  libhyprwire-dev,
