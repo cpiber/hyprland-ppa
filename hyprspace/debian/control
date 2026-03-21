@@ -6,7 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  yq,
- hyprland-unstable (>= 0.54.0~1ppa1+git202603171756-9f599e31~), hyprland-unstable (<< 0.54.0~1ppa1+git202603171756-9f599e319),
+ hyprland-unstable (>= 0.54.0~1ppa1+git202603212223-8726a736~), hyprland-unstable (<< 0.54.0~1ppa1+git202603212223-8726a7369),
  hyprland-plugin-deps,
  gcc-14,
  g++-14,
@@ -20,7 +20,7 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- hyprland-unstable (>= 0.54.0~1ppa1+git202603171756-9f599e31~), hyprland-unstable (<< 0.54.0~1ppa1+git202603171756-9f599e319),
+ hyprland-unstable (>= 0.54.0~1ppa1+git202603212223-8726a736~), hyprland-unstable (<< 0.54.0~1ppa1+git202603212223-8726a7369),
 Description: workspace overview for Hyprland
  A plugin for Hyprland that implements a workspace overview feature similar to
  that of KDE Plasma, GNOME and macOS, aimed to provide a efficient way of
