@@ -1,3 +1,48 @@
+hyprland-unstable (0.54.0~1ppa1+git202603281804-420ee44e) noble; urgency=medium
+
+  * Update to main 420ee44e
+  * 420ee44e protocols: allow xdg-foreign to be used by sandboxed apps
+    (#13854)
+  * 1c25bcc8 dispatchers: add moveintoorcreategroup (#13325)
+  * 3103119b input: allow focus to switch to most recently used window
+    on closed (#13769)
+  * 98036fab config/executor: actually execute exec-shutdown (#13872)
+  * 47e2d599 renderer/groupbar: fix gradients rendering (#13875)
+  * 5dfb1033 i18n: add Greek translations (#13865)
+  * 2c4852e3 renderer/deco: add glow decoration (#13862)
+  * 2fde538e algo/scrolling: improve behavior with focus_fit_method =
+    center (#13795)
+  * b0f6ac23 desktop/workspaceHistory: small refactor to work better
+    with multi monitor setups (#13632)
+  * 4c29b9de i18n: add Punjabi translations (#13807)
+  * 1cdb9d5b config: fix crash in safe mode due to null `Config::mgr()`
+    (#13855)
+  * 2de1d3ca layout: guard null workspace in CWindowTarget::updatePos()
+    (#13861)
+  * 1b661d06 clang-format: run formatter
+  * ee7f6882 render/pass: fix debug:pass rendering
+  * eb141a6c overridableVar: fix reassignment
+  * 855b1cba renderer: small fixes in OpenGL.cpp and OpenGL.hpp (#13842)
+  * 2e5e800e renderer/cm: Support wp-cm-v1 version 2 (#12817)
+  * 8196711a screencopy: check share session state (#13839)
+  * bbf6718c hyprctl: fix invalid type cast
+  * 63c56bad protocols: reimplement unstable/xdg-foreign-v2 (#13716)
+  * 64a2e4e2 input: fix the multimon touch fix (#13819)
+  * 488c8f49 [gha] Nix: update inputs
+  * dc24eb1c renderer: guard against null monitor in renderMonitor
+    (#13823)
+  * c8b283f5 hyprctl: fix json output for the submap command (#13726)
+  * c54d7bf6 compositor: be more selective about how we expand the
+    window box in getting coord (#13720)
+  * bf31f642 internal: rewrite deviceNameToInternalString using a single
+    range pipeline (#13806)
+  * 635abdd1 xwayland: prevent potential buffer overflow in socket path
+    handling (#13797)
+  * a595d0e3 layersurface: simulate mouse movement on layer change
+    (#13747)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Mar 2026 18:04:40 +0100
+
 hyprland-unstable (0.54.0~1ppa1+git202603212223-8726a736) noble; urgency=medium
 
   * Update to main 8726a736

@@ -13,7 +13,7 @@ Index: source/CMakeLists.txt
  set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
 -set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.91)
 +set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.0)
- set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.45)
+ set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.47)
  set(LIBINPUT_MINIMUM_VERSION 1.28)
  
 Index: source/src/Compositor.cpp
@@ -33,7 +33,7 @@ Index: source/src/managers/ProtocolManager.cpp
 ===================================================================
 --- source.orig/src/managers/ProtocolManager.cpp
 +++ source/src/managers/ProtocolManager.cpp
-@@ -142,7 +142,7 @@ CProtocolManager::CProtocolManager() {
+@@ -144,7 +144,7 @@ CProtocolManager::CProtocolManager() {
      PROTO::data          = makeUnique<CWLDataDeviceProtocol>(&wl_data_device_manager_interface, 3, "WLDataDevice");
      PROTO::compositor    = makeUnique<CWLCompositorProtocol>(&wl_compositor_interface, 6, "WLCompositor");
      PROTO::subcompositor = makeUnique<CWLSubcompositorProtocol>(&wl_subcompositor_interface, 1, "WLSubcompositor");

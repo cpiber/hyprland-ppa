@@ -21,7 +21,7 @@ Build-Depends:
  libxkbcommon-dev,
  uuid-dev,
  libwayland-dev (>= 1.22),
- wayland-protocols (>= 1.45),
+ wayland-protocols (>= 1.47),
  libcairo2-dev,
  libpango1.0-dev,
  libdrm-dev,
