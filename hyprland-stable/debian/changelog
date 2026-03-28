@@ -1,3 +1,34 @@
+hyprland (0.54.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.54.3
+  * 521ece46 version: bump to 0.54.3
+  * 7dbd3e9d layout: guard null workspace in CWindowTarget::updatePos()
+    (#13861)
+  * 91d87ec8 overridableVar: fix reassignment
+  * 609b0da9 hyprctl: fix json output for the submap command (#13726)
+  * fec5ff33 compositor: be more selective about how we expand the
+    window box in getting coord (#13720)
+  * aaea8547 xwayland: prevent potential buffer overflow in socket path
+    handling (#13797)
+  * a61633a3 layersurface: simulate mouse movement on layer change
+    (#13747)
+  * 02446f50 layershell: fix popup crash with nullptr mon (#13763)
+  * 67d17808 algo/master: fix crash on null target in getNextTarget
+  * 0fe22979 protocols/workspace: schedule done after output update
+    (#13743)
+  * b6ada0c1 view: consolidate group flags and apply window rules
+    (#13694)
+  * b7285a30 desktop/rules: fix static rules and content type. (#13725)
+  * 6463290e algo/scroll: fix std::clamp assertion crash on resume from
+    suspend (#13737)
+  * a2b99477 protocols: fix image-copy-capture stop handling and remove
+    non protocol errors (#13706)
+  * 0cb69c10 algo/dwindle: fix precise mouse setting (#13678)
+  * e8b06b83 compositor: When processing fullscreen states, only use
+    effective mode where necessary (#13607)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Mar 2026 17:39:08 +0100
+
 hyprland (0.54.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.54.2
