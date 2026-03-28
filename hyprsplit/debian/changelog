@@ -1,3 +1,10 @@
+hyprsplit (0.54.3~1ppa1+git202603282122-f15d7d8) noble; urgency=medium
+
+  * Update to main f15d7d8
+  * f15d7d8 Update hyprpm.toml
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Mar 2026 21:22:57 +0100
+
 hyprsplit (0.54.2~1ppa1+git202603212224-b129f9b) noble; urgency=medium
 
   * Update to main b129f9b
