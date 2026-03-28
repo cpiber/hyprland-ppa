@@ -1,8 +1,29 @@
-wayland-protocols (1.45-1ppa1) noble; urgency=medium
+wayland-protocols (1.47-1ppa1) noble; urgency=medium
 
   * Backport
 
- -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 Aug 2025 13:03:16 +0200
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 28 Mar 2026 18:00:57 +0100
+
+wayland-protocols (1.47-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove redundant "Rules-Requires-Root: no"
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 15 Dec 2025 17:10:57 +0100
+
+wayland-protocols (1.46-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/u/signing-key.asc: Add Simon Ser's public key
+  * d/gbp.conf: Add more options
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 24 Nov 2025 21:46:06 +0100
+
+wayland-protocols (1.45-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 11 Aug 2025 09:06:12 +0200
 
 wayland-protocols (1.45-1) experimental; urgency=medium
 
