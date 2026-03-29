@@ -7,7 +7,7 @@ Build-Depends:
  debhelper-compat (= 13),
  yq,
  hyprland-unstable (>= 0.54.0~1ppa1+git202603281804-420ee44e~), hyprland-unstable (<< 0.54.0~1ppa1+git202603281804-420ee44e9),
- hyprland-plugin-deps,
+ hyprland-plugin-deps (>= 0-1ppa7),
  gcc-14,
  g++-14,
 Standards-Version: 4.6.2

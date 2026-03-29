@@ -1,3 +1,9 @@
+hyprland-plugins (0.53.0~1ppa1+git202603012001-b85a56bbuild5) noble; urgency=medium
+
+  * Bump for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 29 Mar 2026 10:40:36 +0200
+
 hyprland-plugins (0.53.0~1ppa1+git202603012001-b85a56bbuild4) noble; urgency=medium
 
   * Rebuild for unstable

@@ -1,3 +1,9 @@
+hyprsplit (0.54.3~1ppa1+git202603282122-f15d7d8build1) noble; urgency=medium
+
+  * Bump for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 29 Mar 2026 10:40:49 +0200
+
 hyprsplit (0.54.3~1ppa1+git202603282122-f15d7d8) noble; urgency=medium
 
   * Update to main f15d7d8

@@ -1,3 +1,9 @@
+hy3 (0.54.2~1ppa1+git202603212223-5b0bc52build2) noble; urgency=medium
+
+  * Bump for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 29 Mar 2026 10:40:03 +0200
+
 hy3 (0.54.2~1ppa1+git202603212223-5b0bc52build1) noble; urgency=medium
 
   * Rebuild for unstable
