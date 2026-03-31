@@ -1,3 +1,13 @@
+hyprutils (0.12.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.0
+  * e6caa3d version: bump to 0.12.0
+  * 762166b string/varlist2: add view ctors
+  * cb4e152 internal: add libc++ < 20 fallback for floating-point
+    strToNumber (#104)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 18:34:20 +0200
+
 hyprutils (0.11.1-1ppa1ubuntu1) noble; urgency=medium
 
   * Fix C++26 build
