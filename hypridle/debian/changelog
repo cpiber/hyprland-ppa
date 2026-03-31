@@ -1,3 +1,9 @@
+hypridle (0.1.7-1ppa5) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:41:21 +0200
+
 hypridle (0.1.7-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies

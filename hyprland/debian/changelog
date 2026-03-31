@@ -1,3 +1,9 @@
+hyprland-unstable (0.54.0~1ppa1+git202603281804-420ee44f) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:41:21 +0200
+
 hyprland-unstable (0.54.0~1ppa1+git202603281804-420ee44e) noble; urgency=medium
 
   * Update to main 420ee44e
