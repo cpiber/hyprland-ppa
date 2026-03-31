@@ -1,3 +1,30 @@
+hyprland-unstable (0.54.0~1ppa1+git202603312146-ccdfa407) noble; urgency=medium
+
+  * Update to main ccdfa407
+  * ccdfa407 refactor: improve readability of monitor rule comparison
+    (#13884)
+  * 179e1de5 tests: add unit tests for match engine types (#13903)
+  * fdd2607b tests: add unit tests for Math::CExpression (#13924)
+  * 1fdba8a8 tests: add unit tests for Format utilities (#13923)
+  * 91916a2d xwayland: fix compiler warnings (#13920)
+  * 6474f46b tests: add unit tests for CMonitorRuleParser (#13895)
+  * f57fd6ed config: fix type confusion in getOption with complex types
+  * bb84f4e9 nix: separate overlay with deps
+  * 2a16c962 nix/tests: print gtests logs
+  * 43fcf1b0 CI/build: remove commented-out clang-format action (#13893)
+  * 38a7f03c renderer: refactor part 7: api fixes (#13631)
+  * ef2e8dfd tests: add unit tests for TransferFunction helpers (#13889)
+  * fdf0e7a3 tests: add unit tests for CHyprColor (#13891)
+  * 0be78d09 tests: add unit tests for CMType helpers (#13888)
+  * 83d3babd desktop/reserved: do not crash on invalid box init (#13880)
+  * eb10ecf7 build: remove legacy clang-format workflow (#13887)
+  * 6226f3b1 desktop/window: guard null monitor in xwaylandSizeToReal
+    (#13876)
+  * 50830570 tests: add unit tests for Direction helpers (#13885)
+  * ff5c6c24 tests: add unit tests for ByteOperations helpers (#13886)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:46:28 +0200
+
 hyprland-unstable (0.54.0~1ppa1+git202603281804-420ee44f) noble; urgency=medium
 
   * Rebuild for dependencies
