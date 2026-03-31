@@ -1,3 +1,13 @@
+hy3 (0.54.2.1~1ppa1+git202603312148-0432347) noble; urgency=medium
+
+  * Update to master 0432347
+  * 0432347 version: 0.54.2.1
+  * 5eb1482 use InvalidOnly collapse policy over default policy for
+    mouse grabs
+  * 14d9bda unconditionally warp resized windows when hidden
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:48:40 +0200
+
 hy3 (0.54.2~1ppa1+git202603212223-5b0bc52build2) noble; urgency=medium
 
   * Bump for dependencies

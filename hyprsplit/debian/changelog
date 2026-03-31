@@ -1,3 +1,10 @@
+hyprsplit (0.54.3~1ppa1+git202603312149-2d8cfc8) noble; urgency=medium
+
+  * Update to main 2d8cfc8
+  * 2d8cfc8 rework swapactiveworkspaces it was a mess also fixes #79
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:49:02 +0200
+
 hyprsplit (0.54.3~1ppa1+git202603282122-f15d7d8build1) noble; urgency=medium
 
   * Bump for dependencies
