@@ -6,7 +6,7 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  yq,
- hyprland-unstable (>= 0.54.0~1ppa1+git202603312146-ccdfa407~), hyprland-unstable (<< 0.54.0~1ppa1+git202603312146-ccdfa4079),
+ hyprland-unstable (>= 0.54.0~1ppa1+git202604052218-aaa2fc34~), hyprland-unstable (<< 0.54.0~1ppa1+git202604052218-aaa2fc349),
  hyprland-plugin-deps (>= 0-1ppa7),
  gcc-14,
  g++-14,
@@ -20,7 +20,7 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- hyprland-unstable (>= 0.54.0~1ppa1+git202603312146-ccdfa407~), hyprland-unstable (<< 0.54.0~1ppa1+git202603312146-ccdfa4079),
+ hyprland-unstable (>= 0.54.0~1ppa1+git202604052218-aaa2fc34~), hyprland-unstable (<< 0.54.0~1ppa1+git202604052218-aaa2fc349),
 Description: awesome / dwm like workspaces for hyprland
  A complete rewrite of split-monitor-workspaces that attempts to fix the issues
  I experienced with it. Improvements include:

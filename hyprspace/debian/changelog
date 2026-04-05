@@ -1,3 +1,35 @@
+hyprspace (0.50.0~1ppa1+git202604052220-12ddde0) noble; urgency=medium
+
+  * Update to main 12ddde0
+  * 12ddde0 Merge pull request #223 from douglas/support_hyprland_0_54_0
+  * db9c78c Implement self-managed window drag between workspaces in
+    overview
+  * 5861243 Track window thumbnail boxes in draw() for drag hit-testing
+  * a88dbaf Damage individual windows on overview close to fix post-
+    close glitch
+  * 9e252bf Fix nearestNeighbor state leak in renderWindowStub()
+  * 586b095 Fix window rendering glitch after closing overview
+  * ec0f45d Fix renderWindow/renderLayer symbol lookup to filter by
+    class name
+  * dac99cb Fix reserved area double-counting in updateLayout()
+  * 9fce120 Pin flake.nix Hyprland input to v0.54.2
+  * e217cc8 Guard updateLayout() against null monitor
+  * 700f613 Fix axisEvent: route by axis type, hardcode swipe fingers to
+    3
+  * 47e2293 Remove CFakeDamageElement hack and fix render modif
+    construction
+  * e98a796 Use PHLWINDOWREF instead of uint32_t handle for fullscreen
+    tracking
+  * 0a50591 Wire all 9 cancellable event hooks through listenCancellable
+  * 2445a42 Add listenCancellable helper for cancellable event hooks
+  * 59df8d3 Migrate to typed event bus from registerCallbackDynamic
+  * c87d5f8 Use drag controller API for window drag state
+  * 1ad2927 Use new layout manager API for monitor recalculation
+  * 904027d Update render stubs for new time and layer types
+  * 9d71626 Update includes and typedefs for Hyprland 0.54.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Apr 2026 22:20:15 +0200
+
 hyprspace (0.50.0~1ppa1+git202601221813-bcd9692build11) noble; urgency=medium
 
   * Rebuild for unstable
