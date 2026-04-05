@@ -1,3 +1,62 @@
+hyprland-unstable (0.54.0~1ppa1+git202604052218-aaa2fc34) noble; urgency=medium
+
+  * Update to main aaa2fc34
+  * aaa2fc34 layouts/dwindle: override force after window drags (#14002)
+  * 809b9b9e egl: move over to use hyprgraphics (#12988)
+  * 5c5ba65a desktop/history: include ranges header (#14000)
+  * bf97fac9 subsurface: use geometry-aware damage and recurse into
+    nested trees (#13933)
+  * 8edb7c56 xwayland: pipe through monitor in coordinate mapping
+    (#13700)
+  * 6983b190 data/dnd: guard against expired dndPointerFocus and ensure
+    consistent usage (#13996)
+  * d7edc50e tests: add unit tests for CDamageRing (#13995)
+  * 3af9b108 internal: silence compiler warnings about unused return
+    values (#13997)
+  * 3a7bd8fe renderer: add a cm settings cache
+  * 1c2bd2c8 render/decorations: improve cache performance
+  * 3c88ac8e desktop/window: optimize getRealBorderSize()
+  * 5bf2bbed build: add format-check and format-fix Makefile targets
+    (#13936)
+  * 97ee0427 render/opengl: optimize getShaderVariant's map access
+  * 9b05dc1b render/decoration: cache input extents as well
+  * d170a627 render/decoration: improve extent calculations
+  * 442ccb06 renderer/groupbar: fix a group indicator rounding bug
+    (#13975)
+  * af4e1965 renderer: simplify renderWorkspaceWindowsFullscreen
+  * e40857fc render/pass: optimize simplification and blur calculations
+  * 4f34bd47 renderer: don't damage decos individually in damageWindow
+  * a151c671 animation: avoid redundant damage calls in tick
+  * 13fec3de render: fix SIGFPE in `addWindowToRenderUnfocused` when
+    `misc:render_unfocused_fps` is 0 (#13973)
+  * 29cf6264 desktop/window: reduce window deco updates (#13980)
+  * 43f7f683 debug-tools: add flame
+  * b898fc1c cmake: add -fno-omit-frame-pointer to debug
+  * 49686f96 miscfunctions: reuse monitor pointer instead of repeated
+    calls (#13977)
+  * a3d262d1 tests: add unit tests for CTagKeeper (#13970)
+  * 2b9696eb renderer: skip redundant render-path work
+  * 4c42269c monitor: centralize solitary and scanout eligibility checks
+  * d5b00bbc scheduler: keep a strong monitor ref in frame callbacks
+  * 0647b544 protocols: avoid repeated per-client work in hot paths
+  * 4c897c2d protocols: prune stale subsurface refs in hot traversals
+  * f25473b2 render: fix layer blur_popups ignoring ignore_alpha when
+    blur is off (#13947)
+  * ad906a47 layout: revert "replace string comparison with ID-based
+    matching in WorkspaceAlgoMatcher (#13943)"
+  * a84e98d2 seat/compositor: fix minor issues (#13958)
+  * b2a29e1b tests: add unit tests for MiscFunctions helpers (#13934)
+  * 90a79dc9 i18n: update Tatar translations (#13930)
+  * febf550a algo/scrolling: add expel, consume, and consume_or_expel
+    (#13869)
+  * 529f7224 layout: replace string comparison with ID-based matching in
+    WorkspaceAlgoMatcher (#13943)
+  * 7fbf8f98 seat: store surface in pointerFocus before sendEnter
+    (#13941)
+  * 36f184ea tests: add unit tests for Math transform utilities (#13935)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Apr 2026 22:18:51 +0200
+
 hyprland-unstable (0.54.0~1ppa1+git202603312146-ccdfa407) noble; urgency=medium
 
   * Update to main ccdfa407
