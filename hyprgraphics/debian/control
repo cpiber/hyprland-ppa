@@ -12,6 +12,8 @@ Build-Depends:
  libpixman-1-dev,
  libcairo2-dev,
  libpango1.0-dev,
+ libgl1-mesa-dev,
+ libdrm-dev,
  libhyprutils-dev,
  libjpeg-dev,
  libwebp-dev,

@@ -1,3 +1,17 @@
+hyprgraphics (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * 482d4b7 version: bump to 0.5.1
+  * 7d63c04 flake.lock: update
+  * b803731 nix: separate overlay with deps
+  * d3d6bf6 treewide: alejandra -> nixfmt
+  * 7c75487 core: fix missing include for span (#43)
+  * 13c5366 egl: add egl formats and helpers (#42)
+  * 583331e feat: add isImageFile() static utility method (#41)
+  * f114ea3 core: add missing #include <span> (#40)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 06 Apr 2026 09:43:14 +0200
+
 hyprgraphics (0.5.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
