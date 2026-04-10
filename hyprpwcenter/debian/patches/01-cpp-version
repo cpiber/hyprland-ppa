@@ -1,0 +1,28 @@
+Index: source/src/pw/PwNode.cpp
+===================================================================
+--- source.orig/src/pw/PwNode.cpp
++++ source/src/pw/PwNode.cpp
+@@ -1,3 +1,4 @@
++#include <cmath>
+ #include "PwNode.hpp"
+ #include "PwState.hpp"
+ #include "../ui/UI.hpp"
+Index: source/src/ui/graph/GraphNode.cpp
+===================================================================
+--- source.orig/src/ui/graph/GraphNode.cpp
++++ source/src/ui/graph/GraphNode.cpp
+@@ -79,10 +79,12 @@ void CGraphNode::update() {
+     for (size_t i = 0; i < m_node->m_ports.size(); ++i) {
+         const auto& p = m_node->m_ports.at(i);
+ 
++        auto x = p->m_channels;
++
+         if (p->m_output)
+-            outputVec.append_range(p->m_channels);
++            outputVec.insert(outputVec.end(), x.cbegin(), x.cend());
+         else
+-            inputVec.append_range(p->m_channels);
++            inputVec.insert(inputVec.end(), x.cbegin(), x.cend());
+     }
+ 
+     size_t      maxRows = std::max(inputVec.size(), outputVec.size());

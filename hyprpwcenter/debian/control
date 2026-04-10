@@ -1,0 +1,28 @@
+Source: hyprpwcenter
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc-14,
+ g++-14,
+ libhyprutils-dev (>= 0.10.2),
+ libhyprtoolkit-dev,
+ libpixman-1-dev,
+ libdrm-dev,
+ libpipewire-0.3-dev,
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/hyprpwcenter
+Vcs-Git: https://github.com/hyprwm/hyprpwcenter.git
+
+Package: hyprpwcenter
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: A GUI Pipewire control center built with hyprtoolkit.
