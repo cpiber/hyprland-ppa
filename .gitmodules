@@ -121,3 +121,6 @@
 [submodule "hyprshutdown/source"]
 	path = hyprshutdown/source
 	url = https://github.com/hyprwm/hyprshutdown.git
+[submodule "hyprlauncher/source"]
+	path = hyprlauncher/source
+	url = https://github.com/hyprwm/hyprlauncher.git

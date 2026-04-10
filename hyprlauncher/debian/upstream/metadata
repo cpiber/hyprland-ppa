@@ -1,0 +1,10 @@
+# Example file for upstream/metadata.
+# See https://wiki.debian.org/UpstreamMetadata for more info/fields.
+# Below an example based on a github project.
+
+Bug-Database: https://github.com/hyprwm/hyprlauncher/issues
+Bug-Submit: https://github.com/hyprwm/hyprlauncher/issues/new
+Changelog: https://github.com/hyprwm/hyprlauncher/blob/master/CHANGES
+Documentation: https://wiki.hypr.land/Hypr-Ecosystem/hyprlauncher/
+Repository-Browse: https://github.com/hyprwm/hyprlauncher
+Repository: https://github.com/hyprwm/hyprlauncher.git

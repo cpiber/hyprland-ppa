@@ -1,0 +1,34 @@
+Source: hyprlauncher
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc-14,
+ g++-14,
+ libhyprlang-dev,
+ libhyprutils-dev (>= 0.10.2),
+ libhyprtoolkit-dev,
+ libhyprwire-dev,
+ libpixman-1-dev,
+ libdrm-dev,
+ libicu-dev,
+ libfontconfig-dev,
+ libqalculate-dev,
+ libpugixml-dev,
+ libxkbcommon-dev,
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/hyprlauncher
+Vcs-Git: https://github.com/hyprwm/hyprlauncher.git
+
+Package: hyprlauncher
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: A multipurpose and versatile launcher / picker
