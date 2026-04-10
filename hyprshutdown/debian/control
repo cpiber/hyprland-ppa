@@ -1,0 +1,30 @@
+Source: hyprshutdown
+Section: utils
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc-14,
+ g++-14,
+ libhyprutils-dev (>= 0.11.0),
+ libhyprtoolkit-dev,
+ libpixman-1-dev,
+ libdrm-dev,
+ libglaze-dev,
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/hyprshutdown
+Vcs-Git: https://github.com/hyprwm/hyprshutdown.git
+
+Package: hyprshutdown
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: A graceful shutdown/logout utility for Hyprland.
+ A graceful shutdown/logout utility for Hyprland, which prevents
+ apps from crashing / dying unexpectedly.

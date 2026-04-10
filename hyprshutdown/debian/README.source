@@ -1,0 +1,4 @@
+hyprshutdown
+-------------------
+
+A graceful shutdown/logout utility for Hyprland, which prevents apps from crashing / dying unexpectedly.
