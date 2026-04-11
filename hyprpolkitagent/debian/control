@@ -32,5 +32,6 @@ Depends:
  qml6-module-qtquick-layouts,
  qml6-module-qtquick-templates,
  qml6-module-qtqml-workerscript,
+ hyprland-qt-support0,
 Description: hyprpolkitagent is a polkit authentication daemon
  It is required for GUI applications to be able to request elevated privileges.
