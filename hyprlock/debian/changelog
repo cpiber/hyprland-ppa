@@ -1,3 +1,37 @@
+hyprlock (0.9.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.4
+  * 824c8b4 version: bump to 0.9.4
+  * ca2aa5e lock-surface: improved handling of egl window and surface
+    creation (#988)
+  * 24c66d1 input-field: allow smaller dots_size (#938)
+  * 4e4f03c core: use Hyprutils::CLI (#977)
+  * 9f9ee0c label: fix alpha rendering (#979)
+  * d6c02b4 label: fix sigusr2 update when reload time is 0 (#978)
+  * e1dca57 input-field: add `check_text` option (#959)
+  * 768ade8 pam: get username once (#974)
+  * d7079a1 version: bump to 0.9.3
+  * 512e71d flake.lock: update
+  * 4db980a nix: separate overlay with deps
+  * 38a3142 treewide: alejandra -> nixfmt
+  * 5ba5ff5 background: run reload_cmd in configure if path is empty
+    (#950)
+  * b3a1076 core: fix use-after-free segfault in async resource widget
+    callbacks (#961)
+  * ef3017f nix: remove sdbus-cpp overlay
+  * d099f87 pam: prevent nullpointer crash when user passwd isn't found
+    (#928)
+  * e2da7c6 animation: migrate PHLANIMVAR from SP to UP (#920)
+  * 98b8675 background: reload screenshot if reload_cmd specified (#903)
+  * 36ec73f cmake: add "libpam" as an alias for "pam" (#893)
+  * bdc44ab flake.lock: update (#890)
+  * de2cc5b core: migrate to Hyprutils::CAsyncResourceGatherer and
+    improve resource handling (#879)
+  * c8a6768 misc: remove hyprland-protocols from README (#887)
+  * 3cb799b core: nvidia workaround destroy renderer before EGL (#884)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 15 Apr 2026 22:27:56 +0200
+
 hyprlock (0.9.2-1ppa8) noble; urgency=medium
 
   * Rebuild for dependencies
