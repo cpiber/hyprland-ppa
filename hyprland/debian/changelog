@@ -1,3 +1,37 @@
+hyprland-unstable (0.54.0~1ppa1+git202604152229-88f3e7e9) noble; urgency=medium
+
+  * Update to main 88f3e7e9
+  * 88f3e7e9 monitor: ensure swapchain is updated before mode test
+    (#14065)
+  * e539d211 config: fix safe mode config generation (#14024)
+  * 933a24ca screencopy: clear buffer before rendering (#14064)
+  * 814337fd keybinds: fix wrong space assignment in pin (#14061)
+  * d67c4e2b layout/algo: preserve focused target if applicable on
+    layout switches (#14058)
+  * 24b121c7 cleanup: avoid repeated weak_ptr lock() calls in conditions
+    (#14057)
+  * fe369dd9 input: fix focus_on_close=2 (MRU) routing to cursor path
+    instead of getNextCandidate (#13969)
+  * 3830200c clang-tidy: fix duplicate entry in .clang-tidy (#14045)
+  * 3649c186 hyprctl: fix lib64 pkgconfig for version-checking (#14051)
+  * dbc07064 compositor: fix floating input/visual z-order desync after
+    fullscreen (#14015)
+  * f7755322 input: avoid repeated weak_ptr::lock() and ensure
+    consistent usage (#14039)
+  * fb46d16f rules: make rule prop reset less cursed (#14003)
+  * aa8cea66 renderer: extract window skip conditions into named
+    booleans (#14005)
+  * 75dc67e6 input: lazy cache getWindowIdeal()
+  * ec8c336e decoration/border: simplify damage callback
+  * a1c8c2f1 pass/surface: cache texBox
+  * 0448e707 desktop/popup: cache tree count
+  * 8a97b11b desktop/popup: cache popup extents
+  * 10c8a863 config: move misc:vfr to debug: (#14021)
+  * b6e9c930 [gha] Nix: update inputs
+  * 559d7be4 build: bump hyprgraphics to 0.5.1 (#14013)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 15 Apr 2026 22:29:07 +0200
+
 hyprland-unstable (0.54.0~1ppa1+git202604052218-aaa2fc34) noble; urgency=medium
 
   * Update to main aaa2fc34
