@@ -1,3 +1,10 @@
+hy3 (0.54.2.1~1ppa1+git202604152229-76010d9) noble; urgency=medium
+
+  * Update to master 76010d9
+  * 76010d9 fixup: chase upstream config+render changes
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 15 Apr 2026 22:29:35 +0200
+
 hy3 (0.54.2.1~1ppa1+git202603312148-0432347build1) noble; urgency=medium
 
   * Rebuild for unstable
