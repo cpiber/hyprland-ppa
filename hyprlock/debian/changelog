@@ -1,3 +1,17 @@
+hyprlock (0.9.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.5
+  * d75e93f version: bump to 0.9.5
+  * 64ad702 input-field: fix placeholder not updating correctly (#995)
+  * 78c1d26 core: don't register dmabuf when screencopy is not required
+    (#992)
+  * a466de1 core: eglReleaseThread when no outputs and egl error logging
+    (#994)
+  * 67b3029 CI: use org-wide actions
+  * 34532cb animation: copy active animations for save iteration
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Apr 2026 12:02:06 +0200
+
 hyprlock (0.9.4-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.4
