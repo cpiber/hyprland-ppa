@@ -1,0 +1,27 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -9,7 +9,7 @@ project(hsi VERSION ${VER} LANGUAGES CXX
+ set(CMAKE_CXX_STANDARD 23)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ 
+-find_package(Qt6 6.4 REQUIRED COMPONENTS Widgets Quick QuickControls2 WaylandClient)
++find_package(Qt6 6.4 REQUIRED COMPONENTS Widgets Quick QuickControls2 WaylandClient WaylandClientPrivate)
+ find_package(PkgConfig REQUIRED)
+ 
+ pkg_check_modules(hyprutils REQUIRED IMPORTED_TARGET hyprutils)
+Index: source/src/WaylandScreen.cpp
+===================================================================
+--- source.orig/src/WaylandScreen.cpp
++++ source/src/WaylandScreen.cpp
+@@ -24,8 +24,7 @@ class CWaylandScreen : public QtWayland:
+ };
+ 
+ std::vector<SWaylandScreenInfo> SWaylandScreenInfo::enumerateScreens() {
+-    static QWaylandIntegration*  inst = new QWaylandIntegration();
+-    auto*                        display = inst->display();
++    auto*                        display = QWaylandIntegration::instance()->display();
+ 
+     std::vector<CWaylandScreen*> screens;
+     for (const auto& global : display->globals()) {
