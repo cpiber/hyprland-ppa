@@ -2,7 +2,7 @@
 
 This repository contains the `debian/` files for my PPA.
 These files detail the recipe for building a .deb package.
-Currently these work for Ubuntu 24.04 Noble and 25.10 Questing.
+Currently these work for Ubuntu 24.04 Noble, 25.10 Questing and 26.04 Resolute.
 
 Published packages are available here: https://launchpad.net/~cppiber/+archive/ubuntu/hyprland
 
