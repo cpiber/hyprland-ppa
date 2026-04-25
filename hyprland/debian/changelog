@@ -1,3 +1,39 @@
+hyprland-unstable (0.54.0~1ppa1+git202604251323-e3c9b648) noble; urgency=medium
+
+  * Update to main e3c9b648
+  * e3c9b648 opengl/shadow: fix shadow offset rendering (#14156)
+  * b65714e3 opengl: minor egl changes (#14147)
+  * 300cdb7c workspace: fix missing null access guard (#14119)
+  * d4dd299d tests: stabilize CI by relaxing env-dependent checks and
+    timing-sensitive assertions (#14142)
+  * 019dac7a [gha] Nix: update inputs
+  * c9b551f5 xwayland: handle transient read errors in selection
+    transfer (#14135)
+  * 73f48077 keybinds: fix missing z-order update on floating toggle
+    (#14100)
+  * e12d2b7c input: implement follow_mouse_shrink (#13707)
+  * a360c31d errorOverlay: modernize, refactor, use GPU rendering
+    (#14122)
+  * 889ee4f2 hyprctl: add hw cursor flag
+  * d50ad247 renderer: simplify shadows (#14047)
+  * 593fd565 protocols/compositor: fix presentFeedback being blocked
+  * 78f09183 algo/scroll: add center for centering the current col
+    (#14059)
+  * f75a14d1 CI/Nix: use org-wide actions
+  * b5ea887f debug/overlay: optimize rendering, cleanup and nicetify
+    (#14097)
+  * 66ea2e2c renderer: Various CM fixes, part 8 of refactors (#13860)
+  * 4cce7f60 notifications: move and small refactor (#14094)
+  * ff459f4a groups: fix `movewindoworgroup` when moving from group to
+    group (#14086)
+  * 1ea0a436 monocle: avoid repeated workspace monitor lock() calls
+    (#14085)
+  * ed349e84 notifications: optimize rendering (#14088)
+  * e6c5040f init: drop CAP_SYS_NICE from ambient set after gaining
+    SCHED_RR (#14082)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Apr 2026 13:23:20 +0200
+
 hyprland-unstable (0.54.0~1ppa1+git202604152229-88f3e7e9) noble; urgency=medium
 
   * Update to main 88f3e7e9
