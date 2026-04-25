@@ -13,6 +13,7 @@ Build-Depends:
  libhyprutils-dev (>= 0.10.2),
  libhyprtoolkit-dev,
  libhyprwire-dev,
+ hyprwire-scanner | hello,
  libpixman-1-dev,
  libdrm-dev,
  libicu-dev,

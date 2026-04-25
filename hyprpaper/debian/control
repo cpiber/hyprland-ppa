@@ -20,6 +20,7 @@ Build-Depends:
  hyprwayland-scanner (>= 0.4.0),
  libhyprtoolkit-dev (>= 0.4.1),
  libhyprwire-dev,
+ hyprwire-scanner | hello,
  libpixman-1-dev,
  libdrm-dev,
 Standards-Version: 4.6.2

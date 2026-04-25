@@ -40,6 +40,7 @@ Build-Depends:
  libhyprgraphics-dev (>= 0.1.6),
  libaquamarine-dev (>= 0.9.3),
  libhyprwire-dev,
+ hyprwire-scanner | hello,
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),
  hyprland-protocols (>= 0.6.4),
