@@ -1,3 +1,18 @@
+hyprland-plugins (0.53.0~1ppa1+git202604251323-6acc073build1) noble; urgency=medium
+
+  * Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Apr 2026 13:25:02 +0200
+
+hyprland-plugins (0.53.0~1ppa1+git202604251323-6acc073) noble; urgency=medium
+
+  * Update to main 6acc073
+  * 6acc073 bars: Update README.md with new windowrule block syntax
+    (#642)
+  * 6059aca CI: use org-wide actions
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Apr 2026 13:23:34 +0200
+
 hyprland-plugins (0.53.0~1ppa1+git202604152229-3e38db9) noble; urgency=medium
 
   * Update to main 3e38db9
