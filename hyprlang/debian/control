@@ -7,8 +7,8 @@ Build-Depends:
  debhelper-compat (= 13),
  cmake,
  pkgconf,
- gcc-14,
- g++-14,
+ gcc,
+ g++,
  libhyprutils-dev (>= 0.7.1),
 Standards-Version: 4.6.2
 Homepage: https://hypr.land/hyprlang

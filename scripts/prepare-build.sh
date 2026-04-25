@@ -25,5 +25,7 @@ if [ $# -gt 0 ] && [ "$1" != "" ] && [ "$1" != "--" ]; then
     sed -i '/^01-patch-cms$/d' "$buildfolder/debian/patches/series" || :
   fi
   [ -f "$reporoot/$project/$1.sh" ] && . "$reporoot/$project/$1.sh" || :
+else
+  [ -f "$reporoot/$project/noble.sh" ] && . "$reporoot/$project/noble.sh" || :
 fi
 [ -f "$reporoot/$project/prepare.sh" ] && . "$reporoot/$project/prepare.sh" || :
