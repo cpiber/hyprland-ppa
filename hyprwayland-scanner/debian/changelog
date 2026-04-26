@@ -1,3 +1,17 @@
+hyprwayland-scanner (0.4.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.6
+  * b863271 version: bump to 0.4.6
+  * fec9cf1 scanner: fix types table size for untyped new_id args (#23)
+  * 4c2fcc0 CI: use org-wide actions
+  * 0a692d4 treewide: alejandra -> nixfmt
+  * c4292b0 nix: separate overlay into file
+  * 0bd8b6c core: use rvalue refs and move std::functions (#22)
+  * f6cf414 cmake: add OpenBSD support (no librt) (#21)
+  * b3b0f1f source: Generate protocol specific dummy_type names (#20)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:31:58 +0200
+
 hyprwayland-scanner (0.4.5-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.5
