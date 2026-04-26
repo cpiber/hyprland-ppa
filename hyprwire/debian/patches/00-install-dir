@@ -1,0 +1,34 @@
+From: Chow Loong Jin <hyperair@debian.org>
+Date: Mon, 1 Dec 2025 17:42:32 +0800
+Subject: Install cmake and pc files to CMAKE_INSTALL_DATADIR instead
+
+This is needed to make hyprwire-scanner a multi-arch foreign package.
+
+Forwarded: not-needed
+---
+ scanner/CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/scanner/CMakeLists.txt b/scanner/CMakeLists.txt
+index 7dc5729..5245c0a 100644
+--- a/scanner/CMakeLists.txt
++++ b/scanner/CMakeLists.txt
+@@ -44,7 +44,7 @@ target_include_directories(hyprwire-scanner
+ 
+ configure_package_config_file(
+   hyprwire-scanner-config.cmake.in hyprwire-scanner-config.cmake
+-  INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/hyprwire-scanner"
++  INSTALL_DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/hyprwire-scanner"
+   PATH_VARS CMAKE_INSTALL_BINDIR)
+ write_basic_package_version_file(
+   "hyprwire-scanner-config-version.cmake"
+@@ -54,7 +54,7 @@ write_basic_package_version_file(
+ # Installation
+ install(TARGETS hyprwire-scanner)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/hyprwire-scanner.pc
+-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
++        DESTINATION ${CMAKE_INSTALL_DATADIR}/pkgconfig)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/hyprwire-scanner-config.cmake
+               ${CMAKE_CURRENT_BINARY_DIR}/hyprwire-scanner-config-version.cmake
+-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/hyprwire-scanner)
++        DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/hyprwire-scanner)

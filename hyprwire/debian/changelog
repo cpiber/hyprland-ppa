@@ -1,3 +1,9 @@
+hyprwire (0.3.1-1ppa2) noble; urgency=medium
+
+  * Split scanner into separate package
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 10:26:44 +0200
+
 hyprwire (0.3.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.3.1

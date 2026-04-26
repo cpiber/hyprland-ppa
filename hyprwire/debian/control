@@ -42,3 +42,16 @@ Depends:
 Description: A fast and consistent wire protocol for IPC
  Hyprwire is a fast and consistent wire protocol, and its implementation.
  This is essentially a "method" for processes to talk to each other.
+
+Package: hyprwire-scanner
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libpugixml1v5,
+Description: A fast and consistent wire protocol for IPC
+ Hyprwire is a fast and consistent wire protocol, and its implementation.
+ This is essentially a "method" for processes to talk to each other.
+ This package includes the scanner for generating implementations from
+ protocol definitions.
