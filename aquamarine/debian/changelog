@@ -1,3 +1,61 @@
+aquamarine (0.11.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.0
+  * cd8321e version: bump to 0.11.0
+  * 648a13d headless: hold ref in next frame timer
+  * b3ea868 headless: verify fn is valid before calling
+  * 9a1ca6b internal: avoid repeated vector access in backend and DRM
+    loops (#281)
+  * d5ab4fd CI: use org-wide actions
+  * 981132c libinput: method to get `libinput_tablet_tool` from
+    ITabletTool (#278)
+  * 24f1db3 drm: guard logging in connector disconnect to avoid null
+    dereference (#274)
+  * 1d50986 backend: handle unhandled libinput switch enum with default
+    case (#273)
+  * 7371b66 backend: include algorithm header (#269)
+  * e926559 drm: revert "reduce duplicated code in render creation
+    (#247)"
+  * f62a4db backend/drm: fix multi-GPU buffer import failure during
+    restoreAfterVT (#263)
+  * d67142c backend/headless: Improve and optimize timer FD logic (#258)
+  * 8ed71bb drm: revert "fallback to first render node for non-standard
+    buses (#237)"
+  * 43f10d2 drm: re-send ctm blob on modeset (#256)
+  * 023eed5 README: drop todo list
+  * b903964 backend/headless: implement FPS caps for headless outputs
+  * 5d2cb72 flake.lock: update
+  * 0aba524 nix: separate overlay with deps
+  * 2549656 treewide: alejandra -> nixfmt
+  * 1dbbba6 drm: fallback to first render node for non-standard buses
+    (#237)
+  * 1aa8490 drm/renderer: glFlush when clearing buffers (#252)
+  * 7f9eb08 output: add a pendingPageFlips() method (#251)
+  * ed26bdb drm: reduce duplicated code in render creation (#247)
+  * 6d02092 drm: re-send HDR metadata blob on modeset (#250)
+  * 8a0eb4f drm/renderer: split input and output buffer attachments
+    (#249)
+  * 603f5cd drm: make pageflips drive the frames (#241)
+  * a494d50 backend: fix use-after-free of logger during teardown (#244)
+  * b2f6c1a drm: keep secondary renderers alive only when they're needed
+    (#239)
+  * b91f570 drm: ignore redundant tiled display connectors (#238)
+  * 35fa4a9 drm: use parent device matching for render nodes (#235)
+  * 2455556 drm: minor AMS fixes (#229)
+  * af4c6fe renderer: set EGL_CONTEXT_RELEASE_BEHAVIOR_KHR if supported
+    (#234)
+  * def5e74 backend: read idle timer (#233)
+  * 534c88e drm/formats: add drmModifierToName and print names (#230)
+  * b8a0c5b libinput: fix pad groups not being ref'd (#227)
+  * 96b53bc output: fix degammalut typo (#226)
+  * d83c97f drm: remove an unnecessary reset after VT switching (#223)
+  * c6354f5 drm: convert vd path before compare with explicit device
+    path (#222)
+  * a43bedc backend: move logger to backend
+  * 561ae7f backend: add freeDrmDevice on error in initDmabuf (#221)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:17:55 +0200
+
 aquamarine (0.10.0-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
