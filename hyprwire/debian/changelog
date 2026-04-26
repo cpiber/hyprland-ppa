@@ -1,3 +1,28 @@
+hyprwire (0.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.1
+  * 3e6865c version: bump to 0.3.1
+  * f3a8088 cmakelists: don't build tests in release
+  * 62cd80b serverObject: call onDestroy on objects if the client dies
+  * a280079 scanner: hold strong refs for objects
+  * 26168d6 clientSocket: add trace removal log
+  * 02a2e7b CI: don't run twice for non-fork PRs
+  * c816f4f CI: use org-wide actions
+  * 3645706 tests: add unit tests (#22)
+  * 86012ee all: run clang-format
+  * c9e22f5 genericMessage: limit array size to 10k
+  * 78e2740 message: limit array sizes for static messages
+  * ad60124 messageParser: avoid underflow
+  * f68afd0 internal: include <cstring> for strcopy() (#19)
+  * 4e1933a flake.lock: update
+  * 272e404 nix: separate overlay with deps
+  * c9b4d3b treewide: alejandra -> nixfmt
+  * 06c7f1f macros: fix typo (#18)
+  * af2fb7d GenericProtocolMessage: write full object id in resolveSeq
+    (#17)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:30:15 +0200
+
 hyprwire (0.3.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

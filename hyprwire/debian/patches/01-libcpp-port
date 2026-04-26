@@ -26,8 +26,8 @@ Index: source/src/core/message/messages/FatalProtocolError.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/FatalProtocolError.cpp
 +++ source/src/core/message/messages/FatalProtocolError.cpp
-@@ -61,7 +61,10 @@ CFatalErrorMessage::CFatalErrorMessage(S
-         std::memcpy(&m_data[2], &obj->m_id, sizeof(obj->m_id));
+@@ -68,7 +68,10 @@ CFatalErrorMessage::CFatalErrorMessage(u
+     std::memcpy(&m_data[2], &objectId, sizeof(objectId));
      std::memcpy(&m_data[7], &errorId, sizeof(errorId));
  
 -    m_data.append_range(g_messageParser->encodeVarInt(msg.size()));
@@ -43,7 +43,7 @@ Index: source/src/core/message/messages/HandshakeBegin.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/HandshakeBegin.cpp
 +++ source/src/core/message/messages/HandshakeBegin.cpp
-@@ -58,7 +58,10 @@ CHandshakeBeginMessage::CHandshakeBeginM
+@@ -62,7 +62,10 @@ CHandshakeBeginMessage::CHandshakeBeginM
          HW_MESSAGE_MAGIC_TYPE_UINT,
      };
  
@@ -59,7 +59,7 @@ Index: source/src/core/message/messages/HandshakeProtocols.cpp
 ===================================================================
 --- source.orig/src/core/message/messages/HandshakeProtocols.cpp
 +++ source/src/core/message/messages/HandshakeProtocols.cpp
-@@ -57,11 +57,17 @@ CHandshakeProtocolsMessage::CHandshakePr
+@@ -61,11 +61,17 @@ CHandshakeProtocolsMessage::CHandshakePr
          HW_MESSAGE_MAGIC_TYPE_VARCHAR,
      };
  
@@ -84,7 +84,7 @@ Index: source/src/core/wireObject/IWireObject.cpp
 ===================================================================
 --- source.orig/src/core/wireObject/IWireObject.cpp
 +++ source/src/core/wireObject/IWireObject.cpp
-@@ -118,8 +118,14 @@ uint32_t IWireObject::call(uint32_t id,
+@@ -146,8 +146,14 @@ uint32_t IWireObject::call(uint32_t id,
              case HW_MESSAGE_MAGIC_TYPE_VARCHAR: {
                  data.emplace_back(HW_MESSAGE_MAGIC_TYPE_VARCHAR);
                  auto str = va_arg(va, const char*);
@@ -101,7 +101,7 @@ Index: source/src/core/wireObject/IWireObject.cpp
                  break;
              }
  
-@@ -130,7 +136,10 @@ uint32_t IWireObject::call(uint32_t id,
+@@ -158,7 +164,10 @@ uint32_t IWireObject::call(uint32_t id,
  
                  auto arrayData = va_arg(va, void*);
                  auto arrayLen  = va_arg(va, uint32_t);
@@ -113,7 +113,7 @@ Index: source/src/core/wireObject/IWireObject.cpp
  
                  switch (arrType) {
                      case HW_MESSAGE_MAGIC_TYPE_UINT:
-@@ -153,8 +162,14 @@ uint32_t IWireObject::call(uint32_t id,
+@@ -181,8 +190,14 @@ uint32_t IWireObject::call(uint32_t id,
                      case HW_MESSAGE_MAGIC_TYPE_VARCHAR: {
                          for (size_t i = 0; i < arrayLen; ++i) {
                              const char* element = rc<const char**>(arrayData)[i];
@@ -130,7 +130,7 @@ Index: source/src/core/wireObject/IWireObject.cpp
                          }
                          break;
                      }
-@@ -233,7 +248,10 @@ void IWireObject::called(uint32_t id, co
+@@ -264,7 +279,10 @@ void IWireObject::called(uint32_t id, co
      if (!method.returnsType.empty())
          params.emplace_back(HW_MESSAGE_MAGIC_TYPE_SEQ);
  
@@ -146,7 +146,7 @@ Index: source/src/core/socket/SocketHelpers.cpp
 ===================================================================
 --- source.orig/src/core/socket/SocketHelpers.cpp
 +++ source/src/core/socket/SocketHelpers.cpp
-@@ -42,7 +42,10 @@ SSocketRawParsedMessage Hyprwire::parseF
+@@ -43,7 +43,10 @@ SSocketRawParsedMessage Hyprwire::parseF
          if (sizeWritten < 0)
              return {.bad = true};
  
