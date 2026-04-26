@@ -1,3 +1,31 @@
+hyprlauncher (0.1.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.6
+  * c682906 version: bump to 0.1.6
+  * e03696b serverSocket: handle destroy events
+  * 5b4c14e CI: use org-wide actions
+  * 3c087c9 finders/desktop: add terminal config option (#133)
+  * 114828a flake.lock: update
+  * 5ee0799 nix: separate overlay with deps
+  * 848c858 treewide: alejandra -> nixfmt
+  * 3b42394 query: reset entries on empty query
+  * 9d8cba1 ui: reset results on window open
+  * f4d7cc1 fuzzy: improve search accuracy
+  * a08bd9b i18n: standardize Chinese locale codes to zh_CN and zh_TW
+    (#127)
+  * bb52cb2 help: add documentation for toggle (#121)
+  * 47b8995 internal: compiler fix for rawhide gcc (#125)
+  * e38425e ui: get rounding radii from hyprtoolkit (#113) (#124)
+  * d628620 ui: allow numpad enter to select application (#122)
+  * acad922 nix: add devshell to flake
+  * 4a7f09d flake.lock: update
+  * 964950e core: toggle when already running instead of just opening it
+    (#42)
+  * 58ee5bd ui: fix default font usage
+  * 5fc5735 core: add missing #include <unistd.h> (#114)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:23:54 +0200
+
 hyprlauncher (0.1.5-1ppa1) noble; urgency=medium
 
   * Initial release
