@@ -1,0 +1,30 @@
+Index: source/CMakeLists.txt
+===================================================================
+--- source.orig/CMakeLists.txt
++++ source/CMakeLists.txt
+@@ -62,6 +62,11 @@ else()
+   message(STATUS "Configuring hyprsysteminfo in Release")
+ endif()
+ 
++execute_process(COMMAND xxd -i
++                INPUT_FILE ./resource/hyprlandlogo.svg
++                OUTPUT_FILE ./src/icons/hyprlandlogo.hpp
++                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
++
+ file(GLOB_RECURSE SRCFILES CONFIGURE_DEPENDS "src/*.cpp" "include/*.hpp")
+ 
+ add_executable(hyprsysteminfo ${SRCFILES})
+Index: source/src/icons/Icons.hpp
+===================================================================
+--- source.orig/src/icons/Icons.hpp
++++ source/src/icons/Icons.hpp
+@@ -4,6 +4,6 @@
+ 
+ namespace Icons {
+     inline constexpr uint8_t HYPRLAND_LOGO[] = {
+-#embed "../../resource/hyprlandlogo.svg"
++#include "hyprlandlogo.hpp"
+     };
+-};
+\ No newline at end of file
++};

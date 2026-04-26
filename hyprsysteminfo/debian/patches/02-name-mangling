@@ -1,0 +1,14 @@
+Index: source/src/utils/SystemInfo.cpp
+===================================================================
+--- source.orig/src/utils/SystemInfo.cpp
++++ source/src/utils/SystemInfo.cpp
+@@ -20,7 +20,9 @@
+ #include <linux/sysinfo.h>
+ #include <unistd.h>
+ #include <glob.h>
++extern "C" {
+ #include <pci/pci.h>
++}
+ 
+ using namespace Hyprutils::File;
+ using namespace Hyprutils::String;
