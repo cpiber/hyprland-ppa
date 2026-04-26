@@ -1,3 +1,9 @@
+hyprtoolkit (0.5.3-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:18:52 +0200
+
 hyprtoolkit (0.5.3-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
