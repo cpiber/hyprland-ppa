@@ -1,3 +1,21 @@
+xdg-desktop-portal-hyprland (1.3.12-1ppa1) noble; urgency=medium
+
+  * Update to release 1.3.12
+  * 01e13c0 version: bump to 1.3.12
+  * ecfcdcc screencopy: fix invalid usage of sc flags
+  * 4a29352 portals: Add missing buffer data flags
+    SPA_DATA_FLAG_READABLE and SPA_DATA_FLAG_MAPPABLE. (#391)
+  * 359cc54 CI: use org-wide actions
+  * a9b862d screencopy: save and restore geometry for region sharing
+    (#383)
+  * 906d0ac screencopy: add DMA-BUF to SHM fallback (#379)
+  * eb6c02a flake.lock: update
+  * e75a2f1 nix: separate overlay with deps
+  * 3018caf treewide: alejandra -> nixfmt
+  * 4b88012 screencopy: fix cursor handling (#366)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 10:20:02 +0200
+
 xdg-desktop-portal-hyprland (1.3.11-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
