@@ -1,3 +1,15 @@
+hyprutils (0.13.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.13.0
+  * ec5c0c7 version: bump to 0.13.0
+  * ee9ef3d math: CBox::overlaps should not count adjacent boxes (#108)
+  * fe6183f animations: add spring controlled curves (#105)
+  * afb9009 process: handle execvp failure in runAsync (#107)
+  * fa3992b process: free argv allocations on execvp failure (#106)
+  * eedd608 CI: use org-wide actions
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:04 +0200
+
 hyprutils (0.12.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.12.0
