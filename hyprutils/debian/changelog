@@ -1,3 +1,9 @@
+hyprutils (0.13.0-1ppa2) noble; urgency=medium
+
+  * Fix build on questing & resolute
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:16:45 +0200
+
 hyprutils (0.13.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.13.0
