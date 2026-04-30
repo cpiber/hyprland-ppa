@@ -1,3 +1,20 @@
+hyprpaper (0.8.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.4
+  * 20fc0fa version: bump to 0.8.4
+  * 14a5fd9 CI: use org-wide actions
+  * 0ca403a config/ui: add random-shuffle slideshow order (#352)
+  * 51e497d config: add opt-in recursive wallpaper directory scan (#349)
+  * 5f27683 flake.lock: update
+  * be903de nix: separate overlay with deps
+  * 275ebf0 treewide: alejandra -> nixfmt
+  * 238abb5 config: add ability to randomize sort order (#336)
+  * a67b9ed nix: drop xorg package set
+  * 9df6ba9 protocol/IPC: add a status object (#313)
+  * 2ea222e matcher: fix stale state id (#335)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 Apr 2026 07:46:05 +0200
+
 hyprpaper (0.8.3-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
