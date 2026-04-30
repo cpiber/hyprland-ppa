@@ -1,3 +1,9 @@
+hyprpwcenter (0.1.2-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:57 +0200
+
 hyprpwcenter (0.1.2-1ppa1) noble; urgency=medium
 
   * Initial release

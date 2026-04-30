@@ -1,3 +1,9 @@
+hyprwire (0.3.1-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:57 +0200
+
 hyprwire (0.3.1-1ppa2) noble; urgency=medium
 
   * Split scanner into separate package

@@ -1,3 +1,9 @@
+hyprshutdown (0.1.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:57 +0200
+
 hyprshutdown (0.1.0-1ppa1) noble; urgency=medium
 
   * Initial release
