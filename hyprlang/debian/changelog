@@ -1,3 +1,9 @@
+hyprlang (0.6.8-3ppa1) noble; urgency=medium
+
+  * Bump build number to prefer over resolute's package
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 Apr 2026 20:37:21 +0200
+
 hyprlang (0.6.8-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
