@@ -1,3 +1,43 @@
+hyprtoolkit (0.5.4-1ppa2) noble; urgency=medium
+
+  * Update to release 0.5.4
+  * 795d06e version: bump to 0.5.4
+  * 1068a49 internal: fix include for NAME_MAX climits->linux/limits.h
+    (#65)
+  * a26ec16 element/text: lock weak ref in async listener (#55)
+  * 6d7b3fb renderer/gl: capture weak self in async texture upload (#53)
+  * e3c6735 element/layouts: fix shrink underflow, dedup row/column, add
+    tests (#52)
+  * 7808abf element/slider: count digits correctly in maxLabelSize (#54)
+  * bdc1056 palette/config: log expected path when no config file is
+    found (#56)
+  * 84e2257 core/backend: defer destroy to atexit, fix shutdown UAF
+    (#37) (#51)
+  * 2f6b90f window/popup: log unsupported nested popup attempts (#58)
+  * 6c5b8a1 element/text: attach async completion listener before
+    enqueueing (#48)
+  * ba29ceb CI: use org-wide actions
+  * 9af245a flake.lock: update
+  * f25ef5b nix: separate overlay with deps
+  * 1830bb8 treewide: alejandra -> nixfmt
+  * 8e5ed86 element/inputbox: fix carriage return creating a new line
+    (#47)
+  * 971951a system/icons: improve inherits, allow png icons, fixup
+    pathing, add caching (#45)
+  * a017877 backend: fix synchronization issues
+  * c56165c element/textbox: handle up and down arrows
+  * b6df633 element/textbox: fix multiline selection boxes
+  * 717ea31 element/textbox: fix missing scale in focusCursor
+  * 2f8e479 element/textbox: fix cursor sizing on multiline
+  * e0e9bbe element/textbox: don't VCENTER on multiline textboxes
+  * 37d9217 element/image: error when image exceeds max resolution (#40)
+  * 2944c4b renderer: fix undefined behavior in cover and tile mode
+    causing horizontal pixels (#42)
+  * 3d7ad51 backend: hold ref for fn
+  * 7c41a27 internal: fix build with rawhide g++. (#39)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 02 May 2026 22:16:00 +0200
+
 hyprtoolkit (0.5.3-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies

@@ -1,0 +1,25 @@
+Index: source/src/system/Icons.cpp
+===================================================================
+--- source.orig/src/system/Icons.cpp
++++ source/src/system/Icons.cpp
+@@ -16,6 +16,20 @@ extern "C" {
+ #include "iniparser/iniparser.h"
+ }
+ 
++template <>
++struct std::formatter<std::vector<std::string>> : formatter<std::string>
++{
++    auto format(const std::vector<std::string> v, format_context& ctx) const
++    {
++        auto&& out= ctx.out();
++        if (v.size() > 0)
++            format_to(out, "{}", v[0]);
++        for (size_t i = 1; i < v.size(); ++i)
++            format_to(out, ";{}", v[i]);
++        return format_to(out, "");
++    }
++};
++
+ using namespace Hyprtoolkit;
+ using namespace Hyprutils::String;
+ using namespace Hyprutils::Utils;
