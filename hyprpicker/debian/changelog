@@ -1,3 +1,21 @@
+hyprpicker (0.4.7-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.7
+  * 8c163ce version: bump to 0.4.7
+  * 69474aa internal: clean up files on SIGTERM (#155)
+  * 847edae Input: include cursor in frozen preview (#156)
+  * 90dc13b CI: use org-wide actions
+  * 75f730c internal: include <charconv> for musl builds (#150)
+  * 2558659 Input: Made Scroll Zooming More Natural (#149)
+  * 7ba3edd flake.lock: update
+  * 19fcc86 nix: separate overlay with deps
+  * 467c3d8 treewide: alejandra -> nixfmt
+  * dd4d7b8 nix: drop xorg package set
+  * 089dd8a core: Include <mutex> to make pickier compilers happy.
+    (#148)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 05 May 2026 22:50:31 +0200
+
 hyprpicker (0.4.6-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
