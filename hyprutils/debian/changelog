@@ -1,3 +1,11 @@
+hyprutils (0.13.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.13.1
+  * a2dbd8a version: bump to 0.13.1
+  * 3e170e5 path: add function overloads with extension param (#109)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 08 May 2026 16:43:36 +0200
+
 hyprutils (0.13.0-1ppa2) noble; urgency=medium
 
   * Fix build on questing & resolute
