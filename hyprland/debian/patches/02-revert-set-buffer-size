@@ -7,7 +7,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -217,7 +217,7 @@ configure_file(
+@@ -220,7 +220,7 @@ configure_file(
  set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
  
  set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
@@ -20,7 +20,7 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -318,7 +318,7 @@ void CCompositor::initServer(std::string
+@@ -303,7 +303,7 @@ void CCompositor::initServer(std::string
      Log::logger->initCallbacks();
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
@@ -33,7 +33,7 @@ Index: source/src/managers/ProtocolManager.cpp
 ===================================================================
 --- source.orig/src/managers/ProtocolManager.cpp
 +++ source/src/managers/ProtocolManager.cpp
-@@ -144,7 +144,7 @@ CProtocolManager::CProtocolManager() {
+@@ -145,7 +145,7 @@ CProtocolManager::CProtocolManager() {
      PROTO::data          = makeUnique<CWLDataDeviceProtocol>(&wl_data_device_manager_interface, 3, "WLDataDevice");
      PROTO::compositor    = makeUnique<CWLCompositorProtocol>(&wl_compositor_interface, 6, "WLCompositor");
      PROTO::subcompositor = makeUnique<CWLSubcompositorProtocol>(&wl_subcompositor_interface, 1, "WLSubcompositor");
@@ -46,7 +46,7 @@ Index: source/src/protocols/core/Shm.cpp
 ===================================================================
 --- source.orig/src/protocols/core/Shm.cpp
 +++ source/src/protocols/core/Shm.cpp
-@@ -174,7 +174,6 @@ CWLSHMResource::CWLSHMResource(UP<CWlShm
+@@ -177,7 +177,6 @@ CWLSHMResource::CWLSHMResource(UP<CWlShm
      if UNLIKELY (!good())
          return;
  

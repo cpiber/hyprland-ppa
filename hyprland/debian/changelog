@@ -1,3 +1,176 @@
+hyprland-unstable (0.55.0~1ppa1+git202605091629-af923e30) noble; urgency=medium
+
+  * Update to main af923e30
+  * af923e30 version: bump to 0.55.0
+  * 74d4c537 desktop/rule: recheck eating the applied rule (#14362)
+  * 6df053b7 renderer: fix decoration colors with linear FP16 (#14361)
+  * 11bd00cd input: fix touch monitor focus ordering (#14310)
+  * 09d13d38 gitignore: ignore pointer scroll test artifact
+  * ed2cb532 input: keep pointer focus on layer surfaces during keyboard
+    refocus (#14018)
+  * 07a086af renderer: handle HDR -> SDR with cm_auto_hdr (#14102)
+  * 8b78de5d compositor: recalculate workspace state after fs state
+    update (#14369)
+  * 1a164704 keybind/actions: `cycle_next` w/ `tiled = true` doesn't
+    choose only tiled windows (#14164)
+  * 54426893 build: bump hyprutils to 0.13.1 (#14365)
+  * bd7f6953 algo/scrolling: various scrolling view related bugfixes
+    (#13974)
+  * ac75bcab renderer: fix shadow CM calculations (#14364)
+  * b94f1498 config: allow hashes for parsing colors (#14337)
+  * a6a0cc30 desktop/workspace: fix visibility criteria matching
+    (#14349)
+  * 91eb3898 layout/scrolling: fix edge detection in recalculate()
+    (#14359)
+  * de9f8dc9 cmake: fix permissions for directories by default
+  * fe76c536 repo: ignore the autogen file `meta/hl.meta.lua` (#14336)
+  * 6c229672 config: always call refresh after config reload (#14346)
+  * f61ee4c2 config: find lua paths first (#14335)
+  * 4c8c45d7 gestures: add scroll_move (#14063)
+  * 39af3901 renderer: more FP16 fixes (#14070)
+  * c18186a5 hl.mata.lua: add string to NotificationOptions's icon
+    param. (#14334)
+  * acba1c44 i18n: update brazillian portuguese (pt_BR) translation
+    (#14248)
+  * 58833eb1 layout/scrolling: handle fullscreen manually (#14190)
+  * 6b8b2010 meta/stubs: fix notification icon type (#14320)
+  * 1dc8a0db cmake: remove dependence on hyprland.conf
+  * 4fab2afc config: use lua by default, generate lua if no config
+    present
+  * 78b8ce22 example: remove old .conf file
+  * e9659382 propRefresher: fix misnamed value
+  * 74ed271d config/legacy: fix missing fallbacks crashing device
+    getters
+  * ae0eeea1 config: fix propRefresher to not run on first launch
+  * 336dc6c0 config/lua: fix device bool int reads (#14313)
+  * 1681bea4 config/lua: add simple layout API (#14258)
+  * 5f1350f5 config/refresher: refresh watcher state properly (#14307)
+  * 6dc42e0f config/refresher: fix refreshing of cursor zooms (#14283)
+  * a531c2ed [gha] Nix: update inputs
+  * d6aa6af5 groups: add groupbar middle_click_close option (#14242)
+  * 497b48e8 config: add device tags (#13728)
+  * eff3bfe2 windows/focus: add fallbacks when focussing workspaces
+    (#14270)
+  * 2824ffdd config/legacy: fix crash on getConfigValue of plugin fns
+  * 33044c38 render: scale background to monitor resolution (#14250)
+  * 6d4bcaf0 tests: skip pointer tests in CI due to missing input
+    environment (#14238)
+  * 6a7abd00 config/lua: add clear tag api (#14273)
+  * 21fa9b2e config/lua: fix dispatcher shapes to not be callable
+    (#14268)
+  * c0933bff compositor: move SessionLockManager init from STAGE_LATE to
+    STAGE_BASICINIT (#14272)
+  * 90fe7c65 InputManager: add guards to confineToRegion to avoid issues
+    (#14269)
+  * aa5e3804 sessionLock: send locked instead of denied when missing a
+    lock frame for 5 seconds (#14271)
+  * 6ec0228c desktop/windowRule: add parser switch for confine pointer
+    (#14263)
+  * fe17cea3 layout/master: fix rollprev/rollnext focusing the wrong
+    window (#14209)
+  * 5202ab22 cmakelists: fixup errors failing build on arch ci (#14259)
+  * 334b361c screenshare: round captureBox after scaling to fix region
+    capture at fractional scales (#14257)
+  * f60e50da internal: improve cursor size logging (#14180)
+  * e180c59b desktop/windowRule: add `confine_pointer` window rule
+    (#13379)
+  * 30cd345a hyprctl: fix bools in getoption
+  * a3fa7b49 keybinds: fix keycode matching on lua (#14254)
+  * fceb1597 config/lua: workspace.move/rename should accept "workspace"
+    instead of "id" as a parameter (#14232)
+  * c3e07986 renderer: only set presentationmode when required (#14252)
+  * c065e951 layout/dwindle,master: return invalid layoutmsg errors
+  * f9723133 gestures: add live pinch cursor zoom (#14049)
+  * c7b8fe13 tests: fix gtests crashing (#14244)
+  * 6e1fcfa8 hyprctl: fix getoption with custom types (#14243)
+  * 4ab3a403 screenshare: adjust session cleanup and event emission
+    order (#14229)
+  * 5f9df52b protocolMgr: set m_self properly when updating mirrored
+    outputs
+  * 241eeae5 config/lua: add noop
+  * e2ba1953 tests: fix ConfigLuaValueTypes - boolBadType test, 0 and 1
+    are allowed integer values for bool type (#14240)
+  * a45de66d cleanup: avoid repeated weak_ptr::lock() usage in
+    MasterAlgorithm (#14226)
+  * c6fc1cab helpers/systemInfo: extract info fns (#14222)
+  * 450d8a0b xdg-shell: queue state updates for toplevel (#14227)
+  * cfb2deb6 splashes: update splashes
+  * 546cc715 config/workspace-rules: support modifying persistent and
+    monitor (#14217)
+  * bac49db9 monitor: fix centered floating windows off-screen in
+    special workspace (#14203)
+  * 859bbb11 config/actions: fix misuse of ActionResult's error type
+    (#14221)
+  * 8884b9e6 binds: add an auto_consuming flag (#13919)
+  * d40860e8 config/lua: cannot disable animation (#14215)
+  * 2ff59889 CI/Nix/Test: check gtest exit status
+  * 56d7a431 config/lua: expand properties in the workspace object
+    (#14194)
+  * 31e025db desktop/window: refactor over fullscreen state
+  * 55a1611f desktop/window: expand hidden into proper states
+  * a92dae5a desktop/window: add alpha container for alpha calculations
+  * 6bd15b94 main: improve error reporting during initialization in
+    main.cpp (#14181)
+  * 9ee5ff1f animations: add springs (#14171)
+  * 45ffaee0 tests: Fix more tests failing on CI (#14159)
+  * 202cf48e cmakelists: search for any possible lua package name
+    (#14204)
+  * 7179a38c config: refresh window states on border_size changes
+    (#14201)
+  * 342750b5 config/lua: fix unbind behavior (#14199)
+  * e6197623 workspace: remove deprecated and unused members (#14198)
+  * 94b90a2c config/lua: add ExpressionVec2, allow using a table for
+    vec2 rules (#14197)
+  * ab75bbfb meta/stubs: update gesture hints to match new fields
+    (#14195)
+  * 97886cf0 desktop/rule: cleanup inheritance, use templates to avoid
+    dup
+  * 89e2380d desktop/rule: use Numeric for number parsing
+  * 50b555d8 desktop/layerRule: use variants for storage internally
+  * cbefb357 desktop/windowRule: use variants for storage internally
+  * 98fbbafe config/errors: Report and categorize errors properly for
+    actions (#14192)
+  * d4c6ff43 hyprtester: minor refactoring/restructure (#14154)
+  * e1bda229 config/actions: remove spammy errors and make them silent
+  * c8c66642 seat: fix dropped wl_keyboard.enter after stale
+    keyboardFocusResource (#14143)
+  * 5caf1df1 examples: fix missing permissions entry in lua example
+    config (#14177)
+  * d73d3f00 logging: update uri of debug log in ConfigManager to
+    reflect change in wiki (#14185)
+  * 62136f16 cmake: install the default example hyprland.lua (#14174)
+  * cc726ad6 NotificationOverlay: take reserved space into account
+    (#14184)
+  * 5419ea6a tests: tolerate plugin config mismatch in CI (#14173)
+  * 9e357f24 xdg-foreign-v2: Keep invalid imported objects alive
+    (#14166)
+  * b5d0519c desktop/view: fix SIGABRT in CWindow::onUnmap when monitor
+    is expired (#14148)
+  * 80763b13 keybindMgr: use legacy behavior for single-key binds on lua
+    (#14176)
+  * 3b5d979d examples: merge config blocks in lua example as demo
+  * 3ed490ac config/lua: fix window object to selector logic
+  * a5baf45d input: fix device configs for pointer devices
+  * 99a6c5f2 config/legacy: translate default window args properly
+  * 0e64d9e2 config/lua: don't pop up an error if no target was found
+    (#14175)
+  * 84d45bd1 monitor: set format back after failing DS activation
+    (#14168)
+  * d669ea7d renderer: swizzle on shm screencopy (#14167)
+  * 2652e2ae config/legacy: default to active window for movetoworkspace
+    dispatchers (#14170)
+  * c6847eb3 example/hyprland.lua: fix wiki links for new stuff (#14172)
+  * 13d3695d [gha] build man pages
+  * 5ba33f84 config/lua: init lua config manager, use lua if available
+    (#13817)
+  * 329b2b35 internal: include setByUser in
+    CConfigManager::getConfigValue (#14155)
+  * b7a30429 [gha] Nix: update inputs
+  * ab8e015b screenshare/frame: set m_copied after shm copy succeeds
+    (#14165)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 May 2026 16:29:14 +0200
+
 hyprland-unstable (0.54.0~1ppa1+git202604251323-e3c9b648.2) noble; urgency=medium
 
   * Rebuild for dependencies
