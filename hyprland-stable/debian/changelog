@@ -1,3 +1,491 @@
+hyprland (0.55.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.55.0
+  * af923e30 version: bump to 0.55.0
+  * 74d4c537 desktop/rule: recheck eating the applied rule (#14362)
+  * 6df053b7 renderer: fix decoration colors with linear FP16 (#14361)
+  * 11bd00cd input: fix touch monitor focus ordering (#14310)
+  * 09d13d38 gitignore: ignore pointer scroll test artifact
+  * ed2cb532 input: keep pointer focus on layer surfaces during keyboard
+    refocus (#14018)
+  * 07a086af renderer: handle HDR -> SDR with cm_auto_hdr (#14102)
+  * 8b78de5d compositor: recalculate workspace state after fs state
+    update (#14369)
+  * 1a164704 keybind/actions: `cycle_next` w/ `tiled = true` doesn't
+    choose only tiled windows (#14164)
+  * 54426893 build: bump hyprutils to 0.13.1 (#14365)
+  * bd7f6953 algo/scrolling: various scrolling view related bugfixes
+    (#13974)
+  * ac75bcab renderer: fix shadow CM calculations (#14364)
+  * b94f1498 config: allow hashes for parsing colors (#14337)
+  * a6a0cc30 desktop/workspace: fix visibility criteria matching
+    (#14349)
+  * 91eb3898 layout/scrolling: fix edge detection in recalculate()
+    (#14359)
+  * de9f8dc9 cmake: fix permissions for directories by default
+  * fe76c536 repo: ignore the autogen file `meta/hl.meta.lua` (#14336)
+  * 6c229672 config: always call refresh after config reload (#14346)
+  * f61ee4c2 config: find lua paths first (#14335)
+  * 4c8c45d7 gestures: add scroll_move (#14063)
+  * 39af3901 renderer: more FP16 fixes (#14070)
+  * c18186a5 hl.mata.lua: add string to NotificationOptions's icon
+    param. (#14334)
+  * acba1c44 i18n: update brazillian portuguese (pt_BR) translation
+    (#14248)
+  * 58833eb1 layout/scrolling: handle fullscreen manually (#14190)
+  * 6b8b2010 meta/stubs: fix notification icon type (#14320)
+  * 1dc8a0db cmake: remove dependence on hyprland.conf
+  * 4fab2afc config: use lua by default, generate lua if no config
+    present
+  * 78b8ce22 example: remove old .conf file
+  * e9659382 propRefresher: fix misnamed value
+  * 74ed271d config/legacy: fix missing fallbacks crashing device
+    getters
+  * ae0eeea1 config: fix propRefresher to not run on first launch
+  * 336dc6c0 config/lua: fix device bool int reads (#14313)
+  * 1681bea4 config/lua: add simple layout API (#14258)
+  * 5f1350f5 config/refresher: refresh watcher state properly (#14307)
+  * 6dc42e0f config/refresher: fix refreshing of cursor zooms (#14283)
+  * a531c2ed [gha] Nix: update inputs
+  * d6aa6af5 groups: add groupbar middle_click_close option (#14242)
+  * 497b48e8 config: add device tags (#13728)
+  * eff3bfe2 windows/focus: add fallbacks when focussing workspaces
+    (#14270)
+  * 2824ffdd config/legacy: fix crash on getConfigValue of plugin fns
+  * 33044c38 render: scale background to monitor resolution (#14250)
+  * 6d4bcaf0 tests: skip pointer tests in CI due to missing input
+    environment (#14238)
+  * 6a7abd00 config/lua: add clear tag api (#14273)
+  * 21fa9b2e config/lua: fix dispatcher shapes to not be callable
+    (#14268)
+  * c0933bff compositor: move SessionLockManager init from STAGE_LATE to
+    STAGE_BASICINIT (#14272)
+  * 90fe7c65 InputManager: add guards to confineToRegion to avoid issues
+    (#14269)
+  * aa5e3804 sessionLock: send locked instead of denied when missing a
+    lock frame for 5 seconds (#14271)
+  * 6ec0228c desktop/windowRule: add parser switch for confine pointer
+    (#14263)
+  * fe17cea3 layout/master: fix rollprev/rollnext focusing the wrong
+    window (#14209)
+  * 5202ab22 cmakelists: fixup errors failing build on arch ci (#14259)
+  * 334b361c screenshare: round captureBox after scaling to fix region
+    capture at fractional scales (#14257)
+  * f60e50da internal: improve cursor size logging (#14180)
+  * e180c59b desktop/windowRule: add `confine_pointer` window rule
+    (#13379)
+  * 30cd345a hyprctl: fix bools in getoption
+  * a3fa7b49 keybinds: fix keycode matching on lua (#14254)
+  * fceb1597 config/lua: workspace.move/rename should accept "workspace"
+    instead of "id" as a parameter (#14232)
+  * c3e07986 renderer: only set presentationmode when required (#14252)
+  * c065e951 layout/dwindle,master: return invalid layoutmsg errors
+  * f9723133 gestures: add live pinch cursor zoom (#14049)
+  * c7b8fe13 tests: fix gtests crashing (#14244)
+  * 6e1fcfa8 hyprctl: fix getoption with custom types (#14243)
+  * 4ab3a403 screenshare: adjust session cleanup and event emission
+    order (#14229)
+  * 5f9df52b protocolMgr: set m_self properly when updating mirrored
+    outputs
+  * 241eeae5 config/lua: add noop
+  * e2ba1953 tests: fix ConfigLuaValueTypes - boolBadType test, 0 and 1
+    are allowed integer values for bool type (#14240)
+  * a45de66d cleanup: avoid repeated weak_ptr::lock() usage in
+    MasterAlgorithm (#14226)
+  * c6fc1cab helpers/systemInfo: extract info fns (#14222)
+  * 450d8a0b xdg-shell: queue state updates for toplevel (#14227)
+  * cfb2deb6 splashes: update splashes
+  * 546cc715 config/workspace-rules: support modifying persistent and
+    monitor (#14217)
+  * bac49db9 monitor: fix centered floating windows off-screen in
+    special workspace (#14203)
+  * 859bbb11 config/actions: fix misuse of ActionResult's error type
+    (#14221)
+  * 8884b9e6 binds: add an auto_consuming flag (#13919)
+  * d40860e8 config/lua: cannot disable animation (#14215)
+  * 2ff59889 CI/Nix/Test: check gtest exit status
+  * 56d7a431 config/lua: expand properties in the workspace object
+    (#14194)
+  * 31e025db desktop/window: refactor over fullscreen state
+  * 55a1611f desktop/window: expand hidden into proper states
+  * a92dae5a desktop/window: add alpha container for alpha calculations
+  * 6bd15b94 main: improve error reporting during initialization in
+    main.cpp (#14181)
+  * 9ee5ff1f animations: add springs (#14171)
+  * 45ffaee0 tests: Fix more tests failing on CI (#14159)
+  * 202cf48e cmakelists: search for any possible lua package name
+    (#14204)
+  * 7179a38c config: refresh window states on border_size changes
+    (#14201)
+  * 342750b5 config/lua: fix unbind behavior (#14199)
+  * e6197623 workspace: remove deprecated and unused members (#14198)
+  * 94b90a2c config/lua: add ExpressionVec2, allow using a table for
+    vec2 rules (#14197)
+  * ab75bbfb meta/stubs: update gesture hints to match new fields
+    (#14195)
+  * 97886cf0 desktop/rule: cleanup inheritance, use templates to avoid
+    dup
+  * 89e2380d desktop/rule: use Numeric for number parsing
+  * 50b555d8 desktop/layerRule: use variants for storage internally
+  * cbefb357 desktop/windowRule: use variants for storage internally
+  * 98fbbafe config/errors: Report and categorize errors properly for
+    actions (#14192)
+  * d4c6ff43 hyprtester: minor refactoring/restructure (#14154)
+  * e1bda229 config/actions: remove spammy errors and make them silent
+  * c8c66642 seat: fix dropped wl_keyboard.enter after stale
+    keyboardFocusResource (#14143)
+  * 5caf1df1 examples: fix missing permissions entry in lua example
+    config (#14177)
+  * d73d3f00 logging: update uri of debug log in ConfigManager to
+    reflect change in wiki (#14185)
+  * 62136f16 cmake: install the default example hyprland.lua (#14174)
+  * cc726ad6 NotificationOverlay: take reserved space into account
+    (#14184)
+  * 5419ea6a tests: tolerate plugin config mismatch in CI (#14173)
+  * 9e357f24 xdg-foreign-v2: Keep invalid imported objects alive
+    (#14166)
+  * b5d0519c desktop/view: fix SIGABRT in CWindow::onUnmap when monitor
+    is expired (#14148)
+  * 80763b13 keybindMgr: use legacy behavior for single-key binds on lua
+    (#14176)
+  * 3b5d979d examples: merge config blocks in lua example as demo
+  * 3ed490ac config/lua: fix window object to selector logic
+  * a5baf45d input: fix device configs for pointer devices
+  * 99a6c5f2 config/legacy: translate default window args properly
+  * 0e64d9e2 config/lua: don't pop up an error if no target was found
+    (#14175)
+  * 84d45bd1 monitor: set format back after failing DS activation
+    (#14168)
+  * d669ea7d renderer: swizzle on shm screencopy (#14167)
+  * 2652e2ae config/legacy: default to active window for movetoworkspace
+    dispatchers (#14170)
+  * c6847eb3 example/hyprland.lua: fix wiki links for new stuff (#14172)
+  * 13d3695d [gha] build man pages
+  * 5ba33f84 config/lua: init lua config manager, use lua if available
+    (#13817)
+  * 329b2b35 internal: include setByUser in
+    CConfigManager::getConfigValue (#14155)
+  * b7a30429 [gha] Nix: update inputs
+  * ab8e015b screenshare/frame: set m_copied after shm copy succeeds
+    (#14165)
+  * e3c9b648 opengl/shadow: fix shadow offset rendering (#14156)
+  * b65714e3 opengl: minor egl changes (#14147)
+  * 300cdb7c workspace: fix missing null access guard (#14119)
+  * d4dd299d tests: stabilize CI by relaxing env-dependent checks and
+    timing-sensitive assertions (#14142)
+  * 019dac7a [gha] Nix: update inputs
+  * c9b551f5 xwayland: handle transient read errors in selection
+    transfer (#14135)
+  * 73f48077 keybinds: fix missing z-order update on floating toggle
+    (#14100)
+  * e12d2b7c input: implement follow_mouse_shrink (#13707)
+  * a360c31d errorOverlay: modernize, refactor, use GPU rendering
+    (#14122)
+  * 889ee4f2 hyprctl: add hw cursor flag
+  * d50ad247 renderer: simplify shadows (#14047)
+  * 593fd565 protocols/compositor: fix presentFeedback being blocked
+  * 78f09183 algo/scroll: add center for centering the current col
+    (#14059)
+  * f75a14d1 CI/Nix: use org-wide actions
+  * b5ea887f debug/overlay: optimize rendering, cleanup and nicetify
+    (#14097)
+  * 66ea2e2c renderer: Various CM fixes, part 8 of refactors (#13860)
+  * 4cce7f60 notifications: move and small refactor (#14094)
+  * ff459f4a groups: fix `movewindoworgroup` when moving from group to
+    group (#14086)
+  * 1ea0a436 monocle: avoid repeated workspace monitor lock() calls
+    (#14085)
+  * ed349e84 notifications: optimize rendering (#14088)
+  * e6c5040f init: drop CAP_SYS_NICE from ambient set after gaining
+    SCHED_RR (#14082)
+  * 88f3e7e9 monitor: ensure swapchain is updated before mode test
+    (#14065)
+  * e539d211 config: fix safe mode config generation (#14024)
+  * 933a24ca screencopy: clear buffer before rendering (#14064)
+  * 814337fd keybinds: fix wrong space assignment in pin (#14061)
+  * d67c4e2b layout/algo: preserve focused target if applicable on
+    layout switches (#14058)
+  * 24b121c7 cleanup: avoid repeated weak_ptr lock() calls in conditions
+    (#14057)
+  * fe369dd9 input: fix focus_on_close=2 (MRU) routing to cursor path
+    instead of getNextCandidate (#13969)
+  * 3830200c clang-tidy: fix duplicate entry in .clang-tidy (#14045)
+  * 3649c186 hyprctl: fix lib64 pkgconfig for version-checking (#14051)
+  * dbc07064 compositor: fix floating input/visual z-order desync after
+    fullscreen (#14015)
+  * f7755322 input: avoid repeated weak_ptr::lock() and ensure
+    consistent usage (#14039)
+  * fb46d16f rules: make rule prop reset less cursed (#14003)
+  * aa8cea66 renderer: extract window skip conditions into named
+    booleans (#14005)
+  * 75dc67e6 input: lazy cache getWindowIdeal()
+  * ec8c336e decoration/border: simplify damage callback
+  * a1c8c2f1 pass/surface: cache texBox
+  * 0448e707 desktop/popup: cache tree count
+  * 8a97b11b desktop/popup: cache popup extents
+  * 10c8a863 config: move misc:vfr to debug: (#14021)
+  * b6e9c930 [gha] Nix: update inputs
+  * 559d7be4 build: bump hyprgraphics to 0.5.1 (#14013)
+  * aaa2fc34 layouts/dwindle: override force after window drags (#14002)
+  * 809b9b9e egl: move over to use hyprgraphics (#12988)
+  * 5c5ba65a desktop/history: include ranges header (#14000)
+  * bf97fac9 subsurface: use geometry-aware damage and recurse into
+    nested trees (#13933)
+  * 8edb7c56 xwayland: pipe through monitor in coordinate mapping
+    (#13700)
+  * 6983b190 data/dnd: guard against expired dndPointerFocus and ensure
+    consistent usage (#13996)
+  * d7edc50e tests: add unit tests for CDamageRing (#13995)
+  * 3af9b108 internal: silence compiler warnings about unused return
+    values (#13997)
+  * 3a7bd8fe renderer: add a cm settings cache
+  * 1c2bd2c8 render/decorations: improve cache performance
+  * 3c88ac8e desktop/window: optimize getRealBorderSize()
+  * 5bf2bbed build: add format-check and format-fix Makefile targets
+    (#13936)
+  * 97ee0427 render/opengl: optimize getShaderVariant's map access
+  * 9b05dc1b render/decoration: cache input extents as well
+  * d170a627 render/decoration: improve extent calculations
+  * 442ccb06 renderer/groupbar: fix a group indicator rounding bug
+    (#13975)
+  * af4e1965 renderer: simplify renderWorkspaceWindowsFullscreen
+  * e40857fc render/pass: optimize simplification and blur calculations
+  * 4f34bd47 renderer: don't damage decos individually in damageWindow
+  * a151c671 animation: avoid redundant damage calls in tick
+  * 13fec3de render: fix SIGFPE in `addWindowToRenderUnfocused` when
+    `misc:render_unfocused_fps` is 0 (#13973)
+  * 29cf6264 desktop/window: reduce window deco updates (#13980)
+  * 43f7f683 debug-tools: add flame
+  * b898fc1c cmake: add -fno-omit-frame-pointer to debug
+  * 49686f96 miscfunctions: reuse monitor pointer instead of repeated
+    calls (#13977)
+  * a3d262d1 tests: add unit tests for CTagKeeper (#13970)
+  * 2b9696eb renderer: skip redundant render-path work
+  * 4c42269c monitor: centralize solitary and scanout eligibility checks
+  * d5b00bbc scheduler: keep a strong monitor ref in frame callbacks
+  * 0647b544 protocols: avoid repeated per-client work in hot paths
+  * 4c897c2d protocols: prune stale subsurface refs in hot traversals
+  * f25473b2 render: fix layer blur_popups ignoring ignore_alpha when
+    blur is off (#13947)
+  * ad906a47 layout: revert "replace string comparison with ID-based
+    matching in WorkspaceAlgoMatcher (#13943)"
+  * a84e98d2 seat/compositor: fix minor issues (#13958)
+  * b2a29e1b tests: add unit tests for MiscFunctions helpers (#13934)
+  * 90a79dc9 i18n: update Tatar translations (#13930)
+  * febf550a algo/scrolling: add expel, consume, and consume_or_expel
+    (#13869)
+  * 529f7224 layout: replace string comparison with ID-based matching in
+    WorkspaceAlgoMatcher (#13943)
+  * 7fbf8f98 seat: store surface in pointerFocus before sendEnter
+    (#13941)
+  * 36f184ea tests: add unit tests for Math transform utilities (#13935)
+  * ccdfa407 refactor: improve readability of monitor rule comparison
+    (#13884)
+  * 179e1de5 tests: add unit tests for match engine types (#13903)
+  * fdd2607b tests: add unit tests for Math::CExpression (#13924)
+  * 1fdba8a8 tests: add unit tests for Format utilities (#13923)
+  * 91916a2d xwayland: fix compiler warnings (#13920)
+  * 6474f46b tests: add unit tests for CMonitorRuleParser (#13895)
+  * f57fd6ed config: fix type confusion in getOption with complex types
+  * bb84f4e9 nix: separate overlay with deps
+  * 2a16c962 nix/tests: print gtests logs
+  * 43fcf1b0 CI/build: remove commented-out clang-format action (#13893)
+  * 38a7f03c renderer: refactor part 7: api fixes (#13631)
+  * ef2e8dfd tests: add unit tests for TransferFunction helpers (#13889)
+  * fdf0e7a3 tests: add unit tests for CHyprColor (#13891)
+  * 0be78d09 tests: add unit tests for CMType helpers (#13888)
+  * 83d3babd desktop/reserved: do not crash on invalid box init (#13880)
+  * eb10ecf7 build: remove legacy clang-format workflow (#13887)
+  * 6226f3b1 desktop/window: guard null monitor in xwaylandSizeToReal
+    (#13876)
+  * 50830570 tests: add unit tests for Direction helpers (#13885)
+  * ff5c6c24 tests: add unit tests for ByteOperations helpers (#13886)
+  * 420ee44e protocols: allow xdg-foreign to be used by sandboxed apps
+    (#13854)
+  * 1c25bcc8 dispatchers: add moveintoorcreategroup (#13325)
+  * 3103119b input: allow focus to switch to most recently used window
+    on closed (#13769)
+  * 98036fab config/executor: actually execute exec-shutdown (#13872)
+  * 47e2d599 renderer/groupbar: fix gradients rendering (#13875)
+  * 5dfb1033 i18n: add Greek translations (#13865)
+  * 2c4852e3 renderer/deco: add glow decoration (#13862)
+  * 2fde538e algo/scrolling: improve behavior with focus_fit_method =
+    center (#13795)
+  * b0f6ac23 desktop/workspaceHistory: small refactor to work better
+    with multi monitor setups (#13632)
+  * 4c29b9de i18n: add Punjabi translations (#13807)
+  * 1cdb9d5b config: fix crash in safe mode due to null `Config::mgr()`
+    (#13855)
+  * 2de1d3ca layout: guard null workspace in CWindowTarget::updatePos()
+    (#13861)
+  * 1b661d06 clang-format: run formatter
+  * ee7f6882 render/pass: fix debug:pass rendering
+  * eb141a6c overridableVar: fix reassignment
+  * 855b1cba renderer: small fixes in OpenGL.cpp and OpenGL.hpp (#13842)
+  * 2e5e800e renderer/cm: Support wp-cm-v1 version 2 (#12817)
+  * 8196711a screencopy: check share session state (#13839)
+  * bbf6718c hyprctl: fix invalid type cast
+  * 63c56bad protocols: reimplement unstable/xdg-foreign-v2 (#13716)
+  * 64a2e4e2 input: fix the multimon touch fix (#13819)
+  * 488c8f49 [gha] Nix: update inputs
+  * dc24eb1c renderer: guard against null monitor in renderMonitor
+    (#13823)
+  * c8b283f5 hyprctl: fix json output for the submap command (#13726)
+  * c54d7bf6 compositor: be more selective about how we expand the
+    window box in getting coord (#13720)
+  * bf31f642 internal: rewrite deviceNameToInternalString using a single
+    range pipeline (#13806)
+  * 635abdd1 xwayland: prevent potential buffer overflow in socket path
+    handling (#13797)
+  * a595d0e3 layersurface: simulate mouse movement on layer change
+    (#13747)
+  * 8726a736 config: cleanup the entire config infrastructure (#13785)
+  * b940b0d2 screencopy: fix crash in screensharing toplevel with
+    invalid handle (#13781)
+  * 3b902a47 input: fix touch screen focus on multi monitor (#13764)
+  * ad46ff63 renderer: fix crash when shader path isn't a file (#13756)
+  * d635b499 input: focus monitor on touch down events (#13773)
+  * 77595178 misc: fix missing noreturn attribute for throwError
+    (#13746)
+  * aef76309 layershell: fix popup crash with nullptr mon (#13763)
+  * 3a720645 algo/master: fix crash on null target in getNextTarget
+  * 9f599e31 window/rules: add scrolling_width (#13754)
+  * 35ef8dc1 protocols/workspace: schedule done after output update
+    (#13743)
+  * be96e06a view: consolidate group flags and apply window rules
+    (#13694)
+  * 30c498ac build: add glaze dependency with FetchContent fallback
+    (#13666)
+  * 902e8de7 source: c-f for new clang version
+  * 94bd4123 desktop/rules: fix static rules and content type. (#13725)
+  * 3fd2a954 [gha] Nix: update inputs
+  * df557522 algo/scroll: fix std::clamp assertion crash on resume from
+    suspend (#13737)
+  * 9bf8fe7a renderer: fix blockBlurOptimization check (#13685)
+  * de3471b3 config/workspacerule: add animation style (#13380)
+  * 2877ca29 algo/scroll: reverse horizontal dir mapping of vertical
+    scroll directions (#13647)
+  * 030e8921 hyprland.pc.in: add src include flag
+  * 9683e261 Nix: always test in debug mode
+  * 8aff5003 internal: fix relative path header locations (#13650)
+  * 24a95621 input: add device specific binds (#13073)
+  * e8684034 protocols: fix image-copy-capture stop handling and remove
+    non protocol errors (#13706)
+  * 8662ecba renderer: fix share window projection (#13695)
+  * 0e083e88 algo/dwindle: fix precise mouse setting (#13678)
+  * a714c7fe shader: delete shader on success path (#13682)
+  * bc5bd897 compositor: When processing fullscreen states, only use
+    effective mode where necessary (#13607)
+  * 53899907 renderer: fix crash on null blur framebuffer during monitor
+    disconnect
+  * 318673e7 protocols/sessionLock: fix crash when monitor is gone
+    during lock surface creation
+  * b9ddb4bb layout: fix crash on monitor reconnect due to stale
+    workspace state
+  * 8217dabc layout: fix null deref in focalPointForDir and
+    moveInDirection (#13652)
+  * 8a12d6cf algo/dwindle: Respect `force_split` when moving windows to
+    workspaces (#13038)
+  * e32eeb1d algo/dwindle: do NOT use smart_split for overridden focal
+    point (#13635)
+  * e172a26b layout: fix drag_threshold window snap regression (rebased
+    for #12890) (#13140)
+  * 5cf53f58 layout/windowTarget: add visualBox (#13626)
+  * 03f444e0 renderer: fix crash with nullptr FBs (#13641)
+  * a4ecae91 desktop/windowRule: fix matching CONTENT (#13636)
+  * 3cf62bea algo/scroll: fix unsigned wrap (#13634)
+  * 4aee773d renderer: fix sdr mod (#13630)
+  * 3b09986f layout/groupTarget: fix crash on null space assignment
+    (#13614)
+  * 02f30ea1 renderer: refactor gl renderer (#13488)
+  * b227efc8 renderer: refactor projection setting (#13485)
+  * 73fca55e renderer: move m_renderData to renderer (#13474)
+  * 966f20d3 renderer: refactor resources and flags (#13471)
+  * 32e75e3e renderer: refactor render elements (#13438)
+  * 36b19075 deco/border: fix damage region
+  * 4152ac76 renderer: refactor Texture, Framebuffer and Renderbuffer
+    (#13437)
+  * a5858018 renderer: shader variants refactor (#13434)
+  * 8685fd7b dwindle: add rotatesplit layoutmsg and tests (#13235)
+  * 1fa157cf compositor: fix missing recheckWorkArea to prevent
+    CReservedArea assert failure (#13590)
+  * e0c57100 layerrules: add dynamically registered rules for plugins
+    (#13331)
+  * 42f0a600 keybinds: Remove removed keybinds (#13605)
+  * ae9ca17b pointer: fix hardware cursor rendering on rotated/flipped
+    monitors (#13574)
+  * 972f23ef screencopy: fix isOutputBeingSSd (#13586)
+  * 4c60d9df desktop/rules: fix empty workspace handling (#13544)
+  * b7dfb475 config/descriptions: add missing desc entry
+  * 3284dd72 algo/scrolling: add config options for focus and swapcol
+    wrapping (#13518)
+  * 803e81ac screenshare: improve destroy logic of objects (#13554)
+  * 34c7cc7d i18n: update Vietnamese translations (#13489)
+  * c47ae950 screencopy: fix minor crash (#13566)
+  * 3f169ee5 socket2: emit `kill` event (hyprctl kill) (#13104)
+  * 10754745 render/cm: add ICC profile pipeline (#12711)
+  * 8271cfc9 core: fix i586 build (#13550)
+  * c11cadd8 desktop/window: don't group modals
+  * dc4b082e algo/scrolling: fix rare crash
+  * edf70983 desktop/window: fix floating windows being auto-grouped
+    (#13475)
+  * 7299a3b0 hyprctl: fix workspace dynamic effect reloading (#13537)
+  * b06a4b5e layout/windowTarget: override maximized box status in
+    updateGeom (#13535)
+  * 3faddf40 algo/dwindle: don't crash on empty swapsplit (#13533)
+  * a6e3a247 tests/workspace: fix one test case failing
+  * ff0b706e renderer: fix crash on mirrored outputs needing recalc
+    (#13534)
+  * 4f44df7b algo/master: fix crash after dpms (#13522)
+  * be03497b layout/algos: use binds:window_direction_monitor_fallback
+    for moves (#13508)
+  * ff20cbf8 algo/scrolling: fix offset on removeTarget (#13515)
+  * fe0a2021 desktop/group: respect direction when moving window out of
+    group (#13490)
+  * 75a815fb algo/dwindle: use focal point correctly for x-ws moves
+    (#13514)
+  * 3b7401b0 algo/scroll: improve directional moves (#13423)
+  * d4d17d5d compositor: damage monitors on workspace attachment updates
+  * 52ece2b0 treewide: alejandra -> nixfmt
+  * d98f7ffa layout: store and preserve size and pos after fullscreen
+    (#13500)
+  * 5f650f8e layout/windowTarget: don't use swar on maximized (#13501)
+  * 9f98f744 algo/dwindle: add back splitratio (#13498)
+  * 5cb12810 layout/windowTarget: damage before and after moves (#13496)
+  * 743dffd6 layout/scroll: fix configuredWidths not setting properly on
+    new workspaces (#13476)
+  * 5c370c33 hyprpm: fix url sanitization in add
+  * cf0d256c layout/windowTarget: fix size_limits_tiled (#13445)
+  * 6ebafcf1 layout/scrolling: fix size_t underflow in idxForHeight
+    (#13465)
+  * 8ad96a95 screencopy: fix nullptr deref if shm format is weird
+  * f41e3c22 scroll: clamp column widths properly
+  * f0a80ce5 keybinds: fixup changegroupactive
+  * 2928d6af layouts: fix crash on missed relayout updates (#13444)
+  * 93aacfc0 [gha] Nix: update inputs
+  * 19c263e5 screencopy: scale window region for toplevel export
+    (#13442)
+  * a0320900 monitor: damage old special monitor on change
+  * 0b55c55f monitor: update pinned window states properly on
+    changeWorkspace (#13441)
+  * 85c2764f deco/border: fix damageEntire
+  * c2bed410 monitor: keep workspace monitor bindings on full reconnect
+    (#13384)
+  * 82729db3 build: fix build on gcc 16.x after #6b2c08d (#13429)
+  * f12904e6 layout/algo: fix swar on removing a target (#13427)
+  * b90c61c0 compositor: fix focus edge detection (#13425)
+  * e333a330 desktop/group: fix movegroupwindow not following focus
+    (#13426)
+  * 1c64ef06 desktop/window: fix idealBB reserved (#13421)
+  * 6b2c08d3 pointer: damage entire buffer in begin of rendering hw
+  * db8509df build: remove auto-generated hyprctl/hw-protocols/ files
+    during make clear (#13399)
+  * d2b9957f format: safeguard drmGetFormat functions (#13416)
+  * 362ea7b0 hyprctl: fix buffer overflowing writes to the socket
+  * f7114016 desktop/rule: fix matching for content type by str
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 May 2026 18:02:06 +0200
+
 hyprland (0.54.3-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies
