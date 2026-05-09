@@ -1,3 +1,14 @@
+hyprland-plugins (0.53.0~1ppa1+git202605091630-22de29b) noble; urgency=medium
+
+  * Update to main 22de29b
+  * 22de29b winwrap: fix for 0.54.3 (#653)
+  * b6e0805 all: lua update compatibility (#649)
+  * 473804b hyprpm: add pins for 0.54.x
+  * 6c0d26b hyprbars: add missing includes needed for GCC16 (#645)
+  * dbe2219 bars/vkfix/focus: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 May 2026 16:30:01 +0200
+
 hyprland-plugins (0.53.0~1ppa1+git202604251323-6acc073build1) noble; urgency=medium
 
   * Rebuild for unstable

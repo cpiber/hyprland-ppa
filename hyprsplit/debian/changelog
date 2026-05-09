@@ -1,3 +1,13 @@
+hyprsplit (0.54.3~1ppa1+git202605091630-4c8a5a2) noble; urgency=medium
+
+  * Update to main 4c8a5a2
+  * 4c8a5a2 add .luarc.json and .stylua.toml
+  * 1290f82 update readme for lua
+  * 3169c9a plugin: refuse to init with lua config
+  * fec6f7a initial lua support
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 09 May 2026 16:30:36 +0200
+
 hyprsplit (0.54.3~1ppa1+git202603312149-2d8cfc8build3) noble; urgency=medium
 
   * Rebuild for unstable
