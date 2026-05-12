@@ -1,3 +1,10 @@
+hyprland-plugins (0.53.0~1ppa1+git202605121940-eaf18d5) noble; urgency=medium
+
+  * Update to main eaf18d5
+  * eaf18d5 all: update for 0.55
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 12 May 2026 19:40:43 +0200
+
 hyprland-plugins (0.53.0~1ppa1+git202605091630-22de29b) noble; urgency=medium
 
   * Update to main 22de29b

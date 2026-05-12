@@ -1,3 +1,12 @@
+hyprsplit (0.54.3~1ppa1+git202605121941-ea230fc) noble; urgency=medium
+
+  * Update to main ea230fc
+  * ea230fc Update README.md
+  * 6175fe1 minor improvements
+  * 8f06775 various fixes for get_workspace_string
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 12 May 2026 19:41:37 +0200
+
 hyprsplit (0.54.3~1ppa1+git202605091630-4c8a5a2) noble; urgency=medium
 
   * Update to main 4c8a5a2
