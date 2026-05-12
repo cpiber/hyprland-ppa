@@ -1,3 +1,28 @@
+hyprland-unstable (0.55.0~1ppa1+git202605121940-d61c9691) noble; urgency=medium
+
+  * Update to main d61c9691
+  * d61c9691 meta/lua-stubs: overwrite scale to accept float and int
+    (#14461)
+  * b76a9e07 config/lua: allow re-enabling monitors (#14447)
+  * 5e441cae hyprtester: report failures at the end (#14421)
+  * 6841447b config/propRefresher: avoid crash if event loop manager
+    isn't loaded (#14423)
+  * a73c4168 helpers: include numbers header (#14406)
+  * 2f2c9500 algo/master: add an option to focus master when window is
+    closed (#14306)
+  * 3e21a68b render/cm: fix premult in shaders (#14403)
+  * b740add7 meta: update lua stubs for permissions (#14400)
+  * 404b0e4e Minor fixes today (#14401)
+  * 7a1af503 renderer: set proper image description in snapshots
+    (#14398)
+  * dab96494 monitor: don't modeset on reserved changes (#14397)
+  * da395cdc gestures/scroll_move: guard col to avoid crash (#14394)
+  * 205d6806 algo/scrolling: add `inhibit_scroll` dispatch for scrolling
+    algorithm (#13955)
+  * ee58a513 config: fix plugin variables with dashes (#14379)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 12 May 2026 19:40:19 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202605091629-af923e30.1) noble; urgency=medium
 
   * Fix installation paths
