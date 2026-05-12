@@ -1,3 +1,13 @@
+hyprshutdown (0.1.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.1
+  * db1f38b version: bump to 0.1.1
+  * f70097e fix: update window close and exit dispatchers for Hyprland
+    0.55+ (lua) (#24)
+  * f81d581 CI: use org-wide actions
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 12 May 2026 20:35:02 +0200
+
 hyprshutdown (0.1.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
