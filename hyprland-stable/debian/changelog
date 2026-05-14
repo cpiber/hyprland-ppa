@@ -1,3 +1,40 @@
+hyprland (0.55.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.55.1
+  * a47147bc [gha] Nix: update inputs
+  * 6ad5e708 version: bump to 0.55.1
+  * 0f396ddc config/lua: restrict package module loading to lua-only
+    modules (#14526)
+  * fe3fa4af input: properly make input-blocked windows inaccessible
+    (#14517)
+  * 80002419 algo/floating: do not alter pinned windows' state on ws
+    move (#14513)
+  * 452ef12c monitor: fix top-layer bar visibility on workspace change
+    with scrolling-layout fullscreen (#14425)
+  * 9e0ca2af groups: sync window monitor/workspace when added to a group
+    (#14478)
+  * 2495313e render/gl/framebuffer: fix swizzle comparisons (#14481)
+  * 92f8e98a pointer: fix cursor bounds not updating on monitor layout
+    changes (#14393)
+  * 049e5ab9 monitor: don't set back to 8 bit when applying rules
+    (#14404)
+  * bad64664 meta/lua-stubs: overwrite scale to accept float and int
+    (#14461)
+  * 6a3a8dc1 config/lua: allow re-enabling monitors (#14447)
+  * 09240e80 config/propRefresher: avoid crash if event loop manager
+    isn't loaded (#14423)
+  * 90dbfba0 helpers: include numbers header (#14406)
+  * 33bb27d7 render/cm: fix premult in shaders (#14403)
+  * a090000c meta: update lua stubs for permissions (#14400)
+  * 68ebab1e Minor fixes today (#14401)
+  * c3fe09d0 renderer: set proper image description in snapshots
+    (#14398)
+  * 71f7ce07 monitor: don't modeset on reserved changes (#14397)
+  * a37d78b3 gestures/scroll_move: guard col to avoid crash (#14394)
+  * f880a42b config: fix plugin variables with dashes (#14379)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 14 May 2026 09:45:07 +0200
+
 hyprland (0.55.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.55.0
