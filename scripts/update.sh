@@ -18,6 +18,7 @@ reporoot="`cd "$(dirname "$0")/.." && pwd`"
 
 project="$1"
 shift
+checkout="${1:-}"
 sourcefolder="$reporoot/$project/source"
 case "$project" in
   hyprland|hyprland-plugins|hyprsplit|hyprspace)
@@ -33,7 +34,11 @@ esac
 
 cd "$sourcefolder"
 curhead="`git rev-parse HEAD`"
-if [ "$type" != "tag" ]; then
+if [ -n "$checkout" ]; then
+  git fetch --tags
+  git checkout "$checkout"
+  tag="`echo "$checkout" | sed 's/^[^0-9]*\([0-9.]\+\).*/\1/'`"
+elif [ "$type" != "tag" ]; then
   git checkout "$type"
   git pull --quiet --rebase
   tag="`git describe --tags | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//g'`"

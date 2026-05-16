@@ -26,12 +26,13 @@ $ git submodule update --init --recursive  # Fetch all package sources
 ### Updating a package
 
 ```console
-$ ./scripts/update.sh <package>
+$ ./scripts/update.sh <package> [tag-override]
 ```
 
 This script will fetch the latest changes for the specified package.
 All packages except `hyprland` and `waybar-unstable` will check out the lastest tag.
-The two mentioned exceptions will check out the lastest commit on main/master.
+The two mentioned exceptions will check out the lastest commit on main/master.  
+If `tag-override` is specified, instead of the latest tag, the specific tag will be checked out.
 
 The script additionally generates the appropriate changelog from the commit names.
 If the version did not change, the script exists with code 1 and does not apply any changes.

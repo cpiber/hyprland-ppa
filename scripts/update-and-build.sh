@@ -2,7 +2,7 @@
 
 buildone() {
   if [ "${2:-}" != "-s" ]; then
-    if ! ./scripts/update.sh "$1"; then
+    if ! ./scripts/update.sh "$@"; then
       return 1
     fi
   fi
@@ -15,7 +15,7 @@ buildone() {
 
 buildplugin() {
   if [ "${2:-}" != "-s" ]; then
-    ./scripts/update.sh "$1" || :
+    ./scripts/update.sh "$@" || :
   fi
   for dist in "" questing resolute; do
     if ! ./scripts/open-build.sh "$1" "$dist" -- bash -c 'dpkg-buildpackage --build=source --no-check-builddeps -kE7A507C32F5C2FA37F32BBABB1EC1F940FA20E58 && debrelease -S --dput ppa:cppiber/hyprland'; then
