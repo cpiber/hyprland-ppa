@@ -1,3 +1,11 @@
+hyprland-plugins (0.55.0~1ppa1+git202605161214-90e66ba) noble; urgency=medium
+
+  * Update to main 90e66ba
+  * 90e66ba hyprpm: add pins for 0.55.0
+  * 3aa21f2 all: drop unmaintained plugins (#663)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 May 2026 12:14:48 +0200
+
 hyprland-plugins (0.53.0~1ppa1+git202605121940-eaf18d5) noble; urgency=medium
 
   * Update to main eaf18d5

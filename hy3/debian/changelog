@@ -1,3 +1,12 @@
+hy3 (0.55.0~1ppa1+git202605161214-a7282db) noble; urgency=medium
+
+  * Update to master a7282db
+  * a7282db version: 0.55.0
+  * d7e0c58 fix lua config fields
+  * 8f56e6e fixup: chase 0.55
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 May 2026 12:14:59 +0200
+
 hy3 (0.54.2.1~1ppa1+git202605091630-d69eadcbuild1) noble; urgency=medium
 
   * Rebuild for unstable
