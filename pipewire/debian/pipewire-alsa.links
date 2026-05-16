@@ -1,2 +1,0 @@
-usr/share/alsa/alsa.conf.d/50-pipewire.conf		etc/alsa/conf.d/50-pipewire.conf
-usr/share/alsa/alsa.conf.d/99-pipewire-default.conf	etc/alsa/conf.d/99-pipewire-default.conf

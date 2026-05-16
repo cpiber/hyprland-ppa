@@ -7,9 +7,6 @@
 [submodule "hyprwayland-scanner/source"]
 	path = hyprwayland-scanner/source
 	url = https://github.com/hyprwm/hyprwayland-scanner.git
-[submodule "wayland-protocols/source"]
-	path = wayland-protocols/source
-	url = https://gitlab.freedesktop.org/wayland/wayland-protocols.git
 [submodule "libxcb-errors/source"]
 	path = libxcb-errors/source
 	url = https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git
@@ -34,21 +31,12 @@
 [submodule "hyprutils/source"]
 	path = hyprutils/source
 	url = https://github.com/hyprwm/hyprutils.git
-[submodule "pipewire/source"]
-	path = pipewire/source
-	url = https://gitlab.freedesktop.org/pipewire/pipewire.git
 [submodule "pam-fprint-grosshack/source"]
 	path = pam-fprint-grosshack/source
 	url = https://gitlab.com/mishakmak/pam-fprint-grosshack.git
 [submodule "aquamarine/source"]
 	path = aquamarine/source
 	url = https://github.com/hyprwm/aquamarine.git
-[submodule "libinput/source"]
-	path = libinput/source
-	url = https://gitlab.freedesktop.org/libinput/libinput.git
-[submodule "gtk-layer-shell/source"]
-	path = gtk-layer-shell/source
-	url = https://github.com/wmww/gtk-layer-shell.git
 [submodule "waybar-unstable/source"]
 	path = waybar-unstable/source
 	url = https://github.com/Alexays/Waybar.git
@@ -82,9 +70,6 @@
 [submodule "hyprpicker/source"]
 	path = hyprpicker/source
 	url = https://github.com/hyprwm/hyprpicker.git
-[submodule "polkit-qt-1/source"]
-	path = polkit-qt-1/source
-	url = https://invent.kde.org/libraries/polkit-qt-1.git
 [submodule "hyprpolkitagent/source"]
 	path = hyprpolkitagent/source
 	url = https://github.com/hyprwm/hyprpolkitagent.git
