@@ -1,3 +1,47 @@
+hyprland-unstable (0.55.0~1ppa1+git202605161214-614671e4) noble; urgency=medium
+
+  * Update to main 614671e4
+  * 614671e4 config/lua: add get_loaded_plugins (#14582)
+  * ce0ebcc4 renderer: fix border cm for mirroring (#14574)
+  * a358f2df desktop/windowrule: add silent option to monitor effect
+    (#14357)
+  * a599248d input/tablet: add TabletTool config options for eraser
+    button and tool pressure (#14110)
+  * cc0d3f63 config/values: default no_hardware_cursors to 2 (#14575)
+  * d6affc35 protocols/grab: fix refocus to unreachable windows (#14555)
+  * 96de3464 windows/focus: differentiate fullscreen focus reason into
+    default and layout handled reasons. (#14370)
+  * b74b1f93 config/lua: use ref for workspace destroy events (#14562)
+  * 805f7bf4 tests: check that we can auto-group floating windows
+    (#14453)
+  * a45fc649 xwayland: lock focus while dragging an xwayland window
+    (#12051)
+  * b1c58d31 config/lua: revert "restrict package module loading to lua-
+    only modules (#14526)" (#14533)
+  * 8643d5b7 config/lua: restrict package module loading to lua-only
+    modules (#14526)
+  * 5b8106d2 lua/objects: add cm and reserved properties to monitor
+    (#14523)
+  * 2d21fa3e input: properly make input-blocked windows inaccessible
+    (#14517)
+  * 998d3af0 algo/floating: do not alter pinned windows' state on ws
+    move (#14513)
+  * 3e7ce667 monitor: fix top-layer bar visibility on workspace change
+    with scrolling-layout fullscreen (#14425)
+  * c9e56d76 tests: fix broken test and flakiness (#14506)
+  * 9099ac31 groups: sync window monitor/workspace when added to a group
+    (#14478)
+  * 3a8ac907 nix/module: link /share path
+  * b034fa53 flake.lock: update aquamarine
+  * 0cce82ee render/gl/framebuffer: fix swizzle comparisons (#14481)
+  * 9a3aed9b pointer: fix cursor bounds not updating on monitor layout
+    changes (#14393)
+  * 690ac842 [gha] Nix: update inputs
+  * f0d9f899 monitor: don't set back to 8 bit when applying rules
+    (#14404)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 May 2026 12:14:12 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202605121940-d61c9691) noble; urgency=medium
 
   * Update to main d61c9691
