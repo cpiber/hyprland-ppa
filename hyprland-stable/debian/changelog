@@ -1,3 +1,20 @@
+hyprland (0.55.2-1ppa1) noble; urgency=medium
+
+  * v0.55.2 Update to release 0.55.2
+  * 39d7e209 version: bump to 0.55.2
+  * d165363c layout/WindowTarget: fix crash when toggling float on
+    oversized windows (#14587)
+  * 1f8086ad renderer: fix border cm for mirroring (#14574)
+  * 850f30cc config/values: default no_hardware_cursors to 2 (#14575)
+  * fd545061 protocols/grab: fix refocus to unreachable windows (#14555)
+  * d5775135 config/lua: use ref for workspace destroy events (#14562)
+  * 60d6e61f xwayland: lock focus while dragging an xwayland window
+    (#12051)
+  * 70f32e7e config/lua: revert "restrict package module loading to lua-
+    only modules (#14526)" (#14533)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 May 2026 15:14:05 +0200
+
 hyprland (0.55.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.55.1
