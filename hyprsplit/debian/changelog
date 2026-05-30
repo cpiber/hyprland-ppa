@@ -1,3 +1,11 @@
+hyprsplit (0.54.3~1ppa1+git202605301122-0fc01e7) noble; urgency=medium
+
+  *  Update to main 0fc01e7
+  * 0fc01e7 feat: support lua in nix (#83)
+  * 2101583 support binds.workspace_back_and_forth
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 May 2026 11:22:45 +0200
+
 hyprsplit (0.54.3~1ppa1+git202605121941-ea230fcbuild1) noble; urgency=medium
 
   * Rebuild for unstable

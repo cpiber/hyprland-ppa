@@ -1,3 +1,13 @@
+hyprland-plugins (0.55.0~1ppa1+git202605301122-1cb37fa) noble; urgency=medium
+
+  *  Update to main 1cb37fa
+  * 1cb37fa hyprbars: add bar_text_weight config option (#669)
+  * b324783 bars: fix fg_color not working with lua (#666)
+  * f1569ef borderspp: avoid adding multiple borders when reopening
+    windows (#667)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 May 2026 11:22:00 +0200
+
 hyprland-plugins (0.55.0~1ppa1+git202605161214-90e66ba) noble; urgency=medium
 
   * Update to main 90e66ba

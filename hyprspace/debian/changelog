@@ -1,3 +1,15 @@
+hyprspace (0.50.0~1ppa1+git202605301122-c109256) noble; urgency=medium
+
+  *  Update to main c109256
+  * c109256 Merge pull request #231 from colonelpanic8/codex/defer-
+    hyprspace-initial-reload
+  * bf2ef21 Clip Hyprspace overview surfaces per thumbnail
+  * 2ca4f1a Fix overview layout crashes on Hyprland 0.55
+  * a9d7685 Fix Hyprland 0.55 startup config reload crash
+  * 5f12222 Fix: Compatibility with Hyprland v0.55.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 May 2026 11:22:29 +0200
+
 hyprspace (0.50.0~1ppa1+git202604052220-12ddde0build5) noble; urgency=medium
 
   * Rebuild for unstable
