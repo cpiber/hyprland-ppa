@@ -1,3 +1,31 @@
+aquamarine (0.12.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.0
+  * 01eeae1 version: bump to 0.12.0
+  * 5b7c8f9 drm: fix crash on null crtc in getGammaSize/getDeGammaSize
+    (#315)
+  * ff9b933 drm: fix DisplayLink/evdi hotplug by allowing evdi DRM
+    backends to operate without an EGL renderer. (#310)
+  * 1070d0b backend: remove trailing newlines from libseat and libinput
+    logs (#309)
+  * ab2b0af session: Add AQ_NO_KMS_REQUIREMENT environment variable for
+    bypassing KMS requirement (#255)
+  * be35f75 output/state: init ctm to identity (#303)
+  * 27b35e7 drm: revert "re-read EDID on resume to detect dock port
+    swaps (#298)"
+  * f44fecf drm: fall back to first render node on single-renderD
+    systems when parent-syspath match fails (#291)
+  * d5a4411 drm: re-read EDID on resume to detect dock port swaps (#298)
+  * 6f406e8 drm: clear stale color state on modeset (#297)
+  * 574e2fe backend: avoid duplicate auto-named outputs (#296)
+  * e33e0d8 drm: skip unchanged connector_state on page-flips (#295)
+  * 813c1e8 FormatUtils: null-check drmGetFormatModifierName result
+    (#287)
+  * f5cdaa8 drm: CRTC starvation recovery + clear stale page-flip state
+    after suspend (#254)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 May 2026 10:43:28 +0200
+
 aquamarine (0.11.0-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
