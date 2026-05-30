@@ -1,3 +1,97 @@
+hyprland-unstable (0.55.0~1ppa1+git202605301121-99306c24) noble; urgency=medium
+
+  * Update to main 99306c24
+  * 99306c24 config: add path in stdout log disabling message (#14793)
+  * 18ca56b8 core: fix a few fd leaks (#14870)
+  * d938fbf3 debug: replace sizeof(x)/sizeof(x[0]) with std::size
+    (#14871)
+  * 0dcec0c7 protocols: bump xdg-decoration to rev 2 (#14869)
+  * cbcddf28 monitor: revert "set format back after failing DS
+    activation (#14168)" (#14864)
+  * 54d4d3a9 desktop/window: fix wrong scale being applied after
+    workspace rules (#14832)
+  * ac7c8b93 binds/submap: fix submap enter bind == bind inside submap
+    (#14856)
+  * d03f01f9 desktop/popup: fix reposition artifacts (#14820)
+  * 558936e2 renderer: send frame callbacks on presented if no change
+    (#14849)
+  * ebc1816d xwayland: fix ICCCM synthetic event comparison (#14827)
+  * faecc595 config/monitor: allow per-monitor vrr to inherit misc:vrr
+    (#14746)
+  * 293aa7c1 protocols/fractional-scale: track if scale is known and
+    send scales eagerly when known (#14798)
+  * 6fcfd9d6 screencopy: fix screenshare copyfb pending frames (#14837)
+  * 023169e1 drm: refactor merging and exporting fences (#14808)
+  * 898b8779 i18n: Adjust some awkward English (#14831)
+  * 2896aa98 AGENTS: add agents.md (#14835)
+  * f3d81e01 code: fix clang-format
+  * 864dc89c input: aggregate modifier states from all keyboards on
+    focus enter (#14633)
+  * 3e9b2dd1 tests: some code improvements  (#14774)
+  * 5fc23ab2 layout/scrolling: check if cursor overlaps with target in
+    focusOnInput (#14687)
+  * 76b9f4c7 compositor: fix monitor re-enabling on hotplug when dpms is
+    off (#14818)
+  * bb3353f8 layout/scrolling: fix prop refresh triggering hard input
+    (#14594)
+  * 457eb66d hyprpm: allow distro packagers to provide extra cflags for
+    building plugins (#14755)
+  * d8008a81 layersurface: inform layer surfaces of scale changes
+    (#14771)
+  * 2dcb10a4 internal: pass lua includes to hyprtester plugin (#14747)
+  * d5ff0f08 config: fix VRR not applying on runtime change (#14744)
+  * abd4abb5 i18n: completed italian translation and fixed some previous
+    italian translation inaccuracies (#14763)
+  * 55b404b0 algo/master: guard target in remove (#14756)
+  * 342f5bd9 input: fix inverted scrollwheel direction in keybinds
+    (#14749)
+  * ab567fc8 [gha] Nix: update inputs
+  * 4c15c1c9 protocols/background-effect: don't automatically destroy
+    object on surface destroy (#14758)
+  * 48453f27 cleanup: remove comment made for self (#14724)
+  * 040535de compositor: fix render unfocused for subsurfaces (#14718)
+  * 0fd20be8 desktop/windowRule: add `no_auto_hdr` window rule (#14694)
+  * be2659c1 keybinds: store hit binds first, then execute callbacks
+    (#14743)
+  * c5154131 config/lua: report errors better without check* (#14695)
+  * 4c89bfc2 renderer: add wrapping options to SRenderData (#14666)
+  * 8b7110cc screenshare: revert "only copy fb for pending frames
+    (#14672)"
+  * dded4024 internal: fix null deref in setWindowFullscreenInternal
+    when fullscreen state stale (#14725)
+  * ba578321 docs/hyprctl: update example code for hyprctl dispatch
+    (#14656)
+  * 95d9ae23 config/monitor: refresh splash texture on monitor reload
+    (#14632)
+  * 51d2bb9d renderer: minor shader fixes (#14584)
+  * 1c0a7d18 config/lua: add physicalWidth and physicalHeight to lua's
+    Monitor (#14657)
+  * 203a1215 scrolling/fullscreen: fix fullscreen/maximise behaviour,
+    existing bugs with scrolling fullscreen (#14387)
+  * 38a9f5b9 desktop/windowRule: use original monitorstr if not silent
+    (#14621)
+  * 004fbb16 i18n: update italian translation (#14556)
+  * ba473375 screenshare: only copy fb for pending frames (#14672)
+  * 01ab0474 meta/lua: add missing notification text field and make
+    timeout required (#14665)
+  * 4e395571 config: fix decoration values to refresh on runtime
+    eval/keyword change (#14590)
+  * e6a719a6 texture: cache G and A swizzle channels aswell (#14605)
+  * 93b83c19 meta/lua: Gestures can accept a lua function (#14649)
+  * 6a8c7613 renderer: intersect blur region with bbox to normalize it
+    (#14639)
+  * 24c5c13c keybinds: set a fallback releasePending flag for special
+    lua binds (#14600)
+  * 76eeb9c4 decoration/glow: fix visibility when no decorate is set
+    (#14602)
+  * 7d1e481b protocols: implement ext-background-effect-v1 protocol
+    (#13211)
+  * 8521487d build: bump libinput to 1.29 (#14593)
+  * d56a9444 layout/WindowTarget: fix crash when toggling float on
+    oversized windows (#14587)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 May 2026 11:21:32 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202605161214-614671e4) noble; urgency=medium
 
   * Update to main 614671e4
