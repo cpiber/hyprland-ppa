@@ -1,3 +1,58 @@
+hyprland-unstable (0.55.0~1ppa1+git202606042116-7c721d5c) noble; urgency=medium
+
+  * Update to main 7c721d5c
+  * 7c721d5c config/lua: expose monitor serial/available modes (#14973)
+  * 04c290ef internal: fix filename string not being computed at compile
+    time in RASSERT and GLCALL macros (#14972)
+  * f5ef95f2 hyprtester: Fix some failing tests terminating early
+    (#14969)
+  * bb13110b hyprctl: hide C++ symbols by default (#14959)
+  * 7994acbe hyprpm: hide C++ symbols by default (#14958)
+  * 04435fb8 layout/dragController: reset floating offset on ended drag
+    (#14940)
+  * 146f2289 algo/scrolling: add a "fit expand" layout message (#14761)
+  * bf6f2c92 renderer/gl: release failed fence syncs (#14956)
+  * adaa22da monitor: move floating windows with layout changes (#14928)
+  * be64fc1c monitor: retry transient mode selection failures (#14927)
+  * dfbf1843 compositor: give preference to same-workspace windows in
+    getWindowInDirection (#14941)
+  * 08b03845 protocols/pointerwarp: allow warp on layer surfaces
+    (#14949)
+  * 61321ce5 jeremy: fix auto-generating hyprlang instead of lua config
+    file by default (#14944)
+  * 7df262e9 elementrenderer: allow smaller viewports near the top/left
+    edges of the buffer (#14891)
+  * 55133fcc main: gain SCHED_RR and drop CAP_SYS_NICE earlier (#14897)
+  * 13be9a33 ci: upgrade actions/checkout to v6 (#14885)
+  * 1cffdcf0 scripts: fixup static asan patch (#14889)
+  * b34bbb4f config/actions: fix null derefs in pin dispatcher (#14914)
+  * 3a692802 renderer/gl: skip invalidation clear on empty damage
+    (#14921)
+  * 500e8048 ci: upgrade github/codeql-action/upload-sarif to v4
+    (#14886)
+  * 12f93844 ci: upgrade actions/upload-artifact to v7 (#14887)
+  * 5d161c7b ci: upgrade stefanzweifel/git-auto-commit-action to v7
+    (#14888)
+  * 87971198 renderer: add a motion blur option to windows (#14911)
+  * 0d47a444 lua/monitor: add set_ functions for raw workspace
+    management (#14875)
+  * f51c9675 renderer: fix screenshader with fp16 (#14918)
+  * 515b883d internal: replace O_CLOEXEC with FD_CLOEXEC for file
+    descriptor flags (#14909)
+  * 34fddc94 hyprtester: add -t option for running specific tests
+    (#14846)
+  * d29653ce hyprctl: add onCreatedEmpty field to workspacerules
+    dispatcher data (#14826)
+  * db9616d6 AGENTS: include m_ rule
+  * e43b163f hyprctl: add config full-reload for performing a ground-up
+    reload (#14748)
+  * 08b5c22b desktop/window: allow focus while held to non-OR X11
+    windows (#14821)
+  * 9940bf72 config/propRefresher: schedule frames on screen shader
+    refresh (#14874)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 04 Jun 2026 21:16:29 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202605301121-99306c24) noble; urgency=medium
 
   * Update to main 99306c24
