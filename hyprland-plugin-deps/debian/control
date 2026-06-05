@@ -41,6 +41,7 @@ Depends:
  libre2-dev,
  libmuparser-dev,
  liblcms2-dev,
+ liblua5.4-dev,
  libglaze-dev (>= 7.0.0),
  libhyprlang-dev (>= 0.6.7),
  libhyprcursor-dev (>= 0.1.7),
