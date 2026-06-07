@@ -1,3 +1,82 @@
+hyprland (0.55.3-1ppa1) noble; urgency=medium
+
+  * v0.55.3 Update to release 0.55.3
+  * fe5fe79a [gha] Nix: update inputs
+  * ae50664a version: bump to 0.55.3
+  * 3a67eb79 config/lua: improve error handle-ability with Lua `require`
+    (#14937)
+  * 70cd5367 renderer: fix `cursor:zoom_rigid` being ignored with
+    detached camera (#14995)
+  * e0571994 desktop/rule: optimize mapping rule properties to strings
+    and engines (#14945)
+  * ff41b04e renderer: reduce per-frame heap allocations (#14932)
+  * 0e21e051 layout/dragController: reset floating offset on ended drag
+    (#14940)
+  * bdf0aaa5 renderer/gl: release failed fence syncs (#14956)
+  * 6a5a3695 monitor: move floating windows with layout changes (#14928)
+  * 112da467 monitor: retry transient mode selection failures (#14927)
+  * 4cfead2b compositor: give preference to same-workspace windows in
+    getWindowInDirection (#14941)
+  * 44a70fe9 jeremy: fix auto-generating hyprlang instead of lua config
+    file by default (#14944)
+  * c2ed371e main: gain SCHED_RR and drop CAP_SYS_NICE earlier (#14897)
+  * 50352e58 config/actions: fix null derefs in pin dispatcher (#14914)
+  * 93daf6e9 renderer/gl: skip invalidation clear on empty damage
+    (#14921)
+  * 7e2407e4 renderer: fix screenshader with fp16 (#14918)
+  * e8c01639 internal: replace O_CLOEXEC with FD_CLOEXEC for file
+    descriptor flags (#14909)
+  * 84ccaf3d hyprctl: add config full-reload for performing a ground-up
+    reload (#14748)
+  * e2ebdcf5 desktop/window: allow focus while held to non-OR X11
+    windows (#14821)
+  * 8bc3925e config/propRefresher: schedule frames on screen shader
+    refresh (#14874)
+  * fc8c3535 core: fix a few fd leaks (#14870)
+  * f8983230 protocols: bump xdg-decoration to rev 2 (#14869)
+  * 2580e8aa desktop/window: fix wrong scale being applied after
+    workspace rules (#14832)
+  * 3ef4e0dc binds/submap: fix submap enter bind == bind inside submap
+    (#14856)
+  * b9e7d097 desktop/popup: fix reposition artifacts (#14820)
+  * d15b64e9 renderer: send frame callbacks on presented if no change
+    (#14849)
+  * b2632eb4 xwayland: fix ICCCM synthetic event comparison (#14827)
+  * 55b136e3 protocols/fractional-scale: track if scale is known and
+    send scales eagerly when known (#14798)
+  * acf09721 screencopy: fix screenshare copyfb pending frames (#14837)
+  * 91b45de6 input: aggregate modifier states from all keyboards on
+    focus enter (#14633)
+  * a5acafac layout/scrolling: check if cursor overlaps with target in
+    focusOnInput (#14687)
+  * 5b6729c9 compositor: fix monitor re-enabling on hotplug when dpms is
+    off (#14818)
+  * 44317d08 layersurface: inform layer surfaces of scale changes
+    (#14771)
+  * 52bd8c48 config: fix VRR not applying on runtime change (#14744)
+  * 0bed0d42 algo/master: guard target in remove (#14756)
+  * 17ca8e63 compositor: fix render unfocused for subsurfaces (#14718)
+  * 14cb67b8 keybinds: store hit binds first, then execute callbacks
+    (#14743)
+  * 7087fe2b config/lua: report errors better without check* (#14695)
+  * 5ecd8393 internal: fix null deref in setWindowFullscreenInternal
+    when fullscreen state stale (#14725)
+  * 71bb4055 config/monitor: refresh splash texture on monitor reload
+    (#14632)
+  * 308bac5d renderer: minor shader fixes (#14584)
+  * e68def58 meta/lua: add missing notification text field and make
+    timeout required (#14665)
+  * f88569b1 config: fix decoration values to refresh on runtime
+    eval/keyword change (#14590)
+  * 7cb54c91 texture: cache G and A swizzle channels aswell (#14605)
+  * 10360499 meta/lua: Gestures can accept a lua function (#14649)
+  * acdad4ed keybinds: set a fallback releasePending flag for special
+    lua binds (#14600)
+  * c1110437 decoration/glow: fix visibility when no decorate is set
+    (#14602)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 07 Jun 2026 20:01:30 +0200
+
 hyprland (0.55.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies
