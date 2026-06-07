@@ -1,3 +1,9 @@
+hy3 (0.55.0~1ppa1+git202605161214-a7282dbbuild3) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 07 Jun 2026 19:58:11 +0200
+
 hy3 (0.55.0~1ppa1+git202605161214-a7282dbbuild2) noble; urgency=medium
 
   *  Rebuild for unstable

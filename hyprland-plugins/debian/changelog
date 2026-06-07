@@ -1,3 +1,9 @@
+hyprland-plugins (0.55.0~1ppa1+git202605301122-1cb37fabuild2) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 07 Jun 2026 19:57:50 +0200
+
 hyprland-plugins (0.55.0~1ppa1+git202605301122-1cb37fabuild1) noble; urgency=medium
 
   *  Rebuild for unstable
