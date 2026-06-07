@@ -1,3 +1,19 @@
+hyprland-unstable (0.55.0~1ppa1+git202606071957-20ee7553) noble; urgency=medium
+
+  * Update to main 20ee7553
+  * 20ee7553 meta/lua: add proper lua stub types to the general config
+    (#14993)
+  * fcbbd6d4 config/lua: improve error handle-ability with Lua `require`
+    (#14937)
+  * 47d4897d renderer: fix `cursor:zoom_rigid` being ignored with
+    detached camera (#14995)
+  * ef9b6235 event/bus: add specialActive event to workspace (#14971)
+  * 60804cac desktop/rule: optimize mapping rule properties to strings
+    and engines (#14945)
+  * 7b422dd2 renderer: reduce per-frame heap allocations (#14932)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 07 Jun 2026 19:57:34 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202606042116-7c721d5c) noble; urgency=medium
 
   * Update to main 7c721d5c
