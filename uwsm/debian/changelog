@@ -1,3 +1,22 @@
+uwsm (0.26.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.26.4
+  * 3294dd3 chore: Release 0.26.4
+  * abe3569 docs: update readme
+  * a9e5954 fix: make CompGlobals.id_unit_string accessible to autoready
+    fork again
+  * b855d6d fix(may-start): move up login shell check
+  * 7ae0fa6 chore: bump version to git
+  * e65a997 chore: Release 0.26.3
+  * be914dc feat: support DESKTOP_ENTRY_* metadata vars in app wrapper
+  * 9af03b3 fix: Cleaned up mangowc plugin (#207)
+  * 631ec48 chore: Release 0.26.2
+  * 5eeff3b docs: update readme
+  * 825e98c feat: add mango plugin to uwsm (#205)
+  * cb90edc chore: bump version to git
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 10 Jun 2026 22:16:59 +0200
+
 uwsm (0.26.1-1ppa2) noble; urgency=medium
 
   * Fix build
