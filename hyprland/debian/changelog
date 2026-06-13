@@ -1,3 +1,63 @@
+hyprland-unstable (0.55.0~1ppa1+git202606131641-9556660e) noble; urgency=medium
+
+  * Update to main 9556660e
+  * 9556660e helpers: remove old header (#15095)
+  * a582a530 desktop/window: fix small crash on commit without a
+    toplevel (#15087)
+  * d5b8d728 config: fix description matching for default workspaces
+    (#15074)
+  * 7dcdb8d7 hyprtester: misc bug fixes & refactorings (#15025)
+  * 70fd412d state/workspace: refactor workspace state, add querying,
+    move off of CCompositor (#15075)
+  * 4d7ae075 monitor: refactor inheritance, expand query, add unit tests
+    for position and query (#15073)
+  * fed8884d algo/master: respect center_master_fallback when resizing
+    slave cols (#14961)
+  * aa3051bc meta/lua: fix capture of lua events (#15071)
+  * 6d6d1ca5 state/monitorQuery: implement monitor query, move logic off
+    of Compositor (#15070)
+  * 68e3e404 config/lua: fix layout ctx checking the wrong argument
+    (#15061)
+  * a80e89fc config/lua: make resizewindow param accessible to lua
+    (#14658)
+  * 099fbc70 gestures: configure client to final size on
+    fullscreen/float gesture completion (#14981)
+  * 2acc9065 algo/scrolling: add new `fit_into_view` layout msg (#14991)
+  * 9f259d93 renderer: add tonemap settings (#14903)
+  * 08e2b6e6 renderer: fix SEGV on monitor disconnect (#15048)
+  * b6633c41 protocols/foreignToplevel: fix class and title reporting on
+    map and afterwards (#15037)
+  * 71b2fbe1 groups: fix border color for locked groups (#15015)
+  * 4cbb7ded i18n: reduce the size of the machine code generated from
+    CI18nEngine constructor (#15036)
+  * 91288a78 logger: avoid multiple instances of static variables being
+    created in CLogger::log() (#15012)
+  * 4aff8ba4 internal: extract rarely executed code from RASSERT macro
+    to a non-inline function (#15013)
+  * 0aa7a843 state/monitor: refactor monitor state, init fallback state
+    (#14547)
+  * a11a718a config/monitorRule: default scale to auto (#15019)
+  * 78356000 gestures: fix toggle cursorZoom sharing a single on/off
+    flag (#14998)
+  * 1d11bd92 protocols/pointerWarp: fix crash when warp is on a non
+    interactive surf (#15021)
+  * 2f99f349 socket2: add back changefloatingmode and togglegroup events
+    (#14089)
+  * 3a05ece3 desktop/window: fix unwanted reswallow (#12993)
+  * 50b5169b plugins: add api for registering and dispatching events
+    (#14734)
+  * 76124916 gestures: clamp toggle cursorZoom like mult and live
+    (#14997)
+  * 9236465b gestures: fix live cursorZoom anchoring to a mid-animation
+    value (#14996)
+  * a4114fdf render: rollback failed direct scanout state (#14987)
+  * a4797618 [gha] Nix: update inputs
+  * 3852af3b assets: update lockdead png with new dispatch commands
+    (#14213)
+  * 367beccd desktop/popup: fix subsurface scaling (#14936)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Jun 2026 16:41:04 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202606071957-20ee7553) noble; urgency=medium
 
   * Update to main 20ee7553
