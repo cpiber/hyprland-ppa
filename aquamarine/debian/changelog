@@ -1,3 +1,14 @@
+aquamarine (0.12.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.1
+  * 0666963 version: bump to 0.12.1
+  * 6ecde03 backend/headless: fix framecb never firing
+  * f5cca73 drm: avoid redundant identity ctm modesets (#320)
+  * 1699271 headless: don't use raw this in lambda capture without
+    checking
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Jun 2026 13:30:38 +0200
+
 aquamarine (0.12.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.12.0
