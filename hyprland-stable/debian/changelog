@@ -1,3 +1,9 @@
+hyprland (0.55.4-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Jun 2026 17:17:53 +0200
+
 hyprland (0.55.4-1ppa1) noble; urgency=medium
 
   * v0.55.4 Update to release 0.55.4
