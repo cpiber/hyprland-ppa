@@ -1,3 +1,28 @@
+hyprland (0.55.4-1ppa1) noble; urgency=medium
+
+  * v0.55.4 Update to release 0.55.4
+  * a0136d8c [gha] Nix: update inputs
+  * 0ca85bc4 version: bump to 0.55.4
+  * c2b07d0c config/lua: fix layout ctx checking the wrong argument
+    (#15061)
+  * 5d6f2af3 gestures: configure client to final size on
+    fullscreen/float gesture completion (#14981)
+  * c3458016 renderer: fix SEGV on monitor disconnect (#15048)
+  * 968fc140 protocols/foreignToplevel: fix class and title reporting on
+    map and afterwards (#15037)
+  * c91db460 groups: fix border color for locked groups (#15015)
+  * bb882797 gestures: fix toggle cursorZoom sharing a single on/off
+    flag (#14998)
+  * 8cefc8b6 protocols/pointerWarp: fix crash when warp is on a non
+    interactive surf (#15021)
+  * d3ba7be9 gestures: clamp toggle cursorZoom like mult and live
+    (#14997)
+  * 796f3a6b gestures: fix live cursorZoom anchoring to a mid-animation
+    value (#14996)
+  * 3043ebe8 desktop/popup: fix subsurface scaling (#14936)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Jun 2026 13:28:10 +0200
+
 hyprland (0.55.3-1ppa1) noble; urgency=medium
 
   * v0.55.3 Update to release 0.55.3
