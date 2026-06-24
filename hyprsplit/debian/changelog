@@ -1,3 +1,10 @@
+hyprsplit (0.54.3~1ppa1+git202606241957-6b00b67) noble; urgency=medium
+
+  *  Update to main 6b00b67
+  * 6b00b67 update nix install instructions (#86)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 24 Jun 2026 19:57:16 +0200
+
 hyprsplit (0.54.3~1ppa1+git202606071958-8f0627b) noble; urgency=medium
 
   *  Update to main 8f0627b

@@ -1,3 +1,16 @@
+hyprland-plugins (0.55.0~1ppa1+git202606241956-1f90c67) noble; urgency=medium
+
+  *  Update to main 1f90c67
+  * 1f90c67 hyprfocus: add granular focus animation control (#678)
+  * 5717e7c hyprbars: fix build after hyprland monitor refactor pt.2
+    (#680)
+  * 4a622b4 hyprpm: add pin for 0.55.4
+  * f9b8b61 hyprbars: fix build after hyprland state/monitor refactor
+    (#677)
+  * 8c3d2be hyprpm: update pins
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 24 Jun 2026 19:56:31 +0200
+
 hyprland-plugins (0.55.0~1ppa1+git202605301122-1cb37fabuild2) noble; urgency=medium
 
   *  Rebuild for unstable

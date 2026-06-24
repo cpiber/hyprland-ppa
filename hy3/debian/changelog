@@ -1,3 +1,10 @@
+hy3 (0.55.0~1ppa1+git202606241956-ded5e16) noble; urgency=medium
+
+  *  Update to master ded5e16
+  * ded5e16 fixup: chase churn
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 24 Jun 2026 19:56:46 +0200
+
 hy3 (0.55.0~1ppa1+git202605161214-a7282dbbuild3) noble; urgency=medium
 
   *  Rebuild for unstable
