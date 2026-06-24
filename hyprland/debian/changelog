@@ -1,3 +1,71 @@
+hyprland-unstable (0.55.0~1ppa1+git202606241956-87cd2a5f) noble; urgency=medium
+
+  * Update to main 87cd2a5f
+  * 87cd2a5f protocols/dmabuf: don't send mods on v4 and above (#15189)
+  * 001f7926 protocols/toplevelExport: null-check pixel format (#15203)
+  * fff2db2e opengl: optimize CShaderLoader::getDefines() (#15212)
+  * 648a5e82 decoration/glow: add gradient and angle animation (#15208)
+  * 1d756ae1 algo/master: fix drag-swap with two tiled windows (#14974)
+  * 85e1242d internal: minor spelling fixes (#15199)
+  * 9c1f454b input/window: fix dragging pointer-locked and fullscreen
+    game windows (gamescope) (#15165)
+  * 98ebf05f desktopAnimation: fix crash in startAnimation on ws with no
+    parent (#15224)
+  * 049595e1 config: monitors default to "preferred" res, "auto" pos and
+    scale (#15193)
+  * 5a7078d2 internal: fix bugs revealed by hu update
+  * 8f91ba92 tests: fix failing cases (#15200)
+  * cbfc3044 output: simplify trying DRM formats (#15198)
+  * 735c0e02 config/lua: do not wrap std::function in std::optional
+    (#15197)
+  * d486a5fe drm: init sync_merge_data::name field directly with a
+    string literal (#15153)
+  * 01e4e99c config/lua: use function pointers instead of std::function
+    for fields (#15154)
+  * 9262367c CI: do not auto-comment on PRs from contributors (#15183)
+  * 7a75ce5f config/values: update `general:layout` description (#15175)
+  * b77ce773 output/icc: avoid unnecessary VCGT resampling (#15144)
+  * ae1690c2 renderer/rbo: avoid nullptr deref (#15167)
+  * 2b81ad3b desktop/windowRule: add a suppressevent for X11 configure
+    requests (#13313)
+  * 2d190ba7 config/propRefresher: add capability to execute scheduled
+    prop refresh immediately with lua helper function, add event for
+    prop refresh (#14990)
+  * 5b47c782 binds/submap: fix mouse binds inside submaps (#15060)
+  * 88262e1f tests/misc: remove isDirection(char)
+  * 61d6ec78 state/monitorQuery: fix monitor desc selector being treated
+    as "down" selector (#15109)
+  * e5c721f2 renderer: unbreak text rendering (#15127)
+  * dd09b617 renderer: optimize text rendering (#15124)
+  * 179c2bce internal: replace std::vformat() with std::format() when
+    the format string is known at the compile time (#15119)
+  * d59e294a hyprctl: use .transform() instead of .and_then() (#15116)
+  * abbbed32 internal: do not use std::make_pair() (#15122)
+  * f03c245e monitor: don't refresh background textures on small changes
+    (#15117)
+  * bdf78d7a internal: replace PI macro with std::numbers::pi (#15115)
+  * 05f60fd5 hyprctl: remove redundant mutex locking from
+    SRollingLogFollow::get() (#15114)
+  * 9ed9f507 shaders: replace SHADERS std::map with a constexpr sorted
+    std::array (#15113)
+  * a23083e7 state: extract layout control functions from compositor
+    (#15104)
+  * c123867e decoration/shadow: add gradient and angle animation
+    (#14809)
+  * 5ef47bd4 algo/dwindle: fix moving windows across a split (#15079)
+  * 1673ae94 protocols/vicinae-hotkey-v1: implement client-managed
+    global shortcuts (#15010)
+  * 7a2a6460 buffer: wait on seperate fences instead of merging (#15088)
+  * 05922ec7 input/dnd: fix touch-driven drag-and-drop (#15077)
+  * f719bd67 hyprctl: add interactive Lua REPL mode (#15043)
+  * d1218727 desktop/windowRule: add `stableid:` window selector
+    (#14984)
+  * 259866f6 input: fix missing a pointer frame after absolute pointer
+    motion (#15003)
+  * 0fa36aeb hyprpm: sanitize commit pin targets (#15094)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 24 Jun 2026 19:56:01 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202606131641-9556660e) noble; urgency=medium
 
   * Update to main 9556660e

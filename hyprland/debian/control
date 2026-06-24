@@ -34,6 +34,7 @@ Build-Depends:
  libxcursor-dev,
  libtomlplusplus-dev,
  libre2-dev,
+ libreadline-dev,
  libmuparser-dev,
  liblcms2-dev,
  libglaze-dev (>= 7.0.0),
