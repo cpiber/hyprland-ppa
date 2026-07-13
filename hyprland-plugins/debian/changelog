@@ -1,3 +1,12 @@
+hyprland-plugins (0.55.0~1ppa1+git202607132125-a2c7764) noble; urgency=medium
+
+  *  Update to main a2c7764
+  * a2c7764 hyprfocus: chase hyprland (#686)
+  * 1556934 hyprbars and hyprfocus: chase Hyprland (#685)
+  * 71b8953 all: chase Hyprland (#683)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 13 Jul 2026 21:25:04 +0200
+
 hyprland-plugins (0.55.0~1ppa1+git202606241956-1f90c67) noble; urgency=medium
 
   *  Update to main 1f90c67

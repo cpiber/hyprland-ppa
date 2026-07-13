@@ -1,3 +1,10 @@
+hy3 (0.55.0~1ppa1+git202607132125-81f63a0) noble; urgency=medium
+
+  *  Update to master 81f63a0
+  * 81f63a0 fixup: add 0.55.2-0.55.4 to hyprpm lockfile
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 13 Jul 2026 21:25:20 +0200
+
 hy3 (0.55.0~1ppa1+git202606241956-ded5e16) noble; urgency=medium
 
   *  Update to master ded5e16
