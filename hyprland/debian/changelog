@@ -1,3 +1,9 @@
+hyprland-unstable (0.55.0~1ppa1+git202607132118-402eceea.1) noble; urgency=medium
+
+  * Fix build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 13 Jul 2026 22:12:50 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202607132118-402eceea) noble; urgency=medium
 
   * Update to main 402eceea

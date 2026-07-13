@@ -37,3 +37,24 @@ Index: source/src/config/shared/parserUtils/ParserUtils.cpp
      if (!res)
          return std::unexpected(std::format("invalid hex \"{}\"", value));
      return *res;
+Index: source/src/helpers/MiscFunctions.cpp
+===================================================================
+--- source.orig/src/helpers/MiscFunctions.cpp
++++ source/src/helpers/MiscFunctions.cpp
+@@ -23,6 +23,7 @@
+ #include <iomanip>
+ #include <sstream>
+ #include <fstream>
++#include <algorithm>
+ #ifdef HAS_EXECINFO
+ #include <execinfo.h>
+ #endif
+@@ -838,7 +839,7 @@ bool truthy(const std::string& str) {
+     });
+ 
+     return [&](auto&&... prefixes) -> bool {
+-        return (... || std::ranges::starts_with(str_view, prefixes));
++        return (... || (std::ranges::mismatch(str_view, prefixes).in2 == std::ranges::end(prefixes)));
+     }("true"sv, "yes"sv, "on"sv);
+     // clang-format on
+ }
