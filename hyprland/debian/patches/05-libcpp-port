@@ -2,7 +2,7 @@ Index: source/hyprctl/src/main.cpp
 ===================================================================
 --- source.orig/hyprctl/src/main.cpp
 +++ source/hyprctl/src/main.cpp
-@@ -271,7 +271,7 @@ int requestIPC(std::string_view filename
+@@ -277,7 +277,7 @@ int requestIPC(std::string_view filename
      sockaddr_un serverAddress = {0};
      serverAddress.sun_family  = AF_UNIX;
  
@@ -15,7 +15,7 @@ Index: source/src/xwayland/XWM.hpp
 ===================================================================
 --- source.orig/src/xwayland/XWM.hpp
 +++ source/src/xwayland/XWM.hpp
-@@ -217,7 +217,7 @@ class CXWM {
+@@ -216,7 +216,7 @@ class CXWM {
      std::vector<SP<CX11DataOffer>>            m_dndDataOffers;
  
      inline xcb_connection_t*                  getConnection() {

@@ -1,3 +1,130 @@
+hyprland-unstable (0.55.0~1ppa1+git202607132118-402eceea) noble; urgency=medium
+
+  * Update to main 402eceea
+  * 402eceea protocols: fix protocol null dereference paths (#15275)
+  * 5033ab95 cursor: transform hardware cursors within content bounds
+    (#14988)
+  * 2c3ed5f6 window: cache process environment lookups (#15264)
+  * 1eebdac3 config/lua: add lua-driven custom live gestures (#15393)
+  * 2633ecff algo/dwindle: do not remove node before assigning (#15373)
+  * 50d301d3 core/output: don't destroy bound wl_output resources on
+    same-name global replace (#15351)
+  * 2b6f6cb8 layout/monocle: fix `w[tv1]` workspace rule not working on
+    monocle layout (#15382)
+  * 7d90874c renderer/cm: fix blur clipping with HDR (#15371)
+  * 8684c154 glframebuffer: fix spurious incomplete framebuffer errors
+    (#15380)
+  * f4b9c1ab Tests/scroll: fix window hiding test  passing
+    inconsistently (#15384)
+  * c4cfe0e8 pointer: fix two stale cursor images clearings (#15376)
+  * f25f2ff0 ci: fix codeownersplus (#15383)
+  * e3ece119 config/actions: unfocus last window on changeWorkspace when
+    moving monitors (#15374)
+  * ef18043b layersurface: dont nullptr deref on compositor cleanup
+    (#15379)
+  * 824ed12c fullscreen: fix some bars remaining invisible when
+    unfullscreening (#15370)
+  * 10a34c4c start: re-show display lock died screen on restart after
+    crash (#15334)
+  * 128b2d50 config/lua: match lua output naming to hyprctl output and
+    match naming convention (#15367)
+  * 50e7fdd1 core: refactor fullscreen logic, improve maintainability
+    and add a lot of tests (#14705)
+  * a51a369f protocols/cm: implement WP CM v1.3 (#15026)
+  * 781d6070 config/lua: allow disabling workspace rules (#15362)
+  * 987caf88 config/lua: allow manual group control (#15363)
+  * 01f5c9ae crashreporter: fix SIGSEGV on dladdr1 failure (#15352)
+  * 9d284382 protocols/xdg-shell: add support for xdg interactive drags
+    (#15343)
+  * 6a8eb049 monitor: skip fallback monitor on recovery flag evaluation
+    (#15332)
+  * 7046c0ff layout/target: fix unmanaged configure loops in x11
+    (#15336)
+  * c44cf81f [gha] Nix: update inputs
+  * 54037140 input: disable libinput send events when pointer device is
+    disabled (#15327)
+  * 7a521461 input: fix wheel scroll events from virtual pointers being
+    dropped (#15319)
+  * 79834eee monitor: fix cursor default_monitor option (#15322)
+  * 1c87d9dc monitor: fix special fade state update (#15316)
+  * 14fa1fd0 core: various SHM handling fixes (#15315)
+  * 37b02954 compositor: allow to request focusing windows behind
+    fullscreen (#14942)
+  * 1a18ba41 animation: refactor manager, fixup desktopAnimationManager,
+    clean up code (#15302)
+  * 79d3a904 config/lua: add is_key_down and a key event (#14779)
+  * 420f112b ci: add code owners via codeowners-plus (#15261)
+  * 5b9931ae protocols: Fix crash when creating inert workspace resource
+    (#15303)
+  * 87604a7e config/lua: add hl.clear_crashed_lockscreen() and fix tty
+    instructions (#15299)
+  * 9350e341 crashReporter: don't skip trailing zeros in the stack trace
+    (#15300)
+  * 906e43e5 config/lua: add a change_id workspace API (#15298)
+  * 76123ac3 protocols: guard protocol callback resource lookups
+    (#15276)
+  * 9a74913d protocols: guard protocol output resource lookups (#15273)
+  * f747152f xwayland: avoid unmanaged geometry configure loop (#15280)
+  * 1b63ceec core: refactor more compositor state into separate classes
+    and states (#15282)
+  * a4284c1e internal: use std::lerp() (#15296)
+  * db0e0f0c internal: optimize Env::envEnabled() (#15295)
+  * 46e0b434 algo: prevent shadowing of `m_parent` (#15270)
+  * 254d6bae desktop/fadeout: extract bad logic, simplify fadeouts
+    (#15260)
+  * a72fcfb5 config/lua: fix missing event from know events lists
+    (#15232)
+  * bd61edda treewide: clean up and performance  (#15230)
+  * 1e15a7d9 eventmanager: handle partial IPC writes (#15262)
+  * 1340fcef renderer: harden damage handling and workspace color cache
+    (#15035)
+  * 75f558a5 dispatchers: fix fullscreen movefocus regression (#15226)
+  * 8149ba1d desktop/view: sync layout's m_box in clampWindowSize
+    (#15266)
+  * 685dbb3d internal: rename getWindows to getWindowCount to be more
+    descriptive. (#15268)
+  * 997780c8 internal: make ColorManagement constants inline to reduce
+    binary file size (#15267)
+  * 28bbe66d layout: harden workspace layout refresh during monitor
+    changes (#14893)
+  * 28a8005d desktop/view: ignore client maximize requests for tiled
+    windows (#13790)
+  * 39c78c2a hyprtester: improvements, remove some redundancy and other
+    things. (#15038)
+  * b8d910d8 renderer: reject invalid damage before region handling
+    (#15242)
+  * c321bb0d perf: avoid unnecessary copies and allocation (#15147)
+  * ca877bad desktop: move window manipulation functions out of
+    compositor (#15256)
+  * f048359d desktop: extract a lot of view state from compositor
+    (#15245)
+  * 847a54df hyprtester: handle empty Lua include path in plugin build
+    (#15241)
+  * 4b909903 algo/scrolling: intelligently decide where to drop a dnd'd
+    window (#15251)
+  * f52070ee nix/tests: fix deprecation warning
+  * d2513792 flake: bump inputs
+  * 1f4e5101 flake: bump inputs
+  * 9405c713 desktop/groups: fix crash on dissolution (#15135)
+  * defc6be1 internal: fix more fd leaks (#15225)
+  * 9b713ab5 desktop/window: fix crash on requested workspace not having
+    a mon (#15234)
+  * bf852f8b algo/scrolling: hide the top layer in workspace swipe to
+    scrolling layout fullscreen (#15137)
+  * 11f3a68e config: fix slide animation direction param (#15240)
+  * fe7cffe9 [gha] Nix: update inputs
+  * 9e499c59 internal: modernize truthy(fix possible UB) (#15217)
+  * afe2c390 CI/Arch: add libheif dep
+  * 27aacde4 nix: gcc15Stdenv -> gcc16Stdenv
+  * 6835443d keybinds: fix nested submaps and resets (#15213)
+  * ce36ee36 renderer: reject invalid damage regions (#15064)
+  * ce5f53e7 internal: make color constants inline to reduce binary file
+    size (#15211)
+  * c9e1a6c3 cm/icc: add Primaries to ICC-generated SImageDescription
+    (#15227)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 13 Jul 2026 21:18:25 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202606241956-87cd2a5f) noble; urgency=medium
 
   * Update to main 87cd2a5f
