@@ -1,3 +1,24 @@
+hyprsunset (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * 25f7043 version: bump to 0.4.0
+  * 5eac3a9 core: fix high CPU busy-loop in event loop (#91)
+  * 2ccd008 logs: check for trace level in logging (#90)
+  * 2626a7f core: include headers, add `-fexperimental-library` flag
+    (#89)
+  * eae0132 CI: use org-wide actions
+  * 0f4e35a flake.lock: update
+  * 18a60ab nix: separate overlay with deps
+  * d0f988f treewide: alejandra -> nixfmt
+  * 3e5918e ipc: fix crash in reset & profile with 0 profiles (#77)
+  * 3a73694 config: fix max-gamma not working with no profiles (#74)
+  * a9243e3 core: handle exception in gamma IPC req (#70)
+  * 58cba59 core: add get identity status (#57)
+  * adac50b core: added printing the current profile (#51) (#63)
+  * 2b040e1 core: added resetting to current profile (#52) (#62)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 13 Jul 2026 21:03:49 +0200
+
 hyprsunset (0.3.3-1ppa5) noble; urgency=medium
 
   * Rebuild for dependencies
