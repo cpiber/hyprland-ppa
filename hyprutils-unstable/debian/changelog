@@ -1,0 +1,475 @@
+hyprutils-unstable (0.13.1~1ppa2+git202607162229-d3bd43a) noble; urgency=medium
+
+  * Update to main d3bd43a
+  * d3bd43a memory: add operators, fix a nullptr deref, and follow #115
+    with uniqueptr (#116)
+  * 41fb809 memory: fix virtual inheritance casts (#115)
+  * 476b856 animation/variable: revert "set begun on operator= always"
+  * 65876d9 animation/variable: set begun on operator= always
+  * d2b40ff animation/variable: set m_Begun for setValueAndWarp
+  * 9d8bf6e memory: fix implicit comparison of unrelated types (#114)
+  * 9157e1c memory: add move assignment to CWeakPointer (#113)
+  * 40ede2e animation: expose spring (#111)
+  * 3cd3972 animations: advance springs by elapsed time (#110)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 16 Jul 2026 22:29:58 +0200
+
+hyprutils-unstable (0.13.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.13.1
+  * a2dbd8a version: bump to 0.13.1
+  * 3e170e5 path: add function overloads with extension param (#109)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 08 May 2026 16:43:36 +0200
+
+hyprutils-unstable (0.13.0-1ppa2) noble; urgency=medium
+
+  * Fix build on questing & resolute
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:16:45 +0200
+
+hyprutils-unstable (0.13.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.13.0
+  * ec5c0c7 version: bump to 0.13.0
+  * ee9ef3d math: CBox::overlaps should not count adjacent boxes (#108)
+  * fe6183f animations: add spring controlled curves (#105)
+  * afb9009 process: handle execvp failure in runAsync (#107)
+  * fa3992b process: free argv allocations on execvp failure (#106)
+  * eedd608 CI: use org-wide actions
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:04 +0200
+
+hyprutils-unstable (0.12.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.0
+  * e6caa3d version: bump to 0.12.0
+  * 762166b string/varlist2: add view ctors
+  * cb4e152 internal: add libc++ < 20 fallback for floating-point
+    strToNumber (#104)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 18:34:20 +0200
+
+hyprutils-unstable (0.11.1-1ppa1ubuntu1) noble; urgency=medium
+
+  * Fix C++26 build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Mar 2026 22:11:00 +0100
+
+hyprutils-unstable (0.11.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.1
+  * b85b779 version: bump to 0.11.1
+  * 668b22d string: add isNumber2 for sv
+  * 6b4c476 path: add resolvePath
+  * d32196a string/numeric: add hex parsing
+  * 7d3be08 string/numeric: add numeric parsing
+  * 5e228db i18n: include vector header (#103)
+  * 8eb974b memory: add dynamicPointerCast for weak ptrs
+  * e63f3a7 treewide: alejandra -> nixfmt
+  * 340a792 logger: bump to C++26, set FD_CLOEXEC on log file descriptor
+    (#100)
+  * 9038eec memory: fix a few UAF cases, add asan to test
+  * 51a4f93 signals: check if listeners is empty in emitInternal (#96)
+  * 5ac060b signal: check for trivially copyable (#95)
+  * 1c527b3 cli/logger: flush stdout after logging
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 19 Mar 2026 21:49:56 +0100
+
+hyprutils-unstable (0.11.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.0
+  * fe68648 version: bump to 0.11.0
+  * 2f24138 logger: don't crash on failing to print to stdout
+  * 9f8e158 memory/shared: add dynamicPointerCast (#92)
+  * 7e6346f i18n: fix typo in sorting entries (#94)
+  * a64517c animation: allow/intend for animated vars to be unique
+    pointers (#93)
+  * 0168583 cli/argumentParser: improve formatting of description
+  * 5e1a14b cli/argumentParser: allow empty short
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:43:16 +0100
+
+hyprutils-unstable (0.10.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.4
+  * bc9803c version: bump to 0.10.4
+  * 44c2ba0 src/cli/ArgumentParser.cpp: clang requires <algorithm> (#91)
+  * 96df6f6 cli/logger: add redirection of connections
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 17:52:02 +0100
+
+hyprutils-unstable (0.10.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.3
+  * a9fe974 version: bump to 0.10.3
+  * b311dc9 cli: add logger (#90)
+  * 16a7fe7 cli: add CArgumentParser (#89)
+  * 31f2995 Nix: always test in debug mode
+  * 1454845 cmake: add coverage reports
+  * 2698ac1 tests: move tests out of source tree (#88)
+  * 671792b i18n: fix error with localizing multi-var strings
+  * 0c64118 i18n/engine: optimize string generation
+  * e3cae69 i18n/engine: fix pure stem matches
+  * cb3e797 internal: fix missing headers (#86)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 23 Nov 2025 17:47:32 +0100
+
+hyprutils-unstable (0.10.2-1ppa3) noble; urgency=medium
+
+  * Add missing header
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 21:10:15 +0100
+
+hyprutils-unstable (0.10.2-1ppa2) noble; urgency=medium
+
+  * Add gtest
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 20:50:38 +0100
+
+hyprutils-unstable (0.10.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.2
+  * 0a28f35 version: bump to 0.10.2
+  * 01afe92 tests: move to gtest (#85)
+  * 9a9745d string: add VarList2 (#84)
+  * 968f881 i18n: add i18n engine (#83)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 10 Nov 2025 20:35:47 +0100
+
+hyprutils-unstable (0.10.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.1
+  * 926689d version: bump to 0.10.1
+  * 9637961 string/constVarList: fix UAF
+  * 164a30b animation/bezier: Fix OOB in getYForPoint for non-monotonic
+    4-point curves (#81)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 06 Nov 2025 18:41:40 +0100
+
+hyprutils-unstable (0.10.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.0
+  * 3df7bde version: bump to 0.10.0
+  * 9ab6431 math/region: reinit region for scale()
+  * feaaf44 memory: make SP/ASP control blocks type agnostic (#79)
+  * 94cce79 tests/math: add region scale test
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Oct 2025 09:09:44 +0200
+
+hyprutils-unstable (0.9.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.0
+  * c1f5412 version: bump to 0.9.0
+  * 1f80045 bezier: fix with first point being non-0
+  * a20932e bezier: add setup4
+  * 64446e1 vector2d: make vector trivial
+  * 05f0fb2 memory: fix clangd warnings
+  * 427332a memory: use initializer list in constructors
+  * 61e2953 region: avoid tons of allocations for scale()
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 16:59:07 +0200
+
+hyprutils-unstable (0.8.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.4
+  * b2ae320 version: bump to 0.8.4
+  * bc193ef os/process: add setStdinFD  (#74)
+  * b364dcb nix: make mold optional
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 25 Aug 2025 14:24:50 +0200
+
+hyprutils-unstable (0.8.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.3
+  * e631ea3 version: bump to 0.8.3
+  * 69efb62 memory: smart pointer factories should not be static (#72)
+  * df6b882 memory: Add C++ cast aliases; replace existing casts and
+    remove redundant casts (#71)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 17 Aug 2025 09:41:05 +0200
+
+hyprutils-unstable (0.8.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.2
+  * c65d41d version: bump to 0.8.2
+  * 8dd20c7 mat3x3: check for finite in toString (#70)
+  * 18fbac5 memory: add missing lock (#69)
+  * b074d4a memory: fix CAtomicSharedPointer mutex unlock and lifetime
+    issues (#68)
+  * bcabcba signal: reserve vector size to avoid reallocations
+  * 86905e2 mat3x3: use float versions of sin/cos reduce dereferencing
+  * e21b18f region: introduce foreach and cleanup clangd warnings (#65)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 29 Jul 2025 16:56:53 +0200
+
+hyprutils-unstable (0.8.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.1
+  * a822973 version: bump to 0.8.1
+  * e892695 math/vector: Added transform method to Vector2D class (#64)
+  * 4737241 animation/beziercurve: add getter for control points
+    (hyprwm/Hyprland#10413) (#63)
+  * 1eb6759 internal: fix missing cstdint include for GCC 16 (#62)
+  * d844a08 signal: don't mark signal as C++ deprecated
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 07 Jul 2025 18:17:25 +0200
+
+hyprutils-unstable (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * 2cd5e4f version: bump to 0.8.0
+  * 376d020 signal: don't spam logs
+  * 9324626 signal: Typed signals (part 2) (#60)
+  * 6ee59e4 core: add editorconfig (#61)
+  * 925f266 memory: add CAtomicSharedPointer and CAtomicWeakPointer
+    (#57)
+  * 1b8090e signals: add typed signals with CSignalT<> (#58)
+  * d46bd32 os/process: add env to async calls too
+  * 38f3a21 CI/Nix: add cache-nix-action
+  * 15df5e3 Nix: move overlays to nix/ and add debug package
+  * c9cd5f1 os/process: disallow copying / moving
+  * 57ab2a8 tests: fix matrix test on 32b archs
+  * e36db00 nix: use gcc15 (#54)
+  * f1d0879 sharedPtr: include missing <cstdint> (#52)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 18:52:08 +0200
+
+hyprutils-unstable (0.7.1-1ppa2) noble; urgency=medium
+
+  * Build with gcc-14
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 15 May 2025 19:00:40 +0200
+
+hyprutils-unstable (0.7.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.1
+  * 674ea57 version: bump to 0.7.1
+  * 7f00411 string: add ConstVarList
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 07 May 2025 19:27:23 +0200
+
+hyprutils-unstable (0.7.0-1ppa2) noble; urgency=medium
+
+  * Update to release 0.7.0
+  * 05878d9 version: bump to 0.7.0
+  * 5f51dce os/process: add exitCode()
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Apr 2025 07:47:51 +0200
+
+hyprutils-unstable (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * f2dc70e version: bump to 0.6.0
+  * 966d0c0 os/process: add fd control for async
+  * 7248194 animations: minor follow-up fix for std::string (#49)
+  * fbd02eb animation: avoid using constexpr std::string
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 17:54:30 +0200
+
+hyprutils-unstable (0.5.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.2
+  * dd1f720 version: bump to 0.5.2
+  * 6b0154b memory: Add shared pointer reinterpretPointerCast function
+    (#47)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 09 Mar 2025 17:59:04 +0100
+
+hyprutils-unstable (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * 61a5382 version: bump to 0.5.1
+  * 77d7ea3 os/process: populate pid when ran sync
+  * e4e018a CI: remove deprecated magic-nix-cache-action
+  * 3d9ae75 core: reenable wreorder (#46)
+  * 9aad80a core: clang, clang-tidy fixes and comp options (#45)
+  * dd790b9 animation: fix end callbacks readding the animation var
+    (#43)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 18 Feb 2025 18:43:29 +0100
+
+hyprutils-unstable (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * 6a8bc9d version: bump to 0.5.0
+  * de58286 animation: fix crashes and cleanup of active vars (#42)
+  * fb0c2d1 memory/weak: add missing nullptr comparison operators (#41)
+  * 3411e5b memory: add WP == UP comparison fn
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 13:05:43 +0100
+
+hyprutils-unstable (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * 006620e version: bump to 0.4.0
+  * ca1253c animation: add virtual dtor to AnimationManager (#31)
+  * 423c69d memory: implement a unique pointer
+  * 59414c4 math/region: fix scale using x scale as y scale (#39)
+  * 72dfbf5 animations: fix adding/removing vars during ::tick (#35)
+  * 5dd4f4a animation: don't fire update events if the avar is not being
+    animated
+  * 3c895da version: bump to 0.3.3
+  * fb9a816 animation: add missing header for libc++ after 6a26d08bacb4
+    (#30)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 24 Jan 2025 20:14:07 +0100
+
+hyprutils-unstable (0.3.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.2
+  * 6a26d08 animation: add CAnimationConfigTree (#29)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 02 Jan 2025 20:32:55 +0100
+
+hyprutils-unstable (0.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.1
+  * c42ce87 version: bump to 0.3.1
+  * 8af7e4b animation: add BezierCurve, AnimationManager and
+    AnimatedVariable (#27)
+  * 8f15d45 region: Revert "fix header path"
+  * 9be03a8 misc: fix some compile warnings (#25)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 01 Jan 2025 19:19:04 +0100
+
+hyprutils-unstable (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * 5e45b1a version: bump to 0.3.0
+  * c333111 os/process: add pid()
+  * e6cf45c flake.nix: gcc13 -> gcc14; flake.lock: update (#22)
+  * 104117a region: fix header path
+  * b26f33c README: fix invalid getconf value
+  * 2e21319 os: implent a new FileDescriptor class (#21)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 08:37:22 +0100
+
+hyprutils-unstable (0.2.6-1ppa2) noble; urgency=medium
+
+  * Rebuild with new name
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:05:58 +0100
+
+hyprutils-unstable (0.2.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.6
+  * e911361 version: bump to 0.2.6
+  * e74177e os: add setEnv to process
+  * 315fba5 process: avoid zombies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 15 Nov 2024 21:33:03 +0100
+
+hyprutils-unstable (0.2.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.5
+  * 91c1634 version: update to 0.2.5
+  * 4c5f18d process: better reading for spawnSync
+  * 8d21d1d os: fixup process possible deadlock
+  * d504d45 os: add missing header for BSDs after fd4be8b9ca93 (#16)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 12 Nov 2024 17:39:08 +0100
+
+hyprutils-unstable (0.2.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.4
+  * 60d3dec version: bump to 0.2.4
+  * 3ce0cde nix: add debug flag
+  * fd4be8b os: Add process
+  * 3f52934 tests: enhance memory + format
+  * db95628 mat3x3: fix comment
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 10 Nov 2024 09:29:13 +0100
+
+hyprutils-unstable (0.2.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.3
+  * 7373e87 version: bump to 0.2.3
+  * a9f85a4 Math: add Mat3x3 (#14)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 25 Sep 2024 15:03:13 +0200
+
+hyprutils-unstable (0.2.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.2
+  * d97af4f version: bump to 0.2.2
+  * 8976e3f gitignore: add CMake residual files
+  * aadf9a2 string: fixup isNumber not accepting -1.0
+  * 0252fd1 utils: add ScopeGuard
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 21 Sep 2024 09:43:17 +0200
+
+hyprutils-unstable (0.2.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.1
+  * 5dcbbc1 version: bump to 0.2.1
+  * a950624 math: add Edges (#10)
+  * 962582a flake.lock: update
+  * 04697c6 CMake: fmt
+  * 928d9b4 CMake, Nix: add VERSION file
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 28 Jul 2024 15:46:13 +0200
+
+hyprutils-unstable (0.2.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.0
+  * eb1ceff cmake: bump ver to 0.2.0
+  * 6174a2a path: add findConfig and dir utils (#8)
+  * c342d5c memory: do not release pointers after emitting a signal
+  * a8c3a13 math/region: add expand
+  * 259ecfa string: respect removeEmpty when VarList input is empty (#7)
+  * 1d20063 math: avoid assert fail in std::clamp in closestPoint
+  * bbc76ba math: adjust right and bottom box edges (#6)
+  * 7e1b661 memory: avoid undefined behaviour from downcasting ptr
+    implentation (#5)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 16 Jul 2024 22:22:54 +0200
+
+hyprutils-unstable (0.1.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.5
+  * 1f6bbec cmake: bump ver to 0.1.5
+  * 5606bf9 README: Update build instructions (#4)
+  * 7a2c2c9 Math: Some more box improvements and test cases  (#3)
+  * ff343e0 Math: Added some constants to handle floating point
+    presicion comparisons (#2)
+  * 725f63a vector: prefix macros with AQ_
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Jun 2024 15:12:50 +0200
+
+hyprutils-unstable (0.1.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.4
+  * 4f13512 cmake: bump ver to 0.1.4
+  * 4436fbf Nix: add pixman dep
+  * 1f59192 ci: add pixman to dependencies
+  * b4b5389 Math: add an int ctor to vec
+  * e9d4a99 Math: init Region, Vector2D and Box
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 22 Jun 2024 23:00:15 +0200
+
+hyprutils-unstable (0.1.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.3
+  * a8f9373 cmake: bump version to 0.1.3
+  * d4c71b9 Nix: don't strip debug symbols
+  * ea8fd1d string: fix isNumber accepting - as valid number
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 18 Jun 2024 09:44:35 +0200
+
+hyprutils-unstable (0.1.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.2
+  * 8e10e06 cmake: bump ver to 0.1.2
+  * 1f4743a sharedptr: decrement on destruction (#1)
+  * 0693f93 CI: add nix
+  * ef441d2 CMake: fix description
+  * ebd3c47 Nix: init
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 13 Jun 2024 12:03:06 +0200
+
+hyprutils-unstable (0.1.1-1ppa1) noble; urgency=medium
+
+  * Initial release. Follows release 0.1.1.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Jun 2024 19:13:07 +0200

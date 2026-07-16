@@ -1,0 +1,8 @@
+hyprutils
+-------------------
+
+Hyprutils is a small C++ library for utilities used across the Hypr* ecosystem.
+
+## Stability
+
+Hyprutils depends on the ABI stability of the stdlib implementation of your compiler. Sover bumps will be done only for hyprutils ABI breaks, not stdlib.

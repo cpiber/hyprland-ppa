@@ -31,6 +31,9 @@
 [submodule "hyprutils/source"]
 	path = hyprutils/source
 	url = https://github.com/hyprwm/hyprutils.git
+[submodule "hyprutils-unstable/source"]
+	path = hyprutils-unstable/source
+	url = https://github.com/hyprwm/hyprutils.git
 [submodule "pam-fprint-grosshack/source"]
 	path = pam-fprint-grosshack/source
 	url = https://gitlab.com/mishakmak/pam-fprint-grosshack.git
