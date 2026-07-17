@@ -9,7 +9,7 @@ set -xe
 . "`dirname "$0"`/prepare-build.sh"
 cd "$buildfolder"
 package="`dpkg-parsechangelog --show-field Source`"
-upstreamver="`dpkg-parsechangelog --show-field Version | sed 's/-[^-]\+//'`"
+upstreamver="`dpkg-parsechangelog --show-field Version | sed 's/-[^-]\+$//'`"
 oldpackage="`sed -n "s/^${package} (\(${upstreamver}[^)]*\)).*$/\1/p" debian/changelog | head -2 | tail -1`"
 if [ ! -f "../${package}_${upstreamver}.orig.tar.xz" ]; then
   echo "## Creating orig.tar.xz, this may take a while"
