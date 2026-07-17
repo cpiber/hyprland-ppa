@@ -83,10 +83,10 @@ if [ "$type" != "tag" ]; then
   curtag="`dpkg-parsechangelog --show-field Version | sed 's/~.*//'`"
   [ "$curtag" = "$tag" ] || [ "$tag" = "" ] || curver="$tag~1ppa1"
   newver="$curver+git`date "+%Y%m%d%H%M"`-$shorthead"
-  dch -v "$newver" -D "$dist" "$@" "Update to $type $shorthead"
+  dch ${DCH_ADDITIONAL_ARGS:-} -v "$newver" -D "$dist" "$@" "Update to $type $shorthead"
 else
   newver="$tag-1ppa1"
-  dch -v "$newver" -D "$dist" "$@" "Update to release $tag"
+  dch ${DCH_ADDITIONAL_ARGS:-} -v "$newver" -D "$dist" "$@" "Update to release $tag"
 fi
 echo "$changes" |
   while IFS= read -r line; do
