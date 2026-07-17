@@ -1,0 +1,42 @@
+#!/usr/bin/make -f
+
+# See debhelper(7) (uncomment to enable).
+# Output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+
+# See FEATURE AREAS in dpkg-buildflags(1).
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# See ENVIRONMENT in dpkg-buildflags(1).
+# Package maintainers to append CFLAGS.
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# Package maintainers to append LDFLAGS.
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+
+# G14 export CXX = /usr/bin/g++-14
+export CXXFLAGS = -std=gnu++26
+# G14 export CC = /usr/bin/gcc-14
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DBUILD_TESTING=OFF
+
+
+# dh_make generated override targets.
+# This is an example for Cmake (see <https://bugs.debian.org/641051>).
+#override_dh_auto_configure:
+#	dh_auto_configure -- \
+#	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
+
+override_dh_auto_install:
+	dh_auto_install
+
+	cd debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/; for f in *.so; do if [ -L "$$f" ]; then ln -sfn "$$(readlink "$$f" | sed 's/hyprgraphics/hyprgraphics_unstable/g')" "$$f"; fi; mv "$$f" "$$(echo "$$f" | sed 's/hyprgraphics/hyprgraphics_unstable/g')"; done
+	cd debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/; for f in *.so.*; do if [ -L "$$f" ]; then ln -sfn "$$(readlink "$$f" | sed 's/hyprgraphics/hyprgraphics_unstable/g')" "$$f"; fi; mv "$$f" "$$(echo "$$f" | sed 's/hyprgraphics/hyprgraphics_unstable/g')"; done
+	cd debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/; for f in *.so; do if [ ! -L "$$f" ]; then patchelf --set-soname "$$(patchelf --print-soname "$$f" | sed 's/hyprgraphics/hyprgraphics_unstable/g')" "$$f"; fi; done
+	cd debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/; for f in *.so.*; do if [ ! -L "$$f" ]; then patchelf --set-soname "$$(patchelf --print-soname "$$f" | sed 's/hyprgraphics/hyprgraphics_unstable/g')" "$$f"; fi; done
+	sed -i 's/-lhyprgraphics/-lhyprgraphics_unstable/g' debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/hyprgraphics.pc

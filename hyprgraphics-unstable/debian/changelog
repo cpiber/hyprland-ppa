@@ -1,0 +1,188 @@
+hyprgraphics-unstable (0.5.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:55 +0200
+
+hyprgraphics-unstable (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * 482d4b7 version: bump to 0.5.1
+  * 7d63c04 flake.lock: update
+  * b803731 nix: separate overlay with deps
+  * d3d6bf6 treewide: alejandra -> nixfmt
+  * 7c75487 core: fix missing include for span (#43)
+  * 13c5366 egl: add egl formats and helpers (#42)
+  * 583331e feat: add isImageFile() static utility method (#41)
+  * f114ea3 core: add missing #include <span> (#40)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 06 Apr 2026 09:43:14 +0200
+
+hyprgraphics-unstable (0.5.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:41:21 +0200
+
+hyprgraphics-unstable (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * 4af02a3 version: bump to 0.5.0
+  * 790adab image: fix missing svg byte stream
+  * 6cfc891 resource/image: add byte stream
+  * 28e17fb image/svg: implement embedded
+  * 8a860f2 image: cleanup format detection
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 01 Jan 2026 15:23:33 +0100
+
+hyprgraphics-unstable (0.4.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:37 +0100
+
+hyprgraphics-unstable (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * 8f1bec6 version: bump to 0.4.0
+  * 1fb5bfb resource/AsyncResource: add await() for resources
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Nov 2025 19:09:52 +0100
+
+hyprgraphics-unstable (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * ffc999d version: bump to 0.3.0
+  * e381b2f resources/text: fix alignment layout for center/right
+  * 50fb9f0 resource/image: add buffer option to image resource (#39)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 07 Nov 2025 20:00:57 +0100
+
+hyprgraphics-unstable (0.2.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Oct 2025 09:44:16 +0200
+
+hyprgraphics-unstable (0.2.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.0
+  * 9431db6 version: bump to 0.2.0
+  * 2503063 ci: add librsvg to arch
+  * 899ff15 Nix: add librsvg dep
+  * f4995ea image: add svg support
+  * 32e6b83 text: recalc layout after setting limits
+  * 72e6801 text: make wrap and ellipsize passed
+  * d839c3f text: wrap when limited
+  * ecdbae4 text: minor fixups
+  * 758678a text: add aa and hint to text
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 18:14:32 +0200
+
+hyprgraphics-unstable (0.1.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.6
+  * c44e749 version: bump to 0.1.6
+  * b86c4d9 asyncResourceGatherer: add new module (#36)
+  * aa9d149 png: fix gray pix formats (#35)
+  * 621e2e0 formats: include vector header (#34)
+  * 157cc52 formats: add optional AVIF image support with libheif (#32)
+  * 4c1d63a chore: replace libspng with libpng in README.md and CI/Arch
+    (#30)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 18 Sep 2025 18:19:21 +0200
+
+hyprgraphics-unstable (0.1.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.5
+  * 340494a version: bump to 0.1.5
+  * 83885a6 formats: fix format selection and some safeguards (#28)
+  * b841473 png: libpng is straight alpha, but cairo is premult
+  * a71c052 internal: fix style as determined by clang (#27)
+  * 5f9c68e image: include span header (#26)
+  * 13375fa core: Add Image Embedding Support (#24)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 11 Jul 2025 12:15:59 +0200
+
+hyprgraphics-unstable (0.1.4-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 23:37:13 +0200
+
+hyprgraphics-unstable (0.1.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.4
+  * b3d628d version: bump to 0.1.4
+  * 15c6f8f CI/Nix: add cache-nix-action
+  * c7225d7 images/png: mark surface dirty after copy
+  * 80b754e nix: update to gcc15 (#21)
+  * df81109 formats: move to libpng for png support (#19)
+  * 6075491 core: clang-tidy & comp changes (#15)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 22 Jun 2025 22:34:52 +0200
+
+hyprgraphics-unstable (0.1.3-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Apr 2025 12:10:29 +0200
+
+hyprgraphics-unstable (0.1.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.3
+  * 9d7f268 version: bump to 0.1.3
+  * 760d67a color: CM structs, constants & math (#14)
+  * 175c6b2 CI: remove deprecated magic-nix-cache-action
+  * 575ae47 cmakelists: pass all libjxl CFLAGS/LDFLAGS after
+    52202272d89d (#13)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 19:11:01 +0200
+
+hyprgraphics-unstable (0.1.2-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 18:02:55 +0200
+
+hyprgraphics-unstable (0.1.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.2
+  * e19ee90 version: bump to 0.1.2
+  * 5ac80e3 tests: add a symlink test (#10)
+  * 12cd703 png: handle invalid buffer size returned by libspng
+  * 23783b9 CI/Arch/Clang: add libspng
+  * 6355b72 Nix: add libspng dep
+  * 0c11438 core: move to libspng for png
+  * 0d77b48 flake.lock: update
+  * 5220227 core: Allow compiling without JXL support (#6)
+  * b099807 README: Add Dependencies (#4)
+  * 6dea3fb flake.lock: update
+  * 0f9b8ca color: add missing header for libc++ (#3)
+  * fb2c026 image: add symlink support (#1)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 04 Feb 2025 18:02:20 +0100
+
+hyprgraphics-unstable (0.1.1-1ppa4) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 19:00:56 +0100
+
+hyprgraphics-unstable (0.1.1-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Jan 2025 09:35:40 +0100
+
+hyprgraphics-unstable (0.1.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 14:51:42 +0100
+
+hyprgraphics-unstable (0.1.1-1ppa1) noble; urgency=medium
+
+  * Initial release.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 05 Dec 2024 21:36:21 +0100

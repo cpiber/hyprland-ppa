@@ -1,0 +1,11 @@
+Index: source/src/image/formats/Svg.hpp
+===================================================================
+--- source.orig/src/image/formats/Svg.hpp
++++ source/src/image/formats/Svg.hpp
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include <cstdint>
+ #include <cairo/cairo.h>
+ #include <string>
+ #include <expected>

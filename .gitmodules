@@ -121,3 +121,6 @@
 [submodule "hyprwire-unstable/source"]
 	path = hyprwire-unstable/source
 	url = https://github.com/hyprwm/hyprwire.git
+[submodule "hyprgraphics-unstable/source"]
+	path = hyprgraphics-unstable/source
+	url = https://github.com/hyprwm/hyprgraphics.git
