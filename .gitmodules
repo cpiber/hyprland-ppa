@@ -115,3 +115,6 @@
 [submodule "hyprpwcenter/source"]
 	path = hyprpwcenter/source
 	url = https://github.com/hyprwm/hyprpwcenter.git
+[submodule "hyprlang-unstable/source"]
+	path = hyprlang-unstable/source
+	url = https://github.com/hyprwm/hyprlang.git
