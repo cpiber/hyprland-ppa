@@ -21,11 +21,14 @@ shift
 checkout="${1:-}"
 sourcefolder="$reporoot/$project/source"
 case "$project" in
-  hyprland|hyprland-plugins|hyprsplit|hyprspace|hyprutils-unstable)
+  hyprland|hyprland-plugins|hyprsplit|hyprspace)
     type="main"
     ;;
   waybar-unstable|hyprscroller|hy3)
     type="master"
+    ;;
+  *-unstable)
+    type="main"
     ;;
   *)
     type="tag"
