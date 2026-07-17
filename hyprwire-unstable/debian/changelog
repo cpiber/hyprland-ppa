@@ -1,0 +1,102 @@
+hyprwire-unstable (0.3.1-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:57 +0200
+
+hyprwire-unstable (0.3.1-1ppa2) noble; urgency=medium
+
+  * Split scanner into separate package
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 10:26:44 +0200
+
+hyprwire-unstable (0.3.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.1
+  * 3e6865c version: bump to 0.3.1
+  * f3a8088 cmakelists: don't build tests in release
+  * 62cd80b serverObject: call onDestroy on objects if the client dies
+  * a280079 scanner: hold strong refs for objects
+  * 26168d6 clientSocket: add trace removal log
+  * 02a2e7b CI: don't run twice for non-fork PRs
+  * c816f4f CI: use org-wide actions
+  * 3645706 tests: add unit tests (#22)
+  * 86012ee all: run clang-format
+  * c9e22f5 genericMessage: limit array size to 10k
+  * 78e2740 message: limit array sizes for static messages
+  * ad60124 messageParser: avoid underflow
+  * f68afd0 internal: include <cstring> for strcopy() (#19)
+  * 4e1933a flake.lock: update
+  * 272e404 nix: separate overlay with deps
+  * c9b4d3b treewide: alejandra -> nixfmt
+  * 06c7f1f macros: fix typo (#18)
+  * af2fb7d GenericProtocolMessage: write full object id in resolveSeq
+    (#17)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:30:15 +0200
+
+hyprwire-unstable (0.3.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:41:23 +0200
+
+hyprwire-unstable (0.3.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.3.0
+  * 37bc90e version: bump to 0.3.0
+  * 13041e2 docs: add wire docs
+  * 73f9c11 core: minor fixes
+  * b02f377 message: avoid crash on fd array parsing for debug
+  * d59176a core: Add support for fd arrays (#16)
+  * a45ca05 scanner: add name() to server object headers
+  * ee9c7e8 core: various integration fixes (#14)
+  * ac9bd04 core/message: copy id instead of duplicating seq in m_data
+    (#15)
+  * 5f04e87 core/message: Fix uninitialized global pointer (#12)
+  * 80ffe1e core: Fix serialization bug with unaligned pointer reads
+    (#13)
+  * ad47486 core/client: buffer pending data on waiting for object (#10)
+  * d5e7d6b core/client: fix version in bind protocol
+  * c0541f6 server/socket: fix server socket destruction with
+    attemptEmpty (#7)
+  * 1079777 core: include string_view header (#9)
+  * b8ca850 core: add OpenBSD support (#6)
+  * 0240f04 server/socket: fix addClient fd conditions
+  * 8d721f7 core/message: avoid crashing on parseData
+  * 578a4e8 core: cloexec all fds
+  * 2744d2c core/socket: fix parseFromFd having a potential read race
+  * 57060cf server: allow recursive mutex locks for pollmtx
+  * 0c9c8da client: add isHandshakeDone()
+  * 68fed3e server/client: add pid
+  * e53602b server: return client on addClient
+  * 309be69 server: improve fd api
+  * 076798f server: fix crash on exit
+  * 4d2a806 core: fix creating sockets from fds
+  * 59f2e5b server: fix sending fds
+  * d853535 core: improve roundtrip
+  * 04c7cb3 messages/generic: add fd error
+  * 53922ef parser: don't catch errors
+  * cf3f4af core: minor fixes
+  * dae5a0e core: fix empty arrays and wire arrays
+  * d4a3972 protocol: add roundtrips
+  * 761e11d scanner: avoid auto id
+  * a59a761 scanner: use const & for vecs to avoid copies
+  * 0ecb7e6 generator: fix arr in s2c
+  * 9d2031f core: add a fd type
+  * f977b7c core: allow creating sockets from fds
+  * bb998fc core: enforce data types on the wire
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Feb 2026 19:33:05 +0100
+
+hyprwire-unstable (0.2.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:39 +0100
+
+hyprwire-unstable (0.2.1-1ppa1) noble; urgency=medium
+
+  * Initial release. Follows release 0.2.1.
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 05 Dec 2025 16:03:07 +0200

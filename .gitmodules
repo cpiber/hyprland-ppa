@@ -118,3 +118,6 @@
 [submodule "hyprlang-unstable/source"]
 	path = hyprlang-unstable/source
 	url = https://github.com/hyprwm/hyprlang.git
+[submodule "hyprwire-unstable/source"]
+	path = hyprwire-unstable/source
+	url = https://github.com/hyprwm/hyprwire.git
