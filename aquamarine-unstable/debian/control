@@ -1,0 +1,60 @@
+Source: aquamarine-unstable
+Section: libs
+Priority: optional
+Maintainer: Constantin Piber <cp.piber@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ patchelf,
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ gcc,
+ g++,
+ libgl1-mesa-dev,
+ libseat-dev (>= 0.8.0),
+ libinput-dev (>= 1.26.0),
+ libwayland-dev,
+ libhyprutils-unstable-dev (>= 0.8.0),
+ libpixman-1-dev,
+ libdrm-dev,
+ libgbm-dev,
+ libudev-dev,
+ libdisplay-info-dev,
+ hwdata,
+ hyprwayland-scanner,
+ wayland-protocols,
+Standards-Version: 4.6.2
+Homepage: https://hypr.land
+Vcs-Browser: https://github.com/hyprwm/aquamarine-unstable
+Vcs-Git: https://github.com/hyprwm/aquamarine-unstable.git
+
+Package: libaquamarine-unstable-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libaquamarine11-unstable (= ${binary:Version}),
+ ${misc:Depends},
+ libhyprutils-unstable-dev (>= 0.8.0),
+Replaces: libaquamarine-dev
+Conflicts: libaquamarine-dev
+Provides: libaquamarine-dev (= 0.12.1)
+Description: Aquamarine is a very light linux rendering backend library.
+ It provides basic abstractions for an application to render on a Wayland
+ session (in a window) or a native DRM session.
+ It is agnostic of the rendering API (Vulkan/OpenGL) and designed to be lightweight,
+ performant, and minimal.
+ Aquamarine provides no bindings for other languages. It is C++-only.
+
+Package: libaquamarine11-unstable
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Aquamarine is a very light linux rendering backend library.
+ It provides basic abstractions for an application to render on a Wayland
+ session (in a window) or a native DRM session.
+ It is agnostic of the rendering API (Vulkan/OpenGL) and designed to be lightweight,
+ performant, and minimal.
+ Aquamarine provides no bindings for other languages. It is C++-only.

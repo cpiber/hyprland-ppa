@@ -124,3 +124,6 @@
 [submodule "hyprgraphics-unstable/source"]
 	path = hyprgraphics-unstable/source
 	url = https://github.com/hyprwm/hyprgraphics.git
+[submodule "aquamarine-unstable/source"]
+	path = aquamarine-unstable/source
+	url = https://github.com/hyprwm/aquamarine.git

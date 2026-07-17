@@ -1,0 +1,489 @@
+aquamarine-unstable (0.12.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.1
+  * 0666963 version: bump to 0.12.1
+  * 6ecde03 backend/headless: fix framecb never firing
+  * f5cca73 drm: avoid redundant identity ctm modesets (#320)
+  * 1699271 headless: don't use raw this in lambda capture without
+    checking
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 13 Jun 2026 13:30:38 +0200
+
+aquamarine-unstable (0.12.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.12.0
+  * 01eeae1 version: bump to 0.12.0
+  * 5b7c8f9 drm: fix crash on null crtc in getGammaSize/getDeGammaSize
+    (#315)
+  * ff9b933 drm: fix DisplayLink/evdi hotplug by allowing evdi DRM
+    backends to operate without an EGL renderer. (#310)
+  * 1070d0b backend: remove trailing newlines from libseat and libinput
+    logs (#309)
+  * ab2b0af session: Add AQ_NO_KMS_REQUIREMENT environment variable for
+    bypassing KMS requirement (#255)
+  * be35f75 output/state: init ctm to identity (#303)
+  * 27b35e7 drm: revert "re-read EDID on resume to detect dock port
+    swaps (#298)"
+  * f44fecf drm: fall back to first render node on single-renderD
+    systems when parent-syspath match fails (#291)
+  * d5a4411 drm: re-read EDID on resume to detect dock port swaps (#298)
+  * 6f406e8 drm: clear stale color state on modeset (#297)
+  * 574e2fe backend: avoid duplicate auto-named outputs (#296)
+  * e33e0d8 drm: skip unchanged connector_state on page-flips (#295)
+  * 813c1e8 FormatUtils: null-check drmGetFormatModifierName result
+    (#287)
+  * f5cdaa8 drm: CRTC starvation recovery + clear stale page-flip state
+    after suspend (#254)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 30 May 2026 10:43:28 +0200
+
+aquamarine-unstable (0.11.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Apr 2026 22:05:55 +0200
+
+aquamarine-unstable (0.11.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.11.0
+  * cd8321e version: bump to 0.11.0
+  * 648a13d headless: hold ref in next frame timer
+  * b3ea868 headless: verify fn is valid before calling
+  * 9a1ca6b internal: avoid repeated vector access in backend and DRM
+    loops (#281)
+  * d5ab4fd CI: use org-wide actions
+  * 981132c libinput: method to get `libinput_tablet_tool` from
+    ITabletTool (#278)
+  * 24f1db3 drm: guard logging in connector disconnect to avoid null
+    dereference (#274)
+  * 1d50986 backend: handle unhandled libinput switch enum with default
+    case (#273)
+  * 7371b66 backend: include algorithm header (#269)
+  * e926559 drm: revert "reduce duplicated code in render creation
+    (#247)"
+  * f62a4db backend/drm: fix multi-GPU buffer import failure during
+    restoreAfterVT (#263)
+  * d67142c backend/headless: Improve and optimize timer FD logic (#258)
+  * 8ed71bb drm: revert "fallback to first render node for non-standard
+    buses (#237)"
+  * 43f10d2 drm: re-send ctm blob on modeset (#256)
+  * 023eed5 README: drop todo list
+  * b903964 backend/headless: implement FPS caps for headless outputs
+  * 5d2cb72 flake.lock: update
+  * 0aba524 nix: separate overlay with deps
+  * 2549656 treewide: alejandra -> nixfmt
+  * 1dbbba6 drm: fallback to first render node for non-standard buses
+    (#237)
+  * 1aa8490 drm/renderer: glFlush when clearing buffers (#252)
+  * 7f9eb08 output: add a pendingPageFlips() method (#251)
+  * ed26bdb drm: reduce duplicated code in render creation (#247)
+  * 6d02092 drm: re-send HDR metadata blob on modeset (#250)
+  * 8a0eb4f drm/renderer: split input and output buffer attachments
+    (#249)
+  * 603f5cd drm: make pageflips drive the frames (#241)
+  * a494d50 backend: fix use-after-free of logger during teardown (#244)
+  * b2f6c1a drm: keep secondary renderers alive only when they're needed
+    (#239)
+  * b91f570 drm: ignore redundant tiled display connectors (#238)
+  * 35fa4a9 drm: use parent device matching for render nodes (#235)
+  * 2455556 drm: minor AMS fixes (#229)
+  * af4c6fe renderer: set EGL_CONTEXT_RELEASE_BEHAVIOR_KHR if supported
+    (#234)
+  * def5e74 backend: read idle timer (#233)
+  * 534c88e drm/formats: add drmModifierToName and print names (#230)
+  * b8a0c5b libinput: fix pad groups not being ref'd (#227)
+  * 96b53bc output: fix degammalut typo (#226)
+  * d83c97f drm: remove an unnecessary reset after VT switching (#223)
+  * c6354f5 drm: convert vd path before compare with explicit device
+    path (#222)
+  * a43bedc backend: move logger to backend
+  * 561ae7f backend: add freeDrmDevice on error in initDmabuf (#221)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Apr 2026 09:17:55 +0200
+
+aquamarine-unstable (0.10.0-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 31 Mar 2026 21:41:20 +0200
+
+aquamarine-unstable (0.10.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 06 Dec 2025 10:44:37 +0100
+
+aquamarine-unstable (0.10.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.10.0
+  * a20a0e6 version: bump to 0.10.0
+  * 23e4e25 backend: implement hyprutils' cli::logger
+  * 6d0b356 drm: prevent nullptr deref during DRM backend shutdown
+    (#218)
+  * 6247923 renderer: drop the mods.empty() check
+  * 79b515f renderer: use array and EGLint in creating image
+  * 1826a99 wayland: send commit after frame
+  * 3b3d8a8 drm: ensure disconnect called for removed connectors (#215)
+  * 81a0ddf rendernode: dont bother finding one on evdi
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 25 Nov 2025 17:53:25 +0100
+
+aquamarine-unstable (0.9.5-1ppa4) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Oct 2025 09:44:15 +0200
+
+aquamarine-unstable (0.9.5-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:38:21 +0200
+
+aquamarine-unstable (0.9.5-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 19:38:21 +0200
+
+aquamarine-unstable (0.9.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.5
+  * 655e067 version: bump to 0.9.5
+  * 11406cc backend: add a null backend (#209)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 03 Oct 2025 16:07:36 +0200
+
+aquamarine-unstable (0.9.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.4
+  * 81584da version: bump to 0.9.4
+  * 25fba03 flake.lock: update hyprutils
+  * adb34ed nix: make mold optional
+  * 50637ed drm: revert #203 and half of #202 (#204)
+  * 84d53ca drmdumb: reopen displaynode (#203)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 23 Aug 2025 16:05:42 +0200
+
+aquamarine-unstable (0.9.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.3
+  * 98968ac version: bump to 0.9.3
+  * 498f466 renderer: use rendernode if available (#202)
+  * be166e1 gbm: Default to forcing linear blit for multigpu (#197)
+  * f0db9b7 core: introduce drmRenderNodeFD() (#193)
+  * 141a991 libinput: handle tablet axis on proximity, tip and button
+    events (#194)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 17 Aug 2025 22:54:38 +0200
+
+aquamarine-unstable (0.9.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.2
+  * e31b575 version: bump to 0.9.2
+  * dfe9601 allocator: workaround linear blitting (#174)
+  * 8b22613 hdr: don't skip setting up HDR even when the modes are the
+    same (#188)
+  * d04e01e core: use -Wpedantic and fix warnings (#187)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 17 Jul 2025 18:08:40 +0200
+
+aquamarine-unstable (0.9.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.1
+  * 664b276 version: bump to 0.9.1
+  * c1fb82d backend: don't use a shorthand for SP
+  * e2e3f8b drm: Avoid unnecessary modeset (fixed) (#184)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 07 Jul 2025 18:12:52 +0200
+
+aquamarine-unstable (0.9.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.0
+  * dfc1db1 version: bump to 0.9.0
+  * 0bd03a8 swapchain: fix age
+  * b3208e8 wayland: don't force the swapchain to length
+  * 33ebde1 drm: revert "Avoid unnecessary modesetting (#183)"
+  * c0c56dd drm: Avoid unnecessary modesetting (#183)
+  * dc45d00 drm/renderer: optimize blitting and use gles3 shaders (#179)
+  * dd92142 core: Use new typed signals from hyprutils (#178)
+  * 7cef49d CI/Nix: add cache-nix-action
+  * 94981cf nix: use gcc15 (#176)
+  * 560926d drm: reduce a bit of local temporary copies going around in
+    renderer (#175)
+  * 389372c drm/renderer: depend on gles3 and use vertex array objects
+    (#173)
+  * 9d38b6a gl: a few small renderer optimisations (#172)
+  * a19cf76 clang-tidy: fix some errors (#166)
+  * c8282f4 atomic: fix compiler warning with string (#164)
+  * 1d2dbd7 drm: restore hdr metadata after vt switch (#163)
+  * 484b732 backend: Fix compiler warnings (#160)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 05 Jul 2025 22:03:06 +0200
+
+aquamarine-unstable (0.8.0-1ppa5) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 26 Jun 2025 23:37:13 +0200
+
+aquamarine-unstable (0.8.0-1ppa4) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 30 Apr 2025 12:10:29 +0200
+
+aquamarine-unstable (0.8.0-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 18:02:56 +0200
+
+aquamarine-unstable (0.8.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 06 Apr 2025 18:02:56 +0200
+
+aquamarine-unstable (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * 1c8fa0b version: bump to 0.8.0
+  * b058847 backend, allocator: Fix mGPU backend + allocator swapchain
+    combos (#159)
+  * bea48d0 nix: mesa -> libgbm
+  * 258cfeb misc: Fix Attachment shared pointer reinterpret (#154)
+  * 8149856 wayland: Fix backend idleCallbacks destruction (#151)
+  * b236a43 drm: only scan connected connectors (#155)
+  * 7b5db3d drm: Add strict typing to attachment manager (#152)
+  * 09b3fd5 drm: Fix multi-GPU support for Nvidia (#147)
+  * 76508fe drm: Use RAII to manage EGL context (#150)
+  * e62592f drm/atomic: fix atomic reset being skipped, check nullptr
+    elsewhere instead (#149)
+  * 2ff0634 drm: get max bpc from drm format (#146)
+  * f239e5a backend: log no allocator errors
+  * a3dda0d drm: prioritize gpus with the most internal panels (#144)
+  * 427077c CI: remove deprecated magic-nix-cache-action
+  * ecd2c81 drm: only allow multigpu blit to implcit, not all external
+    formats (#143)
+  * 343178b core: Compiler fixes and options (#141)
+  * 257b205 drm/output: add api to set drm content type property (#140)
+  * 95506e5 egl/drm: consolidate EGL init/state (#138)
+  * 48a000c flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 17 Mar 2025 08:57:14 +0100
+
+aquamarine-unstable (0.7.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.2
+  * 6934e7d version: bump to 0.7.2
+  * a0553cd headless/wayland: emit present events after commit
+  * 7fe0069 flake.lock: update
+  * f0519bf headless: fix headless supported formats (#136)
+  * 4edeb99 core: add clang-tidy (#135)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 29 Jan 2025 08:42:25 +0100
+
+aquamarine-unstable (0.7.1-1ppa3) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jan 2025 19:00:56 +0100
+
+aquamarine-unstable (0.7.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Jan 2025 09:32:45 +0100
+
+aquamarine-unstable (0.7.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.1
+  * e7719f9 version: bump to 0.7.1
+  * 10fb69d drm: remove wrong property settings (#133)
+  * 6904802 core: Unbreak build with libc++ (#131)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 12 Jan 2025 18:24:03 +0100
+
+aquamarine-unstable (0.7.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.0
+  * fe8ff21 version: bump to 0.7.0
+  * 03677f8 core: GPU hotplug support (#130)
+  * c2369bc drm: Avoid excessive atomic properties updates (#95)
+  * 5bc315e drm: limit udev drm_minor to Linux after a132fa41be7e (#129)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 10 Jan 2025 20:49:56 +0100
+
+aquamarine-unstable (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * 4846091 version: bump to 0.6.0
+  * aeab812 core/drm: Add HDR Support (#112)
+  * f7082be drm: only clear buffers when fullReconfigure succeeds (#124)
+  * eecb74d flake.lock: update
+  * 5e3f601 drm: only fail INVALID format when enabled (#122)
+  * a23e9a9 drm: moved null check for renderer to shouldBlit() (#109)
+    (#121)
+  * ae2bf91 drm: log errno set by drmModeAtomicCommit (#120)
+  * a132fa4 drm: udev scan only drm_minor, not connectors (#119)
+  * 3375378 flake.nix: gcc13 -> gcc14 (#118)
+  * 8e77618 flake.lock: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 05 Jan 2025 20:44:34 +0100
+
+aquamarine-unstable (0.5.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 23 Dec 2024 14:56:01 +0100
+
+aquamarine-unstable (0.5.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.1
+  * 9441860 version: bump to 0.5.1
+  * 9fc2d8e drm: allow multigpu blit from explicit to implicit (#114)
+  * 1af9816 drm: clearer flow when rescanning connectors (#113)
+  * 7dea26b buffer: remove useless forward def
+  * 4468981 drm: Validate conn before dereference in
+    CDRMAtomicRequest::commit() (#108)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 14 Dec 2024 10:03:32 +0100
+
+aquamarine-unstable (0.5.0-1ppa2) noble; urgency=medium
+
+  * Rebuild for renamed deps
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:31:08 +0100
+
+aquamarine-unstable (0.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.5.0
+  * b31a6a4 props: bump version to 0.5.0
+  * 3b00e96 drm: scan only cards and not outputs, safeguard against null
+    renderer (#106)
+  * 545f506 drm: fix fences according to spec (#105)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 18:16:59 +0100
+
+aquamarine-unstable (0.4.5-1ppa2) noble; urgency=medium
+
+  * Rebuild with new name
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 16 Nov 2024 17:44:16 +0100
+
+aquamarine-unstable (0.4.5-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.5
+  * ae32a98 version: bump to 0.4.5
+  * e6c392a DRM: Add a dumb allocator (#104)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 11 Nov 2024 14:21:31 +0100
+
+aquamarine-unstable (0.4.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.4
+  * f5ed91d version: bump to 0.4.4
+  * a49bc35 nix: add stdenvAdapters
+  * 8d732fa drm: guard cursorFB buffer in restoreAfterVT (#100)
+  * e6ea0e0 nix: libseat renamed to seatd
+  * 9874e08 version: bump to 0.4.3
+  * 7c1322d drm: fix leases not having a backend attached (#97)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 10 Nov 2024 09:26:17 +0100
+
+aquamarine-unstable (0.4.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.2
+  * 65dd97b version: bump to 0.4.2
+  * d352c0d DRM/Output: Implement CTM support (#92)
+  * b82fdaf wayland: log compositor name in startup
+  * 203fc0f headless: add a default mode for headless outputs (#87)
+  * 8b72861 Session: only dispatch udev in dispatchPendingEventsAsync if
+    on linux (#86)
+  * 752d0fb Nix: fix cross-compilation
+  * dc399a3 gbm: fix modifier list not updating when renderable list is
+    empty (#84)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Oct 2024 09:10:24 +0200
+
+aquamarine-unstable (0.4.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.1
+  * e4a1320 props: bump version to 0.4.1
+  * 9996d36 gbm: don't select opaque pixel formats for cursor
+  * a8eb8ae drm: add AQ_NO_MODIFIERS to try to mitigate hardware
+    limitations (#77)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 12 Sep 2024 23:15:18 +0200
+
+aquamarine-unstable (0.4.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.0
+  * aac97a1 version: bump to 0.4.0
+  * dd9890d drm: allow disabling commit, even if pageFlipPending (#72)
+  * f8a687d flake.lock: update
+  * e12b0a9 gbm: override gbm_bo_get_modifier results for modifier-based
+    allocation (#71)
+  * 16bbbcb wayland: send 1280x720 if w/h is 0 in configure
+  * 865cd94 gbm/drm: conform to different scanout requirements for
+    different planes
+  * b9ab839 output: always emit a destroy event in ~dtor
+  * cff0019 flake.nix: remove libinput overlay
+  * 561f50b drm: don't connect before crtcs are guaranteed (#68)
+  * 23c7925 gbm: improve automatic format selection
+  * 7cc3d31 misc: make for loops const reference (#66)
+  * abb3c81 drm: recheck crtcs before connecting on udev event (#65)
+  * 3989aa9 wayland: fix possible out-of-range crash in setCursor
+  * ddf6987 backend: dont overflow on 32bit builds (#64)
+  * 31e692b Nix: add note about wayland-scanner
+  * 9a3161a drm: fix typo in schedule (#62)
+  * a17f921 drm: add missing destructor (#63)
+  * 41d8426 drm: request page flip events after commit (#60)
+  * 1c32562 drm: verify output format in commit
+  * 2cd1f78 GBM: fixup good() return value
+  * b02d4f4 output: avoid crashing on no crtc (#58)
+  * b474796 drm: reconfigure swapchain props after creating
+  * 1e43d9a gbm: improve trace logging around allocs
+  * 8079098 drm: fix crash on null crtc setCursor
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 02 Sep 2024 23:42:23 +0200
+
+aquamarine-unstable (0.3.3-1ppa1) bionic; urgency=medium
+
+  * Update to release 0.3.3
+  * 00d51a0 props: bump version to 0.3.3
+  * 696a5ad gbm: guard for drm renderer being present before clearing
+  * 71da3e0 CMakeLists: wayland.xml is in wayland-scanner pkgdatadir
+    (#55)
+  * 7f8df01 props: bump version to 0.3.2
+  * 2bff4a4 drm: don't schedule new frame events on disabled outputs
+    (#52)
+  * 2d29c86 drm: use modelines in vt restore
+  * 71d4967 drm: clear buffer on creation for scanout DRM buffers (#51)
+  * cd15214 drm: don't report pointer capability when no HW cursor plane
+    is present
+  * 05f4efc buffer: align size to stride (#50)
+  * 4f66428 drm: avoid crashes on connecting a null crtc
+  * e947af7 drm/atomic: clip damage to pixel size
+  * 5893461 DRM: Allow checking no-crtc connectors (#49)
+  * 9312aa2 docs: document AQ_DRM_DEVICES
+  * 9b33a38 cmake: link libOpenGL instead of legacy libGL (#44)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 19 Aug 2024 22:02:54 +0200
+
+aquamarine-unstable (0.3.1-1ppa1) bionic; urgency=medium
+
+  * Update to release 0.3.1
+  * 295d37d props: bump version to 0.3.1
+  * daf96f0 drm: fixup modeline calculations
+  * c94060b drm: log calculated modeline for custom modes
+  * 1a7ca38 drm: fix custom mode check
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 10 Aug 2024 10:50:34 +0200
+
+aquamarine-unstable (0.3.0-1ppa1) bionic; urgency=medium
+
+  * Initial release 0.3.0
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 07 Aug 2024 22:11:28 +0200
