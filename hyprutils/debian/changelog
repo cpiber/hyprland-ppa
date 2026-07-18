@@ -1,3 +1,21 @@
+hyprutils (0.14.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.14.0
+  * 5f03477 version: bump to 0.14.0
+  * ff4c4b1 memory: assert on locking unique pointer (#117)
+  * d3bd43a memory: add operators, fix a nullptr deref, and follow #115
+    with uniqueptr (#116)
+  * 41fb809 memory: fix virtual inheritance casts (#115)
+  * 476b856 animation/variable: revert "set begun on operator= always"
+  * 65876d9 animation/variable: set begun on operator= always
+  * d2b40ff animation/variable: set m_Begun for setValueAndWarp
+  * 9d8bf6e memory: fix implicit comparison of unrelated types (#114)
+  * 9157e1c memory: add move assignment to CWeakPointer (#113)
+  * 40ede2e animation: expose spring (#111)
+  * 3cd3972 animations: advance springs by elapsed time (#110)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Jul 2026 09:06:38 +0200
+
 hyprutils (0.13.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.13.1
