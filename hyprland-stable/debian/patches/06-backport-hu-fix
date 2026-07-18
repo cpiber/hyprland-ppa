@@ -1,0 +1,393 @@
+From 5a7078d20a14bb199ef9bb81faa4faeaf5e92117 Mon Sep 17 00:00:00 2001
+From: Vaxry <vaxry@vaxry.net>
+Date: Sun, 21 Jun 2026 21:41:27 +0200
+Subject: [PATCH] internal: fix bugs revealed by hu update
+
+fixes invalid ptr comparisons, and explicits bool conversions
+---
+ src/config/shared/actions/ConfigActions.cpp         |  2 +-
+ src/desktop/view/LayerSurface.hpp                   |  4 ++--
+ src/desktop/view/SessionLock.cpp                    |  3 ++-
+ src/desktop/view/WLSurface.cpp                      |  2 +-
+ src/desktop/view/Window.cpp                         | 10 +++++-----
+ src/managers/ANRManager.cpp                         |  2 +-
+ src/managers/input/InputManager.cpp                 |  2 +-
+ src/managers/input/UnifiedWorkspaceSwipeGesture.cpp |  2 +-
+ src/managers/screenshare/ScreenshareManager.cpp     |  2 +-
+ src/output/Monitor.cpp                              |  2 +-
+ src/protocols/ColorManagement.cpp                   |  8 ++++----
+ src/protocols/DRMSyncobj.hpp                        |  2 +-
+ src/protocols/ExtWorkspace.cpp                      |  6 +++---
+ src/protocols/Fifo.cpp                              |  2 +-
+ src/protocols/LayerShell.cpp                        |  2 +-
+ src/protocols/core/DataDevice.cpp                   |  6 +++---
+ src/protocols/types/Buffer.cpp                      |  2 +-
+ src/render/GLRenderer.cpp                           |  2 +-
+ src/render/OpenGL.cpp                               |  2 +-
+ src/state/WorkspaceState.hpp                        |  2 +-
+ src/xwayland/XSurface.cpp                           |  2 +-
+ 21 files changed, 34 insertions(+), 33 deletions(-)
+
+Index: source/src/config/shared/actions/ConfigActions.cpp
+===================================================================
+--- source.orig/src/config/shared/actions/ConfigActions.cpp
++++ source/src/config/shared/actions/ConfigActions.cpp
+@@ -1376,7 +1376,7 @@ ActionResult Actions::moveWindowOrGroup(
+ 
+     const auto PWINDOWINDIR = g_pCompositor->getWindowInDirection(window, direction);
+ 
+-    const bool ISWINDOWGROUP       = window->m_group;
++    const bool ISWINDOWGROUP       = !!window->m_group;
+     const bool ISWINDOWGROUPLOCKED = ISWINDOWGROUP && window->m_group->locked();
+     const bool ISWINDOWGROUPSINGLE = ISWINDOWGROUP && window->m_group->size() == 1;
+     const bool ISWINDOWGROUPDENIED = ISWINDOWGROUP && window->m_group->denied();
+Index: source/src/desktop/view/LayerSurface.hpp
+===================================================================
+--- source.orig/src/desktop/view/LayerSurface.hpp
++++ source/src/desktop/view/LayerSurface.hpp
+@@ -88,11 +88,11 @@ namespace Desktop::View {
+     };
+ 
+     inline bool valid(PHLLS l) {
+-        return l;
++        return !!l;
+     }
+ 
+     inline bool valid(PHLLSREF l) {
+-        return l;
++        return !!l;
+     }
+ 
+     inline bool validMapped(PHLLS l) {
+Index: source/src/desktop/view/SessionLock.cpp
+===================================================================
+--- source.orig/src/desktop/view/SessionLock.cpp
++++ source/src/desktop/view/SessionLock.cpp
+@@ -28,7 +28,8 @@ View::CSessionLock::~CSessionLock() {
+ }
+ 
+ void View::CSessionLock::init() {
+-    m_listeners.destroy = m_surface->m_events.destroy.listen([this] { std::erase_if(g_pCompositor->m_otherViews, [this](const auto& e) { return e == m_self; }); });
++    m_listeners.destroy =
++        m_surface->m_events.destroy.listen([this] { std::erase_if(g_pCompositor->m_otherViews, [this](const auto& e) { return e == dynamicPointerCast<IView>(m_self); }); });
+ 
+     m_wlSurface->assign(m_surface->surface(), m_self.lock());
+ }
+Index: source/src/desktop/view/WLSurface.cpp
+===================================================================
+--- source.orig/src/desktop/view/WLSurface.cpp
++++ source/src/desktop/view/WLSurface.cpp
+@@ -30,7 +30,7 @@ CWLSurface::~CWLSurface() {
+ }
+ 
+ bool CWLSurface::exists() const {
+-    return m_resource;
++    return !!m_resource;
+ }
+ 
+ SP<CWLSurfaceResource> CWLSurface::resource() const {
+Index: source/src/desktop/view/Window.cpp
+===================================================================
+--- source.orig/src/desktop/view/Window.cpp
++++ source/src/desktop/view/Window.cpp
+@@ -1358,7 +1358,7 @@ void CWindow::onX11ConfigureRequest(CBox
+ 
+     g_pHyprRenderer->damageWindow(m_self.lock());
+ 
+-    if (!m_isFloating || isFullscreen() || g_layoutManager->dragController()->target() == m_self) {
++    if (!m_isFloating || isFullscreen() || g_layoutManager->dragController()->target() == layoutTarget()) {
+         sendWindowSize(true);
+         g_pInputManager->refocus();
+         g_pHyprRenderer->damageWindow(m_self.lock());
+@@ -2377,7 +2377,7 @@ void CWindow::unmapWindow() {
+         g_pInputManager->releaseAllMouseButtons();
+     }
+ 
+-    if (m_self.lock() == g_layoutManager->dragController()->target())
++    if (layoutTarget() == g_layoutManager->dragController()->target())
+         CKeybindManager::changeMouseBindMode(MBIND_INVALID);
+ 
+     // remove the fullscreen window status from workspace if we closed it
+@@ -2628,8 +2628,8 @@ std::optional<Vector2D> CWindow::minSize
+         return m_ruleApplicator->minSize().value();
+ 
+     // then check if we have any proto overrides
+-    bool hasSizeHints = m_xwaylandSurface ? m_xwaylandSurface->m_sizeHints : false;
+-    bool hasTopLevel  = m_xdgSurface ? m_xdgSurface->m_toplevel : false;
++    bool hasSizeHints = m_xwaylandSurface ? !!m_xwaylandSurface->m_sizeHints : false;
++    bool hasTopLevel  = m_xdgSurface ? !!m_xdgSurface->m_toplevel : false;
+     if ((m_isX11 && !hasSizeHints) || (!m_isX11 && !hasTopLevel))
+         return std::nullopt;
+ 
+@@ -2673,7 +2673,7 @@ bool CWindow::canBeGroupedInto(SP<CGroup
+         return false;
+ 
+     static auto ALLOWGROUPMERGE       = CConfigValue<Config::INTEGER>("group:merge_groups_on_drag");
+-    bool        isGroup               = m_group;
++    bool        isGroup               = !!m_group;
+     bool        disallowDragIntoGroup = g_layoutManager->dragController()->wasDraggingWindow() && isGroup && !sc<bool>(*ALLOWGROUPMERGE);
+     return !g_pKeybindManager->m_groupsLocked           // global group lock disengaged
+         && ((m_groupRules & GROUP_INVADE && m_firstMap) // window ignore local group locks, or
+Index: source/src/managers/ANRManager.cpp
+===================================================================
+--- source.orig/src/managers/ANRManager.cpp
++++ source/src/managers/ANRManager.cpp
+@@ -51,7 +51,7 @@ CANRManager::CANRManager() {
+             d->dialogSaidWait  = false;
+         }
+ 
+-        std::erase_if(m_data, [&window](auto& w) { return w == window; });
++        std::erase_if(m_data, [&window](auto& anrData) { return !anrData || anrData->fitsWindow(window); });
+     });
+ 
+     m_timer->updateTimeout(TIMER_TIMEOUT);
+Index: source/src/managers/input/InputManager.cpp
+===================================================================
+--- source.orig/src/managers/input/InputManager.cpp
++++ source/src/managers/input/InputManager.cpp
+@@ -616,7 +616,7 @@ void CInputManager::mouseMoveUnified(uin
+         m_foundSurfaceToFocus = foundSurface;
+     }
+ 
+-    if (g_layoutManager->dragController()->target() && pFoundWindow != g_layoutManager->dragController()->target()) {
++    if (g_layoutManager->dragController()->target() && (!pFoundWindow || pFoundWindow->layoutTarget() != g_layoutManager->dragController()->target())) {
+         g_pSeatManager->setPointerFocus(foundSurface, surfaceLocal);
+         return;
+     }
+Index: source/src/managers/input/UnifiedWorkspaceSwipeGesture.cpp
+===================================================================
+--- source.orig/src/managers/input/UnifiedWorkspaceSwipeGesture.cpp
++++ source/src/managers/input/UnifiedWorkspaceSwipeGesture.cpp
+@@ -6,7 +6,7 @@
+ #include "InputManager.hpp"
+ 
+ bool CUnifiedWorkspaceSwipeGesture::isGestureInProgress() {
+-    return m_workspaceBegin;
++    return !!m_workspaceBegin;
+ }
+ 
+ void CUnifiedWorkspaceSwipeGesture::begin() {
+Index: source/src/managers/screenshare/ScreenshareManager.cpp
+===================================================================
+--- source.orig/src/managers/screenshare/ScreenshareManager.cpp
++++ source/src/managers/screenshare/ScreenshareManager.cpp
+@@ -147,7 +147,7 @@ WP<CScreenshareSession> CScreenshareMana
+                 return;
+ 
+             const auto& session = managed->m_session;
+-            std::erase_if(Screenshare::mgr()->m_managedSessions, [&session](const auto& s) { return s && s->m_session == session; });
++            std::erase_if(Screenshare::mgr()->m_managedSessions, [&session](const auto& s) { return s && s->m_session.get() == session.get(); });
+         });
+     }
+ 
+Index: source/src/protocols/ColorManagement.cpp
+===================================================================
+--- source.orig/src/protocols/ColorManagement.cpp
++++ source/src/protocols/ColorManagement.cpp
+@@ -269,11 +269,11 @@ CColorManagementSurface::CColorManagemen
+     m_imageDescription = getDefaultImageDescription();
+ 
+     m_resource->setDestroy([this](CWpColorManagementSurfaceV1* r) {
+-        LOGM(Log::TRACE, "Destroy wp cm surface {}", (uintptr_t)m_surface);
++        LOGM(Log::TRACE, "Destroy wp cm surface {}", (uintptr_t)m_surface.get());
+         PROTO::colorManagement->destroyResource(this);
+     });
+     m_resource->setOnDestroy([this](CWpColorManagementSurfaceV1* r) {
+-        LOGM(Log::TRACE, "Destroy wp cm surface {}", (uintptr_t)m_surface);
++        LOGM(Log::TRACE, "Destroy wp cm surface {}", (uintptr_t)m_surface.get());
+         PROTO::colorManagement->destroyResource(this);
+     });
+ 
+@@ -370,11 +370,11 @@ CColorManagementFeedbackSurface::CColorM
+     m_client = m_resource->client();
+ 
+     m_resource->setDestroy([this](CWpColorManagementSurfaceFeedbackV1* r) {
+-        LOGM(Log::TRACE, "Destroy wp cm feedback surface {}", (uintptr_t)m_surface);
++        LOGM(Log::TRACE, "Destroy wp cm feedback surface {}", (uintptr_t)m_surface.get());
+         PROTO::colorManagement->destroyResource(this);
+     });
+     m_resource->setOnDestroy([this](CWpColorManagementSurfaceFeedbackV1* r) {
+-        LOGM(Log::TRACE, "Destroy wp cm feedback surface {}", (uintptr_t)m_surface);
++        LOGM(Log::TRACE, "Destroy wp cm feedback surface {}", (uintptr_t)m_surface.get());
+         PROTO::colorManagement->destroyResource(this);
+     });
+ 
+Index: source/src/protocols/DRMSyncobj.hpp
+===================================================================
+--- source.orig/src/protocols/DRMSyncobj.hpp
++++ source/src/protocols/DRMSyncobj.hpp
+@@ -27,7 +27,7 @@ class CDRMSyncPointState {
+ 
+     //
+     operator bool() const {
+-        return m_timeline;
++        return !!m_timeline;
+     }
+ 
+   private:
+Index: source/src/protocols/ExtWorkspace.cpp
+===================================================================
+--- source.orig/src/protocols/ExtWorkspace.cpp
++++ source/src/protocols/ExtWorkspace.cpp
+@@ -44,7 +44,7 @@ CExtWorkspaceGroupResource::CExtWorkspac
+ }
+ 
+ bool CExtWorkspaceGroupResource::good() const {
+-    return m_resource;
++    return !!m_resource;
+ }
+ 
+ WP<CExtWorkspaceGroupResource> CExtWorkspaceGroupResource::fromResource(wl_resource* resource) {
+@@ -130,7 +130,7 @@ CExtWorkspaceResource::CExtWorkspaceReso
+ }
+ 
+ bool CExtWorkspaceResource::good() const {
+-    return m_resource;
++    return !!m_resource;
+ }
+ 
+ bool CExtWorkspaceResource::isActive() const {
+@@ -242,7 +242,7 @@ void CExtWorkspaceManagerResource::init(
+ }
+ 
+ bool CExtWorkspaceManagerResource::good() const {
+-    return m_resource;
++    return !!m_resource;
+ }
+ 
+ void CExtWorkspaceManagerResource::scheduleDone() {
+Index: source/src/protocols/Fifo.cpp
+===================================================================
+--- source.orig/src/protocols/Fifo.cpp
++++ source/src/protocols/Fifo.cpp
+@@ -140,7 +140,7 @@ CFifoManagerResource::CFifoManagerResour
+         }
+ 
+         surf->m_fifo = RESOURCE;
+-        LOGM(Log::DEBUG, "New fifo at {:x} for surface {:x}", (uintptr_t)RESOURCE, (uintptr_t)surf.get());
++        LOGM(Log::DEBUG, "New fifo at {:x} for surface {:x}", (uintptr_t)RESOURCE.get(), (uintptr_t)surf.get());
+     });
+ }
+ 
+Index: source/src/protocols/LayerShell.cpp
+===================================================================
+--- source.orig/src/protocols/LayerShell.cpp
++++ source/src/protocols/LayerShell.cpp
+@@ -44,7 +44,7 @@ CLayerShellResource::CLayerShellResource
+         m_current           = m_pending;
+         m_pending.committed = 0;
+ 
+-        bool attachedBuffer = m_surface->m_current.texture;
++        bool attachedBuffer = !!m_surface->m_current.texture;
+ 
+         if (attachedBuffer && !m_configured) {
+             m_surface->error(-1, "layerSurface was not configured, but a buffer was attached");
+Index: source/src/protocols/core/DataDevice.cpp
+===================================================================
+--- source.orig/src/protocols/core/DataDevice.cpp
++++ source/src/protocols/core/DataDevice.cpp
+@@ -564,7 +564,7 @@ void CWLDataDeviceProtocol::initiateDrag
+     Cursor::overrideController->setOverride("grabbing", Cursor::CURSOR_OVERRIDE_DND);
+     m_dnd.overriddenCursor = true;
+ 
+-    LOGM(Log::DEBUG, "initiateDrag: source {:x}, surface: {:x}, origin: {:x}", (uintptr_t)currentSource.get(), (uintptr_t)dragSurface, (uintptr_t)origin);
++    LOGM(Log::DEBUG, "initiateDrag: source {:x}, surface: {:x}, origin: {:x}", (uintptr_t)currentSource.get(), (uintptr_t)dragSurface.get(), (uintptr_t)origin.get());
+ 
+     currentSource->m_used = true;
+ 
+@@ -579,7 +579,7 @@ void CWLDataDeviceProtocol::initiateDrag
+                 return;
+             }
+ 
+-            if (m_dnd.dndSurface->m_current.texture <= 0 && m_dnd.dndSurface->m_mapped) {
++            if (!m_dnd.dndSurface->m_current.texture && m_dnd.dndSurface->m_mapped) {
+                 m_dnd.dndSurface->unmap();
+                 return;
+             }
+@@ -836,7 +836,7 @@ void CWLDataDeviceProtocol::renderDND(PH
+ }
+ 
+ bool CWLDataDeviceProtocol::dndActive() {
+-    return m_dnd.currentSource;
++    return !!m_dnd.currentSource;
+ }
+ 
+ void CWLDataDeviceProtocol::abortDndIfPresent() {
+Index: source/src/protocols/types/Buffer.cpp
+===================================================================
+--- source.orig/src/protocols/types/Buffer.cpp
++++ source/src/protocols/types/Buffer.cpp
+@@ -112,7 +112,7 @@ SP<IHLBuffer> CHLBufferReference::operat
+ }
+ 
+ CHLBufferReference::operator bool() const {
+-    return m_buffer;
++    return !!m_buffer;
+ }
+ 
+ void CHLBufferReference::drop() {
+Index: source/src/render/GLRenderer.cpp
+===================================================================
+--- source.orig/src/render/GLRenderer.cpp
++++ source/src/render/GLRenderer.cpp
+@@ -55,7 +55,7 @@ bool CHyprGLRenderer::initRenderBuffer(S
+         return false;
+     }
+ 
+-    return m_currentRenderbuffer;
++    return !!m_currentRenderbuffer;
+ }
+ 
+ bool CHyprGLRenderer::beginFullFakeRenderInternal(PHLMONITOR pMonitor, CRegion& damage, SP<IFramebuffer> fb, bool simple) {
+Index: source/src/render/OpenGL.cpp
+===================================================================
+--- source.orig/src/render/OpenGL.cpp
++++ source/src/render/OpenGL.cpp
+@@ -740,7 +740,7 @@ void CHyprOpenGLImpl::begin(PHLMONITOR p
+     g_pHyprRenderer->m_renderData.damage.set(damage_);
+     g_pHyprRenderer->m_renderData.finalDamage.set(finalDamage.value_or(damage_));
+ 
+-    m_fakeFrame = fb;
++    m_fakeFrame = !!fb;
+ 
+     if (g_pHyprRenderer->m_reloadScreenShader) {
+         g_pHyprRenderer->m_reloadScreenShader = false;
+Index: source/src/xwayland/XSurface.cpp
+===================================================================
+--- source.orig/src/xwayland/XSurface.cpp
++++ source/src/xwayland/XSurface.cpp
+@@ -78,7 +78,7 @@ void CXWaylandSurface::recheckSupportedP
+ }
+ 
+ void CXWaylandSurface::ensureListeners() {
+-    bool connected = m_listeners.destroySurface;
++    bool connected = !!m_listeners.destroySurface;
+ 
+     if (connected && !m_surface) {
+         m_listeners.destroySurface.reset();
+Index: source/src/Compositor.hpp
+===================================================================
+--- source.orig/src/Compositor.hpp
++++ source/src/Compositor.hpp
+@@ -85,7 +85,7 @@ class CCompositor {
+     // ------------------------------------------------- //
+ 
+     auto getWorkspaces() {
+-        return std::views::filter(m_workspaces, [](const auto& e) { return e; });
++        return std::views::filter(m_workspaces, [](const auto& e) { return !!e; });
+     }
+     std::vector<PHLWORKSPACE> getWorkspacesCopy();
+     void                      registerWorkspace(PHLWORKSPACE w);
+Index: source/src/layout/algorithm/tiled/scrolling/ScrollingAlgorithm.cpp
+===================================================================
+--- source.orig/src/layout/algorithm/tiled/scrolling/ScrollingAlgorithm.cpp
++++ source/src/layout/algorithm/tiled/scrolling/ScrollingAlgorithm.cpp
+@@ -509,7 +509,7 @@ void SScrollingData::recalculate(bool fo
+                 TARGET->layoutBox = controller->calculateTargetBox(i, j, USABLE, WORKAREA.pos(), *PFSONONE);
+ 
+             if (TARGET->target)
+-                TARGET->target->setPositionGlobal(targetBoxWithGaps(TARGET->layoutBox, i, j, FS));
++                TARGET->target->setPositionGlobal(targetBoxWithGaps(TARGET->layoutBox, i, j, !!FS));
+ 
+             if (forceInstant && TARGET->target)
+                 TARGET->target->warpPositionSize();
