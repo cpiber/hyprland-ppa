@@ -1,3 +1,32 @@
+aquamarine (0.13.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.13.0
+  * 9b5f14d version: bump to 0.13.0
+  * 817d985 drm: dont reset needFrame on stashing (#334)
+  * 86f2625 backend/drm: fix dangling this in a callback (#333)
+  * 063d888 drm: snapshot the commit for stashing it (#332)
+  * 726a228 backend: enable libinput plugins if available (#327)
+  * e68b800 drm: attach a right-sized swapchain buffer on modeset
+    commits (#330)
+  * 6ff6996 drm: deterministic page-flip scheduling + coalescing (#304,
+    #306) (#312)
+  * 6d6e238 internal: chase hu fixes
+  * c49d9c4 backend: fix implicit bool cast
+  * 107c83e frame: ensure only one frame when pageflip occurs (#325)
+  * d77e783 atomic: fix undefined behavior in cursor plane position cast
+    (#322)
+  * 6333f8f drm: fix resource leaks (#323)
+  * c5fc630 renderer: use version-compatible EGL debug context
+    attributes (#321)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Jul 2026 11:50:52 +0200
+
+aquamarine (0.12.1-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Jul 2026 09:37:34 +0200
+
 aquamarine (0.12.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.12.1
