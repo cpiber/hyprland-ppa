@@ -1,0 +1,11 @@
+Index: source/src/core/Seat.cpp
+===================================================================
+--- source.orig/src/core/Seat.cpp
++++ source/src/core/Seat.cpp
+@@ -169,5 +169,5 @@ void CSeatManager::registerCursorShape(S
+ }
+ 
+ bool CSeatManager::registered() {
+-    return m_pSeat;
++    return !!m_pSeat;
+ }
