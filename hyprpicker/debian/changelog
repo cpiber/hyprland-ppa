@@ -1,3 +1,9 @@
+hyprpicker (0.4.7-1ppa2) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Jul 2026 09:37:35 +0200
+
 hyprpicker (0.4.7-1ppa1) noble; urgency=medium
 
   * Update to release 0.4.7
