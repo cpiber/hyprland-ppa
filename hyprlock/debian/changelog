@@ -1,3 +1,30 @@
+hyprlock (0.9.6-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.6
+  * b222d9b version: bump to 0.9.6
+  * ef8ebe8 screencopy: guard CSCDMAFrame destructor against destroyed
+    EGL context (#1046)
+  * c72fd24 fix: use explicit cast for `m_pSeat` (#1040)
+  * b31b269 pam: reset block input
+  * 8bac7da core: move dbus connection from fprint to it's own thing
+    (#1029)
+  * a6d570a cmakelists: fix libpam finding for base ubuntu (#1027)
+  * ab83d0d output: create session lock surface before mode commit
+    (#1025)
+  * ae901a3 pam: fix behaviour when pam_fprintd.so is used (#1026)
+  * 274154f screencopy: flip the right 10bit formats (#1016)
+  * 98fb021 lockSurface: set eglSwapInterval to 0 (#1015)
+  * c86727a core: skip binding to dmabuf when SCMODE is 1 (#1014)
+  * b5a8374 background: fix condition for image reload when crossfade is
+    still in progress (#1008)
+  * 37f615c core: more obvious api around isUnlocked related logic
+    (#1004)
+  * c9e01b0 config: prevent crash on invalid numeric values (#1002)
+  * 927e09f pam: start conversation right away (#1003)
+  * d332164 config: fix error message if file not found (#996)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Jul 2026 18:15:05 +0200
+
 hyprlock (0.9.5-1ppa4) noble; urgency=medium
 
   * Fix build
