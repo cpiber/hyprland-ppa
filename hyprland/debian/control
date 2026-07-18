@@ -26,6 +26,7 @@ Build-Depends:
  libpango1.0-dev,
  libdrm-dev,
  libinput-dev (>= 1.29),
+ libeis-dev,
  libxcb-xfixes0-dev,
  libxcb-icccm4-dev,
  libxcb-composite0-dev,
@@ -48,7 +49,7 @@ Build-Depends:
  hyprwire-scanner | hello,
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),
- hyprland-protocols (>= 0.6.4),
+ hyprland-protocols (>= 0.7.0),
 Standards-Version: 4.6.2
 Homepage: https://hypr.land/
 Vcs-Browser: https://github.com/hyprwm/Hyprland

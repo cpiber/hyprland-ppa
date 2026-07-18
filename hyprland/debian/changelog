@@ -1,3 +1,61 @@
+hyprland-unstable (0.55.0~1ppa1+git202607181343-55ce25bd) noble; urgency=medium
+
+  * Update to main 55ce25bd
+  * 55ce25bd animation: dont .lock() a uniqueptr (#15470)
+  * 466f6bc5 protocols/presentation: associate feedback with committed
+    surface state, attempt 2 (#15459)
+  * 116e636f frame: fix frame scheduling being skipped or one vblank off
+    (#15404)
+  * 26c0b380 pointer-warp: fix forgetting enter serial (#15462)
+  * 4afc273d internal: fix tokens for xdg-desktop-portals (#15433)
+  * ad317198 init: revert "gain real-time through rtkit (#15411)"
+  * 3f6055bd xwayland: preserve title fallback state (#15449)
+  * de530935 hyprpm: continue after repository update failures (#15391)
+  * 46f64d36 ipc/lua: rxpose tearingHint for windows (#15431)
+  * 44d16e9b config/lua: allow wildcards or absolute paths in require
+    (#15461)
+  * 164aed99 desktop/view: fix IView virtual inheritance and erase_if
+    ptr (#15421)
+  * 229bca7b build: link Glaze to the compositor core (#15454)
+  * 5663e6d1 xwayland: validate ICCCM hint replies (#15450)
+  * d3e1411d screenshare: minor fence and copy fixes (#15429)
+  * 4a753eaa presentation: revert "associate feedback with committed
+    surface state (#15243)"
+  * 9d1813ad dmabuf: revert "ensure both create and create_immed verify
+    v4 (#15424)"
+  * 0cf70560 presentation: associate feedback with committed surface
+    state (#15243)
+  * 82baeb5e render: handle explicit sync fallback safely (#14986)
+  * 83cd85b3 init: gain real-time through rtkit (#15411)
+  * b5003998 renderer: block solitary on fadeouts (#15428)
+  * ee773e85 renderer: fix mirror draw buffers on rotating work buffers
+    (#15427)
+  * 031579e7 dmabuf: ensure both create and create_immed verify v4
+    (#15424)
+  * 11c38d62 algo/master: avoid nullptr dereferences (#15422)
+  * a97a2850 core: fix --verify-config crash (#15418)
+  * 26dbbb4f renderer: allow blurring of the session lock surface
+    (#15283)
+  * 0b0d7ede input-capture: impl protocol (#7919)
+  * d7fc7240 protocols: avoid crash in lease (#15417)
+  * 338bdbb3 dwindle: avoid crashing on expired weakptr (#15415)
+  * 0f6f2792 desktop/popup: fix crash on destroy (#15416)
+  * 79bc0ca1 groups: add groupbar disable_when_only option (#15009)
+  * f2eafdf1 hyprctl: handle partial IPC transfers (#15408)
+  * 6984188e xwayland: guard unknown selection events (#15409)
+  * e0d92838 config: fix cycle_next using nonexist layoutmsg for prev
+    (#15396)
+  * 30588bec protocols: fix SHM cursor partial damage copy (#15399)
+  * d371ad27 config: fix initial workspace tracking (#15395)
+  * e7996dc9 desktop: remove using directives, move to geometric
+    functions (#15402)
+  * ed11458b README: update showcase
+  * b348ff78 cursor: revert "transform hardware cursors within content
+    bounds (#14988)"
+  * 30983d6f splashes: add 5th comp winner's splash
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 18 Jul 2026 13:43:11 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202607132118-402eceea.1) noble; urgency=medium
 
   * Fix build

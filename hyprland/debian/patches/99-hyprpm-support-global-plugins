@@ -60,7 +60,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -712,6 +743,50 @@ bool CPluginManager::updatePlugins(bool
+@@ -727,6 +758,50 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = "Updating " + repo.name;
          progress.print();
  
@@ -115,7 +115,7 @@ Index: source/hyprpm/CMakeLists.txt
 ===================================================================
 --- source.orig/hyprpm/CMakeLists.txt
 +++ source/hyprpm/CMakeLists.txt
-@@ -31,6 +31,8 @@ set_target_properties(hyprpm PROPERTIES
+@@ -33,6 +33,8 @@ set_target_properties(hyprpm PROPERTIES
  
  target_link_libraries(hyprpm PUBLIC PkgConfig::hyprpm_deps glaze::glaze)
  

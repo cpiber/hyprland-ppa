@@ -7,7 +7,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -220,7 +220,7 @@ configure_file(
+@@ -234,7 +234,7 @@ configure_file(
  set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
  
  set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
@@ -33,7 +33,7 @@ Index: source/src/managers/ProtocolManager.cpp
 ===================================================================
 --- source.orig/src/managers/ProtocolManager.cpp
 +++ source/src/managers/ProtocolManager.cpp
-@@ -163,7 +163,7 @@ CProtocolManager::CProtocolManager() {
+@@ -164,7 +164,7 @@ CProtocolManager::CProtocolManager() {
      PROTO::data          = makeUnique<CWLDataDeviceProtocol>(&wl_data_device_manager_interface, 3, "WLDataDevice");
      PROTO::compositor    = makeUnique<CWLCompositorProtocol>(&wl_compositor_interface, 6, "WLCompositor");
      PROTO::subcompositor = makeUnique<CWLSubcompositorProtocol>(&wl_subcompositor_interface, 1, "WLSubcompositor");
