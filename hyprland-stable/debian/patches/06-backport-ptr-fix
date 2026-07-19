@@ -1,0 +1,25 @@
+From 55ce25bd67ab6f2ae7d60883f6c626be7d2ee12f Mon Sep 17 00:00:00 2001
+From: Tom Englund <tomenglund26@gmail.com>
+Date: Sat, 18 Jul 2026 09:24:42 +0200
+Subject: [PATCH] animation: dont .lock() a uniqueptr (#15470)
+
+animationManager.hpp does makeUnique<CAnimatedVariable<VarType>>() , so
+this has never worked.
+---
+ src/animation/AnimationManager.cpp | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+Index: source/src/managers/animation/AnimationManager.cpp
+===================================================================
+--- source.orig/src/managers/animation/AnimationManager.cpp
++++ source/src/managers/animation/AnimationManager.cpp
+@@ -258,8 +258,7 @@ void CHyprAnimationManager::tick() {
+         if (!PAV)
+             continue;
+ 
+-        const auto LOCK = PAV.lock();
+-        bool       warp = !*PANIMENABLED || !PAV->enabled();
++        bool warp = !*PANIMENABLED || !PAV->enabled();
+ 
+         switch (PAV->m_Type) {
+             case AVARTYPE_FLOAT: {

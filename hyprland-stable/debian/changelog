@@ -1,3 +1,9 @@
+hyprland (0.55.4-1ppa6) noble; urgency=medium
+
+  * Fix crash
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 19 Jul 2026 14:14:59 +0200
+
 hyprland (0.55.4-1ppa5) noble; urgency=medium
 
   * Fix build
