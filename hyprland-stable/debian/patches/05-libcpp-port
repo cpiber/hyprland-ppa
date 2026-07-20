@@ -2,7 +2,7 @@ Index: source/hyprctl/src/main.cpp
 ===================================================================
 --- source.orig/hyprctl/src/main.cpp
 +++ source/hyprctl/src/main.cpp
-@@ -271,7 +271,7 @@ int requestIPC(std::string_view filename
+@@ -296,7 +296,7 @@ int requestIPC(std::string_view filename
      sockaddr_un serverAddress = {0};
      serverAddress.sun_family  = AF_UNIX;
  
@@ -15,7 +15,7 @@ Index: source/src/xwayland/XWM.hpp
 ===================================================================
 --- source.orig/src/xwayland/XWM.hpp
 +++ source/src/xwayland/XWM.hpp
-@@ -217,7 +217,7 @@ class CXWM {
+@@ -216,7 +216,7 @@ class CXWM {
      std::vector<SP<CX11DataOffer>>            m_dndDataOffers;
  
      inline xcb_connection_t*                  getConnection() {
@@ -37,3 +37,24 @@ Index: source/src/config/shared/parserUtils/ParserUtils.cpp
      if (!res)
          return std::unexpected(std::format("invalid hex \"{}\"", value));
      return *res;
+Index: source/src/helpers/MiscFunctions.cpp
+===================================================================
+--- source.orig/src/helpers/MiscFunctions.cpp
++++ source/src/helpers/MiscFunctions.cpp
+@@ -23,6 +23,7 @@
+ #include <iomanip>
+ #include <sstream>
+ #include <fstream>
++#include <algorithm>
+ #ifdef HAS_EXECINFO
+ #include <execinfo.h>
+ #endif
+@@ -838,7 +839,7 @@ bool truthy(const std::string& str) {
+     });
+ 
+     return [&](auto&&... prefixes) -> bool {
+-        return (... || std::ranges::starts_with(str_view, prefixes));
++        return (... || (std::ranges::mismatch(str_view, prefixes).in2 == std::ranges::end(prefixes)));
+     }("true"sv, "yes"sv, "on"sv);
+     // clang-format on
+ }

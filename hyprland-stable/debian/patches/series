@@ -4,6 +4,4 @@
 03-embed
 04-gcc-port
 05-libcpp-port
-06-backport-hu-fix
-06-backport-ptr-fix
 99-hyprpm-global-headers

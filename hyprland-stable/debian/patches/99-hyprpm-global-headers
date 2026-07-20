@@ -7,7 +7,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 ===================================================================
 --- source.orig/hyprpm/src/core/PluginManager.cpp
 +++ source/hyprpm/src/core/PluginManager.cpp
-@@ -402,6 +402,9 @@ bool CPluginManager::removePluginRepo(co
+@@ -414,6 +414,9 @@ bool CPluginManager::removePluginRepo(co
  eHeadersErrors CPluginManager::headersValid() {
      const auto HLVER = getHyprlandVersion(false);
  
@@ -17,11 +17,11 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
          return HEADERS_MISSING;
  
-@@ -479,6 +482,17 @@ bool CPluginManager::updateHeaders(bool
-         std::filesystem::permissions(getTempRoot(), std::filesystem::perms::owner_all, std::filesystem::perm_options::replace);
-     }
+@@ -504,6 +507,18 @@ bool CPluginManager::updateHeaders(bool
  
-+    if (headersValid() != HEADERS_OK) {
+     const auto CURRENTHEADERS = headersValid();
+ 
++    if (CURRENTHEADERS != HEADERS_OK) {
 +        std::println("\n{}", failureString("Headers not okay. File a bug with https://github.com/cpiber/hyprland-ppa/ (not Hyprland)!"));
 +        return false;
 +    }
@@ -32,6 +32,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +    std::println("\n{}", successString("Headers up to date."));
 +    return true;
 +
-     if (!force && headersValid() == HEADERS_OK) {
++
+     if (!force && (CURRENTHEADERS == HEADERS_OK || CURRENTHEADERS == HEADERS_ABI_MISMATCH)) {
          std::println("\n{}", successString("Headers up to date."));
          return true;

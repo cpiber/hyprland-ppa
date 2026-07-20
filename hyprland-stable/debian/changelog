@@ -1,3 +1,518 @@
+hyprland (0.56.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.56.0
+  * 36b2e0cfe version: bump to 0.56.0
+  * 42b15274b ci(codeowners-plus): fetch PR head before trying to diff
+    against it (#15486)
+  * 271b0d1eb desktop/focusstate: restore keyboard focus after layer
+    closed (#15419)
+  * 0a5aa45bc windowstate/layerstate: don't dynamic_cast a view's self-
+    ptr during destruction (#15471)
+  * abc2ecf1d presentation: ensure feedbacks arent silently dropped
+    (#15473)
+  * ef903b892 [gha] Nix: update inputs
+  * c3e2d14db input-capture: permission type not in lua config (#15481)
+  * 55ce25bd6 animation: dont .lock() a uniqueptr (#15470)
+  * 466f6bc53 protocols/presentation: associate feedback with committed
+    surface state, attempt 2 (#15459)
+  * 116e636fc frame: fix frame scheduling being skipped or one vblank
+    off (#15404)
+  * 26c0b380f pointer-warp: fix forgetting enter serial (#15462)
+  * 4afc273db internal: fix tokens for xdg-desktop-portals (#15433)
+  * ad317198d init: revert "gain real-time through rtkit (#15411)"
+  * 3f6055bdb xwayland: preserve title fallback state (#15449)
+  * de530935a hyprpm: continue after repository update failures (#15391)
+  * 46f64d36b ipc/lua: rxpose tearingHint for windows (#15431)
+  * 44d16e9bd config/lua: allow wildcards or absolute paths in require
+    (#15461)
+  * 164aed999 desktop/view: fix IView virtual inheritance and erase_if
+    ptr (#15421)
+  * 229bca7b1 build: link Glaze to the compositor core (#15454)
+  * 5663e6d12 xwayland: validate ICCCM hint replies (#15450)
+  * d3e1411d9 screenshare: minor fence and copy fixes (#15429)
+  * 4a753eaa0 presentation: revert "associate feedback with committed
+    surface state (#15243)"
+  * 9d1813ad2 dmabuf: revert "ensure both create and create_immed verify
+    v4 (#15424)"
+  * 0cf705600 presentation: associate feedback with committed surface
+    state (#15243)
+  * 82baeb5e9 render: handle explicit sync fallback safely (#14986)
+  * 83cd85b3d init: gain real-time through rtkit (#15411)
+  * b50039987 renderer: block solitary on fadeouts (#15428)
+  * ee773e85e renderer: fix mirror draw buffers on rotating work buffers
+    (#15427)
+  * 031579e72 dmabuf: ensure both create and create_immed verify v4
+    (#15424)
+  * 11c38d62f algo/master: avoid nullptr dereferences (#15422)
+  * a97a2850c core: fix --verify-config crash (#15418)
+  * 26dbbb4f6 renderer: allow blurring of the session lock surface
+    (#15283)
+  * 0b0d7ede2 input-capture: impl protocol (#7919)
+  * d7fc7240f protocols: avoid crash in lease (#15417)
+  * 338bdbb32 dwindle: avoid crashing on expired weakptr (#15415)
+  * 0f6f2792e desktop/popup: fix crash on destroy (#15416)
+  * 79bc0ca16 groups: add groupbar disable_when_only option (#15009)
+  * f2eafdf10 hyprctl: handle partial IPC transfers (#15408)
+  * 6984188eb xwayland: guard unknown selection events (#15409)
+  * e0d928389 config: fix cycle_next using nonexist layoutmsg for prev
+    (#15396)
+  * 30588bec7 protocols: fix SHM cursor partial damage copy (#15399)
+  * d371ad276 config: fix initial workspace tracking (#15395)
+  * e7996dc9b desktop: remove using directives, move to geometric
+    functions (#15402)
+  * ed11458bb README: update showcase
+  * b348ff780 cursor: revert "transform hardware cursors within content
+    bounds (#14988)"
+  * 30983d6ff splashes: add 5th comp winner's splash
+  * 402eceea9 protocols: fix protocol null dereference paths (#15275)
+  * 5033ab954 cursor: transform hardware cursors within content bounds
+    (#14988)
+  * 2c3ed5f66 window: cache process environment lookups (#15264)
+  * 1eebdac35 config/lua: add lua-driven custom live gestures (#15393)
+  * 2633ecff3 algo/dwindle: do not remove node before assigning (#15373)
+  * 50d301d34 core/output: don't destroy bound wl_output resources on
+    same-name global replace (#15351)
+  * 2b6f6cb83 layout/monocle: fix `w[tv1]` workspace rule not working on
+    monocle layout (#15382)
+  * 7d90874c9 renderer/cm: fix blur clipping with HDR (#15371)
+  * 8684c154a glframebuffer: fix spurious incomplete framebuffer errors
+    (#15380)
+  * f4b9c1ab2 Tests/scroll: fix window hiding test  passing
+    inconsistently (#15384)
+  * c4cfe0e83 pointer: fix two stale cursor images clearings (#15376)
+  * f25f2ff04 ci: fix codeownersplus (#15383)
+  * e3ece1199 config/actions: unfocus last window on changeWorkspace
+    when moving monitors (#15374)
+  * ef18043b5 layersurface: dont nullptr deref on compositor cleanup
+    (#15379)
+  * 824ed12c9 fullscreen: fix some bars remaining invisible when
+    unfullscreening (#15370)
+  * 10a34c4c2 start: re-show display lock died screen on restart after
+    crash (#15334)
+  * 128b2d505 config/lua: match lua output naming to hyprctl output and
+    match naming convention (#15367)
+  * 50e7fdd1c core: refactor fullscreen logic, improve maintainability
+    and add a lot of tests (#14705)
+  * a51a369fd protocols/cm: implement WP CM v1.3 (#15026)
+  * 781d6070b config/lua: allow disabling workspace rules (#15362)
+  * 987caf88d config/lua: allow manual group control (#15363)
+  * 01f5c9aee crashreporter: fix SIGSEGV on dladdr1 failure (#15352)
+  * 9d284382a protocols/xdg-shell: add support for xdg interactive drags
+    (#15343)
+  * 6a8eb0490 monitor: skip fallback monitor on recovery flag evaluation
+    (#15332)
+  * 7046c0ff5 layout/target: fix unmanaged configure loops in x11
+    (#15336)
+  * c44cf81f0 [gha] Nix: update inputs
+  * 54037140d input: disable libinput send events when pointer device is
+    disabled (#15327)
+  * 7a5214614 input: fix wheel scroll events from virtual pointers being
+    dropped (#15319)
+  * 79834eeee monitor: fix cursor default_monitor option (#15322)
+  * 1c87d9dc8 monitor: fix special fade state update (#15316)
+  * 14fa1fd02 core: various SHM handling fixes (#15315)
+  * 37b02954e compositor: allow to request focusing windows behind
+    fullscreen (#14942)
+  * 1a18ba419 animation: refactor manager, fixup
+    desktopAnimationManager, clean up code (#15302)
+  * 79d3a904c config/lua: add is_key_down and a key event (#14779)
+  * 420f112bc ci: add code owners via codeowners-plus (#15261)
+  * 5b9931ae4 protocols: Fix crash when creating inert workspace
+    resource (#15303)
+  * 87604a7ee config/lua: add hl.clear_crashed_lockscreen() and fix tty
+    instructions (#15299)
+  * 9350e3410 crashReporter: don't skip trailing zeros in the stack
+    trace (#15300)
+  * 906e43e5a config/lua: add a change_id workspace API (#15298)
+  * 76123ac34 protocols: guard protocol callback resource lookups
+    (#15276)
+  * 9a74913d3 protocols: guard protocol output resource lookups (#15273)
+  * f747152f9 xwayland: avoid unmanaged geometry configure loop (#15280)
+  * 1b63ceecd core: refactor more compositor state into separate classes
+    and states (#15282)
+  * a4284c1e7 internal: use std::lerp() (#15296)
+  * db0e0f0cd internal: optimize Env::envEnabled() (#15295)
+  * 46e0b4344 algo: prevent shadowing of `m_parent` (#15270)
+  * 254d6bae7 desktop/fadeout: extract bad logic, simplify fadeouts
+    (#15260)
+  * a72fcfb5e config/lua: fix missing event from know events lists
+    (#15232)
+  * bd61edda5 treewide: clean up and performance  (#15230)
+  * 1e15a7d93 eventmanager: handle partial IPC writes (#15262)
+  * 1340fcefd renderer: harden damage handling and workspace color cache
+    (#15035)
+  * 75f558a53 dispatchers: fix fullscreen movefocus regression (#15226)
+  * 8149ba1df desktop/view: sync layout's m_box in clampWindowSize
+    (#15266)
+  * 685dbb3d7 internal: rename getWindows to getWindowCount to be more
+    descriptive. (#15268)
+  * 997780c86 internal: make ColorManagement constants inline to reduce
+    binary file size (#15267)
+  * 28bbe66da layout: harden workspace layout refresh during monitor
+    changes (#14893)
+  * 28a8005d9 desktop/view: ignore client maximize requests for tiled
+    windows (#13790)
+  * 39c78c2ac hyprtester: improvements, remove some redundancy and other
+    things. (#15038)
+  * b8d910d87 renderer: reject invalid damage before region handling
+    (#15242)
+  * c321bb0df perf: avoid unnecessary copies and allocation (#15147)
+  * ca877badd desktop: move window manipulation functions out of
+    compositor (#15256)
+  * f048359d2 desktop: extract a lot of view state from compositor
+    (#15245)
+  * 847a54dfc hyprtester: handle empty Lua include path in plugin build
+    (#15241)
+  * 4b909903c algo/scrolling: intelligently decide where to drop a dnd'd
+    window (#15251)
+  * f52070ee8 nix/tests: fix deprecation warning
+  * d25137923 flake: bump inputs
+  * 1f4e51019 flake: bump inputs
+  * 9405c7133 desktop/groups: fix crash on dissolution (#15135)
+  * defc6be1f internal: fix more fd leaks (#15225)
+  * 9b713ab50 desktop/window: fix crash on requested workspace not
+    having a mon (#15234)
+  * bf852f8b4 algo/scrolling: hide the top layer in workspace swipe to
+    scrolling layout fullscreen (#15137)
+  * 11f3a68e8 config: fix slide animation direction param (#15240)
+  * fe7cffe9e [gha] Nix: update inputs
+  * 9e499c595 internal: modernize truthy(fix possible UB) (#15217)
+  * afe2c390a CI/Arch: add libheif dep
+  * 27aacde4e nix: gcc15Stdenv -> gcc16Stdenv
+  * 6835443d7 keybinds: fix nested submaps and resets (#15213)
+  * ce36ee360 renderer: reject invalid damage regions (#15064)
+  * ce5f53e71 internal: make color constants inline to reduce binary
+    file size (#15211)
+  * c9e1a6c3a cm/icc: add Primaries to ICC-generated SImageDescription
+    (#15227)
+  * 87cd2a5f6 protocols/dmabuf: don't send mods on v4 and above (#15189)
+  * 001f7926d protocols/toplevelExport: null-check pixel format (#15203)
+  * fff2db2e6 opengl: optimize CShaderLoader::getDefines() (#15212)
+  * 648a5e82b decoration/glow: add gradient and angle animation (#15208)
+  * 1d756ae10 algo/master: fix drag-swap with two tiled windows (#14974)
+  * 85e1242d6 internal: minor spelling fixes (#15199)
+  * 9c1f454ba input/window: fix dragging pointer-locked and fullscreen
+    game windows (gamescope) (#15165)
+  * 98ebf05fe desktopAnimation: fix crash in startAnimation on ws with
+    no parent (#15224)
+  * 049595e19 config: monitors default to "preferred" res, "auto" pos
+    and scale (#15193)
+  * 5a7078d20 internal: fix bugs revealed by hu update
+  * 8f91ba920 tests: fix failing cases (#15200)
+  * cbfc3044d output: simplify trying DRM formats (#15198)
+  * 735c0e022 config/lua: do not wrap std::function in std::optional
+    (#15197)
+  * d486a5fe6 drm: init sync_merge_data::name field directly with a
+    string literal (#15153)
+  * 01e4e99c1 config/lua: use function pointers instead of std::function
+    for fields (#15154)
+  * 9262367c0 CI: do not auto-comment on PRs from contributors (#15183)
+  * 7a75ce5f2 config/values: update `general:layout` description
+    (#15175)
+  * b77ce7731 output/icc: avoid unnecessary VCGT resampling (#15144)
+  * ae1690c21 renderer/rbo: avoid nullptr deref (#15167)
+  * 2b81ad3bd desktop/windowRule: add a suppressevent for X11 configure
+    requests (#13313)
+  * 2d190ba79 config/propRefresher: add capability to execute scheduled
+    prop refresh immediately with lua helper function, add event for
+    prop refresh (#14990)
+  * 5b47c782c binds/submap: fix mouse binds inside submaps (#15060)
+  * 88262e1f8 tests/misc: remove isDirection(char)
+  * 61d6ec78c state/monitorQuery: fix monitor desc selector being
+    treated as "down" selector (#15109)
+  * e5c721f29 renderer: unbreak text rendering (#15127)
+  * dd09b617e renderer: optimize text rendering (#15124)
+  * 179c2bce0 internal: replace std::vformat() with std::format() when
+    the format string is known at the compile time (#15119)
+  * d59e294ac hyprctl: use .transform() instead of .and_then() (#15116)
+  * abbbed320 internal: do not use std::make_pair() (#15122)
+  * f03c245e5 monitor: don't refresh background textures on small
+    changes (#15117)
+  * bdf78d7ad internal: replace PI macro with std::numbers::pi (#15115)
+  * 05f60fd5a hyprctl: remove redundant mutex locking from
+    SRollingLogFollow::get() (#15114)
+  * 9ed9f5071 shaders: replace SHADERS std::map with a constexpr sorted
+    std::array (#15113)
+  * a23083e7a state: extract layout control functions from compositor
+    (#15104)
+  * c123867eb decoration/shadow: add gradient and angle animation
+    (#14809)
+  * 5ef47bd47 algo/dwindle: fix moving windows across a split (#15079)
+  * 1673ae949 protocols/vicinae-hotkey-v1: implement client-managed
+    global shortcuts (#15010)
+  * 7a2a64600 buffer: wait on seperate fences instead of merging
+    (#15088)
+  * 05922ec76 input/dnd: fix touch-driven drag-and-drop (#15077)
+  * f719bd679 hyprctl: add interactive Lua REPL mode (#15043)
+  * d12187273 desktop/windowRule: add `stableid:` window selector
+    (#14984)
+  * 259866f60 input: fix missing a pointer frame after absolute pointer
+    motion (#15003)
+  * 0fa36aeb9 hyprpm: sanitize commit pin targets (#15094)
+  * 9556660e2 helpers: remove old header (#15095)
+  * a582a5308 desktop/window: fix small crash on commit without a
+    toplevel (#15087)
+  * d5b8d7288 config: fix description matching for default workspaces
+    (#15074)
+  * 7dcdb8d79 hyprtester: misc bug fixes & refactorings (#15025)
+  * 70fd412d9 state/workspace: refactor workspace state, add querying,
+    move off of CCompositor (#15075)
+  * 4d7ae0754 monitor: refactor inheritance, expand query, add unit
+    tests for position and query (#15073)
+  * fed8884d2 algo/master: respect center_master_fallback when resizing
+    slave cols (#14961)
+  * aa3051bca meta/lua: fix capture of lua events (#15071)
+  * 6d6d1ca55 state/monitorQuery: implement monitor query, move logic
+    off of Compositor (#15070)
+  * 68e3e4049 config/lua: fix layout ctx checking the wrong argument
+    (#15061)
+  * a80e89fcb config/lua: make resizewindow param accessible to lua
+    (#14658)
+  * 099fbc70f gestures: configure client to final size on
+    fullscreen/float gesture completion (#14981)
+  * 2acc90653 algo/scrolling: add new `fit_into_view` layout msg
+    (#14991)
+  * 9f259d939 renderer: add tonemap settings (#14903)
+  * 08e2b6e66 renderer: fix SEGV on monitor disconnect (#15048)
+  * b6633c412 protocols/foreignToplevel: fix class and title reporting
+    on map and afterwards (#15037)
+  * 71b2fbe1e groups: fix border color for locked groups (#15015)
+  * 4cbb7dedc i18n: reduce the size of the machine code generated from
+    CI18nEngine constructor (#15036)
+  * 91288a784 logger: avoid multiple instances of static variables being
+    created in CLogger::log() (#15012)
+  * 4aff8ba45 internal: extract rarely executed code from RASSERT macro
+    to a non-inline function (#15013)
+  * 0aa7a8435 state/monitor: refactor monitor state, init fallback state
+    (#14547)
+  * a11a718a4 config/monitorRule: default scale to auto (#15019)
+  * 783560001 gestures: fix toggle cursorZoom sharing a single on/off
+    flag (#14998)
+  * 1d11bd926 protocols/pointerWarp: fix crash when warp is on a non
+    interactive surf (#15021)
+  * 2f99f3491 socket2: add back changefloatingmode and togglegroup
+    events (#14089)
+  * 3a05ece36 desktop/window: fix unwanted reswallow (#12993)
+  * 50b5169b9 plugins: add api for registering and dispatching events
+    (#14734)
+  * 761249164 gestures: clamp toggle cursorZoom like mult and live
+    (#14997)
+  * 9236465be gestures: fix live cursorZoom anchoring to a mid-animation
+    value (#14996)
+  * a4114fdf4 render: rollback failed direct scanout state (#14987)
+  * a4797618f [gha] Nix: update inputs
+  * 3852af3bb assets: update lockdead png with new dispatch commands
+    (#14213)
+  * 367beccd2 desktop/popup: fix subsurface scaling (#14936)
+  * 20ee7553c meta/lua: add proper lua stub types to the general config
+    (#14993)
+  * fcbbd6d4d config/lua: improve error handle-ability with Lua
+    `require` (#14937)
+  * 47d4897da renderer: fix `cursor:zoom_rigid` being ignored with
+    detached camera (#14995)
+  * ef9b62356 event/bus: add specialActive event to workspace (#14971)
+  * 60804cac5 desktop/rule: optimize mapping rule properties to strings
+    and engines (#14945)
+  * 7b422dd2b renderer: reduce per-frame heap allocations (#14932)
+  * 7c721d5c0 config/lua: expose monitor serial/available modes (#14973)
+  * 04c290efc internal: fix filename string not being computed at
+    compile time in RASSERT and GLCALL macros (#14972)
+  * f5ef95f26 hyprtester: Fix some failing tests terminating early
+    (#14969)
+  * bb13110bc hyprctl: hide C++ symbols by default (#14959)
+  * 7994acbe5 hyprpm: hide C++ symbols by default (#14958)
+  * 04435fb85 layout/dragController: reset floating offset on ended drag
+    (#14940)
+  * 146f22898 algo/scrolling: add a "fit expand" layout message (#14761)
+  * bf6f2c92f renderer/gl: release failed fence syncs (#14956)
+  * adaa22da6 monitor: move floating windows with layout changes
+    (#14928)
+  * be64fc1c7 monitor: retry transient mode selection failures (#14927)
+  * dfbf1843d compositor: give preference to same-workspace windows in
+    getWindowInDirection (#14941)
+  * 08b03845d protocols/pointerwarp: allow warp on layer surfaces
+    (#14949)
+  * 61321ce5c jeremy: fix auto-generating hyprlang instead of lua config
+    file by default (#14944)
+  * 7df262e9f elementrenderer: allow smaller viewports near the top/left
+    edges of the buffer (#14891)
+  * 55133fccc main: gain SCHED_RR and drop CAP_SYS_NICE earlier (#14897)
+  * 13be9a330 ci: upgrade actions/checkout to v6 (#14885)
+  * 1cffdcf04 scripts: fixup static asan patch (#14889)
+  * b34bbb4f8 config/actions: fix null derefs in pin dispatcher (#14914)
+  * 3a6928024 renderer/gl: skip invalidation clear on empty damage
+    (#14921)
+  * 500e80488 ci: upgrade github/codeql-action/upload-sarif to v4
+    (#14886)
+  * 12f93844c ci: upgrade actions/upload-artifact to v7 (#14887)
+  * 5d161c7be ci: upgrade stefanzweifel/git-auto-commit-action to v7
+    (#14888)
+  * 879711988 renderer: add a motion blur option to windows (#14911)
+  * 0d47a444b lua/monitor: add set_ functions for raw workspace
+    management (#14875)
+  * f51c96750 renderer: fix screenshader with fp16 (#14918)
+  * 515b883da internal: replace O_CLOEXEC with FD_CLOEXEC for file
+    descriptor flags (#14909)
+  * 34fddc949 hyprtester: add -t option for running specific tests
+    (#14846)
+  * d29653ceb hyprctl: add onCreatedEmpty field to workspacerules
+    dispatcher data (#14826)
+  * db9616d65 AGENTS: include m_ rule
+  * e43b163f7 hyprctl: add config full-reload for performing a ground-up
+    reload (#14748)
+  * 08b5c22b8 desktop/window: allow focus while held to non-OR X11
+    windows (#14821)
+  * 9940bf724 config/propRefresher: schedule frames on screen shader
+    refresh (#14874)
+  * 99306c247 config: add path in stdout log disabling message (#14793)
+  * 18ca56b84 core: fix a few fd leaks (#14870)
+  * d938fbf3c debug: replace sizeof(x)/sizeof(x[0]) with std::size
+    (#14871)
+  * 0dcec0c72 protocols: bump xdg-decoration to rev 2 (#14869)
+  * cbcddf284 monitor: revert "set format back after failing DS
+    activation (#14168)" (#14864)
+  * 54d4d3a97 desktop/window: fix wrong scale being applied after
+    workspace rules (#14832)
+  * ac7c8b93f binds/submap: fix submap enter bind == bind inside submap
+    (#14856)
+  * d03f01f92 desktop/popup: fix reposition artifacts (#14820)
+  * 558936e23 renderer: send frame callbacks on presented if no change
+    (#14849)
+  * ebc1816df xwayland: fix ICCCM synthetic event comparison (#14827)
+  * faecc5950 config/monitor: allow per-monitor vrr to inherit misc:vrr
+    (#14746)
+  * 293aa7c11 protocols/fractional-scale: track if scale is known and
+    send scales eagerly when known (#14798)
+  * 6fcfd9d6d screencopy: fix screenshare copyfb pending frames (#14837)
+  * 023169e1b drm: refactor merging and exporting fences (#14808)
+  * 898b8779f i18n: Adjust some awkward English (#14831)
+  * 2896aa98b AGENTS: add agents.md (#14835)
+  * f3d81e017 code: fix clang-format
+  * 864dc89c9 input: aggregate modifier states from all keyboards on
+    focus enter (#14633)
+  * 3e9b2dd17 tests: some code improvements  (#14774)
+  * 5fc23ab21 layout/scrolling: check if cursor overlaps with target in
+    focusOnInput (#14687)
+  * 76b9f4c79 compositor: fix monitor re-enabling on hotplug when dpms
+    is off (#14818)
+  * bb3353f86 layout/scrolling: fix prop refresh triggering hard input
+    (#14594)
+  * 457eb66df hyprpm: allow distro packagers to provide extra cflags for
+    building plugins (#14755)
+  * d8008a816 layersurface: inform layer surfaces of scale changes
+    (#14771)
+  * 2dcb10a4c internal: pass lua includes to hyprtester plugin (#14747)
+  * d5ff0f080 config: fix VRR not applying on runtime change (#14744)
+  * abd4abb5e i18n: completed italian translation and fixed some
+    previous italian translation inaccuracies (#14763)
+  * 55b404b0a algo/master: guard target in remove (#14756)
+  * 342f5bd9a input: fix inverted scrollwheel direction in keybinds
+    (#14749)
+  * ab567fc88 [gha] Nix: update inputs
+  * 4c15c1c94 protocols/background-effect: don't automatically destroy
+    object on surface destroy (#14758)
+  * 48453f278 cleanup: remove comment made for self (#14724)
+  * 040535def compositor: fix render unfocused for subsurfaces (#14718)
+  * 0fd20be8d desktop/windowRule: add `no_auto_hdr` window rule (#14694)
+  * be2659c1b keybinds: store hit binds first, then execute callbacks
+    (#14743)
+  * c5154131b config/lua: report errors better without check* (#14695)
+  * 4c89bfc2c renderer: add wrapping options to SRenderData (#14666)
+  * 8b7110cc6 screenshare: revert "only copy fb for pending frames
+    (#14672)"
+  * dded40247 internal: fix null deref in setWindowFullscreenInternal
+    when fullscreen state stale (#14725)
+  * ba578321e docs/hyprctl: update example code for hyprctl dispatch
+    (#14656)
+  * 95d9ae23e config/monitor: refresh splash texture on monitor reload
+    (#14632)
+  * 51d2bb9dd renderer: minor shader fixes (#14584)
+  * 1c0a7d180 config/lua: add physicalWidth and physicalHeight to lua's
+    Monitor (#14657)
+  * 203a12153 scrolling/fullscreen: fix fullscreen/maximise behaviour,
+    existing bugs with scrolling fullscreen (#14387)
+  * 38a9f5b9e desktop/windowRule: use original monitorstr if not silent
+    (#14621)
+  * 004fbb16a i18n: update italian translation (#14556)
+  * ba4733759 screenshare: only copy fb for pending frames (#14672)
+  * 01ab0474b meta/lua: add missing notification text field and make
+    timeout required (#14665)
+  * 4e3955716 config: fix decoration values to refresh on runtime
+    eval/keyword change (#14590)
+  * e6a719a6a texture: cache G and A swizzle channels aswell (#14605)
+  * 93b83c19f meta/lua: Gestures can accept a lua function (#14649)
+  * 6a8c7613b renderer: intersect blur region with bbox to normalize it
+    (#14639)
+  * 24c5c13c2 keybinds: set a fallback releasePending flag for special
+    lua binds (#14600)
+  * 76eeb9c48 decoration/glow: fix visibility when no decorate is set
+    (#14602)
+  * 7d1e481bb protocols: implement ext-background-effect-v1 protocol
+    (#13211)
+  * 8521487de build: bump libinput to 1.29 (#14593)
+  * d56a9444c layout/WindowTarget: fix crash when toggling float on
+    oversized windows (#14587)
+  * 614671e4e config/lua: add get_loaded_plugins (#14582)
+  * ce0ebcc4c renderer: fix border cm for mirroring (#14574)
+  * a358f2dfb desktop/windowrule: add silent option to monitor effect
+    (#14357)
+  * a599248d0 input/tablet: add TabletTool config options for eraser
+    button and tool pressure (#14110)
+  * cc0d3f63f config/values: default no_hardware_cursors to 2 (#14575)
+  * d6affc355 protocols/grab: fix refocus to unreachable windows
+    (#14555)
+  * 96de3464c windows/focus: differentiate fullscreen focus reason into
+    default and layout handled reasons. (#14370)
+  * b74b1f934 config/lua: use ref for workspace destroy events (#14562)
+  * 805f7bf48 tests: check that we can auto-group floating windows
+    (#14453)
+  * a45fc6493 xwayland: lock focus while dragging an xwayland window
+    (#12051)
+  * b1c58d317 config/lua: revert "restrict package module loading to
+    lua-only modules (#14526)" (#14533)
+  * 8643d5b71 config/lua: restrict package module loading to lua-only
+    modules (#14526)
+  * 5b8106d20 lua/objects: add cm and reserved properties to monitor
+    (#14523)
+  * 2d21fa3e5 input: properly make input-blocked windows inaccessible
+    (#14517)
+  * 998d3af07 algo/floating: do not alter pinned windows' state on ws
+    move (#14513)
+  * 3e7ce667b monitor: fix top-layer bar visibility on workspace change
+    with scrolling-layout fullscreen (#14425)
+  * c9e56d767 tests: fix broken test and flakiness (#14506)
+  * 9099ac311 groups: sync window monitor/workspace when added to a
+    group (#14478)
+  * 3a8ac9076 nix/module: link /share path
+  * b034fa538 flake.lock: update aquamarine
+  * 0cce82eec render/gl/framebuffer: fix swizzle comparisons (#14481)
+  * 9a3aed9bf pointer: fix cursor bounds not updating on monitor layout
+    changes (#14393)
+  * 690ac8422 [gha] Nix: update inputs
+  * f0d9f8997 monitor: don't set back to 8 bit when applying rules
+    (#14404)
+  * d61c96913 meta/lua-stubs: overwrite scale to accept float and int
+    (#14461)
+  * b76a9e072 config/lua: allow re-enabling monitors (#14447)
+  * 5e441cae5 hyprtester: report failures at the end (#14421)
+  * 6841447b4 config/propRefresher: avoid crash if event loop manager
+    isn't loaded (#14423)
+  * a73c4168c helpers: include numbers header (#14406)
+  * 2f2c9500e algo/master: add an option to focus master when window is
+    closed (#14306)
+  * 3e21a68bd render/cm: fix premult in shaders (#14403)
+  * b740add78 meta: update lua stubs for permissions (#14400)
+  * 404b0e4e5 Minor fixes today (#14401)
+  * 7a1af5032 renderer: set proper image description in snapshots
+    (#14398)
+  * dab964943 monitor: don't modeset on reserved changes (#14397)
+  * da395cdc5 gestures/scroll_move: guard col to avoid crash (#14394)
+  * 205d68065 algo/scrolling: add `inhibit_scroll` dispatch for
+    scrolling algorithm (#13955)
+  * ee58a513f config: fix plugin variables with dashes (#14379)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 20 Jul 2026 18:44:31 +0200
+
 hyprland (0.55.4-1ppa6) noble; urgency=medium
 
   * Fix crash
