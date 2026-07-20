@@ -1,3 +1,21 @@
+hyprland-guiutils (0.2.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.2.2
+  * a16ad89 version: bump to 0.2.2
+  * a6ccb6c welcome: update welcome screen to refer to new lua config.
+    (#19)
+  * 4457eee gitignore: update for nix
+  * 5ba080e flake.lock: Update (#22)
+  * 071d4df update: improve wording
+  * 0fb687f donate: improve wording
+  * a968d21 CI: use org-wide actions
+  * 0703df8 all: add --help and fix crashes
+  * 5e1c6b9 flake.lock: update
+  * bd65d9b nix: separate overlay with deps
+  * 8189651 treewide: format with nixfmt
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 20 Jul 2026 18:42:02 +0200
+
 hyprland-guiutils (0.2.1-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies
