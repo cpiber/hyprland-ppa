@@ -1,3 +1,44 @@
+hyprland-unstable (0.56.0~1ppa1+git202607251241-566ff8fa) noble; urgency=medium
+
+  * Update to main 566ff8fa
+  * 566ff8fa monitor: fix rotate and mirror regression (#15587)
+  * e820db90 desktop/rule: add no_xdg_drags window rule (#15573)
+  * 62d890ea workspace: add changeworkspaceid to socket2 (#15571)
+  * e701768d protocols/outputMgmt: fix reload not being fired after no-
+    op commits (#15570)
+  * 7d2ea270 desktop/windowRule: fix exec rules leaking (#15543)
+  * a9902ea6 config: remove legacy config support (#15539)
+  * 4588b295 config/lua: use openLate for window.open events (#15540)
+  * 36cc0e37 scrolling: fix in-band resize for the first window of a
+    band (#15532)
+  * c4605ba7 example: update hyprland.lua default springs (#15499)
+  * eb21dae6 makefile: smol Makefile QoL patches (#15491)
+  * ca90dfb0 compositor: add a deprecation notice to .conf configs
+    (#15538)
+  * 1a360623 compositor: init eventManager earlier (#15522)
+  * d7188d58 input: nullptr check eis_client_get_name (#15520)
+  * 9d3bc3b0 fifo: minor feedback fixes (#14765)
+  * 7ef766c9 build: update hyprutils dependency to 0.14.0 (#15518)
+  * 14c09399 input-capture: fix `allow_input_capture` bind flag with
+    `capture_modifiers` enabled (#15477)
+  * d39afc0a hyprctl: fix json output for binds (#15507)
+  * 2174f26a view: do not render monitor for tearing if it's blocked
+    (#15500)
+  * 5b260fae init: gain real-time through rtkit (again) (#15465)
+  * 36b2e0cf version: bump to 0.56.0
+  * 42b15274 ci(codeowners-plus): fetch PR head before trying to diff
+    against it (#15486)
+  * 271b0d1e desktop/focusstate: restore keyboard focus after layer
+    closed (#15419)
+  * 0a5aa45b windowstate/layerstate: don't dynamic_cast a view's self-
+    ptr during destruction (#15471)
+  * abc2ecf1 presentation: ensure feedbacks arent silently dropped
+    (#15473)
+  * ef903b89 [gha] Nix: update inputs
+  * c3e2d14d input-capture: permission type not in lua config (#15481)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 25 Jul 2026 12:41:33 +0200
+
 hyprland-unstable (0.55.0~1ppa1+git202607181343-55ce25bd) noble; urgency=medium
 
   * Update to main 55ce25bd
