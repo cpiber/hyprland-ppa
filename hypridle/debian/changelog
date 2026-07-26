@@ -1,3 +1,24 @@
+hypridle (0.1.8-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.8
+  * e5c01af version: bump to 0.1.8
+  * 6c119c2 core: add per-listener condition_cmd with retry (#193)
+  * ba40c0a core: implement  `GetActive` and `ActiveChanged` on dbus
+    service (#207)
+  * 128dcfa config: update dpms commands to lua syntax (#205)
+  * ff41dd6 CI: use org-wide actions
+  * 4de8bc0 config: allow hypridle -c to run without default conf (#191)
+  * 91ab4f0 core: don't skip on-resume when on-timeout already fired
+    (#192)
+  * d0f7778 flake.lock: update
+  * 4bdc21c nix: separate overlay with deps
+  * b28acde treewide: alejandra -> nixfmt
+  * 833eb85 nix: remove sdbus-cpp overlay
+  * f3d1f3b core: fix dbus inhibit lock counting (#175)
+  * f158b2f config: fix custom config paths
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jul 2026 18:19:38 +0200
+
 hypridle (0.1.7-1ppa7) noble; urgency=medium
 
   * Rebuild for dependencies
