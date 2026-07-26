@@ -1,3 +1,22 @@
+hy3 (0.56.0.1~1ppa1+git202607261820-42b7ed8build1) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jul 2026 18:20:29 +0200
+
+hy3 (0.56.0.1~1ppa1+git202607261820-42b7ed8) noble; urgency=medium
+
+  *  Update to master 42b7ed8
+  * 42b7ed8 version: 0.56.0.1
+  * db28808 fix: tab bars rendered in wrong orientation on rotated
+    monitors
+  * dcb6083 fix up+left resize directions
+  * 8666c43 version: 0.56.0
+  * 0f32517 fixup: chase 0.56.0
+  * aeaf766 fixup: chase churn
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jul 2026 18:20:06 +0200
+
 hy3 (0.55.0~1ppa1+git202607132125-81f63a0) noble; urgency=medium
 
   *  Update to master 81f63a0

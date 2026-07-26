@@ -1,3 +1,17 @@
+hyprland-plugins (0.56.0~1ppa1+git202607261819-81516adbuild1) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jul 2026 18:20:24 +0200
+
+hyprland-plugins (0.56.0~1ppa1+git202607261819-81516ad) noble; urgency=medium
+
+  *  Update to main 81516ad
+  * 81516ad csgo-vk-fix,hyprbars: chase hyprland (#689)
+  * 7644cec borders/bars/focus: chase hyprland (#687)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jul 2026 18:19:58 +0200
+
 hyprland-plugins (0.55.0~1ppa1+git202607132125-a2c7764) noble; urgency=medium
 
   *  Update to main a2c7764
