@@ -1,3 +1,16 @@
+hyprland-unstable (0.56.0~1ppa1+git202607261819-d8dc5030) noble; urgency=medium
+
+  * Update to main d8dc5030
+  * d8dc5030 github: materialize symlinks
+  * 6e4484f9 github: add discussion templates
+  * 7b8454d2 config/lua: support workspace selectors in
+    `hl.get_workspace()` (#15555)
+  * f7a71162 protocols: a few protocol error touchups (#15474)
+  * 453d96e9 renderer: round m_scale calculations (#15594)
+  * 225e018c CI: fix codeownersplus status comment spam (#15597)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 26 Jul 2026 18:19:46 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202607251241-566ff8fa) noble; urgency=medium
 
   * Update to main 566ff8fa
