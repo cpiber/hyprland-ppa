@@ -1,3 +1,15 @@
+aquamarine (0.14.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.14.0
+  * a79fb21 version: bump to 0.14.0
+  * 3021316 drm: dont set HW_CLOCK on nvidia reporting seq 0 (#340)
+  * aaed248 drm: add frameguard for idle frame (#341)
+  * c847837 drm: add support for COLOR_RANGE prop (#335)
+  * c0bd9ed drm: do not stash failed commits (#336)
+  * dbba471 gitignore: add direnv
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jul 2026 18:38:46 +0200
+
 aquamarine (0.13.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.13.0
