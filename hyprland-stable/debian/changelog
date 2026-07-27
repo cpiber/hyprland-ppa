@@ -1,3 +1,33 @@
+hyprland (0.56.1-1ppa1) noble; urgency=medium
+
+  * v0.56.1 Update to release 0.56.1
+  * 5c9377c15 version: bump to 0.56.1
+  * 9095f0a0c config/lua: do not nuke package.path (#15622)
+  * 47cf0d567 protocols/pointerwarp: send mouse frame event after motion
+    (#15599)
+  * 1bb69876c renderer: round m_scale calculations (#15594)
+  * 31555e5fd monitor: fix rotate and mirror regression (#15587)
+  * 8611ff2b6 workspace: add changeworkspaceid to socket2 (#15571)
+  * 3fe227366 protocols/outputMgmt: fix reload not being fired after no-
+    op commits (#15570)
+  * 1cb53fcfb desktop/windowRule: fix exec rules leaking (#15543)
+  * d0261b925 config/lua: use openLate for window.open events (#15540)
+  * d425ce121 scrolling: fix in-band resize for the first window of a
+    band (#15532)
+  * 0c8c0dd9c example: update hyprland.lua default springs (#15499)
+  * de88bcaf7 compositor: add a deprecation notice to .conf configs
+    (#15538)
+  * 242a4e686 compositor: init eventManager earlier (#15522)
+  * 46ed33918 input: nullptr check eis_client_get_name (#15520)
+  * d30bb9555 build: update hyprutils dependency to 0.14.0 (#15518)
+  * 71431f61d input-capture: fix `allow_input_capture` bind flag with
+    `capture_modifiers` enabled (#15477)
+  * ab551534e hyprctl: fix json output for binds (#15507)
+  * 8c9c1f19d view: do not render monitor for tearing if it's blocked
+    (#15500)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jul 2026 19:21:24 +0200
+
 hyprland (0.56.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.56.0
