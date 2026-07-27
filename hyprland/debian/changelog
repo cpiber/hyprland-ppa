@@ -1,3 +1,22 @@
+hyprland-unstable (0.56.0~1ppa1+git202607272003-e7d685d1) noble; urgency=medium
+
+  * Update to main e7d685d1
+  * e7d685d1 github: improve templates
+  * fdd49ae1 github: update PR template
+  * 65e81c11 config/lua: do not nuke package.path (#15622)
+  * 9f777b13 groupbar: re-add groupbar positional dragging (#15615)
+  * dd903837 opengl: get rid of VAO stalls once and for all. (#15603)
+  * 3de8c49b protocols/pointerwarp: send mouse frame event after motion
+    (#15599)
+  * d91db3c7 meta: add generator and update bug templates
+  * 6484f437 compositor: merge ready states in the surface queue
+    (#15504)
+  * 94fe1706 renderer: ensure only one buffer reference is added
+    (#15584)
+  * 8fd90780 ci/vouch: init vouch ci
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 27 Jul 2026 20:03:20 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202607261819-d8dc5030) noble; urgency=medium
 
   * Update to main d8dc5030
