@@ -1,3 +1,13 @@
+xdg-desktop-portal-hyprland (1.4.1-1ppa1) noble; urgency=medium
+
+  * Update to release 1.4.1
+  * cc8e5ef version: bump to 1.4.0
+  * c461622 core: fix loop hangup detection (#417)
+  * 08d99f7 screencopy: add option to override default cursor_mode
+    (#373)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 30 Jul 2026 19:58:11 +0200
+
 xdg-desktop-portal-hyprland (1.4.0-1ppa1) noble; urgency=medium
 
   * Update to release 1.4.0
