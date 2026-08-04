@@ -14,7 +14,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +    if (std::filesystem::exists("/usr/share/pkgconfig/hyprland.pc"))
 +        return HEADERS_OK;
 +
-     if (!std::filesystem::exists(DataState::getHeadersPath() + "/share/pkgconfig/hyprland.pc"))
+     if (!std::filesystem::exists(std::format("{}/share/pkgconfig/hyprland.pc", DataState::getHeadersPath())))
          return HEADERS_MISSING;
  
 @@ -504,6 +507,18 @@ bool CPluginManager::updateHeaders(bool

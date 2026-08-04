@@ -1,3 +1,45 @@
+hyprland-unstable (0.56.0~1ppa1+git202608042058-ea95499c) noble; urgency=medium
+
+  * Update to main ea95499c
+  * ea95499c hyprctl: fix wiki strings (#15739)
+  * 1bf16447 config/monitorRuleManager: recheck mirrors on ensure
+    (#15733)
+  * 901881c9 render: always render in normal transform (#15714)
+  * ef0d600e algo/scrolling: fix unFSing window sticking to the left
+    corner instead of respecting `focus_fit_method` (#15716)
+  * c82ff80f hyprctl/repl: support multiline interactive input (#15663)
+  * 275e2770 layout/drag: add binds:drag_center_window (#15563)
+  * 78e2f9b6 desktop/hitTest: exclusive layer popup event handling
+    (#15729)
+  * e2b2e6bc core/fullscreen: fix floating window rendering order when
+    one of them is FSed (#15703)
+  * 5c6f0aa2 debug/flame-graph: fix script for nixos
+  * 4d266282 config: fix duplicate config value crash (#15708)
+  * d056ca6f renderer/wobble: fix artifacts on transformed (#15709)
+  * 41b0fffd internal: reduce some profiled churn (#15705)
+  * 88c63869 chore: replace string concatenation with std::format
+    (#15652)
+  * 2f9169f0 renderer/wobble: fix wobble on transformed outputs (#15694)
+  * 3906d66a screenshare: fix toplevel capture missing software cursor
+    (#15638)
+  * ac82a9c2 bindings/dispatchers: Don't inherit key state modmask
+    during key sym lookup (#15401)
+  * 1ea103b5 renderer: enable fp16 by default when supported (#15668)
+  * 69f8789d layout/scrolling/fullscreen: minor improvements ontop of
+    15660 (#15685)
+  * 2effd2da algo/scrolling: bring back old behavior of fs (#15660)
+  * cfecc574 config/values: fixup shadow limits (#15682)
+  * 3ead4490 proto/wayland: dont check cursor buffer scale (#15674)
+  * ff672deb config: add deprecation notices (#15669)
+  * ab6499d2 core/fullscreen: allow layout managed fullscreens to not
+    block seeking window in direction, and other fixes (#15569)
+  * 584df4c3 [gha] Nix: update inputs
+  * e8a61642 renderer: implement window wobble (#14920)
+  * 8668a539 ipc/socket1: don't round/truncate `hyprctl monitors` scale
+    (#15628)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 04 Aug 2026 20:58:00 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202607301957-6ebaccd1) noble; urgency=medium
 
   * Update to main 6ebaccd1

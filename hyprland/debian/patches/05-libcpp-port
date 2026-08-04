@@ -1,16 +1,3 @@
-Index: source/hyprctl/src/main.cpp
-===================================================================
---- source.orig/hyprctl/src/main.cpp
-+++ source/hyprctl/src/main.cpp
-@@ -296,7 +296,7 @@ int requestIPC(std::string_view filename
-     sockaddr_un serverAddress = {0};
-     serverAddress.sun_family  = AF_UNIX;
- 
--    std::string socketPath = getRuntimeDir() + "/" + instanceSignature + "/" + filename;
-+    std::string socketPath = getRuntimeDir() + "/" + instanceSignature + "/" + std::string(filename);
- 
-     strncpy(serverAddress.sun_path, socketPath.c_str(), sizeof(serverAddress.sun_path) - 1);
- 
 Index: source/src/xwayland/XWM.hpp
 ===================================================================
 --- source.orig/src/xwayland/XWM.hpp

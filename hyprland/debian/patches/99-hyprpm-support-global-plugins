@@ -60,13 +60,13 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -727,6 +758,50 @@ bool CPluginManager::updatePlugins(bool
-         progress.m_szCurrentMessage = "Updating " + repo.name;
+@@ -728,6 +759,50 @@ bool CPluginManager::updatePlugins(bool
+         progress.m_szCurrentMessage = std::format("Updating {}", repo.name);
          progress.print();
  
 +        // global repo
 +        if (repo.url.empty()) {
-+            auto              STATE = toml::parse_file(std::string{DATAROOTDIR "/hyprpm/"} + repo.name + "/state.toml");
++            auto              STATE = toml::parse_file(std::format("{}/hyprpm/{}/state.toml", DATAROOTDIR, repo.name));
 +
 +            const auto        NAME = STATE["repository"]["name"].value_or("");
 +            const auto        URL  = STATE["repository"]["url"].value_or("");
@@ -97,7 +97,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +            }
 +            DataState::addNewPluginRepo(newrepo);
 +            const auto PATH = DataState::getDataStatePath() / newrepo.name;
-+            for (const auto& entry : std::filesystem::directory_iterator(std::string{DATAROOTDIR "/hyprpm/"} + newrepo.name)) {
++            for (const auto& entry : std::filesystem::directory_iterator(std::format("{}/hyprpm/{}", DATAROOTDIR, newrepo.name))) {
 +                const auto filename = entry.path().filename();
 +                if (filename == "state.toml")
 +                    continue;
