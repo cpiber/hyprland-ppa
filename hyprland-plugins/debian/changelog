@@ -1,3 +1,12 @@
+hyprland-plugins (0.56.0~1ppa1+git202608042115-95768db) noble; urgency=medium
+
+  *  Update to main 95768db
+  * 95768db hyprpm: add pins for 0.56.0 and .1
+  * f2aa598 borderspp: set desired extents to 0 for non-decorated
+    windows (#692)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 04 Aug 2026 21:15:09 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202607261819-81516adbuild3) noble; urgency=medium
 
   *  Rebuild for unstable
