@@ -61,7 +61,7 @@ if [ "$curhead" = "$newhead" ]; then
       dch -D "$dist" -R "$@" "Rebuild for unstable"
     fi
   fi
-  exit 1
+  exit 50
 fi
 set +x
 buildfiles="`find . -name CMakeLists.txt -o -name Makefile`"
