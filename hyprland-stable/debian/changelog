@@ -1,3 +1,37 @@
+hyprland (0.56.2-1ppa1) noble; urgency=medium
+
+  * v0.56.2 Update to release 0.56.2
+  * efb509937 [gha] Nix: update inputs
+  * 34170f65c version: bump to 0.56.2
+  * 8253299df desktop/rules: fix gaps_out rule overriding float_gaps
+    (#15662)
+  * a4ae36d3a hyprctl: fix wiki strings (#15739)
+  * cf432fce2 config/monitorRuleManager: recheck mirrors on ensure
+    (#15733)
+  * 8bec6fa8b algo/scrolling: fix unFSing window sticking to the left
+    corner instead of respecting `focus_fit_method` (#15716)
+  * be9044bb0 desktop/hitTest: exclusive layer popup event handling
+    (#15729)
+  * 86db03dc2 core/fullscreen: fix floating window rendering order when
+    one of them is FSed (#15703)
+  * d2d34cf50 config: fix duplicate config value crash (#15708)
+  * 0f24ef392 screenshare: fix toplevel capture missing software cursor
+    (#15638)
+  * 6c5c06b70 bindings/dispatchers: Don't inherit key state modmask
+    during key sym lookup (#15401)
+  * 618861c31 layout/scrolling/fullscreen: minor improvements ontop of
+    15660 (#15685)
+  * bab76c5f2 algo/scrolling: bring back old behavior of fs (#15660)
+  * 6dcd12709 core/fullscreen: allow layout managed fullscreens to not
+    block seeking window in direction, and other fixes (#15569)
+  * 971eb9878 ipc/socket1: don't round/truncate `hyprctl monitors` scale
+    (#15628)
+  * a4e1b373a opengl: invalidate depth too (#15657)
+  * c398cd848 desktop: render IME above all desktop components (#15646)
+  * f4ada5ae1 feat: add missing lua stub (#15579)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 05 Aug 2026 17:17:49 +0200
+
 hyprland (0.56.1-1ppa1) noble; urgency=medium
 
   * v0.56.1 Update to release 0.56.1
