@@ -1,3 +1,13 @@
+hyprland-plugins (0.56.0~1ppa1+git202608122025-faf5ef1) noble; urgency=medium
+
+  *  Update to main faf5ef1
+  * faf5ef1 Hyprbars, Hyprland v0.56 - Update actions for hyprbars
+    buttons in README with right fix (#695)
+  * a9eaa52 hyprbars: chase hyprland (#696)
+  * 00862ca hyprpm: add pin for 0.56.2
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Aug 2026 20:25:46 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202608042115-95768db) noble; urgency=medium
 
   *  Update to main 95768db
