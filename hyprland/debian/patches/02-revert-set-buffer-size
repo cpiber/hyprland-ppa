@@ -7,7 +7,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -234,7 +234,7 @@ configure_file(
+@@ -233,7 +233,7 @@ configure_file(
  set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
  
  set(XKBCOMMON_MINIMUM_VERSION 1.11.0)

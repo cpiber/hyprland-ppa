@@ -1,3 +1,67 @@
+hyprland-unstable (0.56.0~1ppa1+git202608122025-1256bd180) noble; urgency=medium
+
+  * Update to main 1256bd180
+  * 1256bd180 scrolling/fullscreen: fix notification layer creation
+    causing mouse flick in scrolling covering FS windows (#15795)
+  * 24e23ca4b config: deprecate special_scale_factor (#15832)
+  * a269fd77b layout/drag: fix draggingTiled not being reset properly
+    (#15833)
+  * 0cef51ab7 config/lua: fix empty object construction not resulting in
+    nil (#15831)
+  * 8a24bb3bb render/cm: fix hdrMetadataEqual returning inverted result
+    (#15825)
+  * 45c8510c9 flake.lock: update
+  * 58c22e7af chore: add keyboard-modifiers.txt to .gitignore (#15828)
+  * 814603164 tests: auto-group a new tiled window into the focused
+    floated group (#15797)
+  * b5a6d81f4 renderer: fix surface buffer transform and viewport spec
+    compliance (#14441)
+  * 3cbff91e8 config/actions: remove redundant if condition in center
+    (#15814)
+  * c8a51d4f5 desktop/window: fix special workspace hiding on window
+    unmap fallback (#15763)
+  * 963c5cf81 config/actions: fix center not saving the new pos of a
+    floating window (#15810)
+  * e3bbfe3cf shaders: make each SRC/DST TF a variant (#15792)
+  * f7daeb7f7 hyprctl: random Lua-adjacent fixes (#15767)
+  * b20621d48 layout: pinned floating windows now retain their last
+    position (#15784)
+  * 5dee44a72 [gha] Nix: update inputs
+  * 0e98ddc9c render/cm: re-send HDR metadata when its content changes
+    (#15761)
+  * 05819c4ad tests: prefer `SPAWN_KITTY` over `Tests::spawn_kitty` in
+    tests (#15754)
+  * dcd544e42 input: no keyboard exclusivity during dnd (#15780)
+  * 5b1c0fda7 renderer/fp16: fix blur clear and invalidate (#15791)
+  * 006bcc69a config/lua: display dispatcher names in binds list and
+    when stringifying (#15722)
+  * a2636192b shaders: fix gradient NaN on out of gamut colors (#15793)
+  * 65be579e9 tests: fix subtest shortcutLongPress from keybinds tests
+    (#15783)
+  * face6d144 core/fullscreen: set pos/size of all group members to the
+    same value when FSing groups (#15577)
+  * 7d4a3c576 codeowners: set erstarr to codeowners for fullscreen
+    related stuff (#15752)
+  * 5bec961bb internal: remove duplicate call to fullscreen function
+    (#15745)
+  * 4ffd88e5e buffer: dont drop damage until actually read (#15718)
+  * 64962f89e renderer/transformer: make window transformers adapt to
+    viewport constraints (#15759)
+  * cab296c38 protocols/bell: play a sound by default (#15502)
+  * db95de4f5 config/lua: clean up `HLMonitor:set_workspace()` and
+    `set_special_workspace()` (#15534)
+  * 5aacb6214 desktop/windowRule: add no_wobble window rule and
+    workspace rule (#15735)
+  * d10194c63 keybinds: refactor, clean up code, move to new style
+    (#15568)
+  * 91f29f23b flake.lock: update, drop glaze version requirement
+  * 961c6df0d desktop/rules: fix gaps_out rule overriding float_gaps
+    (#15662)
+  * fa45db49c hdr: reset surface metadata on change (#15598)
+  * 10d320fde committiming: release for intersected monitors (#15744)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 12 Aug 2026 20:25:14 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202608042058-ea95499c) noble; urgency=medium
 
   * Update to main ea95499c
