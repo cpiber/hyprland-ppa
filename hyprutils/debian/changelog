@@ -1,3 +1,18 @@
+hyprutils (0.14.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.14.1
+  * 2db328f VERSION: bump to 0.14.1
+  * b78ab69 os: init ProcLock and Semaphore (#123)
+  * e812f76 clang-tidy: remove namespace rule
+  * c157fe1 nix: gcc 15 -> 16
+  * 5a7b8cf nix: always add gtest
+  * 70ad438 internal: normalize all namespaces to be nested and clang-
+    format (#120)
+  * eba1f02 ci: init vouch
+  * 83da5ee weakptr: check for expired in casting (#118)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 14 Aug 2026 00:08:02 +0200
+
 hyprutils (0.14.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.14.0
