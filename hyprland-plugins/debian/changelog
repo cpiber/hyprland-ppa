@@ -1,3 +1,10 @@
+hyprland-plugins (0.56.0~1ppa1+git202608212222-83ce4b2) noble; urgency=medium
+
+  *  Update to main 83ce4b2
+  * 83ce4b2 vkfix: chase hyprland
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Aug 2026 22:22:20 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202608122025-faf5ef1) noble; urgency=medium
 
   *  Update to main faf5ef1
