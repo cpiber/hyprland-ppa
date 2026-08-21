@@ -1,3 +1,30 @@
+hyprland-unstable (0.56.0~1ppa1+git202608212221-cd83a26c7) noble; urgency=medium
+
+  * Update to main cd83a26c7
+  * cd83a26c7 renderer: fix blur not clipping when rounded (#15884)
+  * a28784206 config/propRefresher: damage monitor on shader refresh
+    (#15924)
+  * 0f97a22d1 config/lua: allow get_monitors with a table for specifying
+    args (#14693)
+  * 8d50be06a keybinds: fix subchord matching for release binds (#15904)
+  * 52b368f1d config/lua: adjust rounding limits (#15756)
+  * 9d4f7a83c CMake: omit -Wno-clobbered flag (#15867)
+  * 0e737901c tests: add fallback focus test for pinned windows on
+    special workspaces (#15826)
+  * af0d014cb desktop: refactor views, major cleanups (#15779)
+  * 575191109 tests: decompose group tests into smaller units (#15875)
+  * a1b9dc0e8 config: Add `cursor:warp_on_monitor_change` (#15844)
+  * fea3b3367 config/lua: make stable_id field a string, matching
+    hyprctl (#15869)
+  * a0c6946d6 config: allow exit_window_retains_fullscreen to be
+    configurable for groups (#15731)
+  * 6d43ce845 input/seat: check HID caps directly for focus enters
+    (#15841)
+  * 153df31d2 errorOverlay: fix reserved area tracking (#15839)
+  * ab2d313b5 monitor: fix layer arrangement on layout changes (#15842)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 21 Aug 2026 22:21:55 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202608122025-1256bd180) noble; urgency=medium
 
   * Update to main 1256bd180
