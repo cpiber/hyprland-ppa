@@ -1,3 +1,27 @@
+aquamarine (0.15.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.15.0
+  * 783bfd9 version: bump to 0.15.0
+  * 9d6fed9 core/drm: introduce async commits (#363)
+  * cf056dc output: add timing and cursor plane utils
+  * 7ce889c drm: don't delete HDR_OUTPUT_METADATA when EOTF is 0 (#358)
+  * 46d93d8 output: emit relative events on warps to outputs
+  * f32cfd0 drm: use libdisplay-info high-level API for EDID colorimetry
+    (#270)
+  * 639ee4c swapchain: preserve multigpu flag in resize() (#356)
+  * f3d1804 nix: gcc 15 -> 16
+  * 1a10fe2 drm: keep scanning extension blocks after the first CTA
+    (#350)
+  * 5a9a6da drm: retry atomic commit without max_bpc when the driver
+    rejects it (#316)
+  * cf45416 drm: drop unaccounted pageflip, dont present tearing twice
+    (#342)
+  * 6c1ea38 ci: init vouch
+  * fc39af0 drm: fix connector sequencing (#346)
+  * 5ea27f8 frame: reschedule one more idle frame if requested (#345)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 02 Sep 2026 19:56:55 +0200
+
 aquamarine (0.14.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.14.0
