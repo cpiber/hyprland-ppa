@@ -40,7 +40,8 @@ if [ -n "$checkout" ]; then
   tag="`echo "$checkout" | sed 's/^[^0-9]*\([0-9.]\+\).*/\1/'`"
 elif [ "$type" != "tag" ]; then
   git checkout "$type"
-  git pull --quiet --rebase
+  git pull --quiet --rebase --no-recurse-submodules
+  git submodule update --init --recursive
   tag="`git describe --tags | sed 's/-[0-9]\+-g[0-9a-fA-F]\+//g'`"
   tag="`echo "$tag" | sed 's/^[^0-9]*\([0-9.]\+\).*/\1/'`"
 else
