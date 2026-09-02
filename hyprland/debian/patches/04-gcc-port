@@ -2,7 +2,7 @@ Index: source/src/output/Monitor.cpp
 ===================================================================
 --- source.orig/src/output/Monitor.cpp
 +++ source/src/output/Monitor.cpp
-@@ -762,7 +762,8 @@ bool CMonitor::applyMonitorRule(Config::
+@@ -782,7 +782,8 @@ bool CMonitor::applyMonitorRule(Config::
          std::ranges::sort(sortedModes, sortFunc);
          if (sortedModes.size() > 3)
              sortedModes.erase(sortedModes.begin() + 3, sortedModes.end());

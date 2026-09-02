@@ -1,3 +1,66 @@
+hyprland-unstable (0.56.0~1ppa1+git202609022007-c1239d02e) noble; urgency=medium
+
+  * Update to main c1239d02e
+  * c1239d02e Core/Guidelines: update CLAUDE.md for claude and AI policy
+    (#16099)
+  * eb97c46a5 config/lua: add minimize event (#16071)
+  * d7a43351a protocols/xdg-shell: don't maximize on toplevel map
+    (#16013)
+  * 6813bbcae groups: fixes for groupbar:disable_when_only (#16037)
+  * 7f4b6169f Agents.md: Update with issue, discussion, and PR
+    guidelines (#16023)
+  * 4a4a5279a config/events: add config.unload event (#16005)
+  * 3b2dadd98 gestures: fix clangd error -> equation precedence.
+    (#16074)
+  * 86c24e2e0 hyprpm: make hyprwayland-scanner runtime dep explicit
+    (#16047)
+  * ee058bc47 output: add async commit scheduling for page flips
+    (#15991)
+  * ebc37ccc1 input/pointer: use aq output hints for absolute warps
+    (#15927)
+  * 503f9fc7f cursor: update cursor image on theme change (#16036)
+  * e43eaaac6 config/lua: fix misspelling of `damping` as `dampening`
+    for spring animations (#15993)
+  * c91fa5ab4 fullscreen: fix missing early return (#16063)
+  * 60695e18c ci/vouch: Allow vouched people to open issues (#15796)
+  * 62b40e1d0 bell: play threaded (#16033)
+  * 41718b097 [gha] Nix: update inputs
+  * 8d9868c93 protocols/dataDeviceWlr: don't send primary selection to
+    version 1 (#16034)
+  * 3b1aa6be7 algo/master: fix some master layout window-drag bugs
+    (#15956)
+  * e90da09e9 renderer: clear blur FBs on disabled blur (#16015)
+  * 9631188c1 desktop/windowRule: add no_glow window rule (#15863)
+  * 0bd11c7a0 renderer: fix blur region transformations (#15970)
+  * d8504461f monitor: properly un-orphan workspaces to fallback output
+    (#15890)
+  * 866b8085f README: add explicit mention of built in layouts (#15983)
+  * 951ab550e core/fullscreen: fix not accounting for special workspaces
+    when client requests FS with a monitor request attached (#15806)
+  * 45a79e5e8 config/propRefresher: damage monitor on refresh cursor
+    zooms (#15957)
+  * 357513949 monitor: solitary cannot have an underlying subsurface
+    (#15958)
+  * 6ffae9c5a config: fix CONFIG_VALUES not returning proper current
+    values (#15948)
+  * 0251f09fd [gha] Nix: update inputs
+  * d8e657eae renderer/gl: implement swappable blur variants (#15661)
+  * 175aa0743 desktop/window: warp pos/size on x11 configure to avoid
+    jitter (#15950)
+  * bb415864a input: use logical monitor size for eis regions (#15945)
+  * 9c7b45e62 decoration/groupbar: fix crash when group returns no match
+    (#15947)
+  * 5ccc5d440 pointer: colour-manage the hardware cursor buffer (#15905)
+  * faa8d40e5 monitor: damage the monitor when the output image
+    description changes (#15908)
+  * 3feae7a49 config: enable skip_non_kms_dmabuf_formats by default
+    (#15803)
+  * 34839b4f6 session: add disable-able systemd session target (#15776)
+  * d29916a91 input: decouple pointer focus from layer-surface
+    `keyboard_interactivity` (#15899)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 02 Sep 2026 20:07:50 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202608212221-cd83a26c7) noble; urgency=medium
 
   * Update to main cd83a26c7

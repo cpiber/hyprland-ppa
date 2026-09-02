@@ -45,7 +45,7 @@ Build-Depends:
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev (>= 0.14.0),
  libhyprgraphics-dev (>= 0.5.1),
- libaquamarine-dev (>= 0.9.3),
+ libaquamarine-dev (>= 0.15.0),
  libhyprwire-dev,
  hyprwire-scanner | hello,
  hyprwayland-scanner (>= 0.3.10),
