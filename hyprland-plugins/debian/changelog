@@ -1,3 +1,14 @@
+hyprland-plugins (0.56.0~1ppa1+git202609031812-67c3a4c) noble; urgency=medium
+
+  *  Update to main 67c3a4c
+  * 67c3a4c hyprbars: ignore input while disabled (#701)
+  * 67bedb1 vkfix: update
+  * 2b1c4d9 Don't swallow clicks meant for xdg popups (e.g. context
+    menus) overlapping the bar (#700)
+  * 2b41ad8 borders/bars/focus: chase hyprland (#699)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 03 Sep 2026 18:12:41 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202608212222-83ce4b2) noble; urgency=medium
 
   *  Update to main 83ce4b2
