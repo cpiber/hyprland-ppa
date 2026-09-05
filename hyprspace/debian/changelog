@@ -1,3 +1,9 @@
+hyprspace (0.50.0~1ppa1+git202605301122-c109256build13) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 05 Sep 2026 18:27:29 +0200
+
 hyprspace (0.50.0~1ppa1+git202605301122-c109256build12) noble; urgency=medium
 
   *  Rebuild for unstable

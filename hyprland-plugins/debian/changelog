@@ -1,3 +1,10 @@
+hyprland-plugins (0.56.0~1ppa1+git202609051827-722f15a) noble; urgency=medium
+
+  *  Update to main 722f15a
+  * 722f15a hyprbars: chase hyprland (#702)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 05 Sep 2026 18:27:11 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202609031812-67c3a4c) noble; urgency=medium
 
   *  Update to main 67c3a4c
