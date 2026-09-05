@@ -1,3 +1,11 @@
+hyprutils (0.14.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.14.2
+  * a21e87b version: bump to 0.14.2
+  * 6cf5041 eventLoop: init event loop (#124)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 05 Sep 2026 18:23:57 +0200
+
 hyprutils (0.14.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.14.1
