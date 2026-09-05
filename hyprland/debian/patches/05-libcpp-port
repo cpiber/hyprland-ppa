@@ -53,8 +53,8 @@ Index: source/src/ipc/s1/S1.cpp
              if (i < request.size() && (request[i + 1] == '\\' || request[i + 1] == ';'))
                  ++i;
              else
--                Log::logger->log(Log::ERR, "Malformed socket1 request: invalid escape sequence {} at position {}, using it verbatim", request.subview(i, 2), i);
-+                Log::logger->log(Log::ERR, "Malformed socket1 request: invalid escape sequence {} at position {}, using it verbatim", std::string_view(request).substr(i, 2), i);
+-                LOG(Log::ERR, "Malformed socket1 request: invalid escape sequence {} at position {}, using it verbatim", request.subview(i, 2), i);
++                LOG(Log::ERR, "Malformed socket1 request: invalid escape sequence {} at position {}, using it verbatim", std::string_view(request).substr(i, 2), i);
          }
          parsedCommand << request[i];
      }

@@ -1,3 +1,23 @@
+hyprland-unstable (0.56.0~1ppa1+git202609051824-2eb5180c6) noble; urgency=medium
+
+  * Update to main 2eb5180c6
+  * 2eb5180c6 ipc/s1: expose monitor details via s1 (#16152)
+  * ee0409623 internal: minor fixes from overview mr (#16145)
+  * 5584938a9 pointer: add pointer transforms (#16143)
+  * 01be2db87 [gha] Nix: update inputs
+  * c0e2be756 seat: implement input redirecting (#16141)
+  * 34ce98269 renderer/gl: fix blur noise intensity in HDR (#16120)
+  * d4ed4a9ad input/gesture: allow for negative scale on scroll move
+    gesture (#16072)
+  * cb537a387 splashes: remove jacekpoz splash
+  * fec44ae32 layout/scrolling: make mouse click viewport move
+    consistent across all `follow_mouse` options (#15975)
+  * e329b6171 groups: fix comment (#16100)
+  * 304bbec7d protocols: clear data control primary selection (#16117)
+  * 59177602f log: update logging macro to include callsite (#16111)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sat, 05 Sep 2026 18:24:47 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202609022007-c1239d02e) noble; urgency=medium
 
   * Update to main c1239d02e
