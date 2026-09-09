@@ -40,6 +40,14 @@ Depends:
  libaquamarine-dev (>= 0.10.0),
  libhyprgraphics-dev (>= 0.3.0),
  libhyprutils-dev (>= 0.14.2),
+ libwayland-dev (>= 1.22),
+ wayland-protocols (>= 1.45),
+ libgl1-mesa-dev,
+ libgbm-dev,
+ libxkbcommon-dev,
+ libpango1.0-dev,
+ libcairo2-dev,
+ libabsl-dev,
 Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
  Hyprtoolkit is designed to be a small, simple, and modern C++ toolkit
  for making wayland GUI apps, with a few goals:
