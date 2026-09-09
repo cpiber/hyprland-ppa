@@ -2,7 +2,7 @@ Index: source/src/system/Icons.cpp
 ===================================================================
 --- source.orig/src/system/Icons.cpp
 +++ source/src/system/Icons.cpp
-@@ -16,6 +16,20 @@ extern "C" {
+@@ -19,6 +19,20 @@ extern "C" {
  #include "iniparser/iniparser.h"
  }
  

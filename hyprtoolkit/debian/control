@@ -13,7 +13,7 @@ Build-Depends:
  libwayland-dev (>= 1.22),
  wayland-protocols (>= 1.45),
  libgl1-mesa-dev,
- libhyprutils-dev (>= 0.11.0),
+ libhyprutils-dev (>= 0.14.2),
  libhyprlang-dev (>= 0.6.0),
  libpixman-1-dev,
  libdrm-dev,
@@ -22,6 +22,7 @@ Build-Depends:
  libpango1.0-dev,
  libcairo2-dev,
  libiniparser-dev,
+ libabsl-dev,
  libhyprgraphics-dev (>= 0.3.0),
  libaquamarine-dev (>= 0.10.0),
 Standards-Version: 4.6.2
@@ -34,11 +35,11 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libhyprtoolkit5 (= ${binary:Version}),
+ libhyprtoolkit6 (= ${binary:Version}),
  ${misc:Depends},
  libaquamarine-dev (>= 0.10.0),
  libhyprgraphics-dev (>= 0.3.0),
- libhyprutils-dev (>= 0.11.0),
+ libhyprutils-dev (>= 0.14.2),
 Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
  Hyprtoolkit is designed to be a small, simple, and modern C++ toolkit
  for making wayland GUI apps, with a few goals:
@@ -48,7 +49,7 @@ Description: Hyprtoolkit is a modern C++ toolkit for wayland GUI apps
  - Simple system theming
  This package includes the build-headers for using hyprutils in your own project.
 
-Package: libhyprtoolkit5
+Package: libhyprtoolkit6
 Architecture: any
 Multi-Arch: same
 Depends:

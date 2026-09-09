@@ -7,29 +7,29 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -37,7 +37,6 @@ pkg_check_modules(
-   pango
-   cairo
-   pangocairo
--  iniparser
-   hyprgraphics>=0.3.0
-   aquamarine>=0.10.0)
+@@ -45,7 +45,6 @@ set(PRIVATE_PKG_DEPS
+     pango
+     cairo
+     pangocairo
+-    iniparser
+     absl_flat_hash_map)
  
-@@ -74,7 +73,7 @@ target_include_directories(
+ set(ALL_PKG_DEPS ${PUBLIC_PKG_DEPS} ${PRIVATE_PKG_DEPS})
+@@ -85,7 +84,7 @@ target_include_directories(
  set_target_properties(hyprtoolkit PROPERTIES VERSION ${HYPRTOOLKIT_VERSION}
-                                              SOVERSION 5)
+                                               SOVERSION 6)
  target_link_libraries(hyprtoolkit PUBLIC OpenGL::EGL OpenGL::OpenGL
 -                                         PkgConfig::deps)
 +                                         PkgConfig::deps iniparser)
  
- check_include_file("sys/timerfd.h" HAS_TIMERFD)
- pkg_check_modules(epoll IMPORTED_TARGET epoll-shim)
+ check_include_file("sys/inotify.h" HAS_INOTIFY)
+ pkg_check_modules(inotify IMPORTED_TARGET libinotify)
 Index: source/src/system/Icons.cpp
 ===================================================================
 --- source.orig/src/system/Icons.cpp
 +++ source/src/system/Icons.cpp
-@@ -13,7 +13,7 @@
- #include <hyprutils/utils/ScopeGuard.hpp>
+@@ -16,7 +16,7 @@
+ #include <ranges>
  
  extern "C" {
 -#include "iniparser.h"

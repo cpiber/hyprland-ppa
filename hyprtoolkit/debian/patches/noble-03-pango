@@ -1,0 +1,13 @@
+Index: source/src/element/text/Text.cpp
+===================================================================
+--- source.orig/src/element/text/Text.cpp
++++ source/src/element/text/Text.cpp
+@@ -358,7 +358,7 @@ void STextImpl::setPangoEllipsize() {
+         pango_layout_set_wrap(pangoData.layout, PANGO_WRAP_WORD_CHAR);
+         pango_layout_set_ellipsize(pangoData.layout, PANGO_ELLIPSIZE_NONE);
+     } else {
+-        pango_layout_set_wrap(pangoData.layout, PANGO_WRAP_NONE);
++        pango_layout_set_wrap(pangoData.layout, PANGO_WRAP_WORD_CHAR);
+         pango_layout_set_ellipsize(pangoData.layout, PANGO_ELLIPSIZE_END);
+     }
+ }

@@ -1,3 +1,115 @@
+hyprtoolkit (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * f8cbaf4 version: bump to 0.6.0
+  * a46d3eb renderer/gl: unset egl before destroying
+  * a576373 core: defer close
+  * b7ebc6f element/button: avoid relayout on hover
+  * 1892716 core: migrate event loop to hyprutils (#120)
+  * 16548bf element/progress-bar: resize indeterminate pulse
+  * 8992081 element/textbox: report only committed text edits
+  * 97692c0 element/textbox: reset editing state after text rebuild
+  * 88e7b45 element/textbox: rebuild eye icon structure
+  * 50c1e40 element/textbox: handle focus state
+  * 444121c element/text: refresh textures after rebuild
+  * 7973f2d element/image: rerasterize scalable paths after resize
+  * 0d740ab element/image: handle overlapping loads
+  * 11d996f element/image: make image sources exclusive
+  * 1931185 element/slider: honor configured value range
+  * 14bd8e0 element/combobox: handle empty item lists
+  * b379781 element/spinbox: apply rebuilt selection state
+  * 4c4d98b element/spinbox: fix selection navigation
+  * 359cebd element/radio-group: preserve grouping after callback
+    rebuild
+  * fd67942 element/checkbox: apply rebuilt style
+  * eda652b element/button: apply rebuilt properties
+  * 57e89b4 window: avoid duplicate pointer event delivery
+  * d0b5024 element: preserve mouse axis delta
+  * 2c729d0 element: respect mouse input state
+  * 08574fd element/scroll-area: clamp scroll after rebuild
+  * 815aad3 element/scroll-area: implement rebuild
+  * 7724032 element/rowlayout: implement rebuild
+  * 2368446 wayland: follow keyboard focus for keys
+  * 9ba42b5 element/text: do not cache preferred size (#122)
+  * e5373a8 core: add an embedded backend (#117)
+  * 0f124a0 core: properly implement animations (#119)
+  * be487c4 flake.lock: update
+  * 7671d2b nix: gcc 15 -> 16
+  * af515b6 element/image: pass rounding to renderer
+  * 13d3b33 gitignore: add direnv
+  * 60dc0bd element/textbox: check if window is null in keyboard focus
+    events (#115)
+  * 012bb43 nix: add propagatedBuildInputs
+  * 293f69a wayland: make popups work on layer shells and fix incorrect
+    cast (#114)
+  * cccf08a ci: init vouch
+  * 08aed5d icons: fix constant rerender bug in icons (#110)
+  * 02e98cd AGENTS: init file
+  * 67d9012 ayout: revert "lincrement used space when an element must be
+    shrunk or grown (#108)" (#109)
+  * 5e04a82 layout: increment used space when an element must be shrunk
+    or grown (#108)
+  * 78b6d93 renderer: fix crash when explicit sync export fails (#106)
+  * ffb0d2b window/layer: implement set size (#104)
+  * c0b661f system/icons: get theme dirs from environment (#103)
+  * f6b7b4d window: add keyboard shortcuts inhibitor option (#101)
+  * 714a480 fix : update scanner api calls from proxy() to resource()
+    (#102)
+  * bdba25c flake.lock: Update (#100)
+  * dc42c8d cmake/packaging: add auto pkg-config gen to CMakeLists (#99)
+  * 7d2bfc2 assets: re-render CImageElements on fitMode change (#96)
+  * af055a1 element/text: clamp ellipsize to the layout room hint, not
+    the box (#95)
+  * 1e462f8 element/text: fix size flicker at the ellipsize boundary
+    (#94)
+  * efbf51e element/scrollarea: add optional draggable scrollbar (#89)
+  * e51fde5 config: fixup watcher replacement logic
+  * bf9219c core/wayland: route keyboard to the focused window, not the
+    pointer one (#91)
+  * a034284 element/textbox: vertically center single-line selection
+    highlight (#88)
+  * 17afa20 tests/text: pin link color so the parse test is theme-
+    independent (#90)
+  * a4fdf36 element/button: add ellipsize option for long labels (#87)
+  * 07b8d94 element/textbox: hover cursor and highlight on the eye icon
+    (#86)
+  * 732d190 element/textbox: add eye icon for password visibility toggle
+    (#85)
+  * df625c0 element/button: add accent variant (#84)
+  * b95b29d system/icons: skip already-parsed themes to break inherit
+    cycles (#83)
+  * c6924a3 element/radiogroup: add Radio style and coordinator (#63)
+  * 1ed9c67 window/wayland: programmatic and interactive resize (#81)
+  * d6b8a63 element/textbox: add clipboard copy/cut/paste (#80)
+  * 2498dc8 treewide: resolve TODO and FIXME markers (#57)
+  * b3450e7 core/animation: implement gradient animation (#68)
+  * 7c0ea9f element/checkbox: implement state and setState (#73)
+  * ba12ea8 renderer/gl: compute line thickness perpendicular in pixel
+    space (#79)
+  * f0cdd03 internal: fix build on non-Linux systems (#78)
+  * 715f4c6 element/textbox: refresh label on first window-attached
+    reposition (#77)
+  * 78d25ab element: add imperative setters for textbox, text, and
+    button (#76)
+  * a62c2fb element/textbox: re-render on rebuild for password,
+    placeholder, multiline (#75)
+  * 5c8c698 element/textbox: fix password masking and cursor for utf-8
+    input (#74)
+  * 0ef3ad9 element/progressbar: add ProgressBar widget (#62)
+  * 99babdb renderer/gl: use sc/rc cast helpers (#60)
+  * 2ff01a2 element/checkbox: make checkmark color reactive (#69)
+  * 2ba522c element/image: attach listener before enqueue to fix race
+    (#71)
+  * 5efa4d3 core/backend: reset iconFactory and config in enterLoop
+    (#72)
+  * dab6d11 element/slider: normalize value to percentage in replaceData
+    (#70)
+  * b0ccc31 window/wayland: initialize appliedScale member (#61)
+  * eec30dc core/backend: reset g_backend last in terminate to fix UAF
+    (#67)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Sep 2026 19:02:58 +0200
+
 hyprtoolkit (0.5.4-1ppa6) noble; urgency=medium
 
   * Rebuild for dependencies
