@@ -17,14 +17,6 @@ Build-Depends:
  libpixman-1-dev,
  libxkbcommon-dev,
  libsdbus-c++-dev (>= 2.0.0),
- libwayland-dev (>= 1.22),
- wayland-protocols (>= 1.45),
- libgl1-mesa-dev,
- libgbm-dev,
- libxkbcommon-dev,
- libpango1.0-dev,
- libcairo2-dev,
- libabsl-dev,
 Standards-Version: 4.6.2
 Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprpolkitagent
