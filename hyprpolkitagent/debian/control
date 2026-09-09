@@ -9,14 +9,22 @@ Build-Depends:
  gcc,
  g++,
  pkgconf,
- libgl-dev,
- libvulkan-dev,
  libhyprutils-dev,
- libpolkit-qt6-1-dev,
- libpolkit-agent-1-dev,
- qt6-base-dev,
- qt6-base-private-dev,
- qt6-declarative-dev,
+ libhyprtoolkit-dev,
+ libhyprgraphics-dev,
+ libhyprlang-dev,
+ libdrm-dev,
+ libpixman-1-dev,
+ libxkbcommon-dev,
+ libsdbus-c++-dev (>= 2.0.0),
+ libwayland-dev (>= 1.22),
+ wayland-protocols (>= 1.45),
+ libgl1-mesa-dev,
+ libgbm-dev,
+ libxkbcommon-dev,
+ libpango1.0-dev,
+ libcairo2-dev,
+ libabsl-dev,
 Standards-Version: 4.6.2
 Homepage: https://hypr.land
 Vcs-Browser: https://github.com/hyprwm/hyprpolkitagent
@@ -28,11 +36,6 @@ Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- qml6-module-qtquick-controls,
- qml6-module-qtquick-layouts,
- qml6-module-qtquick-templates,
- qml6-module-qtqml-workerscript,
- hyprland-qt-support0,
 Provides:
  polkit-1-auth-agent,
 Description: hyprpolkitagent is a polkit authentication daemon
