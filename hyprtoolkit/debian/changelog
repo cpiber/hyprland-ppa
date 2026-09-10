@@ -1,3 +1,9 @@
+hyprtoolkit (0.6.0-1ppa3) noble; urgency=medium
+
+  * Add pkgconfig dependency
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 10 Sep 2026 23:46:15 +0200
+
 hyprtoolkit (0.6.0-1ppa2) noble; urgency=medium
 
   * Add pkgconfig dependencies
