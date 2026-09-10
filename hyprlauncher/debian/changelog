@@ -1,3 +1,9 @@
+hyprlauncher (0.1.6-1ppa4) noble; urgency=medium
+
+  * Rebuild for dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 09 Sep 2026 19:23:36 +0200
+
 hyprlauncher (0.1.6-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
