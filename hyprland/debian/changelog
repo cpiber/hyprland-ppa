@@ -1,3 +1,34 @@
+hyprland-unstable (0.56.0~1ppa1+git202609131829-1b85c7aa1) noble; urgency=medium
+
+  * Update to main 1b85c7aa1
+  * 1b85c7aa1 config: link to the new wiki pages (#16241)
+  * be8d7c676 config/lua: fix potential crash in error prints (#16246)
+  * c31b90c5f xwayland: handle _NET_WM_STATE_DEMANDS_ATTENTION (#16205)
+  * 747b2f83a input: revert "allow pointer constraints to work on
+    subsurface (#15435)"
+  * 3a37b75f6 layout/floating: fix "move" rule not using the size
+    provided by the "size" rule (#16150)
+  * 6e95f93f1 workspace: fix anim in/out on special (#16227)
+  * 0b7e96f8b hid: make isVirtual() const (#16209)
+  * 584baca32 input: allow pointer constraints to work on subsurface
+    (#15435)
+  * 7aa195cf5 github: update template with AI disclosure header (#16199)
+  * f05d73f35 input/scroll: set scroll_factor from 2.00 --> 100.00
+    (#16135)
+  * 599ff9042 desktop/windowRule: add active_border and inactive_border
+    rules (#15581)
+  * 04615f9af core/fullscreen: improve `syncFullscreenTargets()`,
+    account for an edge case, misc. improvements (#16069)
+  * e9e2f64cc workspace: refactor workspace handling (#16140)
+  * 7ebf13abb screencopy/toplevel: fix top level capture (#16132)
+  * 34eb03bd8 config/lua: expose monitor mode, other hardware details
+    (#16149)
+  * 214bb0e5b tests: Test that windows lose and regain focus when
+    switching workspaces (#16153)
+  * ab136393c config/lua: add `reload_config()` api (#16108)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 13 Sep 2026 18:29:19 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202609051824-2eb5180c6) noble; urgency=medium
 
   * Update to main 2eb5180c6
