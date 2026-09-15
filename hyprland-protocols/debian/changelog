@@ -1,3 +1,16 @@
+hyprland-protocols (0.7.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.7.1
+  * cc9a8fd VERSION: bump to 0.7.1
+  * 76f3fa7 input-capture-v1: add destroy destructor to the session
+    interface (#22)
+  * 1cb6db5 flake.lock: update
+  * 302b569 nix: separate overlay into file
+  * 2e1e53e treewide: alejandra -> nixfmt
+  * 3f3860b meson -> cmake
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 15 Sep 2026 21:09:11 +0200
+
 hyprland-protocols (0.7.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.7.0
