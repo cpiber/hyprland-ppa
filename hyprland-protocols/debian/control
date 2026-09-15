@@ -5,7 +5,8 @@ Maintainer: Constantin Piber <cp.piber@gmail.com>
 Uploaders: Constantin Piber <cp.piber@gmail.com>
 Build-Depends:
  debhelper-compat (= 13),
- meson (>= 0.55.0),
+ cmake (>= 3.20),
+ ninja-build,
  libwayland-dev,
  pkgconf
 Standards-Version: 4.6.2

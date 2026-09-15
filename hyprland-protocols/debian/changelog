@@ -1,3 +1,9 @@
+hyprland-protocols (0.7.1-1ppa2) noble; urgency=medium
+
+  * Fix build
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 15 Sep 2026 21:21:33 +0200
+
 hyprland-protocols (0.7.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.7.1
