@@ -1,3 +1,17 @@
+aquamarine (0.15.1-1ppa1) noble; urgency=medium
+
+  * Update to release 0.15.1
+  * f31c47a version: bump to 0.15.1
+  * 3c3292c drm: release output on disconnect manually (#410)
+  * 61ddaca drm: fix uaf in frameIdle
+  * 36b66db session: fix libinput missing new events on resume (#378)
+  * f844ce1 renderer: fix version pragmas not being on the first line
+  * 4ea1633 drm: reserve CRTCs used by redundant tiles (#366)
+  * ffbf3a9 drm: don't terminate shared EGL displays in ~CDRMRenderer
+    (#373)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 17 Sep 2026 09:46:46 +0200
+
 aquamarine (0.15.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.15.0
