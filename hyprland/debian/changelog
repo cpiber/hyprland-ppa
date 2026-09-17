@@ -1,3 +1,14 @@
+hyprland-unstable (0.56.0~1ppa1+git202609170946-92b82c0c) noble; urgency=medium
+
+  * Update to main 92b82c0c
+  * 92b82c0c fullscreen: fix floating window focus loss on workspace
+    change when covering FS window present (#16168)
+  * a94bc95f workspace: create named workspaces for bare named lookups
+    (#16234)
+  * c26dbf93 main: check XDG_RUNTIME_DIR later (#16256)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 17 Sep 2026 09:46:56 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202609131829-1b85c7aa1) noble; urgency=medium
 
   * Update to main 1b85c7aa1
