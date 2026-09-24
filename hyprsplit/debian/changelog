@@ -1,3 +1,9 @@
+hyprsplit (0.54.3~1ppa1+git202606241957-6b00b67build13) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 24 Sep 2026 22:43:19 +0200
+
 hyprsplit (0.54.3~1ppa1+git202606241957-6b00b67build12) noble; urgency=medium
 
   *  Rebuild for unstable

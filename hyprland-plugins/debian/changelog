@@ -1,3 +1,12 @@
+hyprland-plugins (0.56.0~1ppa1+git202609242242-b29b829) noble; urgency=medium
+
+  *  Update to main b29b829
+  * b29b829 hyprbars: add buttons_on_hover (#708)
+  * d464baf hyprfocus: defer focus animations past layout recalculation
+    (#707)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 24 Sep 2026 22:42:43 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202609170947-d2e7231) noble; urgency=medium
 
   *  Update to main d2e7231
