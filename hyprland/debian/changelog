@@ -1,3 +1,23 @@
+hyprland-unstable (0.56.0~1ppa1+git202609242242-e368c13c2) noble; urgency=medium
+
+  * Update to main e368c13c2
+  * e368c13c2 permissions: listen to client destroy instead of display
+    (#16353)
+  * 23118f9f7 workspace: reject workspaces named as IDs (#16319)
+  * fc2367b4f input-capture: implement the session destroy request
+    (#16204)
+  * 9f0b86409 screencopy: revert "schedule new frames on damage
+    (#16333)"
+  * 16a228056 screencopy: schedule new frames on damage (#16333)
+  * 83cf6a6ed ci/discussions: regex tweak (#16307)
+  * 9a4a0ad22 Discussions: Add TriggerHappy - Moderation Tool for
+    Discussions (#16157)
+  * 5fbb2a7ac [gha] Nix: update inputs
+  * 8bc742ad2 ipc: fix inconsistent workspace events (#16292)
+  * d50ca8950 ipc: clean up workspace data (#16269)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 24 Sep 2026 22:42:13 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202609170946-92b82c0c) noble; urgency=medium
 
   * Update to main 92b82c0c

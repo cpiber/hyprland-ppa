@@ -51,7 +51,7 @@ Build-Depends:
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),
  libsdbus-c++-dev (>= 2.0.0),
- hyprland-protocols (>= 0.7.0),
+ hyprland-protocols (>= 0.7.1),
 Standards-Version: 4.6.2
 Homepage: https://hypr.land/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
