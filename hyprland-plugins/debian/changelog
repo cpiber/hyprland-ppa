@@ -1,3 +1,11 @@
+hyprland-plugins (0.56.0~1ppa1+git202610012023-602c471) noble; urgency=medium
+
+  *  Update to main 602c471
+  * 602c471 hyprbars: snap button icons to whole pixels (#711)
+  * bca761c hyprbars: render button icons with bar_text_font (#710)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 01 Oct 2026 20:23:04 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202609242242-b29b829) noble; urgency=medium
 
   *  Update to main b29b829
