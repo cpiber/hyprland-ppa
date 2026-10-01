@@ -1,3 +1,56 @@
+hyprland-unstable (0.56.0~1ppa1+git202610012022-a3aee8276) noble; urgency=medium
+
+  * Update to main a3aee8276
+  * a3aee8276 renderer/workspace: add workspace presentable for passing
+    workspace data to window rendering (#16440)
+  * 9f3facf61 cursor: store per-monitor images for cursor themes
+    (#16439)
+  * 59ab177fb config/lua: reject excess arguments to dispatcher
+    factories
+  * fd1344bcc config/lua: reject dispatcher factories in bind and
+    dispatch
+  * 3d4e2b3bc config/lua: reject duplicated keys in a bind string in
+    hl.bind
+  * 6ef51fff5 protocols/virtualPointer: fix axis check for protocol
+    erroring (#16438)
+  * 9c85920a0 protocols/dmabuf: remove SP<> allocation for attrs
+  * 66408d997 protocols/dmabuf: own plane fds throughout buffer creation
+  * 1a9b220f1 renderer: expire idle workbuffers and budget sized
+    allocations in bytes
+  * abb4afc74 input: bound special workspace gesture lifetime
+  * aa23aeb8d input: bind workspace swipes to their origin and input
+    session
+  * 90272770c input: centralize workspace swipe cleanup
+  * e82631720 hyprtester: release the drag button on test failures
+  * 216f958a0 hyprtester: wait for popup render fixtures to settle
+  * 11c088674 render/opengl: remove unused render declarations
+  * 35567d25c renderer: deduplicate monitor background rendering
+  * e60298a7e renderer: respect pass redirection for window popups
+  * bf0c08540 renderer: preserve parent fade when rendering popups
+  * b2f1b42ca keybinds: preserve drag threshold while a target is active
+  * 156276e51 protocols/activation: reject invalid serials (#16427)
+  * ce2167a23 config/lua: add hl.get_devices() (#16429)
+  * a2177f1fb protocols/bell: fix crash on null surface provided
+    (#16428)
+  * 6b87cbf25 renderer: fix snapshots using FP8 buffers when workbuffer
+    is FP16 (#16321)
+  * a6bca359b render: add scene composition (#16340)
+  * f33e6a01e surface: allow pointer constraints to work on subsurface
+    (#16311)
+  * 7d3a817ff input/tablet: add `input:tablet:enabled` (#16380)
+  * 4bb6844b0 render: detect software rendering from the GL renderer
+    (#16343)
+  * 9a1ea2927 screencopy: fix recording blocking DS indefinitely
+    (#16361)
+  * b36699fac tokens: fix tokens not updating when using autostart
+    (#16314)
+  * c6f117211 socket1: fix missing enabled invert for json in get
+    monitor (#16363)
+  * 7aa70b6c5 [gha] build man pages
+  * 4fee76945 ci/docs: update links to point to new wiki (#16375)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 01 Oct 2026 20:22:40 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202609242242-e368c13c2) noble; urgency=medium
 
   * Update to main e368c13c2
