@@ -1,3 +1,66 @@
+hyprland-unstable (0.56.0~1ppa1+git202610131814-1bd31aaa5) noble; urgency=medium
+
+  * Update to main 1bd31aaa5
+  * 1bd31aaa5 fullscreen/scrolling: scrolling default handled fullscreen
+    position sync upon work area change (#16493)
+  * 6cc0822e2 nix: makeWrapper -> makeBinaryWrapper
+  * 6a1b5f0fb renderer: fix blur missing xray on fadeout (#16524)
+  * 663b29b84 config/lua: fix segfault on non-string errors (#16505)
+  * 5e04ae1f9 desktop/constraint: move to controller and state (#16494)
+  * 5a78b5e92 keybinds: fix shadowing and matching of multi-key binds
+    (#16470)
+  * 19fb395d4 [gha] Nix: update inputs
+  * db062ed2b macros: use __VA_OPT__ instead of GNU ##__VA_ARGS__ in
+    RASSERT (#16487)
+  * 579829f06 clang-tidy: update for new clang (#16483)
+  * bc82253e5 renderer: clear stale HDR metadata (#16443)
+  * cfb76b2c8 hyprtester: cover isolated scene resource routing
+  * 8cc157948 render: sample material clocks without advancing live
+    state
+  * 0475be0b2 render: sample live blur material state without mutation
+  * ea3578129 render: isolate scratch attachments and output bookkeeping
+  * 74095c806 render: route preblur caches through scene resources
+  * ca539d4fb render: select scene resources per render session
+  * 78865f6b8 render: isolate workspace presentation from switch and
+    transfer animations
+  * 2fb734cbf render: resolve presentation before building draw passes
+  * 96b5327d9 desktop: track floating offset origin
+  * 23c56e078 render: scope workspace fadeouts by snapshot origin
+  * 592b33e3b render: separate workspace membership from monitor
+    composition
+  * e92e2b4ea render: define explicit workspace scene selection
+  * 9dc5398d1 flake.lock: update, glibc breakage (#16462)
+  * e5053fcda desktop/tags: fix tag unmatching (#16474)
+  * 7c3e8b530 all: update formatting for clang 23
+  * ce87496c1 render: share zoom calculation with tearing eligibility
+  * 299ea94fe render: guard monitor reentry and test begin failure
+    cleanup
+  * bcb5b7d8d render: track sampled buffers per submission
+  * 198dbec0c render: scope nested draw state and framebuffer bindings
+  * ba616caa9 render: pass context explicitly through scene and draw
+    APIs
+  * 969b4b111 render: own transient state in a reusable render context
+  * 150debcf6 render: make frame options and results explicit
+  * ae50c4d6b build: first batch of patches for OpenBSD support (#16457)
+  * 8e9a538fb desktop/x11: fix modal check (#16456)
+  * 90fb06e1e desktop/ls: take keyboard focus away from constraints for
+    exclusive (#16455)
+  * fed60b105 layout/scrolling: scroll inhibitor also applies to
+    `adjustOffset()` (#16434)
+  * e77e025de config/actions: unfocus the last window properly on silent
+    move away (#16452)
+  * b1855f5c9 protocols/input-capture: don't leak the eis fd (#16453)
+  * 1c4fbb656 config/lua: fix minor typo in mouseResize (#16454)
+  * 212902547 screenshare: fix potential crash on stale monitors
+    (#16451)
+  * c6e668757 config: fix on_current_monitor (#14615)
+  * a9aad0cff hyprctl: remove shell completions (#16419)
+  * aed4830ef xwayland/xwm: don't reflect imported clipboards (#16445)
+  * 586c01e69 protocols/xdg-shell: fix initial commit not being reset
+    (#16444)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 13 Oct 2026 18:14:57 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202610012022-a3aee8276) noble; urgency=medium
 
   * Update to main a3aee8276
