@@ -1,3 +1,12 @@
+hy3 (0.56.0.1~1ppa1+git202610131815-c35adfa) noble; urgency=medium
+
+  *  Update to master c35adfa
+  * c35adfa fixup: chase hyprland render context changes
+  * 8daf42e fixup: chase hyprland workspace refactor (#16140)
+  * c819a2a fixup: add 0.56.{1,2} to hyprpm.toml
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 13 Oct 2026 18:15:50 +0200
+
 hy3 (0.56.0.1~1ppa1+git202609031812-12a73abbuild5) noble; urgency=medium
 
   *  Rebuild for unstable

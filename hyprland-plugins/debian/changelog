@@ -1,3 +1,12 @@
+hyprland-plugins (0.56.0~1ppa1+git202610131815-428bfcd) noble; urgency=medium
+
+  *  Update to main 428bfcd
+  * 428bfcd borders/bars: chase hyprland (#715)
+  * f1abeaa hyprfocus: add group_focus_animation option (#714)
+  * 64d6f51 borders/bars: chase hyprland (#713)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 13 Oct 2026 18:15:28 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202610012023-602c471) noble; urgency=medium
 
   *  Update to main 602c471

@@ -1,3 +1,22 @@
+hyprspace (0.50.0~1ppa1+git202610131816-cf08bed) noble; urgency=medium
+
+  *  Update to main cf08bed
+  * cf08bed Merge pull request #238 from ImanolBarba/migrate-v2
+  * 0799be7 Removing useless call
+  * a795da7 Updating pins
+  * 96a3b95 Removing legacy config manager calls
+  * 20b4ea7 updating pins
+  * c569dbb Apply fullscreen and window refactors on latest git
+  * 90bb9f5 updating pins
+  * 777d73b Updating deprecated functions + render changes
+  * 0c0fe4f Updating pins
+  * 3624878 Adding examples to README
+  * 58ab072 Registering Lua dispatchers
+  * 3b09a34 Making config value retrieval safer
+  * 294be85 Migrating to V2 API
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 13 Oct 2026 18:16:37 +0200
+
 hyprspace (0.50.0~1ppa1+git202605301122-c109256build17) noble; urgency=medium
 
   *  Rebuild for unstable
