@@ -1,3 +1,14 @@
+hyprland-protocols (0.8.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.8.0
+  * 044a434 VERSION: bump to 0.8.0
+  * effaa39 README: add new protocol mention
+  * 4c27ba9 typo-fix: latin "C" instead of cyrillic "С"
+  * 79bdb69 build: LANGUAGES NONE -> LANGUAGES C (#24)
+  * 6530ed6 protocols: init workspace image source (#23)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Fri, 16 Oct 2026 19:43:59 +0200
+
 hyprland-protocols (0.7.1-1ppa2) noble; urgency=medium
 
   * Fix build
