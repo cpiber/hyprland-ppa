@@ -1,3 +1,27 @@
+hyprlauncher (0.1.7-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.7
+  * d08efd5 VERSION: bump to 0.1.7
+  * 339be04 finders/math: fix copying negative numbers (#158)
+  * 7952e44 core: add `--finder [finder]` argument (#156)
+  * ee0af2a ci: add vouch
+  * 237ad39 core: improve query flow
+  * bcb0611 core: use ProcLock for single-instance
+  * 8009978 desktop: properly follow links and update on nix
+  * 487fd4b nix: gcc 15 -> 16
+  * b6daa91 nix: use propagated inputs from hyprgraphics and hyprtoolkit
+  * aaf96e7 finders/desktop: use keywords for fuzzables as well (#151)
+  * 033d365 fuzzy: fix fuzzable vector size
+  * b09525e gitignore: ignore nix direnv
+  * ffea482 feat: show all entries when only a finder prefix is typed
+    (#148)
+  * 8279965 core: add show_apps_on_open config option (#147)
+  * e07f9cd fuzzy: rank exact matches above popularity factor (#142)
+  * 911eb30 finders/desktop: add support for GenericName fuzzy querying
+    (#139)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 20 Oct 2026 17:47:42 +0200
+
 hyprlauncher (0.1.6-1ppa4) noble; urgency=medium
 
   * Rebuild for dependencies

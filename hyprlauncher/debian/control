@@ -10,7 +10,7 @@ Build-Depends:
  gcc,
  g++,
  libhyprlang-dev,
- libhyprutils-dev (>= 0.10.2),
+ libhyprutils-dev (>= 0.14.1),
  libhyprtoolkit-dev,
  libhyprwire-dev,
  hyprwire-scanner | hello,
