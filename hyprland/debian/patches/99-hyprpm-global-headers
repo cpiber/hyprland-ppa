@@ -17,7 +17,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      if (!std::filesystem::exists(std::format("{}/share/pkgconfig/hyprland.pc", DataState::getHeadersPath())))
          return HEADERS_MISSING;
  
-@@ -506,6 +509,18 @@ bool CPluginManager::updateHeaders(bool
+@@ -506,6 +509,17 @@ bool CPluginManager::updateHeaders(bool
  
      const auto CURRENTHEADERS = headersValid();
  
@@ -32,7 +32,6 @@ Index: source/hyprpm/src/core/PluginManager.cpp
 +    std::println("\n{}", successString("Headers up to date."));
 +    return true;
 +
-+
-     if (!force && (CURRENTHEADERS == HEADERS_OK || CURRENTHEADERS == HEADERS_ABI_MISMATCH)) {
+     if (!force && CURRENTHEADERS == HEADERS_OK) {
          std::println("\n{}", successString("Headers up to date."));
          return true;

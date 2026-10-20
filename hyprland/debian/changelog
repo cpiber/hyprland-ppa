@@ -1,3 +1,33 @@
+hyprland-unstable (0.56.0~1ppa1+git202610201748-2860d07b0) noble; urgency=medium
+
+  * Update to main 2860d07b0
+  * 2860d07b0 [gha] Nix: update inputs
+  * b04e606a4 desktop/window: remove incorrect check, fix tearing
+    (#16572)
+  * 12f242511 utils/fs: fix lookup logic and small refactor (remove
+    redundant std::filesystem calls) (#16580)
+  * f6e3a723a [gha] Nix: update inputs
+  * 121f29704 cm: don't advertise HDR headroom on SDR presets (#16525)
+  * 8010b4e5c screenshare: fix crash in cursor capture after monitor
+    removal (#16533)
+  * 25f09b26f config/lua: centralize lua ref ownership (#16528)
+  * 2f080fe46 build: second batch of patches for OpenBSD support
+    (#16495)
+  * 9ff04c21b render: stop advertising unsupported YUV formats
+  * 41287b665 helpers: complete YUV format detection
+  * 3633316a6 layout/target: fix placement of floating X11 windows with
+    positions at 0,0 (#16336)
+  * 6c6ec3acc helpers/fs: adhere to XDG spec and small refactor (#16514)
+  * e2ad066c9 nix: dedup inputs, update flake.lock (#16549)
+  * 7b5b0c192 seat: reject new grabs when the session is locked (#16547)
+  * a554bac46 xwayland/xwm: fix overflow in handleWMHints (#16546)
+  * e2d94f54f desktop/window: Fix a few cursor focus losses (#15607)
+  * 38a82a411 Make group-lock dispatchers behave more sensibly (#16231)
+  * 40f96e0f8 hyprpm: do not skip update when abi mismatches (#16540)
+  * 80013b515 ci/vouch: add exemption for certain PRs (#16502)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 20 Oct 2026 17:48:40 +0200
+
 hyprland-unstable (0.56.0~1ppa1+git202610131814-1bd31aaa5) noble; urgency=medium
 
   * Update to main 1bd31aaa5
