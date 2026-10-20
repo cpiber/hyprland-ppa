@@ -1,3 +1,9 @@
+hy3 (0.56.0.1~1ppa1+git202610131815-c35adfabuild1) noble; urgency=medium
+
+  *  Rebuild for unstable
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 20 Oct 2026 17:53:03 +0200
+
 hy3 (0.56.0.1~1ppa1+git202610131815-c35adfa) noble; urgency=medium
 
   *  Update to master c35adfa

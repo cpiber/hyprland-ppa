@@ -1,3 +1,11 @@
+hyprland-plugins (0.56.0~1ppa1+git202610201752-d2427d4) noble; urgency=medium
+
+  *  Update to main d2427d4
+  * d2427d4 hyprbars: add set_title to show a title of your choosing in
+    a window's bar (#716)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 20 Oct 2026 17:52:29 +0200
+
 hyprland-plugins (0.56.0~1ppa1+git202610131815-428bfcd) noble; urgency=medium
 
   *  Update to main 428bfcd
