@@ -1,3 +1,12 @@
+hyprutils (0.14.3-1ppa1) noble; urgency=medium
+
+  * Update to release 0.14.3
+  * 0d13d5a VERSION: bump to 0.14.3
+  * b6e5781 string/utf8: init utf8 header (#128)
+  * 95983ee i18n: support LC_MESSAGES (#127)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 22 Oct 2026 17:33:51 +0200
+
 hyprutils (0.14.2-1ppa1) noble; urgency=medium
 
   * Update to release 0.14.2
