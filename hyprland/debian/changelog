@@ -1,3 +1,83 @@
+hyprland-unstable (0.56.0~1ppa1+git202610272216-b3fd5b498) noble; urgency=medium
+
+  * Update to main b3fd5b498
+  * b3fd5b498 input-method: avoid dirtying popup state for rectangle
+    notifications
+  * f4f3d6f79 subcompositor: invalidate parent commits for placement
+    changes
+  * d70b097a6 compositor: limit fallback null-buffer unmaps to
+    unassigned surfaces
+  * 380ebee15 tests: cover reopening a reused wl_surface
+  * 15659ff5a compositor: unmap null buffer commits
+  * db67c4938 compositor: set bits for all double buffered commits
+  * b957624c9 all: clang-format code (#16671)
+  * f80e4dc2d core/fullscreen: ability to customise fs handler of a
+    client requested fullscreen (#16635)
+  * e12c2e1ad config: add `layers` config category, move 2 config
+    options from `misc` to there. (#16617)
+  * f46935176 input: fix monitor focus not respecting
+    `input:follow_mouse` (#16060)
+  * a27cfea8d core/workspace: fix workspace last focused window
+    refocusing on change (#16675)
+  * fb6e53802 layout/scrolling: make click behaviour when `follow_focus
+    != 0` configurable (#16641)
+  * 26d9b5c27 protocols: implement xx-hotkey-v1 (#16407)
+  * 6cd467693 renderer/shaders: add decoration:blur:proportional
+    (#16643)
+  * c4e7596a3 config/lua: `created` to `created_early`, new `created`
+    after setup is done; fix `on_created_empty` rule (#16221)
+  * c9f4350e8 input: add swallowing focus click (#16250)
+  * 390f8f829 codeowners: add erstarr to scrolling layout (#16634)
+  * b8cec477f render/blur: remove dead code (#16642)
+  * a1c2428f7 layout/scrolling: fix inconsistent column widths at tape
+    edges, misc improvements (#16581)
+  * 66ab80a6a tests: cover redirectable config values
+  * ea288f9c1 config: implement redirectableConfigValue
+  * 875fa1743 config/value: provide setByUser() for checking value
+    setness
+  * bd7792adc config/mgr: return ptrs to setByUser
+  * 171c93933 protocols/datadevice: fix nullable resource crashing
+    (#16625)
+  * 76edafffc desktop/fadeout: collect completed snapshots after
+    animation ticks
+  * 18ddac192 desktop/fadeout: reject finished and orphaned fadeouts
+  * 915d8a50c state/monitor: fix floating client losing remembered
+    position monitor reconnect - cont. of #16569 (#16596)
+  * 9ba363e05 window: utf8 truncate received window metadata (#16624)
+  * 5a97e150a core/tests: improve some layer tests (#16616)
+  * 7c5226df4 core/tests: fix sporadically failing test, add helper to
+    get window id (#16615)
+  * 55e9805d7 config/lua: unify lua callback calls (#16578)
+  * 8b7aefe32 output-power: fail requests for unavailable outputs
+  * 2932e974d xdg-output: handle requests for removed outputs
+  * 5b6b75ac5 core/output: make late bindings to removed outputs inert
+  * c7932c6ef core/output: install cleanup handlers for inert resources
+  * 19a77ea94 cm: honor luminances for parametric ext_linear
+    descriptions
+  * 85fae4675 cm: preserve scRGB encoding for internal linear buffers
+  * 74b3f1b52 cmake: remove h-p subproject, always use packaged
+  * 5849f3ebb protocols/workspace-icc: render selected workspace scenes
+  * d38f92852 render: preserve transparent backdrops through shader blur
+  * c5740aae2 render: retain neutral snapshots for workspace capture
+    fadeouts
+  * b5dd50d0f render: exclude protected content from capture scenes
+  * ed7e9570e render: select workspace popups independently of input
+    visibility
+  * 5226dfea8 render: include output-pinned windows in workspace shell
+    scenes
+  * 96b7d6d4a render: support explicit isolated scene formats
+  * 255fb40bb screenshare: expose workspace capture identity and
+    snapshot demand
+  * 7d4682c94 protocols/workspace-icc: implement workspace ICC plumbing
+  * c7216a980 render/decoration: fix missing overrides (#16609)
+  * 8b82ce5ff config/lua: add window.update_state (#16527)
+  * 38e897f2b tests/lua: cover expired keybind handles (#16548)
+  * 815e3a822 core/layers: top layers go below fullscreen windows, fix
+    DS solitary (#15937)
+  * afd025a59 input/touch: fix build on clang (#16605)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 27 Oct 2026 22:16:48 +0100
+
 hyprland-unstable (0.56.0~1ppa1+git202610201748-2860d07b0) noble; urgency=medium
 
   * Update to main 2860d07b0
