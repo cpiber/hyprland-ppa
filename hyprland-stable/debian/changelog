@@ -1,3 +1,9 @@
+hyprland (0.56.2-1ppa3) noble; urgency=medium
+
+  * Adjust patches for resolute
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 27 Oct 2026 22:12:29 +0100
+
 hyprland (0.56.2-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

@@ -1,8 +1,5 @@
 00-version
 01-cmake-version-patch
-02-revert-set-buffer-size
-03-embed
-04-gcc-port
 05-libcpp-port
 99-hyprpm-global-headers
 99-hyprpm-support-global-plugins
