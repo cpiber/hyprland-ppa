@@ -1,3 +1,506 @@
+hyprland (0.57.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.57.0
+  * 0aa6745f7 VERSION: bump to 0.57.0
+  * aabab87c3 cm: offer HDR to a fullscreen surface as the auto HDR
+    trigger
+  * 53759b8b3 cm: refactor HDR preset descriptions into
+    getHDRImageDescription()
+  * b3fd5b498 input-method: avoid dirtying popup state for rectangle
+    notifications
+  * f4f3d6f79 subcompositor: invalidate parent commits for placement
+    changes
+  * d70b097a6 compositor: limit fallback null-buffer unmaps to
+    unassigned surfaces
+  * 380ebee15 tests: cover reopening a reused wl_surface
+  * 15659ff5a compositor: unmap null buffer commits
+  * db67c4938 compositor: set bits for all double buffered commits
+  * b957624c9 all: clang-format code (#16671)
+  * f80e4dc2d core/fullscreen: ability to customise fs handler of a
+    client requested fullscreen (#16635)
+  * e12c2e1ad config: add `layers` config category, move 2 config
+    options from `misc` to there. (#16617)
+  * f46935176 input: fix monitor focus not respecting
+    `input:follow_mouse` (#16060)
+  * a27cfea8d core/workspace: fix workspace last focused window
+    refocusing on change (#16675)
+  * fb6e53802 layout/scrolling: make click behaviour when `follow_focus
+    != 0` configurable (#16641)
+  * 26d9b5c27 protocols: implement xx-hotkey-v1 (#16407)
+  * 6cd467693 renderer/shaders: add decoration:blur:proportional
+    (#16643)
+  * c4e7596a3 config/lua: `created` to `created_early`, new `created`
+    after setup is done; fix `on_created_empty` rule (#16221)
+  * c9f4350e8 input: add swallowing focus click (#16250)
+  * 390f8f829 codeowners: add erstarr to scrolling layout (#16634)
+  * b8cec477f render/blur: remove dead code (#16642)
+  * a1c2428f7 layout/scrolling: fix inconsistent column widths at tape
+    edges, misc improvements (#16581)
+  * 66ab80a6a tests: cover redirectable config values
+  * ea288f9c1 config: implement redirectableConfigValue
+  * 875fa1743 config/value: provide setByUser() for checking value
+    setness
+  * bd7792adc config/mgr: return ptrs to setByUser
+  * 171c93933 protocols/datadevice: fix nullable resource crashing
+    (#16625)
+  * 76edafffc desktop/fadeout: collect completed snapshots after
+    animation ticks
+  * 18ddac192 desktop/fadeout: reject finished and orphaned fadeouts
+  * 915d8a50c state/monitor: fix floating client losing remembered
+    position monitor reconnect - cont. of #16569 (#16596)
+  * 9ba363e05 window: utf8 truncate received window metadata (#16624)
+  * 5a97e150a core/tests: improve some layer tests (#16616)
+  * 7c5226df4 core/tests: fix sporadically failing test, add helper to
+    get window id (#16615)
+  * 55e9805d7 config/lua: unify lua callback calls (#16578)
+  * 8b7aefe32 output-power: fail requests for unavailable outputs
+  * 2932e974d xdg-output: handle requests for removed outputs
+  * 5b6b75ac5 core/output: make late bindings to removed outputs inert
+  * c7932c6ef core/output: install cleanup handlers for inert resources
+  * 19a77ea94 cm: honor luminances for parametric ext_linear
+    descriptions
+  * 85fae4675 cm: preserve scRGB encoding for internal linear buffers
+  * 74b3f1b52 cmake: remove h-p subproject, always use packaged
+  * 5849f3ebb protocols/workspace-icc: render selected workspace scenes
+  * d38f92852 render: preserve transparent backdrops through shader blur
+  * c5740aae2 render: retain neutral snapshots for workspace capture
+    fadeouts
+  * b5dd50d0f render: exclude protected content from capture scenes
+  * ed7e9570e render: select workspace popups independently of input
+    visibility
+  * 5226dfea8 render: include output-pinned windows in workspace shell
+    scenes
+  * 96b7d6d4a render: support explicit isolated scene formats
+  * 255fb40bb screenshare: expose workspace capture identity and
+    snapshot demand
+  * 7d4682c94 protocols/workspace-icc: implement workspace ICC plumbing
+  * c7216a980 render/decoration: fix missing overrides (#16609)
+  * 8b82ce5ff config/lua: add window.update_state (#16527)
+  * 38e897f2b tests/lua: cover expired keybind handles (#16548)
+  * 815e3a822 core/layers: top layers go below fullscreen windows, fix
+    DS solitary (#15937)
+  * afd025a59 input/touch: fix build on clang (#16605)
+  * 2860d07b0 [gha] Nix: update inputs
+  * b04e606a4 desktop/window: remove incorrect check, fix tearing
+    (#16572)
+  * 12f242511 utils/fs: fix lookup logic and small refactor (remove
+    redundant std::filesystem calls) (#16580)
+  * f6e3a723a [gha] Nix: update inputs
+  * 121f29704 cm: don't advertise HDR headroom on SDR presets (#16525)
+  * 8010b4e5c screenshare: fix crash in cursor capture after monitor
+    removal (#16533)
+  * 25f09b26f config/lua: centralize lua ref ownership (#16528)
+  * 2f080fe46 build: second batch of patches for OpenBSD support
+    (#16495)
+  * 9ff04c21b render: stop advertising unsupported YUV formats
+  * 41287b665 helpers: complete YUV format detection
+  * 3633316a6 layout/target: fix placement of floating X11 windows with
+    positions at 0,0 (#16336)
+  * 6c6ec3acc helpers/fs: adhere to XDG spec and small refactor (#16514)
+  * e2ad066c9 nix: dedup inputs, update flake.lock (#16549)
+  * 7b5b0c192 seat: reject new grabs when the session is locked (#16547)
+  * a554bac46 xwayland/xwm: fix overflow in handleWMHints (#16546)
+  * e2d94f54f desktop/window: Fix a few cursor focus losses (#15607)
+  * 38a82a411 Make group-lock dispatchers behave more sensibly (#16231)
+  * 40f96e0f8 hyprpm: do not skip update when abi mismatches (#16540)
+  * 80013b515 ci/vouch: add exemption for certain PRs (#16502)
+  * 1bd31aaa5 fullscreen/scrolling: scrolling default handled fullscreen
+    position sync upon work area change (#16493)
+  * 6cc0822e2 nix: makeWrapper -> makeBinaryWrapper
+  * 6a1b5f0fb renderer: fix blur missing xray on fadeout (#16524)
+  * 663b29b84 config/lua: fix segfault on non-string errors (#16505)
+  * 5e04ae1f9 desktop/constraint: move to controller and state (#16494)
+  * 5a78b5e92 keybinds: fix shadowing and matching of multi-key binds
+    (#16470)
+  * 19fb395d4 [gha] Nix: update inputs
+  * db062ed2b macros: use __VA_OPT__ instead of GNU ##__VA_ARGS__ in
+    RASSERT (#16487)
+  * 579829f06 clang-tidy: update for new clang (#16483)
+  * bc82253e5 renderer: clear stale HDR metadata (#16443)
+  * cfb76b2c8 hyprtester: cover isolated scene resource routing
+  * 8cc157948 render: sample material clocks without advancing live
+    state
+  * 0475be0b2 render: sample live blur material state without mutation
+  * ea3578129 render: isolate scratch attachments and output bookkeeping
+  * 74095c806 render: route preblur caches through scene resources
+  * ca539d4fb render: select scene resources per render session
+  * 78865f6b8 render: isolate workspace presentation from switch and
+    transfer animations
+  * 2fb734cbf render: resolve presentation before building draw passes
+  * 96b5327d9 desktop: track floating offset origin
+  * 23c56e078 render: scope workspace fadeouts by snapshot origin
+  * 592b33e3b render: separate workspace membership from monitor
+    composition
+  * e92e2b4ea render: define explicit workspace scene selection
+  * 9dc5398d1 flake.lock: update, glibc breakage (#16462)
+  * e5053fcda desktop/tags: fix tag unmatching (#16474)
+  * 7c3e8b530 all: update formatting for clang 23
+  * ce87496c1 render: share zoom calculation with tearing eligibility
+  * 299ea94fe render: guard monitor reentry and test begin failure
+    cleanup
+  * bcb5b7d8d render: track sampled buffers per submission
+  * 198dbec0c render: scope nested draw state and framebuffer bindings
+  * ba616caa9 render: pass context explicitly through scene and draw
+    APIs
+  * 969b4b111 render: own transient state in a reusable render context
+  * 150debcf6 render: make frame options and results explicit
+  * ae50c4d6b build: first batch of patches for OpenBSD support (#16457)
+  * 8e9a538fb desktop/x11: fix modal check (#16456)
+  * 90fb06e1e desktop/ls: take keyboard focus away from constraints for
+    exclusive (#16455)
+  * fed60b105 layout/scrolling: scroll inhibitor also applies to
+    `adjustOffset()` (#16434)
+  * e77e025de config/actions: unfocus the last window properly on silent
+    move away (#16452)
+  * b1855f5c9 protocols/input-capture: don't leak the eis fd (#16453)
+  * 1c4fbb656 config/lua: fix minor typo in mouseResize (#16454)
+  * 212902547 screenshare: fix potential crash on stale monitors
+    (#16451)
+  * c6e668757 config: fix on_current_monitor (#14615)
+  * a9aad0cff hyprctl: remove shell completions (#16419)
+  * aed4830ef xwayland/xwm: don't reflect imported clipboards (#16445)
+  * 586c01e69 protocols/xdg-shell: fix initial commit not being reset
+    (#16444)
+  * a3aee8276 renderer/workspace: add workspace presentable for passing
+    workspace data to window rendering (#16440)
+  * 9f3facf61 cursor: store per-monitor images for cursor themes
+    (#16439)
+  * 59ab177fb config/lua: reject excess arguments to dispatcher
+    factories
+  * fd1344bcc config/lua: reject dispatcher factories in bind and
+    dispatch
+  * 3d4e2b3bc config/lua: reject duplicated keys in a bind string in
+    hl.bind
+  * 6ef51fff5 protocols/virtualPointer: fix axis check for protocol
+    erroring (#16438)
+  * 9c85920a0 protocols/dmabuf: remove SP<> allocation for attrs
+  * 66408d997 protocols/dmabuf: own plane fds throughout buffer creation
+  * 1a9b220f1 renderer: expire idle workbuffers and budget sized
+    allocations in bytes
+  * abb4afc74 input: bound special workspace gesture lifetime
+  * aa23aeb8d input: bind workspace swipes to their origin and input
+    session
+  * 90272770c input: centralize workspace swipe cleanup
+  * e82631720 hyprtester: release the drag button on test failures
+  * 216f958a0 hyprtester: wait for popup render fixtures to settle
+  * 11c088674 render/opengl: remove unused render declarations
+  * 35567d25c renderer: deduplicate monitor background rendering
+  * e60298a7e renderer: respect pass redirection for window popups
+  * bf0c08540 renderer: preserve parent fade when rendering popups
+  * b2f1b42ca keybinds: preserve drag threshold while a target is active
+  * 156276e51 protocols/activation: reject invalid serials (#16427)
+  * ce2167a23 config/lua: add hl.get_devices() (#16429)
+  * a2177f1fb protocols/bell: fix crash on null surface provided
+    (#16428)
+  * 6b87cbf25 renderer: fix snapshots using FP8 buffers when workbuffer
+    is FP16 (#16321)
+  * a6bca359b render: add scene composition (#16340)
+  * f33e6a01e surface: allow pointer constraints to work on subsurface
+    (#16311)
+  * 7d3a817ff input/tablet: add `input:tablet:enabled` (#16380)
+  * 4bb6844b0 render: detect software rendering from the GL renderer
+    (#16343)
+  * 9a1ea2927 screencopy: fix recording blocking DS indefinitely
+    (#16361)
+  * b36699fac tokens: fix tokens not updating when using autostart
+    (#16314)
+  * c6f117211 socket1: fix missing enabled invert for json in get
+    monitor (#16363)
+  * 7aa70b6c5 [gha] build man pages
+  * 4fee76945 ci/docs: update links to point to new wiki (#16375)
+  * e368c13c2 permissions: listen to client destroy instead of display
+    (#16353)
+  * 23118f9f7 workspace: reject workspaces named as IDs (#16319)
+  * fc2367b4f input-capture: implement the session destroy request
+    (#16204)
+  * 9f0b86409 screencopy: revert "schedule new frames on damage
+    (#16333)"
+  * 16a228056 screencopy: schedule new frames on damage (#16333)
+  * 83cf6a6ed ci/discussions: regex tweak (#16307)
+  * 9a4a0ad22 Discussions: Add TriggerHappy - Moderation Tool for
+    Discussions (#16157)
+  * 5fbb2a7ac [gha] Nix: update inputs
+  * 8bc742ad2 ipc: fix inconsistent workspace events (#16292)
+  * d50ca8950 ipc: clean up workspace data (#16269)
+  * 92b82c0c1 fullscreen: fix floating window focus loss on workspace
+    change when covering FS window present (#16168)
+  * a94bc95ff workspace: create named workspaces for bare named lookups
+    (#16234)
+  * c26dbf933 main: check XDG_RUNTIME_DIR later (#16256)
+  * 1b85c7aa1 config: link to the new wiki pages (#16241)
+  * be8d7c676 config/lua: fix potential crash in error prints (#16246)
+  * c31b90c5f xwayland: handle _NET_WM_STATE_DEMANDS_ATTENTION (#16205)
+  * 747b2f83a input: revert "allow pointer constraints to work on
+    subsurface (#15435)"
+  * 3a37b75f6 layout/floating: fix "move" rule not using the size
+    provided by the "size" rule (#16150)
+  * 6e95f93f1 workspace: fix anim in/out on special (#16227)
+  * 0b7e96f8b hid: make isVirtual() const (#16209)
+  * 584baca32 input: allow pointer constraints to work on subsurface
+    (#15435)
+  * 7aa195cf5 github: update template with AI disclosure header (#16199)
+  * f05d73f35 input/scroll: set scroll_factor from 2.00 --> 100.00
+    (#16135)
+  * 599ff9042 desktop/windowRule: add active_border and inactive_border
+    rules (#15581)
+  * 04615f9af core/fullscreen: improve `syncFullscreenTargets()`,
+    account for an edge case, misc. improvements (#16069)
+  * e9e2f64cc workspace: refactor workspace handling (#16140)
+  * 7ebf13abb screencopy/toplevel: fix top level capture (#16132)
+  * 34eb03bd8 config/lua: expose monitor mode, other hardware details
+    (#16149)
+  * 214bb0e5b tests: Test that windows lose and regain focus when
+    switching workspaces (#16153)
+  * ab136393c config/lua: add `reload_config()` api (#16108)
+  * 2eb5180c6 ipc/s1: expose monitor details via s1 (#16152)
+  * ee0409623 internal: minor fixes from overview mr (#16145)
+  * 5584938a9 pointer: add pointer transforms (#16143)
+  * 01be2db87 [gha] Nix: update inputs
+  * c0e2be756 seat: implement input redirecting (#16141)
+  * 34ce98269 renderer/gl: fix blur noise intensity in HDR (#16120)
+  * d4ed4a9ad input/gesture: allow for negative scale on scroll move
+    gesture (#16072)
+  * cb537a387 splashes: remove jacekpoz splash
+  * fec44ae32 layout/scrolling: make mouse click viewport move
+    consistent across all `follow_mouse` options (#15975)
+  * e329b6171 groups: fix comment (#16100)
+  * 304bbec7d protocols: clear data control primary selection (#16117)
+  * 59177602f log: update logging macro to include callsite (#16111)
+  * c1239d02e Core/Guidelines: update CLAUDE.md for claude and AI policy
+    (#16099)
+  * eb97c46a5 config/lua: add minimize event (#16071)
+  * d7a43351a protocols/xdg-shell: don't maximize on toplevel map
+    (#16013)
+  * 6813bbcae groups: fixes for groupbar:disable_when_only (#16037)
+  * 7f4b6169f Agents.md: Update with issue, discussion, and PR
+    guidelines (#16023)
+  * 4a4a5279a config/events: add config.unload event (#16005)
+  * 3b2dadd98 gestures: fix clangd error -> equation precedence.
+    (#16074)
+  * 86c24e2e0 hyprpm: make hyprwayland-scanner runtime dep explicit
+    (#16047)
+  * ee058bc47 output: add async commit scheduling for page flips
+    (#15991)
+  * ebc37ccc1 input/pointer: use aq output hints for absolute warps
+    (#15927)
+  * 503f9fc7f cursor: update cursor image on theme change (#16036)
+  * e43eaaac6 config/lua: fix misspelling of `damping` as `dampening`
+    for spring animations (#15993)
+  * c91fa5ab4 fullscreen: fix missing early return (#16063)
+  * 60695e18c ci/vouch: Allow vouched people to open issues (#15796)
+  * 62b40e1d0 bell: play threaded (#16033)
+  * 41718b097 [gha] Nix: update inputs
+  * 8d9868c93 protocols/dataDeviceWlr: don't send primary selection to
+    version 1 (#16034)
+  * 3b1aa6be7 algo/master: fix some master layout window-drag bugs
+    (#15956)
+  * e90da09e9 renderer: clear blur FBs on disabled blur (#16015)
+  * 9631188c1 desktop/windowRule: add no_glow window rule (#15863)
+  * 0bd11c7a0 renderer: fix blur region transformations (#15970)
+  * d8504461f monitor: properly un-orphan workspaces to fallback output
+    (#15890)
+  * 866b8085f README: add explicit mention of built in layouts (#15983)
+  * 951ab550e core/fullscreen: fix not accounting for special workspaces
+    when client requests FS with a monitor request attached (#15806)
+  * 45a79e5e8 config/propRefresher: damage monitor on refresh cursor
+    zooms (#15957)
+  * 357513949 monitor: solitary cannot have an underlying subsurface
+    (#15958)
+  * 6ffae9c5a config: fix CONFIG_VALUES not returning proper current
+    values (#15948)
+  * 0251f09fd [gha] Nix: update inputs
+  * d8e657eae renderer/gl: implement swappable blur variants (#15661)
+  * 175aa0743 desktop/window: warp pos/size on x11 configure to avoid
+    jitter (#15950)
+  * bb415864a input: use logical monitor size for eis regions (#15945)
+  * 9c7b45e62 decoration/groupbar: fix crash when group returns no match
+    (#15947)
+  * 5ccc5d440 pointer: colour-manage the hardware cursor buffer (#15905)
+  * faa8d40e5 monitor: damage the monitor when the output image
+    description changes (#15908)
+  * 3feae7a49 config: enable skip_non_kms_dmabuf_formats by default
+    (#15803)
+  * 34839b4f6 session: add disable-able systemd session target (#15776)
+  * d29916a91 input: decouple pointer focus from layer-surface
+    `keyboard_interactivity` (#15899)
+  * cd83a26c7 renderer: fix blur not clipping when rounded (#15884)
+  * a28784206 config/propRefresher: damage monitor on shader refresh
+    (#15924)
+  * 0f97a22d1 config/lua: allow get_monitors with a table for specifying
+    args (#14693)
+  * 8d50be06a keybinds: fix subchord matching for release binds (#15904)
+  * 52b368f1d config/lua: adjust rounding limits (#15756)
+  * 9d4f7a83c CMake: omit -Wno-clobbered flag (#15867)
+  * 0e737901c tests: add fallback focus test for pinned windows on
+    special workspaces (#15826)
+  * af0d014cb desktop: refactor views, major cleanups (#15779)
+  * 575191109 tests: decompose group tests into smaller units (#15875)
+  * a1b9dc0e8 config: Add `cursor:warp_on_monitor_change` (#15844)
+  * fea3b3367 config/lua: make stable_id field a string, matching
+    hyprctl (#15869)
+  * a0c6946d6 config: allow exit_window_retains_fullscreen to be
+    configurable for groups (#15731)
+  * 6d43ce845 input/seat: check HID caps directly for focus enters
+    (#15841)
+  * 153df31d2 errorOverlay: fix reserved area tracking (#15839)
+  * ab2d313b5 monitor: fix layer arrangement on layout changes (#15842)
+  * 1256bd180 scrolling/fullscreen: fix notification layer creation
+    causing mouse flick in scrolling covering FS windows (#15795)
+  * 24e23ca4b config: deprecate special_scale_factor (#15832)
+  * a269fd77b layout/drag: fix draggingTiled not being reset properly
+    (#15833)
+  * 0cef51ab7 config/lua: fix empty object construction not resulting in
+    nil (#15831)
+  * 8a24bb3bb render/cm: fix hdrMetadataEqual returning inverted result
+    (#15825)
+  * 45c8510c9 flake.lock: update
+  * 58c22e7af chore: add keyboard-modifiers.txt to .gitignore (#15828)
+  * 814603164 tests: auto-group a new tiled window into the focused
+    floated group (#15797)
+  * b5a6d81f4 renderer: fix surface buffer transform and viewport spec
+    compliance (#14441)
+  * 3cbff91e8 config/actions: remove redundant if condition in center
+    (#15814)
+  * c8a51d4f5 desktop/window: fix special workspace hiding on window
+    unmap fallback (#15763)
+  * 963c5cf81 config/actions: fix center not saving the new pos of a
+    floating window (#15810)
+  * e3bbfe3cf shaders: make each SRC/DST TF a variant (#15792)
+  * f7daeb7f7 hyprctl: random Lua-adjacent fixes (#15767)
+  * b20621d48 layout: pinned floating windows now retain their last
+    position (#15784)
+  * 5dee44a72 [gha] Nix: update inputs
+  * 0e98ddc9c render/cm: re-send HDR metadata when its content changes
+    (#15761)
+  * 05819c4ad tests: prefer `SPAWN_KITTY` over `Tests::spawn_kitty` in
+    tests (#15754)
+  * dcd544e42 input: no keyboard exclusivity during dnd (#15780)
+  * 5b1c0fda7 renderer/fp16: fix blur clear and invalidate (#15791)
+  * 006bcc69a config/lua: display dispatcher names in binds list and
+    when stringifying (#15722)
+  * a2636192b shaders: fix gradient NaN on out of gamut colors (#15793)
+  * 65be579e9 tests: fix subtest shortcutLongPress from keybinds tests
+    (#15783)
+  * face6d144 core/fullscreen: set pos/size of all group members to the
+    same value when FSing groups (#15577)
+  * 7d4a3c576 codeowners: set erstarr to codeowners for fullscreen
+    related stuff (#15752)
+  * 5bec961bb internal: remove duplicate call to fullscreen function
+    (#15745)
+  * 4ffd88e5e buffer: dont drop damage until actually read (#15718)
+  * 64962f89e renderer/transformer: make window transformers adapt to
+    viewport constraints (#15759)
+  * cab296c38 protocols/bell: play a sound by default (#15502)
+  * db95de4f5 config/lua: clean up `HLMonitor:set_workspace()` and
+    `set_special_workspace()` (#15534)
+  * 5aacb6214 desktop/windowRule: add no_wobble window rule and
+    workspace rule (#15735)
+  * d10194c63 keybinds: refactor, clean up code, move to new style
+    (#15568)
+  * 91f29f23b flake.lock: update, drop glaze version requirement
+  * 961c6df0d desktop/rules: fix gaps_out rule overriding float_gaps
+    (#15662)
+  * fa45db49c hdr: reset surface metadata on change (#15598)
+  * 10d320fde committiming: release for intersected monitors (#15744)
+  * ea95499cd hyprctl: fix wiki strings (#15739)
+  * 1bf16447d config/monitorRuleManager: recheck mirrors on ensure
+    (#15733)
+  * 901881c9f render: always render in normal transform (#15714)
+  * ef0d600e4 algo/scrolling: fix unFSing window sticking to the left
+    corner instead of respecting `focus_fit_method` (#15716)
+  * c82ff80fd hyprctl/repl: support multiline interactive input (#15663)
+  * 275e27704 layout/drag: add binds:drag_center_window (#15563)
+  * 78e2f9b6d desktop/hitTest: exclusive layer popup event handling
+    (#15729)
+  * e2b2e6bcd core/fullscreen: fix floating window rendering order when
+    one of them is FSed (#15703)
+  * 5c6f0aa2d debug/flame-graph: fix script for nixos
+  * 4d2662827 config: fix duplicate config value crash (#15708)
+  * d056ca6fd renderer/wobble: fix artifacts on transformed (#15709)
+  * 41b0fffde internal: reduce some profiled churn (#15705)
+  * 88c638699 chore: replace string concatenation with std::format
+    (#15652)
+  * 2f9169f05 renderer/wobble: fix wobble on transformed outputs
+    (#15694)
+  * 3906d66af screenshare: fix toplevel capture missing software cursor
+    (#15638)
+  * ac82a9c2e bindings/dispatchers: Don't inherit key state modmask
+    during key sym lookup (#15401)
+  * 1ea103b5e renderer: enable fp16 by default when supported (#15668)
+  * 69f8789d7 layout/scrolling/fullscreen: minor improvements ontop of
+    15660 (#15685)
+  * 2effd2da4 algo/scrolling: bring back old behavior of fs (#15660)
+  * cfecc5743 config/values: fixup shadow limits (#15682)
+  * 3ead44907 proto/wayland: dont check cursor buffer scale (#15674)
+  * ff672deb6 config: add deprecation notices (#15669)
+  * ab6499d29 core/fullscreen: allow layout managed fullscreens to not
+    block seeking window in direction, and other fixes (#15569)
+  * 584df4c39 [gha] Nix: update inputs
+  * e8a616429 renderer: implement window wobble (#14920)
+  * 8668a5392 ipc/socket1: don't round/truncate `hyprctl monitors` scale
+    (#15628)
+  * 6ebaccd11 opengl: invalidate depth too (#15657)
+  * ab95888cd config/values: adjust requirements for values (#15654)
+  * 2b1723add config/lua: fix forwarding of details to lua values
+    (#15651)
+  * 7803e6863 compositor: double buffered states needs their own bit
+    (#15645)
+  * b3aa455ce layout: allow constraining floating windows to be entirely
+    or partially on-screen (#15492)
+  * a95b81806 desktop: render IME above all desktop components (#15646)
+  * 144c4ee8f feat: add missing lua stub (#15579)
+  * 924a35735 ci/vouch: update
+  * ff24e1755 ipc: refactor socket1 and socket2 (#15624)
+  * 7b4d0b9dc ci/vouch: check out files first
+  * b5f71b249 ci/vouch: fix template file
+  * 6d9b634de ci: remove new pr comment
+  * e7d685d1e github: improve templates
+  * fdd49ae16 github: update PR template
+  * 65e81c116 config/lua: do not nuke package.path (#15622)
+  * 9f777b130 groupbar: re-add groupbar positional dragging (#15615)
+  * dd9038373 opengl: get rid of VAO stalls once and for all. (#15603)
+  * 3de8c49b8 protocols/pointerwarp: send mouse frame event after motion
+    (#15599)
+  * d91db3c70 meta: add generator and update bug templates
+  * 6484f4374 compositor: merge ready states in the surface queue
+    (#15504)
+  * 94fe1706e renderer: ensure only one buffer reference is added
+    (#15584)
+  * 8fd90780e ci/vouch: init vouch ci
+  * d8dc50309 github: materialize symlinks
+  * 6e4484f92 github: add discussion templates
+  * 7b8454d21 config/lua: support workspace selectors in
+    `hl.get_workspace()` (#15555)
+  * f7a711625 protocols: a few protocol error touchups (#15474)
+  * 453d96e92 renderer: round m_scale calculations (#15594)
+  * 225e018ce CI: fix codeownersplus status comment spam (#15597)
+  * 566ff8fa7 monitor: fix rotate and mirror regression (#15587)
+  * e820db90c desktop/rule: add no_xdg_drags window rule (#15573)
+  * 62d890eac workspace: add changeworkspaceid to socket2 (#15571)
+  * e701768d5 protocols/outputMgmt: fix reload not being fired after no-
+    op commits (#15570)
+  * 7d2ea2707 desktop/windowRule: fix exec rules leaking (#15543)
+  * a9902ea65 config: remove legacy config support (#15539)
+  * 4588b2958 config/lua: use openLate for window.open events (#15540)
+  * 36cc0e376 scrolling: fix in-band resize for the first window of a
+    band (#15532)
+  * c4605ba7f example: update hyprland.lua default springs (#15499)
+  * eb21dae6f makefile: smol Makefile QoL patches (#15491)
+  * ca90dfb0e compositor: add a deprecation notice to .conf configs
+    (#15538)
+  * 1a3606234 compositor: init eventManager earlier (#15522)
+  * d7188d582 input: nullptr check eis_client_get_name (#15520)
+  * 9d3bc3b0c fifo: minor feedback fixes (#14765)
+  * 7ef766c9c build: update hyprutils dependency to 0.14.0 (#15518)
+  * 14c093991 input-capture: fix `allow_input_capture` bind flag with
+    `capture_modifiers` enabled (#15477)
+  * d39afc0a5 hyprctl: fix json output for binds (#15507)
+  * 2174f26a1 view: do not render monitor for tearing if it's blocked
+    (#15500)
+  * 5b260faeb init: gain real-time through rtkit (again) (#15465)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 28 Oct 2026 17:26:16 +0100
+
 hyprland (0.56.2-1ppa3) noble; urgency=medium
 
   * Adjust patches for resolute

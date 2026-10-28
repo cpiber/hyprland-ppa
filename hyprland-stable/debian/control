@@ -40,16 +40,18 @@ Build-Depends:
  liblcms2-dev,
  libglaze-dev (>= 7.0.0),
  liblua5.4-dev,
+ libcanberra-dev,
  libhyprlang-dev (>= 0.6.7),
  libhyprcursor-dev (>= 0.1.7),
- libhyprutils-dev (>= 0.14.0),
+ libhyprutils-dev (>= 0.14.3),
  libhyprgraphics-dev (>= 0.5.1),
- libaquamarine-dev (>= 0.9.3),
+ libaquamarine-dev (>= 0.15.0),
  libhyprwire-dev,
  hyprwire-scanner | hello,
  hyprwayland-scanner (>= 0.3.10),
  libudis86-dev (>= 1.7.2),
- hyprland-protocols (>= 0.7.0),
+ libsdbus-c++-dev (>= 2.0.0),
+ hyprland-protocols (>= 0.8.0),
 Standards-Version: 4.6.2
 Homepage: https://hypr.land/
 Vcs-Browser: https://github.com/hyprwm/Hyprland
