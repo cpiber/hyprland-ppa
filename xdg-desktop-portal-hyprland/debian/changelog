@@ -1,3 +1,26 @@
+xdg-desktop-portal-hyprland (1.5.0-1ppa1) noble; urgency=medium
+
+  * Update to release 1.5.0
+  * d1467fe VERSION: bump to 1.5.0
+  * 167adef screencopy: add workspace sharing support (#441)
+  * 8ca5fab screencopy: verify choices are valid for building modifier
+    gbms (#447)
+  * 0121b2e core: drop Wayland proxies before disconnecting the display
+    (#443)
+  * e87ae78 core: reimplement the picker in hyprtoolkit (#432)
+  * ba31964 Screencopy: use all dma buf planes instead of only the first
+    one (#427)
+  * 59d429b screencopy: don't destroy the frame callback installed while
+    renegotiating (#425)
+  * 9f0e9ff nix: gcc 15 -> 16
+  * 688feb3 screencopy: fix permanent freeze after running out of
+    buffers (#424)
+  * b653ab5 screencopy: don't send bad transform information over wire
+    (#422)
+  * 8dca6c5 ci: init vouch
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 28 Oct 2026 17:38:32 +0100
+
 xdg-desktop-portal-hyprland (1.4.1-1ppa1) noble; urgency=medium
 
   * Update to release 1.4.1
