@@ -1,3 +1,9 @@
+hyprgraphics (0.6.0-1ppa3) noble; urgency=medium
+
+  * Add dependencies
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 21:18:08 +0100
+
 hyprgraphics (0.6.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.6.0

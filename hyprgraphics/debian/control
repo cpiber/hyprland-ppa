@@ -35,6 +35,13 @@ Depends:
  libhyprgraphics5 (= ${binary:Version}),
  ${misc:Depends},
  libcairo2-dev,
+ libjpeg-dev,
+ libwebp-dev,
+ libjxl-dev,
+ libmagic-dev,
+ libpng-dev,
+ libheif-dev,
+ librsvg2-dev,
  libhyprutils-dev,
 Description: Hyprgraphics is a small C++ library with graphics utilities
  Hyprgraphics is a small C++ library with graphics / resource related
