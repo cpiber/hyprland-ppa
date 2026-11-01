@@ -1,3 +1,13 @@
+hyprspace (0.50.0~1ppa1+git202611012109-8345bf6) noble; urgency=medium
+
+  *  Update to main 8345bf6
+  * 8345bf6 readme: add note on upstream version
+  * 8d7d186 hyprpm: add pin for 0.57.0
+  * 258b7b8 Merge pull request #246 from 0xl30/main
+  * 3d737ea Fixed For Hyprland 0.57
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 21:09:34 +0100
+
 hyprspace (0.50.0~1ppa1+git202610131816-cf08bedbuild2) noble; urgency=medium
 
   *  Rebuild for unstable

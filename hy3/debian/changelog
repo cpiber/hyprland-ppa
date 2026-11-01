@@ -1,3 +1,11 @@
+hy3 (0.57.0~1ppa1+git202611012109-4c0199b) noble; urgency=medium
+
+  *  Update to master 4c0199b
+  * 4c0199b version: 0.57.0
+  * 8922749 Add configurable horizontal tab padding
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 21:09:09 +0100
+
 hy3 (0.56.0.1~1ppa1+git202610131815-c35adfabuild2) noble; urgency=medium
 
   *  Rebuild for unstable
