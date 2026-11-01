@@ -1,3 +1,13 @@
+hyprshutdown (0.1.2-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.2
+  * 932dcf0 VERSION: bump to 0.1.2
+  * 867e53a ui: fix missized buttons
+  * 2d011c4 nix: gcc 15 -> 16
+  * 659e703 internal: include missing include in OS.cpp (#34)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 19:34:01 +0100
+
 hyprshutdown (0.1.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
