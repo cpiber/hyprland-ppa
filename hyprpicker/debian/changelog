@@ -1,3 +1,25 @@
+hyprpicker (0.4.8-1ppa1) noble; urgency=medium
+
+  * Update to release 0.4.8
+  * 8381479 VERSION: bump to 0.4.8
+  * d0722ee nix: remove pcre dep
+  * 8ec2bfc render: beautified standard color names (#179)
+  * 471a89c render: fix character sizing (#178)
+  * 5c451cb layer: request ondemand focus if available
+  * 58b4101 ci: add vouch
+  * d7d3b5d chore: run clang-format for files changed in PR 164 (#166)
+  * 7bb6951 core: migrate to ext-icc for screencopy (#168)
+  * 535d44e gitignore: add direnv
+  * dcc3f87 nix: gcc 15 -> 16
+  * 9e3b751 internal: call recheckACK before rendering surface (#165)
+  * 77b31f5 feat: support matching and copying 141 W3C standard color
+    names (#164)
+  * d6115ca internal: fix libc++ < 20 support for floating-point scale
+    value validation (#159)
+  * 0da95c0 internal: fix app name for notifications (#158)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 19:31:44 +0100
+
 hyprpicker (0.4.7-1ppa2) noble; urgency=medium
 
   * Rebuild for dependencies

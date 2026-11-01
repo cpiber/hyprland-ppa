@@ -10,7 +10,7 @@ Build-Depends:
  g++,
  pkgconf,
  libwayland-dev,
- wayland-protocols (>= 1.36),
+ wayland-protocols (>= 1.37),
  libxkbcommon-dev,
  libcairo2-dev,
  libpango1.0-dev,
