@@ -1,3 +1,25 @@
+aquamarine (0.16.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.16.0
+  * b77d676 VERSION: bump to 0.16.0
+  * 892622d cmake: link to OpenGL::GLES3 unconditionally (#468)
+  * eac1b82 drm: close handles even when framebuffer creation fails
+    (#464)
+  * ea1f192 drm: fix evdi outputs by adding CPU-copy fallback (#279)
+  * 259c8b5 atomic/output: don't change max_bpc based on scanout format
+    (#463)
+  * 163b138 headless: reuse parent Wayland buffer formats when nested
+    (#451)
+  * be8909b allocator/dumb: drop fd if exported in ~dtor (#449)
+  * 52ea11f build: link OpenGL::GLES3 instead of OpenGL::OpenGL on
+    OpenBSD (#432)
+  * 04bfb7d drm: guard backend in log
+  * 082179b drm: invalidate stale connector state in connect
+  * 7bb8bdf wayland: fix configure not applying sometimes (#415)
+  * fc77bd5 drm: fix crash on null connector in flush
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 19:14:38 +0100
+
 aquamarine (0.15.1-1ppa1) noble; urgency=medium
 
   * Update to release 0.15.1
