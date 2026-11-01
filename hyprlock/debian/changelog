@@ -1,3 +1,16 @@
+hyprlock (0.9.7-1ppa1) noble; urgency=medium
+
+  * Update to release 0.9.7
+  * 74efcdc VERSION: bump to 0.9.7
+  * 9de8719 core: keep the failure display until the next key press
+    (#1084)
+  * 328d025 core: add `general:disable_screencopy` option (#1081)
+  * a9e26af auth: validate fingerprint D-Bus signal senders (#1088)
+  * 0332e40 nix: gcc 15 -> 16
+  * 1f337a4 pam: fix deadlock on terminate (#1059)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 21:05:34 +0100
+
 hyprlock (0.9.6-1ppa1) noble; urgency=medium
 
   * Update to release 0.9.6
