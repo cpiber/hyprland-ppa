@@ -6,7 +6,7 @@ Index: source/CMakeLists.txt
 ===================================================================
 --- source.orig/CMakeLists.txt
 +++ source/CMakeLists.txt
-@@ -70,7 +70,6 @@ pkg_check_modules(
+@@ -68,7 +68,6 @@ pkg_check_modules(
    JXL
    IMPORTED_TARGET
    libjxl
@@ -14,3 +14,12 @@ Index: source/CMakeLists.txt
    libjxl_threads
  )
  if(NOT JXL_FOUND)
+@@ -96,7 +95,7 @@ endif()
+ # does not fail on systems where e.g. libheif / libjxl are absent.
+ set(HYPRGRAPHICS_PRIVATE_REQUIRES "libdrm pixman-1 libpng libjpeg libwebp librsvg-2.0 libmagic")
+ if(JXL_FOUND)
+-  string(APPEND HYPRGRAPHICS_PRIVATE_REQUIRES " libjxl libjxl_cms libjxl_threads")
++  string(APPEND HYPRGRAPHICS_PRIVATE_REQUIRES " libjxl libjxl_threads")
+ endif()
+ if(HEIF_FOUND)
+   string(APPEND HYPRGRAPHICS_PRIVATE_REQUIRES " libheif")

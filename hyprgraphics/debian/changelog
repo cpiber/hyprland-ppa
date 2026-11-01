@@ -1,3 +1,25 @@
+hyprgraphics (0.6.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.6.0
+  * ade4ef0 VERSION: bump to 0.6.0
+  * 80c7d00 ci: add vouch
+  * 7c895c4 flake.lock: update
+  * 344aff6 nix: gcc 15 -> 16
+  * 8699c38 nix: add propagatedBuildInputs
+  * c6e7b9f resource/text: remove dep on pango
+  * 5e8687b gitignore: add nix ignores
+  * 4729b60 flake: bump inputs
+  * 090db94 packaging: make optional pkg-config deps conditional (#49)
+  * 3b41722 packaging: add `Requires` to pkgconfig for automatic make
+    cflags (#48)
+  * 6c6cf26 render: add missing `weight` and `italic` to
+    STextResourceData (#47)
+  * 68d0644 CI: use org-wide actions
+  * 04d7d9f egl: add XRGB16161616F and ARGB16161616F to formats (#45)
+  * cf95d93 internal: fix missing include for `uint8_t` (#44)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 19:23:50 +0100
+
 hyprgraphics (0.5.1-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
