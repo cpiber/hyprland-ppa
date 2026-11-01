@@ -1,3 +1,38 @@
+hyprland-unstable (0.57.0~1ppa1+git202611012108-d55a55d72) noble; urgency=medium
+
+  * Update to main d55a55d72
+  * d55a55d72 config/values: adjust limits for tablet values (#16782)
+  * ecbcfe6e3 [gha] Nix: update inputs
+  * cd731f5e9 protocols/dmabuf: refresh format feedback after config
+    updates
+  * 7a058d7e4 protocols/dmabuf: use replacement table for feedback
+    updates
+  * 27b4f82ac config: restore opt-in KMS dmabuf filtering
+  * 4b9ac40d7 hyprtester: cover explicit foreign-toplevel maximize
+    requests
+  * a62618680 window: preserve fullscreen on client maximize requests
+  * b8cea2df4 hyprtester: support xdg maximize requests in interactive
+    client
+  * 42a7574dd renderer: draw small surfaces at their logical size
+    (#16711)
+  * 27bdfef92 config/lua: fix validator for custom accel profiles
+    (#16730)
+  * fc8897732 i18n: complete Indonesian translations (#16696)
+  * 796f51c6d decoration/groupbar: round boxes in device space to match
+    damage (#16687)
+  * 92f3380c3 config/scrolling: implement scrolling offset related
+    helper functions (#16640)
+  * 69ff6a476 build: cleaner incremental builds with the Makefile
+    (#15997)
+  * 7a5e469c7 flake.nix: update
+  * 0aa6745f7 VERSION: bump to 0.57.0
+  * aabab87c3 cm: offer HDR to a fullscreen surface as the auto HDR
+    trigger
+  * 53759b8b3 cm: refactor HDR preset descriptions into
+    getHDRImageDescription()
+
+ -- Constantin Piber <cp.piber@gmail.com>  Sun, 01 Nov 2026 21:08:09 +0100
+
 hyprland-unstable (0.56.0~1ppa1+git202610272216-b3fd5b498) noble; urgency=medium
 
   * Update to main b3fd5b498
