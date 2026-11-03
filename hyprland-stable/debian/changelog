@@ -1,3 +1,32 @@
+hyprland (0.57.1-1ppa1) noble; urgency=medium
+
+  * v0.57.1 Update to release 0.57.1
+  * acc1aa0bf [gha] Nix: update inputs
+  * d530c26f5 VERSION: bump to 0.57.1
+  * 31af0bbba keybinds: fix _consuming exceptions for chord resolving
+    (#16806)
+  * 253924bb3 monitor: set max_bpc based on configured bitdepth (#16708)
+  * 134e971ee keybinds: do not shadow mouse event inputs (#16788)
+  * 518be87ef protocols/session-lock: fix removed output causing a
+    protocol error (#16784)
+  * 044293717 state/workspace: fix underflow in r parsing resulting in a
+    bad return (#16786)
+  * 079918228 config/values: adjust limits for tablet values (#16782)
+  * 04d93b8f3 protocols/dmabuf: refresh format feedback after config
+    updates
+  * 7a648e3ed protocols/dmabuf: use replacement table for feedback
+    updates
+  * 82109f958 config: restore opt-in KMS dmabuf filtering
+  * 6d698d958 window: preserve fullscreen on client maximize requests
+  * aec6a54c0 renderer: draw small surfaces at their logical size
+    (#16711)
+  * de4a49c50 config/lua: fix validator for custom accel profiles
+    (#16730)
+  * 1977743e3 decoration/groupbar: round boxes in device space to match
+    damage (#16687)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 03 Nov 2026 19:52:59 +0100
+
 hyprland (0.57.0-1ppa3) noble; urgency=medium
 
   * Rebuild for dependencies
