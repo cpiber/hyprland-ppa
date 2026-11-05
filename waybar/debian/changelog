@@ -1,3 +1,1929 @@
+waybar (0.16.0-1ppa1) noble; urgency=medium
+
+  * Update to release 0.16.0
+  * 1b6b8026 Merge pull request #5452 from Alexays/chore/release-0.16.0
+  * 377f4cd4 chore: 0.16.0
+  * 67ccdb07 Merge pull request #5419 from BlaiseRideout/tray-icons-glob
+  * 32ebe82e Merge pull request #5411 from gilbsgilbs/idle-inhibitor-
+    signal-multi-bar
+  * e9da848a Merge pull request #5451 from Alexays/fix/interval-overflow
+  * 8e135990 test(smoke): wait for the first draw before calling a
+    module bar blank
+  * 174ddd9b test(smoke): mount the umockdev testbed over /sys in the
+    hardware tier
+  * 6d9a3982 fix: clamp interval values before converting them to
+    milliseconds
+  * 5425c680 Merge pull request #5443 from Alexays/ci/smoke-coverage
+  * 22bfa19c Merge pull request #5444 from Alexays/fix/mpd-image
+  * 2d3bc859 Merge pull request #5445 from Alexays/fix/wwan
+  * 2f0141ce Merge pull request #5446 from Alexays/fix/bluetooth
+  * fd733871 Merge pull request #5447 from Alexays/fix/wireplumber
+  * bd8780e3 Merge pull request #5448 from Alexays/fix/cava
+  * 2ad97d12 Merge pull request #5449 from Alexays/fix/bar-startup
+  * e2828709 Merge pull request #5450 from Alexays/fix/signal-thread
+  * 8f3fcedc Merge pull request #5442 from Alexays/ci/smoke-pointer-
+    input
+  * a07d4134 test(smoke): add soak and thread sanitizer jobs, gate the
+    leak check
+  * 6a117df8 test(smoke): cover scroll, extra buttons, menus and
+    tooltips in interact
+  * bea1cd69 test(smoke): fuzz every documented module option with bad
+    values
+  * 36c0c272 test(smoke): drive the d-bus service modules against
+    dbusmock fakes
+  * 71acebdf test(smoke): assert exact values in the hardware and state
+    tiers
+  * 0162a103 test(smoke): drive the sway and taskbar modules through a
+    real compositor
+  * 2e01b460 fix(cava): handle a missing audio server instead of
+    crashing
+  * 8e2b14b3 test(smoke): run compositor ipc modules against fake ipc
+    servers
+  * 48dd09c3 test(smoke): let a11y.py ignore widgets that are not on
+    screen
+  * f4d1cdb4 fix(bar): run the first module updates without a pipe write
+    each
+  * a2021563 fix(wireplumber): survive a missing or stopped pipewire
+  * 905ad38a fix(bluetooth): drop connected devices that vanish with
+    their controller
+  * cbb23a6f fix(wwan): follow modemmanager appearing, vanishing and
+    restarting
+  * 8a6eb990 fix(image): reject an out-of-range size option
+  * 0e3c2524 fix(mpd): show format-disconnected when the server is gone
+  * 012531c7 Merge pull request #5436 from mishalshanavas/fix/nix-
+    updater-permissions-upstream
+  * ddddbfd2 fix(main): keep the signal thread alive on EINTR
+  * 6c4f9cc4 test(smoke): make the at-spi check a reusable text
+    assertion
+  * eac85567 test(smoke): inject clicks through a virtual pointer and
+    gate on them
+  * 439fb58f Merge pull request #5424 from miju04/fix/unhandled-click-
+    propagation
+  * 692d62a0 fix(sni): drop the duplicated dbusmenu client disconnect in
+    ~Item
+  * 8742c525 Merge pull request #5437 from SsubezZ/master
+  * 3137277e Merge pull request #5439 from dmitry-j-mikhin/fix/sni-menu-
+    pending-layout
+  * e4135961 test(utf8): rename the truncate helper that clashes with
+    posix truncate()
+  * e1a4aefe Merge pull request #5441 from Alexays/feat/dynamic-cava-
+    gps-modules
+  * 1ff74a03 feat: load cava and gps as runtime modules
+  * 37a6b944 fix(sni): disconnect the dbusmenu from its client before
+    destroying it
+  * e85c76c9 Add Umbriel to README
+  * e0626713 fix(ci): grant lockfile updater permission to push and open
+    PRs
+  * 9df376f6 Merge remote-tracking branch 'origin/master' into
+    fix/security-high-findings
+  * f0d01bee Merge pull request #5291 from bjnobre/feature/drawer-hide-
+    leader
+  * af3eb4f9 fix(modules): escape and fold peer text in remaining label
+    sites
+  * c3989efc Merge pull request #5433 from Fiwex/fix/hyprland-workspace-
+    empty-tooltip
+  * c11cad97 Merge pull request #5261 from llyyr/add-ext-workspaces-
+    scroll
+  * 1572e5ce Merge pull request #5365 from zeerayne/fix/custom-label-
+    module-class
+  * 0b704fdf Merge pull request #5396 from andresilva/fix/wireplumber-
+    default-node-race
+  * ce60080e Merge pull request #5404 from Carltoffel/fix/tooltip-scroll
+  * edf2bcca fix(window): keep app_id classes from toggling the bar's
+    own classes
+  * ee7f2710 fix(css): do not intern class names chosen by other
+    programs
+  * 62a6bf48 fix(modules): escape and fold peer text in tray, wwan and
+    taskbars
+  * 39442782 fix(tooltip): keep peer-driven tooltips out of the widget
+    property
+  * ba378974 fix(tooltip): bound tooltip text taken from other programs
+  * a452ab9c fix(util): coalesce dispatcher notifications to keep the
+    pipe from filling
+  * 3528f381 fix(battery): join the worker threads before closing the
+    inotify descriptor
+  * 0d07ea94 perf(hyprland): cap the workspaces debounce at 50 ms
+    instead of never re-arming it
+  * 778c0647 Merge branch 'worktree-agent-a7fec129cb97a8de4' into
+    fix/security-high-findings
+  * af98594e Merge branch 'worktree-agent-a365328e6336fb09c' into
+    fix/security-high-findings
+  * 8f3441f6 Merge branch 'worktree-agent-a98f5eaf8556f5c67' into
+    fix/security-high-findings
+  * 73d1abe0 Merge branch 'worktree-agent-a2bab16a20f248426' into
+    fix/security-high-findings
+  * 6f0e70f7 Merge branch 'worktree-agent-aec3e5614acf33670' into
+    fix/security-high-findings
+  * a5054966 Merge branch 'worktree-agent-aa24fbc666d62c88e' into
+    fix/security-high-findings
+  * 7a8e288c Merge branch 'worktree-agent-aa032bef2e5383ab0' into
+    fix/security-high-findings
+  * 5d98031c Merge branch 'worktree-agent-a18b9608ec683a4c8' into
+    fix/security-high-findings
+  * a9cc1760 Merge branch 'worktree-agent-a53aea126c01e274b' into
+    fix/security-high-findings
+  * 5f568d9a Merge branch 'worktree-agent-a0df73f89545b7fe7' into
+    fix/security-high-findings
+  * a02f49e9 Merge remote-tracking branch 'origin/master' into
+    fix/security-high-findings
+  * 5290aa63 fix(jack): open the jack client off the GTK main thread
+  * cec90b27 fix(jack): do not hold the module mutex across libjack
+    calls
+  * 7bee8664 fix(jack): close the jack client when the module is
+    destroyed
+  * 4e0f59fe fix(mpd): run the mpd state machine on a thread of its own
+  * 09d806e6 fix(mpd): catch fetchState() errors in Idle::on_io() and on
+    clicks
+  * 31cf664f fix(mpd): reconnect after fatal errors and never format a
+    null status
+  * 41733c89 fix(mpris): make libplayerctl calls on a worker thread
+  * ec3acec9 fix(mpris): match the followed player by instance and bus
+  * 8a1ca3d7 fix(alabel): make label and tooltip markup valid utf-8
+  * 92b0b5a6 fix(idle_inhibitor): keep the wait-for-activity
+    notification across bars
+  * af7cb78c fix(bar): fetch the wl_surface on map, before the first
+    module update
+  * 2db4573a fix(bar): never commit a stale buffer scale after unmap or
+    a blur update
+  * 6b16e87f fix(alabel): check the window under the pointer before
+    writing a tooltip
+  * 870ac402 fix(bar): cap the bar window size at its output
+  * 6c0022ff fix(util): cut leading whitespace in utf8_truncate
+  * 02cf9c91 fix(util): bound zero-width characters in utf8 width and
+    truncation
+  * 9a52b43f fix(image): load images on the worker thread and refuse
+    non-regular files
+  * ff69d4c2 fix(image): drop entries of a rejected output in multiple
+    mode
+  * 6069497b fix(image): validate the exec tooltip line as utf-8
+  * 2d7a8cfc fix(aiconlabel): honour embedded icons only in custom
+    module output
+  * e3416cf8 fix(tray): refuse dbusmenu layouts with more than 1000
+    entries
+  * 83b70408 fix(tray): bound the icon files an item names before
+    decoding them
+  * 81f7ed8d fix(portal): coalesce bursts of appearance changes
+  * abbbdc1d fix(portal): check d-bus types before unpacking portal data
+  * b3afd648 fix(systemd-failed-units,gamemode): query d-bus
+    asynchronously
+  * 090d264e fix(gamemode): watch the bus name only once construction
+    can't fail
+  * 669abfbd fix(power-profiles-daemon): read the initial state from the
+    getall reply
+  * 04004697 fix(upower): stop waiting for upowerd on the main thread
+  * 649851e4 fix(client): create the gtk application as non-unique
+  * ddb1cbf2 fix(main): keep the signal thread's safesignal alive until
+    exit
+  * 1a9f52ec fix(agraph): let each menu action own its command string
+  * 3d0bf8d3 fix(custom): guard the script output shared with the worker
+    thread
+  * 99ef21d1 fix(util): bound regex backtracking on window titles in
+    rewrite rules
+  * 9fef6939 fix(tray): stop using an item's IconThemePath as an icon
+    theme search path
+  * e1ba6735 fix(wlr/taskbar): coalesce desktop entry lookups and queued
+    redraws
+  * 86acc9bc fix(icon_loader): bound the desktop app search words of a
+    whole lookup
+  * d28c8433 fix(icon_loader): bound the entries tried from a client-
+    supplied app id list
+  * f3236f20 fix(icon_loader): never open an app id as a file path
+  * 176fb7ef fix(icon_loader): skip the desktop app search for app ids
+    that are not UTF-8
+  * fadd3975 fix(icon_loader): free every result group of the desktop
+    app search
+  * 46481983 fix(wlr/taskbar): squash a task only behind an instance
+    that has a button
+  * 77bd4adb fix(mpris): connect manager signals only once the
+    constructor cannot throw
+  * ad30f697 fix(mpris): free the player list and the status string
+  * 21f9819c fix(module): never signal the process group of a reaped
+    child
+  * 6041d8f2 fix(util): bound the RegexCollection result cache
+  * ae5f4fb1 fix(custom): stop touching pid_children_ from the worker
+    thread
+  * e515458d fix(tray): cap the width of a tray icon at four times its
+    height
+  * 6ff64423 fix(custom): honour escape in the tooltip of one-line
+    output
+  * 7c15d69d fix(workspaces): keep captured window text out of the
+    rewrite format string
+  * fe5c035a fix(custom): validate the utf-8 of the json class field
+  * 94e52025 fix(tray): scale an item's pixmap down to what the icon can
+    use
+  * 0478325a fix(command): stop a continuous command without deadlocking
+    the bar
+  * ad2e3de2 fix(wayfire): rebind workspace sets when the outputs are
+    replaced
+  * 1901cda2 fix(niri): unfocus other windows when a known window gains
+    focus
+  * 89a4d38f fix(hyprland): stop touching gtk from the workspaces ipc
+    handlers
+  * 5f3dbc91 fix(hyprland): quote the lua dispatch argument as a string
+    literal
+  * e4170dd0 fix(hyprland): drop a closed window from the creation
+    queues
+  * e1f94a2a fix(mango): drop the write-only focused clients map
+  * 956264b9 fix(wayfire): reconnect the ipc event thread when the
+    stream drops
+  * 79eaad96 fix(hyprland): reconnect the event socket when hyprland
+    drops it
+  * 434e1e15 fix(hyprland): make window class and title valid utf-8
+  * 592b3512 fix(hyprland): stop using the workspace name as tooltip
+    format
+  * bc3b5835 fix(hyprland): stop postponing the workspaces refresh on
+    every event
+  * fe7611a1 fix(niri): keep taskbar buttons across events
+  * 8d889ffd fix(tray): empty the item proxy's property cache once it
+    has been read
+  * fa89e8bf fix(command): cap the script output kept by custom modules
+  * b4c0e852 fix(custom-graph): release the continuous command after the
+    worker is joined
+  * fb5c0cdf fix(privacy): ellipsize stream names in the tooltip
+  * 232dcac5 fix(systemd-failed-units,upower): revoke this-bound slots
+    on destruction
+  * 75e6636b fix(tray): compare property names and status as bytes
+  * 8058ac9c fix(privacy): apply ignore-monitor to audio input streams
+    only
+  * 1e2fa5e7 fix(upower): release the device array from
+    up_client_get_devices2
+  * 4846b40a fix(workspaces): fold line breaks in window titles and app
+    ids
+  * 89b7941b fix(upower): free the tooltip widgets rebuilt on every
+    query
+  * d82ddf19 fix(privacy): match pipewire stream classes by prefix
+  * 741410c6 fix(command): keep the bar's descriptors out of spawned
+    commands
+  * cd96d6d8 fix(tray): check the type of tooltip and pixmap properties
+    before decoding
+  * 2b80bab2 fix(privacy): destroy the proxy of a removed pipewire node
+  * b9b85c88 fix(upower): free the strings fetched in getUpDeviceInfo
+  * 5491e936 fix(keyboard-state): refresh the labels when the lock leds
+    change
+  * 20661a46 fix(privacy): copy running pipewire nodes instead of
+    keeping pointers
+  * 036a1ce5 fix(tray): bind the watcher proxy to the unique name of its
+    owner
+  * 51719c2d fix(bluetooth): read gatt battery levels asynchronously
+  * 62e86e39 fix(sway/bar): stop parsing workspace events on the main
+    loop
+  * 970e2776 fix(wireplumber): make the connection generation unique
+    across modules
+  * 34d294b7 fix(wireplumber): unref the node proxy looked up for the
+    name updates
+  * b9a72b85 fix(keyboard-state): defer cancellation while tryAddDevice
+    holds a descriptor
+  * cfb9ee44 fix(tray): announce an item again when it registers a
+    second time
+  * d15c0453 fix(tray): refuse registrations whose service string
+    exceeds 1024 bytes
+  * 974324e3 fix(sway): fetch the tree once per burst of events on the
+    ipc worker
+  * b18f0ac9 fix(wireplumber): release the get-volume result in
+    resolvePhysicalSink
+  * aceeaff7 fix(keyboard-state): release libinput when the constructor
+    throws
+  * 87991e32 fix(audio_backend): guard sink and source state with a
+    mutex
+  * b6cb756a fix(tray): reject invalid object paths in item and host
+    registrations
+  * 26ec0dc2 fix(audio_backend): reconnect from a timer after the
+    context fails
+  * f0eec71c fix(dwl): render the window module once per batch of frames
+  * 5e470a5b fix(gps): stop the worker instead of throwing when gpsd
+    read fails
+  * fd9ccfc3 fix(sway/ipc): reopen the command socket after sway drops
+    it
+  * d083dbb7 fix(tray): never auto-start the bus name an item registered
+  * eadaed21 fix(sndio): stop the worker and skip a null handle in the
+    destructor
+  * 530e635a fix(sleeper_thread): do not cancel the calling thread in
+    stop()
+  * 5fdec0a9 fix(tray): initialise the host's name watch id before it is
+    ever read
+  * 9944df2c fix(dwl): send release when dropping ipc output and manager
+    objects
+  * d4a19b9d fix(sway/scratchpad): escape window app ids and titles in
+    the tooltip
+  * eaaf66ae fix(aiconlabel): parse the embedded icon directive in
+    linear time
+  * 517ce1ac fix(sway/workspaces): free escaped window titles and
+    workspace names
+  * 373415b2 fix(audio_backend): release mainloop and context when the
+    constructor throws
+  * 9cb7ebd6 fix(wlr/taskbar): send workspace stop before destroying
+    workspace handles
+  * e7cbe475 fix(wlr/taskbar): destroy module registries after the bind
+    round trip
+  * 9809dad4 Merge pull request #5416 from c4rlo/network-fixes
+  * 700eb98e Merge pull request #5370 from dmitry-j-mikhin/fix/command-
+    fork-pthread-cancel
+  * 4946fcba fix(niri): delete taskbar buttons after removing them
+  * 814968a2 fix(wayfire): free the json reader after each ipc message
+  * 35b3319a fix(mpris): never free a player while its proxy may be
+    reloading
+  * 41351309 fix(image): never pass exec script output to wordexp
+  * b6119126 fix(tray): check pixmap size in 64 bits and disconnect
+    dbusmenu client on item destroy
+  * a5c86168 fix(ci): pin libcava to the freebsd-compatible revision as
+    a wrap-file
+  * 18aa00cf Merge pull request #5426 from mishalshanavas/fix/nix-
+    lockfile-checkout
+  * 465ee409 Merge pull request #5434 from SsubezZ/master
+  * f489bb7f Merge pull request #5435 from nikarh/fix/buffer-scale-
+    protocol-error
+  * 23cfa568 Merge pull request #5428 from davidemanini/format-eta2
+  * 0b4813bf Merge pull request #5431 from twstagg/fix/nix-libcava-wrap
+  * 454a8bf7 Merge pull request #5427 from mishalshanavas/fix/nix-
+    libcava-source
+  * 920345f9 fix(bar): waybar crashes when an output's scale changes
+  * cffbc91a chore(umbriel): clang-format
+  * 700db4be chore(umbriel): enable CI build and wiki mapping
+  * 2c0e7c47 feat(umbriel): add layout module
+  * ca000662 feat(umbriel): add window module
+  * 7ebe4ce3 feat(umbriel): add workspaces module
+  * 5b084149 fix(hyprland/workspaces): clear the tooltip when its format
+    is empty
+  * 13413c64 fix(subprojects): keep libcava as wrap-file so sandboxed
+    builds work
+  * 4129bcd3 Merge branch 'master' into feature/drawer-hide-leader
+  * dd40388e feat(battery): add {eta} replacement for estimated end time
+  * df23ef3a fix(ci): attach checkout action to the lockfile workflow
+    step
+  * 0343fefe fix(nix): prefetch the current libcava wrap source
+  * 26a72561 fix(AModule): let unhandled clicks propagate to parent
+    groups
+  * f6f73c81 fix(ci): restore checkout step in docker workflow
+  * 2fec5d35 Merge pull request #5394 from ihsandeniz/docs/custom-
+    signal-interval
+  * 0e8276ac Merge pull request #5413 from LukashonakV/gtk4_freebsd
+  * b30e6032 Merge pull request #5412 from LukashonakV/gtk4_docker
+  * 3b02cadc Merge pull request #5422 from daher13/fix/mango/window
+  * e85ab024 fix: sanitized tooltip text
+  * 7121ff77 tray: correct the pattern order comment in IconManager
+  * 6f8337c0 feat(tray): support wildcard keys in icons
+  * 314b3b92 clang-format
+  * 7a465624 fix(network): misc fixes
+  * 871c2e76 fix(network): small code modernisations
+  * fdd668c8 GTK4. freeBSD update
+  * 4ff7d11a GTK4. Dockerfiles update
+  * 561b377a fix(idle_inhibitor): toggle once per signal across all bars
+  * 91da8977 fix(tooltips): show the tooltip again after scrolling a
+    module
+  * c15ec02e Merge pull request #5397 from sdegler/power-profile-init
+  * 0ea31df1 Merge pull request #5403 from sdegler/Fix-keyboard-state-
+    notify-descriptor-leak
+  * ed0d8eb7 Merge pull request #5398 from ln-bodicherla/fix/battery-
+    capacity-rounding
+  * 8dae9681 Fix keyboard-state inotify descriptor leak
+  * 0bd5d0df fix(battery): round capacity instead of truncating it
+  * 5dc3c76f fix(power-profiles-daemon): initialize active profile
+    iterator
+  * 03441174 fix(wireplumber): resolve default node once it is added
+  * 33485c8f docs(custom): make interval and signal descriptions agree
+  * 4e207a0c Merge pull request #5351 from GeanJair/feat/mango-
+    workspaces-tag-filter
+  * 343ac391 Merge pull request #5355 from infinityidk/fix/backlight-
+    scroll-limits
+  * 6e163a19 Merge pull request #5348 from AntonyLittle/feat/bar-blur
+  * 791da38e Merge pull request #5324 from tonybutt/hyprland-
+    addressable-workspaces
+  * 32beafe1 Merge pull request #5381 from iamkarlson/feat/label-fit-
+    height
+  * a35c232e Merge pull request #5387 from Nikshay1/fix/clock-calendar-
+    standalone-month
+  * 706b5f68 Merge pull request #5385 from serhatvs/fix/disconnect-glib-
+    signals
+  * 42486476 Merge pull request #5386 from CraftyMuscle/fix/network-
+    station-ack
+  * 930fb129 Merge pull request #5336 from turbodt/feat/workspace-
+    number-css-class
+  * 5e2f7620 Merge pull request #5384 from daher13/fix/disks-initial-
+    line-break
+  * 93ca49e2 Merge pull request #5376 from dmitry-j-
+    mikhin/fix/backlight-cancel-terminate
+  * 8cf058ce Merge pull request #5375 from dmitry-j-mikhin/fix/sni-menu-
+    teardown-leak
+  * 61b316ac Merge pull request #5309 from sndsh404/mpris-hide-on-paused
+  * a2ff38fc Merge pull request #5272 from ravi-arnan/fix-inhibitor-
+    dbus-reconnect
+  * 9fae3c38 Merge pull request #5247 from vanshdev0101/fix/hyprland-
+    language-bracket-keyboard-name
+  * 34789186 Merge pull request #5264 from llyyr/fix/sort-ext-workspaces
+  * 113d16ea Merge pull request #5383 from sdegler/master
+  * d281bc7e Merge pull request #5287 from teivng/sni-watcher-combined-
+    registration
+  * b206a61d Merge pull request #5296 from Carltoffel/fix/tray-orders-
+    assert
+  * 1c53bd2d Merge pull request #5320 from kikadf/user
+  * 10881934 Merge pull request #5345 from ihsandeniz/docs/disable-on-
+    sleep
+  * 93bf384f Merge pull request #5377 from daher13/mango/doc/window-max-
+    length
+  * 59d2f70e clock: use standalone month names in calendar header
+  * 1c2e7bcb fix(network): read the ACK after get_station requests
+  * 2e354eac fix(modules): disconnect GLib signal handlers before
+    destroying objects
+  * d3d24591 fix/disks: added linebreak just after second path
+  * 1e60f328 fix(power-profiles-daemon): guard async callback lifetime
+  * ab5b210b feat(label): add fit-height to fit multi-line labels into
+    the bar
+  * 83a62a80 mango/window: added max-length option to documentation
+  * b2887af9 fix(backlight): let stop() cancel the udev worker only in
+    epoll_wait()
+  * 13978e6c fix(sni): destroy the dbusmenu and drop its reference in
+    ~Item()
+  * 0cbdf415 fix(custom_graph): don't restart the command while the
+    module is destroyed
+  * cbc7dc7a fix(util/command): keep a pending pthread_cancel from
+    reaching the child
+  * 885cc348 Merge remote-tracking branch 'origin/master' into fix/tray-
+    orders-assert
+  * b76ecec1 fix(custom): keep module name and class on the label when
+    there is no image
+  * 323e66f5 Merge pull request #5342 from penguin-sophist/fix-hyprland-
+    gtk-memory-leak
+  * b404c018 Merge pull request #5359 from Tallis-Larsen/fix/tray-
+    tooltip
+  * ffc274ea fix(tray): respect tooltip config option
+  * 86bd728c fix(backlight): preserve writes and quantization boundaries
+  * 5c3541e0 fix(backlight): calculate scroll limits in device units
+  * 8733df89 feat(mango/workspaces): add tag-filter option to restrict
+    visible tags per output
+  * 16f0c607 Fixes from review
+  * bbd43218 Add bar blur option
+  * 32f43b62 docs(temperature): document disable-on-sleep; drop "DPMS"
+    from map/unmap log
+  * 364ab74e Merge branch 'master' into fix/tray-orders-assert
+  * 06fd751a fix(hyprland/workspace): avoid freeing non-heap-allocated
+    widget
+  * d5145bb9 fix(hyprland/workspace): GTK memory leak
+  * 16843896 Merge pull request #5331 from kylin-liwn/fix/load-tooltip
+  * c071deb3 Merge pull request #5332 from kylin-liwn/fix/custom-format-
+    crash
+  * 277d41db Merge pull request #5340 from Carltoffel/fix/custom-
+    duplicate-css-classes
+  * 55b008f6 fix(hyprland): Rename workspace on renumber
+  * f866fffc fix(hyprland): Read normal/special workspace types
+  * cd831ec0 fix(custom): stop applying module-level CSS classes to the
+    inner label
+  * 81d4ebd5 fix(tray): do not abort on a malformed "orders" entry
+  * 3672eee0 Merge pull request #5334 from sanyarnd/fix/taskbar-dnd-
+    stale-pointer
+  * fa90ab09 Merge pull request #5337 from tonrl/test-wireplumber-fix
+  * 7649f448 Merge branch 'master' into feature/drawer-hide-leader
+  * 071cd284 fix(wireplumber): apply common muted class to primary node
+  * 33db6d74 fix(hyprland): Unify workspace naming in identity
+  * 60df7a34 feat(sway/workspaces): Add CSS class to identify workspaces
+    by number
+  * 795b2bf4 fix(taskbar): avoid stale pointer in drag payload
+  * e60e95ea style(disk): clang-format
+  * 436cddc9 fix(custom,disk): catch fmt::format_error
+  * bcf85214 fix(load): respect tooltip-format config
+  * 1687ec72 Merge pull request #5315 from khaneliman/fix/tray-menu-
+    first-click
+  * 3649b5af fix(tray): accept menus without Version
+  * 30959ca3 fix(hyprland): Match workspace events announced by selector
+  * a79ff053 fix(hyprland): Key persistent workspaces by live identity
+  * 4c495a41 Merge pull request #5330 from mtimaN/master
+  * 2b5db1eb Merge pull request #5327 from wrisky-cmyk/fix/tray-
+    prebuild-dbusmenu
+  * 55d1b1ec update source hash
+  * 087d2043 bump libjsoncpp
+  * c73a36e2 fix(tray): prebuild the dbusmenu before the first right
+    click
+  * b591c8a1 fix(hyprland): Support addressable workspace IPC
+  * 2ac3e139 feat(hyprland): Add workspace identity parser
+  * 2a12740b Merge pull request #5319 from kikadf/mem
+  * 625dc191 Merge pull request #5321 from kikadf/ctype
+  * bb0e6b25 fix(hyprland/language): split activelayout on the last
+    comma outside parens
+  * 1b85fb50 icon_loader: fix ctype usage
+  * 835173a9 Portable uptime usage, fallback to CLOCK_MONOTONIC
+  * e5f9afbf memory: fix get_free_memory() on NetBSD
+  * e9a67daa ext/workspaces: add option for scrolling anywhere on bar
+  * c0689ae4 ext/workspaces: support workspace switching with scroll
+  * 16f6a78f mpris: add hide-on-paused option
+  * bcb91b77 sni/watcher: accept combined "bus_name/object_path" item
+    registrations
+  * 67e20d32 fix(group): refresh tooltip after drawer reveal
+  * 66f06b62 feat(group): optionally hide drawer leader when expanded
+  * 6d60c8e0 Merge pull request #5222 from IlyasKhallouki/fix/5220-
+    taskbar-dedup-only-with-max-icons
+  * 3c85fd7d Merge pull request #5263 from zeerayne/fix/hyprland-
+    language-wtype-empty-layout
+  * 28368c28 Merge pull request #5245 from rmrfus/tooltip-hover-gate
+  * 54719404 Merge pull request #5259 from 10ne1/fix/command-read-busy-
+    loop
+  * 5f784714 Merge pull request #5262 from teivng/taskbar-reload-icon-
+    on-scale-change
+  * 48bf22b6 Merge pull request #5279 from wilkmaia/master
+  * 8ebc788e Merge pull request #5231 from CristianMz21/fix/hyprland-
+    detect-config-provider
+  * cc0788ac Merge pull request #5265 from llyyr/fix/ext-workspaces-
+    inverted-caps
+  * d742d471 Merge pull request #5266 from aokblast/ipc/fix_close_down
+  * b58018bc Merge pull request #5238 from nanomatters/fix/sni-native-
+    context-menu
+  * 083ee358 Merge pull request #5270 from shivankgarg98/fix/portal-
+    async-appearance
+  * 154fa081 Merge pull request #5267 from aokblast/fix_libcxx_overglibc
+  * b5e0ae0c Merge pull request #5273 from monban/wireplumber-memory-
+    leak
+  * aafced34 Merge pull request #5278 from JeremieRodon/fix/hyprland-
+    language-init
+  * fdf0c0f1 fix(keyboard-state): serialize libinput access to fix crash
+    on removal
+  * 75ee0c7c fix(keyboard-state): close opened directories when no
+    longer needed
+  * e884ecf0 fix(hyprland/language): ensuring exact match of the device
+    name
+  * b8cf895f sink the GVariant to prevent freeing a floating variant
+  * 691bb18a fix(inhibitor): use a private system bus connection and
+    reconnect when closed
+  * 22755a3f fix: don't block startup on the desktop portal
+  * 69c61c3d meson: Fix unwinding error in libunwind over glibc
+  * de620ec0 ipc: Improve teardown process
+  * ccbf1864 ext/workspaces: fix inverted capability bit checks
+  * c4177ce8 ext/workspaces: sort buttons when workspace changes group
+  * f45f3445 fix(hyprland/language): ignore empty/unknown layouts from
+    virtual keyboards
+  * 1f6f4410 wlr/taskbar: reload icon when the widget scale factor
+    changes
+  * d561b9d6 Merge pull request #5257 from rootatoskr/docs/states-
+    wireplumber-threshold
+  * b4fcab55 test(util/command): cover read() on a stream it cannot read
+  * c20b19eb fix(util/command): stop read() spinning forever on a failed
+    read
+  * 71a12203 docs(states): wireplumber uses >=, not <=
+  * 09e69e0f Merge pull request #5232 from brian-brow/fix/hyprland-
+    enable-bar-scroll-5229
+  * 6c3bd01b Merge pull request #5251 from daher13/fix/format-backlight-
+    module
+  * f95987d5 Merge pull request #5252 from daher13/feat/clang-makefile-
+    archlinux
+  * ca46b932 feat: clang format options added on makefile and docker
+    image for archlinux
+  * ab08e224 fix: fix module backlight format using clang
+  * f3b06656 fix(tray): fall back when dbus menu is unavailable
+  * 1039ed8e Merge pull request #5248 from daher13/fix/refresh-on-
+    changeid
+  * 9ca345e3 Merge pull request #5249 from shivankgarg98/fix/privacy-
+    timeout-use-after-free
+  * e92f280a fix: formatted with clang
+  * 38cc11c3 privacy: disconnect pending timeouts on destruction
+  * 5ef2da41 fix(hyprland/workspaces): handle workspace ID changes
+  * 936eddcf fix(tooltips): only update the tooltip of the hovered
+    module
+  * 0f12de93 test(hyprland): assert on the provider value Hyprland
+    actually emits
+  * 92742e46 refactor(hyprland): simplify configProvider detection per
+    review
+  * 084d8740 Merge pull request #5230 from toadjaune/patch-1
+  * 5e713c56 Merge pull request #5209 from gitmpr/backlight-default-min-
+    brightness
+  * 7ceb61a6 Merge pull request #5210 from gitmpr/fix/backlight-min-
+    brightness-step-clamp
+  * d01f1f44 fix(hyprland/workspaces): respect enable-bar-scroll config
+    option
+  * bfd0cfee fix(hyprland): detect dispatch protocol via configProvider
+  * e07ee87a Replace lone tab character in style.css with spaces for
+    consistency
+  * d44a27af Merge pull request #5219 from 10ne1/fix/sway-ipc-subscribe-
+    race
+  * d3fb8a62 Merge pull request #5216 from LukashonakV/enum-refactor
+  * d7e0554b Merge pull request #5225 from JuustKiwi/fix-mpris-newlines
+  * f9e2b1de fix(mpris): sanitize metadata to prevent multiline UI
+    expansion
+  * 2d4fad20 fix(hyprland/workspaces): only deduplicate taskbar icons
+    when max-icons is set
+  * 6e0b5056 fix(sway/ipc): don't mistake events for the subscribe reply
+  * 2d87bd5b Drop mandatory hyprland dependency
+  * 30610d3b Merge pull request #5212 from bjnobre/fix/dynamic-tooltip-
+    updates
+  * 7fae3d7d Merge pull request #5213 from LukashonakV/cavaBump
+  * 5bd3cd48 cavaBump
+  * d32e7fa8 fix(tooltips): keep dynamic tooltips from resetting hover
+    delay
+  * 456f78ec Merge pull request #5208 from Mrpaoo/ref/rm-dpemit
+  * 7409ff69 backlight: clamp scroll step to min-brightness
+  * 937aca0b config: add min-brightness to backlight example config
+  * 5b8c9872 refactor: rm direct dp.emit() call in constructor.
+  * 7f732f05 Merge pull request #5201 from grishatop1/master
+  * e60ffa4a clang format
+  * 73fdafb5 use nmcli implementation for calculating signal strength
+  * d4a44172 Merge pull request #5199 from LukashonakV/cavaImpr_2
+  * 50f63623 man(waybar-cava): refresh and polish documentation
+  * 52a5f74c docs: merge coding conventions into CONTRIBUTING.md
+  * 5c979152 refactor(cava): fix thread-safety, resource leaks, and
+    style violations
+  * cf19c836 Merge pull request #5197 from VlkrS/openbsd
+  * 795047ba idle_inhibitor.cpp: Fix build for systems without
+    SIGRTMIN/SIGRTMAX
+  * 98b2a563 Merge pull request #5187 from pajlada/fix/add-waybar-load-
+    manpage
+  * b5abbdc6 docs(man): add load
+  * 62462321 ci(smoke): keep the compositor alive between hardware cases
+  * eee2ab92 style(bluetooth): clang-format the enumerate args
+  * b3e95458 Merge pull request #5184 from Alexays/fix/smoke-state-hang
+  * 4222d5a2 ci(smoke): fix state tier hang from bare wait on a
+    lingering daemon
+  * 6294ed25 fix(hyprland/language): apply the CSS class on the main
+    thread
+  * 6c1a0fa1 fix(bluetooth): accept module-level placeholders in
+    enumerate formats
+  * 6d5d5f07 fix(cava): throw instead of exit() on a bad config
+  * 699589b6 fix(river/tags): parse hide-vacant once, not in the wl
+    callbacks
+  * a7b3a2c0 ci(smoke): fix state tier hang from bare wait on a
+    lingering daemon
+  * 74f0d339 ci(smoke): fix the mpd / hardware / leak tiers so they
+    actually run
+  * 9a109499 ci(smoke): cover teardown, state transitions and fake
+    hardware
+  * 445e2aec fix(bar): avoid use-after-free segfault on exit
+  * 9d8a8356 fix(mpd): don't dereference a null song when the queue is
+    cleared
+  * 6888243c Merge pull request #5180 from khaneliman/fix/taskbar-all-
+    outputs
+  * ebbc7ea4 fix(wlr/taskbar): re-show task when it no longer matches
+    ignore-list
+  * cbad42bc fix(wlr/taskbar): stop forcing tasks onto every output's
+    bar
+  * bf59a218 Merge pull request #5177 from Alexays/fix/recent-issue-bugs
+  * d518110e fix(network): recover IP address after a link flap / router
+    reboot
+  * 5711b1f4 fix(backlight): stop per-tick filesystem re-enumeration /
+    I/O flooding
+  * 969855f9 ci(freebsd): provide a bzip2.pc stub for freetype2
+  * d2493906 ci(freebsd): install bzip2 so freetype2's pkg-config
+    resolves
+  * 3868e06d Merge pull request #5173 from Alexays/ci/smoke-plus
+  * 6fc23046 Merge pull request #5168 from Alexays/fix-2882
+  * d8425b8f Merge pull request #5174 from Alexays/fix-5051
+  * 61187b31 Merge pull request #5176 from Alexays/fix/review-lowsev
+  * e92fe4b6 Merge pull request #5175 from Alexays/fix/post-0150-review
+  * a600fba5 fix(AGraph): unref transient GtkBuilder on all menu-build
+    paths
+  * 9a1cb618 fix(ALabel): free g_strdup'd menu action string via closure
+    notify
+  * e8e12cdf fix(audio_backend): make sink-mapping selection order-
+    independent
+  * b5273769 fix(audio_backend): release leaked pa_operation handles
+  * eb10a511 ci(smoke): sanitizer build + module/interaction/a11y/layout
+    coverage
+  * 3f77c078 fix(image): don't block the main loop with exec in the
+    multiple-image path
+  * 9b093c53 fix(wireplumber): read gboolean into a gboolean, not a 1-
+    byte bool (OOB write)
+  * fc6a5679 fix(systemd-failed-units): guard label/tooltip format
+    against bad config
+  * 34522b4c fix(clock): guard tooltip formatting against unsupported
+    specifiers
+  * 88064137 fix(mpris): clear stale GError in playerctld selection loop
+  * b17743ff network: treat negative/failed link speed as 0
+  * c9012c41 sway/window: escape window title in tooltip markup
+  * 91ca603b keyboard_state: close fd when openDevice throws to fix fd
+    leak
+  * 8441d5e1 config: harden output-dimensions parsing against malformed
+    values
+  * 892ab479 group: disconnect pending reveal timeout in destructor to
+    fix UAF
+  * 2f2479ca fix(mango): reconnect IPC event thread on disconnect
+  * 8db89cc2 fix(mango): use xkb brief for shortDescription in language
+    module
+  * 66139e44 fix(tray): stop reorderItems from re-adding items (iterator
+    UAF + double add)
+  * 74cf45d5 fix(hyprland): detect Lua protocol without side-effecting
+    dispatch
+  * 30dcd7a7 fix(hyprland/workspaces): own debounce timer on main
+    thread, fix UAF
+  * 4764a62a fix(wwan): null members after unref and guard destructor to
+    avoid double-free
+  * c16e7efa fix(niri): close the IPC socket fd once (ScopedFd owns it),
+    not twice
+  * 77734e9b custom-graph: fix worker crash, JSON UTF-8 validation,
+    SIGRTMIN guard
+  * 48db4aa3 fix(bar): make disable-on-sleep DPMS suspend actually reach
+    modules
+  * afa6ab1f fix(AModule): don't crash on click/scroll commands with
+    literal braces
+  * fc297a7d ci: only trigger on push to master to avoid duplicate PR
+    runs
+  * acc7060b fix(wireplumber): guard async callbacks by connection
+    generation; wire scroll once
+  * 0729823c fix(image): don't crash at startup when the widget isn't
+    realized yet
+  * 93cabeef Merge pull request #5172 from khaneliman/fix/label-markup-
+    cache-pua-collation
+  * a51bddab fix(label): compare markup cache by raw bytes, not
+    collation
+  * 57c1ac78 Merge pull request #5170 from layus/feat/pow-format-
+    modifiers
+  * c63ece5c Merge pull request #5171 from khaneliman/fix/niri-ipc-
+    initial-connect-regression
+  * 64f70caa fix(niri): keep the initial IPC connect synchronous
+  * a3dc55f9 feat(format): expand pow_format modifiers
+  * 2d9b95e9 Merge pull request #4915 from khaneliman/custom-gio
+  * 1b6173dd fix(util): keep GLib child setup fork-safe
+  * f987c241 style(custom): apply format and tidy cleanups
+  * fc01c03a fix(custom): avoid blocking child reaps in interval worker
+  * 5f4b96ad refactor(custom): move continuous exec onto GLib command
+    stream
+  * 560f0250 test(util): cover command stream line delivery and EOF
+    flushing
+  * 2355486c feat(util): add GLib command stream for nonblocking line
+    reads
+  * 1471cb26 Merge pull request #5167 from Alexays/fix/bug-batch
+  * faf6a62b fix(network): detect ethernet cable unplug again
+    (carrier/operstate)
+  * b0b46ec0 fix(sway/ipc): reconnect on disconnect instead of breaking
+    + CPU-spinning
+  * 8ff8ceec fix(backlight): also match the leds subsystem for keyboard
+    backlights
+  * 4c558198 Merge pull request #5166 from Alexays/ci/smoke-test
+  * 0b88b4ef fix(wireplumber): reconnect when PipeWire/WirePlumber
+    restarts
+  * 0c059db0 ci(smoke): add reference screenshot to enable golden
+    comparison
+  * e8638e76 ci(smoke): make custom modules emit text so the bar is not
+    empty
+  * cf2f120a ci: add headless smoke + screenshot test for the bar
+  * d9f2a437 Merge pull request #5165 from Alexays/fix/crash-batch3
+  * 54db6642 docs: revamp README and add contributor docs
+  * 6d3656a4 Merge pull request #5164 from Alexays/fix/tray-taskbar-mpd
+  * c19abf37 fix(mpris): defer widget visibility to update() to stop
+    resume SIGSEGV
+  * 8664d9a9 fix(wireplumber): guard async load callbacks against use-
+    after-free on teardown
+  * 268d8590 fix(reload): reset pending bar-batch state on rebind
+  * 5180dec4 ci(wiki): fix STYLE lists rendering as blockquotes
+  * 08954654 Merge pull request #5163 from Alexays/fix-2215
+  * cb968c93 fix(mpd): bound the connect timeout so an unreachable
+    server can't freeze the bar
+  * b7a6fa8c fix(wlr/taskbar): dispatch built-in click actions via
+    doAction, not the shell
+  * fae2b311 fix(tray): set an accel group on the dbusmenu client to
+    stop Gtk-CRITICAL crash
+  * 33223d55 ci(wiki): render option tables, pin pandoc, add visible
+    auto-gen note
+  * b2d15d1e fix(keyboard-state): read lock LEDs from all devices, not
+    just the first
+  * 8541ec81 Merge pull request #5160 from Alexays/fix/clock-graceful
+  * 36843020 Merge pull request #5161 from Alexays/fix-wireplumber
+  * 2650f062 fix(wireplumber): apply source-muted for Audio/Source
+    modules
+  * 69b9a14b fix(wireplumber): show correct volume on Bluetooth sinks
+  * 23d63d2b fix(clock): degrade gracefully on an invalid format
+    specifier
+  * ea33ceb0 Merge pull request #5158 from Alexays/fix/crash-freeze
+  * 45ab8a12 fix(core): fall back to default interval for periodic
+    modules on interval:0
+  * 5c062333 style: clang-format the crash-fix changes
+  * 6672e924 fix(niri): reconnect IPC and stop per-event throttling to
+    prevent freeze
+  * 3831524b fix(audio_backend): never throw across the PulseAudio
+    callback boundary
+  * d3bfec13 fix(keyboard-state): make device removal idempotent to stop
+    libinput abort
+  * 4229dc8a fix(sway/window): resolve app icon on the main thread to
+    stop icon-theme race
+  * c0a26104 fix(sway/language): apply CSS classes on the main thread to
+    stop SIGSEGV
+  * c29ed5f9 fix(client): don't exit when the desktop portal fails to
+    start
+  * d130ce6a fix(clock): disambiguate DST transitions to stop tooltip
+    crash
+  * bfe38bd1 fix(custom): validate JSON output UTF-8 and stop restart-
+    interval:0 busy loop
+  * b5842d4f fix(core): don't floor an explicit interval:0 to 1ms
+  * 4eb2513c fix(hyprland/language): pass named args in format-<lang>
+    branches
+  * 1d86e8df fix(custom/graph): guard signal config with isInt() to
+    avoid SIGABRT
+  * 4e76d733 ci(wiki): auto-insert new module pages into the sidebar
+  * c76bfc01 ci: auto-sync GitHub wiki module pages from man pages
+  * a3b39cfc docs(man): backfill man pages with wiki-only info (source-
+    of-truth pass)
+  * 72fdf77c docs: align man pages with code + fill documentation gaps
+    (0.16.0 audit)
+  * 14cb78b8 ci: install systemd-dev for systemd.pc in build-full job
+  * 45276f21 ci: add feature-complete build job to guarantee all modules
+    compile
+  * ae968044 Merge pull request #5157 from Alexays/fix/0.16.0-review-
+    and-ci
+  * f72f84e0 fix: backward-compat + bug fixes and man-page build fix for
+    0.16.0
+  * 482cfab6 Merge pull request #2891 from awariac/link-speed
+  * 810a8c0f feat(net): add {linkSpeed} format replacement
+  * 237d6c7c Merge pull request #4997 from sewaustav/feat/niri-
+    workspaces-taskbar
+  * 7887cdac Merge pull request #4504 from ErikReider/geoclue-privacy
+  * 9cd09c25 feat(niri): add workspace-taskbar support
+  * 16c79c8d Merge pull request #4557 from adryzz/wwan-module
+  * bff29188 Merge pull request #4536 from Esensats/master
+  * 8eb7ee46 Merge pull request #4850 from yangyingchao/master
+  * d6b6e728 Merge pull request #4305 from
+    edeustua/fix_hyprland_window_count
+  * 5f7629a3 format: Fix clang formatting
+  * 95664c76 fix: Remove load persistent workspaces from workspace rules
+  * 7c86f1cc fix: Use workspace ID to handle workspace updates
+  * 0bb207d5 Merge pull request #5115 from jaschiu/jaschiu-patch-1
+  * eeb7bc70 Added GeoClue2 privacy item
+  * ddce791b Merge pull request #4396 from kabhijeet/master
+  * 9e10a9ae feat(niri/workspaces): add window icons via window-rewrite
+  * 7ffee464 Merge pull request #1358 from RyanGibb/output-dimensions
+  * 5ecda401 meson: fix libmm-glib dependency to use correct pkg-config
+    name 'mm-glib'
+  * 8fa58b10 nix: add libmm-glib for the wwan module
+  * 247e18fb Fix clang-format
+  * 41d86d92 fix(wwan): null-initialize pointer members to avoid UB in
+    destructor
+  * 2aa74a52 wwan: fix hide-disconnected default, plug dup() leaks,
+    meson/man cleanup
+  * 11fdbe8a clang-format
+  * cd73e6cd clang complained
+  * d7274a04 improve manpage
+  * 7e65b091 cleanup
+  * fa5abc37 remove useless junk
+  * 90a0f46e almost done
+  * 949da4e8 create partial wwan module
+  * c07f8ed0 (sni) Be able to control order for system tray items.
+  * 41926e87 feat: add custom workspace sorting functionality
+  * 1facd4ef Update tray.cpp
+  * 87a337ec Update tray.hpp
+  * dbc0e1a0 fix(config): correct weight->width typo in output-
+    dimensions filter
+  * 46e96dfb Merge pull request #4545 from mbroemme/2025-wlr-taskbar-
+    truncate-to-ellipsize-long-button
+  * eddba950 better logic to find valid output dimensions
+  * d3ef76cc added output-dimensions option
+  * 7a84583a wlr/taskbar: add `truncate` to ellipsize long button text
+  * e36824e7 Merge pull request #2157 from savely-krasovsky/mediaplayer-
+    py-enhancement
+  * efe31dfe build: install wayfire man pages (register in meson
+    man_files)
+  * 1214776c Merge pull request #3818 from Sduniii/patch-1
+  * d6523df8 Merge pull request #3817 from JarKz/master
+  * 37dbd59d Merge pull request #3017 from 0x000C0A71/master
+  * 78b9a385 Merge pull request #4320 from LoricAndre/master
+  * 285e68c0 Merge pull request #3151 from VPavliashvili/module-images
+  * 48c3f971 Merge pull request #3311 from AtomToast/master
+  * a560e6a6 Merge pull request #4265 from g-goessel/master
+  * a4380bb6 Merge pull request #3573 from rossmeier/master
+  * d42e0503 Merge pull request #3740 from NoakPalander/feature/squash-
+    list
+  * 39fdf7b9 Merge pull request #3370 from torgiren/idle_inhibitor
+  * 84e15774 Merge pull request #4001 from hansp27/niri-workspaces-
+    display-preference
+  * 7484cb8d Merge pull request #4014 from piwonskp/4008/dynamic-drawer
+  * ca9bfe5b Merge remote-tracking branch 'origin/master' into pr-2157
+  * 01d1b5a4 Merge pull request #4940 from beyertom/clock/configurable-
+    week-numbering
+  * 8276f6a6 Merge remote-tracking branch 'origin/master' into pr-3017
+  * 24dba2bb Merge pull request #4694 from whymusticode/max-icons
+  * 2e9e0ba7 Merge pull request #4714 from PickNicko13/master
+  * 35dd0af2 Merge remote-tracking branch 'origin/master' into pr-4001
+  * f7ff8eab Merge remote-tracking branch 'origin/master' into pr-3370
+  * 328b6dc0 Merge remote-tracking branch 'origin/master' into pr-4014
+  * 10add898 Merge pull request #4624 from andresilva/tray-hide-icons
+  * 4e132532 Merge pull request #4685 from AckslD/no-switch-output
+  * a4532835 Merge remote-tracking branch 'origin/master' into pr-4265
+  * 40042f42 Merge pull request #4537 from thomascrha/niri-workspace-
+    ignore-workspaces
+  * 90883da5 Merge remote-tracking branch 'origin/master' into pr-3151
+  * 49f6edf6 Merge pull request #4543 from mbroemme/2025-wlr-taskbar-
+    evenly-distribute-buttons
+  * 05f32172 Merge remote-tracking branch 'origin/master' into pr-4320
+  * 23762842 Merge remote-tracking branch 'origin/master' into pr-3573
+  * 3df1a13b Merge remote-tracking branch 'origin/master' into pr-3740
+  * 2709d293 Merge pull request #4941 from sjudin/groups-add-empty-css-
+    class
+  * 29c014e3 Merge remote-tracking branch 'origin/master' into pr-3817
+  * 5c0f954d Merge remote-tracking branch 'origin/master' into pr-3311
+  * 2600e1e6 Merge remote-tracking branch 'origin/master' into pr-3818
+  * e9494bd2 Merge pull request #5153 from Grinchuelo/feat-customizable-
+    icon-thresholds
+  * 0e8d8750 Merge pull request #5033 from Habbie/css-import-semicolon
+  * 3cd93d84 Merge pull request #5032 from yyyumeniku/master
+  * 08e457e3 Merge remote-tracking branch 'origin/master' into pr-4694
+  * 15fd0b6c Merge pull request #4772 from szbmrk/feat-hyprland-submap-
+    icon-handling
+  * 9f3e5c09 Merge remote-tracking branch 'origin/master' into pr-4537
+  * df0edaf1 Merge remote-tracking branch 'origin/master' into pr-4624
+  * 6cdd8403 Merge pull request #5049 from finitemonkey/fix-missing-docs
+  * b509e254 Merge remote-tracking branch 'origin/master' into pr-4714
+  * da5b02a4 Merge remote-tracking branch 'origin/master' into pr-4543
+  * 4ffc97ef Merge remote-tracking branch 'origin/master' into pr-4685
+  * b851e1c8 Merge remote-tracking branch 'origin/master' into pr-4940
+  * 889cff22 Merge pull request #5156 from Alexays/refactor/generic-
+    tooltip
+  * ef050a34 Merge remote-tracking branch 'origin/master' into pr-4941
+  * a3101a1c Merge branch 'master' into feat-hyprland-submap-icon-
+    handling
+  * 423ca224 Merge branch 'master' into master
+  * adfed587 Merge branch 'master' into css-import-semicolon
+  * b477ffc9 Merge branch 'master' into fix-missing-docs
+  * fd11ce3b Merge branch 'master' into feat-customizable-icon-
+    thresholds
+  * d304e2fd Merge pull request #5133 from J0hannes101/master
+  * 70d466d3 Merge pull request #4553 from
+    VannTen/feat/native_journal_log
+  * 9a6009b0 Merge pull request #5068 from c4rlo/sway-ipc-fixes
+  * da562a91 Merge remote-tracking branch 'origin/master' into
+    refactor/generic-tooltip
+  * e921e255 Merge pull request #5110 from archion/master
+  * ffc3bec9 Merge pull request #4565 from guttermonk/idle_inhibitor-
+    activity-detection
+  * 94a8b400 Merge remote-tracking branch 'origin/master' into pr-4553
+  * c0a0608c Merge remote-tracking branch 'origin/master' into pr-5068
+  * f5164a9f Merge branch 'master' into master
+  * 003d5317 refactor(AModule): hoist format/tooltip resolution to the
+    base module
+  * 733ec6fd Merge pull request #4712 from AntoineGS/feat/bt-multiple-
+    batteries
+  * 2754ea69 Merge pull request #5017 from nonamescm/add-static-river-
+    tag-classes
+  * 3a515859 Merge pull request #5069 from stlkr/master
+  * 825d9217 Merge pull request #4060 from ErrorNoInternet/group-reveal-
+    by-default
+  * 6e1f5519 Merge pull request #4334 from theoratkin/master
+  * 84cb2323 Merge pull request #5041 from yuukibarns/enable-bar-scroll
+  * b3f7617e Merge pull request #4588 from Gazer/feat/basic-cpu-graph
+  * f059337b Merge remote-tracking branch 'origin/mig-F' into
+    refactor/generic-tooltip
+  * 0cd52b46 Merge remote-tracking branch 'origin/mig-E' into
+    refactor/generic-tooltip
+  * baa6ec09 Merge remote-tracking branch 'origin/mig-D' into
+    refactor/generic-tooltip
+  * 89167f5a Merge remote-tracking branch 'origin/mig-C' into
+    refactor/generic-tooltip
+  * 0f64e424 Merge remote-tracking branch 'origin/mig-B' into
+    refactor/generic-tooltip
+  * 65effe90 Merge pull request #4760 from akselaase/aksel.aase/clock-
+    exec
+  * 8dbba448 refactor(modules): migrate state modules to ALabel tooltip
+    helper
+  * 014c95a9 refactor(modules): migrate audio/network/power modules to
+    ALabel tooltip helpers
+  * a57058dd Merge pull request #4722 from ALSchwalm/wifi-state
+  * 86b8dd6b refactor: migrate backlight/battery/bluetooth/gps to
+    updateLabelAndTooltip
+  * 836449d2 refactor(modules): use ALabel dedup tooltip helper in
+    simpleclock, systemd-failed-units, upower
+  * db4941ef refactor(tooltip): migrate modules to ALabel generic
+    tooltip helper
+  * cdfd3cb0 refactor: migrate complex-tooltip modules to ALabel dedup
+    setters
+  * 0fd8a4c3 Merge pull request #4366 from winkelnp/wp-bluetooth
+  * 5af4b83d Merge pull request #4861 from eonphi/master
+  * f9ed55d0 Merge pull request #3421 from Ape/pr/pulseaudio_mapping
+  * 66ecba4e idle_inhibitor: apply clang-format
+  * a91dcbe5 Merge remote-tracking branch 'origin/master' into
+    refactor/generic-tooltip
+  * 5c1dd9e9 Merge remote-tracking branch 'origin/master' into pr-5110
+  * 331fe0e9 Fix clang-format
+  * 885ced58 Fix clang-format
+  * 15e0c9cb Merge remote-tracking branch 'origin/master' into pr-4760
+  * c4c9345f Fix clang-format
+  * 846ce3e1 Merge remote-tracking branch 'origin/master' into pr-5069
+  * 913cde91 Fix clang-format
+  * 67cbeb35 Merge remote-tracking branch 'origin/master' into pr-4334
+  * c33b2f65 Merge remote-tracking branch 'origin/master' into pr-5017
+  * 733c688d Merge remote-tracking branch 'origin/master' into pr-4588
+  * 8fafb531 Merge remote-tracking branch 'origin/master' into pr-4712
+  * e792ed8f Merge remote-tracking branch 'origin/master' into pr-4861
+  * b13d76d3 Merge remote-tracking branch 'origin/master' into pr-4366
+  * 5ad0eb31 Merge remote-tracking branch 'origin/master' into pr-3421
+  * 2ac1f1c4 Fix clang-format
+  * d5f5a5b4 Merge remote-tracking branch 'origin/master' into pr-4722
+  * 665b0720 Merge remote-tracking branch 'origin/master' into pr-4060
+  * b9d5b3b4 Merge remote-tracking branch 'origin/master' into pr-5041
+  * 8eb916ac refactor(ALabel): add generic label+tooltip helper to
+    remove duplication
+  * 33a21705 Merge pull request #1870 from nova-nowiz/feat/brightness-
+    percent-exp
+  * e2056db9 Merge pull request #4084 from PandorasFox/master
+  * 7ba2a769 Merge pull request #4607 from zspher/feat-image-path
+  * 960a2069 Merge pull request #4762 from szbmrk/feat-multiple-disks
+  * 325ee9e7 Merge pull request #4826 from AntGarSil/agd/ignore-tray-
+    applets
+  * 4b9284ff Merge pull request #3925 from casKd-dev/dwl/hide-vacant
+  * 1afb1a52 docs(man): document options implemented but missing from
+    man pages
+  * 2108c65b Merge pull request #4255 from mBornand/wp_scales
+  * 85874748 Merge pull request #4896 from nickjj/feature-clock-
+    calendar-css-classes
+  * a4cba38c Merge pull request #3926 from casKd-dev/dwl/hide-title
+  * c7ca5eef Merge pull request #3706 from ico277/master
+  * 87230211 Merge pull request #4907 from jaypikay/master
+  * d2a08293 Merge pull request #4908 from 7FM/master
+  * bd7a62b8 Merge pull request #5054 from IVSOP/feat/cpu-icons-auto
+  * 0be7bbb7 Merge pull request #4532 from mbroemme/2025-wlr-taskbar-
+    add-justify-option
+  * 41191802 Merge pull request #4994 from GlassyBridge/master
+  * 471d7563 Merge pull request #4530 from martinetd/niri-column
+  * 0791ddd7 Merge pull request #4977 from Diax170/drawer-state
+  * fffb4b31 Merge pull request #5012 from yihangwu539-
+    png/feat/language-tooltip
+  * 2f6720c0 Merge pull request #4981 from xiyori/max-windows
+  * 8c4787bd Merge pull request #4529 from dimti/hyprland-language-class
+  * 45b3b0aa Merge pull request #4193 from burbschat/output-classes
+  * 67500c4f Merge pull request #4950 from Skyfrei/4655
+  * 825ce430 Merge pull request #5073 from ar-
+    turek/persistent_workspaces_by_monitor_make_and_model
+  * 3033e158 Merge pull request #4958 from v-
+    dermichev/feature/workspace-name-css-class
+  * 168794b4 Merge pull request #4986 from maltherd/master
+  * dca564ca Merge pull request #4463 from diego-velez/master
+  * dd694006 Merge pull request #5047 from awused/mpd-idle
+  * 9dfdedfd Merge pull request #5034 from Agnibha007/fix-tooltip-pango
+  * cb206a60 Merge pull request #4134 from Roc25/hide-active
+  * 21fbb964 Merge pull request #4683 from RaphaelKimmig/master
+  * 6c87b1d9 Merge pull request #5078 from DreamMaoMao/mango
+  * 0094af54 Merge pull request #4841 from Cprakhar/feat/first-day-of-
+    week-calendar
+  * 6e28b4ae Merge pull request #3436 from lilly-lizard/river-tags-
+    monitor-focus
+  * c354b9b5 Merge pull request #5015 from yui-915/compact-bandwidth
+  * 51a6ac04 Merge remote-tracking branch 'origin/master' into
+    pr/pulseaudio_mapping
+  * 02c20cf3 Merge remote-tracking branch 'origin/master' into
+    agd/ignore-tray-applets
+  * aecd2543 Merge remote-tracking branch 'origin/master' into feat-
+    multiple-disks
+  * 44995bc5 Merge remote-tracking branch 'origin/master' into pr-4084
+  * a6821e42 Merge remote-tracking branch 'origin/master' into
+    feat/brightness-percent-exp
+  * 81014548 Merge remote-tracking branch 'origin/master' into wp-
+    bluetooth
+  * ffd5a2eb Merge remote-tracking branch 'origin/master' into feat-
+    image-path
+  * e2d4f3c6 Merge remote-tracking branch 'origin/master' into group-
+    reveal-by-default
+  * 517f45b0 Merge remote-tracking branch 'origin/master' into
+    idle_inhibitor-activity-detection
+  * 7858d998 Merge pull request #4993 from cebem1nt/master
+  * 3cde8607 Merge pull request #3994 from jeevithakannan2/ppd-split-
+    driver
+  * a40c7e70 Merge pull request #4719 from
+    oisanjaya/encode_icon_inside_label
+  * 421e8523 Merge pull request #4761 from Benji-clm/smooth-power
+  * 93ecfb9e Merge pull request #5126 from iamcheyan/feat/wlr-taskbar-
+    bar-css-states
+  * 21d222e8 Merge remote-tracking branch 'origin/master' into
+    7FM/master
+  * d1a457c5 Merge remote-tracking branch 'origin/master' into
+    ico277/master
+  * 3cfa2e2c Merge remote-tracking branch 'origin/master' into
+    J0hannes101/master
+  * 8b14336b Merge pull request #4883 from Cprakhar/feat/custom-format-
+    icons-keyboard
+  * caa65e9f Merge pull request #4747 from cartok/feat/sway-workspaces-
+    format-for-negative-indices
+  * aea5b73f Merge remote-tracking branch 'origin/master' into
+    theoratkin/master
+  * 00a3e490 Merge remote-tracking branch 'origin/master' into dwl/hide-
+    title
+  * 78aafde6 Merge remote-tracking branch 'origin/master' into 2025-wlr-
+    taskbar-add-justify-option
+  * 3c9b019d Merge remote-tracking branch 'origin/master' into dwl/hide-
+    vacant
+  * 596facca Merge branch 'master' into master
+  * 72c73a4c Merge branch 'master' into add-static-river-tag-classes
+  * 7c085c89 Merge branch 'master' into master
+  * a63df55d Merge branch 'master' into feat/bt-multiple-batteries
+  * 86d8d33e Merge branch 'master' into wifi-state
+  * 22f6e3c8 mpd: adapt Playing::on_io to post-refactor Context API
+  * 405ffe3d Merge branch 'master' into feat/cpu-icons-auto
+  * a5d510ff Merge branch 'master' into enable-bar-scroll
+  * 7261d7d7 Merge branch 'master' into master
+  * 5ff20943 Merge branch 'master' into hide-active
+  * 93db40b8 Merge branch 'master' into master
+  * 22441ea8 Merge branch 'master' into master
+  * 4700f2b4 Merge branch 'master' into max-windows
+  * 96696d0e Merge branch 'master' into feat/language-tooltip
+  * 8ec7bd09 Merge branch 'master' into hyprland-language-class
+  * 54d28d39 Merge branch 'master' into
+    persistent_workspaces_by_monitor_make_and_model
+  * 315dc106 Merge branch 'master' into master
+  * bbf6af23 Merge branch 'master' into output-classes
+  * 65062280 Merge branch 'master' into niri-column
+  * 17b9dc2a Merge branch 'master' into master
+  * d618b412 Merge branch 'master' into fix-tooltip-pango
+  * 57689fe9 Merge branch 'master' into feature/workspace-name-css-class
+  * e7d19ad6 Merge branch 'master' into 4655
+  * 926f1831 Merge branch 'master' into groups-add-empty-css-class
+  * 85e4725d Merge branch 'master' into drawer-state
+  * 2a91a7e3 Merge branch 'master' into master
+  * 2916a0af Merge branch 'master' into aksel.aase/clock-exec
+  * b7faea58 Merge branch 'master' into clock/configurable-week-
+    numbering
+  * 13f59a38 Merge branch 'master' into feat/first-day-of-week-calendar
+  * cd2b1802 Apply clang-format to wireplumber module
+  * 573ad779 Apply clang-format to clock.cpp
+  * ce5f6e77 Merge remote-tracking branch 'origin/master' into wp_scales
+  * 975fa9a5 Merge remote-tracking branch 'origin/master' into feature-
+    clock-calendar-css-classes
+  * 03da065e Merge remote-tracking branch 'origin/master' into mpd-idle
+  * ba902059 Merge pull request #4723 from
+    kaosuran/features/temperature-hwmon-by-name
+  * c3f4c007 Merge pull request #4114 from Duncaen/cpu-loadavg
+  * 145e1f26 Merge branch 'master' into feat/basic-cpu-graph
+  * ed688659 Merge branch 'master' into mango
+  * 16430b44 Merge branch 'master' into pr-4841
+  * fe0e1c13 power-profiles-daemon: preserve backward compatibility for
+    driver
+  * 31035890 Merge remote-tracking branch 'origin/master' into
+    feat/sway-workspaces-format-for-negative-indices
+  * b7e5805f Merge remote-tracking branch 'origin/master' into
+    RaphaelKimmig/master
+  * d7fed82c Merge branch 'master' into feat-customizable-icon-
+    thresholds
+  * 69c09800 Merge branch 'master' into feat/custom-format-icons-
+    keyboard
+  * 396e8b71 Merge branch 'master' into mpd-idle
+  * da91ca24 Merge branch 'master' into smooth-power
+  * 96adf0ff Merge branch 'master' into features/temperature-hwmon-by-
+    name
+  * 9e9e16b7 Merge branch 'master' into cpu-loadavg
+  * fe653fef Merge branch 'master' into compact-bandwidth
+  * 35295b15 Merge branch 'master' into wp_scales
+  * 6dc168c4 river/tags: fix memory leak of output_status_/seat_status_
+  * 68097dac Merge remote-tracking branch 'origin/master' into feat/wlr-
+    taskbar-bar-css-states
+  * c5cefb55 AIconLabel: make regex static and initialize
+    label_contains_icon
+  * e736a934 fix(clock): correct parentheses in fmt::format for calendar
+    tooltip color
+  * 31dfd44f Merge remote-tracking branch 'origin/master' into
+    encode_icon_inside_label
+  * b9c82f5d Merge remote-tracking branch 'origin/master' into ppd-
+    split-driver
+  * 6cf61570 Merge remote-tracking branch 'origin/master' into river-
+    tags-monitor-focus
+  * fbb9a7ec Merge pull request #5045 from finitemonkey/master
+  * 8aa8de90 Merge remote-tracking branch 'origin/master' into feature-
+    clock-calendar-css-classes
+  * 7df62686 Merge pull request #4724 from hallvardnmbu/master
+  * 9735efec Merge pull request #4353 from shibjyoti555/feature/if-empty
+  * 8e64ac59 Merge pull request #5131 from rmt/master
+  * 0d19d1e5 Merge pull request #4524 from Gskartwii/niri-language-hide
+  * 53525011 Merge pull request #4951 from B2krobbery/fix-height-type-
+    warning
+  * 4bf82b88 style(pulseaudio): clang-format audio_backend helpers
+  * 1ef0204b Merge pull request #5139 from ccjmne/master
+  * d3d03653 Merge pull request #4035 from fkobi/patch-1
+  * f837615d Merge remote-tracking branch 'origin/master' into
+    finitemonkey/master
+  * 3ba23f7b Merge pull request #5148 from JangXa/master
+  * 1f0be192 Merge pull request #4930 from B2krobbery/patch-1
+  * 8d27a05b Merge pull request #4983 from B2krobbery/refactor-bool-
+    cleanup
+  * 63febd4f Merge pull request #5111 from SaveTheRbtz/codex-label-
+    update-hotpath
+  * 25e57bc6 fix(hyprland/window): use 2-space indentation for fallback
+    block (clang-format)
+  * 26c834a5 cpu: respect tooltip-format-<state> without overwriting it
+  * c5ecfa4c Merge pull request #5060 from EzequielColungaAcha/fix-wlr-
+    taskbar-title-ellipsize
+  * 2d368bb3 Merge pull request #4483 from jaschiu/patch-1
+  * cbc70d10 pulseaudio_slider: keep zero-on-mute applied on every
+    update while muted
+  * 1c5ce111 Merge remote-tracking branch 'origin/master' into
+    hallvardnmbu/master
+  * 8f7ed880 bar: fix indentation of height type warning
+  * 504ebfba Merge remote-tracking branch 'origin/master' into
+    finitemonkey/master
+  * 4bba01c2 Merge remote-tracking branch 'origin/master' into
+    feature/if-empty
+  * b88f88b4 Merge remote-tracking branch 'origin/master' into fix-
+    height-type-warning
+  * 6f1d9d75 Merge branch 'master' into niri-language-hide
+  * 41dc297e Merge branch 'master' into patch-1
+  * 83f924fa Merge branch 'master' into patch-1
+  * e8523601 Merge branch 'master' into refactor-bool-cleanup
+  * ac08a7e8 Merge branch 'master' into codex-label-update-hotpath
+  * bd178458 Merge pull request #4837 from Cprakhar/fix/format-plugged-
+    gt-format-full
+  * 4b778681 Merge branch 'master' into master
+  * 5e9e8803 Merge branch 'master' into master
+  * dae3d1c9 Merge branch 'master' into master
+  * 0b50f654 Merge pull request #5093 from oqlatulesba3/fix/sni-host-
+    proxy-retry
+  * ee9737bf Merge pull request #4692 from aaronred345/hyprland-special-
+    workspaces-multi-monitor
+  * 683b704d Merge pull request #4649 from
+    OlivierNeyret/FixFormattingPowerMenuXML
+  * f3ba5794 Merge pull request #4672 from Mental-Vortex/master
+  * 4079c162 Merge pull request #4957 from 85ae/fix-4955
+  * f57decf8 Merge pull request #4984 from Mervius/master
+  * bc315b5a Merge pull request #5048 from Praczet/fix/hyprland-
+    workspace-taskbar-hover
+  * e1efa747 Merge pull request #4992 from VlkrS/openbsd
+  * 9ac3f9b9 clock: make calendar padding portable across FormatStream
+    char types
+  * 31a3d7e1 fix(battery): gate Full-as-Plugged behind full-at-plugged
+    option, drop debug output
+  * 488a75fa fix(wlr/taskbar): gate title shrink/expand behind 'expand'
+    option
+  * 5181f846 fix(sni): prevent use-after-free and infinite retry in Host
+    proxy retry
+  * eff483de Merge remote-tracking branch 'origin/master' into
+    fix/format-plugged-gt-format-full
+  * 0d3f393a Merge pull request #5088 from cogwheel/cogwheel/fix-
+    untitled
+  * 806f6333 hyprland/workspaces: refresh locally instead of reloading
+    Hyprland config
+  * f682231b Merge pull request #4744 from Sayrus/sayrus-gh/sway-
+    workspaces-markup
+  * b41e57e3 Merge remote-tracking branch 'origin/master' into fix-wlr-
+    taskbar-title-ellipsize
+  * ed2bafcc Merge pull request #4804 from BBaoVanC/fix-appearance-
+    change-css-watching
+  * 05dbcb24 Merge remote-tracking branch 'origin/master' into fix/sni-
+    host-proxy-retry
+  * 9930c7be Merge remote-tracking branch 'origin/master' into hyprland-
+    special-workspaces-multi-monitor
+  * dc017d8f fix(hyprland/workspaces): disconnect hover-check timeout on
+    Workspace destruction
+  * 987d5758 Merge remote-tracking branch 'origin/master' into
+    fix/hyprland-workspace-taskbar-hover
+  * 544b2e9b Merge branch 'master' into FixFormattingPowerMenuXML
+  * 778ef49e Merge branch 'master' into sayrus-gh/sway-workspaces-markup
+  * 98e2e345 Merge branch 'master' into master
+  * 6e24923f Merge branch 'master' into patch-1
+  * a02f943d Merge branch 'master' into fix-appearance-change-css-
+    watching
+  * 3fdaa8d5 Merge branch 'master' into fix-4955
+  * b88ed8aa Merge branch 'master' into master
+  * 2f3cae62 Merge branch 'master' into openbsd
+  * 35d0c59b Merge branch 'master' into cogwheel/fix-untitled
+  * 8b5f5b3a Merge pull request #5155 from Alexays/fix/hyprland-
+    language-keyboard-name-commas
+  * 1f2394aa Merge pull request #3698 from vpcano/hyprland-language-
+    tooltip
+  * 2ee3817b Merge pull request #4383 from stkth/stkth/fix-4241
+  * 093dbe73 Merge pull request #2965 from jramrath/hyprland-
+    window_no_title_from_special
+  * 62cbfabe Merge pull request #5009 from
+    EvansJahja/charon77/battery_fix
+  * 6793b97e fix(hyprland/language): handle commas in keyboard-name
+    config
+  * f158f29a Merge remote-tracking branch 'origin/master' into hyprland-
+    window_no_title_from_special
+  * 16c2ee70 Merge remote-tracking branch 'origin/master' into
+    charon77/battery_fix
+  * f739cb7f Merge remote-tracking branch 'origin/master' into
+    stkth/fix-4241
+  * 6de88718 Merge remote-tracking branch 'origin/master' into hyprland-
+    language-tooltip
+  * c43f9f25 Merge pull request #5039 from mil-ad/fix/sway-language-
+    flag-disappears
+  * fd81ff29 Merge pull request #4753 from The-Robin-Hood/master
+  * 63424a75 Merge pull request #5064 from Siriusuna/fix/mpd-markup-
+    truncation
+  * 11434445 Merge pull request #5061 from buzz/fix/hyprland-workspaces-
+    scroll
+  * c8bcbfb0 Merge pull request #5072 from Lege19/master
+  * fce96987 Merge pull request #5028 from JeremieRodon/fix/tray-hide-
+    when-empty
+  * 1058bdf0 Merge pull request #5062 from buzz/fix/hyprland-workspaces-
+    taskbar-hover
+  * ae636a1c Merge pull request #4742 from Sayrus/sayrus-gh/sway-
+    workspaces-quotes
+  * f4648c0f Merge pull request #5046 from awused/mpd-duration
+  * c77c60e0 Merge pull request #5138 from runxiyu/runxiyu
+  * 6c6b69b8 Merge pull request #5114 from jaschiu/patch-3
+  * 439261f0 Merge pull request #5112 from jaschiu/patch-2
+  * 2e0c34af Merge branch 'master' into fix/mpd-markup-truncation
+  * 8bedd844 Merge branch 'master' into fix/sway-language-flag-
+    disappears
+  * dfe2d804 Merge branch 'master' into fix/tray-hide-when-empty
+  * 279aa672 Merge branch 'master' into fix/hyprland-workspaces-scroll
+  * 5fce3926 Merge branch 'master' into master
+  * 9b016d81 Merge branch 'master' into fix/hyprland-workspaces-taskbar-
+    hover
+  * fa79b931 Merge branch 'master' into sayrus-gh/sway-workspaces-quotes
+  * 555dcb17 Merge branch 'master' into master
+  * 0445607f Merge branch 'master' into mpd-duration
+  * 0116808f Merge pull request #5079
+  * e2086499 Merge pull request #5043
+  * 3d64071b Merge pull request #5108 from SaveTheRbtz/codex-json-
+    parser-buffer
+  * 260a68cf Merge pull request #5100 from SaveTheRbtz/codex-mpd-
+    playing-update
+  * c166d98b Merge pull request #5010 from Neltharion01/master
+  * 2ece1377 Merge pull request #5058 from typedrifter/fix-cursor-crash
+  * 91b0b30a Merge pull request #5101 from SaveTheRbtz/codex-mpd-song-
+    warning
+  * 9dd927e8 Merge pull request #5076 from muratyalcin-ce/master
+  * 6df22ab3 Merge pull request #5154 from JuustKiwi/feature/dpms-
+    suspend
+  * 48e9dd3b Merge pull request #5123 from martuscellifaria/master
+  * 44ec750b Merge pull request #5121 from InetAddress/fix-battery-
+    hotplug-crash-1
+  * 4d1a561c feat(modules): pause background threads when display is
+    asleep
+  * 601e84d1 feat(ALabel): allow custom percentage thresholds in format-
+    icons
+  * 22ce5887 Fallback formatting when format-paused is missing uses
+    ALabel
+  * 42f2832d docs(man): document light and dark stylesheets
+  * e37fcee3 fix(sni): ignore name/pixmap updates for custom icons
+  * 47b2ff09 feat(cursor): use cursor-shape-v1 cursor names instead of
+    Gdk::CursorType
+  * 942411d7 Force layer-shell commit after configure
+  * 14e59daa feat(wlr/taskbar): expose active toplevel state on the bar
+    window
+  * 0bc664a9 Readded the whitespace from the original code
+  * eb3669de Rearranging code in a non-redundant way.
+  * 4ef828f7 Fixing CPU usage spike on Waybar
+  * 61178f7b Change error handling to warning
+  * 2d9fee14 Update privacy.cpp
+  * 25061962 Update privacy.hpp
+  * fb829c8a ## fix(niri/workspaces): crash (segfault) when setting
+    workspace button markup
+  * f7b9d8c1 modules/niri: add {total} format token to workspaces
+  * bef7df8f fix(mpd): avoid false no-song warning when stopped
+  * 0cccf0d8 perf(mpd): avoid duplicate playing-state updates
+  * 2190871a perf(label): skip redundant markup updates
+  * 5cce616d perf(json): parse directly from string buffers
+  * 33156310 fix(sni): retry Host proxy creation on transient errors
+  * 0af3ca1a custom_modules: Fix mediaplayer.py handling untitled track
+  * 3eeffbe3 feat: add mango modules:
+    workspace,language,keymode,window,layout
+  * 5ea824c2 Use unit in config for memory module tooltip
+  * 31a161eb Fix (wayfire/backend): Fixed unhandled exception
+    (out_of_range) after no valid outputs in unordered_map
+  * 2ff2861e Merge remote-tracking branch 'upstream/master'
+  * 97acbf30 Update man pages for persistent-workspaces in
+    sway/workspaces
+  * 415da7ae sway/workspaces: refer to outputs by their monitor
+    identifier (make and model)
+  * ec265137 (Fix) (sway workspace module) persistent workspaces always
+    removed
+  * 822071f3 feat(custom): add image
+  * 3056bad9 Sway IPC: avoid reinterpret_cast
+  * d8848a47 Sway IPC: code cleanups
+  * 1bc633fc Sway IPC: more robust socket send/receive logic
+  * 89b5456c Sway IPC: fix socket path discovery
+  * 81fd9ee4 fix(mpd): truncate before sanitization and improve tooltip
+    UX
+  * 435c212b fix(mpris): escape Pango markup in tooltip
+  * f8cc7173 refactor: extract utf8 truncation logic to utility
+  * 85163c68 fix(hyprland/workspaces): replace EventBox with Button for
+    taskbar windows
+  * ea36aab3 docs(hyprland/workspaces): add on-scroll-up and on-scroll-
+    down to man page
+  * eb3b86c4 fix(hyprland/workspaces): support on-scroll-up and on-
+    scroll-down config options
+  * fcf1fb79 fix(wlr/taskbar): let task titles shrink within available
+    space
+  * 876eaaf7 fix(amodule): prevent crash when cursor timeout fires after
+    destruction
+  * 6bdafede feat(cpu): add {icons} format replacement for all per-core
+    icons
+  * 23e635ac Add missing documentation for the "target" option of the
+    PulseAudio-Slider module.
+  * 0351ac8f Additional options when muted for the PulseAudio-Slider
+    module:
+  * ff76e967 fix(hyprland): keep workspace hover over taskbar icons
+  * f7001410 mpd: ensure emit is called after state changes
+  * 546b53d6 mpd: Implement idle events for Playing state
+  * 7e2afaa5 fix: mpd specify timer interval in seconds
+  * 40c9d92e test(hyprland): fix dispatch test
+  * cdb792af fix(hyprland/workspaces): fix IPC call when using `"move-
+    to-monitor": true`
+  * 51becf2f feat(niri/workspaces): Add `enable-bar-scroll` option
+  * 0ec6d064 Guard set_current_layout against unknown layout names
+    (wtype, hot-plugged devices) so transient events stop blanking
+    layout_. Refresh layouts_map_ on "added"/"xkb_keymap" input events
+    and union layouts across all keyboards so new devices contribute
+    their layouts. Release mutex_ before the refresh sendCmd to avoid
+    self-deadlock from the synchronous signal_cmd emit.
+  * 3229c2c9 feat: support Pango markup in remaining tooltips
+  * 7105ad9b waybar-styles.5: add semicolon to css import statement
+  * 3971bb6c feat: add support for multiple batteries in a single
+    bluetooth device
+  * 2a05edaf hyprland/workspaces: add debounce timer to prevent
+    workspace button flicker
+  * 5c3ec1fd fix(tray): hide module when no items are visible
+  * c5f834b8 Merge branch 'Alexays:master' into master
+  * 3a045ff3 Merge branch 'Alexays:master' into drawer-state
+  * 05945748 Merge pull request #5013 from higorprado/fix/hyprland-lua-
+    dispatch-protocol
+  * d1d50145 Add static river tags
+  * 23df491c Merge branch 'Alexays:master' into master
+  * 4c105f7c Merge pull request #5007 from nschloe/toctou-fixes
+  * 97917db5 test(hyprland): expose dispatch internals for unit tests
+  * c81a039a feat: add compact versions of bandwidthBytes to network
+    module
+  * e17c0d9f fix(hyprland/workspaces): adapt dispatch commands for Lua
+    IPC protocol
+  * b28af75e feat(language): add tooltip support with configurable
+    tooltip-format
+  * c8f57d3f Merge branch 'master' into 4655
+  * a66d6b15 Do not reconnect if connection was refused Otherwise, it
+    will try to reconnect recursively
+  * 255f17d1 battery: guard _exists = true assignment inside if
+    condition
+  * 5af324f3 two more toctou bugs
+  * 59d09c2c fix various toctou bugs in battery.cpp
+  * 64e3e482 Merge branch 'river-tags-monitor-focus' of
+    github.com:lilly-lizard/Waybar-fork into river-tags-monitor-focus
+  * 1a88cf08 Merge branch 'Alexays:master' into drawer-state
+  * cca8dc38 Merge pull request #4990 from B2krobbery/fix-sni-make-
+    unique
+  * 10206cf9 Merge branch 'Alexays:master' into drawer-state
+  * 7e0e99b5 feat (hyprland/workspaces): add support for state specific
+    icon overrides
+  * ab7bc8de feature: group - add reveal-delay config option for drawer
+  * 29979e92 Fix build for systems without SIGRTMIN/SIGRTMAX
+  * 729dbbb8 Fix build for systems without SIGRTMIN/SIGRTMAX
+  * bd39795f Fix build for systems without SIGRTMIN/SIGRTMAX
+  * 0241d0ea Remove redefinition or SIGRTMIN/SIGRTMAX for OpenBSD
+  * 7e9c46e4 fix(sni): use std::make_unique for Item allocation
+  * e2d608e7 Check if output still is in outputs before doing anything
+    with it
+  * d9b5d242 Check if output still is in outputs before doing anything
+    with it
+  * 09b6df37 Check if output still is in outputs before doing anything
+    with it
+  * 8b5b1eeb Check if output still is in outputs before doing anything
+    with it
+  * 0ee4fd4a added output class to dwl/mangowm allowing tags to display
+    differently when the output is focused (for multi-monitor setups)
+  * e9741829 Merge branch 'master' into river-tags-monitor-focus
+  * 1ab1d41e removed residual debug logging
+  * 3a321d93 Merge pull request #4982 from Mrpaoo/bug-fix
+  * 450b6a78 Add "ignore-workspaces" option to sway/workspaces module
+  * ac62754b fix the lint problem
+  * efd245b5 Fix timeout with multiple monitors
+  * a8a46d1f Refactor: simplify complex conditional expressions in
+    Hyprland workspace module
+  * 906a5897 fix the io failure for hotplug-in device
+  * 503d99b1 Add max-windows option to hyprland/workspaces
+  * 7d965a87 pr fixes
+  * 132ca3ac fix: datapoints should be positive
+  * dbf1cfb0 fix: typo reading datapoints
+  * 28351590 fix: id read and name set
+  * 01c6ebdf feat: update man pages
+  * dfc26364 feat: use the foreground color for cleaner look
+  * 4d6354af feat: add gauge and stacked bar graph type
+  * efadb82c feat: basic line graph component and cpu graph module
+  * 7feb23c3 Update manpage to mention the .expanded CSS class
+  * 66cb828b Add CSS selector for expanded drawers
+  * 202ae4bd Merge pull request #4975 from pix-code/master
+  * 6acc94ca Merge pull request #4967 from argentite/net-addr-del-fix
+  * 66c09bc5 Merge pull request #4964 from adrianlzt/fix/network-
+    bandwidth-event-race
+  * c30d4ce3 Merge pull request #4970 from B2krobbery/fix-group-module-
+    leak
+  * cead1a05 Merge pull request #4973 from cebem1nt/group-ref-fix
+  * fc11789a add unit config option to memory module
+  * 2c2901e8 hyprland/workspaces: expose workspace name as CSS class
+  * ae119543 fix: ensure passing group_config as reference
+  * 36518e4e fix(bar): ensure exception safety when creating group
+    modules using std::unique_ptr
+  * 16886117 Network: fix: delete correct address type
+  * 34e9f258 fix: Correct the error in converting network speed units
+  * aa3d82a1 Add missing rx/tx_bitrate reset
+  * 39656dea feat: Add wifi network link bitrate value
+  * 8b1e5740 niri/workspaces: feature - add "hide-empty" config option
+    (#4965)
+  * 1e965ccc Merge pull request #4960 from keepo-dot/feature/8bit-hex-
+    support
+  * b3f4281a Merge pull request #4962 from B2krobbery/fix-dwl-global-
+    leak
+  * c866c4cd Merge branch 'master' into master
+  * 753294db fix(network): prevent near-zero bandwidth on rapid event-
+    driven updates
+  * 3f69bacf fix: prevent resource leak when rebinding dwl globals
+  * a9aab4e3 fix: type consistency
+  * 72d6a51f fix: fix compile/run bugs from trying to be safer. rip
+  * 35332656 fix: removed unnecessary function, update header file for
+    signature change.
+  * 937ef176 fix: memory issues & duplicate file loads.
+  * 3b512d1a feat(client): add support for 8-bit hex color codes in CSS
+  * a49990c2 fix: issue #4955 wrong behaviour of regex for sway/window
+    'rewrite'
+  * 49460def Merge pull request #4953 from B2krobbery/revert-menu-
+    actions
+  * e55bff66 Remove unnecessary g_strdup in GTK callback
+  * 06c3d439 Merge pull request #4943 from
+    sgruendel/network_multi_monitor
+  * 3bd46da7 Merge pull request #4945 from B2krobbery/clean-parentheses-
+    fix
+  * e3174a0e Merge pull request #4948 from tsukasa-au/fix-network-
+    selection
+  * 0332da0c bar: warn on invalid height type in configuration
+  * fff1495e adding a new keyword 'on-click-copy' that accepts a bool
+    and copies to clipboard on true'
+  * be2ad4a8 Merge pull request #4946 from B2krobbery/fix-client-
+    wayland-global-leak-clean
+  * b64265bd Network: Fix default interface selection.
+  * 1aa32def fix: prevent resource leak when rebinding Wayland globals
+  * 60c57b71 clarify logical condition in wlr taskbar module
+  * d2aad467 Update waybar.5.scd.in
+  * dc31db6d fix: linting error
+  * c0c1a422 Fix network bandwidth rate calculation for early updates
+  * 86d516c7 clock: add weeks-numbering option for configurable CW
+    calculation
+  * e07a2e91 Update manpages
+  * ba23ef64 Add .empty css class to group if it is empty
+  * ab7bfdb2 Merge pull request #4937 from sjudin/group-add-start-
+    expanded
+  * 081fb733 Merge pull request #4938 from
+    jayshozie/hyprland/window/segfault-fix
+  * a144a308 Merge pull request #4939 from BryceBeagle/removed-
+    nerdfonts-codepoints
+  * 6afe1086 Update manpages
+  * a05c7bc2 chore: Stop using deprecated/removed Nerdfonts codepoints
+  * 83e1949d fix(hyprland/window): Fix segfault caused by use-after-free
+  * 50c14313 Add start-expanded option to group
+  * 6cb68737 Merge pull request #4932 from LukashonakV/cavaBump
+  * 311b0fb1 Merge pull request #4931 from khaneliman/cleanup
+  * 95f9922c cava bump
+  * 86234a89 feat: gitignore heaptrack dumps
+  * 215c9521 chore: remove heaptrack dump
+  * b77b1818 Merge pull request #4925 from B2krobbery/fix-menu-actions-
+    pointer
+  * c62e987d Update waybar.5.scd.in
+  * 069c8cfb Merge pull request #4929 from c4rlo/failed-units-tooltip
+  * e7c077ab clang-format
+  * 3b126206 systemd-failed-units: tooltip w/ failed units list
+  * d046c19b systemd-failed-units: small tweaks
+  * 1019c9d2 Merge pull request #4924 from B2krobbery/master
+  * 196589cf Update ALabel.cpp
+  * acf6f117 Update ALabel.cpp
+  * 3cfb6226 Fix menu-actions GTK callback pointer handling
+  * 558c2753 Add simple calendar tooltip example for clock module
+  * 0053b271 Merge branch 'Alexays:master' into encode_icon_inside_label
+  * 8a3a7867 docs(hyprland/workspaces): icon grouping man page entries
+  * f5d2ef1c Merge remote-tracking branch 'upstream/master'
+  * 100349a5 Merge pull request #4910 from khaneliman/hyprland
+  * 8dfdf4d1 Merge pull request #4913 from khaneliman/tray
+  * 8e2e437e fix(sni): silence duplicate item registration warnings
+  * f6d92fd7 fix(sni): render attention and overlay tray icon assets
+  * 78f6cde2 fix(sni): correct watcher host teardown signaling
+  * 2a748f1a fix(sni): delay tray item insertion until proxies are ready
+  * 63170223 fix(hyprland): guard malformed module events
+  * dd47a2b8 fix(hyprland/workspaces): stabilize reload and event
+    handling
+  * b1a87f94 fix(hyprland/window): avoid stale state during IPC refresh
+  * 0a35b86e fix(hyprland/ipc): honor the requested instance signature
+  * e4254236 Merge pull request #4911 from khaneliman/gtkmenu
+  * 790101f8 chore: format
+  * f48fce57 fix(menu): keep popup menus alive after builder teardown
+  * ab5b1a6c pulseaudio: add target option to control source
+    (microphone) volume
+  * 78bd6c8b Remove duplicate from source include
+  * 88e1f853 Simplified logic
+  * 49db7adc Per host checks
+  * 5de21f4a Added support for hostname based module addition
+  * 68d4360c Merge pull request #4905 from sw1nn/master
+  * 22b2aff3 Merge pull request #4900 from AlisonB319/ab319/fix-hover-2
+  * 100d4ec4 Merge pull request #4891 from khaneliman/bugfix/stab-003-
+    test-001-hyprland-ipc
+  * b31292de Merge pull request #4898 from khaneliman/memory
+  * a4a7fbbe Merge pull request #4897 from khaneliman/network
+  * 66c92122 Merge pull request #4892 from khaneliman/bugfix/stab-004-
+    command-exec-failure
+  * 4cc4c902 Merge pull request #4895 from BryceGust/fix/interval-cast
+  * a8162186 fix(mpris): disconnect GLib signals before destroying
+    objects
+  * 3eb2c7e8 sync tooltip updates without resetting hover state
+  * a97e8dad Revert "Fix tooltip sync issue by removing conditional
+    checks"
+  * c5449bd3 fix(network): log new address only when state changes
+  * fe03dfaa perf(memory): eliminate deep copies in range-based for
+    loops and lambdas
+  * 7d8be29f perf(sni): eliminate icon theme rescanning from system tray
+    hotpath
+  * e684e701 perf(sni): eliminate redundant g_memdup2 allocation for D-
+    Bus pixbufs
+  * 4c71b2bf perf(memory): optimize C++ string operations to reduce heap
+    fragmentation
+  * 25089b24 fix(network): align tooltip and tooltip text
+  * c85f2a23 Add readability improvements and optimizations
+  * 0c8acbf3 Add support for optional CSS classes
+  * d929f1a6 Fix 4894 - float interval cast
+  * 79fb1d9f test(command): cover exec failure paths
+  * 5e7dbf17 fix(command): return non-zero when child exec fails
+  * 8d22d3e0 refactor(sway): use shared ScopedFd for IPC sockets
+  * 39e09118 refactor(wayfire): replace custom Sock with shared ScopedFd
+  * 2ff77fb7 refactor(niri): use shared ScopedFd utility
+  * e83ab760 refactor(hyprland): use shared ScopedFd utility
+  * 6dfe1c31 feat(util): add ScopedFd RAII utility for file descriptors
+  * 04ddc5fd chore(test-hyprland): remove unused IPC test fixture
+  * 87a5b7ed test(hyprland): add failure-path fd-leak coverage
+  * d0363313 fix(hyprland-ipc): harden fd lifecycle and listener loop
+  * fd086d0f Merge pull request #4890 from khaneliman/bugfix/perf-001-
+    safe-signal-bounded-queue
+  * 47b2dfc6 Merge pull request #4889 from khaneliman/bugfix/stab-001-
+    002-sleeper-thread
+  * e4ff024f fix(util): bound SafeSignal queue growth under burst load
+  * 86452377 test(utils): stress SleeperThread wake and stop control
+    flow
+  * 44eed7af fix(sleeper-thread): synchronize control flags with atomics
+  * 1c61ecf8 test(utils): add SleeperThread reassignment regression
+  * dbbad059 fix(sleeper-thread): stop and join before worker
+    reassignment
+  * 31b373b9 Merge pull request #4888 from Alexays/copilot/fix-waybar-
+    deadlock-issue
+  * d5297bc4 fix: resolve PulseAudio/WirePlumber deadlock and freeze
+    issues
+  * c504b7f4 Initial plan
+  * a64876b9 docs: update man page
+  * f2cfcb85 feat(keyboard-state): add custom icons in format-icons
+  * 15d33f23 docs: update man page
+  * a6a65cb6 feat: add support for configurable first day of the week in
+    calendar
+  * 7744320a fix: build
+  * 802bf184 fix: lint
+  * ef3d5598 fix: some crashes
+  * a32413a7 Merge pull request #4880 from Alexays/copilot/fix-mpd-
+    module-crash
+  * 82f076c6 mpd: fix FD leak by resetting connection on
+    MPD_ERROR_SYSTEM errors
+  * e1893921 fix: lint
+  * aacf0cbc Merge pull request #4881 from Alexays/copilot/fix-sigabrt-
+    usb-unplug-issue
+  * 3e2a50d5 Merge pull request #4879 from Alexays/copilot/fix-waybar-
+    bluetooth-crash
+  * 49d4049e Fix SIGABRT on USB unplug race condition in battery module
+  * 0c46818e Fix crash when bluetooth DBus manager returns null on
+    timeout
+  * 37d65415 Initial plan
+  * 65fadcf9 Initial plan
+  * f806ec03 Initial plan
+  * 64ecdcfa Merge pull request #4846 from BlueManCZ/fix-mpris-fallback-
+    player
+  * 4aa8f985 Merge pull request #4821 from cebem1nt/group-scroll-cutout
+  * 730e558c Merge pull request #4834 from khaneliman/niri
+  * 22fd2da4 Merge pull request #4836 from Cprakhar/fix/tooltip-return-
+    type-in-format-strings
+  * 6fa8ad34 Merge pull request #4849 from
+    44vladimirov/power_switch_events
+  * 55fa8cf1 Make CssReloadHelper watch CSS new style on appearance
+    change
+  * 54e7451c Merge pull request #4856 from Cprakhar/feat/tooltip-format-
+    cpu
+  * ae60ca62 refactor(niri): declared constructor
+  * a194b576 feat(niri): niri depends on socket
+  * d31b131f Merge pull request #4874 from GG2R10/fix/cava-silence-fix
+  * 9c871c90 fix: move silence_ = false inside idle lambda
+  * a74adc54 Merge pull request #4863 from olliestone/fix-aappiconlabel-
+    image-visibility
+  * 14a30cd4 Merge pull request #4869 from cebem1nt/master
+  * f1140f00 niri/workspaces: change icons priority
+  * 6f9dee97 fix: ensure AAppIconLabel image remains not visibile if
+    icons are disabled
+  * 736c0533 feat(hyprland/workspaces): grouping icons
+  * e4e47cad Merge pull request #3088 from VAWVAW/hyprland-bar-scroll
+  * 01628dda Merge pull request #4852 from tobixen/fix/keyboard-state-
+    hotplug-crash
+  * 9e57d75f Merge pull request #4854 from sliedes/ipc-safesignal
+  * 2337d308 Merge branch 'master' into feat/tooltip-format-cpu
+  * fc4e2a35 Merge pull request #4857 from Cprakhar/fix/pango-markup-all
+  * a3d79023 Merge pull request #4858 from chrisvittal/memory-
+    module/tooltip-markup
+  * 5b595a4d hyprland/workspaces: Add `enable-bar-scroll` option
+  * e0e36b6d memory: use markup rather than text for memory tooltip
+  * 3e7976c8 fix: use pango markup for consistent formatting in format
+    and tooltip-format
+  * 4ac53920 feat: add tooltip-format config option in cpu module
+  * a70651ed fix: use SafeSignal in ipc
+  * 13469a88 fix(keyboard-state): fix segfault on device hotplug
+  * 7110c455 fix of example config typos
+  * 3bcadfdf battery: power switch events
+  * 03a77c59 Merge pull request #4844 from Cprakhar/fix/remove-battery-
+    status-console-log
+  * 38330286 Merge pull request #4847 from esensar/patch-1
+  * c388208e docs: fix typo in waybar.5 in `expand-right` field info
+  * a871d901 Fix button action handling to consistently use the active
+    player
+  * 0a50e82d Prioritize currently playing player
+  * a69b7a55 Handle fallback player for ignored MPRIS players
+  * bd222984 fix: remove unnecessary console log for battery status
+  * c4f1aba1 Merge branch 'Alexays:master' into master
+  * d527ccd4 Merge pull request #4838 from khaneliman/image
+  * 3b478ee6 chore: format
+  * c9a7cbbd fix(image): treat missing interval as once
+  * e67b230d fix: prioritize plugged status over default when battery is
+    full
+  * f96fb53e feat: add tooltip in format replacments
+  * f4f139a4 Merge branch 'master' into river-tags-monitor-focus
+  * 306f9706 Merge pull request #4828 from hannesbraun/fix-poll-include
+  * 00ccfce6 Merge pull request #4831 from Cprakhar/fix/pango-markup-
+    temperature
+  * 7e6da1ad fix: update tooltip method to use pango markup formatting
+  * f373ebfc Fix include of poll.h
+  * 3655d735 Ignore Tray entries by service name and when dbus
+    properties load
+  * 2616785d Merge pull request #4822 from khaneliman/ci
+  * 833c40a8 feat(ci): enable concurrency for nix-tests
+  * d95809e1 chore(ci): bump flake lock actions
+  * 40200afb fix: owerwrite handleScroll to remove any scrolling
+    handling from group module
+  * 24750523 Merge branch 'master' into feat-hyprland-submap-icon-
+    handling
+  * ca0b068a feat(disk)!: handle multiple disks at once
+  * 946d6dff Merge branch 'master' into features/temperature-hwmon-by-
+    name
+  * adeb82ff Merge branch 'hyprland-special-workspaces-multi-monitor' of
+    https://github.com/aaronred345/Waybar into hyprland-special-
+    workspaces-multi-monitor
+  * b192244f Commit Squash
+  * 3df7a684 Merge remote-tracking branch 'upstream/master'
+  * efc5fccd Merge branch 'Alexays:master' into encode_icon_inside_label
+  * a7b463f3 Merge branch 'Alexays:master' into master
+  * f3c36282 docs(hyprland/submap): add config option to specify
+    different icons for submaps
+  * c38024bd feat(hyprland/submap): add config option to specify
+    different icons for submaps
+  * 7f63a905 feat(battery): add option to smooth power for more stable
+    time_remaining estimates
+  * 5870c4ba feat(clock): Add action to execute external command
+  * a8a41bd1 fix(workspaces): skip ignored workspaces in persistent
+    rules
+  * 49083131 fix(AModule): improve cursor configuration handling
+  * a2d597f1 Added better logic for different kinds of filter nodes for
+    only-physical. Added fallback in case the final node doesn't have
+    the volume property.
+  * 9e53174e feat(sway/workspaces): add format for negative indices
+  * c2a038c2 fix(sway/workspaces): escape markup in workspace if enabled
+  * da4367df fix(sway/workspaces): use number when available to avoid
+    parsing issues
+  * 0a5da13f fix(workspaces/sway): handle workspaces with quotes
+  * 9dfcd206 Allow tooltip formatting the CPU module.
+  * 8e9ebb8b use snake_case for variable name
+  * 61af3e95 fix the doc
+  * ce029c34 temperature: add hwmon-name option for stable sensor
+    selection
+  * 11533ecf Add '-<state>' support to wifi config
+  * eb209068 AIconLabel: support icon-size config
+  * b8da9ee9 Move extract icon into its own method
+  * c0b9635e Parse label_ to extract embedded icon markup
+  * c2c1a5d6 Add labelCOntainsIcon in AIconLabel
+  * 5c9a1b08 Implemented "only-physical" parameter in the wireplumber
+    module.
+  * 2c9e8344 log: use native journald protocol for when running as a
+    service
+  * 85aac3fe feature to limit the number of icons displayed
+  * a2f277a0 Active special workspaces fallback on non-active icon
+    before default
+  * a28fe0a9 bugfix(hyprland/workspaces): Special workspaces being
+    opened on different monitors now updates correctly
+  * 55e1c4c4 Adds name of hyprland workspace to button class
+  * 268e33e8 Unique icons for active and named workspaces
+  * 72855630 Merge branch 'Alexays:master' into patch-1
+  * 7777be0d feat: allow not switching output when clicking
+    sway/workspace
+  * 85a8fca0 feat: allow sorting niri workspaces
+  * b277b639 fix: Return when ID doesn't exist, we only care about the
+    interest list.
+  * bbb7f377 support hiding tray icons
+  * 5b5b80a0 Fix indentation formatting in power_menu.xml
+  * d61bc859 perf(image): set image from `path` only once
+  * 16d7c9d8 feat(image): expand `~` & `$HOME` in path
+  * 19afad86 updated client to bind version 2 of the ext-idle-notifier
+    protocol
+  * e1e99716 fixed stale notification object issue
+  * 26922c7f Update idle_inhibitor.hpp
+  * 3e2ea1a8 fixed the type declarations
+  * d68f168e fixed the compilation error
+  * 173e7306 fix using the `ext-idle-notify-v1` protocol
+  * 262f8d96  fixed the compilation errors in the `idle_inhibitor.cpp`
+    file
+  * c831a352 Added signal support and wait-for-activity bool.
+  * 72e6151f Merge branch 'Alexays:master' into master
+  * deb8a56e [wireplumber] remove old version (bluetooth) and
+    unnecessary checks (form-factor)
+  * 644a3575 [wireplumber] Add support for device.form-factor
+  * a96f1caa fixed bug after merge with master duplicating code in
+    handle_show()
+  * 382b9daa wlr/taskbar: add `homogeneous` to evenly distribute button
+    widths
+  * 4c120015 do not need to remove css class from gtk label on init
+    phase
+  * a36a5e89 Approach to dry pattern - separate remove/add css-classes
+    logic to methods
+  * 2e6bf549 Change label css classes in initial and on event language
+    class method. Used in getLabel - make a strange behaviour
+  * bdf501a8 make getLayout is not static and set css classes for short
+    name keyboard layout in getLayout method
+  * cd820a10 also remove/add css class in onEvent method
+  * 9a873705 Merge branch 'river-tags-monitor-focus' of
+    github.com:lilly-lizard/Waybar-fork into river-tags-monitor-focus
+  * e1d4967d feat(niri/worspaces): add ignore-workspaces configuration
+    option
+  * 408a87fe Merge branch 'master' into river-tags-monitor-focus
+  * 730b502c wlr/taskbar: add `justify` option for Gtk::Box horizontal
+    alignment
+  * 632e30eb niri/window: add col/max_col parameters
+  * 192baa45 Add css class to hyprland language module of short_name
+    language code
+  * 41c34b15 Hide niri/language widget if formatted string is empty
+  * ae342081 fixed bug; when the shown task is removed it promotes
+    another one
+  * d5e45615 added a taskbar squash option
+  * 03e69a5e Merge branch 'master' into river-tags-monitor-focus
+  * eee03623 Fix clang build error
+  * 946f175a feat: Show Niri/window component when workspace is empty
+  * aaffebed wireplumber: add more volume formats
+  * 3060141a fix: Fix hide_on_ok when user or system session is ignored
+  * 4a7da0ca fix: Fail early when neither user nor system is requested
+  * 2e231472 feat(group): add reveal-by-default option
+  * e355b40c Add `format-bluetooth` support to wireplumber module
+  * ca8f51a3 added a "fallback" option to hyprland/window when no window
+    in focus
+  * 929c817e chore(man): add playing-interval option to mpd man page
+  * 03eba632 feat(mpd): add playing-interval option
+  * af1ccf7d docs: add missing final period
+  * d1f3c0ef docs: update man page
+  * 38394979 feat(hyprland/workspaces): add uniqueIcons option
+  * bc61af4e Merge branch 'Alexays:master' into master
+  * b4c247a4 remove unused variable
+  * bcac5ffc doc(README): update river feature list
+  * ad0d1350 feat(river/layout): add format-icons
+  * d6f9dc91 Apply format according to .clang-format
+  * 9b6590b9 Add CSS classes for sway workspace indicators depending on
+    associated output
+  * 5a075646 Update man
+  * 35b0d591 Update man page
+  * e3e80773 Add hide-active
+  * ba1988e0 allow dynamic timeout setting
+  * f3ae13e4 cpu: add load{1,5,15} format variables
+  * 5ab852ff dwl/window: allow hiding of title when either inactive or
+    empty
+  * 9b7a8a8c implement albumArtist
+  * f094f085 Merge branch 'river-tags-monitor-focus' of
+    github.com:lilly-lizard/Waybar-fork into river-tags-monitor-focus
+  * 4d15fcc6 Merge branch 'master' into river-tags-monitor-focus
+  * 2faad27c meson_options: improve sndio's description
+  * 67df5f58 feat(Group): enhance widget visibility management - set
+    visibility instantly on module update using dynamic signal handling.
+    Improve performance - manage the visibility of updated module only
+    instead of iterating over all modules on `hide_group`.
+  * 494e438f Merge branch 'master' into river-tags-monitor-focus
+  * 653732df fix(Group): update always visible modules logic to use
+    dynamic class reference
+  * 6a7b4af7 feat(Group): add dynamic drawer hiding modules based on
+    module's class. Add `always-visible-class` to config. Update the
+    drawer on `hide_group`.
+  * 9556bdab feat: add display-condition configuration option
+  * feb6dfb9 feat(power-profiles-daemon): split driver into cpu driver
+    and platform driver
+  * 8685e88e dwl/window: add .active styling class for active windows
+  * 807208cb dwl/tags: add hide-vacant option
+  * fe1a2c20 Added source_desc argument to format_source in
+    pulseaudio.cpp
+  * 8270b55e feat: add way to use environment value for 'output' option
+  * 966e34f2 Merge branch 'master' into river-tags-monitor-focus
+  * 552c2649 Merge branch 'master' into hyprland-language-tooltip
+  * 38cf981f fixed clang format for language.cpp
+  * 00e5cb75 clang-format run
+  * b92394cd man page edit for the configuration addition
+  * 8cae35d4 try to adhere more to the rest of the coding style
+  * 6e4160dc add an option to seach by hwmon name for the temperature
+    module
+  * cb0ecfbd updated man for hyprland/language
+  * 550d108a added tooltip-format-<short_description> on
+    hyprland/language tooltip
+  * 696f7e15 tooltip functionality on hyprland/language module
+  * 85e14314 Merge branch 'master' into river-tags-monitor-focus
+  * 9f2684c2 add click coordinates to script
+  * 03c229be Merge branch 'master' into river-tags-monitor-focus
+  * f1acea52 pulseaudio: Add 'sink-mapping' config option
+  * c7f499e3 image module reworked and added multiple image rendering
+    capability
+  * 79ce23a9 docs for river tags output style
+  * 626c52cc add "output" class to river tags module when monitor is
+    focused
+  * 47db2db2 Merge branch 'master' into hyprland-
+    window_no_title_from_special
+  * fe1d4951 Add tooltip selection based on name and state
+  * 01dce460 Merge branch 'Alexays:master' into master
+  * 06540347 Add man pages for hyprland/workspaces tooltips
+  * 065dd877 Added tooltips to hyprland/workspaces
+  * 9f5c27c6 fix title not showing for special workspaces (seperate
+    outputs: false
+  * 0cbb280d fix title not showing for special workspaces (seperate
+    outputs: true)
+  * bfa5c433 Merge branch 'master' into feat/brightness-percent-exp
+  * e1411059 fix: remove old signal handler
+  * 70901b14 feat: register well-known name
+  * f5a9a478 fix: use session bus instead of system
+  * 9c161a8c fix: shift only if there is more than one player
+  * 8ce569b1 feat: choose another player after first was vanished
+  * 9315ccc4 feat: added dbus handler to update current player
+  * dbb8a881 feat(backlight): Added icon_exp and changed syntax
+  * 0fdc4c11 feat(backlight): added percentexp as format option
+
+ -- Constantin Piber <cp.piber@gmail.com>  Thu, 05 Nov 2026 21:10:55 +0100
+
 waybar (0.15.0-1ppa1) noble; urgency=medium
 
   * Update to release 0.15.0
