@@ -11,7 +11,7 @@ patch -p1 <<- "EOF"
  Build-Depends:
   debhelper-compat (= 13),
 - libwlroots-dev,
-+ libwlroots-0.18-dev,
++ libwlroots-0.19-dev,
   libwayland-dev,
   libinput-dev,
   meson,

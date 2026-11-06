@@ -1,0 +1,1 @@
+../waybar-unstable/resolute.sh

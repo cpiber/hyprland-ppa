@@ -1,1 +1,0 @@
-../waybar-unstable/questing.sh
