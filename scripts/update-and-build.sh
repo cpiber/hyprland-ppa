@@ -8,7 +8,7 @@ buildone() {
       return $rc
     fi
   fi
-  for dist in "" resolute; do
+  for dist in "" resolute stonking; do
     if ! ./scripts/open-build.sh "$1" "$dist" -- bash -c "dpkg-buildpackage --build=source --no-check-builddeps ${DPKG_BUILDPKG_ADDITIONAL_ARGS:-} && debrelease -S --dput '${DPUT_PPA:-ppa:cppiber/hyprland}'"; then
       return 1
     fi
@@ -19,7 +19,7 @@ buildplugin() {
   if [ "${2:-}" != "-s" ]; then
     ./scripts/update.sh "$@" || :
   fi
-  for dist in "" resolute; do
+  for dist in "" resolute stonking; do
     if ! ./scripts/open-build.sh "$1" "$dist" -- bash -c "dpkg-buildpackage --build=source --no-check-builddeps ${DPKG_BUILDPKG_ADDITIONAL_ARGS:-} && debrelease -S --dput '${DPUT_PPA:-ppa:cppiber/hyprland}'"; then
       return 1
     fi
