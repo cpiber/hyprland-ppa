@@ -1,3 +1,57 @@
+hyprland-unstable (0.57.0~1ppa1+git202611091738-a1d7a78b6) noble; urgency=medium
+
+  * Update to main a1d7a78b6
+  * a1d7a78b6 protocols/subcompositor: handle expired ancestry during
+    teardown
+  * e5333f26f protocols/subcompositor: fix nested ancestor traversal
+  * 151b04341 hyprtester: cover parent-relative xdg toplevel placement
+  * bcd4c9b8b layout/floating: preserve parent-relative window placement
+  * 32c361f7b seat: fix grab check (#16900)
+  * ee94acc09 desktop/layerSurface: use refocusPointer instead of
+    simulate on map (#16902)
+  * 2d2669a1b scrolling/fullscreen: fix only internal un-FS not
+    restoring prev col width (#16896)
+  * 68ee18a96 config/values: adjust limits again (#16898)
+  * 3c37f4f67 window: allow unpinning window onto special workspace
+    (#16854)
+  * a8d9a4e61 core/fullscreen: fix
+    client_requested_fs_uses_layout_handler being handled incorrectly
+    for some programs (#16870)
+  * 53c64c659 helpers/cm: fix small typo in calculating brightness
+    saturation (#16897)
+  * 2c04812b2 render: fix invalidation artifacts with two floating
+    overlapped windows (#16888)
+  * 4d0f51071 core/layers: allow bottom layers and background layers
+    under fs (#16740)
+  * ab6141897 render: remove unnecessary 'this' from lambda captures
+    (#16852)
+  * 0457ce7de overlay: fix double counting when present early exited.
+    (#16834)
+  * f9f9157a6 config/lua: add dispatcher to show workspaces without
+    focusing them (#16331)
+  * f389f0082 config/lua: fix accessing an expired window ref from a lua
+    object (#16853)
+  * 64bde62ee start: handle and report signal-terminated children
+  * b616b5474 init: stop acquiring realtime scheduling
+  * 988b94362 all: eliminate and replace iostreams with println (#16811)
+  * 0197e5708 core: enable prctl(2) only on Linux (#16839)
+  * a8a2c24c5 protocols/activation: send urgent-only tokens if serial is
+    missing (#16827)
+  * 7cc61bc9a keybinds: fix modifier resolution when remapped (#16820)
+  * f239a3705 algo/scroll: remove redundant cleanup of FS lists when
+    compositor shutdown requested (#16792)
+  * e93501dd1 keybinds: fix _consuming exceptions for chord resolving
+    (#16806)
+  * e0e9c8437 monitor: set max_bpc based on configured bitdepth (#16708)
+  * 2178c743d keybinds: do not shadow mouse event inputs (#16788)
+  * 15b8b8e82 hyprctl: expose sysname for IHID devices (#16652)
+  * 8b6f4329a protocols/session-lock: fix removed output causing a
+    protocol error (#16784)
+  * 5f0ffa814 state/workspace: fix underflow in r parsing resulting in a
+    bad return (#16786)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 09 Nov 2026 17:38:26 +0100
+
 hyprland-unstable (0.57.0~1ppa1+git202611012108-d55a55d72) noble; urgency=medium
 
   * Update to main d55a55d72

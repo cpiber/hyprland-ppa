@@ -17,21 +17,22 @@ Index: source/hyprpm/src/core/PluginManager.cpp
          std::println(
              stderr, "\n{}",
              failureString("Could not clone the plugin repository. Dependencies not satisfied. Hyprpm requires: cmake, cpio, hyprwayland-scanner, pkg-config, git, g++, gcc"));
-@@ -175,6 +177,13 @@ bool CPluginManager::addNewPluginRepo(co
+@@ -175,6 +177,14 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
 +    if (bIsGlobal)
-+        std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from global files " << DATAROOTDIR "/hyprpm/" << url << "\n  " << Colors::RED
-+                  << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
-+                  << " install random plugins without verifying the code and author.\n  "
-+                  << "These files are provided by PPAs in your system.\n  "
-+                  << "Are you sure? [Y/n] ";
++        std::println("{}✔{} {} adding a new plugin repository {}from global files {}{}\n  {}"
++                     "MAKE SURE{} that you trust the authors. {}DO NOT{} "
++                     "install random plugins without verifying the code and author.\n  "
++                     "These files are provided by PPAs in your system.\n  "
++                     "Are you sure? [Y/n] ",
++                     Colors::GREEN, Colors::RESET, Colors::RED, Colors::RESET, DATAROOTDIR "/hyprpm/", url, Colors::RED, Colors::RESET, Colors::RED, Colors::RESET);
 +    else
-     std::cout << Colors::GREEN << "✔" << Colors::RESET << Colors::RED << " adding a new plugin repository " << Colors::RESET << "from " << url << "\n  " << Colors::RED
-               << "MAKE SURE" << Colors::RESET << " that you trust the authors. " << Colors::RED << "DO NOT" << Colors::RESET
-               << " install random plugins without verifying the code and author.\n  "
-@@ -188,6 +197,28 @@ bool CPluginManager::addNewPluginRepo(co
+     std::println("{}✔{} {} adding a new plugin repository {}from {}\n  {}"
+                  "MAKE SURE{} that you trust the authors. {}DO NOT{} "
+                  "install random plugins without verifying the code and author.\n  "
+@@ -189,6 +199,28 @@ bool CPluginManager::addNewPluginRepo(co
          return false;
      }
  
@@ -60,7 +61,7 @@ Index: source/hyprpm/src/core/PluginManager.cpp
      CProgressBar progress;
      progress.m_iMaxSteps        = 5;
      progress.m_iSteps           = 0;
-@@ -729,6 +760,50 @@ bool CPluginManager::updatePlugins(bool
+@@ -731,6 +763,50 @@ bool CPluginManager::updatePlugins(bool
          progress.m_szCurrentMessage = std::format("Updating {}", repo.name);
          progress.print();
  

@@ -20,7 +20,7 @@ Index: source/src/Compositor.cpp
 ===================================================================
 --- source.orig/src/Compositor.cpp
 +++ source/src/Compositor.cpp
-@@ -306,7 +306,7 @@ void CCompositor::initServer(std::string
+@@ -305,7 +305,7 @@ void CCompositor::initServer(std::string
      Log::logger->initCallbacks();
  
      // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
@@ -33,7 +33,7 @@ Index: source/src/managers/ProtocolManager.cpp
 ===================================================================
 --- source.orig/src/managers/ProtocolManager.cpp
 +++ source/src/managers/ProtocolManager.cpp
-@@ -164,7 +164,7 @@ CProtocolManager::CProtocolManager() {
+@@ -165,7 +165,7 @@ CProtocolManager::CProtocolManager() {
      PROTO::data          = makeUnique<CWLDataDeviceProtocol>(&wl_data_device_manager_interface, 3, "WLDataDevice");
      PROTO::compositor    = makeUnique<CWLCompositorProtocol>(&wl_compositor_interface, 6, "WLCompositor");
      PROTO::subcompositor = makeUnique<CWLSubcompositorProtocol>(&wl_subcompositor_interface, 1, "WLSubcompositor");
