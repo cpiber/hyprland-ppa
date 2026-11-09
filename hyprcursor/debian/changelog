@@ -1,3 +1,18 @@
+hyprcursor (0.1.14-1ppa1) noble; urgency=medium
+
+  * Update to release 0.1.14
+  * 9e69160 VERSION: bump to 0.1.14
+  * 2dda858 core: fix clipping when downscaling raster cursors
+  * 9472e34 core: exclude generated images from raster resampling
+    sources
+  * e4ed7c0 nix: gcc 15 -> 16
+  * 3943590 CI: use hyprwm/actions
+  * b623964 flake.lock: update
+  * f8f7428 nix: separate overlay with deps
+  * 7165606 treewide: alejandra -> nixfmt
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 09 Nov 2026 17:20:30 +0100
+
 hyprcursor (0.1.13-1ppa1) noble; urgency=medium
 
   * Update to release 0.1.13
