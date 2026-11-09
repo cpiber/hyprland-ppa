@@ -1,3 +1,44 @@
+hyprland (0.57.2-1ppa1) noble; urgency=medium
+
+  * v0.57.2 Update to release 0.57.2
+  * 11cbc6c57 VERSION: bump to 0.57.2
+  * c44c4be61 flake: update inputs
+  * 86688ae74 protocols/subcompositor: handle expired ancestry during
+    teardown
+  * 680866d61 protocols/subcompositor: fix nested ancestor traversal
+  * f6e27b1c7 layout/floating: preserve parent-relative window placement
+  * 8a0659172 seat: fix grab check (#16900)
+  * f0d381868 desktop/layerSurface: use refocusPointer instead of
+    simulate on map (#16902)
+  * 6cc4567fe scrolling/fullscreen: fix only internal un-FS not
+    restoring prev col width (#16896)
+  * d9f7598b1 config/values: adjust limits again (#16898)
+  * 24fda1aa0 window: allow unpinning window onto special workspace
+    (#16854)
+  * f1c344c47 core/fullscreen: fix
+    client_requested_fs_uses_layout_handler being handled incorrectly
+    for some programs (#16870)
+  * d7f16472a helpers/cm: fix small typo in calculating brightness
+    saturation (#16897)
+  * ef9abc0b9 render: fix invalidation artifacts with two floating
+    overlapped windows (#16888)
+  * b280c55a2 core/layers: allow bottom layers and background layers
+    under fs (#16740)
+  * d8962b2db overlay: fix double counting when present early exited.
+    (#16834)
+  * a29e91e9f config/lua: fix accessing an expired window ref from a lua
+    object (#16853)
+  * b9e785380 start: handle and report signal-terminated children
+  * cce85dc11 init: stop acquiring realtime scheduling
+  * cba094604 core: enable prctl(2) only on Linux (#16839)
+  * e65d6d131 protocols/activation: send urgent-only tokens if serial is
+    missing (#16827)
+  * a66bc70fb keybinds: fix modifier resolution when remapped (#16820)
+  * 5c076e645 algo/scroll: remove redundant cleanup of FS lists when
+    compositor shutdown requested (#16792)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Mon, 09 Nov 2026 17:36:52 +0100
+
 hyprland (0.57.1-1ppa1) noble; urgency=medium
 
   * v0.57.1 Update to release 0.57.1
