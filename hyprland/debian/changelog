@@ -1,3 +1,31 @@
+hyprland-unstable (0.57.0~1ppa1+git202611101756-7a44ee833) noble; urgency=medium
+
+  * Update to main 7a44ee833
+  * 7a44ee833 desktop/window: implement simple geometry transactions
+    (#16919)
+  * 4ade6e4cf layout: account for rounded physical border extents
+  * 948ac1abc render: preserve fractional surface bounds in regions
+  * 8e988db18 desktop/wayland: normalize configure sizes before caching
+  * e29321760 hyprtester: cover monocle workspace gaps when cycling
+  * a3b12daed layout/monocle: settle visibility before calculating
+    geometry
+  * 1aa477bed config/propRefresher: guard bad monitor for blurFB
+    refreshing (#16927)
+  * 9a9ca12ae hyprpm: just set PREFIX instead of editing Makefile
+  * db8d3f40d Makefile: just do cmake generation before installheaders
+  * 4c3a8fe81 renderer/glow: color-manage gradients and mirrored output
+  * f1de9440d renderer: fix decoration color-management feature
+    selection
+  * 0bfaf4d82 renderer/glow: fix mirror shader return type
+  * fbc617ef7 config/values: cap zoom_factor at 50 (#16916)
+  * ae2bd4fc2 [gha] build man pages
+  * 6170b35b3 core: remove Hyprlang references (#16889)
+  * 1c1609368 tests: cover modifier-only binds with unrelated keys held
+  * 300e4a416 keybinds: allow modifier-only binds with unrelated keys
+    held
+
+ -- Constantin Piber <cp.piber@gmail.com>  Tue, 10 Nov 2026 17:56:44 +0100
+
 hyprland-unstable (0.57.0~1ppa1+git202611091738-a1d7a78b6) noble; urgency=medium
 
   * Update to main a1d7a78b6

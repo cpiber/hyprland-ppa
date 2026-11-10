@@ -41,7 +41,6 @@ Build-Depends:
  libglaze-dev (>= 7.0.0),
  liblua5.4-dev,
  libcanberra-dev,
- libhyprlang-dev (>= 0.6.7),
  libhyprcursor-dev (>= 0.1.7),
  libhyprutils-dev (>= 0.14.3),
  libhyprgraphics-dev (>= 0.5.1),
