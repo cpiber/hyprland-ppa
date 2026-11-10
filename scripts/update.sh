@@ -21,7 +21,7 @@ shift
 checkout="${1:-}"
 sourcefolder="$reporoot/$project/source"
 case "$project" in
-  hyprland|hyprland-plugins|hyprsplit|hyprspace)
+  hyprland|hyprland-plugins|hyprspace)
     type="main"
     ;;
   waybar-unstable|hyprscroller|hy3)
@@ -55,7 +55,7 @@ newhead="`git rev-parse HEAD`"
 shorthead="`git rev-parse --short HEAD`"
 if [ "$curhead" = "$newhead" ]; then
   echo "Already up-to-date"
-  if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ] || [ "$project" = "hy3" ] || [ "$project" = "hyprspace" ] || [ "$project" = "hyprsplit" ]; then
+  if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ] || [ "$project" = "hy3" ] || [ "$project" = "hyprspace" ]; then
     if sethyprver; then
       cd ..
       dist="`dpkg-parsechangelog --show-field Distribution`"
@@ -96,6 +96,6 @@ echo "$changes" |
   while IFS= read -r line; do
     dch -a "$line"
   done
-if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ] || [ "$project" = "hy3" ] || [ "$project" = "hyprspace" ] || [ "$project" = "hyprsplit" ]; then
+if [ "$project" = "hyprland-plugins" ] || [ "$project" = "hyprscroller" ] || [ "$project" = "hy3" ] || [ "$project" = "hyprspace" ]; then
   sethyprver
 fi
