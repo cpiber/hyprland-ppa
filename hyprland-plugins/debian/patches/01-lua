@@ -1,0 +1,50 @@
+Index: source/borders-plus-plus/Makefile
+===================================================================
+--- source.orig/borders-plus-plus/Makefile
++++ source/borders-plus-plus/Makefile
+@@ -9,7 +9,7 @@ CXXFLAGS ?= -O2
+ CXXFLAGS += -shared -fPIC -std=c++2b
+ 
+ all:
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(EXTRA_FLAGS) main.cpp borderDeco.cpp BorderppPassElement.cpp -o borders-plus-plus.so `pkg-config --cflags pixman-1 libdrm hyprland pangocairo libinput libudev wayland-server xkbcommon`
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(EXTRA_FLAGS) main.cpp borderDeco.cpp BorderppPassElement.cpp -o borders-plus-plus.so `pkg-config --cflags pixman-1 libdrm hyprland pangocairo libinput libudev wayland-server xkbcommon lua`
+ 
+ clean:
+ 	rm ./borders-plus-plus.so
+Index: source/csgo-vulkan-fix/Makefile
+===================================================================
+--- source.orig/csgo-vulkan-fix/Makefile
++++ source/csgo-vulkan-fix/Makefile
+@@ -9,6 +9,6 @@ CXXFLAGS ?= -O2
+ CXXFLAGS += -shared -fPIC -std=c++2b
+ 
+ all:
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(EXTRA_FLAGS) main.cpp -o csgo-vulkan-fix.so `pkg-config --cflags pixman-1 libdrm hyprland pangocairo libinput libudev wayland-server xkbcommon`
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(EXTRA_FLAGS) main.cpp -o csgo-vulkan-fix.so `pkg-config --cflags pixman-1 libdrm hyprland pangocairo libinput libudev wayland-server xkbcommon lua`
+ clean:
+ 	rm ./csgo-vulkan-fix.so
+Index: source/hyprbars/Makefile
+===================================================================
+--- source.orig/hyprbars/Makefile
++++ source/hyprbars/Makefile
+@@ -7,7 +7,7 @@ endif
+ 
+ CXXFLAGS ?= -O2
+ CXXFLAGS += -shared -fPIC -std=c++2b -Wno-c++11-narrowing
+-INCLUDES = `pkg-config --cflags pixman-1 libdrm hyprland libinput libudev wayland-server xkbcommon`
++INCLUDES = `pkg-config --cflags pixman-1 libdrm hyprland libinput libudev wayland-server xkbcommon lua`
+ LIBS =
+ 
+ SRC = main.cpp barDeco.cpp BarPassElement.cpp
+Index: source/hyprfocus/Makefile
+===================================================================
+--- source.orig/hyprfocus/Makefile
++++ source/hyprfocus/Makefile
+@@ -9,6 +9,6 @@ CXXFLAGS ?= -O2
+ CXXFLAGS += -shared -fPIC -std=c++2b
+ 
+ all:
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(EXTRA_FLAGS) main.cpp -o hyprfocus.so `pkg-config --cflags pixman-1 libdrm hyprland pangocairo libinput libudev wayland-server xkbcommon`
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(EXTRA_FLAGS) main.cpp -o hyprfocus.so `pkg-config --cflags pixman-1 libdrm hyprland pangocairo libinput libudev wayland-server xkbcommon lua`
+ clean:
+ 	rm ./hyprfocus.so
