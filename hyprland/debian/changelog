@@ -1,3 +1,106 @@
+hyprland-unstable (0.57.0~1ppa1+git202611180033-4d9a4720d) noble; urgency=medium
+
+  * Update to main 4d9a4720d
+  * 4d9a4720d example/config: put note about movefocus_cycles_fullscreen
+    for scrolling
+  * f3e076844 input: don't focus windows outside a popup grab
+  * bd4808e48 ci: move erstarr to required codeowner (#17007)
+  * 8dd811aa2 fullscreen: remove redundant target removal recursion
+    guard
+  * 233333aa9 scrolling: avoid iterator invalidation during fs handler
+    teardown
+  * 84b512298 input: replace device tags when applying configuration
+  * da02ba303 seat: release pressed buttons without invalidating
+    iteration
+  * b715f48db lua: protect eval result conversion with the watchdog
+  * 8f25f7321 permissions: check dialog creation before setting priority
+  * bee3f8ae9 screenshare: redact popups in monitor-local coordinates
+  * 3f7c886c3 render: preserve larger pending full-frame requests
+  * ba7c40ef1 surface: center small-surface damage in logical
+    coordinates
+  * ab55041de zoom: honor detached-camera resets without a zoom-level
+    change
+  * 79d3046f6 input-capture: forward wheel ticks in discrete axis units
+  * feebe32c8 input-capture: retain fractional continuous scroll values
+  * e760edc96 input: apply zero scroll factors without affecting other
+    sources
+  * 59792259d hyprctl: dispatch by command token rather than argument
+    substrings
+  * 63c5d685b hyprctl: preserve valid JSON for an empty instance list
+  * b892d9385 hyprctl: propagate batch request failures to the exit
+    status
+  * 0561d64aa fs: check executable access with the caller's credentials
+  * 2db129dc7 fs: refresh PATH when checking executable availability
+  * 9328e48a2 ime: send popup output events for its placement monitor
+  * 035ac86dd ime: use committed logical surface size for popup
+    placement
+  * 32b44b945 config: allow input transform 7 for touch devices and
+    tablets
+  * 34090aaba monitor: recognize interlaced modelines and report their
+    field rate
+  * b89cda44e monitor: round modeline clocks after converting MHz to kHz
+  * 2250c0279 monitor: ignore repeated whitespace in modelines
+  * 27e77ea53 timing: use steady clocks for elapsed-time measurements
+  * 0b85a439a screenshare: avoid whole-output copies for window capture
+  * 8eedaa0f6 shadow: construct damage boxes with dimensions instead of
+    endpoints
+  * 1bf62857f event-loop: skip recalculation when a timer is already
+    disabled
+  * f820d4c41 view-query: stop searching after a mismatched window
+    surface
+  * 2052962ff CI: add commit title check bot (#17006)
+  * 1d173d172 xwayland: map a held pointer through the monitor under the
+    cursor (#16990)
+  * a2b9e5641 cmake: allow tests without coverage instrumentation
+  * 10e87870c cmake: respect explicit test configuration in Debug
+  * 5fb2a3e07 output/monitor: fix DS_CHECKS_COUNT
+  * 4652b0c67 renderer: remove now unused isHDR2SDR fallback
+  * 64e5421a7 cm: ignore max_lum value in st2084_pq
+  * 9faadfd2b cm: use correct luminance ranges for scrgb and bt2100
+  * 22174c6c0 config: fix emergency config (#16923)
+  * c819808a4 layout/scrolling: fix scrolling tape malformed offset
+    update (#16931)
+  * 12a0e833d layout/scrolling: fix resize animations. (#16974)
+  * be8e5c09f layout: keep floating restore geometry in sync (#16962)
+  * 2bd6f4563 config/dispatchers: add a second arg to `hl.dsp.global()`
+    for event type (#16961)
+  * 0767f6347 protocols/data-device: fix drag-and-drop action
+    negotiation (#16808)
+  * 53f36f3b2 scrolling: add clamped_center to focus_fit_method (#16899)
+  * 98b642e1b monitor: update swapchain when leaving DS to avoid short
+    flickers (#16941)
+  * 8333bb754 cmake: disable module scanning (#16939)
+  * b824d2ae2 [gha] Nix: update inputs
+  * 1d518984e ci: remove flawfinder (#16933)
+  * 1989e6179 layout: preserve drop animations after pending drag motion
+  * f402b0fec animation: use presented fullscreen state for workspace
+    offsets
+  * 6a5df9e20 fullscreen: centralize presented window queries
+  * fa9b3c9c3 desktop/window: clarify held presentation state
+  * f7951333f desktop/window: skip transaction-only snapshots when
+    disabled
+  * 3e6838b66 output/transaction: guard removal against callback
+    destruction
+  * 0a74a9a21 fullscreen: consistently filter presented windows by mode
+  * 51c3ef0d9 tests: disable transactions outside transaction coverage
+  * 3f2b16bb6 output/transaction: disable transactions when timeout is
+    zero
+  * b7a272181 output/transaction: do not run transactions when dragging
+  * d27a92b70 output/transaction: make timeout configurable
+  * cdf509017 output: hold closing tiles until replacement geometry is
+    ready
+  * 781973328 output: publish window presentation with transaction
+    geometry
+  * 0c9083620 output: wait for all participating window resizes
+  * 70ec30e71 assets: move logo to separate directory (#16949)
+  * a17bd1026 nix: fmt
+  * 8963b7d9d nix: update clang-tools in fmt
+  * 815585bb8 layout: respect focus history and mode when closing
+    floating windows (#16885)
+  * df680d40f flake: update
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Nov 2026 00:33:04 +0100
+
 hyprland-unstable (0.57.0~1ppa1+git202611101756-7a44ee833) noble; urgency=medium
 
   * Update to main 7a44ee833
