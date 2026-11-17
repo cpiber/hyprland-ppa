@@ -1,3 +1,13 @@
+hyprland-plugins (0.57.0~1ppa1+git202611180033-2e03a09) noble; urgency=medium
+
+  *  Update to main 2e03a09
+  * 2e03a09 hyprbars: reset stencil write mask before clearing the
+    stencil (#717)
+  * f2747de hyprbars: fix top edge resize and prevent bar swallowing
+    clicks (#722)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Nov 2026 00:33:37 +0100
+
 hyprland-plugins (0.56.0~1ppa1+git202610201752-d2427d4build4) noble; urgency=medium
 
   *  Rebuild for unstable
