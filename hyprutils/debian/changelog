@@ -1,3 +1,13 @@
+hyprutils (0.14.4-1ppa1) noble; urgency=medium
+
+  * Update to release 0.14.4
+  * 73d41c6 VERSION: bump to 0.14.4
+  * ab978a3 nix: add propagated deps
+  * 7e1f692 path: add getDataDir (#130)
+  * c81d691 state/kv: add a state kv object (#129)
+
+ -- Constantin Piber <cp.piber@gmail.com>  Wed, 18 Nov 2026 00:21:58 +0100
+
 hyprutils (0.14.3-1ppa1) noble; urgency=medium
 
   * Update to release 0.14.3
